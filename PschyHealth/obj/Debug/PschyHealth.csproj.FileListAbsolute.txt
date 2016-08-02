@@ -1,0 +1,161 @@
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\bin\Debug\PschyHealth.pdb
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\bin\Debug\MetroFramework.Design.dll
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\bin\Debug\MetroFramework.dll
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csprojResolveAssemblyReference.cache
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmLogin.resources
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pdb
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmAccounting.resources
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmClients.resources
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmConsultations.resources
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmEDICodes.resources
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMainPage.resources
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMedicalAids.resources
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStaff.resources
+C:\Users\Student\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStatements.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pdb
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\bin\Debug\PschyHealth.pdb
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csprojResolveAssemblyReference.cache
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmAccounting.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmClients.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmConsultations.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmEDICodes.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmLogin.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMainPage.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMedicalAids.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStaff.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStatements.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\bin\Debug\Transitions.dll
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlSettings.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pdb
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\bin\Debug\PschyHealth.pdb
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csprojResolveAssemblyReference.cache
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmAccounting.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmClients.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmConsultations.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmEDICodes.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmLogin.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMainPage.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMedicalAids.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStaff.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStatements.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlSettings.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlSlider.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pdb
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csprojResolveAssemblyReference.cache
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmAccounting.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmClients.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmConsultations.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmEDICodes.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmLogin.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMainPage.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMedicalAids.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStaff.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStatements.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlSettings.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlSlider.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\bin\Debug\PschyHealth.pdb
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Backup\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlMyWorkPlace.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pdb
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\bin\Debug\PschyHealth.pdb
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csprojResolveAssemblyReference.cache
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmAccounting.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmClients.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmConsultations.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmEDICodes.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmLogin.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMainPage.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMedicalAids.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStaff.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStatements.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlMyWorkPlace.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlSettings.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlSlider.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlClients.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlEDICodes.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlMedicalAids.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlStaff.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlStatements.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Panels.pnlConsultation.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlAccounting.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pdb
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\bin\Debug\PschyHealth.pdb
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\bin\Debug\Transitions.dll
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csprojResolveAssemblyReference.cache
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmAccounting.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmClients.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmConsultations.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmEDICodes.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmLogin.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlClients.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlEDICodes.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlMedicalAids.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlStaff.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlStatements.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMainPage.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMedicalAids.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStaff.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStatements.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Panels.pnlConsultation.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlSettings.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlSlider.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlAccounting.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
+C:\Users\Tjaart Prinsloo\Desktop\PschyHealth - Nuutste weergawe\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\bin\Debug\PschyHealth.exe
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\bin\Debug\PschyHealth.pdb
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csprojResolveAssemblyReference.cache
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmAccounting.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmClients.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmConsultations.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmEDICodes.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmLogin.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlClients.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlEDICodes.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlMedicalAids.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlStaff.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Forms.pnlStatements.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMainPage.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmMedicalAids.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStaff.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.frmStatements.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Panels.pnlConsultation.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlSettings.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlSlider.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pnlAccounting.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\PschyHealth\PschyHealth\obj\Debug\PschyHealth.pdb
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.pdb
