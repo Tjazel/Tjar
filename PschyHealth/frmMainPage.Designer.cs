@@ -311,7 +311,7 @@
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(241, 153);
             this.btnStaff.TabIndex = 13;
-            this.btnStaff.Text = "fgfgf";
+            this.btnStaff.Text = "Staff";
             this.btnStaff.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnStaff.TileImage = ((System.Drawing.Image)(resources.GetObject("btnStaff.TileImage")));
             this.btnStaff.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -328,7 +328,7 @@
             this.btnClients.Name = "btnClients";
             this.btnClients.Size = new System.Drawing.Size(252, 153);
             this.btnClients.TabIndex = 12;
-            this.btnClients.Text = "Cliiients";
+            this.btnClients.Text = "Clients";
             this.btnClients.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnClients.TileImage = ((System.Drawing.Image)(resources.GetObject("btnClients.TileImage")));
             this.btnClients.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
