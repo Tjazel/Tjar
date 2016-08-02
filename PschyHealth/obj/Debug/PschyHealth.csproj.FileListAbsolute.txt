@@ -159,3 +159,6 @@ C:\Users\Jaco\Documents\2Semester1\ITRW225\JARVIS\GUI\FINAL\PschyHealth Tjaart\P
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\bin\Debug\PschyHealth.exe.config
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.exe
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.pdb
+C:\Users\Jaco\Source\Repos\Tjar\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Jaco\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Jaco\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.pdb

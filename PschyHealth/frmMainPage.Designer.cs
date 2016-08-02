@@ -64,9 +64,10 @@
             // 
             this.metroLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(726, 13);
+            this.metroLabel3.Location = new System.Drawing.Point(968, 16);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(68, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(73, 20);
             this.metroLabel3.TabIndex = 10;
             this.metroLabel3.Text = "Username";
             // 
@@ -74,9 +75,10 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(890, 13);
+            this.pictureBox3.Location = new System.Drawing.Point(1187, 16);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 22);
+            this.pictureBox3.Size = new System.Drawing.Size(49, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
@@ -86,9 +88,10 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(696, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(928, 16);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 22);
+            this.pictureBox2.Size = new System.Drawing.Size(37, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
@@ -98,9 +101,10 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(847, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(1129, 16);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 22);
+            this.pictureBox1.Size = new System.Drawing.Size(49, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -119,34 +123,34 @@
             this.lockToolStripMenuItem,
             this.signToolStripMenuItem});
             this.ctxMenu.Name = "ctxMenu";
-            this.ctxMenu.Size = new System.Drawing.Size(250, 82);
+            this.ctxMenu.Size = new System.Drawing.Size(298, 100);
             this.ctxMenu.Opening += new System.ComponentModel.CancelEventHandler(this.metroContextMenu1_Opening);
             // 
             // changeAccountSettingsToolStripMenuItem
             // 
             this.changeAccountSettingsToolStripMenuItem.Name = "changeAccountSettingsToolStripMenuItem";
-            this.changeAccountSettingsToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.changeAccountSettingsToolStripMenuItem.Size = new System.Drawing.Size(297, 32);
             this.changeAccountSettingsToolStripMenuItem.Text = "Change account settings";
             // 
             // lockToolStripMenuItem
             // 
             this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.lockToolStripMenuItem.Size = new System.Drawing.Size(297, 32);
             this.lockToolStripMenuItem.Text = "Lock";
             // 
             // signToolStripMenuItem
             // 
             this.signToolStripMenuItem.Name = "signToolStripMenuItem";
-            this.signToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.signToolStripMenuItem.Size = new System.Drawing.Size(297, 32);
             this.signToolStripMenuItem.Text = "Sign out";
             // 
             // btnReports
             // 
             this.btnReports.ActiveControl = null;
-            this.btnReports.Location = new System.Drawing.Point(505, 534);
-            this.btnReports.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReports.Location = new System.Drawing.Point(673, 657);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(189, 99);
+            this.btnReports.Size = new System.Drawing.Size(252, 122);
             this.btnReports.TabIndex = 23;
             this.btnReports.Text = "Reports";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -159,10 +163,10 @@
             // btnConsultations
             // 
             this.btnConsultations.ActiveControl = null;
-            this.btnConsultations.Location = new System.Drawing.Point(498, 389);
-            this.btnConsultations.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConsultations.Location = new System.Drawing.Point(664, 479);
+            this.btnConsultations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConsultations.Name = "btnConsultations";
-            this.btnConsultations.Size = new System.Drawing.Size(382, 125);
+            this.btnConsultations.Size = new System.Drawing.Size(509, 154);
             this.btnConsultations.TabIndex = 22;
             this.btnConsultations.Text = "Consultations";
             this.btnConsultations.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -176,10 +180,10 @@
             // btnDiagnosticCodes
             // 
             this.btnDiagnosticCodes.ActiveControl = null;
-            this.btnDiagnosticCodes.Location = new System.Drawing.Point(36, 534);
-            this.btnDiagnosticCodes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDiagnosticCodes.Location = new System.Drawing.Point(48, 657);
+            this.btnDiagnosticCodes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDiagnosticCodes.Name = "btnDiagnosticCodes";
-            this.btnDiagnosticCodes.Size = new System.Drawing.Size(382, 99);
+            this.btnDiagnosticCodes.Size = new System.Drawing.Size(509, 122);
             this.btnDiagnosticCodes.TabIndex = 21;
             this.btnDiagnosticCodes.Text = "Diagnostic Codes";
             this.btnDiagnosticCodes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -192,10 +196,10 @@
             // btnEDIfunctions
             // 
             this.btnEDIfunctions.ActiveControl = null;
-            this.btnEDIfunctions.Location = new System.Drawing.Point(238, 391);
-            this.btnEDIfunctions.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEDIfunctions.Location = new System.Drawing.Point(317, 481);
+            this.btnEDIfunctions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEDIfunctions.Name = "btnEDIfunctions";
-            this.btnEDIfunctions.Size = new System.Drawing.Size(181, 124);
+            this.btnEDIfunctions.Size = new System.Drawing.Size(241, 153);
             this.btnEDIfunctions.TabIndex = 20;
             this.btnEDIfunctions.Text = "EDI Functions";
             this.btnEDIfunctions.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -208,10 +212,10 @@
             // btnMedicalAids
             // 
             this.btnMedicalAids.ActiveControl = null;
-            this.btnMedicalAids.Location = new System.Drawing.Point(36, 391);
-            this.btnMedicalAids.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMedicalAids.Location = new System.Drawing.Point(48, 481);
+            this.btnMedicalAids.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMedicalAids.Name = "btnMedicalAids";
-            this.btnMedicalAids.Size = new System.Drawing.Size(189, 124);
+            this.btnMedicalAids.Size = new System.Drawing.Size(252, 153);
             this.btnMedicalAids.TabIndex = 19;
             this.btnMedicalAids.Text = "Medical Aids";
             this.btnMedicalAids.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -225,10 +229,10 @@
             // btnAccounting
             // 
             this.btnAccounting.ActiveControl = null;
-            this.btnAccounting.Location = new System.Drawing.Point(505, 82);
-            this.btnAccounting.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAccounting.Location = new System.Drawing.Point(673, 101);
+            this.btnAccounting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAccounting.Name = "btnAccounting";
-            this.btnAccounting.Size = new System.Drawing.Size(181, 124);
+            this.btnAccounting.Size = new System.Drawing.Size(241, 153);
             this.btnAccounting.TabIndex = 18;
             this.btnAccounting.Text = "Accounting";
             this.btnAccounting.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -242,10 +246,10 @@
             // btnRams
             // 
             this.btnRams.ActiveControl = null;
-            this.btnRams.Location = new System.Drawing.Point(505, 225);
-            this.btnRams.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRams.Location = new System.Drawing.Point(673, 277);
+            this.btnRams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRams.Name = "btnRams";
-            this.btnRams.Size = new System.Drawing.Size(181, 125);
+            this.btnRams.Size = new System.Drawing.Size(241, 154);
             this.btnRams.TabIndex = 17;
             this.btnRams.Text = "RAMS";
             this.btnRams.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -257,10 +261,10 @@
             // btnDate
             // 
             this.btnDate.ActiveControl = null;
-            this.btnDate.Location = new System.Drawing.Point(699, 82);
-            this.btnDate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDate.Location = new System.Drawing.Point(932, 101);
+            this.btnDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDate.Name = "btnDate";
-            this.btnDate.Size = new System.Drawing.Size(181, 124);
+            this.btnDate.Size = new System.Drawing.Size(241, 153);
             this.btnDate.TabIndex = 16;
             this.btnDate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDate.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -271,10 +275,10 @@
             // btnStatements
             // 
             this.btnStatements.ActiveControl = null;
-            this.btnStatements.Location = new System.Drawing.Point(699, 225);
-            this.btnStatements.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStatements.Location = new System.Drawing.Point(932, 277);
+            this.btnStatements.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStatements.Name = "btnStatements";
-            this.btnStatements.Size = new System.Drawing.Size(181, 124);
+            this.btnStatements.Size = new System.Drawing.Size(241, 153);
             this.btnStatements.TabIndex = 15;
             this.btnStatements.Text = "Statements";
             this.btnStatements.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -288,10 +292,10 @@
             // btnTime
             // 
             this.btnTime.ActiveControl = null;
-            this.btnTime.Location = new System.Drawing.Point(36, 225);
-            this.btnTime.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTime.Location = new System.Drawing.Point(48, 277);
+            this.btnTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTime.Name = "btnTime";
-            this.btnTime.Size = new System.Drawing.Size(382, 125);
+            this.btnTime.Size = new System.Drawing.Size(509, 154);
             this.btnTime.TabIndex = 14;
             this.btnTime.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTime.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -302,12 +306,12 @@
             // btnStaff
             // 
             this.btnStaff.ActiveControl = null;
-            this.btnStaff.Location = new System.Drawing.Point(238, 82);
-            this.btnStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStaff.Location = new System.Drawing.Point(317, 101);
+            this.btnStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStaff.Name = "btnStaff";
-            this.btnStaff.Size = new System.Drawing.Size(181, 124);
+            this.btnStaff.Size = new System.Drawing.Size(241, 153);
             this.btnStaff.TabIndex = 13;
-            this.btnStaff.Text = "Staffddd";
+            this.btnStaff.Text = "Staff";
             this.btnStaff.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnStaff.TileImage = ((System.Drawing.Image)(resources.GetObject("btnStaff.TileImage")));
             this.btnStaff.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -319,10 +323,10 @@
             // btnClients
             // 
             this.btnClients.ActiveControl = null;
-            this.btnClients.Location = new System.Drawing.Point(36, 82);
-            this.btnClients.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClients.Location = new System.Drawing.Point(48, 101);
+            this.btnClients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClients.Name = "btnClients";
-            this.btnClients.Size = new System.Drawing.Size(189, 124);
+            this.btnClients.Size = new System.Drawing.Size(252, 153);
             this.btnClients.TabIndex = 12;
             this.btnClients.Text = "Clients";
             this.btnClients.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -337,18 +341,19 @@
             // 
             this.pictureBox4.BackgroundImage = global::PschyHealth.Properties.Resources._1469925381_home512x512;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(593, 13);
+            this.pictureBox4.Location = new System.Drawing.Point(791, 16);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(64, 45);
+            this.pictureBox4.Size = new System.Drawing.Size(85, 55);
             this.pictureBox4.TabIndex = 24;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // frmMainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 634);
+            this.ClientSize = new System.Drawing.Size(1292, 780);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnReports);
             this.Controls.Add(this.btnConsultations);
@@ -366,7 +371,9 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMainPage";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Main Page";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMainPage_Load);
