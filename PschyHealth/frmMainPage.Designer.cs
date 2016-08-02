@@ -328,7 +328,7 @@
             this.btnClients.Name = "btnClients";
             this.btnClients.Size = new System.Drawing.Size(252, 153);
             this.btnClients.TabIndex = 12;
-            this.btnClients.Text = "Clients";
+            this.btnClients.Text = "Cliiients";
             this.btnClients.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnClients.TileImage = ((System.Drawing.Image)(resources.GetObject("btnClients.TileImage")));
             this.btnClients.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
