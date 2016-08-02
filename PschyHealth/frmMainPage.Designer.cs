@@ -76,7 +76,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(1187, 16);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(49, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,7 +89,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(928, 16);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,7 +102,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1129, 16);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(49, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -123,25 +123,25 @@
             this.lockToolStripMenuItem,
             this.signToolStripMenuItem});
             this.ctxMenu.Name = "ctxMenu";
-            this.ctxMenu.Size = new System.Drawing.Size(304, 100);
+            this.ctxMenu.Size = new System.Drawing.Size(298, 100);
             this.ctxMenu.Opening += new System.ComponentModel.CancelEventHandler(this.metroContextMenu1_Opening);
             // 
             // changeAccountSettingsToolStripMenuItem
             // 
             this.changeAccountSettingsToolStripMenuItem.Name = "changeAccountSettingsToolStripMenuItem";
-            this.changeAccountSettingsToolStripMenuItem.Size = new System.Drawing.Size(303, 32);
+            this.changeAccountSettingsToolStripMenuItem.Size = new System.Drawing.Size(297, 32);
             this.changeAccountSettingsToolStripMenuItem.Text = "Change account settings";
             // 
             // lockToolStripMenuItem
             // 
             this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(303, 32);
+            this.lockToolStripMenuItem.Size = new System.Drawing.Size(297, 32);
             this.lockToolStripMenuItem.Text = "Lock";
             // 
             // signToolStripMenuItem
             // 
             this.signToolStripMenuItem.Name = "signToolStripMenuItem";
-            this.signToolStripMenuItem.Size = new System.Drawing.Size(303, 32);
+            this.signToolStripMenuItem.Size = new System.Drawing.Size(297, 32);
             this.signToolStripMenuItem.Text = "Sign out";
             // 
             // btnReports
@@ -311,7 +311,7 @@
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(241, 153);
             this.btnStaff.TabIndex = 13;
-            this.btnStaff.Text = "Staff";
+            this.btnStaff.Text = "fgfgf";
             this.btnStaff.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnStaff.TileImage = ((System.Drawing.Image)(resources.GetObject("btnStaff.TileImage")));
             this.btnStaff.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -342,7 +342,7 @@
             this.pictureBox4.BackgroundImage = global::PschyHealth.Properties.Resources._1469925381_home512x512;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(791, 16);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(85, 55);
             this.pictureBox4.TabIndex = 24;
@@ -371,7 +371,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainPage";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Main Page";
