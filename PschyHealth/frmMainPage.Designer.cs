@@ -311,7 +311,7 @@
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(241, 153);
             this.btnStaff.TabIndex = 13;
-            this.btnStaff.Text = "Staff";
+            this.btnStaff.Text = "fbbfbfb";
             this.btnStaff.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnStaff.TileImage = ((System.Drawing.Image)(resources.GetObject("btnStaff.TileImage")));
             this.btnStaff.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
