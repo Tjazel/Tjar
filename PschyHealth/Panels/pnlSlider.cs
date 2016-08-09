@@ -51,7 +51,7 @@ namespace PschyHealth
             this.BringToFront();
             owner.Resize += owner_Resize;
               //Code om panel toe te maak as jy op hom click
-          //  this.Click += pnlSlider_Click;
+           //this.Click += pnlSlider_Click;
 
             ResizeForm();
         }
@@ -77,7 +77,7 @@ namespace PschyHealth
         public void swipe(bool show = true)
         {
             this.Visible = true;
-            Transition _transasition = new Transitions.Transition(new TransitionType_EaseInEaseOut(200));
+            Transition _transasition = new Transitions.Transition(new TransitionType_EaseInEaseOut(800));
             _transasition.add(this, "Left", show ? 0 : this.Width);
             _transasition.run();
 
@@ -94,7 +94,7 @@ namespace PschyHealth
                 _owner.Resize -= owner_Resize;
                 _owner.Controls.Remove(this);
                 this.Dispose();
-               // MessageBox.Show("Error");
+              
             }
             else
             {

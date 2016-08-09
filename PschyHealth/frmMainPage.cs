@@ -1,6 +1,5 @@
 ﻿using MetroFramework.Forms;
 using PschyHealth.Forms;
-using PschyHealth.Panels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,13 +17,22 @@ namespace PschyHealth
         public frmMainPage()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
-        private void frmMainPage_Load(object sender, EventArgs e)
+        private void metroTilePanel2_ItemClick(object sender, EventArgs e)
         {
-          //  pnlMyWorkPlace myWorkplace = new pnlMyWorkPlace();
-          //  myWorkplace.Dock = DockStyle.Fill;
-           // this.Controls.Add(myWorkplace);
+
+        }
+
+        private void metroTileItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            ctxUser.Show(pictureBox2, 0, pictureBox1.Height);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -33,67 +41,84 @@ namespace PschyHealth
             pnlSettings.swipe(true);
         }
 
-        private void metroContextMenu1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            ctxMenu.Show(pictureBox2, 0, pictureBox1.Height);
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnAccounting_Click(object sender, EventArgs e)
-        {
-            pnlAccounting pnlAccounting = new pnlAccounting(this);
-            pnlAccounting.swipe(true);
-        }
-
-        private void btnMedicalAids_Click(object sender, EventArgs e)
-        {
-            pnlMedicalAids pnlMedicalAids = new pnlMedicalAids(this);
-            pnlMedicalAids.swipe(true);
-        }
-
-        private void btnStaff_Click(object sender, EventArgs e)
-        {
-            pnlStaff pnlStaff = new pnlStaff(this);
-            pnlStaff.swipe(true);
-        }
-
-        private void btnClients_Click(object sender, EventArgs e)
+        private void metroTileItem1_Click_1(object sender, EventArgs e)
         {
             pnlClients pnlClients = new pnlClients(this);
             pnlClients.swipe(true);
         }
 
-        private void btnStatements_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void metroTileItem2_Click(object sender, EventArgs e)
+        {
+            pnlStaff pnlStaff = new pnlStaff(this);
+            pnlStaff.swipe(true);
+        }
+
+        private void metroTileItem3_Click(object sender, EventArgs e)
+        {
+            pnlAccounting pnlAccounting = new pnlAccounting(this);
+            pnlAccounting.swipe(true);
+        }
+
+        private void metroTileItem6_Click(object sender, EventArgs e)
         {
             pnlStatements pnlStatements = new pnlStatements(this);
             pnlStatements.swipe(true);
         }
 
-        private void btnConsultations_Click(object sender, EventArgs e)
+        private void metroTileItem7_Click(object sender, EventArgs e)
         {
-            pnlConsultation pnlConsultation = new pnlConsultation(this);
-            pnlConsultation.swipe(true);
+            pnlMedicalAids pnlMedicalAids = new pnlMedicalAids(this);
+            pnlMedicalAids.swipe(true);
+        }
+
+        private void metroTileItem8_Click(object sender, EventArgs e)
+        {
+            pnlEDICodes pnlEDICodes = new pnlEDICodes(this);
+            pnlEDICodes.swipe(true);
+        }
+
+        private void metroTileItem10_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void metroTileItem11_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void metroTileItem13_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            frmMainPage main = new frmMainPage();
-            main.Show();
+            frmCrashReport cras = new frmCrashReport();
+            cras.Show();
         }
 
-        private void btnEDIfunctions_Click(object sender, EventArgs e)
+        private void metroTilePanel1_ItemClick(object sender, EventArgs e)
         {
-            pnlEDICodes pnlEDICodes = new pnlEDICodes(this);
-            pnlEDICodes.swipe(true);
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTime = DateTime.Now;
+            this.metroTileItem4.TitleText = dateTime.ToString("hh:mm:ss");
+            this.metroTileItem12.TitleText = dateTime.ToString("dd-MMM-yyyy");
+        }
+
+        private void lockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLockScreen frmLockScreen = new frmLockScreen();
+            frmLockScreen.Show();
         }
     }
 }

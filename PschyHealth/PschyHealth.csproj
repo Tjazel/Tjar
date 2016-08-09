@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=12.1.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.1.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=12.1.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="MetroFramework">
       <HintPath>E:\Jarvis Prototype\MyMediErv1.0\bin\Debug\MetroFramework.dll</HintPath>
     </Reference>
@@ -58,6 +61,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainPage.Designer.cs">
+      <DependentUpon>frmMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCrashReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCrashReport.Designer.cs">
+      <DependentUpon>frmCrashReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmForgotPassword.Designer.cs">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmAccounting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +109,18 @@
     <Compile Include="Forms\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmLockScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLockScreen.Designer.cs">
+      <DependentUpon>frmLockScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSwitchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSwitchUser.Designer.cs">
+      <DependentUpon>frmSwitchUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panels\pnlClients.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,12 +150,6 @@
     </Compile>
     <Compile Include="Panels\pnlStatements.Designer.cs">
       <DependentUpon>pnlStatements.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMainPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMainPage.Designer.cs">
-      <DependentUpon>frmMainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMedicalAids.cs">
       <SubType>Form</SubType>
@@ -167,8 +194,29 @@
     <Compile Include="Panels\pnlAccounting.Designer.cs">
       <DependentUpon>pnlAccounting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panels\pnlScreenSaver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\pnlScreenSaver.Designer.cs">
+      <DependentUpon>pnlScreenSaver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\pnlScreenSaverSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\pnlScreenSaverSettings.Designer.cs">
+      <DependentUpon>pnlScreenSaverSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMainPage.resx">
+      <DependentUpon>frmMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCrashReport.resx">
+      <DependentUpon>frmCrashReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmForgotPassword.resx">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAccounting.resx">
       <DependentUpon>frmAccounting.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +232,12 @@
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLockScreen.resx">
+      <DependentUpon>frmLockScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSwitchUser.resx">
+      <DependentUpon>frmSwitchUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panels\pnlClients.resx">
       <DependentUpon>pnlClients.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,9 +252,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\pnlStatements.resx">
       <DependentUpon>pnlStatements.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMainPage.resx">
-      <DependentUpon>frmMainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMedicalAids.resx">
       <DependentUpon>frmMedicalAids.cs</DependentUpon>
@@ -222,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\pnlAccounting.resx">
       <DependentUpon>pnlAccounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\pnlScreenSaver.resx">
+      <DependentUpon>pnlScreenSaver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -263,6 +317,102 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1469925381_home512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0b35711f903742a0623698cc9ce7ec65.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\efefefefe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470239325_resolutions-161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WDF_653938.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\motorcyclist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_power_settings_new_white_24dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chili_golden_hour_gory_103630_1280x800.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470605197_custom-reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470605394_bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470605314_reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470606270_Add-Male-User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470606337_user-group-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470606567_medical_bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\87c34eb1488a3ec90ffddc89340a7572.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470609465_house-home-real_estate-property-outline-stroke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470605358_text-x-log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470605722_help-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470605616_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470605335_cmyk-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470605497_microphone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470752007_laptop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470751950_voice-support.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470605595_Synchronize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470752183_emblem-art2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470752222_emblem-art2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1470752298_administrator.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

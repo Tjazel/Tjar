@@ -118,19 +118,124 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="1470605335_cmyk-03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470605335_cmyk-03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1457474833_Username" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1457474833_Username.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1457474659_Password" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1457474659_Password.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1457886057_Next" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1457886057_Next.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="refresh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Capture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capture.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470605394_bank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470605394_bank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470605595_Synchronize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470605595_Synchronize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="group-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\group-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1469925381_home512x512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1469925381_home512x512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470605358_text-x-log" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470605358_text-x-log.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="swat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\swat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="motorcyclist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\motorcyclist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470605314_reports" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470605314_reports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0b35711f903742a0623698cc9ce7ec65" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0b35711f903742a0623698cc9ce7ec65.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470752222_emblem-art2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470752222_emblem-art2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="87c34eb1488a3ec90ffddc89340a7572" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\87c34eb1488a3ec90ffddc89340a7572.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WDF_653938" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WDF_653938.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chili_golden_hour_gory_103630_1280x800" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chili_golden_hour_gory_103630_1280x800.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470239012_medical-kit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470239012_medical-kit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1457474659_Password" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1457474659_Password.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470239325_resolutions-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470239325_resolutions-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470239325_resolutions-161" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470239325_resolutions-161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470605722_help-file" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470605722_help-file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470751950_voice-support" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470751950_voice-support.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470605616_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470605616_19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470752183_emblem-art2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470752183_emblem-art2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470609465_house-home-real_estate-property-outline-stroke" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470609465_house-home-real_estate-property-outline-stroke.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470606270_Add-Male-User" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470606270_Add-Male-User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470606567_medical_bag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470606567_medical_bag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470606337_user-group-new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470606337_user-group-new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="group-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\group-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470605497_microphone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470605497_microphone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470239012_medical-kit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470239012_medical-kit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470605197_custom-reports" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470605197_custom-reports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470752007_laptop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470752007_laptop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Capture1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Capture1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="efefefefe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\efefefefe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_power_settings_new_white_24dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_power_settings_new_white_24dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1470752298_administrator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470752298_administrator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

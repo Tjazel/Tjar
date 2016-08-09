@@ -28,204 +28,238 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pnlSettings));
-            this.myWorkplace = new MetroFramework.Controls.MetroTile();
-            this.Record = new MetroFramework.Controls.MetroTile();
-            this.Updates = new MetroFramework.Controls.MetroTile();
-            this.Admin = new MetroFramework.Controls.MetroTile();
-            this.BackupDB = new MetroFramework.Controls.MetroTile();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.LogActivity = new MetroFramework.Controls.MetroTile();
-            this.UserManagment = new MetroFramework.Controls.MetroTile();
-            this.Help = new MetroFramework.Controls.MetroTile();
-            this.About = new MetroFramework.Controls.MetroTile();
-            this.btnVoiceCommand = new MetroFramework.Controls.MetroTile();
+            this.metroTilePanel1 = new DevComponents.DotNetBar.Metro.MetroTilePanel();
+            this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
+            this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem2 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem3 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem4 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem5 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem6 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem8 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem10 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem11 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem7 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.SuspendLayout();
             // 
-            // myWorkplace
+            // metroTilePanel1
             // 
-            this.myWorkplace.ActiveControl = null;
-            this.myWorkplace.Location = new System.Drawing.Point(295, 169);
-            this.myWorkplace.Name = "myWorkplace";
-            this.myWorkplace.Size = new System.Drawing.Size(189, 124);
-            this.myWorkplace.TabIndex = 8;
-            this.myWorkplace.Text = "My Workplace";
-            this.myWorkplace.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.myWorkplace.TileImage = ((System.Drawing.Image)(resources.GetObject("myWorkplace.TileImage")));
-            this.myWorkplace.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.myWorkplace.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.myWorkplace.UseSelectable = true;
-            this.myWorkplace.UseTileImage = true;
-            this.myWorkplace.Click += new System.EventHandler(this.myWorkplace_Click);
             // 
-            // Record
             // 
-            this.Record.ActiveControl = null;
-            this.Record.Location = new System.Drawing.Point(701, 31);
-            this.Record.Name = "Record";
-            this.Record.Size = new System.Drawing.Size(116, 393);
-            this.Record.TabIndex = 10;
-            this.Record.Text = "Record";
-            this.Record.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Record.TileImage = ((System.Drawing.Image)(resources.GetObject("Record.TileImage")));
-            this.Record.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Record.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.Record.UseSelectable = true;
-            this.Record.UseTileImage = true;
             // 
-            // Updates
+            this.metroTilePanel1.BackgroundStyle.Class = "MetroTilePanel";
+            this.metroTilePanel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTilePanel1.ContainerControlProcessDialogKey = true;
+            this.metroTilePanel1.DragDropSupport = true;
+            this.metroTilePanel1.EnableDragDrop = true;
+            this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.itemContainer1});
+            this.metroTilePanel1.Location = new System.Drawing.Point(25, 25);
+            this.metroTilePanel1.Name = "metroTilePanel1";
+            this.metroTilePanel1.Size = new System.Drawing.Size(859, 614);
+            this.metroTilePanel1.TabIndex = 0;
+            this.metroTilePanel1.Text = "metroTilePanel1";
             // 
-            this.Updates.ActiveControl = null;
-            this.Updates.Location = new System.Drawing.Point(93, 31);
-            this.Updates.Name = "Updates";
-            this.Updates.Size = new System.Drawing.Size(189, 124);
-            this.Updates.TabIndex = 9;
-            this.Updates.Text = "Updates";
-            this.Updates.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Updates.TileImage = ((System.Drawing.Image)(resources.GetObject("Updates.TileImage")));
-            this.Updates.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Updates.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.Updates.UseSelectable = true;
-            this.Updates.UseTileImage = true;
+            // itemContainer1
             // 
-            // Admin
             // 
-            this.Admin.ActiveControl = null;
-            this.Admin.Location = new System.Drawing.Point(93, 299);
-            this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(391, 125);
-            this.Admin.TabIndex = 8;
-            this.Admin.Text = "Admin";
-            this.Admin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Admin.TileImage = ((System.Drawing.Image)(resources.GetObject("Admin.TileImage")));
-            this.Admin.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Admin.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.Admin.UseSelectable = true;
-            this.Admin.UseTileImage = true;
             // 
-            // BackupDB
             // 
-            this.BackupDB.ActiveControl = null;
-            this.BackupDB.Location = new System.Drawing.Point(496, 301);
-            this.BackupDB.Name = "BackupDB";
-            this.BackupDB.Size = new System.Drawing.Size(189, 124);
-            this.BackupDB.TabIndex = 7;
-            this.BackupDB.Text = "Backup DB";
-            this.BackupDB.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BackupDB.TileImage = ((System.Drawing.Image)(resources.GetObject("BackupDB.TileImage")));
-            this.BackupDB.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BackupDB.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.BackupDB.UseSelectable = true;
-            this.BackupDB.UseTileImage = true;
+            this.itemContainer1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer1.ItemSpacing = 10;
+            this.itemContainer1.MultiLine = true;
+            this.itemContainer1.Name = "itemContainer1";
+            this.itemContainer1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.metroTileItem1,
+            this.metroTileItem2,
+            this.metroTileItem3,
+            this.metroTileItem4,
+            this.metroTileItem5,
+            this.metroTileItem6,
+            this.metroTileItem8,
+            this.metroTileItem9,
+            this.metroTileItem10,
+            this.metroTileItem11,
+            this.metroTileItem7});
             // 
-            // metroTile1
             // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(496, 169);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(189, 124);
-            this.metroTile1.TabIndex = 6;
-            this.metroTile1.Text = "Personallization";
-            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile1.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile1.TileImage")));
-            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.UseTileImage = true;
             // 
-            // LogActivity
+            this.itemContainer1.TitleStyle.Class = "MetroTileGroupTitle";
+            this.itemContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer1.TitleText = "Settings";
             // 
-            this.LogActivity.ActiveControl = null;
-            this.LogActivity.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.LogActivity.Location = new System.Drawing.Point(93, 169);
-            this.LogActivity.Name = "LogActivity";
-            this.LogActivity.Size = new System.Drawing.Size(189, 124);
-            this.LogActivity.TabIndex = 5;
-            this.LogActivity.Text = "Log Activity";
-            this.LogActivity.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.LogActivity.TileImage = ((System.Drawing.Image)(resources.GetObject("LogActivity.TileImage")));
-            this.LogActivity.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LogActivity.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.LogActivity.UseSelectable = true;
-            this.LogActivity.UseTileImage = true;
+            // metroTileItem1
             // 
-            // UserManagment
+            this.metroTileItem1.Image = global::PschyHealth.Properties.Resources._1470605595_Synchronize;
+            this.metroTileItem1.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileItem1.Name = "metroTileItem1";
+            this.metroTileItem1.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem1.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroTileItem1.TileSize = new System.Drawing.Size(180, 120);
             // 
-            this.UserManagment.ActiveControl = null;
-            this.UserManagment.Location = new System.Drawing.Point(295, 29);
-            this.UserManagment.Name = "UserManagment";
-            this.UserManagment.Size = new System.Drawing.Size(391, 125);
-            this.UserManagment.TabIndex = 4;
-            this.UserManagment.Text = "User Managment";
-            this.UserManagment.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.UserManagment.TileImage = ((System.Drawing.Image)(resources.GetObject("UserManagment.TileImage")));
-            this.UserManagment.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.UserManagment.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.UserManagment.UseSelectable = true;
-            this.UserManagment.UseTileImage = true;
             // 
-            // Help
             // 
-            this.Help.ActiveControl = null;
-            this.Help.Location = new System.Drawing.Point(295, 438);
-            this.Help.Name = "Help";
-            this.Help.Size = new System.Drawing.Size(189, 124);
-            this.Help.TabIndex = 3;
-            this.Help.Text = "Help";
-            this.Help.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Help.TileImage = ((System.Drawing.Image)(resources.GetObject("Help.TileImage")));
-            this.Help.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Help.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.Help.UseSelectable = true;
-            this.Help.UseTileImage = true;
+            this.metroTileItem1.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem1.TitleText = "Updates";
+            this.metroTileItem1.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // About
+            // metroTileItem2
             // 
-            this.About.ActiveControl = null;
-            this.About.Location = new System.Drawing.Point(93, 438);
-            this.About.Name = "About";
-            this.About.Size = new System.Drawing.Size(189, 124);
-            this.About.TabIndex = 2;
-            this.About.Text = "About";
-            this.About.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.About.TileImage = ((System.Drawing.Image)(resources.GetObject("About.TileImage")));
-            this.About.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.About.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.About.UseSelectable = true;
-            this.About.UseTileImage = true;
-            this.About.Click += new System.EventHandler(this.About_Click);
+            this.metroTileItem2.Image = global::PschyHealth.Properties.Resources._1470606337_user_group_new;
+            this.metroTileItem2.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileItem2.Name = "metroTileItem2";
+            this.metroTileItem2.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem2.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroTileItem2.TileSize = new System.Drawing.Size(210, 120);
             // 
-            // btnVoiceCommand
             // 
-            this.btnVoiceCommand.ActiveControl = null;
-            this.btnVoiceCommand.Location = new System.Drawing.Point(496, 438);
-            this.btnVoiceCommand.Name = "btnVoiceCommand";
-            this.btnVoiceCommand.Size = new System.Drawing.Size(320, 125);
-            this.btnVoiceCommand.TabIndex = 11;
-            this.btnVoiceCommand.Text = "Voice Command";
-            this.btnVoiceCommand.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVoiceCommand.TileImage = ((System.Drawing.Image)(resources.GetObject("btnVoiceCommand.TileImage")));
-            this.btnVoiceCommand.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnVoiceCommand.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnVoiceCommand.UseSelectable = true;
-            this.btnVoiceCommand.UseTileImage = true;
+            // 
+            this.metroTileItem2.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem2.TitleText = "User Management";
+            this.metroTileItem2.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTileItem3
+            // 
+            this.metroTileItem3.Image = global::PschyHealth.Properties.Resources._1470605358_text_x_log;
+            this.metroTileItem3.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileItem3.Name = "metroTileItem3";
+            this.metroTileItem3.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem3.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroTileItem3.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.metroTileItem3.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem3.TitleText = "Log Activity";
+            this.metroTileItem3.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTileItem4
+            // 
+            this.metroTileItem4.Image = global::PschyHealth.Properties.Resources._1470752007_laptop;
+            this.metroTileItem4.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileItem4.Name = "metroTileItem4";
+            this.metroTileItem4.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem4.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroTileItem4.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.metroTileItem4.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem4.TitleText = "My Workplace";
+            this.metroTileItem4.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTileItem5
+            // 
+            this.metroTileItem5.Image = global::PschyHealth.Properties.Resources._1470752183_emblem_art2;
+            this.metroTileItem5.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileItem5.Name = "metroTileItem5";
+            this.metroTileItem5.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem5.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroTileItem5.TileSize = new System.Drawing.Size(210, 120);
+            // 
+            // 
+            // 
+            this.metroTileItem5.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem5.TitleText = "Personalization";
+            this.metroTileItem5.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTileItem6
+            // 
+            this.metroTileItem6.Image = global::PschyHealth.Properties.Resources._1470752298_administrator;
+            this.metroTileItem6.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileItem6.Name = "metroTileItem6";
+            this.metroTileItem6.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem6.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroTileItem6.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.metroTileItem6.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem6.TitleText = "Admin";
+            this.metroTileItem6.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTileItem8
+            // 
+            this.metroTileItem8.Image = global::PschyHealth.Properties.Resources._1470605497_microphone;
+            this.metroTileItem8.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileItem8.Name = "metroTileItem8";
+            this.metroTileItem8.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem8.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroTileItem8.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.metroTileItem8.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem8.TitleText = "Record";
+            this.metroTileItem8.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTileItem9
+            // 
+            this.metroTileItem9.Image = global::PschyHealth.Properties.Resources._1470605616_19;
+            this.metroTileItem9.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileItem9.Name = "metroTileItem9";
+            this.metroTileItem9.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem9.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroTileItem9.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.metroTileItem9.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem9.TitleText = "About";
+            this.metroTileItem9.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTileItem10
+            // 
+            this.metroTileItem10.Image = global::PschyHealth.Properties.Resources._1470605722_help_file;
+            this.metroTileItem10.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileItem10.Name = "metroTileItem10";
+            this.metroTileItem10.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem10.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroTileItem10.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.metroTileItem10.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem10.TitleText = "Help";
+            this.metroTileItem10.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTileItem11
+            // 
+            this.metroTileItem11.Image = global::PschyHealth.Properties.Resources._1470751950_voice_support;
+            this.metroTileItem11.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileItem11.Name = "metroTileItem11";
+            this.metroTileItem11.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem11.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroTileItem11.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.metroTileItem11.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem11.TitleText = "Voice Command";
+            this.metroTileItem11.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTileItem7
+            // 
+            this.metroTileItem7.Image = global::PschyHealth.Properties.Resources._1470605335_cmyk_03;
+            this.metroTileItem7.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileItem7.Name = "metroTileItem7";
+            this.metroTileItem7.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem7.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroTileItem7.TileSize = new System.Drawing.Size(210, 120);
+            // 
+            // 
+            // 
+            this.metroTileItem7.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem7.TitleText = "Backup Database";
+            this.metroTileItem7.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // pnlSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnVoiceCommand);
-            this.Controls.Add(this.About);
-            this.Controls.Add(this.Updates);
-            this.Controls.Add(this.Record);
-            this.Controls.Add(this.BackupDB);
-            this.Controls.Add(this.myWorkplace);
-            this.Controls.Add(this.Help);
-            this.Controls.Add(this.Admin);
-            this.Controls.Add(this.UserManagment);
-            this.Controls.Add(this.LogActivity);
-            this.Controls.Add(this.metroTile1);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Controls.Add(this.metroTilePanel1);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "pnlSettings";
             this.Size = new System.Drawing.Size(901, 664);
             this.Load += new System.EventHandler(this.pnlSettings_Load);
@@ -235,16 +269,19 @@
         }
 
         #endregion
-        private MetroFramework.Controls.MetroTile myWorkplace;
-        private MetroFramework.Controls.MetroTile Record;
-        private MetroFramework.Controls.MetroTile Updates;
-        private MetroFramework.Controls.MetroTile Admin;
-        private MetroFramework.Controls.MetroTile BackupDB;
-        private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroTile LogActivity;
-        private MetroFramework.Controls.MetroTile UserManagment;
-        private MetroFramework.Controls.MetroTile Help;
-        private MetroFramework.Controls.MetroTile About;
-        private MetroFramework.Controls.MetroTile btnVoiceCommand;
+
+        private DevComponents.DotNetBar.Metro.MetroTilePanel metroTilePanel1;
+        private DevComponents.DotNetBar.ItemContainer itemContainer1;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem1;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem2;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem3;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem4;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem5;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem6;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem7;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem8;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem9;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem10;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem11;
     }
 }

@@ -14,6 +14,8 @@ namespace PschyHealth
     public partial class frmLogin : MetroForm
 
     {
+        frmForgotPassword frmForgotPassword = new frmForgotPassword();
+
         public frmLogin()
         {
             InitializeComponent();
@@ -26,8 +28,15 @@ namespace PschyHealth
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            frmMainPage mainPage = new frmMainPage();
-            mainPage.Show();
+            frmMainPage f1 = new frmMainPage();
+            f1.Show();
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmForgotPassword.Show();
+           
         }
     }
 }

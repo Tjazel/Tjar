@@ -46,10 +46,9 @@
             // 
             this.lbl_Password.AutoSize = true;
             this.lbl_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Password.Location = new System.Drawing.Point(88, 149);
-            this.lbl_Password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Password.Location = new System.Drawing.Point(66, 121);
             this.lbl_Password.Name = "lbl_Password";
-            this.lbl_Password.Size = new System.Drawing.Size(104, 25);
+            this.lbl_Password.Size = new System.Drawing.Size(82, 20);
             this.lbl_Password.TabIndex = 10;
             this.lbl_Password.Text = "Password:";
             // 
@@ -57,10 +56,9 @@
             // 
             this.lbl_Username.AutoSize = true;
             this.lbl_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Username.Location = new System.Drawing.Point(81, 92);
-            this.lbl_Username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Username.Location = new System.Drawing.Point(61, 75);
             this.lbl_Username.Name = "lbl_Username";
-            this.lbl_Username.Size = new System.Drawing.Size(108, 25);
+            this.lbl_Username.Size = new System.Drawing.Size(87, 20);
             this.lbl_Username.TabIndex = 9;
             this.lbl_Username.Text = "Username:";
             // 
@@ -70,18 +68,16 @@
             // 
             // 
             this.mtxb_Password.CustomButton.Image = null;
-            this.mtxb_Password.CustomButton.Location = new System.Drawing.Point(205, 2);
-            this.mtxb_Password.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtxb_Password.CustomButton.Location = new System.Drawing.Point(85, 1);
             this.mtxb_Password.CustomButton.Name = "";
-            this.mtxb_Password.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.mtxb_Password.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.mtxb_Password.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxb_Password.CustomButton.TabIndex = 1;
             this.mtxb_Password.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mtxb_Password.CustomButton.UseSelectable = true;
             this.mtxb_Password.CustomButton.Visible = false;
             this.mtxb_Password.Lines = new string[0];
-            this.mtxb_Password.Location = new System.Drawing.Point(217, 149);
-            this.mtxb_Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtxb_Password.Location = new System.Drawing.Point(163, 121);
             this.mtxb_Password.MaxLength = 32767;
             this.mtxb_Password.Name = "mtxb_Password";
             this.mtxb_Password.PasswordChar = '\0';
@@ -89,7 +85,7 @@
             this.mtxb_Password.SelectedText = "";
             this.mtxb_Password.SelectionLength = 0;
             this.mtxb_Password.SelectionStart = 0;
-            this.mtxb_Password.Size = new System.Drawing.Size(180, 28);
+            this.mtxb_Password.Size = new System.Drawing.Size(135, 23);
             this.mtxb_Password.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxb_Password.TabIndex = 8;
             this.mtxb_Password.UseSelectable = true;
@@ -103,18 +99,16 @@
             // 
             // 
             this.mtxb_Username.CustomButton.Image = null;
-            this.mtxb_Username.CustomButton.Location = new System.Drawing.Point(205, 2);
-            this.mtxb_Username.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtxb_Username.CustomButton.Location = new System.Drawing.Point(85, 1);
             this.mtxb_Username.CustomButton.Name = "";
-            this.mtxb_Username.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.mtxb_Username.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.mtxb_Username.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxb_Username.CustomButton.TabIndex = 1;
             this.mtxb_Username.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mtxb_Username.CustomButton.UseSelectable = true;
             this.mtxb_Username.CustomButton.Visible = false;
             this.mtxb_Username.Lines = new string[0];
-            this.mtxb_Username.Location = new System.Drawing.Point(217, 92);
-            this.mtxb_Username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtxb_Username.Location = new System.Drawing.Point(163, 75);
             this.mtxb_Username.MaxLength = 32767;
             this.mtxb_Username.Name = "mtxb_Username";
             this.mtxb_Username.PasswordChar = '\0';
@@ -122,7 +116,7 @@
             this.mtxb_Username.SelectedText = "";
             this.mtxb_Username.SelectionLength = 0;
             this.mtxb_Username.SelectionStart = 0;
-            this.mtxb_Username.Size = new System.Drawing.Size(180, 28);
+            this.mtxb_Username.Size = new System.Drawing.Size(135, 23);
             this.mtxb_Username.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxb_Username.TabIndex = 7;
             this.mtxb_Username.UseSelectable = true;
@@ -133,10 +127,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PschyHealth.Properties.Resources._1457474659_Password;
-            this.pictureBox3.Location = new System.Drawing.Point(31, 138);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(23, 112);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
@@ -144,10 +137,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PschyHealth.Properties.Resources._1457474833_Username;
-            this.pictureBox2.Location = new System.Drawing.Point(31, 78);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(23, 63);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
@@ -155,10 +147,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(405, 138);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(304, 112);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.Size = new System.Drawing.Size(36, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -166,21 +157,21 @@
             // 
             // metroLink1
             // 
-            this.metroLink1.Location = new System.Drawing.Point(305, 185);
-            this.metroLink1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroLink1.Location = new System.Drawing.Point(229, 150);
             this.metroLink1.Name = "metroLink1";
-            this.metroLink1.Size = new System.Drawing.Size(143, 28);
+            this.metroLink1.Size = new System.Drawing.Size(107, 23);
             this.metroLink1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLink1.TabIndex = 14;
             this.metroLink1.Text = "Forgot Password";
             this.metroLink1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 235);
+            this.ClientSize = new System.Drawing.Size(378, 191);
             this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -189,12 +180,10 @@
             this.Controls.Add(this.lbl_Username);
             this.Controls.Add(this.mtxb_Password);
             this.Controls.Add(this.mtxb_Username);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Movable = false;
             this.Name = "frmLogin";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.Text = "PschyHealth Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
