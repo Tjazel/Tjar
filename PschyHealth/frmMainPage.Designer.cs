@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainPage));
+            this.metroTileFrame1 = new DevComponents.DotNetBar.Metro.MetroTileFrame();
+            this.metroTileFrame2 = new DevComponents.DotNetBar.Metro.MetroTileFrame();
+            this.metroTileFrame3 = new DevComponents.DotNetBar.Metro.MetroTileFrame();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTilePanel1 = new DevComponents.DotNetBar.Metro.MetroTilePanel();
@@ -56,6 +59,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.ctxUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -63,13 +67,44 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // metroTileFrame1
+            // 
+            this.metroTileFrame1.Text = "Only 38% with mood disorders receive help.";
+            this.metroTileFrame1.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            // 
+            // 
+            // 
+            this.metroTileFrame1.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileFrame1.TileStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTileFrame2
+            // 
+            this.metroTileFrame2.Text = "Only 15% with substance abuse problems get the help they need.";
+            this.metroTileFrame2.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            // 
+            // 
+            // 
+            this.metroTileFrame2.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileFrame2.TileStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroTileFrame3
+            // 
+            this.metroTileFrame3.Text = "8% of all teens have an anxiety disorder.";
+            this.metroTileFrame3.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            // 
+            // 
+            // 
+            this.metroTileFrame3.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileFrame3.TileStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // metroLabel3
             // 
             this.metroLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(980, 16);
+            this.metroLabel3.Location = new System.Drawing.Point(1307, 20);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(68, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(73, 20);
             this.metroLabel3.TabIndex = 27;
             this.metroLabel3.Text = "Username";
             // 
@@ -96,9 +131,10 @@
             this.metroTilePanel1.EnableDragDrop = true;
             this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.itemContainer1});
-            this.metroTilePanel1.Location = new System.Drawing.Point(34, 82);
+            this.metroTilePanel1.Location = new System.Drawing.Point(45, 101);
+            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTilePanel1.Name = "metroTilePanel1";
-            this.metroTilePanel1.Size = new System.Drawing.Size(695, 703);
+            this.metroTilePanel1.Size = new System.Drawing.Size(927, 865);
             this.metroTilePanel1.TabIndex = 30;
             this.metroTilePanel1.Text = "metroTilePanel1";
             this.metroTilePanel1.ItemClick += new System.EventHandler(this.metroTilePanel1_ItemClick);
@@ -190,7 +226,7 @@
             // 
             this.metroTileItem4.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroTileItem4.TitleTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTileItem4.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroTileItem4.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // metroTileItem5
             // 
@@ -281,16 +317,22 @@
             // 
             // metroTileItem12
             // 
+            this.metroTileItem12.AutoRotateFramesInterval = 10000;
+            this.metroTileItem12.Frames.Add(this.metroTileFrame1);
+            this.metroTileItem12.Frames.Add(this.metroTileFrame2);
+            this.metroTileItem12.Frames.Add(this.metroTileFrame3);
             this.metroTileItem12.Name = "metroTileItem12";
             this.metroTileItem12.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem12.Text = "8 out of 100 teens report having serious depression.";
             this.metroTileItem12.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
             this.metroTileItem12.TileSize = new System.Drawing.Size(220, 120);
             // 
             // 
             // 
             this.metroTileItem12.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem12.TileStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroTileItem12.TitleTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTileItem12.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroTileItem12.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // metroTileItem13
             // 
@@ -317,11 +359,12 @@
             this.calendarView1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.calendarView1.ContainerControlProcessDialogKey = true;
             this.calendarView1.HighlightCurrentDay = true;
-            this.calendarView1.Location = new System.Drawing.Point(854, 82);
+            this.calendarView1.Location = new System.Drawing.Point(1139, 101);
+            this.calendarView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.calendarView1.MultiUserTabHeight = 19;
             this.calendarView1.Name = "calendarView1";
             this.calendarView1.ShowOnlyWorkDayHours = true;
-            this.calendarView1.Size = new System.Drawing.Size(403, 613);
+            this.calendarView1.Size = new System.Drawing.Size(537, 754);
             this.calendarView1.TabIndex = 31;
             this.calendarView1.Text = "calendarView1";
             this.calendarView1.TimeIndicator.BorderColor = System.Drawing.Color.Empty;
@@ -331,30 +374,31 @@
             // 
             // ctxUser
             // 
+            this.ctxUser.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ctxUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changeAccountSettingToolStripMenuItem,
             this.lockToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.ctxUser.Name = "ctxUser";
-            this.ctxUser.Size = new System.Drawing.Size(208, 70);
+            this.ctxUser.Size = new System.Drawing.Size(242, 76);
             // 
             // changeAccountSettingToolStripMenuItem
             // 
             this.changeAccountSettingToolStripMenuItem.Name = "changeAccountSettingToolStripMenuItem";
-            this.changeAccountSettingToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.changeAccountSettingToolStripMenuItem.Size = new System.Drawing.Size(241, 24);
             this.changeAccountSettingToolStripMenuItem.Text = "Change Account settings";
             // 
             // lockToolStripMenuItem
             // 
             this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.lockToolStripMenuItem.Size = new System.Drawing.Size(241, 24);
             this.lockToolStripMenuItem.Text = "Lock";
             this.lockToolStripMenuItem.Click += new System.EventHandler(this.lockToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(241, 24);
             this.signOutToolStripMenuItem.Text = "Sign out";
             // 
             // timer1
@@ -367,9 +411,10 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Image = global::PschyHealth.Properties.Resources._1470609465_house_home_real_estate_property_outline_stroke;
-            this.pictureBox4.Location = new System.Drawing.Point(1144, 16);
+            this.pictureBox4.Location = new System.Drawing.Point(1525, 20);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(28, 22);
+            this.pictureBox4.Size = new System.Drawing.Size(37, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 29;
             this.pictureBox4.TabStop = false;
@@ -379,20 +424,23 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1180, 16);
+            this.pictureBox3.Location = new System.Drawing.Point(1573, 20);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 22);
+            this.pictureBox3.Size = new System.Drawing.Size(49, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 28;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(950, 16);
+            this.pictureBox2.Location = new System.Drawing.Point(1267, 20);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 22);
+            this.pictureBox2.Size = new System.Drawing.Size(37, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
@@ -402,19 +450,26 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1101, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(1468, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 22);
+            this.pictureBox1.Size = new System.Drawing.Size(49, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "PschyHealth";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
             // frmMainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 780);
+            this.ClientSize = new System.Drawing.Size(1707, 960);
             this.Controls.Add(this.calendarView1);
             this.Controls.Add(this.metroTilePanel1);
             this.Controls.Add(this.pictureBox4);
@@ -422,11 +477,14 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMainPage";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Teal;
-            this.Text = "Main Page";
+            this.Text = "Main Pag";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.SizeChanged += new System.EventHandler(this.frmMainPage_SizeChanged);
             this.ctxUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -465,5 +523,9 @@
         private System.Windows.Forms.ToolStripMenuItem lockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private DevComponents.DotNetBar.Metro.MetroTileFrame metroTileFrame1;
+        private DevComponents.DotNetBar.Metro.MetroTileFrame metroTileFrame2;
+        private DevComponents.DotNetBar.Metro.MetroTileFrame metroTileFrame3;
     }
 }

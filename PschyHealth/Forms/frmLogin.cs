@@ -30,6 +30,7 @@ namespace PschyHealth
         {
             frmMainPage f1 = new frmMainPage();
             f1.Show();
+            this.Hide();
         }
 
         private void metroLink1_Click(object sender, EventArgs e)

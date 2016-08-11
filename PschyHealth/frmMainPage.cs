@@ -99,8 +99,7 @@ namespace PschyHealth
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            frmCrashReport cras = new frmCrashReport();
-            cras.Show();
+           
         }
 
         private void metroTilePanel1_ItemClick(object sender, EventArgs e)
@@ -112,13 +111,39 @@ namespace PschyHealth
         {
             DateTime dateTime = DateTime.Now;
             this.metroTileItem4.TitleText = dateTime.ToString("hh:mm:ss");
-            this.metroTileItem12.TitleText = dateTime.ToString("dd-MMM-yyyy");
+            
         }
 
         private void lockToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmLockScreen frmLockScreen = new frmLockScreen();
             frmLockScreen.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            frmCrashReport cras = new frmCrashReport();
+            cras.Show();
+        }
+
+        private void frmMainPage_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                notifyIcon1.Icon = SystemIcons.Application;
+                notifyIcon1.BalloonTipText = "PschyHealth has been minimized";
+                notifyIcon1.ShowBalloonTip(1000);
+            }
+            else if (this.WindowState == FormWindowState.Normal)
+            {
+                notifyIcon1.BalloonTipText = "PschyHealth has come back to Normal";
+                notifyIcon1.ShowBalloonTip(1000);
+            }
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

@@ -124,6 +124,9 @@
   <data name="1457474833_Username" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1457474833_Username.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ic_close_holo_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_close_holo_light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1457886057_Next" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1457886057_Next.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,8 +151,8 @@
   <data name="swat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\swat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="motorcyclist" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\motorcyclist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_power_settings_new_white_24dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_power_settings_new_white_24dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1470605314_reports" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1470605314_reports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -159,6 +162,9 @@
   </data>
   <data name="refresh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="email_envelope_letter_mail_message_notification_text_-128[1]" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\email_envelope_letter_mail_message_notification_text_-128[1].png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1470752222_emblem-art2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1470752222_emblem-art2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,9 +193,6 @@
   <data name="1470239325_resolutions-161" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1470239325_resolutions-161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1470605722_help-file" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1470605722_help-file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="1470751950_voice-support" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1470751950_voice-support.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -201,6 +204,9 @@
   </data>
   <data name="1470609465_house-home-real_estate-property-outline-stroke" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1470609465_house-home-real_estate-property-outline-stroke.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="motorcyclist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\motorcyclist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1470606270_Add-Male-User" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1470606270_Add-Male-User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,6 +226,9 @@
   <data name="1470239012_medical-kit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1470239012_medical-kit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1470752298_administrator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470752298_administrator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1470605197_custom-reports" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1470605197_custom-reports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,10 +241,10 @@
   <data name="efefefefe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\efefefefe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_power_settings_new_white_24dp_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_power_settings_new_white_24dp_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1470605722_help-file" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1470605722_help-file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1470752298_administrator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1470752298_administrator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

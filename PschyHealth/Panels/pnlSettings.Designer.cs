@@ -261,7 +261,8 @@
             this.Controls.Add(this.metroTilePanel1);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "pnlSettings";
-            this.Size = new System.Drawing.Size(901, 664);
+            this.Size = new System.Drawing.Size(858, 664);
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Load += new System.EventHandler(this.pnlSettings_Load);
             this.Leave += new System.EventHandler(this.pnlSettings_Leave);
             this.ResumeLayout(false);

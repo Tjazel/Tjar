@@ -196,3 +196,36 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.frm
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.frmSwitchUser.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.pnlScreenSaver.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.frmCrashReport.resources
+E:\Tjar\PschyHealth\bin\Debug\PschyHealth.exe.config
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.exe
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.pdb
+E:\Tjar\PschyHealth\bin\Debug\PschyHealth.exe
+E:\Tjar\PschyHealth\bin\Debug\PschyHealth.pdb
+E:\Tjar\PschyHealth\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+E:\Tjar\PschyHealth\bin\Debug\DevComponents.DotNetBar2.xml
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.csprojResolveAssemblyReference.cache
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmMainPage.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmCrashReport.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmForgotPassword.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmAccounting.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmClients.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmConsultations.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmEDICodes.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmLogin.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmLockScreen.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmSwitchUser.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.Forms.pnlClients.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.Forms.pnlEDICodes.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.Forms.pnlMedicalAids.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.Forms.pnlStaff.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.Forms.pnlStatements.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmMedicalAids.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmStaff.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.frmStatements.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.Panels.pnlConsultation.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.pnlSettings.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.pnlSlider.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.pnlAccounting.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.pnlScreenSaver.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
+E:\Tjar\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache

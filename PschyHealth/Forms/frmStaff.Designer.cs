@@ -61,14 +61,10 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.metroTextButton1 = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.metroTextButton6 = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // metroComboBox1
@@ -578,9 +574,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.metroTextButton6);
-            this.groupBox1.Controls.Add(this.metroTextButton1);
-            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.metroComboBox3);
             this.groupBox1.Controls.Add(this.metroComboBox2);
             this.groupBox1.Controls.Add(this.metroTextBox9);
@@ -601,7 +594,7 @@
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Location = new System.Drawing.Point(23, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(298, 469);
+            this.groupBox1.Size = new System.Drawing.Size(298, 325);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             // 
@@ -614,38 +607,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::PschyHealth.Properties.Resources.Capture1;
-            this.pictureBox2.Location = new System.Drawing.Point(20, 318);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 122);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 48;
-            this.pictureBox2.TabStop = false;
-            // 
-            // metroTextButton1
-            // 
-            this.metroTextButton1.Image = null;
-            this.metroTextButton1.Location = new System.Drawing.Point(136, 318);
-            this.metroTextButton1.Name = "metroTextButton1";
-            this.metroTextButton1.Size = new System.Drawing.Size(112, 23);
-            this.metroTextButton1.TabIndex = 49;
-            this.metroTextButton1.Text = "Import Picture";
-            this.metroTextButton1.UseSelectable = true;
-            this.metroTextButton1.UseVisualStyleBackColor = true;
-            // 
-            // metroTextButton6
-            // 
-            this.metroTextButton6.Image = null;
-            this.metroTextButton6.Location = new System.Drawing.Point(136, 348);
-            this.metroTextButton6.Name = "metroTextButton6";
-            this.metroTextButton6.Size = new System.Drawing.Size(112, 23);
-            this.metroTextButton6.TabIndex = 50;
-            this.metroTextButton6.Text = "Take Picture";
-            this.metroTextButton6.UseSelectable = true;
-            this.metroTextButton6.UseVisualStyleBackColor = true;
             // 
             // frmStaff
             // 
@@ -669,7 +630,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -706,8 +666,5 @@
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton metroTextButton6;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton metroTextButton1;
     }
 }

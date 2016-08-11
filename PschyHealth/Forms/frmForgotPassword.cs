@@ -21,5 +21,12 @@ namespace PschyHealth
         {
             
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+        }
     }
 }

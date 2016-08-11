@@ -26,8 +26,8 @@ namespace PschyHealth
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime dateTime = DateTime.Now;
-            this.label1.Text = dateTime.ToString("hh:mm:ss");
-            this.label2.Text = dateTime.ToString("dddd-MMMMM-yyyy");
+            this.label1.Text = dateTime.ToString("hhhh:mmmm");
+            this.label2.Text = dateTime.ToString("dddd, MMMMM, dd");
         }
     }
 }
