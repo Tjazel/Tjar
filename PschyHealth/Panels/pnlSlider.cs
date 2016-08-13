@@ -50,8 +50,8 @@ namespace PschyHealth
             owner.Controls.Add(this);
             this.BringToFront();
             owner.Resize += owner_Resize;
-              //Code om panel toe te maak as jy op hom click
-           //this.Click += pnlSlider_Click;
+            //Code om panel toe te maak as jy op hom click
+            //this.Click += pnlSlider_Click;
 
             ResizeForm();
         }
@@ -69,7 +69,7 @@ namespace PschyHealth
 
         private void ResizeForm()
         {
-            this.Width = _owner.Width;
+           this.Width = _owner.Width;
             this.Height = _owner.Height - 77;
             this.Location = new Point(_loaded ? 0 : _owner.Width, 50);
         }
@@ -81,20 +81,20 @@ namespace PschyHealth
             _transasition.add(this, "Left", show ? 0 : this.Width);
             _transasition.run();
 
-          
-            
+
+
             while (this.Left != (show ? 0 : this.Width))
             {
                 Application.DoEvents();
             }
 
-           if (!show)
+            if (!show)
             {
                 closed(new EventArgs());
                 _owner.Resize -= owner_Resize;
                 _owner.Controls.Remove(this);
                 this.Dispose();
-              
+
             }
             else
             {

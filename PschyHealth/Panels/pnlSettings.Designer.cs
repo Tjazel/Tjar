@@ -193,6 +193,7 @@
             this.metroTileItem8.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroTileItem8.TitleText = "Record";
             this.metroTileItem8.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroTileItem8.Click += new System.EventHandler(this.metroTileItem8_Click);
             // 
             // metroTileItem9
             // 

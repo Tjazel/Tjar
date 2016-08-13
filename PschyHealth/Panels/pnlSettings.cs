@@ -37,5 +37,12 @@ namespace PschyHealth
         {
 
         }
+
+        private void metroTileItem8_Click(object sender, EventArgs e)
+        {
+            this.swipe(false);
+            pnlRecord pnlRecord = new pnlRecord(this);
+            pnlRecord.swipe(true);
+        }
     }
 }

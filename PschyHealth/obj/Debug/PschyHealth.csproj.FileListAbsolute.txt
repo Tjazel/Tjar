@@ -229,3 +229,5 @@ E:\Tjar\PschyHealth\obj\Debug\PschyHealth.pnlAccounting.resources
 E:\Tjar\PschyHealth\obj\Debug\PschyHealth.pnlScreenSaver.resources
 E:\Tjar\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
 E:\Tjar\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.pnlRecord.resources
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.pnlVoiceCommand.resources
