@@ -792,10 +792,10 @@
             this.metroLabel1.ForeColor = System.Drawing.Color.White;
             this.metroLabel1.Location = new System.Drawing.Point(64, 26);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(80, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(40, 19);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel1.TabIndex = 22;
-            this.metroLabel1.Text = "ID Number:";
+            this.metroLabel1.Text = "netid";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLabel1.WrapToLine = true;
             // 
