@@ -106,9 +106,9 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Location = new System.Drawing.Point(980, 16);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(68, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(81, 19);
             this.metroLabel3.TabIndex = 27;
-            this.metroLabel3.Text = "Username";
+            this.metroLabel3.Text = "Login Name";
             // 
             // metroTileItem9
             // 
@@ -464,7 +464,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 780);
+            this.ClientSize = new System.Drawing.Size(1280, 772);
             this.Controls.Add(this.calendarView1);
             this.Controls.Add(this.metroTilePanel1);
             this.Controls.Add(this.pictureBox4);
