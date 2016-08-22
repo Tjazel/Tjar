@@ -479,6 +479,7 @@
             // 
             // metroGrid1
             // 
+            this.metroGrid1.AllowUserToOrderColumns = true;
             this.metroGrid1.AllowUserToResizeRows = false;
             this.metroGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.metroGrid1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -538,6 +539,7 @@
             this.Controls.Add(this.metroGrid1);
             this.Name = "pnlMedicalAids";
             this.Size = new System.Drawing.Size(1051, 659);
+            this.Load += new System.EventHandler(this.pnlMedicalAids_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

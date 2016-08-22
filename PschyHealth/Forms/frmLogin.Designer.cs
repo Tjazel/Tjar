@@ -90,7 +90,7 @@
             this.mtxb_Password.SelectionLength = 0;
             this.mtxb_Password.SelectionStart = 0;
             this.mtxb_Password.Size = new System.Drawing.Size(180, 28);
-            this.mtxb_Password.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtxb_Password.Style = MetroFramework.MetroColorStyle.Teal;
             this.mtxb_Password.TabIndex = 8;
             this.mtxb_Password.UseSelectable = true;
             this.mtxb_Password.WaterMark = "Enter Password";
@@ -123,7 +123,7 @@
             this.mtxb_Username.SelectionLength = 0;
             this.mtxb_Username.SelectionStart = 0;
             this.mtxb_Username.Size = new System.Drawing.Size(180, 28);
-            this.mtxb_Username.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtxb_Username.Style = MetroFramework.MetroColorStyle.Teal;
             this.mtxb_Username.TabIndex = 7;
             this.mtxb_Username.UseSelectable = true;
             this.mtxb_Username.WaterMark = "Enter Username";
@@ -155,26 +155,28 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(405, 138);
+            this.pictureBox1.Location = new System.Drawing.Point(405, 129);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // metroLink1
             // 
+            this.metroLink1.DisplayFocus = true;
             this.metroLink1.Location = new System.Drawing.Point(305, 185);
             this.metroLink1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroLink1.Name = "metroLink1";
             this.metroLink1.Size = new System.Drawing.Size(143, 28);
-            this.metroLink1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLink1.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroLink1.TabIndex = 14;
             this.metroLink1.Text = "Forgot Password";
             this.metroLink1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // frmLogin
             // 
@@ -196,6 +198,7 @@
             this.Name = "frmLogin";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "PschyHealth Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

@@ -16,5 +16,10 @@ namespace PschyHealth.Forms
         {
             InitializeComponent();
         }
+
+        private void pnlMedicalAids_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

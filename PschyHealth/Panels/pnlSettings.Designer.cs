@@ -29,205 +29,251 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pnlSettings));
-            this.myWorkplace = new MetroFramework.Controls.MetroTile();
-            this.Record = new MetroFramework.Controls.MetroTile();
-            this.Updates = new MetroFramework.Controls.MetroTile();
-            this.Admin = new MetroFramework.Controls.MetroTile();
-            this.BackupDB = new MetroFramework.Controls.MetroTile();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.LogActivity = new MetroFramework.Controls.MetroTile();
-            this.UserManagment = new MetroFramework.Controls.MetroTile();
-            this.Help = new MetroFramework.Controls.MetroTile();
-            this.About = new MetroFramework.Controls.MetroTile();
-            this.btnVoiceCommand = new MetroFramework.Controls.MetroTile();
+            this.metroTilePanel1 = new DevComponents.DotNetBar.Metro.MetroTilePanel();
+            this.icSettings = new DevComponents.DotNetBar.ItemContainer();
+            this.btnUpdates = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnUserManagment = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnLogActivity = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnPersonalization = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnAbout = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnHelp = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnBackup = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnRecord = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.SuspendLayout();
             // 
-            // myWorkplace
+            // metroTilePanel1
             // 
-            this.myWorkplace.ActiveControl = null;
-            this.myWorkplace.Location = new System.Drawing.Point(295, 169);
-            this.myWorkplace.Name = "myWorkplace";
-            this.myWorkplace.Size = new System.Drawing.Size(189, 124);
-            this.myWorkplace.TabIndex = 8;
-            this.myWorkplace.Text = "My Workplace";
-            this.myWorkplace.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.myWorkplace.TileImage = ((System.Drawing.Image)(resources.GetObject("myWorkplace.TileImage")));
-            this.myWorkplace.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.myWorkplace.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.myWorkplace.UseSelectable = true;
-            this.myWorkplace.UseTileImage = true;
-            this.myWorkplace.Click += new System.EventHandler(this.myWorkplace_Click);
             // 
-            // Record
             // 
-            this.Record.ActiveControl = null;
-            this.Record.Location = new System.Drawing.Point(701, 31);
-            this.Record.Name = "Record";
-            this.Record.Size = new System.Drawing.Size(116, 393);
-            this.Record.TabIndex = 10;
-            this.Record.Text = "Record";
-            this.Record.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Record.TileImage = ((System.Drawing.Image)(resources.GetObject("Record.TileImage")));
-            this.Record.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Record.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.Record.UseSelectable = true;
-            this.Record.UseTileImage = true;
             // 
-            // Updates
+            this.metroTilePanel1.BackgroundStyle.Class = "MetroTilePanel";
+            this.metroTilePanel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTilePanel1.ContainerControlProcessDialogKey = true;
+            this.metroTilePanel1.DragDropSupport = true;
+            this.metroTilePanel1.EnableDragDrop = true;
+            this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.icSettings});
+            this.metroTilePanel1.Location = new System.Drawing.Point(33, 31);
+            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTilePanel1.Name = "metroTilePanel1";
+            this.metroTilePanel1.Size = new System.Drawing.Size(1145, 755);
+            this.metroTilePanel1.TabIndex = 0;
+            this.metroTilePanel1.Text = "metroTilePanel1";
             // 
-            this.Updates.ActiveControl = null;
-            this.Updates.Location = new System.Drawing.Point(93, 31);
-            this.Updates.Name = "Updates";
-            this.Updates.Size = new System.Drawing.Size(189, 124);
-            this.Updates.TabIndex = 9;
-            this.Updates.Text = "Updates";
-            this.Updates.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Updates.TileImage = ((System.Drawing.Image)(resources.GetObject("Updates.TileImage")));
-            this.Updates.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Updates.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.Updates.UseSelectable = true;
-            this.Updates.UseTileImage = true;
+            // icSettings
             // 
-            // Admin
             // 
-            this.Admin.ActiveControl = null;
-            this.Admin.Location = new System.Drawing.Point(93, 299);
-            this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(391, 125);
-            this.Admin.TabIndex = 8;
-            this.Admin.Text = "Admin";
-            this.Admin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Admin.TileImage = ((System.Drawing.Image)(resources.GetObject("Admin.TileImage")));
-            this.Admin.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Admin.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.Admin.UseSelectable = true;
-            this.Admin.UseTileImage = true;
             // 
-            // BackupDB
             // 
-            this.BackupDB.ActiveControl = null;
-            this.BackupDB.Location = new System.Drawing.Point(496, 301);
-            this.BackupDB.Name = "BackupDB";
-            this.BackupDB.Size = new System.Drawing.Size(189, 124);
-            this.BackupDB.TabIndex = 7;
-            this.BackupDB.Text = "Backup DB";
-            this.BackupDB.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BackupDB.TileImage = ((System.Drawing.Image)(resources.GetObject("BackupDB.TileImage")));
-            this.BackupDB.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BackupDB.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.BackupDB.UseSelectable = true;
-            this.BackupDB.UseTileImage = true;
+            this.icSettings.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.icSettings.ItemSpacing = 30;
+            this.icSettings.MinimumSize = new System.Drawing.Size(800, 500);
+            this.icSettings.MultiLine = true;
+            this.icSettings.Name = "icSettings";
+            this.icSettings.ResizeItemsToFit = false;
+            this.icSettings.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnUpdates,
+            this.btnUserManagment,
+            this.btnLogActivity,
+            this.btnPersonalization,
+            this.btnAbout,
+            this.btnHelp,
+            this.btnBackup,
+            this.btnRecord});
             // 
-            // metroTile1
             // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(496, 169);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(189, 124);
-            this.metroTile1.TabIndex = 6;
-            this.metroTile1.Text = "Personallization";
-            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile1.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile1.TileImage")));
-            this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.UseTileImage = true;
             // 
-            // LogActivity
+            this.icSettings.TitleStyle.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.icSettings.TitleStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.icSettings.TitleStyle.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.icSettings.TitleStyle.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.icSettings.TitleStyle.Class = "MetroTileGroupTitle";
+            this.icSettings.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.icSettings.TitleStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.icSettings.TitleStyle.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.icSettings.TitleText = "Settings";
             // 
-            this.LogActivity.ActiveControl = null;
-            this.LogActivity.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.LogActivity.Location = new System.Drawing.Point(93, 169);
-            this.LogActivity.Name = "LogActivity";
-            this.LogActivity.Size = new System.Drawing.Size(189, 124);
-            this.LogActivity.TabIndex = 5;
-            this.LogActivity.Text = "Log Activity";
-            this.LogActivity.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.LogActivity.TileImage = ((System.Drawing.Image)(resources.GetObject("LogActivity.TileImage")));
-            this.LogActivity.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LogActivity.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.LogActivity.UseSelectable = true;
-            this.LogActivity.UseTileImage = true;
+            // btnUpdates
             // 
-            // UserManagment
+            this.btnUpdates.DisabledBackColor = System.Drawing.Color.White;
+            this.btnUpdates.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdates.Image")));
+            this.btnUpdates.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUpdates.Name = "btnUpdates";
+            this.btnUpdates.Symbol = "";
+            this.btnUpdates.SymbolColor = System.Drawing.Color.Black;
+            this.btnUpdates.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnUpdates.TileSize = new System.Drawing.Size(210, 120);
             // 
-            this.UserManagment.ActiveControl = null;
-            this.UserManagment.Location = new System.Drawing.Point(295, 29);
-            this.UserManagment.Name = "UserManagment";
-            this.UserManagment.Size = new System.Drawing.Size(391, 125);
-            this.UserManagment.TabIndex = 4;
-            this.UserManagment.Text = "User Managment";
-            this.UserManagment.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.UserManagment.TileImage = ((System.Drawing.Image)(resources.GetObject("UserManagment.TileImage")));
-            this.UserManagment.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.UserManagment.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.UserManagment.UseSelectable = true;
-            this.UserManagment.UseTileImage = true;
             // 
-            // Help
             // 
-            this.Help.ActiveControl = null;
-            this.Help.Location = new System.Drawing.Point(295, 438);
-            this.Help.Name = "Help";
-            this.Help.Size = new System.Drawing.Size(189, 124);
-            this.Help.TabIndex = 3;
-            this.Help.Text = "Help";
-            this.Help.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Help.TileImage = ((System.Drawing.Image)(resources.GetObject("Help.TileImage")));
-            this.Help.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Help.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.Help.UseSelectable = true;
-            this.Help.UseTileImage = true;
+            this.btnUpdates.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnUpdates.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnUpdates.TileStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnUpdates.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnUpdates.TitleText = "Updates";
+            this.btnUpdates.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUpdates.TitleTextColor = System.Drawing.Color.Black;
+            this.btnUpdates.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // About
+            // btnUserManagment
             // 
-            this.About.ActiveControl = null;
-            this.About.Location = new System.Drawing.Point(93, 438);
-            this.About.Name = "About";
-            this.About.Size = new System.Drawing.Size(189, 124);
-            this.About.TabIndex = 2;
-            this.About.Text = "About";
-            this.About.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.About.TileImage = ((System.Drawing.Image)(resources.GetObject("About.TileImage")));
-            this.About.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.About.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.About.UseSelectable = true;
-            this.About.UseTileImage = true;
-            this.About.Click += new System.EventHandler(this.About_Click);
+            this.btnUserManagment.DisabledBackColor = System.Drawing.Color.White;
+            this.btnUserManagment.Image = ((System.Drawing.Image)(resources.GetObject("btnUserManagment.Image")));
+            this.btnUserManagment.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUserManagment.Name = "btnUserManagment";
+            this.btnUserManagment.Symbol = "";
+            this.btnUserManagment.SymbolColor = System.Drawing.Color.Empty;
+            this.btnUserManagment.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnUserManagment.TileSize = new System.Drawing.Size(250, 120);
             // 
-            // btnVoiceCommand
             // 
-            this.btnVoiceCommand.ActiveControl = null;
-            this.btnVoiceCommand.Location = new System.Drawing.Point(496, 438);
-            this.btnVoiceCommand.Name = "btnVoiceCommand";
-            this.btnVoiceCommand.Size = new System.Drawing.Size(320, 125);
-            this.btnVoiceCommand.TabIndex = 11;
-            this.btnVoiceCommand.Text = "Voice Command";
-            this.btnVoiceCommand.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVoiceCommand.TileImage = ((System.Drawing.Image)(resources.GetObject("btnVoiceCommand.TileImage")));
-            this.btnVoiceCommand.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnVoiceCommand.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnVoiceCommand.UseSelectable = true;
-            this.btnVoiceCommand.UseTileImage = true;
+            // 
+            this.btnUserManagment.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnUserManagment.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnUserManagment.TileStyle.BorderBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnUserManagment.TileStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnUserManagment.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnUserManagment.TileStyle.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnUserManagment.TitleText = "User Management";
+            this.btnUserManagment.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUserManagment.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnLogActivity
+            // 
+            this.btnLogActivity.Image = global::PschyHealth.Properties.Resources._1470605358_text_x_log;
+            this.btnLogActivity.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogActivity.Name = "btnLogActivity";
+            this.btnLogActivity.Symbol = "";
+            this.btnLogActivity.SymbolColor = System.Drawing.Color.Empty;
+            this.btnLogActivity.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnLogActivity.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.btnLogActivity.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnLogActivity.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnLogActivity.TileStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnLogActivity.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnLogActivity.TileStyle.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnLogActivity.TitleText = "Log Activity";
+            this.btnLogActivity.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLogActivity.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnPersonalization
+            // 
+            this.btnPersonalization.Image = global::PschyHealth.Properties.Resources._1470752183_emblem_art2;
+            this.btnPersonalization.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPersonalization.Name = "btnPersonalization";
+            this.btnPersonalization.Symbol = "";
+            this.btnPersonalization.SymbolColor = System.Drawing.Color.Black;
+            this.btnPersonalization.Text = "Personalization";
+            this.btnPersonalization.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnPersonalization.TileSize = new System.Drawing.Size(210, 120);
+            // 
+            // 
+            // 
+            this.btnPersonalization.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPersonalization.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPersonalization.TileStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPersonalization.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnPersonalization.TitleText = "Personalization";
+            this.btnPersonalization.TitleTextColor = System.Drawing.Color.Black;
+            this.btnPersonalization.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.Image = global::PschyHealth.Properties.Resources._1470605616_19;
+            this.btnAbout.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Symbol = "";
+            this.btnAbout.SymbolColor = System.Drawing.Color.Black;
+            this.btnAbout.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnAbout.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.btnAbout.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAbout.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAbout.TileStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAbout.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnAbout.TitleText = "About";
+            this.btnAbout.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAbout.TitleTextColor = System.Drawing.Color.Black;
+            this.btnAbout.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.Image = global::PschyHealth.Properties.Resources._1470605722_help_file;
+            this.btnHelp.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Symbol = "";
+            this.btnHelp.SymbolColor = System.Drawing.Color.Black;
+            this.btnHelp.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnHelp.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.btnHelp.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnHelp.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnHelp.TileStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnHelp.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnHelp.TitleText = "Help";
+            this.btnHelp.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHelp.TitleTextColor = System.Drawing.Color.Black;
+            this.btnHelp.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnBackup
+            // 
+            this.btnBackup.Image = global::PschyHealth.Properties.Resources._1470605335_cmyk_03;
+            this.btnBackup.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.Symbol = "";
+            this.btnBackup.SymbolColor = System.Drawing.Color.Black;
+            this.btnBackup.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnBackup.TileSize = new System.Drawing.Size(210, 120);
+            // 
+            // 
+            // 
+            this.btnBackup.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnBackup.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnBackup.TileStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnBackup.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnBackup.TitleText = "Backup Database";
+            this.btnBackup.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBackup.TitleTextColor = System.Drawing.Color.Black;
+            this.btnBackup.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnRecord
+            // 
+            this.btnRecord.Image = global::PschyHealth.Properties.Resources._1470605497_microphone;
+            this.btnRecord.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRecord.Name = "btnRecord";
+            this.btnRecord.Symbol = "";
+            this.btnRecord.SymbolColor = System.Drawing.Color.Black;
+            this.btnRecord.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnRecord.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.btnRecord.TileStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnRecord.TileStyle.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnRecord.TileStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnRecord.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnRecord.TitleText = "Record";
+            this.btnRecord.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRecord.TitleTextColor = System.Drawing.Color.Black;
+            this.btnRecord.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecord.Click += new System.EventHandler(this.metroTileItem8_Click);
             // 
             // pnlSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnVoiceCommand);
-            this.Controls.Add(this.About);
-            this.Controls.Add(this.Updates);
-            this.Controls.Add(this.Record);
-            this.Controls.Add(this.BackupDB);
-            this.Controls.Add(this.myWorkplace);
-            this.Controls.Add(this.Help);
-            this.Controls.Add(this.Admin);
-            this.Controls.Add(this.UserManagment);
-            this.Controls.Add(this.LogActivity);
-            this.Controls.Add(this.metroTile1);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Controls.Add(this.metroTilePanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pnlSettings";
-            this.Size = new System.Drawing.Size(901, 664);
+            this.Size = new System.Drawing.Size(1144, 817);
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Load += new System.EventHandler(this.pnlSettings_Load);
             this.Leave += new System.EventHandler(this.pnlSettings_Leave);
             this.ResumeLayout(false);
@@ -235,16 +281,16 @@
         }
 
         #endregion
-        private MetroFramework.Controls.MetroTile myWorkplace;
-        private MetroFramework.Controls.MetroTile Record;
-        private MetroFramework.Controls.MetroTile Updates;
-        private MetroFramework.Controls.MetroTile Admin;
-        private MetroFramework.Controls.MetroTile BackupDB;
-        private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroTile LogActivity;
-        private MetroFramework.Controls.MetroTile UserManagment;
-        private MetroFramework.Controls.MetroTile Help;
-        private MetroFramework.Controls.MetroTile About;
-        private MetroFramework.Controls.MetroTile btnVoiceCommand;
+
+        private DevComponents.DotNetBar.Metro.MetroTilePanel metroTilePanel1;
+        private DevComponents.DotNetBar.ItemContainer icSettings;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnUpdates;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnUserManagment;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnLogActivity;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnPersonalization;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnBackup;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnRecord;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnAbout;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnHelp;
     }
 }
