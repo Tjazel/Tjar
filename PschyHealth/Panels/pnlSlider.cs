@@ -51,7 +51,7 @@ namespace PschyHealth
             this.BringToFront();
             owner.Resize += owner_Resize;
             //Code om panel toe te maak as jy op hom click
-            //this.Click += pnlSlider_Click;
+            this.Click += pnlSlider_Click;
 
             ResizeForm();
         }

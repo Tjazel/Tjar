@@ -60,8 +60,9 @@ namespace PschyHealth
 
         private void metroTileItem3_Click(object sender, EventArgs e)
         {
-            pnlAccounting pnlAccounting = new pnlAccounting(this);
-            pnlAccounting.swipe(true);
+            //pnlAccounting pnlAccounting = new pnlAccounting(this);
+            //pnlAccounting.swipe(true);
+           
         }
 
         private void metroTileItem6_Click(object sender, EventArgs e)
