@@ -1409,7 +1409,7 @@
         Df4p+HHww2FeMvce8OUw74W/BUer4/kmy/M8L0XkYeYEr2HeKaf8/1ZoMo4IGfPnAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="metroTextButton5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDeletClient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAC4hJREFUeF7t
         nUHIZWUdhwcJGSTEhQzSIkJEXEiLCBFpESEhItEqIiJCWrhwIRLiIgKJaCHSokWISKtwJRESLqSVSAwS
@@ -1464,7 +1464,7 @@
         Mc6c+Qd4NmOVgKZ4xQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="metroTextButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnUpdateClient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGOfPtRkwAAACBjSFJNAACH
         DwAAjA8AAP1SAACBQAAAfXkAAOmLAAA85QAAGcxzPIV3AAAKOWlDQ1BQaG90b3Nob3AgSUNDIHByb2Zp
@@ -1636,7 +1636,7 @@
         pbeTAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnAddAcount.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAddClient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAE
         9gAABPYBmA4mVAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANkSURBVHhe7dox

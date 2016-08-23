@@ -36,10 +36,9 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTilePanel1 = new DevComponents.DotNetBar.Metro.MetroTilePanel();
-            this.pbMic = new System.Windows.Forms.PictureBox();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
-            this.btnClients = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnStaff = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnClients = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnAccounting = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnDateAndTime = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnRAMS = new DevComponents.DotNetBar.Metro.MetroTileItem();
@@ -50,6 +49,7 @@
             this.btnDiagnostic = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnInfo = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnReports = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.pbMic = new System.Windows.Forms.PictureBox();
             this.calendarView1 = new DevComponents.DotNetBar.Schedule.CalendarView();
             this.ctxUser = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.changeAccountSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,15 +69,15 @@
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
             this.pbSettings = new System.Windows.Forms.PictureBox();
             this.metroToolbar1 = new DevComponents.DotNetBar.Metro.MetroToolbar();
-            this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
             this.controlContainerItem8 = new DevComponents.DotNetBar.ControlContainerItem();
             this.controlContainerItem9 = new DevComponents.DotNetBar.ControlContainerItem();
+            this.controlContainerItem7 = new DevComponents.DotNetBar.ControlContainerItem();
+            this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
             this.metroToolbar2 = new DevComponents.DotNetBar.Metro.MetroToolbar();
             this.controlContainerItem10 = new DevComponents.DotNetBar.ControlContainerItem();
             this.controlContainerItem11 = new DevComponents.DotNetBar.ControlContainerItem();
             this.controlContainerItem12 = new DevComponents.DotNetBar.ControlContainerItem();
             this.controlContainerItem13 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.controlContainerItem7 = new DevComponents.DotNetBar.ControlContainerItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbMic)).BeginInit();
             this.ctxUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -163,17 +163,6 @@
             this.metroTilePanel1.Text = "metroTilePanel1";
             this.metroTilePanel1.ItemClick += new System.EventHandler(this.metroTilePanel1_ItemClick);
             // 
-            // pbMic
-            // 
-            this.pbMic.Image = global::PschyHealth.Properties.Resources.micOn;
-            this.pbMic.Location = new System.Drawing.Point(94, 1);
-            this.pbMic.Name = "pbMic";
-            this.pbMic.Size = new System.Drawing.Size(37, 27);
-            this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMic.TabIndex = 32;
-            this.pbMic.TabStop = false;
-            this.pbMic.Click += new System.EventHandler(this.pbMic_Click);
-            // 
             // itemContainer1
             // 
             // 
@@ -202,28 +191,12 @@
             this.itemContainer1.TitleStyle.Class = "MetroTileGroupTitle";
             this.itemContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // btnClients
-            // 
-            this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
-            this.btnClients.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnClients.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
-            this.btnClients.Name = "btnClients";
-            this.btnClients.SymbolColor = System.Drawing.Color.Empty;
-            this.btnClients.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnClients.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnClients.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnClients.TitleText = "Clients";
-            this.btnClients.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClients.Click += new System.EventHandler(this.btnClients_Click_1);
-            // 
             // btnStaff
             // 
             this.btnStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnStaff.Image")));
             this.btnStaff.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStaff.Name = "btnStaff";
+            this.btnStaff.Symbol = "";
             this.btnStaff.SymbolColor = System.Drawing.Color.Empty;
             this.btnStaff.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
             this.btnStaff.TileSize = new System.Drawing.Size(180, 120);
@@ -235,11 +208,30 @@
             this.btnStaff.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaff.Click += new System.EventHandler(this.metroTileItem2_Click);
             // 
+            // btnClients
+            // 
+            this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
+            this.btnClients.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClients.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            this.btnClients.Name = "btnClients";
+            this.btnClients.Symbol = "";
+            this.btnClients.SymbolColor = System.Drawing.Color.Empty;
+            this.btnClients.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnClients.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnClients.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnClients.TitleText = "Clients";
+            this.btnClients.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click_1);
+            // 
             // btnAccounting
             // 
             this.btnAccounting.Image = ((System.Drawing.Image)(resources.GetObject("btnAccounting.Image")));
             this.btnAccounting.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAccounting.Name = "btnAccounting";
+            this.btnAccounting.Symbol = "";
             this.btnAccounting.SymbolColor = System.Drawing.Color.Empty;
             this.btnAccounting.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
             this.btnAccounting.TileSize = new System.Drawing.Size(220, 120);
@@ -283,6 +275,7 @@
             this.btnStatements.Image = ((System.Drawing.Image)(resources.GetObject("btnStatements.Image")));
             this.btnStatements.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStatements.Name = "btnStatements";
+            this.btnStatements.Symbol = "";
             this.btnStatements.SymbolColor = System.Drawing.Color.Empty;
             this.btnStatements.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
             this.btnStatements.TileSize = new System.Drawing.Size(220, 120);
@@ -299,6 +292,7 @@
             this.btnMedicalAid.Image = ((System.Drawing.Image)(resources.GetObject("btnMedicalAid.Image")));
             this.btnMedicalAid.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMedicalAid.Name = "btnMedicalAid";
+            this.btnMedicalAid.Symbol = "";
             this.btnMedicalAid.SymbolColor = System.Drawing.Color.Empty;
             this.btnMedicalAid.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
             this.btnMedicalAid.TileSize = new System.Drawing.Size(220, 120);
@@ -329,6 +323,7 @@
             this.btnConsultations.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultations.Image")));
             this.btnConsultations.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnConsultations.Name = "btnConsultations";
+            this.btnConsultations.Symbol = "";
             this.btnConsultations.SymbolColor = System.Drawing.Color.Empty;
             this.btnConsultations.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
             this.btnConsultations.TileSize = new System.Drawing.Size(220, 120);
@@ -345,6 +340,7 @@
             this.btnDiagnostic.Image = ((System.Drawing.Image)(resources.GetObject("btnDiagnostic.Image")));
             this.btnDiagnostic.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDiagnostic.Name = "btnDiagnostic";
+            this.btnDiagnostic.Symbol = "";
             this.btnDiagnostic.SymbolColor = System.Drawing.Color.Empty;
             this.btnDiagnostic.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
             this.btnDiagnostic.TileSize = new System.Drawing.Size(220, 120);
@@ -367,6 +363,10 @@
             this.btnInfo.Text = "8 out of 100 teens report having serious depression.";
             this.btnInfo.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
             this.btnInfo.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnInfo.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnInfo.TitleTextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo.Click += new System.EventHandler(this.metroTileItem12_Click);
@@ -376,6 +376,7 @@
             this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
             this.btnReports.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReports.Name = "btnReports";
+            this.btnReports.Symbol = "";
             this.btnReports.SymbolColor = System.Drawing.Color.Empty;
             this.btnReports.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
             this.btnReports.TileSize = new System.Drawing.Size(180, 120);
@@ -386,6 +387,17 @@
             this.btnReports.TitleText = "Reports";
             this.btnReports.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReports.Click += new System.EventHandler(this.metroTileItem13_Click);
+            // 
+            // pbMic
+            // 
+            this.pbMic.Image = global::PschyHealth.Properties.Resources.micOn;
+            this.pbMic.Location = new System.Drawing.Point(94, 1);
+            this.pbMic.Name = "pbMic";
+            this.pbMic.Size = new System.Drawing.Size(37, 27);
+            this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMic.TabIndex = 32;
+            this.pbMic.TabStop = false;
+            this.pbMic.Click += new System.EventHandler(this.pbMic_Click);
             // 
             // calendarView1
             // 
@@ -417,25 +429,25 @@
             this.lockToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.ctxUser.Name = "ctxUser";
-            this.ctxUser.Size = new System.Drawing.Size(248, 82);
+            this.ctxUser.Size = new System.Drawing.Size(242, 76);
             // 
             // changeAccountSettingToolStripMenuItem
             // 
             this.changeAccountSettingToolStripMenuItem.Name = "changeAccountSettingToolStripMenuItem";
-            this.changeAccountSettingToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.changeAccountSettingToolStripMenuItem.Size = new System.Drawing.Size(241, 24);
             this.changeAccountSettingToolStripMenuItem.Text = "Change Account settings";
             // 
             // lockToolStripMenuItem
             // 
             this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.lockToolStripMenuItem.Size = new System.Drawing.Size(241, 24);
             this.lockToolStripMenuItem.Text = "Lock";
             this.lockToolStripMenuItem.Click += new System.EventHandler(this.lockToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(241, 24);
             this.signOutToolStripMenuItem.Text = "Sign out";
             // 
             // timer1
@@ -557,8 +569,8 @@
             this.metroToolbar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroToolbar1.ContainerControlProcessDialogKey = true;
             this.metroToolbar1.Controls.Add(this.pbBack);
-            this.metroToolbar1.Controls.Add(this.pbMic);
             this.metroToolbar1.Controls.Add(this.pbMicOff);
+            this.metroToolbar1.Controls.Add(this.pbMic);
             this.metroToolbar1.DragDropSupport = true;
             this.metroToolbar1.ExpandButtonVisible = false;
             this.metroToolbar1.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -574,18 +586,6 @@
             this.metroToolbar1.Text = "metroToolbar1";
             this.metroToolbar1.ItemClick += new System.EventHandler(this.metroToolbar1_ItemClick);
             // 
-            // itemContainer2
-            // 
-            // 
-            // 
-            // 
-            this.itemContainer2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer2.Name = "itemContainer2";
-            // 
-            // 
-            // 
-            this.itemContainer2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
             // controlContainerItem8
             // 
             this.controlContainerItem8.AllowItemResize = false;
@@ -599,6 +599,25 @@
             this.controlContainerItem9.Control = this.pbMicOff;
             this.controlContainerItem9.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
             this.controlContainerItem9.Name = "controlContainerItem9";
+            // 
+            // controlContainerItem7
+            // 
+            this.controlContainerItem7.AllowItemResize = false;
+            this.controlContainerItem7.Control = this.pbMic;
+            this.controlContainerItem7.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
+            this.controlContainerItem7.Name = "controlContainerItem7";
+            // 
+            // itemContainer2
+            // 
+            // 
+            // 
+            // 
+            this.itemContainer2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer2.Name = "itemContainer2";
+            // 
+            // 
+            // 
+            this.itemContainer2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // metroToolbar2
             // 
@@ -652,13 +671,6 @@
             this.controlContainerItem13.Control = this.pictureBox3;
             this.controlContainerItem13.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
             this.controlContainerItem13.Name = "controlContainerItem13";
-            // 
-            // controlContainerItem7
-            // 
-            this.controlContainerItem7.AllowItemResize = false;
-            this.controlContainerItem7.Control = this.pbMic;
-            this.controlContainerItem7.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.controlContainerItem7.Name = "controlContainerItem7";
             // 
             // frmMainPage
             // 
