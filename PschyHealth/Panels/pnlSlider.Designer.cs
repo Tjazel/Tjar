@@ -34,8 +34,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Location = new System.Drawing.Point(39, 80);
             this.Name = "pnlSlider";
-            this.Size = new System.Drawing.Size(1228, 747);
+            this.Size = new System.Drawing.Size(1145, 585);
             this.Load += new System.EventHandler(this.pnlSlider_Load);
             this.ResumeLayout(false);
 

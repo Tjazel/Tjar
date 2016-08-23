@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pnlStaff));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pnlStaff));
+            this.lblStaff = new MetroFramework.Controls.MetroLabel();
+            this.btnDeteStaff = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.btnUpdateStaff = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.btnAddStaff = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.btnRefresh = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.dgvStaff = new MetroFramework.Controls.MetroGrid();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbEthnicGroup = new MetroFramework.Controls.MetroComboBox();
@@ -52,20 +57,86 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.cmbCrit = new MetroFramework.Controls.MetroComboBox();
+            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.btnRefresh = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.btnDeteStaff = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.btnUpdateStaff = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.btnAddStaff = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.lblStaff = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // lblStaff
+            // 
+            this.lblStaff.AutoSize = true;
+            this.lblStaff.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblStaff.Location = new System.Drawing.Point(13, 35);
+            this.lblStaff.Name = "lblStaff";
+            this.lblStaff.Size = new System.Drawing.Size(46, 25);
+            this.lblStaff.TabIndex = 62;
+            this.lblStaff.Text = "Staff";
+            this.lblStaff.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // btnDeteStaff
+            // 
+            this.btnDeteStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnDeteStaff.Image")));
+            this.btnDeteStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeteStaff.Location = new System.Drawing.Point(1015, 775);
+            this.btnDeteStaff.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeteStaff.Name = "btnDeteStaff";
+            this.btnDeteStaff.Size = new System.Drawing.Size(162, 28);
+            this.btnDeteStaff.TabIndex = 61;
+            this.btnDeteStaff.Text = "Delete";
+            this.btnDeteStaff.UseSelectable = true;
+            this.btnDeteStaff.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateStaff
+            // 
+            this.btnUpdateStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateStaff.Image")));
+            this.btnUpdateStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateStaff.Location = new System.Drawing.Point(792, 775);
+            this.btnUpdateStaff.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdateStaff.Name = "btnUpdateStaff";
+            this.btnUpdateStaff.Size = new System.Drawing.Size(162, 28);
+            this.btnUpdateStaff.TabIndex = 60;
+            this.btnUpdateStaff.Text = "Update";
+            this.btnUpdateStaff.UseSelectable = true;
+            this.btnUpdateStaff.UseVisualStyleBackColor = true;
+            // 
+            // btnAddStaff
+            // 
+            this.btnAddStaff.BackColor = System.Drawing.Color.Maroon;
+            this.btnAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStaff.ForeColor = System.Drawing.Color.Maroon;
+            this.btnAddStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStaff.Image")));
+            this.btnAddStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddStaff.Location = new System.Drawing.Point(580, 775);
+            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(162, 28);
+            this.btnAddStaff.TabIndex = 59;
+            this.btnAddStaff.Text = "Add";
+            this.btnAddStaff.UseCustomBackColor = true;
+            this.btnAddStaff.UseCustomForeColor = true;
+            this.btnAddStaff.UseSelectable = true;
+            this.btnAddStaff.UseVisualStyleBackColor = false;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(1203, 114);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(45, 36);
+            this.btnRefresh.TabIndex = 55;
+            this.btnRefresh.UseCustomForeColor = true;
+            this.btnRefresh.UseSelectable = true;
+            this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // dgvStaff
             // 
@@ -501,38 +572,6 @@
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "ID:";
             // 
-            // txtSearch
-            // 
-            // 
-            // 
-            // 
-            this.txtSearch.CustomButton.Image = null;
-            this.txtSearch.CustomButton.Location = new System.Drawing.Point(154, 2);
-            this.txtSearch.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.CustomButton.Name = "";
-            this.txtSearch.CustomButton.Size = new System.Drawing.Size(31, 31);
-            this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSearch.CustomButton.TabIndex = 1;
-            this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSearch.CustomButton.UseSelectable = true;
-            this.txtSearch.CustomButton.Visible = false;
-            this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(375, 22);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.MaxLength = 32767;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.SelectionLength = 0;
-            this.txtSearch.SelectionStart = 0;
-            this.txtSearch.Size = new System.Drawing.Size(188, 36);
-            this.txtSearch.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSearch.TabIndex = 2;
-            this.txtSearch.UseSelectable = true;
-            this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnSearch);
@@ -582,6 +621,38 @@
             this.cmbCrit.TabIndex = 3;
             this.cmbCrit.UseSelectable = true;
             // 
+            // txtSearch
+            // 
+            // 
+            // 
+            // 
+            this.txtSearch.CustomButton.Image = null;
+            this.txtSearch.CustomButton.Location = new System.Drawing.Point(154, 2);
+            this.txtSearch.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.CustomButton.Name = "";
+            this.txtSearch.CustomButton.Size = new System.Drawing.Size(31, 31);
+            this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearch.CustomButton.TabIndex = 1;
+            this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSearch.CustomButton.UseSelectable = true;
+            this.txtSearch.CustomButton.Visible = false;
+            this.txtSearch.Lines = new string[0];
+            this.txtSearch.Location = new System.Drawing.Point(375, 22);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.MaxLength = 32767;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.SelectionLength = 0;
+            this.txtSearch.SelectionStart = 0;
+            this.txtSearch.Size = new System.Drawing.Size(188, 36);
+            this.txtSearch.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearch.TabIndex = 2;
+            this.txtSearch.UseSelectable = true;
+            this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
@@ -591,77 +662,6 @@
             this.metroLabel17.Size = new System.Drawing.Size(56, 20);
             this.metroLabel17.TabIndex = 0;
             this.metroLabel17.Text = "Criteria:";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(1203, 114);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(45, 36);
-            this.btnRefresh.TabIndex = 55;
-            this.btnRefresh.UseCustomForeColor = true;
-            this.btnRefresh.UseSelectable = true;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            // 
-            // btnDeteStaff
-            // 
-            this.btnDeteStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnDeteStaff.Image")));
-            this.btnDeteStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeteStaff.Location = new System.Drawing.Point(1015, 775);
-            this.btnDeteStaff.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDeteStaff.Name = "btnDeteStaff";
-            this.btnDeteStaff.Size = new System.Drawing.Size(162, 28);
-            this.btnDeteStaff.TabIndex = 61;
-            this.btnDeteStaff.Text = "Delete";
-            this.btnDeteStaff.UseSelectable = true;
-            this.btnDeteStaff.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdateStaff
-            // 
-            this.btnUpdateStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateStaff.Image")));
-            this.btnUpdateStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateStaff.Location = new System.Drawing.Point(792, 775);
-            this.btnUpdateStaff.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUpdateStaff.Name = "btnUpdateStaff";
-            this.btnUpdateStaff.Size = new System.Drawing.Size(162, 28);
-            this.btnUpdateStaff.TabIndex = 60;
-            this.btnUpdateStaff.Text = "Update";
-            this.btnUpdateStaff.UseSelectable = true;
-            this.btnUpdateStaff.UseVisualStyleBackColor = true;
-            // 
-            // btnAddStaff
-            // 
-            this.btnAddStaff.BackColor = System.Drawing.Color.Maroon;
-            this.btnAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddStaff.ForeColor = System.Drawing.Color.Maroon;
-            this.btnAddStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStaff.Image")));
-            this.btnAddStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddStaff.Location = new System.Drawing.Point(580, 775);
-            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddStaff.Name = "btnAddStaff";
-            this.btnAddStaff.Size = new System.Drawing.Size(162, 28);
-            this.btnAddStaff.TabIndex = 59;
-            this.btnAddStaff.Text = "Add";
-            this.btnAddStaff.UseCustomBackColor = true;
-            this.btnAddStaff.UseCustomForeColor = true;
-            this.btnAddStaff.UseSelectable = true;
-            this.btnAddStaff.UseVisualStyleBackColor = false;
-            // 
-            // lblStaff
-            // 
-            this.lblStaff.AutoSize = true;
-            this.lblStaff.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblStaff.Location = new System.Drawing.Point(13, 35);
-            this.lblStaff.Name = "lblStaff";
-            this.lblStaff.Size = new System.Drawing.Size(46, 25);
-            this.lblStaff.TabIndex = 62;
-            this.lblStaff.Text = "Staff";
-            this.lblStaff.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // pnlStaff
             // 
@@ -678,7 +678,7 @@
             this.Controls.Add(this.groupBox3);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pnlStaff";
-            this.Size = new System.Drawing.Size(1419, 869);
+            this.Size = new System.Drawing.Size(1419, 817);
             this.Load += new System.EventHandler(this.pnlStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.groupBox1.ResumeLayout(false);

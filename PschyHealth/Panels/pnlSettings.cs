@@ -24,10 +24,7 @@ namespace PschyHealth
             
         }
 
-        private void myWorkplace_Click(object sender, EventArgs e)
-        {
-            
-        }
+      
 
         private void About_Click(object sender, EventArgs e)
         {
@@ -40,7 +37,7 @@ namespace PschyHealth
 
         }
 
-        private void metroTileItem8_Click(object sender, EventArgs e)
+        private void btnRecord_Click(object sender, EventArgs e)
         {
             /*this.swipe(false);
             pnlRecord pnlRecord = new pnlRecord(this);

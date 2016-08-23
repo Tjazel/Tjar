@@ -56,6 +56,7 @@ namespace PschyHealth
         private void Form1_Load(object sender, EventArgs e)
         {
             pbMicOff.Hide();
+            
         }
 
         private void metroTileItem2_Click(object sender, EventArgs e)
@@ -238,9 +239,21 @@ namespace PschyHealth
             pnlSettings.swipe(true);
         }
 
-        private void metroToolbar1_ItemClick(object sender, EventArgs e)
+       
+
+        private void toolBtnStaff_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            tbMain.Visible = true;
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            tbMain.Visible = false;
         }
     }
 
