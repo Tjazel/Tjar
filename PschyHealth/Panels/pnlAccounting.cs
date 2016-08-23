@@ -12,6 +12,10 @@ namespace PschyHealth
 {
     public partial class pnlAccounting : pnlSlider
     {
+        public pnlAccounting()
+        {
+        }
+
         public pnlAccounting(Form owner) : base(owner)
         {
             InitializeComponent();

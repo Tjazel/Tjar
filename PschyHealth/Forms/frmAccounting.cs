@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace PschyHealth
 {
-    public partial class frmAccounting : MetroForm
+    public partial class frmAccounting : Form
     {
         public frmAccounting()
         {
