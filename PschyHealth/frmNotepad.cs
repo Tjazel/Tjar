@@ -23,12 +23,17 @@ namespace PschyHealth
 
         }
 
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+        }
+
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             openFileDialog.InitialDirectory = @"C:\";
-            openFileDialog.Title = "Please select an .txt file to Open in Notes.";
+            openFileDialog.Title = "Please select an .txt file to Open in PschyHealth notepad.";
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -59,7 +64,7 @@ namespace PschyHealth
             richTextBox1.Copy();
         }
 
-        private void psteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Paste();
         }
@@ -92,11 +97,6 @@ namespace PschyHealth
             {
                 richTextBox1.BackColor = cr.Color;
             }
-        }
-
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.Clear();
         }
     }
 }

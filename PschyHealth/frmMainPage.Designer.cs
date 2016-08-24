@@ -87,6 +87,10 @@
             this.controlContainerItem13 = new DevComponents.DotNetBar.ControlContainerItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.radialMenu2 = new DevComponents.DotNetBar.RadialMenu();
+            this.Accounting = new DevComponents.DotNetBar.RadialMenuItem();
+            this.Statements = new DevComponents.DotNetBar.RadialMenuItem();
+            this.Clients = new DevComponents.DotNetBar.RadialMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbMic)).BeginInit();
             this.ctxUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -398,7 +402,7 @@
             // pbMic
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.micOn;
-            this.pbMic.Location = new System.Drawing.Point(104, 6);
+            this.pbMic.Location = new System.Drawing.Point(932, 6);
             this.pbMic.Margin = new System.Windows.Forms.Padding(2);
             this.pbMic.Name = "pbMic";
             this.pbMic.Size = new System.Drawing.Size(28, 22);
@@ -416,7 +420,7 @@
             this.calendarView1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.calendarView1.ContainerControlProcessDialogKey = true;
             this.calendarView1.HighlightCurrentDay = true;
-            this.calendarView1.Location = new System.Drawing.Point(941, 79);
+            this.calendarView1.Location = new System.Drawing.Point(836, 79);
             this.calendarView1.MultiUserTabHeight = 19;
             this.calendarView1.Name = "calendarView1";
             this.calendarView1.ShowOnlyWorkDayHours = true;
@@ -495,7 +499,7 @@
             // pbMicOff
             // 
             this.pbMicOff.Image = global::PschyHealth.Properties.Resources.micOff;
-            this.pbMicOff.Location = new System.Drawing.Point(104, 6);
+            this.pbMicOff.Location = new System.Drawing.Point(932, 6);
             this.pbMicOff.Margin = new System.Windows.Forms.Padding(2);
             this.pbMicOff.Name = "pbMicOff";
             this.pbMicOff.Size = new System.Drawing.Size(28, 22);
@@ -509,7 +513,7 @@
             this.pbBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbBack.Image = global::PschyHealth.Properties.Resources._1470609465_house_home_real_estate_property_outline_stroke;
-            this.pbBack.Location = new System.Drawing.Point(269, 6);
+            this.pbBack.Location = new System.Drawing.Point(1008, 7);
             this.pbBack.Name = "pbBack";
             this.pbBack.Size = new System.Drawing.Size(28, 22);
             this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -589,7 +593,7 @@
             this.toolBtnDiagnosticCodes,
             this.toolBtnReport});
             this.tbMain.ItemSpacing = 5;
-            this.tbMain.Location = new System.Drawing.Point(56, 37);
+            this.tbMain.Location = new System.Drawing.Point(22, 8);
             this.tbMain.Margin = new System.Windows.Forms.Padding(2);
             this.tbMain.Name = "tbMain";
             this.tbMain.Size = new System.Drawing.Size(829, 25);
@@ -647,6 +651,7 @@
             this.toolBtnStatements.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
             this.toolBtnStatements.Name = "toolBtnStatements";
             this.toolBtnStatements.Text = "Statements";
+            this.toolBtnStatements.Click += new System.EventHandler(this.toolBtnStatements_Click);
             // 
             // toolBtnMedicalAids
             // 
@@ -729,7 +734,7 @@
             this.controlContainerItem11,
             this.controlContainerItem12,
             this.controlContainerItem13});
-            this.metroToolbar2.Location = new System.Drawing.Point(891, 9);
+            this.metroToolbar2.Location = new System.Drawing.Point(1041, 6);
             this.metroToolbar2.Margin = new System.Windows.Forms.Padding(2);
             this.metroToolbar2.Name = "metroToolbar2";
             this.metroToolbar2.Size = new System.Drawing.Size(243, 24);
@@ -767,7 +772,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(139, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(967, 6);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 22);
@@ -787,11 +792,42 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // radialMenu2
+            // 
+            this.radialMenu2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.Accounting,
+            this.Clients});
+            this.radialMenu2.Location = new System.Drawing.Point(866, 8);
+            this.radialMenu2.Name = "radialMenu2";
+            this.radialMenu2.Size = new System.Drawing.Size(28, 28);
+            this.radialMenu2.Symbol = "";
+            this.radialMenu2.SymbolSize = 13F;
+            this.radialMenu2.TabIndex = 39;
+            this.radialMenu2.Text = "radialMenu2";
+            // 
+            // Accounting
+            // 
+            this.Accounting.Name = "Accounting";
+            this.Accounting.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.Statements});
+            this.Accounting.Text = "Accounting";
+            // 
+            // Statements
+            // 
+            this.Statements.Name = "Statements";
+            this.Statements.Text = "Statements";
+            // 
+            // Clients
+            // 
+            this.Clients.Name = "Clients";
+            this.Clients.Text = "Clients";
+            // 
             // frmMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1161, 627);
+            this.ClientSize = new System.Drawing.Size(1292, 627);
+            this.Controls.Add(this.radialMenu2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbMic);
@@ -878,5 +914,9 @@
         private DevComponents.DotNetBar.ButtonItem toolBtnReport;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private DevComponents.DotNetBar.RadialMenu radialMenu2;
+        private DevComponents.DotNetBar.RadialMenuItem Accounting;
+        private DevComponents.DotNetBar.RadialMenuItem Statements;
+        private DevComponents.DotNetBar.RadialMenuItem Clients;
     }
 }

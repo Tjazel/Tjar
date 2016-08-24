@@ -63,10 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAccounting.cs">
+    <Compile Include="Forms\frmAccounting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAccounting.Designer.cs">
+    <Compile Include="Forms\frmAccounting.Designer.cs">
       <DependentUpon>frmAccounting.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMainPage.cs">
@@ -128,6 +128,12 @@
     </Compile>
     <Compile Include="Forms\frmRecord.Designer.cs">
       <DependentUpon>frmRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotepad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotepad.Designer.cs">
+      <DependentUpon>frmNotepad.cs</DependentUpon>
     </Compile>
     <Compile Include="Panels\pnlClients.cs">
       <SubType>UserControl</SubType>
@@ -234,7 +240,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAccounting.resx">
+    <EmbeddedResource Include="Forms\frmAccounting.resx">
       <DependentUpon>frmAccounting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainPage.resx">
@@ -266,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRecord.resx">
       <DependentUpon>frmRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNotepad.resx">
+      <DependentUpon>frmNotepad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\pnlClients.resx">
       <DependentUpon>pnlClients.cs</DependentUpon>

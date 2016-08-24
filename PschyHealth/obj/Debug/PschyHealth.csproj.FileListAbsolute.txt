@@ -342,3 +342,4 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\bin\Debug\DevComponents.D
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.Panels.frmRecord.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.frmAccounting.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.pnlSettings2.resources
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.frmNotepad.resources

@@ -213,8 +213,8 @@ namespace PschyHealth
 
         private void pbBack_Click(object sender, EventArgs e)
         {
-            pnlSlider _pnlSlider = new pnlSlider();
-            _pnlSlider.swipe(false);
+            frmNotepad frmNotepad = new frmNotepad();
+            frmNotepad.Show();
         }
 
         private void metroTilePanel1_ItemClick(object sender, EventArgs e)
@@ -360,6 +360,11 @@ namespace PschyHealth
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             tbMain.Visible = false;
+        }
+
+        private void toolBtnStatements_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
