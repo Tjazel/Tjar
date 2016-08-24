@@ -375,7 +375,7 @@
             this.metroLabel18.AutoSize = true;
             this.metroLabel18.Location = new System.Drawing.Point(225, 27);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(75, 19);
+            this.metroLabel18.Size = new System.Drawing.Size(76, 19);
             this.metroLabel18.TabIndex = 1;
             this.metroLabel18.Text = "Search For:";
             // 
@@ -541,7 +541,7 @@
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.Location = new System.Drawing.Point(150, 58);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(80, 19);
+            this.metroLabel13.Size = new System.Drawing.Size(81, 19);
             this.metroLabel13.TabIndex = 2;
             this.metroLabel13.Text = "List number:";
             // 
@@ -839,7 +839,7 @@
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.Location = new System.Drawing.Point(27, 118);
             this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(116, 19);
+            this.metroLabel15.Size = new System.Drawing.Size(117, 19);
             this.metroLabel15.TabIndex = 4;
             this.metroLabel15.Text = "Member Number:";
             // 
@@ -981,7 +981,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 678);
+            this.ClientSize = new System.Drawing.Size(1280, 700);
             this.Controls.Add(this.metroTextButton3);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.metroTextButton2);
@@ -991,7 +991,11 @@
             this.Controls.Add(this.metroTextButton5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.metroGrid1);
+            this.Movable = false;
             this.Name = "frmClients";
+            this.Resizable = false;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Clients";
             this.Load += new System.EventHandler(this.frmClients_Load);
             this.groupBox3.ResumeLayout(false);

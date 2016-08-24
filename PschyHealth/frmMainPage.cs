@@ -49,8 +49,23 @@ namespace PschyHealth
 
         private void btnClients_Click_1(object sender, EventArgs e)
         {
-            pnlClients pnlClients = new pnlClients(this);
-            pnlClients.swipe(true);
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmClients")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmClients frmClients = new frmClients();
+                frmClients.Show();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -61,38 +76,129 @@ namespace PschyHealth
 
         private void metroTileItem2_Click(object sender, EventArgs e)
         {
-            pnlStaff pnlStaff = new pnlStaff(this);
-            pnlStaff.swipe(true);
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmStaff")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmStaff frmStaff = new frmStaff();
+                frmStaff.Show();
+            }
         }
 
         private void metroTileItem3_Click(object sender, EventArgs e)
         {
-            //pnlAccounting pnlAccounting = new pnlAccounting(this);
-            //pnlAccounting.swipe(true);
-           
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmAccounting")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmAccounting frmAccounting = new frmAccounting();
+                frmAccounting.Show();
+            }
+
         }
 
         private void metroTileItem6_Click(object sender, EventArgs e)
         {
-            pnlStatements pnlStatements = new pnlStatements(this);
-            pnlStatements.swipe(true);
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmStatements")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmStatements frmStatements = new frmStatements();
+                frmStatements.Show();
+            }   
         }
 
         private void metroTileItem7_Click(object sender, EventArgs e)
         {
-            pnlMedicalAids pnlMedicalAids = new pnlMedicalAids(this);
-            pnlMedicalAids.swipe(true);
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmMedicalAids")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmMedicalAids frmMedicalAids = new frmMedicalAids();
+                frmMedicalAids.Show();
+            }
         }
 
         private void metroTileItem8_Click(object sender, EventArgs e)
         {
-            pnlEDICodes pnlEDICodes = new pnlEDICodes(this);
-            pnlEDICodes.swipe(true);
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmEDICodes")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmEDICodes frmEDICodes = new frmEDICodes();
+                frmEDICodes.Show();
+            }
         }
 
         private void metroTileItem10_Click(object sender, EventArgs e)
         {
-            
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmConsultations")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmConsultations frmConsultations = new frmConsultations();
+                frmConsultations.Show();
+            }
         }
 
         private void metroTileItem11_Click(object sender, EventArgs e)
@@ -235,8 +341,8 @@ namespace PschyHealth
 
         private void pbSettings_Click_1(object sender, EventArgs e)
         {
-            pnlSettings pnlSettings = new pnlSettings(this);
-            pnlSettings.swipe(true);
+            pnlSettings2 pnlSettings2 = new pnlSettings2(this);
+            pnlSettings2.swipe(true);
         }
 
        

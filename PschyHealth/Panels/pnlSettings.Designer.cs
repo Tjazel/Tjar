@@ -53,12 +53,12 @@
             this.metroTilePanel1.EnableDragDrop = true;
             this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.icSettings});
-            this.metroTilePanel1.Location = new System.Drawing.Point(33, 31);
-            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTilePanel1.Location = new System.Drawing.Point(25, 25);
             this.metroTilePanel1.Name = "metroTilePanel1";
-            this.metroTilePanel1.Size = new System.Drawing.Size(1145, 755);
+            this.metroTilePanel1.Size = new System.Drawing.Size(859, 613);
             this.metroTilePanel1.TabIndex = 0;
             this.metroTilePanel1.Text = "metroTilePanel1";
+            this.metroTilePanel1.ItemClick += new System.EventHandler(this.metroTilePanel1_ItemClick);
             // 
             // icSettings
             // 
@@ -267,12 +267,13 @@
             // 
             // pnlSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroTilePanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Location = new System.Drawing.Point(0, 0);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "pnlSettings";
-            this.Size = new System.Drawing.Size(1144, 817);
+            this.Size = new System.Drawing.Size(858, 664);
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Load += new System.EventHandler(this.pnlSettings_Load);
             this.Leave += new System.EventHandler(this.pnlSettings_Leave);

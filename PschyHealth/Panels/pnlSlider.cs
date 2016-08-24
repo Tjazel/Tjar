@@ -71,16 +71,16 @@ namespace PschyHealth
 
         private void ResizeForm()
         {
-           this.Width = _owner.Width;
-            this.Height = _owner.Height - 77;
-            this.Location = new Point(_loaded ? 0 : _owner.Width, 50);
+            this.Width = 300;
+            this.Height = _owner.Height;
+            this.Location = new Point(_loaded ? 0 : 300, 0);
         }
 
         public void swipe(bool show = true)
         {
             this.Visible = true;
             Transition _transasition = new Transitions.Transition(new TransitionType_EaseInEaseOut(800));
-            _transasition.add(this, "Left", show ? 0 : this.Width);
+            _transasition.add(this, "Left", show ? 980 : this.Width);
             _transasition.run();
 
 
@@ -92,9 +92,9 @@ namespace PschyHealth
 
             if (!show)
             {
-               
+
                 closed(new EventArgs());
-               _owner.Resize -= owner_Resize;
+                _owner.Resize -= owner_Resize;
                 _owner.Controls.Remove(this);
                 this.Dispose();
 

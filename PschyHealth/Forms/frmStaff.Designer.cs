@@ -612,7 +612,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 678);
+            this.ClientSize = new System.Drawing.Size(1280, 700);
             this.Controls.Add(this.metroTextButton5);
             this.Controls.Add(this.metroTextButton4);
             this.Controls.Add(this.metroTextButton3);
@@ -621,7 +621,11 @@
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
+            this.Movable = false;
             this.Name = "frmStaff";
+            this.Resizable = false;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Staff";
             this.Load += new System.EventHandler(this.frmStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();

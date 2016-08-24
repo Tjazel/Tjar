@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PschyHealth.Forms
 {
     public partial class pnlClients : pnlSlider
     {
+       
         public pnlClients(Form owner) : base(owner)
         {
             InitializeComponent();

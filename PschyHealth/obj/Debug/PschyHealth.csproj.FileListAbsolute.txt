@@ -170,7 +170,6 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\bin\Debug\Transitions.dll
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\bin\Debug\DevComponents.DotNetBar.Schedule.xml
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\bin\Debug\DevComponents.DotNetBar2.xml
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.csprojResolveAssemblyReference.cache
-C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.frmAccounting.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.frmClients.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.frmConsultations.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.frmEDICodes.resources
@@ -338,3 +337,8 @@ C:\Users\Jaco\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.Properties.Res
 C:\Users\Jaco\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
 C:\Users\Jaco\Source\Repos\Tjar\PschyHealth\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
 C:\Users\Jaco\Source\Repos\Tjar\PschyHealth\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.Panels.frmRecord.resources
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.frmAccounting.resources
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.pnlSettings2.resources

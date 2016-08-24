@@ -50,5 +50,10 @@ namespace PschyHealth
             
 
         }
+
+        private void metroTilePanel1_ItemClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
