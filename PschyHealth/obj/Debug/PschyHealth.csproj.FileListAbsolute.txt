@@ -343,3 +343,6 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.Pan
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.frmAccounting.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.pnlSettings2.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.frmNotepad.resources
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.pdb
