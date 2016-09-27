@@ -579,7 +579,6 @@
             this.tbMain.ContainerControlProcessDialogKey = true;
             this.tbMain.DragDropSupport = true;
             this.tbMain.ExpandButtonVisible = false;
-            this.tbMain.Expanded = true;
             this.tbMain.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMain.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.toolBtnClients,
@@ -596,7 +595,7 @@
             this.tbMain.Location = new System.Drawing.Point(22, 8);
             this.tbMain.Margin = new System.Windows.Forms.Padding(2);
             this.tbMain.Name = "tbMain";
-            this.tbMain.Size = new System.Drawing.Size(829, 25);
+            this.tbMain.Size = new System.Drawing.Size(829, 0);
             this.tbMain.TabIndex = 35;
             this.tbMain.Text = "metroToolbar1";
             this.tbMain.Visible = false;
@@ -789,7 +788,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 38;
-            this.button1.Text = "menu";
+            this.button1.Text = "menujjjjj";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // radialMenu2
@@ -799,7 +798,6 @@
             this.Clients});
             this.radialMenu2.Location = new System.Drawing.Point(866, 8);
             this.radialMenu2.Name = "radialMenu2";
-            this.radialMenu2.Size = new System.Drawing.Size(28, 28);
             this.radialMenu2.Symbol = "";
             this.radialMenu2.SymbolSize = 13F;
             this.radialMenu2.TabIndex = 39;
