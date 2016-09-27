@@ -352,3 +352,6 @@ C:\Users\Student\Source\Repos\Tjar\PschyHealth\obj\Debug\PschyHealth.pdb
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\bin\Debug\PschyHealth.exe.config
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.exe
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.pdb
+C:\Users\Johann\Source\Repos\Tjar3\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Johann\Source\Repos\Tjar3\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Johann\Source\Repos\Tjar3\PschyHealth\obj\Debug\PschyHealth.pdb

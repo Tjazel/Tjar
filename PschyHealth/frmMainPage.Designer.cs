@@ -138,10 +138,9 @@
             // 
             this.metroLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(45, 2);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel3.Location = new System.Drawing.Point(34, 2);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(85, 20);
+            this.metroLabel3.Size = new System.Drawing.Size(81, 19);
             this.metroLabel3.TabIndex = 27;
             this.metroLabel3.Text = "Login Name";
             // 
@@ -168,10 +167,9 @@
             this.metroTilePanel1.EnableDragDrop = true;
             this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.itemContainer1});
-            this.metroTilePanel1.Location = new System.Drawing.Point(39, 97);
-            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTilePanel1.Location = new System.Drawing.Point(29, 79);
             this.metroTilePanel1.Name = "metroTilePanel1";
-            this.metroTilePanel1.Size = new System.Drawing.Size(920, 865);
+            this.metroTilePanel1.Size = new System.Drawing.Size(690, 703);
             this.metroTilePanel1.TabIndex = 30;
             this.metroTilePanel1.Text = "metroTilePanel1";
             this.metroTilePanel1.ItemClick += new System.EventHandler(this.metroTilePanel1_ItemClick);
@@ -404,10 +402,10 @@
             // pbMic
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.micOn;
-            this.pbMic.Location = new System.Drawing.Point(1243, 7);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbMic.Location = new System.Drawing.Point(932, 6);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbMic.Name = "pbMic";
-            this.pbMic.Size = new System.Drawing.Size(37, 27);
+            this.pbMic.Size = new System.Drawing.Size(28, 22);
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMic.TabIndex = 32;
             this.pbMic.TabStop = false;
@@ -422,12 +420,11 @@
             this.calendarView1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.calendarView1.ContainerControlProcessDialogKey = true;
             this.calendarView1.HighlightCurrentDay = true;
-            this.calendarView1.Location = new System.Drawing.Point(1115, 97);
-            this.calendarView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.calendarView1.Location = new System.Drawing.Point(836, 79);
             this.calendarView1.MultiUserTabHeight = 19;
             this.calendarView1.Name = "calendarView1";
             this.calendarView1.ShowOnlyWorkDayHours = true;
-            this.calendarView1.Size = new System.Drawing.Size(537, 754);
+            this.calendarView1.Size = new System.Drawing.Size(403, 613);
             this.calendarView1.TabIndex = 31;
             this.calendarView1.Text = "calendarView1";
             this.calendarView1.TimeIndicator.BorderColor = System.Drawing.Color.Empty;
@@ -443,25 +440,25 @@
             this.lockToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.ctxUser.Name = "ctxUser";
-            this.ctxUser.Size = new System.Drawing.Size(248, 82);
+            this.ctxUser.Size = new System.Drawing.Size(208, 70);
             // 
             // changeAccountSettingToolStripMenuItem
             // 
             this.changeAccountSettingToolStripMenuItem.Name = "changeAccountSettingToolStripMenuItem";
-            this.changeAccountSettingToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.changeAccountSettingToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.changeAccountSettingToolStripMenuItem.Text = "Change Account settings";
             // 
             // lockToolStripMenuItem
             // 
             this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.lockToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.lockToolStripMenuItem.Text = "Lock";
             this.lockToolStripMenuItem.Click += new System.EventHandler(this.lockToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.signOutToolStripMenuItem.Text = "Sign out";
             // 
             // timer1
@@ -479,10 +476,9 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(213, 1);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(160, 1);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(49, 27);
+            this.pictureBox3.Size = new System.Drawing.Size(37, 22);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 28;
             this.pictureBox3.TabStop = false;
@@ -492,10 +488,9 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 1);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(2, 1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 27);
+            this.pictureBox2.Size = new System.Drawing.Size(28, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
@@ -504,10 +499,10 @@
             // pbMicOff
             // 
             this.pbMicOff.Image = global::PschyHealth.Properties.Resources.micOff;
-            this.pbMicOff.Location = new System.Drawing.Point(1243, 7);
-            this.pbMicOff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbMicOff.Location = new System.Drawing.Point(932, 6);
+            this.pbMicOff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbMicOff.Name = "pbMicOff";
-            this.pbMicOff.Size = new System.Drawing.Size(37, 27);
+            this.pbMicOff.Size = new System.Drawing.Size(28, 22);
             this.pbMicOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMicOff.TabIndex = 33;
             this.pbMicOff.TabStop = false;
@@ -518,10 +513,9 @@
             this.pbBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbBack.Image = global::PschyHealth.Properties.Resources._1470609465_house_home_real_estate_property_outline_stroke;
-            this.pbBack.Location = new System.Drawing.Point(1344, 9);
-            this.pbBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbBack.Location = new System.Drawing.Point(1008, 7);
             this.pbBack.Name = "pbBack";
-            this.pbBack.Size = new System.Drawing.Size(37, 27);
+            this.pbBack.Size = new System.Drawing.Size(28, 22);
             this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBack.TabIndex = 29;
             this.pbBack.TabStop = false;
@@ -567,10 +561,9 @@
             // 
             this.pbSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbSettings.Image = ((System.Drawing.Image)(resources.GetObject("pbSettings.Image")));
-            this.pbSettings.Location = new System.Drawing.Point(159, 1);
-            this.pbSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbSettings.Location = new System.Drawing.Point(119, 1);
             this.pbSettings.Name = "pbSettings";
-            this.pbSettings.Size = new System.Drawing.Size(49, 27);
+            this.pbSettings.Size = new System.Drawing.Size(37, 22);
             this.pbSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSettings.TabIndex = 34;
             this.pbSettings.TabStop = false;
@@ -599,10 +592,10 @@
             this.toolBtnDiagnosticCodes,
             this.toolBtnReport});
             this.tbMain.ItemSpacing = 5;
-            this.tbMain.Location = new System.Drawing.Point(29, 10);
-            this.tbMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbMain.Location = new System.Drawing.Point(22, 8);
+            this.tbMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbMain.Name = "tbMain";
-            this.tbMain.Size = new System.Drawing.Size(1105, 29);
+            this.tbMain.Size = new System.Drawing.Size(829, 0);
             this.tbMain.TabIndex = 35;
             this.tbMain.Text = "metroToolbar1";
             this.tbMain.Visible = false;
@@ -740,10 +733,10 @@
             this.controlContainerItem11,
             this.controlContainerItem12,
             this.controlContainerItem13});
-            this.metroToolbar2.Location = new System.Drawing.Point(1388, 7);
-            this.metroToolbar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroToolbar2.Location = new System.Drawing.Point(1041, 6);
+            this.metroToolbar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroToolbar2.Name = "metroToolbar2";
-            this.metroToolbar2.Size = new System.Drawing.Size(324, 24);
+            this.metroToolbar2.Size = new System.Drawing.Size(243, 29);
             this.metroToolbar2.TabIndex = 36;
             this.metroToolbar2.Text = "metroToolbar2";
             // 
@@ -778,10 +771,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1289, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(967, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 27);
+            this.pictureBox1.Size = new System.Drawing.Size(28, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
@@ -790,12 +783,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(39, 80);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(29, 65);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 38;
-            this.button1.Text = "menu";
+            this.button1.Text = "menusdsd\\";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // radialMenu2
@@ -803,10 +796,8 @@
             this.radialMenu2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.Accounting,
             this.Clients});
-            this.radialMenu2.Location = new System.Drawing.Point(1155, 10);
-            this.radialMenu2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radialMenu2.Location = new System.Drawing.Point(866, 8);
             this.radialMenu2.Name = "radialMenu2";
-            this.radialMenu2.Size = new System.Drawing.Size(37, 34);
             this.radialMenu2.Symbol = "";
             this.radialMenu2.SymbolSize = 13F;
             this.radialMenu2.TabIndex = 39;
@@ -831,9 +822,9 @@
             // 
             // frmMainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1723, 772);
+            this.ClientSize = new System.Drawing.Size(1034, 627);
             this.Controls.Add(this.radialMenu2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -844,9 +835,7 @@
             this.Controls.Add(this.tbMain);
             this.Controls.Add(this.calendarView1);
             this.Controls.Add(this.metroTilePanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMainPage";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
