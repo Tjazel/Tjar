@@ -135,6 +135,7 @@
     <Compile Include="frmNotepad.Designer.cs">
       <DependentUpon>frmNotepad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Methods.cs" />
     <Compile Include="Panels\pnlClients.cs">
       <SubType>UserControl</SubType>
     </Compile>
