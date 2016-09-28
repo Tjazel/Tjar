@@ -403,7 +403,7 @@
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.micOn;
             this.pbMic.Location = new System.Drawing.Point(932, 6);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(2);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbMic.Name = "pbMic";
             this.pbMic.Size = new System.Drawing.Size(28, 22);
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -500,7 +500,7 @@
             // 
             this.pbMicOff.Image = global::PschyHealth.Properties.Resources.micOff;
             this.pbMicOff.Location = new System.Drawing.Point(932, 6);
-            this.pbMicOff.Margin = new System.Windows.Forms.Padding(2);
+            this.pbMicOff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbMicOff.Name = "pbMicOff";
             this.pbMicOff.Size = new System.Drawing.Size(28, 22);
             this.pbMicOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -579,7 +579,6 @@
             this.tbMain.ContainerControlProcessDialogKey = true;
             this.tbMain.DragDropSupport = true;
             this.tbMain.ExpandButtonVisible = false;
-            this.tbMain.Expanded = true;
             this.tbMain.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMain.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.toolBtnClients,
@@ -594,9 +593,9 @@
             this.toolBtnReport});
             this.tbMain.ItemSpacing = 5;
             this.tbMain.Location = new System.Drawing.Point(22, 8);
-            this.tbMain.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbMain.Name = "tbMain";
-            this.tbMain.Size = new System.Drawing.Size(829, 25);
+            this.tbMain.Size = new System.Drawing.Size(829, 0);
             this.tbMain.TabIndex = 35;
             this.tbMain.Text = "metroToolbar1";
             this.tbMain.Visible = false;
@@ -735,9 +734,9 @@
             this.controlContainerItem12,
             this.controlContainerItem13});
             this.metroToolbar2.Location = new System.Drawing.Point(1041, 6);
-            this.metroToolbar2.Margin = new System.Windows.Forms.Padding(2);
+            this.metroToolbar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroToolbar2.Name = "metroToolbar2";
-            this.metroToolbar2.Size = new System.Drawing.Size(243, 24);
+            this.metroToolbar2.Size = new System.Drawing.Size(243, 29);
             this.metroToolbar2.TabIndex = 36;
             this.metroToolbar2.Text = "metroToolbar2";
             // 
@@ -773,7 +772,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(967, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -785,11 +784,11 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(29, 65);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 38;
-            this.button1.Text = "menu";
+            this.button1.Text = "menusdsd\\";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // radialMenu2
@@ -799,7 +798,6 @@
             this.Clients});
             this.radialMenu2.Location = new System.Drawing.Point(866, 8);
             this.radialMenu2.Name = "radialMenu2";
-            this.radialMenu2.Size = new System.Drawing.Size(28, 28);
             this.radialMenu2.Symbol = "";
             this.radialMenu2.SymbolSize = 13F;
             this.radialMenu2.TabIndex = 39;
@@ -826,7 +824,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1292, 627);
+            this.ClientSize = new System.Drawing.Size(1034, 627);
             this.Controls.Add(this.radialMenu2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
