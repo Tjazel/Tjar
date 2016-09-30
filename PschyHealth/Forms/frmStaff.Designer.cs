@@ -627,7 +627,6 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Staff";
-            this.Load += new System.EventHandler(this.frmStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

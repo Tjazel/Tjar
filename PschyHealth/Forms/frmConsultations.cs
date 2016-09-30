@@ -15,6 +15,7 @@ namespace PschyHealth
     public partial class frmConsultations : MetroForm
 
     {
+        Methods cMethods = new Methods();
         //Constants
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -38,6 +39,8 @@ namespace PschyHealth
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+
+            cMethods.fillDGV(dgvConsultations, "Consultations", cmbConsultCrit);
         }
         public frmConsultations()
         {
@@ -46,7 +49,19 @@ namespace PschyHealth
 
         private void Consultations_Load(object sender, EventArgs e)
         {
+            classStyle _classStyle = new classStyle();
+            _classStyle.changeTheme(this);
+        }
 
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void dgvConsultations_SelectionChanged(object sender, EventArgs e)
+        {
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Con", false);
         }
     }
 }

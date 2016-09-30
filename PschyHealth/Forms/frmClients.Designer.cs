@@ -997,7 +997,6 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Clients";
-            this.Load += new System.EventHandler(this.frmClients_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

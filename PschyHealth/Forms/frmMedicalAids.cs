@@ -13,8 +13,8 @@ using System.Runtime.InteropServices;
 namespace PschyHealth
 {
     public partial class frmMedicalAids : MetroForm
-
     {
+        Methods cMethods = new Methods();
         //Constants
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -38,15 +38,22 @@ namespace PschyHealth
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+
+            cMethods.fillDGV(dgvMedicalAid, "MedicalAid", cmbMedCrit);
         }
         public frmMedicalAids()
         {
             InitializeComponent();
         }
 
-        private void frmMedicalAids_Load(object sender, EventArgs e)
+        private void pbBack_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void dgvMedicalAid_SelectionChanged(object sender, EventArgs e)
+        {
+            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
         }
     }
 }

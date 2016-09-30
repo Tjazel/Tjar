@@ -536,7 +536,6 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Medical Aids";
-            this.Load += new System.EventHandler(this.frmMedicalAids_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
