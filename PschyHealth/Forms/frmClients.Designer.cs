@@ -976,6 +976,7 @@
             this.metroGrid1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroGrid1.TabIndex = 34;
             this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             // 
             // frmClients
             // 

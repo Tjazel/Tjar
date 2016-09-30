@@ -55,5 +55,10 @@ namespace PschyHealth
         {
             cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
         }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

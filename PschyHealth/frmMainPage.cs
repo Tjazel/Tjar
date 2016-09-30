@@ -11,13 +11,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Recognition;
 using System.Speech.Synthesis;
+using MetroFramework.Controls;
 
 namespace PschyHealth
 {
     public partial class frmMainPage : MetroForm
     {
         SpeechRecognitionEngine sRecognize = new SpeechRecognitionEngine();
-       
+        Methods cMethods = new Methods();
 
         public frmMainPage()
         {
@@ -366,8 +367,17 @@ namespace PschyHealth
         {
 
         }
+
+        private void frmMainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            MetroGrid dgv = new MetroGrid();
+            dgv.Parent = this;
+            cMethods.silentFillDGV(dgv, "Consultations",true);
+            cMethods.Archive(dgv, "Consultations", 6);
+        }
     }
 
        
-    }
+}
 

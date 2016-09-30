@@ -217,7 +217,6 @@
             this.btnStaff.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnStaff.TitleText = "Staff";
             this.btnStaff.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaff.Click += new System.EventHandler(this.metroTileItem2_Click);
             // 
             // btnClients
             // 
@@ -252,7 +251,6 @@
             this.btnAccounting.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnAccounting.TitleText = "Accounting";
             this.btnAccounting.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccounting.Click += new System.EventHandler(this.metroTileItem3_Click);
             // 
             // btnDateAndTime
             // 

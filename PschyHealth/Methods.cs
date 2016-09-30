@@ -40,9 +40,12 @@ namespace PschyHealth
         //The filterDGV method is used to fill the metro grid and also to filter it
         //If a string is specified, the metro grid will be filled and filtered
 
-        public void filterDGV(MetroGrid dgv, String sTable, String filter1, String filter2)
+        public void silentFillDGV(MetroGrid dgv, String sTable, Boolean silent)
         {
-
+            silentFillDGV(dgv,sTable,"","",true);
+        }
+        public void silentFillDGV(MetroGrid dgv, String sTable, String filter1, String filter2, Boolean silent)
+        {
             try
             {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter();
@@ -74,22 +77,31 @@ namespace PschyHealth
 
                 String mes = e.Message.Substring(0, 17);
                 //MessageBox.Show(e.Message);
-                if (mes == "A network-related")
+                if (!silent)
                 {
-                    DialogResult result = MessageBox.Show("Connection timed out. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
+                    if (mes == "A network-related")
                     {
-                        Thread.Sleep(5000);
-                        recallFilter(dgv, sTable, filter1, filter2);
+                        DialogResult result = MessageBox.Show("Connection timed out. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
+                        if (result == DialogResult.Yes)
+                        {
+                            Thread.Sleep(5000);
+                            recallFilter(dgv, sTable, filter1, filter2);
+                        }
+                    }
+                    else if (mes == "Incorrect syntax ")
+                    {
+
+                        String fil = filter1.Substring(7, filter1.Length - 7);
+
+                        recallFilter(dgv, sTable, " WHERE " + fil, filter2);
                     }
                 }
-                else if (mes == "Incorrect syntax ")
+                else
                 {
-
-                    String fil = filter1.Substring(7, filter1.Length - 7);
-
-                    recallFilter(dgv, sTable, " WHERE " + fil, filter2);
+                    Thread.Sleep(5000);
+                    recallFilter(dgv, sTable, filter1, filter2);
                 }
+                
 
             }
             catch (Exception)
@@ -100,7 +112,11 @@ namespace PschyHealth
                     recallFilter(dgv, sTable, filter1, filter2);
                 }
             }
+        }
 
+        public void filterDGV(MetroGrid dgv, String sTable, String filter1, String filter2)
+        {
+            silentFillDGV(dgv, sTable, filter1, filter2, false);
         }
 
         private void recallFilter(MetroGrid dgv, String sTable, String filter1, String filter2)
