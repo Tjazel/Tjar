@@ -67,5 +67,17 @@ namespace PschyHealth
         {
             cMethods.fillTextbox(groupBox1, dgvStaff, "Staff", false);
         }
+
+        private void pbBack_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmStaff_Load(object sender, EventArgs e)
+        {
+            ucToolbar uc = new ucToolbar();
+            uc.Dock = DockStyle.Fill;
+            this.Controls.Add(uc);
+        }
     }
 }

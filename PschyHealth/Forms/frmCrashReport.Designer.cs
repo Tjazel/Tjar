@@ -158,7 +158,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PschyHealth.Properties.Resources._87c34eb1488a3ec90ffddc89340a7572;
+           
             this.pictureBox1.Location = new System.Drawing.Point(196, 63);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(225, 128);

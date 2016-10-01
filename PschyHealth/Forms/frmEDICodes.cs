@@ -65,5 +65,17 @@ namespace PschyHealth
         {
             cMethods.fillTextbox(groupBox1, dgvEDICodes, "EDI", false);
         }
+
+        private void pbMic_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmEDICodes_Load(object sender, EventArgs e)
+        {
+            ucToolbar uc = new ucToolbar();
+            uc.Dock = DockStyle.Fill;
+            this.Controls.Add(uc);
+        }
     }
 }

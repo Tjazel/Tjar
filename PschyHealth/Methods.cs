@@ -12,7 +12,7 @@ using System.Net.Mail;
 using System.Drawing;
 using MetroFramework.Controls;
 using System.Data.SqlClient;
-using MetroFramework.Controls;
+
 using System.Threading;
 
 

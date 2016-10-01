@@ -49,6 +49,9 @@ namespace PschyHealth
 
         private void Consultations_Load(object sender, EventArgs e)
         {
+            ucToolbar uc = new ucToolbar();
+            uc.Dock = DockStyle.Fill;
+            this.Controls.Add(uc);
             //classStyle _classStyle = new classStyle();
             //_classStyle.changeTheme(this);
         }
@@ -77,6 +80,11 @@ namespace PschyHealth
         private void txtConsultationsSearch_TextChanged(object sender, EventArgs e)
         {
             cMethods.fillTextbox(groupBox1, dgvConsultations, "Consultations", false);
+        }
+
+        private void pbMic_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -32,6 +32,9 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
+            ucToolbar uc = new ucToolbar();
+         //   uc.Dock = DockStyle.Fill;
+            this.Controls.Add(uc);
             //Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
             int HeightofMain = Application.OpenForms["frmMainPage"].Height;
@@ -68,7 +71,9 @@ namespace PschyHealth
 
         private void frmClients_Load(object sender, EventArgs e)
         {
-
+            ucToolbar uc = new ucToolbar();
+            uc.Dock = DockStyle.Top;
+            this.Controls.Add(uc);
         }
 
         private void dgvClients_SelectionChanged_1(object sender, EventArgs e)
@@ -100,6 +105,11 @@ namespace PschyHealth
             }
             else
                 txtClientsSearch.Enabled = false;
+        }
+
+        private void pbMic_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

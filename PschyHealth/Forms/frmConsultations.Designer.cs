@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.cmbConsultCrit = new MetroFramework.Controls.MetroComboBox();
             this.txtConsultationsSearch = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
@@ -68,11 +69,12 @@
             this.dgvConsultations = new MetroFramework.Controls.MetroGrid();
             this.txtConsultationsInitials = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.pbMic = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultations)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMic)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -83,13 +85,28 @@
             this.groupBox3.Controls.Add(this.metroLabel18);
             this.groupBox3.Controls.Add(this.metroLabel17);
             this.groupBox3.Location = new System.Drawing.Point(631, 76);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(640, 87);
             this.groupBox3.TabIndex = 37;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search Consultations";
+            // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 24;
+            this.metroComboBox1.Items.AddRange(new object[] {
+            "=",
+            ">",
+            "<",
+            "null"});
+            this.metroComboBox1.Location = new System.Drawing.Point(270, 28);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(71, 30);
+            this.metroComboBox1.TabIndex = 62;
+            this.metroComboBox1.UseSelectable = true;
             // 
             // cmbConsultCrit
             // 
@@ -101,7 +118,7 @@
             "First Name",
             "Surname"});
             this.cmbConsultCrit.Location = new System.Drawing.Point(76, 28);
-            this.cmbConsultCrit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbConsultCrit.Margin = new System.Windows.Forms.Padding(4);
             this.cmbConsultCrit.Name = "cmbConsultCrit";
             this.cmbConsultCrit.Size = new System.Drawing.Size(187, 30);
             this.cmbConsultCrit.Style = MetroFramework.MetroColorStyle.Blue;
@@ -114,10 +131,10 @@
             // 
             // 
             this.txtConsultationsSearch.CustomButton.Image = null;
-            this.txtConsultationsSearch.CustomButton.Location = new System.Drawing.Point(205, 2);
-            this.txtConsultationsSearch.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsSearch.CustomButton.Location = new System.Drawing.Point(154, 2);
+            this.txtConsultationsSearch.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsSearch.CustomButton.Name = "";
-            this.txtConsultationsSearch.CustomButton.Size = new System.Drawing.Size(41, 38);
+            this.txtConsultationsSearch.CustomButton.Size = new System.Drawing.Size(31, 31);
             this.txtConsultationsSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultationsSearch.CustomButton.TabIndex = 1;
             this.txtConsultationsSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -125,7 +142,7 @@
             this.txtConsultationsSearch.CustomButton.Visible = false;
             this.txtConsultationsSearch.Lines = new string[0];
             this.txtConsultationsSearch.Location = new System.Drawing.Point(444, 28);
-            this.txtConsultationsSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsSearch.MaxLength = 32767;
             this.txtConsultationsSearch.Name = "txtConsultationsSearch";
             this.txtConsultationsSearch.PasswordChar = '\0';
@@ -165,7 +182,7 @@
             // 
             this.txtConsultationsDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtConsultationsDate.Location = new System.Drawing.Point(264, 20);
-            this.txtConsultationsDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsDate.MinimumSize = new System.Drawing.Size(0, 30);
             this.txtConsultationsDate.Name = "txtConsultationsDate";
             this.txtConsultationsDate.Size = new System.Drawing.Size(156, 30);
@@ -176,7 +193,7 @@
             // 
             this.metroTextButton5.Image = null;
             this.metroTextButton5.Location = new System.Drawing.Point(429, 241);
-            this.metroTextButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextButton5.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextButton5.Name = "metroTextButton5";
             this.metroTextButton5.Size = new System.Drawing.Size(47, 28);
             this.metroTextButton5.Style = MetroFramework.MetroColorStyle.Blue;
@@ -189,7 +206,7 @@
             // 
             this.metroTextButton3.Image = null;
             this.metroTextButton3.Location = new System.Drawing.Point(16, 610);
-            this.metroTextButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextButton3.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextButton3.Name = "metroTextButton3";
             this.metroTextButton3.Size = new System.Drawing.Size(512, 28);
             this.metroTextButton3.Style = MetroFramework.MetroColorStyle.Blue;
@@ -202,7 +219,7 @@
             // 
             this.btnMarkNot.Image = null;
             this.btnMarkNot.Location = new System.Drawing.Point(265, 367);
-            this.btnMarkNot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMarkNot.Margin = new System.Windows.Forms.Padding(4);
             this.btnMarkNot.Name = "btnMarkNot";
             this.btnMarkNot.Size = new System.Drawing.Size(265, 28);
             this.btnMarkNot.Style = MetroFramework.MetroColorStyle.Blue;
@@ -217,10 +234,10 @@
             // 
             // 
             this.metroTextBox14.CustomButton.Image = null;
-            this.metroTextBox14.CustomButton.Location = new System.Drawing.Point(417, 2);
-            this.metroTextBox14.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox14.CustomButton.Location = new System.Drawing.Point(313, 2);
+            this.metroTextBox14.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextBox14.CustomButton.Name = "";
-            this.metroTextBox14.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.metroTextBox14.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.metroTextBox14.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox14.CustomButton.TabIndex = 1;
             this.metroTextBox14.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -228,7 +245,7 @@
             this.metroTextBox14.CustomButton.Visible = false;
             this.metroTextBox14.Lines = new string[0];
             this.metroTextBox14.Location = new System.Drawing.Point(191, 570);
-            this.metroTextBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox14.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextBox14.MaxLength = 32767;
             this.metroTextBox14.Name = "metroTextBox14";
             this.metroTextBox14.PasswordChar = '\0';
@@ -250,10 +267,10 @@
             // 
             // 
             this.metroTextBox13.CustomButton.Image = null;
-            this.metroTextBox13.CustomButton.Location = new System.Drawing.Point(153, 2);
-            this.metroTextBox13.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox13.CustomButton.Location = new System.Drawing.Point(115, 2);
+            this.metroTextBox13.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextBox13.CustomButton.Name = "";
-            this.metroTextBox13.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.metroTextBox13.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.metroTextBox13.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox13.CustomButton.TabIndex = 1;
             this.metroTextBox13.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -261,7 +278,7 @@
             this.metroTextBox13.CustomButton.Visible = false;
             this.metroTextBox13.Lines = new string[0];
             this.metroTextBox13.Location = new System.Drawing.Point(387, 529);
-            this.metroTextBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox13.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextBox13.MaxLength = 32767;
             this.metroTextBox13.Name = "metroTextBox13";
             this.metroTextBox13.PasswordChar = '\0';
@@ -283,10 +300,10 @@
             // 
             // 
             this.metroTextBox12.CustomButton.Image = null;
-            this.metroTextBox12.CustomButton.Location = new System.Drawing.Point(153, 2);
-            this.metroTextBox12.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox12.CustomButton.Location = new System.Drawing.Point(115, 2);
+            this.metroTextBox12.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextBox12.CustomButton.Name = "";
-            this.metroTextBox12.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.metroTextBox12.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.metroTextBox12.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox12.CustomButton.TabIndex = 1;
             this.metroTextBox12.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -294,7 +311,7 @@
             this.metroTextBox12.CustomButton.Visible = false;
             this.metroTextBox12.Lines = new string[0];
             this.metroTextBox12.Location = new System.Drawing.Point(87, 529);
-            this.metroTextBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox12.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextBox12.MaxLength = 32767;
             this.metroTextBox12.Name = "metroTextBox12";
             this.metroTextBox12.PasswordChar = '\0';
@@ -316,10 +333,10 @@
             // 
             // 
             this.metroTextBox11.CustomButton.Image = null;
-            this.metroTextBox11.CustomButton.Location = new System.Drawing.Point(153, 2);
-            this.metroTextBox11.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox11.CustomButton.Location = new System.Drawing.Point(115, 2);
+            this.metroTextBox11.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextBox11.CustomButton.Name = "";
-            this.metroTextBox11.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.metroTextBox11.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.metroTextBox11.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox11.CustomButton.TabIndex = 1;
             this.metroTextBox11.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -327,7 +344,7 @@
             this.metroTextBox11.CustomButton.Visible = false;
             this.metroTextBox11.Lines = new string[0];
             this.metroTextBox11.Location = new System.Drawing.Point(387, 494);
-            this.metroTextBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox11.Margin = new System.Windows.Forms.Padding(4);
             this.metroTextBox11.MaxLength = 32767;
             this.metroTextBox11.Name = "metroTextBox11";
             this.metroTextBox11.PasswordChar = '\0';
@@ -349,10 +366,10 @@
             // 
             // 
             this.txtConsultations.CustomButton.Image = null;
-            this.txtConsultations.CustomButton.Location = new System.Drawing.Point(153, 2);
-            this.txtConsultations.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultations.CustomButton.Location = new System.Drawing.Point(115, 2);
+            this.txtConsultations.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultations.CustomButton.Name = "";
-            this.txtConsultations.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtConsultations.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtConsultations.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultations.CustomButton.TabIndex = 1;
             this.txtConsultations.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -360,7 +377,7 @@
             this.txtConsultations.CustomButton.Visible = false;
             this.txtConsultations.Lines = new string[0];
             this.txtConsultations.Location = new System.Drawing.Point(87, 494);
-            this.txtConsultations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultations.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultations.MaxLength = 32767;
             this.txtConsultations.Name = "txtConsultations";
             this.txtConsultations.PasswordChar = '\0';
@@ -430,10 +447,10 @@
             // 
             // 
             this.txtConsultationsDiagnosis.CustomButton.Image = null;
-            this.txtConsultationsDiagnosis.CustomButton.Location = new System.Drawing.Point(265, 2);
-            this.txtConsultationsDiagnosis.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsDiagnosis.CustomButton.Location = new System.Drawing.Point(199, 2);
+            this.txtConsultationsDiagnosis.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsDiagnosis.CustomButton.Name = "";
-            this.txtConsultationsDiagnosis.CustomButton.Size = new System.Drawing.Size(87, 80);
+            this.txtConsultationsDiagnosis.CustomButton.Size = new System.Drawing.Size(65, 65);
             this.txtConsultationsDiagnosis.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultationsDiagnosis.CustomButton.TabIndex = 1;
             this.txtConsultationsDiagnosis.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -441,7 +458,7 @@
             this.txtConsultationsDiagnosis.CustomButton.Visible = false;
             this.txtConsultationsDiagnosis.Lines = new string[0];
             this.txtConsultationsDiagnosis.Location = new System.Drawing.Point(264, 411);
-            this.txtConsultationsDiagnosis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsDiagnosis.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsDiagnosis.MaxLength = 32767;
             this.txtConsultationsDiagnosis.Multiline = true;
             this.txtConsultationsDiagnosis.Name = "txtConsultationsDiagnosis";
@@ -464,10 +481,10 @@
             // 
             // 
             this.txtConsultationsDescription.CustomButton.Image = null;
-            this.txtConsultationsDescription.CustomButton.Location = new System.Drawing.Point(265, 2);
-            this.txtConsultationsDescription.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsDescription.CustomButton.Location = new System.Drawing.Point(199, 2);
+            this.txtConsultationsDescription.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsDescription.CustomButton.Name = "";
-            this.txtConsultationsDescription.CustomButton.Size = new System.Drawing.Size(87, 80);
+            this.txtConsultationsDescription.CustomButton.Size = new System.Drawing.Size(65, 65);
             this.txtConsultationsDescription.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultationsDescription.CustomButton.TabIndex = 1;
             this.txtConsultationsDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -475,7 +492,7 @@
             this.txtConsultationsDescription.CustomButton.Visible = false;
             this.txtConsultationsDescription.Lines = new string[0];
             this.txtConsultationsDescription.Location = new System.Drawing.Point(265, 277);
-            this.txtConsultationsDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsDescription.MaxLength = 32767;
             this.txtConsultationsDescription.Multiline = true;
             this.txtConsultationsDescription.Name = "txtConsultationsDescription";
@@ -498,10 +515,10 @@
             // 
             // 
             this.txtConsultationsService_Code.CustomButton.Image = null;
-            this.txtConsultationsService_Code.CustomButton.Location = new System.Drawing.Point(175, 2);
-            this.txtConsultationsService_Code.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsService_Code.CustomButton.Location = new System.Drawing.Point(131, 2);
+            this.txtConsultationsService_Code.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsService_Code.CustomButton.Name = "";
-            this.txtConsultationsService_Code.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtConsultationsService_Code.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtConsultationsService_Code.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultationsService_Code.CustomButton.TabIndex = 1;
             this.txtConsultationsService_Code.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -509,7 +526,7 @@
             this.txtConsultationsService_Code.CustomButton.Visible = false;
             this.txtConsultationsService_Code.Lines = new string[0];
             this.txtConsultationsService_Code.Location = new System.Drawing.Point(264, 241);
-            this.txtConsultationsService_Code.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsService_Code.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsService_Code.MaxLength = 32767;
             this.txtConsultationsService_Code.Name = "txtConsultationsService_Code";
             this.txtConsultationsService_Code.PasswordChar = '\0';
@@ -550,9 +567,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PschyHealth.Properties.Resources.refresh1;
             this.pictureBox1.Location = new System.Drawing.Point(1292, 135);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -587,10 +603,10 @@
             // 
             // 
             this.txtConsultationsBirthday.CustomButton.Image = null;
-            this.txtConsultationsBirthday.CustomButton.Location = new System.Drawing.Point(175, 2);
-            this.txtConsultationsBirthday.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsBirthday.CustomButton.Location = new System.Drawing.Point(131, 2);
+            this.txtConsultationsBirthday.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsBirthday.CustomButton.Name = "";
-            this.txtConsultationsBirthday.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtConsultationsBirthday.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtConsultationsBirthday.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultationsBirthday.CustomButton.TabIndex = 1;
             this.txtConsultationsBirthday.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -598,7 +614,7 @@
             this.txtConsultationsBirthday.CustomButton.Visible = false;
             this.txtConsultationsBirthday.Lines = new string[0];
             this.txtConsultationsBirthday.Location = new System.Drawing.Point(264, 206);
-            this.txtConsultationsBirthday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsBirthday.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsBirthday.MaxLength = 32767;
             this.txtConsultationsBirthday.Name = "txtConsultationsBirthday";
             this.txtConsultationsBirthday.PasswordChar = '\0';
@@ -620,10 +636,10 @@
             // 
             // 
             this.txtConsultationsSurname.CustomButton.Image = null;
-            this.txtConsultationsSurname.CustomButton.Location = new System.Drawing.Point(175, 2);
-            this.txtConsultationsSurname.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsSurname.CustomButton.Location = new System.Drawing.Point(131, 2);
+            this.txtConsultationsSurname.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsSurname.CustomButton.Name = "";
-            this.txtConsultationsSurname.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtConsultationsSurname.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtConsultationsSurname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultationsSurname.CustomButton.TabIndex = 1;
             this.txtConsultationsSurname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -631,7 +647,7 @@
             this.txtConsultationsSurname.CustomButton.Visible = false;
             this.txtConsultationsSurname.Lines = new string[0];
             this.txtConsultationsSurname.Location = new System.Drawing.Point(265, 170);
-            this.txtConsultationsSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsSurname.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsSurname.MaxLength = 32767;
             this.txtConsultationsSurname.Name = "txtConsultationsSurname";
             this.txtConsultationsSurname.PasswordChar = '\0';
@@ -653,10 +669,10 @@
             // 
             // 
             this.txtConsultationsMember_Number.CustomButton.Image = null;
-            this.txtConsultationsMember_Number.CustomButton.Location = new System.Drawing.Point(175, 2);
-            this.txtConsultationsMember_Number.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsMember_Number.CustomButton.Location = new System.Drawing.Point(131, 2);
+            this.txtConsultationsMember_Number.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsMember_Number.CustomButton.Name = "";
-            this.txtConsultationsMember_Number.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtConsultationsMember_Number.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtConsultationsMember_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultationsMember_Number.CustomButton.TabIndex = 1;
             this.txtConsultationsMember_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -664,7 +680,7 @@
             this.txtConsultationsMember_Number.CustomButton.Visible = false;
             this.txtConsultationsMember_Number.Lines = new string[0];
             this.txtConsultationsMember_Number.Location = new System.Drawing.Point(265, 63);
-            this.txtConsultationsMember_Number.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsMember_Number.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsMember_Number.MaxLength = 32767;
             this.txtConsultationsMember_Number.Name = "txtConsultationsMember_Number";
             this.txtConsultationsMember_Number.PasswordChar = '\0';
@@ -742,38 +758,38 @@
             this.dgvConsultations.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConsultations.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvConsultations.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConsultations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConsultations.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConsultations.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvConsultations.EnableHeadersVisualStyles = false;
             this.dgvConsultations.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvConsultations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvConsultations.Location = new System.Drawing.Point(616, 183);
-            this.dgvConsultations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvConsultations.Margin = new System.Windows.Forms.Padding(4);
             this.dgvConsultations.Name = "dgvConsultations";
             this.dgvConsultations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultations.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultations.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvConsultations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvConsultations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsultations.Size = new System.Drawing.Size(724, 578);
@@ -789,10 +805,10 @@
             // 
             // 
             this.txtConsultationsInitials.CustomButton.Image = null;
-            this.txtConsultationsInitials.CustomButton.Location = new System.Drawing.Point(175, 2);
-            this.txtConsultationsInitials.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsInitials.CustomButton.Location = new System.Drawing.Point(131, 2);
+            this.txtConsultationsInitials.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsInitials.CustomButton.Name = "";
-            this.txtConsultationsInitials.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtConsultationsInitials.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txtConsultationsInitials.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultationsInitials.CustomButton.TabIndex = 1;
             this.txtConsultationsInitials.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -800,7 +816,7 @@
             this.txtConsultationsInitials.CustomButton.Visible = false;
             this.txtConsultationsInitials.Lines = new string[0];
             this.txtConsultationsInitials.Location = new System.Drawing.Point(264, 98);
-            this.txtConsultationsInitials.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultationsInitials.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsultationsInitials.MaxLength = 32767;
             this.txtConsultationsInitials.Name = "txtConsultationsInitials";
             this.txtConsultationsInitials.PasswordChar = '\0';
@@ -848,45 +864,43 @@
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Location = new System.Drawing.Point(31, 73);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(556, 656);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             // 
-            // metroComboBox1
+            // pbMic
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 24;
-            this.metroComboBox1.Items.AddRange(new object[] {
-            "=",
-            ">",
-            "<",
-            "null"});
-            this.metroComboBox1.Location = new System.Drawing.Point(270, 28);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(71, 30);
-            this.metroComboBox1.TabIndex = 62;
-            this.metroComboBox1.UseSelectable = true;
+            this.pbMic.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
+            this.pbMic.Location = new System.Drawing.Point(31, 49);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbMic.Name = "pbMic";
+            this.pbMic.Size = new System.Drawing.Size(37, 27);
+            this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMic.TabIndex = 41;
+            this.pbMic.TabStop = false;
+            this.pbMic.Click += new System.EventHandler(this.pbMic_Click);
             // 
             // frmConsultations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1379, 780);
+            this.ClientSize = new System.Drawing.Size(1500, 825);
+            this.Controls.Add(this.pbMic);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvConsultations);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Movable = false;
             this.Name = "frmConsultations";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Consultations";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Consultations_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -894,6 +908,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultations)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -938,5 +953,6 @@
         private MetroFramework.Controls.MetroTextBox txtConsultationsInitials;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private System.Windows.Forms.PictureBox pbMic;
     }
 }

@@ -27,15 +27,7 @@ namespace PschyHealth
             pbMicOff.Hide();
         }
        
-        private void metroTilePanel2_ItemClick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTileItem1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -65,7 +57,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmClients frmClients = new frmClients();
-                frmClients.Show();
+                frmClients.ShowDialog();
             }
         }
 
@@ -217,15 +209,7 @@ namespace PschyHealth
             }
         }
 
-        private void metroTileItem11_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void metroTileItem13_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void pbBack_Click(object sender, EventArgs e)
         {
@@ -345,15 +329,7 @@ namespace PschyHealth
             sRecognize.RecognizeAsyncStop();
         }
 
-        private void metroTileItem12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTileItem4_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void pbSettings_Click_1(object sender, EventArgs e)
         {
@@ -363,10 +339,7 @@ namespace PschyHealth
 
        
 
-        private void toolBtnStaff_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
@@ -378,10 +351,7 @@ namespace PschyHealth
             tbMain.Visible = false;
         }
 
-        private void toolBtnStatements_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void frmMainPage_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -390,6 +360,11 @@ namespace PschyHealth
             dgv.Parent = this;
             cMethods.silentFillDGV(dgv, "Consultations",true);
             cMethods.Archive(dgv, "Consultations", 6);
+        }
+
+        private void metroLabel3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

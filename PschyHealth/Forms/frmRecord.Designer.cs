@@ -68,7 +68,7 @@
             this.mtStopSave.Name = "mtStopSave";
             this.mtStopSave.Size = new System.Drawing.Size(208, 58);
             this.mtStopSave.TabIndex = 5;
-            this.mtStopSave.TileImage = global::PschyHealth.Properties.Resources.saveB;
+           // this.mtStopSave.TileImage = global::PschyHealth.Properties.Resources.saveB;
             this.mtStopSave.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtStopSave.UseSelectable = true;
             this.mtStopSave.UseTileImage = true;

@@ -63,9 +63,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _0b35711f903742a0623698cc9ce7ec65 {
+        internal static System.Drawing.Bitmap Barcode_48px {
             get {
-                object obj = ResourceManager.GetObject("0b35711f903742a0623698cc9ce7ec65", resourceCulture);
+                object obj = ResourceManager.GetObject("Barcode_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1457474659_Password {
+        internal static System.Drawing.Bitmap Calendar_48px {
             get {
-                object obj = ResourceManager.GetObject("1457474659_Password", resourceCulture);
+                object obj = ResourceManager.GetObject("Calendar_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1457474833_Username {
+        internal static System.Drawing.Bitmap Circled_Chevron_Right_48px {
             get {
-                object obj = ResourceManager.GetObject("1457474833_Username", resourceCulture);
+                object obj = ResourceManager.GetObject("Circled_Chevron_Right_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1457886057_Next {
+        internal static System.Drawing.Bitmap Circled_Chevron_Right_48px_11 {
             get {
-                object obj = ResourceManager.GetObject("1457886057_Next", resourceCulture);
+                object obj = ResourceManager.GetObject("Circled_Chevron_Right_48px_11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1469925381_home512x512 {
+        internal static System.Drawing.Bitmap Circled_Chevron_Right_48px_111 {
             get {
-                object obj = ResourceManager.GetObject("1469925381_home512x512", resourceCulture);
+                object obj = ResourceManager.GetObject("Circled_Chevron_Right_48px_111", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470239012_medical_kit {
+        internal static System.Drawing.Bitmap Clinic_48px_1 {
             get {
-                object obj = ResourceManager.GetObject("1470239012_medical-kit", resourceCulture);
+                object obj = ResourceManager.GetObject("Clinic_48px_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470239012_medical_kit1 {
+        internal static System.Drawing.Bitmap Coins_48px {
             get {
-                object obj = ResourceManager.GetObject("1470239012_medical-kit1", resourceCulture);
+                object obj = ResourceManager.GetObject("Coins_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470239325_resolutions_16 {
+        internal static System.Drawing.Bitmap Collaboration_48px {
             get {
-                object obj = ResourceManager.GetObject("1470239325_resolutions-16", resourceCulture);
+                object obj = ResourceManager.GetObject("Collaboration_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470239325_resolutions_161 {
+        internal static System.Drawing.Bitmap Collaboration_48px_11 {
             get {
-                object obj = ResourceManager.GetObject("1470239325_resolutions-161", resourceCulture);
+                object obj = ResourceManager.GetObject("Collaboration_48px_11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470605197_custom_reports {
+        internal static System.Drawing.Bitmap Conference_48px {
             get {
-                object obj = ResourceManager.GetObject("1470605197_custom-reports", resourceCulture);
+                object obj = ResourceManager.GetObject("Conference_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470605314_reports {
+        internal static System.Drawing.Bitmap Connect_Develop_48px {
             get {
-                object obj = ResourceManager.GetObject("1470605314_reports", resourceCulture);
+                object obj = ResourceManager.GetObject("Connect_Develop_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470605335_cmyk_03 {
+        internal static System.Drawing.Bitmap Connection_Status_Off_48px {
             get {
-                object obj = ResourceManager.GetObject("1470605335_cmyk-03", resourceCulture);
+                object obj = ResourceManager.GetObject("Connection_Status_Off_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470605358_text_x_log {
+        internal static System.Drawing.Bitmap Contacts_48px {
             get {
-                object obj = ResourceManager.GetObject("1470605358_text-x-log", resourceCulture);
+                object obj = ResourceManager.GetObject("Contacts_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470605394_bank {
+        internal static System.Drawing.Bitmap Copy_48px {
             get {
-                object obj = ResourceManager.GetObject("1470605394_bank", resourceCulture);
+                object obj = ResourceManager.GetObject("Copy_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470605497_microphone {
+        internal static System.Drawing.Bitmap Copy_48px_1 {
             get {
-                object obj = ResourceManager.GetObject("1470605497_microphone", resourceCulture);
+                object obj = ResourceManager.GetObject("Copy_48px_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470605595_Synchronize {
+        internal static System.Drawing.Bitmap Delete_48px {
             get {
-                object obj = ResourceManager.GetObject("1470605595_Synchronize", resourceCulture);
+                object obj = ResourceManager.GetObject("Delete_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470605616_19 {
+        internal static System.Drawing.Bitmap Document_48px {
             get {
-                object obj = ResourceManager.GetObject("1470605616_19", resourceCulture);
+                object obj = ResourceManager.GetObject("Document_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470605722_help_file {
+        internal static System.Drawing.Bitmap Double_Down_48px_1 {
             get {
-                object obj = ResourceManager.GetObject("1470605722_help-file", resourceCulture);
+                object obj = ResourceManager.GetObject("Double_Down_48px_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470606270_Add_Male_User {
+        internal static System.Drawing.Bitmap For_Beginner_48px {
             get {
-                object obj = ResourceManager.GetObject("1470606270_Add-Male-User", resourceCulture);
+                object obj = ResourceManager.GetObject("For_Beginner_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470606337_user_group_new {
+        internal static System.Drawing.Bitmap Gender_Neutral_User_48px_1 {
             get {
-                object obj = ResourceManager.GetObject("1470606337_user-group-new", resourceCulture);
+                object obj = ResourceManager.GetObject("Gender_Neutral_User_48px_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +263,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470606567_medical_bag {
+        internal static System.Drawing.Bitmap Health_Book_48px {
             get {
-                object obj = ResourceManager.GetObject("1470606567_medical_bag", resourceCulture);
+                object obj = ResourceManager.GetObject("Health_Book_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,149 +273,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1470609465_house_home_real_estate_property_outline_stroke {
+        internal static System.Drawing.Bitmap Hospital_3_48px {
             get {
-                object obj = ResourceManager.GetObject("1470609465_house-home-real_estate-property-outline-stroke", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1470751950_voice_support {
-            get {
-                object obj = ResourceManager.GetObject("1470751950_voice-support", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1470752007_laptop {
-            get {
-                object obj = ResourceManager.GetObject("1470752007_laptop", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1470752183_emblem_art2 {
-            get {
-                object obj = ResourceManager.GetObject("1470752183_emblem-art2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1470752222_emblem_art2 {
-            get {
-                object obj = ResourceManager.GetObject("1470752222_emblem-art2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1470752298_administrator {
-            get {
-                object obj = ResourceManager.GetObject("1470752298_administrator", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _87c34eb1488a3ec90ffddc89340a7572 {
-            get {
-                object obj = ResourceManager.GetObject("87c34eb1488a3ec90ffddc89340a7572", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap back_3 {
-            get {
-                object obj = ResourceManager.GetObject("back-3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Capture {
-            get {
-                object obj = ResourceManager.GetObject("Capture", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Capture1 {
-            get {
-                object obj = ResourceManager.GetObject("Capture1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap chili_golden_hour_gory_103630_1280x800 {
-            get {
-                object obj = ResourceManager.GetObject("chili_golden_hour_gory_103630_1280x800", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap efefefefe {
-            get {
-                object obj = ResourceManager.GetObject("efefefefe", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap email_envelope_letter_mail_message_notification_text__128_1_ {
-            get {
-                object obj = ResourceManager.GetObject("email_envelope_letter_mail_message_notification_text_-128[1]", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap group_1 {
-            get {
-                object obj = ResourceManager.GetObject("group-1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap group_11 {
-            get {
-                object obj = ResourceManager.GetObject("group-11", resourceCulture);
+                object obj = ResourceManager.GetObject("Hospital_3_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -463,9 +323,29 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mail {
+        internal static System.Drawing.Bitmap Information_48px {
             get {
-                object obj = ResourceManager.GetObject("mail", resourceCulture);
+                object obj = ResourceManager.GetObject("Information_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Meeting_48px_1 {
+            get {
+                object obj = ResourceManager.GetObject("Meeting_48px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Message_48px {
+            get {
+                object obj = ResourceManager.GetObject("Message_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -493,9 +373,59 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap motorcyclist {
+        internal static System.Drawing.Bitmap Microphone_48px {
             get {
-                object obj = ResourceManager.GetObject("motorcyclist", resourceCulture);
+                object obj = ResourceManager.GetObject("Microphone_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mind_Map_48px {
+            get {
+                object obj = ResourceManager.GetObject("Mind_Map_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mute_48px {
+            get {
+                object obj = ResourceManager.GetObject("Mute_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap No_Audio_48px {
+            get {
+                object obj = ResourceManager.GetObject("No_Audio_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap No_Microphone_48px {
+            get {
+                object obj = ResourceManager.GetObject("No_Microphone_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Paste_48px1 {
+            get {
+                object obj = ResourceManager.GetObject("Paste_48px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -533,16 +463,6 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap player_record_outline_256 {
-            get {
-                object obj = ResourceManager.GetObject("player_record_outline_256", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap playW {
             get {
                 object obj = ResourceManager.GetObject("playW", resourceCulture);
@@ -553,9 +473,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Record_256 {
+        internal static System.Drawing.Bitmap Plus_48px {
             get {
-                object obj = ResourceManager.GetObject("Record_256", resourceCulture);
+                object obj = ResourceManager.GetObject("Plus_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -563,9 +483,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap refresh1 {
+        internal static System.Drawing.Bitmap Restart_48px {
             get {
-                object obj = ResourceManager.GetObject("refresh1", resourceCulture);
+                object obj = ResourceManager.GetObject("Restart_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -573,9 +493,9 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap saveB {
+        internal static System.Drawing.Bitmap RGB_Circle_1_48px {
             get {
-                object obj = ResourceManager.GetObject("saveB", resourceCulture);
+                object obj = ResourceManager.GetObject("RGB_Circle_1_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -593,6 +513,36 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Settings_48px {
+            get {
+                object obj = ResourceManager.GetObject("Settings_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sleep_Mode_48px {
+            get {
+                object obj = ResourceManager.GetObject("Sleep_Mode_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Speaker_48px {
+            get {
+                object obj = ResourceManager.GetObject("Speaker_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap swat {
             get {
                 object obj = ResourceManager.GetObject("swat", resourceCulture);
@@ -603,9 +553,49 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Swim_Ring_48px {
+            get {
+                object obj = ResourceManager.GetObject("Swim_Ring_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_48px {
+            get {
+                object obj = ResourceManager.GetObject("User_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Voice_Recognition_Scan_48px {
+            get {
+                object obj = ResourceManager.GetObject("Voice_Recognition_Scan_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WDF_653938 {
             get {
                 object obj = ResourceManager.GetObject("WDF_653938", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Webhook_48px {
+            get {
+                object obj = ResourceManager.GetObject("Webhook_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

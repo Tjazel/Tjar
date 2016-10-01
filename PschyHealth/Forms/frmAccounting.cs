@@ -65,7 +65,9 @@ namespace PschyHealth
 
         private void frmAccounting_Load(object sender, EventArgs e)
         {
-
+            ucToolbar uc = new ucToolbar();
+            uc.Dock = DockStyle.Fill;
+            this.Controls.Add(uc);
         }
 
         private void dgvAccount_SelectionChanged_1(object sender, EventArgs e)
@@ -76,6 +78,11 @@ namespace PschyHealth
         private void txtAccSearch_TextChanged_1(object sender, EventArgs e)
         {
             cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
+        }
+
+        private void pbMic_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

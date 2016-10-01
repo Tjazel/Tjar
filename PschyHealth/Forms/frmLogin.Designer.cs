@@ -132,7 +132,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::PschyHealth.Properties.Resources._1457474659_Password;
+    
             this.pictureBox3.Location = new System.Drawing.Point(31, 138);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
@@ -143,7 +143,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::PschyHealth.Properties.Resources._1457474833_Username;
+   
             this.pictureBox2.Location = new System.Drawing.Point(31, 78);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";

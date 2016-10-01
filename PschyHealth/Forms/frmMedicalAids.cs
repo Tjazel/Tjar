@@ -63,12 +63,19 @@ namespace PschyHealth
 
         private void frmMedicalAids_Load(object sender, EventArgs e)
         {
-
+            ucToolbar uc = new ucToolbar();
+            uc.Dock = DockStyle.Fill;
+            this.Controls.Add(uc);
         }
 
         private void dgvMedicalAid_SelectionChanged_1(object sender, EventArgs e)
         {
             cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
+        }
+
+        private void pbMic_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

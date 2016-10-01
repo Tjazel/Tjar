@@ -431,3 +431,4 @@ C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\bin\Debug\DevComponents.DotNetBar2.
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\bin\Debug\DevComponents.DotNetBar.Schedule.xml
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.ucToolbar.resources
