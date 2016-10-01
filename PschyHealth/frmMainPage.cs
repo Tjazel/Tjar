@@ -75,7 +75,7 @@ namespace PschyHealth
             
         }
 
-        private void metroTileItem2_Click(object sender, EventArgs e)
+        private void btnStaff_Click(object sender, EventArgs e)
         {
             bool IsOpen = false;
             FormCollection fc = Application.OpenForms;
