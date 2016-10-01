@@ -29,18 +29,19 @@ namespace PschyHealth
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           /* MetroGrid dgv = new MetroGrid();
-            dgv.Parent = this;
-            cMethods.fillDGV(dgv,"Staff");
-            for (int i = 0; i < dgv.RowCount; i++)
-            {
-                if ((dgv.Rows[i].Cells["Username"].Value.ToString()==mtxb_Username.Text)&&(dgv.Rows[i].Cells["Password"].Value.ToString() == mtxb_Password.Text))
-                {*/
-                    frmMainPage f1 = new frmMainPage();
-                    f1.Show();
-                    this.Hide();
-              /*  }
-            }*/
+            frmMainPage f1 = new frmMainPage();
+            f1.Show();
+            this.Hide();
+            /* MetroGrid dgv = new MetroGrid();
+             dgv.Parent = this;
+             cMethods.fillDGV(dgv,"Staff");
+             for (int i = 0; i < dgv.RowCount; i++)
+             {
+                 if ((dgv.Rows[i].Cells["Username"].Value.ToString()==mtxb_Username.Text)&&(dgv.Rows[i].Cells["Password"].Value.ToString() == mtxb_Password.Text))
+                 {*/
+
+            /*  }
+          }*/
         }
 
         private void metroLink1_Click(object sender, EventArgs e)
