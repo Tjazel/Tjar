@@ -40,7 +40,7 @@ namespace PschyHealth
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
 
-            cMethods.fillDGV(dgvConsultations, "Consultations", txtConsultationsSearch);
+            cMethods.fillDGV(dgvConsultations, "Consultations", cmbConsultCrit);
         }
         public frmConsultations()
         {
@@ -49,8 +49,8 @@ namespace PschyHealth
 
         private void Consultations_Load(object sender, EventArgs e)
         {
-            classStyle _classStyle = new classStyle();
-            _classStyle.changeTheme(this);
+            //classStyle _classStyle = new classStyle();
+            //_classStyle.changeTheme(this);
         }
 
         private void pbBack_Click(object sender, EventArgs e)
@@ -61,12 +61,17 @@ namespace PschyHealth
 
         private void dgvConsultations_SelectionChanged(object sender, EventArgs e)
         {
-            cMethods.fillTextbox(groupBox1, dgvConsultations, "Con", false);
+            
         }
 
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dgvConsultations_SelectionChanged_1(object sender, EventArgs e)
+        {
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Con", false);
         }
     }
 }

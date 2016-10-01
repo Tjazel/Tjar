@@ -88,12 +88,13 @@ namespace PschyHealth
                             recallFilter(dgv, sTable, filter1, filter2);
                         }
                     }
-                    else if (mes == "Incorrect syntax ")
+                    else 
                     {
-
-                        String fil = filter1.Substring(7, filter1.Length - 7);
-
-                        recallFilter(dgv, sTable, " WHERE " + fil, filter2);
+                        DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
+                        if (result == DialogResult.Yes)
+                        {
+                            recallFilter(dgv, sTable, filter1, filter2);
+                        }
                     }
                 }
                 else
@@ -139,7 +140,7 @@ namespace PschyHealth
             {
                 foreach (Control obj in gb.Controls)
                 {
-                    if (obj is MetroTextBox)
+                    if ((obj is MetroTextBox)||(obj is MetroDateTime))
                         extra = "txt" + extra;
                     else if (obj is MetroComboBox)
                         extra = "cmb" + extra;

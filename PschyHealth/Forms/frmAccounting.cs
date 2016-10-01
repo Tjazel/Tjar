@@ -55,7 +55,7 @@ namespace PschyHealth
         private void dgvAccount_SelectionChanged(object sender, EventArgs e)
         {
 
-            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
+            
         }
 
         private void txtAccSearch_TextChanged(object sender, EventArgs e)
@@ -66,6 +66,11 @@ namespace PschyHealth
         private void frmAccounting_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvAccount_SelectionChanged_1(object sender, EventArgs e)
+        {
+            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
         }
     }
 }

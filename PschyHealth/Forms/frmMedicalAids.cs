@@ -53,7 +53,7 @@ namespace PschyHealth
 
         private void dgvMedicalAid_SelectionChanged(object sender, EventArgs e)
         {
-            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
+            
         }
 
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -64,6 +64,11 @@ namespace PschyHealth
         private void frmMedicalAids_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvMedicalAid_SelectionChanged_1(object sender, EventArgs e)
+        {
+            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
         }
     }
 }

@@ -56,7 +56,7 @@ namespace PschyHealth
 
         private void dgvClients_SelectionChanged(object sender, EventArgs e)
         {
-            cMethods.fillTextbox(groupBox1, dgvClients, "Client", false);
+            
         }
 
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -67,6 +67,11 @@ namespace PschyHealth
         private void frmClients_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvClients_SelectionChanged_1(object sender, EventArgs e)
+        {
+            cMethods.fillTextbox(groupBox1, dgvClients, "Client", false);
         }
     }
 }

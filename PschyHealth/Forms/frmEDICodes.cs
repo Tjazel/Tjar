@@ -39,7 +39,7 @@ namespace PschyHealth
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
 
-            cMethods.fillDGV(dgvEDIcodes, "EDIcodes", cmbEDICrit);
+            cMethods.fillDGV(dgvEDICodes, "EDIcodes", cmbEDICrit);
         }
         public frmEDICodes()
         {
@@ -53,12 +53,17 @@ namespace PschyHealth
 
         private void dgvEDIcodes_SelectionChanged(object sender, EventArgs e)
         {
-            cMethods.fillTextbox(groupBox1, dgvEDIcodes, "EDI", false);
+            
         }
 
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dgvEDICodes_SelectionChanged_1(object sender, EventArgs e)
+        {
+            cMethods.fillTextbox(groupBox1, dgvEDICodes, "EDI", false);
         }
     }
 }

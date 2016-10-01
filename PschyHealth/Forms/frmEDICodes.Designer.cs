@@ -45,7 +45,7 @@
             this.metroTextButton5 = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.metroTextButton4 = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.metroTextButton3 = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.dgvEDICodes = new MetroFramework.Controls.MetroGrid();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
@@ -55,7 +55,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.cmbEDICrit = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -63,7 +63,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroTextButton2 = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEDICodes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -399,15 +399,15 @@
             this.metroTextButton3.UseSelectable = true;
             this.metroTextButton3.UseVisualStyleBackColor = true;
             // 
-            // metroGrid1
+            // dgvEDICodes
             // 
-            this.metroGrid1.AllowUserToResizeRows = false;
-            this.metroGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.metroGrid1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvEDICodes.AllowUserToResizeRows = false;
+            this.dgvEDICodes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEDICodes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvEDICodes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dgvEDICodes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEDICodes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvEDICodes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -415,8 +415,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEDICodes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEDICodes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -424,13 +424,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.metroGrid1.EnableHeadersVisualStyles = false;
-            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.metroGrid1.Location = new System.Drawing.Point(360, 147);
-            this.metroGrid1.Name = "metroGrid1";
-            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvEDICodes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEDICodes.EnableHeadersVisualStyles = false;
+            this.dgvEDICodes.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgvEDICodes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dgvEDICodes.Location = new System.Drawing.Point(360, 147);
+            this.dgvEDICodes.Name = "dgvEDICodes";
+            this.dgvEDICodes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -438,14 +438,15 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(645, 477);
-            this.metroGrid1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroGrid1.TabIndex = 37;
-            this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
+            this.dgvEDICodes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvEDICodes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvEDICodes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEDICodes.Size = new System.Drawing.Size(645, 477);
+            this.dgvEDICodes.Style = MetroFramework.MetroColorStyle.Blue;
+            this.dgvEDICodes.TabIndex = 37;
+            this.dgvEDICodes.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dgvEDICodes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
+            this.dgvEDICodes.SelectionChanged += new System.EventHandler(this.dgvEDICodes_SelectionChanged_1);
             // 
             // metroTextBox1
             // 
@@ -544,7 +545,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.metroComboBox1);
+            this.groupBox3.Controls.Add(this.cmbEDICrit);
             this.groupBox3.Controls.Add(this.metroTextBox17);
             this.groupBox3.Controls.Add(this.metroLabel18);
             this.groupBox3.Controls.Add(this.metroLabel17);
@@ -555,23 +556,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search EDI Functions";
             // 
-            // metroComboBox1
+            // cmbEDICrit
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Items.AddRange(new object[] {
+            this.cmbEDICrit.FormattingEnabled = true;
+            this.cmbEDICrit.ItemHeight = 23;
+            this.cmbEDICrit.Items.AddRange(new object[] {
             "Transaction Number",
             "Account",
             "Surname",
             "Name",
             "Member Number",
             "QEDI Number"});
-            this.metroComboBox1.Location = new System.Drawing.Point(78, 23);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(141, 29);
-            this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroComboBox1.TabIndex = 3;
-            this.metroComboBox1.UseSelectable = true;
+            this.cmbEDICrit.Location = new System.Drawing.Point(78, 23);
+            this.cmbEDICrit.Name = "cmbEDICrit";
+            this.cmbEDICrit.Size = new System.Drawing.Size(141, 29);
+            this.cmbEDICrit.Style = MetroFramework.MetroColorStyle.Blue;
+            this.cmbEDICrit.TabIndex = 3;
+            this.cmbEDICrit.UseSelectable = true;
             // 
             // metroLabel5
             // 
@@ -665,7 +666,7 @@
             this.Controls.Add(this.metroTextButton5);
             this.Controls.Add(this.metroTextButton4);
             this.Controls.Add(this.metroTextButton3);
-            this.Controls.Add(this.metroGrid1);
+            this.Controls.Add(this.dgvEDICodes);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.metroTextButton2);
@@ -676,7 +677,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "EDI Codes";
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEDICodes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -702,7 +703,7 @@
         private MetroFramework.Controls.MetroTextBox.MetroTextButton metroTextButton5;
         private MetroFramework.Controls.MetroTextBox.MetroTextButton metroTextButton4;
         private MetroFramework.Controls.MetroTextBox.MetroTextButton metroTextButton3;
-        private MetroFramework.Controls.MetroGrid metroGrid1;
+        private MetroFramework.Controls.MetroGrid dgvEDICodes;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel9;
@@ -712,7 +713,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.GroupBox groupBox3;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox cmbEDICrit;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel3;

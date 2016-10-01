@@ -417,3 +417,8 @@ C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.pnlSettings2.
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.pnlVoiceCommand.resources
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Johann\Source\Repos\Tjar3\PschyHealth\bin\Debug\PschyHealth.exe
+C:\Users\Johann\Source\Repos\Tjar3\PschyHealth\bin\Debug\PschyHealth.pdb
+C:\Users\Johann\Source\Repos\Tjar3\PschyHealth\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Johann\Source\Repos\Tjar3\PschyHealth\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Johann\Source\Repos\Tjar3\PschyHealth\bin\Debug\DevComponents.DotNetBar2.xml

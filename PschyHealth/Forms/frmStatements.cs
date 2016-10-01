@@ -39,7 +39,7 @@ namespace PschyHealth
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
 
-            cMethods.fillDGV(dgvStatements, "Statements", cmbCrit);
+            cMethods.fillDGV(dgvStatements, "Statements", cmbStatCrit);
         }
         public frmStatements()
         {
@@ -52,6 +52,11 @@ namespace PschyHealth
         }
 
         private void dgvStatements_SelectionChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgvStatements_SelectionChanged_1(object sender, EventArgs e)
         {
             cMethods.fillTextbox(groupBox1, dgvStatements, "Stat", false);
         }

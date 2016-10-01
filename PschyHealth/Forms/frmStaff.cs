@@ -41,7 +41,7 @@ namespace PschyHealth
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
 
-            cMethods.fillDGV(dgvStaff, "Staff", cmbCrit);
+            cMethods.fillDGV(dgvStaff, "Staff", cmbStaffCrit);
         }
         public frmStaff()
         {
@@ -61,6 +61,11 @@ namespace PschyHealth
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dgvStaff_SelectionChanged_1(object sender, EventArgs e)
+        {
+            cMethods.fillTextbox(groupBox1, dgvStaff, "Staff", false);
         }
     }
 }
