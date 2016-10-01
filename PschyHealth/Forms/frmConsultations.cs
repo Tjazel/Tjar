@@ -73,5 +73,10 @@ namespace PschyHealth
         {
             cMethods.fillTextbox(groupBox1, dgvConsultations, "Con", false);
         }
+
+        private void txtConsultationsSearch_TextChanged(object sender, EventArgs e)
+        {
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Consultations", false);
+        }
     }
 }

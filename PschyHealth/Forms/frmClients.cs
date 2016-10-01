@@ -73,5 +73,10 @@ namespace PschyHealth
         {
             cMethods.fillTextbox(groupBox1, dgvClients, "Client", false);
         }
+
+        private void txtClientsSearch_TextChanged(object sender, EventArgs e)
+        {
+            cMethods.filterDGV(dgvClients, "Clients", " WHERE " + cmbClientCriteria.Text + " LIKE '%"+txtClientsSearch.Text+"%'","");
+        }
     }
 }
