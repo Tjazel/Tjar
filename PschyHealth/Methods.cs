@@ -27,13 +27,13 @@ namespace PschyHealth
         //The first fillDGV method is used to simply fill the metro grid with no extra operations.
         public void fillDGV(MetroGrid dgv, String sTable)
         {
-            filterDGV(dgv, sTable, "", "");                                                       //The method calls the filterDGV, but with empty paramaters to only fill the metro grid
+            filterDGV(dgv, sTable, "");                                                       //The method calls the filterDGV, but with empty paramaters to only fill the metro grid
         }
 
         //The second fillDGV method does not only fill the metrogrid, but also reads the coulumn names directly into a metroComboBox that is used when filtered.
         public void fillDGV(MetroGrid dgv, String sTable, MetroComboBox cmb)
         {
-            filterDGV(dgv, sTable, "", "");                                                       //The addition of a metroComboBox will ensure that the combobox is filled to be used in filters
+            filterDGV(dgv, sTable, "");                                                       //The addition of a metroComboBox will ensure that the combobox is filled to be used in filters
             fillCMB(cmb, dgv);
         }
 
@@ -42,9 +42,9 @@ namespace PschyHealth
 
         public void silentFillDGV(MetroGrid dgv, String sTable, Boolean silent)
         {
-            silentFillDGV(dgv,sTable,"","",true);
+            silentFillDGV(dgv,sTable,"",true);
         }
-        public void silentFillDGV(MetroGrid dgv, String sTable, String filter1, String filter2, Boolean silent)
+        public void silentFillDGV(MetroGrid dgv, String sTable, String filter, Boolean silent)
         {
             try
             {
@@ -55,7 +55,7 @@ namespace PschyHealth
                 "Data Source = jarvisdevelopment.database.windows.net; Initial Catalog = JarvisDev; User ID = RuanJarvis; Password = Claassen93";
 
                 // Create a new data adapter based on the specified query.
-                dataAdapter = new SqlDataAdapter("SELECT * FROM " + sTable + filter1 + filter2, connectionString);
+                dataAdapter = new SqlDataAdapter("SELECT * FROM " + sTable + filter, connectionString);
 
                 // Create a command builder to generate SQL update, insert, and
                 // delete commands based on selectCommand. These are used to
@@ -85,7 +85,7 @@ namespace PschyHealth
                         if (result == DialogResult.Yes)
                         {
                             Thread.Sleep(5000);
-                            recallFilter(dgv, sTable, filter1, filter2);
+                            recallFilter(dgv, sTable, filter);
                         }
                     }
                     else 
@@ -93,14 +93,14 @@ namespace PschyHealth
                         DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
                         if (result == DialogResult.Yes)
                         {
-                            recallFilter(dgv, sTable, filter1, filter2);
+                            recallFilter(dgv, sTable, filter);
                         }
                     }
                 }
                 else
                 {
                     Thread.Sleep(5000);
-                    recallFilter(dgv, sTable, filter1, filter2);
+                    recallFilter(dgv, sTable, filter);
                 }
                 
 
@@ -110,19 +110,19 @@ namespace PschyHealth
                 DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    recallFilter(dgv, sTable, filter1, filter2);
+                    recallFilter(dgv, sTable, filter);
                 }
             }
         }
 
-        public void filterDGV(MetroGrid dgv, String sTable, String filter1, String filter2)
+        public void filterDGV(MetroGrid dgv, String sTable, String filter)
         {
-            silentFillDGV(dgv, sTable, filter1, filter2, false);
+            silentFillDGV(dgv, sTable, filter, false);
         }
 
-        private void recallFilter(MetroGrid dgv, String sTable, String filter1, String filter2)
+        private void recallFilter(MetroGrid dgv, String sTable, String filter)
         {
-            filterDGV(dgv, sTable, filter1, filter2);
+            filterDGV(dgv, sTable, filter);
         }
 
 
@@ -217,6 +217,11 @@ namespace PschyHealth
             }
             WriteFile(Environment.GetFolderPath(
                     Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + table + @"Archive\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString(), arch);
+        }
+
+        public void filtercmbChange(MetroGrid dgv, String sTable, String filter)
+        {
+            
         }
     }
 }

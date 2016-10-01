@@ -72,6 +72,20 @@ namespace PschyHealth
         private void Form1_Load(object sender, EventArgs e)
         {
             pbMicOff.Hide();
+
+            String path = Environment.GetFolderPath(
+            Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
+            cMethods.CheckFolder(path);
+            cMethods.CheckFolder(path + @"\Archive");
+            cMethods.CheckFolder(path + @"\Log");
+            cMethods.CheckFolder(path + @"\Statements");
+            cMethods.CheckFolder(path + @"\Archive\LogArchive");
+            cMethods.CheckFolder(path + @"\Archive\StatementsArchive");
+            cMethods.CheckFolder(path + @"\Archive\ClientArchive");
+            cMethods.CheckFolder(path + @"\Archive\StaffArchive");
+            cMethods.CheckFolder(path + @"\Archive\AccountingArchive");
+            cMethods.CheckFolder(path + @"\Archive\ConsultationsArchive");
+            cMethods.CheckFile(path + @"\Log\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString()); ;
             
         }
 
@@ -115,6 +129,7 @@ namespace PschyHealth
                 frmAccounting frmAccounting = new frmAccounting();
                 frmAccounting.Show();
             }
+
 
         }
 

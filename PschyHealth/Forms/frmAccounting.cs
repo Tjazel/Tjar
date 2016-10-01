@@ -60,7 +60,7 @@ namespace PschyHealth
 
         private void txtAccSearch_TextChanged(object sender, EventArgs e)
         {
-            cMethods.filterDGV(dgvAccount, "Accounting", " WHERE " + cmbAccCriteria.Text, " LIKE '%" + txtAccSearch.Text + "%'");
+            cMethods.filterDGV(dgvAccount, "Accounting", " WHERE " + cmbAccCriteria.Text + " LIKE '%" + txtAccSearch.Text + "%'");
         }
 
         private void frmAccounting_Load(object sender, EventArgs e)

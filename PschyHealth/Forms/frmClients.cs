@@ -16,6 +16,8 @@ namespace PschyHealth
     public partial class frmClients : MetroForm
 
     {
+
+        String criteria;
         //Constants
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -76,7 +78,28 @@ namespace PschyHealth
 
         private void txtClientsSearch_TextChanged(object sender, EventArgs e)
         {
-            cMethods.filterDGV(dgvClients, "Clients", " WHERE " + cmbClientCriteria.Text + " LIKE '%"+txtClientsSearch.Text+"%'","");
+            cMethods.filterDGV(dgvClients, "Clients", criteria);
+        }
+
+        private void cmbClientCriteria_TextChanged(object sender, EventArgs e)
+        {
+            if (cmbClientCriteria.Text != "")
+            {
+                txtClientsSearch.Enabled = true;
+                try
+                {
+                    criteria = " WHERE " + cmbClientCriteria.Text + " LIKE '%" + txtClientsSearch.Text + "%'";
+                    cMethods.filterDGV(dgvClients, "Clients", " WHERE " + cmbClientCriteria.Text + " LIKE '%" + txtClientsSearch.Text + "%'");
+                    cmbClientSymbol.Hide();
+                }
+                catch
+                {
+                    cmbClientSymbol.Show();
+                    criteria = " WHERE " + cmbClientCriteria.Text + " " + cmbClientSymbol + " " + txtClientsSearch.Text;
+                }
+            }
+            else
+                txtClientsSearch.Enabled = false;
         }
     }
 }
