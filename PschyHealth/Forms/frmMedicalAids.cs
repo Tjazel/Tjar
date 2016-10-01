@@ -60,5 +60,10 @@ namespace PschyHealth
         {
 
         }
+
+        private void frmMedicalAids_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

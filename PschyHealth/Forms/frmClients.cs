@@ -63,5 +63,10 @@ namespace PschyHealth
         {
 
         }
+
+        private void frmClients_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
