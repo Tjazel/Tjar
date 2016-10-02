@@ -50,6 +50,9 @@ namespace PschyHealth
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
         }
 
-
+        private void pbMic_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
+    }
 }

@@ -273,31 +273,6 @@ namespace PschyHealth
 
         private void pbMic_Click(object sender, EventArgs e)
         {
-            
-
-            SpeechSynthesizer sSynth = new SpeechSynthesizer();
-            PromptBuilder pBuilder = new PromptBuilder();
-
-
-            Choices sList = new Choices();
-            sList.Add(new String[] { "Clients", "Staff", "Statements", "Medical Aids", "Consultation", "Settings" });
-            Grammar gr = new Grammar(new GrammarBuilder(sList));
-
-
-
-            try
-            {
-                sRecognize.RequestRecognizerUpdate();
-                sRecognize.LoadGrammar(gr);
-                sRecognize.SpeechRecognized += sRecognize_speechRecognized;
-                sRecognize.SetInputToDefaultAudioDevice();
-                sRecognize.RecognizeAsync(RecognizeMode.Multiple);
-                sRecognize.Recognize();
-            }
-            catch
-            {
-                return;
-            }
 
         }
 
@@ -486,6 +461,16 @@ namespace PschyHealth
         private void btnDateAndTime_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroTileItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbPersonalize_Click(object sender, EventArgs e)
+        {
+            ctxPersonalize.Show(pbPersonalize, 0, pbPersonalize.Height);
         }
     }
 
