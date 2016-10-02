@@ -476,3 +476,6 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.cs
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.frmAddressBook.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.frmToDoList.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.frmSettings.resources
+C:\Users\Johann\Source\Repos\TjarFin\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Johann\Source\Repos\TjarFin\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Johann\Source\Repos\TjarFin\PschyHealth\obj\Debug\PschyHealth.pdb
