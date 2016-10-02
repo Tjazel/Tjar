@@ -116,10 +116,9 @@
             this.metroTilePanel1.EnableDragDrop = true;
             this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.itemContainer1});
-            this.metroTilePanel1.Location = new System.Drawing.Point(39, 78);
-            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTilePanel1.Location = new System.Drawing.Point(29, 63);
             this.metroTilePanel1.Name = "metroTilePanel1";
-            this.metroTilePanel1.Size = new System.Drawing.Size(945, 748);
+            this.metroTilePanel1.Size = new System.Drawing.Size(709, 608);
             this.metroTilePanel1.TabIndex = 30;
             this.metroTilePanel1.Text = "metroTilePanel1";
             this.metroTilePanel1.ItemClick += new System.EventHandler(this.metroTilePanel1_ItemClick);
@@ -346,12 +345,11 @@
             this.calendarView1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.calendarView1.ContainerControlProcessDialogKey = true;
             this.calendarView1.HighlightCurrentDay = true;
-            this.calendarView1.Location = new System.Drawing.Point(1100, 78);
-            this.calendarView1.Margin = new System.Windows.Forms.Padding(4);
+            this.calendarView1.Location = new System.Drawing.Point(784, 63);
             this.calendarView1.MultiUserTabHeight = 19;
             this.calendarView1.Name = "calendarView1";
             this.calendarView1.ShowOnlyWorkDayHours = true;
-            this.calendarView1.Size = new System.Drawing.Size(501, 667);
+            this.calendarView1.Size = new System.Drawing.Size(376, 542);
             this.calendarView1.TabIndex = 31;
             this.calendarView1.Text = "calendarView1";
             this.calendarView1.TimeIndicator.BorderColor = System.Drawing.Color.Empty;
@@ -438,14 +436,12 @@
             // 
             // frmMainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1712, 772);
+            this.ClientSize = new System.Drawing.Size(1213, 726);
             this.Controls.Add(this.calendarView1);
             this.Controls.Add(this.metroTilePanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainPage";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
