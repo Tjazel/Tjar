@@ -77,5 +77,20 @@ namespace PschyHealth
             uc.Dock = DockStyle.Fill;
             this.Controls.Add(uc);
         }
+
+        private void cmbStatCrit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            metroTextBox17.Clear();
+            metroComboBox1.Text = "";
+            if (cmbStatCrit.Text != "")
+            {
+                metroTextBox17.Enabled = true;
+            }
+            else
+            {
+                metroTextBox17.Enabled = false;
+                metroTextBox17.Text = "";
+            }
+        }
     }
 }
