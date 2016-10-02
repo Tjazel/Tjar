@@ -100,6 +100,7 @@ namespace PschyHealth
                 frmStaff frmStaff = new frmStaff();
                 frmStaff.Show();
             }
+
         }
 
         private void metroTileItem3_Click(object sender, EventArgs e)
@@ -369,6 +370,77 @@ namespace PschyHealth
 
         private void btnStaff_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void toolBtnStaff_Click(object sender, EventArgs e)
+        {
+
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmStaff")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmStaff frmStaff = new frmStaff();
+                frmStaff.Show();
+            }
+        }
+
+        private void toolBtnStaff_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_StaffNew_Click(object sender, EventArgs e)
+        {
+
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmStaff")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmStaff frmStaff = new frmStaff();
+                frmStaff.Show();
+            }
+        }
+
+        private void btnAccounting_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmAccounting")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmAccounting frmAccounting = new frmAccounting();
+                frmAccounting.Show();
+            }
 
         }
     }
