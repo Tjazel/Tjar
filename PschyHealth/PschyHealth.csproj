@@ -69,10 +69,10 @@
     <Compile Include="Forms\frmAccounting.Designer.cs">
       <DependentUpon>frmAccounting.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddressBook.cs">
+    <Compile Include="Forms\frmAddressBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddressBook.Designer.cs">
+    <Compile Include="Forms\frmAddressBook.Designer.cs">
       <DependentUpon>frmAddressBook.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMainPage.cs">
@@ -146,6 +146,12 @@
     </Compile>
     <Compile Include="Forms\frmToDoList.Designer.cs">
       <DependentUpon>frmToDoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Methods.cs" />
     <Compile Include="Panels\pnlClients.cs">
@@ -262,7 +268,7 @@
     <EmbeddedResource Include="Forms\frmAccounting.resx">
       <DependentUpon>frmAccounting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddressBook.resx">
+    <EmbeddedResource Include="Forms\frmAddressBook.resx">
       <DependentUpon>frmAddressBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainPage.resx">
@@ -300,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmToDoList.resx">
       <DependentUpon>frmToDoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\pnlClients.resx">
       <DependentUpon>pnlClients.cs</DependentUpon>
@@ -722,6 +731,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\motorcyclist1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\87c34eb1488a3ec90ffddc89340a75721.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -596,6 +596,7 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Name = "frmToDoList";
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "To Do List";
             this.Load += new System.EventHandler(this.frmToDoList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();

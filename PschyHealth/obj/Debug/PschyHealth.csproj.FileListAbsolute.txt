@@ -473,3 +473,6 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.pn
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.ucToolbar.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.frmAddressBook.resources
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.frmToDoList.resources
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.frmSettings.resources
