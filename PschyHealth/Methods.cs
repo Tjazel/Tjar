@@ -76,7 +76,7 @@ namespace PschyHealth
             {
 
                 String mes = e.Message.Substring(0, 17);
-                //MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message);
                 if (!silent)
                 {
                     if (mes == "A network-related")
