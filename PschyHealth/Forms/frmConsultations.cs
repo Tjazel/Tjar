@@ -32,6 +32,7 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 
+            /*
             //Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
             int HeightofMain = Application.OpenForms["frmMainPage"].Height;
@@ -41,6 +42,7 @@ namespace PschyHealth
             //Set the Location
             this.Location = new Point(LocationMainX, locationMainy + 30);
 
+             */
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
 

@@ -35,10 +35,10 @@
             // pbMic
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
-            this.pbMic.Location = new System.Drawing.Point(22, 62);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(2);
+            this.pbMic.Location = new System.Drawing.Point(29, 76);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbMic.Name = "pbMic";
-            this.pbMic.Size = new System.Drawing.Size(30, 22);
+            this.pbMic.Size = new System.Drawing.Size(40, 27);
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMic.TabIndex = 41;
             this.pbMic.TabStop = false;
@@ -46,12 +46,16 @@
             // 
             // frmSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 643);
+            this.ClientSize = new System.Drawing.Size(279, 874);
             this.Controls.Add(this.pbMic);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(279, 874);
+            this.MinimumSize = new System.Drawing.Size(279, 874);
             this.Movable = false;
             this.Name = "frmSettings";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Settings";

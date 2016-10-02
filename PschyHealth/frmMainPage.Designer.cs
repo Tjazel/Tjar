@@ -32,19 +32,12 @@
             this.metroTileFrame1 = new DevComponents.DotNetBar.Metro.MetroTileFrame();
             this.metroTileFrame2 = new DevComponents.DotNetBar.Metro.MetroTileFrame();
             this.metroTileFrame3 = new DevComponents.DotNetBar.Metro.MetroTileFrame();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTilePanel1 = new DevComponents.DotNetBar.Metro.MetroTilePanel();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
-            this.btnDateAndTime = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnRAMS = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnEDI = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnPayments = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnInfo = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.calendarView1 = new DevComponents.DotNetBar.Schedule.CalendarView();
-            this.ctxUser = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.changeAccountSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.controlContainerItem6 = new DevComponents.DotNetBar.ControlContainerItem();
@@ -53,31 +46,9 @@
             this.controlContainerItem3 = new DevComponents.DotNetBar.ControlContainerItem();
             this.controlContainerItem2 = new DevComponents.DotNetBar.ControlContainerItem();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.tbMain = new DevComponents.DotNetBar.Metro.MetroToolbar();
-            this.toolBtnClients = new DevComponents.DotNetBar.ButtonItem();
-            this.toolBtnStaff = new DevComponents.DotNetBar.ButtonItem();
-            this.toolBtnAccounting = new DevComponents.DotNetBar.ButtonItem();
-            this.toolBtnRAMS = new DevComponents.DotNetBar.ButtonItem();
-            this.toolBtnStatements = new DevComponents.DotNetBar.ButtonItem();
-            this.toolBtnMedicalAids = new DevComponents.DotNetBar.ButtonItem();
-            this.toolBtnEDIfunctions = new DevComponents.DotNetBar.ButtonItem();
-            this.toolConsultations = new DevComponents.DotNetBar.ButtonItem();
-            this.toolBtnDiagnosticCodes = new DevComponents.DotNetBar.ButtonItem();
-            this.toolBtnReport = new DevComponents.DotNetBar.ButtonItem();
             this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
-            this.metroToolbar2 = new DevComponents.DotNetBar.Metro.MetroToolbar();
-            this.controlContainerItem10 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.controlContainerItem11 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.controlContainerItem12 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.controlContainerItem13 = new DevComponents.DotNetBar.ControlContainerItem();
             this.Statements = new DevComponents.DotNetBar.RadialMenuItem();
             this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbMic = new System.Windows.Forms.PictureBox();
-            this.pbMicOff = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pbSettings = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btn_StaffNew = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnClients = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnAccounting = new DevComponents.DotNetBar.Metro.MetroTileItem();
@@ -86,15 +57,11 @@
             this.btnConsultations = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnDiagnostic = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnReports = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnStaff = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.ctxUser.SuspendLayout();
-            this.metroToolbar2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMicOff)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.btnDateAndTime = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnArchive = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnEmail = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnNotePad = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnCalender = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.SuspendLayout();
             // 
             // metroTileFrame1
@@ -129,17 +96,6 @@
             this.metroTileFrame3.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroTileFrame3.TileStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // metroLabel3
-            // 
-            this.metroLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(34, 2);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel3.TabIndex = 27;
-            this.metroLabel3.Text = "Login Name";
-            this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
-            // 
             // metroTileItem9
             // 
             this.metroTileItem9.GlobalItem = false;
@@ -163,9 +119,10 @@
             this.metroTilePanel1.EnableDragDrop = true;
             this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.itemContainer1});
-            this.metroTilePanel1.Location = new System.Drawing.Point(29, 63);
+            this.metroTilePanel1.Location = new System.Drawing.Point(39, 78);
+            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTilePanel1.Name = "metroTilePanel1";
-            this.metroTilePanel1.Size = new System.Drawing.Size(709, 608);
+            this.metroTilePanel1.Size = new System.Drawing.Size(1039, 748);
             this.metroTilePanel1.TabIndex = 30;
             this.metroTilePanel1.Text = "metroTilePanel1";
             this.metroTilePanel1.ItemClick += new System.EventHandler(this.metroTilePanel1_ItemClick);
@@ -183,60 +140,39 @@
             this.btn_StaffNew,
             this.btnClients,
             this.btnAccounting,
-            this.btnRAMS,
             this.btnStatements,
-            this.btnDateAndTime,
+            this.btnPayments,
             this.btnMedicalAid,
-            this.btnEDI,
             this.btnConsultations,
             this.btnDiagnostic,
             this.btnInfo,
-            this.btnReports});
+            this.btnReports,
+            this.btnDateAndTime,
+            this.btnArchive,
+            this.btnEmail,
+            this.btnNotePad,
+            this.btnCalender});
             // 
             // 
             // 
             this.itemContainer1.TitleStyle.Class = "MetroTileGroupTitle";
             this.itemContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // btnDateAndTime
+            // btnPayments
             // 
-            this.btnDateAndTime.Name = "btnDateAndTime";
-            this.btnDateAndTime.SymbolColor = System.Drawing.Color.Empty;
-            this.btnDateAndTime.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnDateAndTime.TileSize = new System.Drawing.Size(180, 120);
+            this.btnPayments.Image = global::PschyHealth.Properties.Resources.Receipt_48px_1;
+            this.btnPayments.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPayments.Name = "btnPayments";
+            this.btnPayments.SymbolColor = System.Drawing.Color.Empty;
+            this.btnPayments.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnPayments.TileSize = new System.Drawing.Size(180, 120);
             // 
             // 
             // 
             this.btnDateAndTime.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnDateAndTime.TitleTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDateAndTime.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnRAMS
-            // 
-            this.btnRAMS.Name = "btnRAMS";
-            this.btnRAMS.SymbolColor = System.Drawing.Color.Empty;
-            this.btnRAMS.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnRAMS.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnRAMS.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnRAMS.TitleText = "RAMS";
-            this.btnRAMS.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnEDI
-            // 
-            this.btnEDI.Name = "btnEDI";
-            this.btnEDI.SymbolColor = System.Drawing.Color.Empty;
-            this.btnEDI.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnEDI.TileSize = new System.Drawing.Size(180, 120);
-            // 
-            // 
-            // 
-            this.btnEDI.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnEDI.TitleText = "EDI Codes";
-            this.btnEDI.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEDI.Click += new System.EventHandler(this.metroTileItem8_Click);
+            this.btnPayments.TitleText = "Payments";
+            this.btnPayments.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayments.Click += new System.EventHandler(this.btnDateAndTime_Click);
             // 
             // btnInfo
             // 
@@ -261,46 +197,18 @@
             this.calendarView1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.calendarView1.ContainerControlProcessDialogKey = true;
             this.calendarView1.HighlightCurrentDay = true;
-            this.calendarView1.Location = new System.Drawing.Point(825, 63);
+            this.calendarView1.Location = new System.Drawing.Point(1100, 78);
+            this.calendarView1.Margin = new System.Windows.Forms.Padding(4);
             this.calendarView1.MultiUserTabHeight = 19;
             this.calendarView1.Name = "calendarView1";
             this.calendarView1.ShowOnlyWorkDayHours = true;
-            this.calendarView1.Size = new System.Drawing.Size(376, 542);
+            this.calendarView1.Size = new System.Drawing.Size(501, 667);
             this.calendarView1.TabIndex = 31;
             this.calendarView1.Text = "calendarView1";
             this.calendarView1.TimeIndicator.BorderColor = System.Drawing.Color.Empty;
             this.calendarView1.TimeIndicator.Tag = null;
             this.calendarView1.TimeSlotDuration = 30;
             this.calendarView1.YearViewAppointmentLinkStyle = DevComponents.DotNetBar.Schedule.eYearViewLinkStyle.Style4;
-            // 
-            // ctxUser
-            // 
-            this.ctxUser.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ctxUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.changeAccountSettingToolStripMenuItem,
-            this.lockToolStripMenuItem,
-            this.signOutToolStripMenuItem});
-            this.ctxUser.Name = "ctxUser";
-            this.ctxUser.Size = new System.Drawing.Size(208, 70);
-            // 
-            // changeAccountSettingToolStripMenuItem
-            // 
-            this.changeAccountSettingToolStripMenuItem.Name = "changeAccountSettingToolStripMenuItem";
-            this.changeAccountSettingToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-            this.changeAccountSettingToolStripMenuItem.Text = "Change Account settings";
-            // 
-            // lockToolStripMenuItem
-            // 
-            this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-            this.lockToolStripMenuItem.Text = "Lock";
-            this.lockToolStripMenuItem.Click += new System.EventHandler(this.lockToolStripMenuItem_Click);
-            // 
-            // signOutToolStripMenuItem
-            // 
-            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-            this.signOutToolStripMenuItem.Text = "Sign out";
             // 
             // timer1
             // 
@@ -349,149 +257,6 @@
             this.controlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
             this.controlContainerItem1.Name = "controlContainerItem1";
             // 
-            // tbMain
-            // 
-            this.tbMain.AllowDrop = true;
-            // 
-            // 
-            // 
-            this.tbMain.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tbMain.ContainerControlProcessDialogKey = true;
-            this.tbMain.DragDropSupport = true;
-            this.tbMain.ExpandButtonVisible = false;
-            this.tbMain.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMain.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.toolBtnClients,
-            this.toolBtnStaff,
-            this.toolBtnAccounting,
-            this.toolBtnRAMS,
-            this.toolBtnStatements,
-            this.toolBtnMedicalAids,
-            this.toolBtnEDIfunctions,
-            this.toolConsultations,
-            this.toolBtnDiagnosticCodes,
-            this.toolBtnReport});
-            this.tbMain.ItemSpacing = 5;
-            this.tbMain.Location = new System.Drawing.Point(22, 8);
-            this.tbMain.Margin = new System.Windows.Forms.Padding(2);
-            this.tbMain.Name = "tbMain";
-            this.tbMain.Size = new System.Drawing.Size(735, 25);
-            this.tbMain.TabIndex = 35;
-            this.tbMain.Text = "metroToolbar1";
-            this.tbMain.Visible = false;
-            // 
-            // toolBtnClients
-            // 
-            this.toolBtnClients.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways;
-            this.toolBtnClients.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.toolBtnClients.HotFontBold = true;
-            this.toolBtnClients.HotForeColor = System.Drawing.Color.Black;
-            this.toolBtnClients.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
-            this.toolBtnClients.Name = "toolBtnClients";
-            this.toolBtnClients.Text = "Clients";
-            this.toolBtnClients.Click += new System.EventHandler(this.toolBtnClients_Click);
-            // 
-            // toolBtnStaff
-            // 
-            this.toolBtnStaff.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways;
-            this.toolBtnStaff.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.toolBtnStaff.HotFontBold = true;
-            this.toolBtnStaff.HotForeColor = System.Drawing.Color.Black;
-            this.toolBtnStaff.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
-            this.toolBtnStaff.Name = "toolBtnStaff";
-            this.toolBtnStaff.Text = "Staff";
-            this.toolBtnStaff.Click += new System.EventHandler(this.toolBtnStaff_Click_1);
-            // 
-            // toolBtnAccounting
-            // 
-            this.toolBtnAccounting.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways;
-            this.toolBtnAccounting.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.toolBtnAccounting.HotFontBold = true;
-            this.toolBtnAccounting.HotForeColor = System.Drawing.Color.Black;
-            this.toolBtnAccounting.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
-            this.toolBtnAccounting.Name = "toolBtnAccounting";
-            this.toolBtnAccounting.Text = "Accounting";
-            this.toolBtnAccounting.Click += new System.EventHandler(this.toolBtnAccounting_Click);
-            // 
-            // toolBtnRAMS
-            // 
-            this.toolBtnRAMS.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways;
-            this.toolBtnRAMS.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.toolBtnRAMS.HotFontBold = true;
-            this.toolBtnRAMS.HotForeColor = System.Drawing.Color.Black;
-            this.toolBtnRAMS.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
-            this.toolBtnRAMS.Name = "toolBtnRAMS";
-            this.toolBtnRAMS.Text = "RAMS";
-            this.toolBtnRAMS.Click += new System.EventHandler(this.toolBtnRAMS_Click);
-            // 
-            // toolBtnStatements
-            // 
-            this.toolBtnStatements.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways;
-            this.toolBtnStatements.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.toolBtnStatements.HotFontBold = true;
-            this.toolBtnStatements.HotForeColor = System.Drawing.Color.Black;
-            this.toolBtnStatements.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
-            this.toolBtnStatements.Name = "toolBtnStatements";
-            this.toolBtnStatements.Text = "Statements";
-            this.toolBtnStatements.Click += new System.EventHandler(this.toolBtnStatements_Click);
-            // 
-            // toolBtnMedicalAids
-            // 
-            this.toolBtnMedicalAids.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways;
-            this.toolBtnMedicalAids.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.toolBtnMedicalAids.HotFontBold = true;
-            this.toolBtnMedicalAids.HotForeColor = System.Drawing.Color.Black;
-            this.toolBtnMedicalAids.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
-            this.toolBtnMedicalAids.Name = "toolBtnMedicalAids";
-            this.toolBtnMedicalAids.Text = "Medical Aids";
-            this.toolBtnMedicalAids.Click += new System.EventHandler(this.toolBtnMedicalAids_Click);
-            // 
-            // toolBtnEDIfunctions
-            // 
-            this.toolBtnEDIfunctions.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways;
-            this.toolBtnEDIfunctions.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.toolBtnEDIfunctions.HotFontBold = true;
-            this.toolBtnEDIfunctions.HotForeColor = System.Drawing.Color.Black;
-            this.toolBtnEDIfunctions.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
-            this.toolBtnEDIfunctions.Name = "toolBtnEDIfunctions";
-            this.toolBtnEDIfunctions.Text = "EDI Functions";
-            this.toolBtnEDIfunctions.Click += new System.EventHandler(this.toolBtnEDIfunctions_Click);
-            // 
-            // toolConsultations
-            // 
-            this.toolConsultations.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways;
-            this.toolConsultations.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.toolConsultations.HotFontBold = true;
-            this.toolConsultations.HotForeColor = System.Drawing.Color.Black;
-            this.toolConsultations.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
-            this.toolConsultations.Name = "toolConsultations";
-            this.toolConsultations.Text = "Consultations";
-            this.toolConsultations.Click += new System.EventHandler(this.toolConsultations_Click);
-            // 
-            // toolBtnDiagnosticCodes
-            // 
-            this.toolBtnDiagnosticCodes.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways;
-            this.toolBtnDiagnosticCodes.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.toolBtnDiagnosticCodes.HotFontBold = true;
-            this.toolBtnDiagnosticCodes.HotForeColor = System.Drawing.Color.Black;
-            this.toolBtnDiagnosticCodes.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
-            this.toolBtnDiagnosticCodes.Name = "toolBtnDiagnosticCodes";
-            this.toolBtnDiagnosticCodes.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnStaff});
-            this.toolBtnDiagnosticCodes.Text = "Diagnostic Codes";
-            this.toolBtnDiagnosticCodes.Click += new System.EventHandler(this.toolBtnDiagnosticCodes_Click);
-            // 
-            // toolBtnReport
-            // 
-            this.toolBtnReport.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways;
-            this.toolBtnReport.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
-            this.toolBtnReport.HotFontBold = true;
-            this.toolBtnReport.HotForeColor = System.Drawing.Color.Black;
-            this.toolBtnReport.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
-            this.toolBtnReport.Name = "toolBtnReport";
-            this.toolBtnReport.Text = "Reports";
-            this.toolBtnReport.Click += new System.EventHandler(this.toolBtnReport_Click);
-            // 
             // itemContainer2
             // 
             // 
@@ -503,60 +268,6 @@
             // 
             // 
             this.itemContainer2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // metroToolbar2
-            // 
-            // 
-            // 
-            // 
-            this.metroToolbar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroToolbar2.ContainerControlProcessDialogKey = true;
-            this.metroToolbar2.Controls.Add(this.pictureBox2);
-            this.metroToolbar2.Controls.Add(this.metroLabel3);
-            this.metroToolbar2.Controls.Add(this.pbSettings);
-            this.metroToolbar2.Controls.Add(this.pictureBox3);
-            this.metroToolbar2.DragDropSupport = true;
-            this.metroToolbar2.ExpandButtonVisible = false;
-            this.metroToolbar2.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroToolbar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.controlContainerItem10,
-            this.controlContainerItem11,
-            this.controlContainerItem12,
-            this.controlContainerItem13});
-            this.metroToolbar2.Location = new System.Drawing.Point(915, 8);
-            this.metroToolbar2.Margin = new System.Windows.Forms.Padding(2);
-            this.metroToolbar2.Name = "metroToolbar2";
-            this.metroToolbar2.Size = new System.Drawing.Size(192, 24);
-            this.metroToolbar2.TabIndex = 36;
-            this.metroToolbar2.Text = "metroToolbar2";
-            // 
-            // controlContainerItem10
-            // 
-            this.controlContainerItem10.AllowItemResize = false;
-            this.controlContainerItem10.Control = this.pictureBox2;
-            this.controlContainerItem10.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.controlContainerItem10.Name = "controlContainerItem10";
-            // 
-            // controlContainerItem11
-            // 
-            this.controlContainerItem11.AllowItemResize = false;
-            this.controlContainerItem11.Control = this.metroLabel3;
-            this.controlContainerItem11.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.controlContainerItem11.Name = "controlContainerItem11";
-            // 
-            // controlContainerItem12
-            // 
-            this.controlContainerItem12.AllowItemResize = false;
-            this.controlContainerItem12.Control = this.pbSettings;
-            this.controlContainerItem12.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.controlContainerItem12.Name = "controlContainerItem12";
-            // 
-            // controlContainerItem13
-            // 
-            this.controlContainerItem13.AllowItemResize = false;
-            this.controlContainerItem13.Control = this.pictureBox3;
-            this.controlContainerItem13.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.controlContainerItem13.Name = "controlContainerItem13";
             // 
             // Statements
             // 
@@ -576,86 +287,13 @@
             this.metroTileItem1.TitleTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTileItem1.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PschyHealth.Properties.Resources.Double_Down_48px_1;
-            this.pictureBox1.Location = new System.Drawing.Point(860, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
-            // 
-            // pbMic
-            // 
-            this.pbMic.Image = global::PschyHealth.Properties.Resources.Microphone_48px;
-            this.pbMic.Location = new System.Drawing.Point(825, 8);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(2);
-            this.pbMic.Name = "pbMic";
-            this.pbMic.Size = new System.Drawing.Size(28, 22);
-            this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMic.TabIndex = 32;
-            this.pbMic.TabStop = false;
-            this.pbMic.Click += new System.EventHandler(this.pbMic_Click);
-            // 
-            // pbMicOff
-            // 
-            this.pbMicOff.Image = global::PschyHealth.Properties.Resources.micOff;
-            this.pbMicOff.Location = new System.Drawing.Point(825, 8);
-            this.pbMicOff.Margin = new System.Windows.Forms.Padding(2);
-            this.pbMicOff.Name = "pbMicOff";
-            this.pbMicOff.Size = new System.Drawing.Size(28, 22);
-            this.pbMicOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMicOff.TabIndex = 33;
-            this.pbMicOff.TabStop = false;
-            this.pbMicOff.Click += new System.EventHandler(this.pbMicOff_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::PschyHealth.Properties.Resources.Gender_Neutral_User_48px_1;
-            this.pictureBox2.Location = new System.Drawing.Point(2, 1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 26;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pbSettings
-            // 
-            this.pbSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbSettings.Image = global::PschyHealth.Properties.Resources.Settings_48px;
-            this.pbSettings.Location = new System.Drawing.Point(119, 1);
-            this.pbSettings.Name = "pbSettings";
-            this.pbSettings.Size = new System.Drawing.Size(37, 22);
-            this.pbSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbSettings.TabIndex = 34;
-            this.pbSettings.TabStop = false;
-            this.pbSettings.Click += new System.EventHandler(this.pbSettings_Click_1);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::PschyHealth.Properties.Resources.Information_48px;
-            this.pictureBox3.Location = new System.Drawing.Point(160, 1);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 22);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 28;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
             // btn_StaffNew
             // 
             this.btn_StaffNew.Image = global::PschyHealth.Properties.Resources.Conference_48px;
             this.btn_StaffNew.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_StaffNew.Name = "btn_StaffNew";
             this.btn_StaffNew.SymbolColor = System.Drawing.Color.Empty;
-            this.btn_StaffNew.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btn_StaffNew.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedViolet;
             this.btn_StaffNew.TileSize = new System.Drawing.Size(180, 120);
             // 
             // 
@@ -688,7 +326,7 @@
             this.btnAccounting.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAccounting.Name = "btnAccounting";
             this.btnAccounting.SymbolColor = System.Drawing.Color.Empty;
-            this.btnAccounting.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnAccounting.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Coffee;
             this.btnAccounting.TileSize = new System.Drawing.Size(220, 120);
             // 
             // 
@@ -720,7 +358,7 @@
             this.btnMedicalAid.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMedicalAid.Name = "btnMedicalAid";
             this.btnMedicalAid.SymbolColor = System.Drawing.Color.Empty;
-            this.btnMedicalAid.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnMedicalAid.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
             this.btnMedicalAid.TileSize = new System.Drawing.Size(220, 120);
             // 
             // 
@@ -767,7 +405,7 @@
             this.btnReports.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReports.Name = "btnReports";
             this.btnReports.SymbolColor = System.Drawing.Color.Empty;
-            this.btnReports.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnReports.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Plum;
             this.btnReports.TileSize = new System.Drawing.Size(180, 120);
             // 
             // 
@@ -776,110 +414,131 @@
             this.btnReports.TitleText = "Reports";
             this.btnReports.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // btnStaff
+            // btnDateAndTime
             // 
-            this.btnStaff.Image = global::PschyHealth.Properties.Resources.Conference_48px;
-            this.btnStaff.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnStaff.Name = "btnStaff";
-            this.btnStaff.SymbolColor = System.Drawing.Color.Empty;
-            this.btnStaff.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnStaff.TileSize = new System.Drawing.Size(180, 120);
-            // 
+            this.btnDateAndTime.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDateAndTime.Name = "btnDateAndTime";
+            this.btnDateAndTime.SymbolColor = System.Drawing.Color.Empty;
+            this.btnDateAndTime.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnDateAndTime.TileSize = new System.Drawing.Size(220, 120);
             // 
             // 
-            this.btnStaff.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnStaff.TitleText = "Staff";
-            this.btnStaff.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click_1);
+            // 
+            this.btnPayments.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnDateAndTime.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnArchive
+            // 
+            this.btnArchive.Image = global::PschyHealth.Properties.Resources.Micro_SD_48px_1;
+            this.btnArchive.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnArchive.Name = "btnArchive";
+            this.btnArchive.SymbolColor = System.Drawing.Color.Empty;
+            this.btnArchive.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnArchive.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnArchive.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnArchive.TitleText = "Archive";
+            this.btnArchive.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
+            // 
+            // btnEmail
+            // 
+            this.btnEmail.Image = global::PschyHealth.Properties.Resources.Message_48px_1;
+            this.btnEmail.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.SymbolColor = System.Drawing.Color.Empty;
+            this.btnEmail.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnEmail.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnEmail.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnEmail.TitleText = "E-mail";
+            this.btnEmail.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnNotePad
+            // 
+            this.btnNotePad.Image = global::PschyHealth.Properties.Resources.Edit_Property_48px_1;
+            this.btnNotePad.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNotePad.Name = "btnNotePad";
+            this.btnNotePad.SymbolColor = System.Drawing.Color.Empty;
+            this.btnNotePad.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnNotePad.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnNotePad.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnNotePad.TitleText = "Note Pad";
+            this.btnNotePad.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnCalender
+            // 
+            this.btnCalender.Image = global::PschyHealth.Properties.Resources.Calendar_48px;
+            this.btnCalender.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCalender.Name = "btnCalender";
+            this.btnCalender.SymbolColor = System.Drawing.Color.Empty;
+            this.btnCalender.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnCalender.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnCalender.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnCalender.TitleText = "Calender";
+            this.btnCalender.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // frmMainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 627);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pbMic);
-            this.Controls.Add(this.pbMicOff);
-            this.Controls.Add(this.metroToolbar2);
-            this.Controls.Add(this.tbMain);
+            this.ClientSize = new System.Drawing.Size(1712, 772);
             this.Controls.Add(this.calendarView1);
             this.Controls.Add(this.metroTilePanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainPage";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SizeChanged += new System.EventHandler(this.frmMainPage_SizeChanged);
-            this.ctxUser.ResumeLayout(false);
-            this.metroToolbar2.ResumeLayout(false);
-            this.metroToolbar2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMicOff)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem9;
         private DevComponents.DotNetBar.Metro.MetroTilePanel metroTilePanel1;
         private DevComponents.DotNetBar.ItemContainer itemContainer1;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnClients;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnAccounting;
-        private DevComponents.DotNetBar.Metro.MetroTileItem btnDateAndTime;
-        private DevComponents.DotNetBar.Metro.MetroTileItem btnRAMS;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnPayments;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnStatements;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnMedicalAid;
-        private DevComponents.DotNetBar.Metro.MetroTileItem btnEDI;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnConsultations;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnDiagnostic;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnInfo;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnReports;
         private DevComponents.DotNetBar.Schedule.CalendarView calendarView1;
-        private System.Windows.Forms.ContextMenuStrip ctxUser;
-        private System.Windows.Forms.ToolStripMenuItem changeAccountSettingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lockToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private DevComponents.DotNetBar.Metro.MetroTileFrame metroTileFrame1;
         private DevComponents.DotNetBar.Metro.MetroTileFrame metroTileFrame2;
         private DevComponents.DotNetBar.Metro.MetroTileFrame metroTileFrame3;
-        private System.Windows.Forms.PictureBox pbMic;
-        private System.Windows.Forms.PictureBox pbMicOff;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem6;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem5;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem4;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem3;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem2;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem1;
-        private System.Windows.Forms.PictureBox pbSettings;
-        private DevComponents.DotNetBar.Metro.MetroToolbar tbMain;
         private DevComponents.DotNetBar.ItemContainer itemContainer2;
-        private DevComponents.DotNetBar.Metro.MetroToolbar metroToolbar2;
-        private DevComponents.DotNetBar.ControlContainerItem controlContainerItem10;
-        private DevComponents.DotNetBar.ControlContainerItem controlContainerItem11;
-        private DevComponents.DotNetBar.ControlContainerItem controlContainerItem12;
-        private DevComponents.DotNetBar.ControlContainerItem controlContainerItem13;
-        private DevComponents.DotNetBar.ButtonItem toolBtnClients;
-        private DevComponents.DotNetBar.ButtonItem toolBtnStaff;
-        private DevComponents.DotNetBar.ButtonItem toolBtnAccounting;
-        private DevComponents.DotNetBar.ButtonItem toolBtnRAMS;
-        private DevComponents.DotNetBar.ButtonItem toolBtnStatements;
-        private DevComponents.DotNetBar.ButtonItem toolBtnMedicalAids;
-        private DevComponents.DotNetBar.ButtonItem toolBtnEDIfunctions;
-        private DevComponents.DotNetBar.ButtonItem toolConsultations;
-        private DevComponents.DotNetBar.ButtonItem toolBtnDiagnosticCodes;
-        private DevComponents.DotNetBar.ButtonItem toolBtnReport;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private DevComponents.DotNetBar.RadialMenuItem Statements;
         private DevComponents.DotNetBar.Metro.MetroTileItem btn_StaffNew;
-        private DevComponents.DotNetBar.Metro.MetroTileItem btnStaff;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem1;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnDateAndTime;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnArchive;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnEmail;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnNotePad;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnCalender;
     }
 }

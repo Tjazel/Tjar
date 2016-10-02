@@ -33,18 +33,18 @@ namespace PschyHealth
             this.Controls.Add(uc);
 
             //Load the Form At Position of Main Form
-            int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
-            int HeightofMain = Application.OpenForms["frmMainPage"].Height;
-            int LocationMainX = Application.OpenForms["frmMainPage"].Location.X;
-            int locationMainy = Application.OpenForms["frmMainPage"].Location.Y;
+           // int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
+           // int HeightofMain = Application.OpenForms["frmMainPage"].Height;
+           // int LocationMainX = Application.OpenForms["frmMainPage"].Location.X;
+           // int locationMainy = Application.OpenForms["frmMainPage"].Location.Y;
 
             //Set the Location
-            this.Location = new Point(LocationMainX, locationMainy + 30);
+          //  this.Location = new Point(LocationMainX, locationMainy + 30);
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
 
-            cMethods.fillDGV(dgvAccount, "Accounting", cmbAccCriteria);
+           // cMethods.fillDGV(dgvAccount, "Accounting", cmbAccCriteria);
         }
         public frmAccounting()
         {
