@@ -63,6 +63,16 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0b35711f903742a0623698cc9ce7ec65 {
+            get {
+                object obj = ResourceManager.GetObject("0b35711f903742a0623698cc9ce7ec65", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1457474659_Password {
             get {
                 object obj = ResourceManager.GetObject("1457474659_Password", resourceCulture);
@@ -256,6 +266,16 @@ namespace PschyHealth.Properties {
         internal static System.Drawing.Bitmap Double_Down_48px_1 {
             get {
                 object obj = ResourceManager.GetObject("Double_Down_48px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap email_envelope_letter_mail_message_notification_text__128_1_ {
+            get {
+                object obj = ResourceManager.GetObject("email_envelope_letter_mail_message_notification_text_-128[1]", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

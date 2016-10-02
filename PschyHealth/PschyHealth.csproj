@@ -693,6 +693,12 @@
   <ItemGroup>
     <None Include="Resources\1457474833_Username1.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0b35711f903742a0623698cc9ce7ec651.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_envelope_letter_mail_message_notification_text_-128[1]1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
