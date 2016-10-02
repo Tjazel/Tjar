@@ -94,9 +94,10 @@
             this.ctxUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ctxUser.AutoSize = true;
             this.ctxUser.BackColor = System.Drawing.Color.Transparent;
-            this.ctxUser.Location = new System.Drawing.Point(1038, 13);
+            this.ctxUser.Location = new System.Drawing.Point(1642, 16);
+            this.ctxUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ctxUser.Name = "ctxUser";
-            this.ctxUser.Size = new System.Drawing.Size(81, 19);
+            this.ctxUser.Size = new System.Drawing.Size(85, 20);
             this.ctxUser.TabIndex = 27;
             this.ctxUser.Text = "Login Name";
             this.ctxUser.UseCustomBackColor = true;
@@ -197,11 +198,12 @@
             // tbMain
             // 
             this.tbMain.AllowDrop = true;
+            this.tbMain.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.tbMain.BackgroundStyle.BackColor = System.Drawing.Color.Silver;
-            this.tbMain.BackgroundStyle.BackColor2 = System.Drawing.Color.Silver;
+            this.tbMain.BackgroundStyle.BackColor = System.Drawing.Color.Gainsboro;
+            this.tbMain.BackgroundStyle.BackColor2 = System.Drawing.Color.Gainsboro;
             this.tbMain.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbMain.ContainerControlProcessDialogKey = true;
             this.tbMain.DragDropSupport = true;
@@ -219,10 +221,10 @@
             this.buttonItem6,
             this.buttonItem7});
             this.tbMain.ItemSpacing = 5;
-            this.tbMain.Location = new System.Drawing.Point(23, 5);
-            this.tbMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMain.Location = new System.Drawing.Point(29, 6);
+            this.tbMain.Margin = new System.Windows.Forms.Padding(2);
             this.tbMain.Name = "tbMain";
-            this.tbMain.Size = new System.Drawing.Size(859, 25);
+            this.tbMain.Size = new System.Drawing.Size(1152, 29);
             this.tbMain.TabIndex = 44;
             this.tbMain.Text = "metroToolbar1";
             this.tbMain.Visible = false;
@@ -573,35 +575,35 @@
             this.lockToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.contexUser.Name = "contextMenuStrip1";
-            this.contexUser.Size = new System.Drawing.Size(206, 70);
+            this.contexUser.Size = new System.Drawing.Size(240, 76);
             this.contexUser.Opening += new System.ComponentModel.CancelEventHandler(this.contexUser_Opening);
             // 
             // changeAccountSettingsToolStripMenuItem
             // 
             this.changeAccountSettingsToolStripMenuItem.Name = "changeAccountSettingsToolStripMenuItem";
-            this.changeAccountSettingsToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.changeAccountSettingsToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
             this.changeAccountSettingsToolStripMenuItem.Text = "Change account settings";
             // 
             // lockToolStripMenuItem
             // 
             this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.lockToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
             this.lockToolStripMenuItem.Text = "Lock";
             this.lockToolStripMenuItem.Click += new System.EventHandler(this.lockToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
             this.signOutToolStripMenuItem.Text = "Sign out";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PschyHealth.Properties.Resources.Garage_Closed_48px;
-            this.pictureBox4.Location = new System.Drawing.Point(934, 7);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(1512, 9);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(27, 22);
+            this.pictureBox4.Size = new System.Drawing.Size(34, 28);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 43;
             this.pictureBox4.TabStop = false;
@@ -610,9 +612,10 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::PschyHealth.Properties.Resources.Gender_Neutral_User_48px_1;
-            this.pictureBox2.Location = new System.Drawing.Point(1002, 7);
+            this.pictureBox2.Location = new System.Drawing.Point(1596, 9);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 22);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
@@ -621,10 +624,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PschyHealth.Properties.Resources.Double_Down_48px_1;
-            this.pictureBox1.Location = new System.Drawing.Point(887, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(1464, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 22);
+            this.pictureBox1.Size = new System.Drawing.Size(34, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
@@ -633,10 +636,10 @@
             // pbMic
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.Microphone_48px;
-            this.pbMic.Location = new System.Drawing.Point(966, 7);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbMic.Location = new System.Drawing.Point(1552, 9);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(2);
             this.pbMic.Name = "pbMic";
-            this.pbMic.Size = new System.Drawing.Size(30, 22);
+            this.pbMic.Size = new System.Drawing.Size(38, 28);
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMic.TabIndex = 38;
             this.pbMic.TabStop = false;
@@ -645,9 +648,10 @@
             // 
             this.pbSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbSettings.Image = global::PschyHealth.Properties.Resources.Settings_48px;
-            this.pbSettings.Location = new System.Drawing.Point(1154, 7);
+            this.pbSettings.Location = new System.Drawing.Point(1786, 9);
+            this.pbSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbSettings.Name = "pbSettings";
-            this.pbSettings.Size = new System.Drawing.Size(32, 22);
+            this.pbSettings.Size = new System.Drawing.Size(40, 28);
             this.pbSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSettings.TabIndex = 34;
             this.pbSettings.TabStop = false;
@@ -657,9 +661,10 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::PschyHealth.Properties.Resources.Information_48px;
-            this.pictureBox3.Location = new System.Drawing.Point(1124, 7);
+            this.pictureBox3.Location = new System.Drawing.Point(1749, 9);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 22);
+            this.pictureBox3.Size = new System.Drawing.Size(30, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 28;
             this.pictureBox3.TabStop = false;
@@ -669,9 +674,10 @@
             // 
             this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbExit.Image = global::PschyHealth.Properties.Resources.Close_Window_48px;
-            this.pbExit.Location = new System.Drawing.Point(1224, 7);
+            this.pbExit.Location = new System.Drawing.Point(1874, 9);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(23, 22);
+            this.pbExit.Size = new System.Drawing.Size(29, 28);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit.TabIndex = 46;
             this.pbExit.TabStop = false;
@@ -681,9 +687,10 @@
             // 
             this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMinimize.Image = global::PschyHealth.Properties.Resources.Minimize_Window_48px;
-            this.pbMinimize.Location = new System.Drawing.Point(1193, 7);
+            this.pbMinimize.Location = new System.Drawing.Point(1835, 9);
+            this.pbMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbMinimize.Name = "pbMinimize";
-            this.pbMinimize.Size = new System.Drawing.Size(25, 22);
+            this.pbMinimize.Size = new System.Drawing.Size(31, 28);
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMinimize.TabIndex = 47;
             this.pbMinimize.TabStop = false;
@@ -692,11 +699,11 @@
             // ucToolbar
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.pbMinimize);
             this.Controls.Add(this.pbExit);
@@ -708,9 +715,9 @@
             this.Controls.Add(this.pbMic);
             this.Controls.Add(this.pbSettings);
             this.Controls.Add(this.pictureBox3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucToolbar";
-            this.Size = new System.Drawing.Size(1946, 32);
+            this.Size = new System.Drawing.Size(1946, 41);
             this.Load += new System.EventHandler(this.ucToolbar_Load);
             this.contexUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

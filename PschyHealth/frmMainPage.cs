@@ -62,11 +62,11 @@ namespace PschyHealth
             }
         }
 
-       // protected override void OnLoad(EventArgs e)
-       //// {
-          //  ucToolbar uc = new ucToolbar();
-       //     this.Controls.Add(uc);
-       // }
+        protected override void OnLoad(EventArgs e)
+        {
+            ucToolbar uc = new ucToolbar();
+            this.Controls.Add(uc);
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {

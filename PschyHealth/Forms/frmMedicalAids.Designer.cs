@@ -587,7 +587,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1500, 825);
+            this.ClientSize = new System.Drawing.Size(2334, 825);
             this.Controls.Add(this.pbMic);
             this.Controls.Add(this.metroTextBox6);
             this.Controls.Add(this.metroTextBox5);
@@ -610,7 +610,6 @@
             this.Resizable = false;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMedicalAids_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicalAid)).EndInit();
