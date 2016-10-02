@@ -475,3 +475,6 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.uc
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.frmAddressBook.resources
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.frmToDoList.resources
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.frmAddressBook.resources
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.frmToDoList.resources
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar2\PschyHealth\obj\Debug\PschyHealth.frmSettings.resources
