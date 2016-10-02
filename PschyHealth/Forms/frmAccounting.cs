@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MetroFramework.Controls;
 
 namespace PschyHealth
 {
     public partial class frmAccounting : MetroForm
     {
+        Methods cMethods = new Methods();
         //Constants
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -37,15 +39,51 @@ namespace PschyHealth
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+
+            cMethods.fillDGV(dgvAccount, "Accounting", cmbAccCriteria);
         }
         public frmAccounting()
         {
             InitializeComponent();
         }
 
-        private void frmAccounting_Load(object sender, EventArgs e)
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvAccount_SelectionChanged(object sender, EventArgs e)
         {
 
+            
+        }
+
+        private void txtAccSearch_TextChanged(object sender, EventArgs e)
+        {
+            cMethods.filterDGV(dgvAccount, "Accounting", " WHERE " + cmbAccCriteria.Text + " LIKE '%" + txtAccSearch.Text + "%'");
+        }
+
+        private void frmAccounting_Load(object sender, EventArgs e)
+        {
+            ucToolbar uc = new ucToolbar();
+            uc.Dock = DockStyle.Fill;
+            this.Controls.Add(uc);
+        }
+
+        private void dgvAccount_SelectionChanged_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtAccSearch_TextChanged_1(object sender, EventArgs e)
+        {
+            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
+        }
+
+        private void pbMic_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
+

@@ -43,7 +43,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PschyHealth.Properties.Resources._0b35711f903742a0623698cc9ce7ec65;
+           
             this.pictureBox1.Location = new System.Drawing.Point(22, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(313, 283);
@@ -103,7 +103,7 @@
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.DisplayIcon = true;
             this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.metroTextBox1.Icon = global::PschyHealth.Properties.Resources.email_envelope_letter_mail_message_notification_text__128_1_;
+            //this.metroTextBox1.Icon = global::PschyHealth.Properties.Resources.email_envelope_letter_mail_message_notification_text__128_1_;
             this.metroTextBox1.IconRight = true;
             this.metroTextBox1.Lines = new string[0];
             this.metroTextBox1.Location = new System.Drawing.Point(100, 437);
@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PschyHealth.Properties.Resources.Capture;
+          //  this.BackgroundImage = global::PschyHealth.Properties.Resources.Capture;
             this.ClientSize = new System.Drawing.Size(347, 550);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label5);

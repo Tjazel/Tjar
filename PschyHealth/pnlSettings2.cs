@@ -12,6 +12,13 @@ namespace PschyHealth
 {
     public partial class pnlSettings2 : pnlSlider
     {
+        private ucToolbar ucToolbar;
+
+        public pnlSettings2(ucToolbar ucToolbar)
+        {
+            this.ucToolbar = ucToolbar;
+        }
+
         public pnlSettings2(Form owner) : base(owner)
         {
             InitializeComponent();

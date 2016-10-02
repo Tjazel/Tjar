@@ -11,13 +11,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Recognition;
 using System.Speech.Synthesis;
+using MetroFramework.Controls;
 
 namespace PschyHealth
 {
     public partial class frmMainPage : MetroForm
     {
         SpeechRecognitionEngine sRecognize = new SpeechRecognitionEngine();
-       
+        Methods cMethods = new Methods();
 
         public frmMainPage()
         {
@@ -26,15 +27,7 @@ namespace PschyHealth
             pbMicOff.Hide();
         }
        
-        private void metroTilePanel2_ItemClick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTileItem1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -64,17 +57,31 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmClients frmClients = new frmClients();
-                frmClients.Show();
+                frmClients.ShowDialog();
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             pbMicOff.Hide();
+
+            String path = Environment.GetFolderPath(
+            Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
+            cMethods.CheckFolder(path);
+            cMethods.CheckFolder(path + @"\Archive");
+            cMethods.CheckFolder(path + @"\Log");
+            cMethods.CheckFolder(path + @"\Statements");
+            cMethods.CheckFolder(path + @"\Archive\LogArchive");
+            cMethods.CheckFolder(path + @"\Archive\StatementsArchive");
+            cMethods.CheckFolder(path + @"\Archive\ClientArchive");
+            cMethods.CheckFolder(path + @"\Archive\StaffArchive");
+            cMethods.CheckFolder(path + @"\Archive\AccountingArchive");
+            cMethods.CheckFolder(path + @"\Archive\ConsultationsArchive");
+            cMethods.CheckFile(path + @"\Log\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString()); ;
             
         }
 
-        private void metroTileItem2_Click(object sender, EventArgs e)
+        private void btnStaff_Click(object sender, EventArgs e)
         {
             bool IsOpen = false;
             FormCollection fc = Application.OpenForms;
@@ -114,6 +121,7 @@ namespace PschyHealth
                 frmAccounting frmAccounting = new frmAccounting();
                 frmAccounting.Show();
             }
+
 
         }
 
@@ -201,15 +209,7 @@ namespace PschyHealth
             }
         }
 
-        private void metroTileItem11_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void metroTileItem13_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void pbBack_Click(object sender, EventArgs e)
         {
@@ -329,15 +329,7 @@ namespace PschyHealth
             sRecognize.RecognizeAsyncStop();
         }
 
-        private void metroTileItem12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTileItem4_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void pbSettings_Click_1(object sender, EventArgs e)
         {
@@ -347,10 +339,7 @@ namespace PschyHealth
 
        
 
-        private void toolBtnStaff_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
@@ -362,12 +351,23 @@ namespace PschyHealth
             tbMain.Visible = false;
         }
 
-        private void toolBtnStatements_Click(object sender, EventArgs e)
+       
+
+        private void frmMainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            MetroGrid dgv = new MetroGrid();
+            dgv.Parent = this;
+            cMethods.silentFillDGV(dgv, "Consultations",true);
+            cMethods.Archive(dgv, "Consultations", 6);
+        }
+
+        private void metroLabel3_Click(object sender, EventArgs e)
         {
 
         }
     }
 
        
-    }
+}
 

@@ -13,8 +13,8 @@ using System.Runtime.InteropServices;
 namespace PschyHealth
 {
     public partial class frmEDICodes : MetroForm
-
     {
+        Methods cMethods = new Methods();
         //Constants
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -38,15 +38,44 @@ namespace PschyHealth
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+
+            cMethods.fillDGV(dgvEDICodes, "EDIcodes", cmbEDICrit);
         }
         public frmEDICodes()
         {
             InitializeComponent();
         }
 
-        private void frmEDICodes_Load(object sender, EventArgs e)
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvEDIcodes_SelectionChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dgvEDICodes_SelectionChanged_1(object sender, EventArgs e)
+        {
+            cMethods.fillTextbox(groupBox1, dgvEDICodes, "EDI", false);
+        }
+
+        private void pbMic_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmEDICodes_Load(object sender, EventArgs e)
+        {
+            ucToolbar uc = new ucToolbar();
+            uc.Dock = DockStyle.Fill;
+            this.Controls.Add(uc);
         }
     }
 }

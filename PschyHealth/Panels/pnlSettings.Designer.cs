@@ -140,7 +140,7 @@
             // 
             // btnLogActivity
             // 
-            this.btnLogActivity.Image = global::PschyHealth.Properties.Resources._1470605358_text_x_log;
+          //  this.btnLogActivity.Image = global::PschyHealth.Properties.Resources._1470605358_text_x_log;
             this.btnLogActivity.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogActivity.Name = "btnLogActivity";
             this.btnLogActivity.Symbol = "";
@@ -161,7 +161,7 @@
             // 
             // btnPersonalization
             // 
-            this.btnPersonalization.Image = global::PschyHealth.Properties.Resources._1470752183_emblem_art2;
+          //  this.btnPersonalization.Image = global::PschyHealth.Properties.Resources._1470752183_emblem_art2;
             this.btnPersonalization.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPersonalization.Name = "btnPersonalization";
             this.btnPersonalization.Symbol = "";
@@ -182,7 +182,7 @@
             // 
             // btnAbout
             // 
-            this.btnAbout.Image = global::PschyHealth.Properties.Resources._1470605616_19;
+          //  this.btnAbout.Image = global::PschyHealth.Properties.Resources._1470605616_19;
             this.btnAbout.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Symbol = "";
@@ -203,7 +203,7 @@
             // 
             // btnHelp
             // 
-            this.btnHelp.Image = global::PschyHealth.Properties.Resources._1470605722_help_file;
+           // this.btnHelp.Image = global::PschyHealth.Properties.Resources._1470605722_help_file;
             this.btnHelp.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Symbol = "";
@@ -224,7 +224,7 @@
             // 
             // btnBackup
             // 
-            this.btnBackup.Image = global::PschyHealth.Properties.Resources._1470605335_cmyk_03;
+           // this.btnBackup.Image = global::PschyHealth.Properties.Resources._1470605335_cmyk_03;
             this.btnBackup.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Symbol = "";
@@ -245,7 +245,7 @@
             // 
             // btnRecord
             // 
-            this.btnRecord.Image = global::PschyHealth.Properties.Resources._1470605497_microphone;
+          
             this.btnRecord.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRecord.Name = "btnRecord";
             this.btnRecord.Symbol = "";
