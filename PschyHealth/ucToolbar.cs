@@ -175,6 +175,31 @@ namespace PschyHealth
             }
         }
 
+        private void contexUser_Opening(object sender, CancelEventArgs e)
+        {
+            contexUser.Show(pictureBox2, 0, pictureBox3.Height);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            contexUser.Show(pictureBox2, 0, pictureBox3.Height);
+        }
+
+        private void lockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLockScreen frmLockScreen = new frmLockScreen();
+            frmLockScreen.Show();
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pbMinimize_Click(object sender, EventArgs e)
+        {
+            _frmMain.WindowState =FormWindowState.Minimized;
+        }
     }
 }
 

@@ -32,7 +32,6 @@
             this.metroTileFrame1 = new DevComponents.DotNetBar.Metro.MetroTileFrame();
             this.metroTileFrame2 = new DevComponents.DotNetBar.Metro.MetroTileFrame();
             this.metroTileFrame3 = new DevComponents.DotNetBar.Metro.MetroTileFrame();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTilePanel1 = new DevComponents.DotNetBar.Metro.MetroTilePanel();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
@@ -49,10 +48,6 @@
             this.btnInfo = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnReports = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.calendarView1 = new DevComponents.DotNetBar.Schedule.CalendarView();
-            this.ctxUser = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.changeAccountSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.controlContainerItem6 = new DevComponents.DotNetBar.ControlContainerItem();
@@ -62,17 +57,8 @@
             this.controlContainerItem2 = new DevComponents.DotNetBar.ControlContainerItem();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
             this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
-            this.metroToolbar2 = new DevComponents.DotNetBar.Metro.MetroToolbar();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.controlContainerItem10 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.controlContainerItem11 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.controlContainerItem12 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.controlContainerItem13 = new DevComponents.DotNetBar.ControlContainerItem();
             this.Statements = new DevComponents.DotNetBar.RadialMenuItem();
             this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.ctxUser.SuspendLayout();
-            this.metroToolbar2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTileFrame1
@@ -106,18 +92,6 @@
             // 
             this.metroTileFrame3.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroTileFrame3.TileStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(43, 4);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(85, 20);
-            this.metroLabel3.TabIndex = 27;
-            this.metroLabel3.Text = "Login Name";
-            this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
             // 
             // metroTileItem9
             // 
@@ -385,35 +359,6 @@
             this.calendarView1.TimeSlotDuration = 30;
             this.calendarView1.YearViewAppointmentLinkStyle = DevComponents.DotNetBar.Schedule.eYearViewLinkStyle.Style4;
             // 
-            // ctxUser
-            // 
-            this.ctxUser.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ctxUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.changeAccountSettingToolStripMenuItem,
-            this.lockToolStripMenuItem,
-            this.signOutToolStripMenuItem});
-            this.ctxUser.Name = "ctxUser";
-            this.ctxUser.Size = new System.Drawing.Size(242, 76);
-            // 
-            // changeAccountSettingToolStripMenuItem
-            // 
-            this.changeAccountSettingToolStripMenuItem.Name = "changeAccountSettingToolStripMenuItem";
-            this.changeAccountSettingToolStripMenuItem.Size = new System.Drawing.Size(241, 24);
-            this.changeAccountSettingToolStripMenuItem.Text = "Change Account settings";
-            // 
-            // lockToolStripMenuItem
-            // 
-            this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(241, 24);
-            this.lockToolStripMenuItem.Text = "Lock";
-            this.lockToolStripMenuItem.Click += new System.EventHandler(this.lockToolStripMenuItem_Click);
-            // 
-            // signOutToolStripMenuItem
-            // 
-            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(241, 24);
-            this.signOutToolStripMenuItem.Text = "Sign out";
-            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
@@ -473,69 +418,6 @@
             // 
             this.itemContainer2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // metroToolbar2
-            // 
-            // 
-            // 
-            // 
-            this.metroToolbar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroToolbar2.ContainerControlProcessDialogKey = true;
-            this.metroToolbar2.Controls.Add(this.pictureBox2);
-            this.metroToolbar2.Controls.Add(this.metroLabel3);
-            this.metroToolbar2.DragDropSupport = true;
-            this.metroToolbar2.ExpandButtonVisible = false;
-            this.metroToolbar2.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroToolbar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.controlContainerItem10,
-            this.controlContainerItem11,
-            this.controlContainerItem12,
-            this.controlContainerItem13});
-            this.metroToolbar2.Location = new System.Drawing.Point(1220, 10);
-            this.metroToolbar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroToolbar2.Name = "metroToolbar2";
-            this.metroToolbar2.Size = new System.Drawing.Size(256, 29);
-            this.metroToolbar2.TabIndex = 36;
-            this.metroToolbar2.Text = "metroToolbar2";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::PschyHealth.Properties.Resources.Gender_Neutral_User_48px_1;
-            this.pictureBox2.Location = new System.Drawing.Point(2, 1);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 26;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // controlContainerItem10
-            // 
-            this.controlContainerItem10.AllowItemResize = false;
-            this.controlContainerItem10.Control = this.pictureBox2;
-            this.controlContainerItem10.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.controlContainerItem10.Name = "controlContainerItem10";
-            // 
-            // controlContainerItem11
-            // 
-            this.controlContainerItem11.AllowItemResize = false;
-            this.controlContainerItem11.Control = this.metroLabel3;
-            this.controlContainerItem11.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.controlContainerItem11.Name = "controlContainerItem11";
-            // 
-            // controlContainerItem12
-            // 
-            this.controlContainerItem12.AllowItemResize = false;
-            this.controlContainerItem12.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.controlContainerItem12.Name = "controlContainerItem12";
-            // 
-            // controlContainerItem13
-            // 
-            this.controlContainerItem13.AllowItemResize = false;
-            this.controlContainerItem13.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.controlContainerItem13.Name = "controlContainerItem13";
-            // 
             // Statements
             // 
             this.Statements.Name = "Statements";
@@ -559,7 +441,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1712, 772);
-            this.Controls.Add(this.metroToolbar2);
             this.Controls.Add(this.calendarView1);
             this.Controls.Add(this.metroTilePanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -569,17 +450,11 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SizeChanged += new System.EventHandler(this.frmMainPage_SizeChanged);
-            this.ctxUser.ResumeLayout(false);
-            this.metroToolbar2.ResumeLayout(false);
-            this.metroToolbar2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem9;
         private DevComponents.DotNetBar.Metro.MetroTilePanel metroTilePanel1;
         private DevComponents.DotNetBar.ItemContainer itemContainer1;
@@ -595,10 +470,6 @@
         private DevComponents.DotNetBar.Metro.MetroTileItem btnInfo;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnReports;
         private DevComponents.DotNetBar.Schedule.CalendarView calendarView1;
-        private System.Windows.Forms.ContextMenuStrip ctxUser;
-        private System.Windows.Forms.ToolStripMenuItem changeAccountSettingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lockToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private DevComponents.DotNetBar.Metro.MetroTileFrame metroTileFrame1;
@@ -611,11 +482,6 @@
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem2;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem1;
         private DevComponents.DotNetBar.ItemContainer itemContainer2;
-        private DevComponents.DotNetBar.Metro.MetroToolbar metroToolbar2;
-        private DevComponents.DotNetBar.ControlContainerItem controlContainerItem10;
-        private DevComponents.DotNetBar.ControlContainerItem controlContainerItem11;
-        private DevComponents.DotNetBar.ControlContainerItem controlContainerItem12;
-        private DevComponents.DotNetBar.ControlContainerItem controlContainerItem13;
         private DevComponents.DotNetBar.RadialMenuItem Statements;
         private DevComponents.DotNetBar.Metro.MetroTileItem btn_StaffNew;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem1;

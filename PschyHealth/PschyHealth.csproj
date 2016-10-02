@@ -738,6 +738,24 @@
   <ItemGroup>
     <None Include="Resources\Garage Closed_48px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize Window_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Window_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown_48px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

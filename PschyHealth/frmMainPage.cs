@@ -24,15 +24,14 @@ namespace PschyHealth
         {
             InitializeComponent();
             timer1.Start();
-            pbMicOff.Hide();
+            
         }
+
+
        
        
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            ctxUser.Show(pictureBox2, 0, pbSettings.Height);
-        }
+      
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -61,9 +60,17 @@ namespace PschyHealth
             }
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            ucToolbar uc = new ucToolbar();
+            this.Controls.Add(uc);
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            pbMicOff.Hide();
+            ucToolbar uc = new ucToolbar();
+            uc.Dock = DockStyle.Fill;
+            this.Controls.Add(uc);
 
             String path = Environment.GetFolderPath(
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
@@ -264,7 +271,7 @@ namespace PschyHealth
 
         private void pbMic_Click(object sender, EventArgs e)
         {
-            pbMicOff.Show();
+            
 
             SpeechSynthesizer sSynth = new SpeechSynthesizer();
             PromptBuilder pBuilder = new PromptBuilder();
@@ -326,7 +333,7 @@ namespace PschyHealth
 
         private void pbMicOff_Click(object sender, EventArgs e)
         {
-            pbMicOff.Hide();
+            
             sRecognize.RecognizeAsyncStop();
         }
 
@@ -448,7 +455,10 @@ namespace PschyHealth
 
         }
 
-        
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
        

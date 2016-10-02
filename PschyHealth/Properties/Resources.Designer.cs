@@ -123,6 +123,16 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancel_48px {
+            get {
+                object obj = ResourceManager.GetObject("Cancel_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chili_golden_hour_gory_103630_1280x800 {
             get {
                 object obj = ResourceManager.GetObject("chili_golden_hour_gory_103630_1280x800", resourceCulture);
@@ -166,6 +176,16 @@ namespace PschyHealth.Properties {
         internal static System.Drawing.Bitmap Clinic_48px_1 {
             get {
                 object obj = ResourceManager.GetObject("Clinic_48px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Close_Window_48px {
+            get {
+                object obj = ResourceManager.GetObject("Close_Window_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +286,16 @@ namespace PschyHealth.Properties {
         internal static System.Drawing.Bitmap Delete_48px {
             get {
                 object obj = ResourceManager.GetObject("Delete_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Delete_48px_1 {
+            get {
+                object obj = ResourceManager.GetObject("Delete_48px_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -463,6 +493,26 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Minimize_Window_48px {
+            get {
+                object obj = ResourceManager.GetObject("Minimize_Window_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minus_48px {
+            get {
+                object obj = ResourceManager.GetObject("Minus_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap motorcyclist {
             get {
                 object obj = ResourceManager.GetObject("motorcyclist", resourceCulture);
@@ -596,6 +646,16 @@ namespace PschyHealth.Properties {
         internal static System.Drawing.Bitmap Settings_48px {
             get {
                 object obj = ResourceManager.GetObject("Settings_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Shutdown_48px {
+            get {
+                object obj = ResourceManager.GetObject("Shutdown_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
