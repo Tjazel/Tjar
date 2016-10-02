@@ -158,7 +158,7 @@
             // 
             // pictureBox1
             // 
-           
+            this.pictureBox1.Image = global::PschyHealth.Properties.Resources._87c34eb1488a3ec90ffddc89340a7572;
             this.pictureBox1.Location = new System.Drawing.Point(196, 63);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(225, 128);
@@ -197,7 +197,7 @@
             this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // Form2
+            // frmCrashReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -213,7 +213,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "Form2";
+            this.Name = "frmCrashReport";
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Crash Report for PschyHealth";
             this.Load += new System.EventHandler(this.Form2_Load);

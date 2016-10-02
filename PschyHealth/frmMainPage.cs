@@ -334,8 +334,23 @@ namespace PschyHealth
 
         private void pbSettings_Click_1(object sender, EventArgs e)
         {
-            pnlSettings2 pnlSettings2 = new pnlSettings2(this);
-            pnlSettings2.swipe(true);
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmSettings")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmSettings frmSettings = new frmSettings();
+                frmSettings.Show();
+            }
         }
 
        
