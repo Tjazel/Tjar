@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MetroFramework.Controls;
 
 namespace PschyHealth
 {
@@ -79,6 +80,43 @@ namespace PschyHealth
         private void pbMic_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbMedCrit_TextChanged(object sender, EventArgs e)
+        {
+            if (metroComboBox1.Text != "")
+            {
+                metroTextBox17.Enabled = true;
+                try
+                {
+                    cMethods.filterDGV(dgvMedicalAid, "MedicalAid", " WHERE " + cmbMedCrit.Text + " LIKE '%" + metroTextBox17.Text + "%'");
+                    metroComboBox1.Hide();
+                }
+                catch
+                {
+                    metroComboBox1.Show();
+                }
+            }
+            else
+                metroTextBox17.Enabled = false;
+        }
+
+        private void metroTextBox17_TextChanged(object sender, EventArgs e)
+        {
+            if (!metroComboBox1.Visible)
+            {
+                cMethods.filterDGV(dgvMedicalAid, "MedicalAid", " WHERE " + cmbMedCrit.Text + " LIKE '%" + metroTextBox17.Text + "%'");
+            }
+            else
+            {
+                cMethods.filterDGV(dgvMedicalAid, "MedicalAid", " WHERE "+ cmbMedCrit.Text + " " + metroComboBox1.Text + " " + metroTextBox17.Text);
+            }
+        }
+
+        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (metroComboBox1.Text != "")
+                metroTextBox17.Enabled = true;
         }
     }
 }
