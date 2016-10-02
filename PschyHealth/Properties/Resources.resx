@@ -301,4 +301,7 @@
   <data name="87c34eb1488a3ec90ffddc89340a7572" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\87c34eb1488a3ec90ffddc89340a75721.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Garage_Closed_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Garage Closed_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

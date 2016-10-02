@@ -69,8 +69,8 @@ namespace PschyHealth
                 bindingSource1.DataSource = table;
                 dgv.DataSource = table;
                 dgv.BringToFront();
-                dgv.AutoResizeColumns(
-                DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+                //dgv.AutoResizeColumns(
+                //DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
             }
             catch (SqlException e)
             {

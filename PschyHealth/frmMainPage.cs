@@ -357,15 +357,7 @@ namespace PschyHealth
 
      
 
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
-        {
-            tbMain.Visible = true;
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            tbMain.Visible = false;
-        }
+      
 
        
 
@@ -410,26 +402,7 @@ namespace PschyHealth
             }
         }
 
-        private void toolBtnStaff_Click_1(object sender, EventArgs e)
-        {
-            bool IsOpen = false;
-            FormCollection fc = Application.OpenForms;
-            foreach (Form f in fc)
-            {
-                if (f.Name == "frmStaff")
-                {
-                    IsOpen = true;
-                    f.Focus();
-                    break;
-                }
-            }
-
-            if (IsOpen == false)
-            {
-                frmStaff frmStaff = new frmStaff();
-                frmStaff.Show();
-            }
-        }
+       
 
         private void btn_StaffNew_Click(object sender, EventArgs e)
         {
@@ -475,147 +448,7 @@ namespace PschyHealth
 
         }
 
-        private void toolBtnClients_Click(object sender, EventArgs e)
-        {
-            bool IsOpen = false;
-            FormCollection fc = Application.OpenForms;
-            foreach (Form f in fc)
-            {
-                if (f.Name == "frmClients")
-                {
-                    IsOpen = true;
-                    f.Focus();
-                    break;
-                }
-            }
-
-            if (IsOpen == false)
-            {
-                frmClients frmClients = new frmClients();
-                frmClients.ShowDialog();
-            }
-        }
-
-        private void toolBtnAccounting_Click(object sender, EventArgs e)
-        {
-            bool IsOpen = false;
-            FormCollection fc = Application.OpenForms;
-            foreach (Form f in fc)
-            {
-                if (f.Name == "frmAccounting")
-                {
-                    IsOpen = true;
-                    f.Focus();
-                    break;
-                }
-            }
-
-            if (IsOpen == false)
-            {
-                frmAccounting frmAccounting = new frmAccounting();
-                frmAccounting.Show();
-            }
-
-        }
-
-        private void toolBtnRAMS_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolBtnStatements_Click(object sender, EventArgs e)
-        {
-            bool IsOpen = false;
-            FormCollection fc = Application.OpenForms;
-            foreach (Form f in fc)
-            {
-                if (f.Name == "frmStatements")
-                {
-                    IsOpen = true;
-                    f.Focus();
-                    break;
-                }
-            }
-
-            if (IsOpen == false)
-            {
-                frmStatements frmStatements = new frmStatements();
-                frmStatements.Show();
-            }
-        }
-
-        private void toolBtnMedicalAids_Click(object sender, EventArgs e)
-        {
-            bool IsOpen = false;
-            FormCollection fc = Application.OpenForms;
-            foreach (Form f in fc)
-            {
-                if (f.Name == "frmMedicalAids")
-                {
-                    IsOpen = true;
-                    f.Focus();
-                    break;
-                }
-            }
-
-            if (IsOpen == false)
-            {
-                frmMedicalAids frmMedicalAids = new frmMedicalAids();
-                frmMedicalAids.Show();
-            }
-        }
-
-        private void toolBtnEDIfunctions_Click(object sender, EventArgs e)
-        {
-            bool IsOpen = false;
-            FormCollection fc = Application.OpenForms;
-            foreach (Form f in fc)
-            {
-                if (f.Name == "frmEDICodes")
-                {
-                    IsOpen = true;
-                    f.Focus();
-                    break;
-                }
-            }
-
-            if (IsOpen == false)
-            {
-                frmEDICodes frmEDICodes = new frmEDICodes();
-                frmEDICodes.Show();
-            }
-        }
-
-        private void toolConsultations_Click(object sender, EventArgs e)
-        {
-            bool IsOpen = false;
-            FormCollection fc = Application.OpenForms;
-            foreach (Form f in fc)
-            {
-                if (f.Name == "frmConsultations")
-                {
-                    IsOpen = true;
-                    f.Focus();
-                    break;
-                }
-            }
-
-            if (IsOpen == false)
-            {
-                frmConsultations frmConsultations = new frmConsultations();
-                frmConsultations.Show();
-            }
-        }
-
-        private void toolBtnReport_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolBtnDiagnosticCodes_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 
        
