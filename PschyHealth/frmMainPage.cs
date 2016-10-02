@@ -17,6 +17,7 @@ namespace PschyHealth
 {
     public partial class frmMainPage : MetroForm
     {
+        
         SpeechRecognitionEngine sRecognize = new SpeechRecognitionEngine();
         Methods cMethods = new Methods();
 
@@ -24,6 +25,7 @@ namespace PschyHealth
         {
             InitializeComponent();
             timer1.Start();
+            
             
         }
 
@@ -60,11 +62,11 @@ namespace PschyHealth
             }
         }
 
-        protected override void OnLoad(EventArgs e)
-        {
-            ucToolbar uc = new ucToolbar();
-            this.Controls.Add(uc);
-        }
+       // protected override void OnLoad(EventArgs e)
+       //// {
+          //  ucToolbar uc = new ucToolbar();
+       //     this.Controls.Add(uc);
+       // }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -456,6 +458,32 @@ namespace PschyHealth
         }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmArchive")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmArchive frmArchive = new frmArchive();
+                frmArchive.ShowDialog();
+            }
+        }
+
+        private void btnDateAndTime_Click(object sender, EventArgs e)
         {
 
         }
