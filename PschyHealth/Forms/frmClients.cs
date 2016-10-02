@@ -33,7 +33,6 @@ namespace PschyHealth
         protected override void OnLoad(EventArgs e)
         {
             ucToolbar uc = new ucToolbar();
-         //   uc.Dock = DockStyle.Fill;
             this.Controls.Add(uc);
             //Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
