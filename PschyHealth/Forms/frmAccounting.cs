@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using MetroFramework.Controls;
+using System.Data.SqlClient;
 
 namespace PschyHealth
 {
@@ -75,17 +76,54 @@ namespace PschyHealth
 
         private void dgvAccount_SelectionChanged_1(object sender, EventArgs e)
         {
-            
+            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
         }
 
         private void txtAccSearch_TextChanged_1(object sender, EventArgs e)
         {
-            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
+            if (txtAccSearch.Text != "")
+            if (!cmbAccCriteria.Visible)
+            {
+                cMethods.filterDGV(dgvAccount, "Accounting", " WHERE " + cmbAccCriteria.Text + " LIKE '%" + txtAccSearch.Text + "%'");
+            }
+            else
+            {
+                cMethods.filterDGV(dgvAccount, "Accounting", " WHERE " + cmbAccCriteria.Text + " " + metroComboBox1.Text + " " + txtAccSearch.Text);
+            }
         }
 
         private void pbMic_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbAccCriteria_TextChanged(object sender, EventArgs e)
+        {
+
+            if (cmbAccCriteria.Text != "")
+            {
+                txtAccSearch.Enabled = true;
+                if (cmbAccCriteria.Text == "Amount")
+                    metroComboBox1.Show();
+                else
+                    metroComboBox1.Hide();        
+            }
+            else
+            {
+                txtAccSearch.Enabled = false;
+                txtAccSearch.Text = "";
+            }
+        }
+        
+        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbAccCriteria.Text != "")
+                txtAccSearch.Enabled = true;
+        }
+
+        private void metroComboBox1_VisibleChanged(object sender, EventArgs e)
+        {
+            metroComboBox1.Text = "";
         }
     }
 }

@@ -76,7 +76,7 @@ namespace PschyHealth
             {
 
                 String mes = e.Message.Substring(0, 17);
-                //MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message);
                 if (!silent)
                 {
                     if (mes == "A network-related")
@@ -87,8 +87,8 @@ namespace PschyHealth
                             Thread.Sleep(5000);
                             recallFilter(dgv, sTable, filter);
                         }
-                    }
-                    else 
+                    }           
+                    else
                     {
                         DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
                         if (result == DialogResult.Yes)
