@@ -504,6 +504,7 @@
             this.toolBtnClients.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
             this.toolBtnClients.Name = "toolBtnClients";
             this.toolBtnClients.Text = "Clients";
+            this.toolBtnClients.Click += new System.EventHandler(this.toolBtnClients_Click);
             // 
             // toolBtnStaff
             // 
@@ -525,6 +526,7 @@
             this.toolBtnAccounting.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
             this.toolBtnAccounting.Name = "toolBtnAccounting";
             this.toolBtnAccounting.Text = "Accounting";
+            this.toolBtnAccounting.Click += new System.EventHandler(this.toolBtnAccounting_Click);
             // 
             // toolBtnRAMS
             // 
@@ -535,6 +537,7 @@
             this.toolBtnRAMS.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
             this.toolBtnRAMS.Name = "toolBtnRAMS";
             this.toolBtnRAMS.Text = "RAMS";
+            this.toolBtnRAMS.Click += new System.EventHandler(this.toolBtnRAMS_Click);
             // 
             // toolBtnStatements
             // 
@@ -545,6 +548,7 @@
             this.toolBtnStatements.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
             this.toolBtnStatements.Name = "toolBtnStatements";
             this.toolBtnStatements.Text = "Statements";
+            this.toolBtnStatements.Click += new System.EventHandler(this.toolBtnStatements_Click);
             // 
             // toolBtnMedicalAids
             // 
@@ -555,6 +559,7 @@
             this.toolBtnMedicalAids.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
             this.toolBtnMedicalAids.Name = "toolBtnMedicalAids";
             this.toolBtnMedicalAids.Text = "Medical Aids";
+            this.toolBtnMedicalAids.Click += new System.EventHandler(this.toolBtnMedicalAids_Click);
             // 
             // toolBtnEDIfunctions
             // 
@@ -565,6 +570,7 @@
             this.toolBtnEDIfunctions.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
             this.toolBtnEDIfunctions.Name = "toolBtnEDIfunctions";
             this.toolBtnEDIfunctions.Text = "EDI Functions";
+            this.toolBtnEDIfunctions.Click += new System.EventHandler(this.toolBtnEDIfunctions_Click);
             // 
             // toolConsultations
             // 
@@ -575,6 +581,7 @@
             this.toolConsultations.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
             this.toolConsultations.Name = "toolConsultations";
             this.toolConsultations.Text = "Consultations";
+            this.toolConsultations.Click += new System.EventHandler(this.toolConsultations_Click);
             // 
             // toolBtnDiagnosticCodes
             // 
@@ -585,6 +592,7 @@
             this.toolBtnDiagnosticCodes.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
             this.toolBtnDiagnosticCodes.Name = "toolBtnDiagnosticCodes";
             this.toolBtnDiagnosticCodes.Text = "Diagnostic Codes";
+            this.toolBtnDiagnosticCodes.Click += new System.EventHandler(this.toolBtnDiagnosticCodes_Click);
             // 
             // toolBtnReport
             // 
@@ -595,6 +603,7 @@
             this.toolBtnReport.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None;
             this.toolBtnReport.Name = "toolBtnReport";
             this.toolBtnReport.Text = "Reports";
+            this.toolBtnReport.Click += new System.EventHandler(this.toolBtnReport_Click);
             // 
             // itemContainer2
             // 
