@@ -115,6 +115,36 @@ namespace PschyHealth
             }
         }
 
+        //Hierdie is die kode vir die Login
+        //public bool checkLogin(String username, String password)
+        //{
+        //    SqlCommand cmd = new SqlCommand();
+        //    SqlDataReader reader;
+
+        //    cmd.CommandText = "SELECT * FROM Staff WHERE Username = @P1 AND Password = @P2";
+        //    cmd.Parameters.AddWithValue("@P1", username);
+        //    cmd.Parameters.AddWithValue("@P2", password);
+        //    cmd.CommandType = CommandType.Text;
+        //    cmd.Connection = conn;
+        //    conn.Open();
+
+        //    reader = cmd.ExecuteReader();
+        //    DataTable dt = new DataTable();
+        //    dt.Load(reader);
+        //    // Data is accessible through the DataReader object here.
+        //    if (dt.Rows.Count == 1)
+        //    {
+        //        conn.Close();
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        conn.Close();
+        //        return false;
+        //    }
+
+        //}
+
         public void filterDGV(MetroGrid dgv, String sTable, String filter)
         {
             silentFillDGV(dgv, sTable, filter, false);
