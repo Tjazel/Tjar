@@ -135,6 +135,12 @@
     <Compile Include="frmNotepad.Designer.cs">
       <DependentUpon>frmNotepad.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmToDoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToDoList.Designer.cs">
+      <DependentUpon>frmToDoList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Methods.cs" />
     <Compile Include="Panels\pnlClients.cs">
       <SubType>UserControl</SubType>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNotepad.resx">
       <DependentUpon>frmNotepad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToDoList.resx">
+      <DependentUpon>frmToDoList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\pnlClients.resx">
       <DependentUpon>pnlClients.cs</DependentUpon>
