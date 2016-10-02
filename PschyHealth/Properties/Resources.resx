@@ -322,4 +322,40 @@
   <data name="Shutdown_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Shutdown_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Calculator_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calculator_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Documents_Folder_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Documents Folder_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Download_from_the_Cloud_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Download from the Cloud_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit_Property_48px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit Property_48px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inspection_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inspection_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Message_48px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Message_48px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Micro_SD_48px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Micro SD_48px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MS_Outlook_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MS Outlook_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="New_Post_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New Post_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Planner_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Planner_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Receipt_48px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Receipt_48px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

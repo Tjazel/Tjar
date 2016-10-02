@@ -75,6 +75,12 @@
     <Compile Include="Forms\frmAddressBook.Designer.cs">
       <DependentUpon>frmAddressBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmArchive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArchive.Designer.cs">
+      <DependentUpon>frmArchive.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,12 @@
     <Compile Include="Panels\pnlScreenSaverSettings.Designer.cs">
       <DependentUpon>pnlScreenSaverSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="pnlDBLoadingMessege.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pnlDBLoadingMessege.Designer.cs">
+      <DependentUpon>pnlDBLoadingMessege.cs</DependentUpon>
+    </Compile>
     <Compile Include="pnlRecord.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -270,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddressBook.resx">
       <DependentUpon>frmAddressBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArchive.resx">
+      <DependentUpon>frmArchive.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainPage.resx">
       <DependentUpon>frmMainPage.cs</DependentUpon>
@@ -348,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\pnlScreenSaver.resx">
       <DependentUpon>pnlScreenSaver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pnlDBLoadingMessege.resx">
+      <DependentUpon>pnlDBLoadingMessege.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pnlRecord.resx">
       <DependentUpon>pnlRecord.cs</DependentUpon>
@@ -755,6 +773,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Shutdown_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Receipt_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documents Folder_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download from the Cloud_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Micro SD_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MS Outlook_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Post_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Message_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Planner_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inspection_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Property_48px_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
