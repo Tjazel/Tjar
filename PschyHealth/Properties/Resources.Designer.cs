@@ -443,6 +443,16 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap motorcyclist {
+            get {
+                object obj = ResourceManager.GetObject("motorcyclist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mute_48px {
             get {
                 object obj = ResourceManager.GetObject("Mute_48px", resourceCulture);

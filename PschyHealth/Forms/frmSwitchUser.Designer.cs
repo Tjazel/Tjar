@@ -141,7 +141,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-           // this.pictureBox1.Image = global::PschyHealth.Properties.Resources.motorcyclist;
+            this.pictureBox1.Image = global::PschyHealth.Properties.Resources.motorcyclist;
             this.pictureBox1.Location = new System.Drawing.Point(546, 231);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(178, 158);
@@ -153,7 +153,6 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-     
             this.pictureBox2.Location = new System.Drawing.Point(692, 507);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 23);
