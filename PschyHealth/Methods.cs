@@ -69,14 +69,14 @@ namespace PschyHealth
                 bindingSource1.DataSource = table;
                 dgv.DataSource = table;
                 dgv.BringToFront();
-                //dgv.AutoResizeColumns(
-                //DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+                dgv.AutoResizeColumns(
+                DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
             }
             catch (SqlException e)
             {
 
                 String mes = e.Message.Substring(0, 17);
-                MessageBox.Show(e.Message);
+                //MessageBox.Show(e.Message);
                 if (!silent)
                 {
                     if (mes == "A network-related")
