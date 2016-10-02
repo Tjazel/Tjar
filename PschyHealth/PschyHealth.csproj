@@ -69,6 +69,12 @@
     <Compile Include="Forms\frmAccounting.Designer.cs">
       <DependentUpon>frmAccounting.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddressBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddressBook.Designer.cs">
+      <DependentUpon>frmAddressBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,16 +135,16 @@
     <Compile Include="Forms\frmRecord.Designer.cs">
       <DependentUpon>frmRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNotepad.cs">
+    <Compile Include="Forms\frmNotepad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNotepad.Designer.cs">
+    <Compile Include="Forms\frmNotepad.Designer.cs">
       <DependentUpon>frmNotepad.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmToDoList.cs">
+    <Compile Include="Forms\frmToDoList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmToDoList.Designer.cs">
+    <Compile Include="Forms\frmToDoList.Designer.cs">
       <DependentUpon>frmToDoList.cs</DependentUpon>
     </Compile>
     <Compile Include="Methods.cs" />
@@ -256,6 +262,9 @@
     <EmbeddedResource Include="Forms\frmAccounting.resx">
       <DependentUpon>frmAccounting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddressBook.resx">
+      <DependentUpon>frmAddressBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMainPage.resx">
       <DependentUpon>frmMainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,10 +295,10 @@
     <EmbeddedResource Include="Forms\frmRecord.resx">
       <DependentUpon>frmRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNotepad.resx">
+    <EmbeddedResource Include="Forms\frmNotepad.resx">
       <DependentUpon>frmNotepad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmToDoList.resx">
+    <EmbeddedResource Include="Forms\frmToDoList.resx">
       <DependentUpon>frmToDoList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\pnlClients.resx">
