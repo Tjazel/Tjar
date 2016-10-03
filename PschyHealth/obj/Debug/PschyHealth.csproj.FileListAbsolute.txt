@@ -621,3 +621,6 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.Pr
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.ucToolbar.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.Forms.frmRecord.resources
+C:\Users\Nithin\Desktop\Jarvis\Tjar\Tjar\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Nithin\Desktop\Jarvis\Tjar\Tjar\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Nithin\Desktop\Jarvis\Tjar\Tjar\PschyHealth\obj\Debug\PschyHealth.pdb
