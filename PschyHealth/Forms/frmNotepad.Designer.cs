@@ -59,7 +59,7 @@
             this.editToolStripMenuItem,
             this.fontToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.menuStrip1.Location = new System.Drawing.Point(712, 81);
+            this.menuStrip1.Location = new System.Drawing.Point(933, 215);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(149, 28);
@@ -170,7 +170,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(-1, 39);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(911, 638);
             this.richTextBox1.TabIndex = 1;
@@ -184,11 +184,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2334, 825);
+            this.ClientSize = new System.Drawing.Size(2777, 1094);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNotepad";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
