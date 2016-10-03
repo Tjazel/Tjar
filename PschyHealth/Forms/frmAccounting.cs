@@ -163,7 +163,14 @@ namespace PschyHealth
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            
+            if (dgvAccount.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dgvAccount.SelectedRows[0].Index;
+
+                int rowID = int.Parse(dgvAccount[0, selectedIndex].Value.ToString());
+                cMethods.delete("Accounting",rowID);
+            }
+
         }
     }
 }
