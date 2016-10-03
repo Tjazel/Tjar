@@ -219,9 +219,75 @@ namespace PschyHealth
                     Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + table + @"Archive\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString(), arch);
         }
 
-        public void filtercmbChange(MetroGrid dgv, String sTable, String filter)
+        public Boolean validNumber(String txt)
         {
-            
+            string[] valids = { "."};
+            if (txt == String.Concat(txt.Where(Char.IsDigit)))
+            {
+                return true;
+            }
+            else
+            {
+                txt = String.Concat(txt.Where(Char.IsPunctuation));
+                for (int i = 0; i < txt.Length; i++)
+                {
+                    if (!(valids.Contains(Convert.ToString(txt[i]))))
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        valids[0] = "";
+                    }
+                }
+                return true;
+            }
+        }
+
+        public Boolean validString(String txt)
+        {
+            char[] valids = { ' ','.' };
+            if (txt == String.Concat(txt.Where(Char.IsLetterOrDigit)))
+            {
+                return true;
+            }
+            else
+            {
+                txt = String.Concat(txt.Where(Char.IsPunctuation));
+                for (int i = 0; i < txt.Length; i++)
+                {
+                    if (!(valids.Contains(txt[i])))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+                
+        }
+
+        public Boolean validDate(String txt)
+        {
+            int k = 0;
+            char[] valids = { '/' };
+            String dtxt = String.Concat(txt.Where(Char.IsLetterOrDigit));
+            String ptxt = String.Concat(txt.Where(Char.IsPunctuation));
+            for (int i = 0; i < ptxt.Length; i++)
+            {
+                if (!(valids.Contains(txt[i])))
+                {
+                    return false;
+                }
+                else
+                    k++;
+                if (k > 2)
+                    return false;
+            }
+            if(dtxt != String.Concat(txt.Where(Char.IsDigit))||(dtxt.Length>8)|| (dtxt.Length < 6))
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

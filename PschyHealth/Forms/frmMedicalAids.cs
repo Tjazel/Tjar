@@ -83,7 +83,7 @@ namespace PschyHealth
         {
             this.Close();
         }
-
+//***************************************************************************************************************
         private void cmbMedCrit_TextChanged(object sender, EventArgs e)
         {
             metroTextBox17.Clear();
@@ -120,6 +120,64 @@ namespace PschyHealth
         private void metroTextBox17_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void filter()
+        {
+            if (metroTextBox17.Text != "")
+                if (!metroComboBox1.Visible)
+                {
+                    cMethods.filterDGV(dgvMedicalAid, "MedicalAid", " WHERE " + cmbMedCrit.Text + " LIKE '%" + metroTextBox17.Text + "%'");
+                }
+                else
+                {
+                    cMethods.filterDGV(dgvMedicalAid, "MedicalAid", " WHERE " + cmbMedCrit.Text + " " + metroComboBox1.Text + " " + metroTextBox17.Text);
+                }
+        }
+
+        private void cmbMedCrit_TextChanged_1(object sender, EventArgs e)
+        {
+            metroTextBox17.Clear();
+            metroComboBox1.SelectedIndex = -1;
+            if (cmbMedCrit.Text != "")
+            {
+                metroTextBox17.Enabled = true;
+            }
+            else
+            {
+                metroTextBox17.Enabled = false;
+                metroTextBox17.Text = "";
+            }
+            cMethods.fillDGV(dgvMedicalAid, "MedicalAid");
+        }
+
+        private void metroTextBox17_TextChanged_1(object sender, EventArgs e)
+        {
+            if (metroTextBox17.Text == "")
+                cMethods.fillDGV(dgvMedicalAid, "MedicalAid");
+            else if (cMethods.validString(metroTextBox17.Text))
+            {
+                filter();
+            }
+            else
+            {
+                MessageBox.Show("Only numeric and alphabetic caracters are allowed");
+                metroTextBox17.Text = metroTextBox17.Text.Substring(0, metroTextBox17.Text.Length - 1);
+            }
+        }
+
+        private void metroComboBox1_VisibleChanged(object sender, EventArgs e)
+        {
+            metroComboBox1.SelectedIndex = -1;
+            if (metroComboBox1.Visible == true)
+                metroTextBox17.Enabled = false;
+        }
+
+        private void metroComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (metroComboBox1.SelectedIndex != -1)
+                metroTextBox17.Enabled = true;
+            metroTextBox17.Clear();
         }
     }
 }

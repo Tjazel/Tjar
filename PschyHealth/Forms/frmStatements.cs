@@ -92,5 +92,64 @@ namespace PschyHealth
                 metroTextBox17.Text = "";
             }
         }
+
+        private void metroTextBox17_TextChanged(object sender, EventArgs e)
+        {
+            if (metroTextBox17.Text == "")
+                cMethods.fillDGV(dgvStatements, "Clients");
+            else if (metroTextBox17.Text == String.Concat(metroTextBox17.Text.Where(Char.IsLetterOrDigit)))
+            {
+                filter();
+            }
+            else
+            {
+                MessageBox.Show("Only numeric and alphabetic caracters are allowed");
+                metroTextBox17.Text = metroTextBox17.Text.Substring(0, metroTextBox17.Text.Length - 1);
+            }
+        }
+
+        private void cmbStatCrit_TextChanged(object sender, EventArgs e)
+        {
+            metroTextBox17.Clear();
+            metroComboBox1.SelectedIndex = -1;
+            if (cmbStatCrit.Text != "")
+            {
+                metroTextBox17.Enabled = true;
+
+            }
+            else
+            {
+                metroTextBox17.Enabled = false;
+                metroTextBox17.Text = "";
+            }
+            cMethods.fillDGV(dgvStatements, "Clients");
+        }
+
+        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (metroComboBox1.SelectedIndex != -1)
+                metroTextBox17.Enabled = true;
+            metroTextBox17.Clear();
+        }
+
+        private void filter()
+        {
+            if (metroTextBox17.Text != "")
+                if (!metroComboBox1.Visible)
+                {
+                    cMethods.filterDGV(dgvStatements, "Clients", " WHERE " + cmbStatCrit.Text + " LIKE '%" + metroTextBox17.Text + "%'");
+                }
+                else
+                {
+                    cMethods.filterDGV(dgvStatements, "Clients", " WHERE " + cmbStatCrit.Text + " " + metroComboBox1.Text + " " + metroTextBox17.Text);
+                }
+        }
+
+        private void metroComboBox1_VisibleChanged(object sender, EventArgs e)
+        {
+            metroComboBox1.SelectedIndex = -1;
+            if (metroComboBox1.Visible == true)
+                metroTextBox17.Enabled = false;
+        }
     }
 }

@@ -82,7 +82,17 @@ namespace PschyHealth
 
         private void txtClientsSearch_TextChanged(object sender, EventArgs e)
         {
-            filter();
+            if (txtClientsSearch.Text == "")
+                cMethods.fillDGV(dgvClients, "Clients");
+            else if (cMethods.validString(txtClientsSearch.Text))
+            {
+                filter();
+            }
+            else
+            {
+                MessageBox.Show("Only numeric and alphabetic caracters are allowed");
+                txtClientsSearch.Text = txtClientsSearch.Text.Substring(0, txtClientsSearch.Text.Length - 1);
+            }
         }
 
         private void cmbClientCriteria_TextChanged(object sender, EventArgs e)
@@ -92,13 +102,14 @@ namespace PschyHealth
             if (cmbClientCriteria.Text != "")
             {
                 txtClientsSearch.Enabled = true;
+
             }
             else
             {
                 txtClientsSearch.Enabled = false;
                 txtClientsSearch.Text = "";
             }
-            cMethods.fillDGV(dgvClients, "Accounting");
+            cMethods.fillDGV(dgvClients, "Clients");
         }
 
         private void pbMic_Click(object sender, EventArgs e)
@@ -110,6 +121,7 @@ namespace PschyHealth
         {
             if (cmbClientSymbol.Text != "")
                 txtClientsSearch.Enabled = true;
+            
         }
         private void filter()
         {
@@ -120,21 +132,22 @@ namespace PschyHealth
                 }
                 else
                 {
-                    cMethods.filterDGV(dgvClients, "Accounting", " WHERE " + cmbClientCriteria.Text + " " + cmbClientSymbol.Text + " " + txtClientsSearch.Text);
+                    cMethods.filterDGV(dgvClients, "Clients", " WHERE " + cmbClientCriteria.Text + " " + cmbClientSymbol.Text + " " + txtClientsSearch.Text);
                 }
         }
 
         private void cmbClientSymbol_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if ((cmbClientCriteria.Text != "") && (cmbClientSymbol.Visible == false))
-            {
+            if (cmbClientSymbol.SelectedIndex != -1)
                 txtClientsSearch.Enabled = true;
-                filter();
-            }
-            else
-            {
+            txtClientsSearch.Clear();
+        }
+
+        private void cmbClientSymbol_VisibleChanged(object sender, EventArgs e)
+        {
+            cmbClientSymbol.SelectedIndex = -1;
+            if (cmbClientSymbol.Visible == true)
                 txtClientsSearch.Enabled = false;
-            }
         }
     }
 }

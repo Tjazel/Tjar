@@ -65,7 +65,7 @@ namespace PschyHealth
 
         private void txtAccSearch_TextChanged(object sender, EventArgs e)
         {
-            cMethods.filterDGV(dgvAccount, "Accounting", " WHERE " + cmbAccCriteria.Text + " LIKE '%" + txtAccSearch.Text + "%'");
+            
         }
 
         private void frmAccounting_Load(object sender, EventArgs e)
@@ -83,7 +83,17 @@ namespace PschyHealth
 
         private void txtAccSearch_TextChanged_1(object sender, EventArgs e)
         {
-            filter();
+            if (txtAccSearch.Text == "")
+                cMethods.fillDGV(dgvAccount, "Accounting");
+            else if(cMethods.validString(txtAccSearch.Text))
+            {
+                filter();
+            }
+            else
+            {
+                MessageBox.Show("Only numeric and alphabetic caracters are allowed");
+                txtAccSearch.Text = txtAccSearch.Text.Substring(0, txtAccSearch.Text.Length - 1);
+            }
         }
 
         private void pbMic_Click(object sender, EventArgs e)
@@ -98,23 +108,11 @@ namespace PschyHealth
         
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if ((cmbAccCriteria.Text != "")&&(metroComboBox1.Visible == false))
-            {
-                txtAccSearch.Enabled = true;
-                filter();
-            }
-            else
-            {
-                txtAccSearch.Enabled = false;
-            }
+
 
         }
 
-        private void metroComboBox1_VisibleChanged(object sender, EventArgs e)
-        {
-            metroComboBox1.SelectedIndex = -1;
 
-        }
 
         private void cmbAccCriteria_TextChanged_1(object sender, EventArgs e)
         {
@@ -147,6 +145,20 @@ namespace PschyHealth
                 {
                     cMethods.filterDGV(dgvAccount, "Accounting", " WHERE " + cmbAccCriteria.Text + " " + metroComboBox1.Text + " " + txtAccSearch.Text);
                 }
+        }
+
+        private void metroComboBox1_VisibleChanged_1(object sender, EventArgs e)
+        {
+            metroComboBox1.SelectedIndex = -1;
+            if (metroComboBox1.Visible == true)
+                txtAccSearch.Enabled = false;
+        }
+
+        private void metroComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (metroComboBox1.SelectedIndex != -1)
+                txtAccSearch.Enabled = true;
+            txtAccSearch.Clear();
         }
     }
 }

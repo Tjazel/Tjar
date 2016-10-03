@@ -523,6 +523,8 @@
             this.metroComboBox1.TabIndex = 61;
             this.metroComboBox1.UseSelectable = true;
             this.metroComboBox1.Visible = false;
+            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged_1);
+            this.metroComboBox1.VisibleChanged += new System.EventHandler(this.metroComboBox1_VisibleChanged_1);
             // 
             // btnSearch
             // 
