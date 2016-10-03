@@ -17,6 +17,7 @@ namespace PschyHealth
     public partial class frmClients : MetroForm
 
     {
+        String correctSearch = "";
         //Constants
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -87,11 +88,14 @@ namespace PschyHealth
             else if (cMethods.validString(txtClientsSearch.Text))
             {
                 filter();
+                correctSearch = txtClientsSearch.Text;
             }
             else
             {
                 MessageBox.Show("Only numeric and alphabetic caracters are allowed");
-                txtClientsSearch.Text = txtClientsSearch.Text.Substring(0, txtClientsSearch.Text.Length - 1);
+                txtClientsSearch.Text = correctSearch;
+                txtClientsSearch.Focus();
+                txtClientsSearch.SelectionStart = txtClientsSearch.Text.Length;
             }
         }
 

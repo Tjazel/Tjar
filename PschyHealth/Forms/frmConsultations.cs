@@ -16,6 +16,7 @@ namespace PschyHealth
     public partial class frmConsultations : MetroForm
 
     {
+        String correctSearch = "";
         Methods cMethods = new Methods();
         //Constants
         const int AW_SLIDE = 0X40000;
@@ -90,11 +91,14 @@ namespace PschyHealth
             else if (cMethods.validString(txtConsultationsSearch.Text))
             {
                 filter();
+                correctSearch = txtConsultationsSearch.Text;
             }
             else
             {
                 MessageBox.Show("Only numeric and alphabetic caracters are allowed");
-                txtConsultationsSearch.Text = txtConsultationsSearch.Text.Substring(0, txtConsultationsSearch.Text.Length - 1);
+                txtConsultationsSearch.Text = correctSearch;
+                txtConsultationsSearch.Focus();
+                txtConsultationsSearch.SelectionStart = txtConsultationsSearch.Text.Length;
             }
         }
 
