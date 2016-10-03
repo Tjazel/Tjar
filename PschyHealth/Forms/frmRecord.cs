@@ -9,49 +9,47 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PschyHealth.Panels
+namespace PschyHealth.Forms
 {
     public partial class frmRecord : MetroForm
     {
+        Methods cMethods = new Methods();
+        //Constants
+        const int AW_SLIDE = 0X40000;
+        const int AW_HOR_POSITIVE = 0X1;
+        const int AW_HOR_NEGATIVE = 0X2;
+        const int AW_BLEND = 0X80000;
+
+        [System.Runtime.InteropServices.DllImport("user32")]
+        static extern bool AnimateWindow(IntPtr hwnd, int time, int flags);
+        frmMainPage _frmMainpage = new frmMainPage();
         public frmRecord()
         {
             InitializeComponent();
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+
+
+            /*
+            //Load the Form At Position of Main Form
+            int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
+            int HeightofMain = Application.OpenForms["frmMainPage"].Height;
+            int LocationMainX = Application.OpenForms["frmMainPage"].Location.X;
+            int locationMainy = Application.OpenForms["frmMainPage"].Location.Y;
+
+            //Set the Location
+            this.Location = new Point(LocationMainX, locationMainy + 30);
+             */
+
+            //Animate form
+            AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+        }
+
         private void frmRecord_Load(object sender, EventArgs e)
         {
-            
-        }
 
-        private void mtRecord_Click(object sender, EventArgs e)
-        {
-            timer1.Start();
-           
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            lblTimer.Text = DateTime.Now.ToString();
-        }
-
-        private void frmRecord_SizeChanged(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Minimized)
-            {
-                notifyIcon1.Icon = SystemIcons.Application;
-                notifyIcon1.BalloonTipText = "Recording minimized";
-                notifyIcon1.ShowBalloonTip(1000);
-            }
-            else if (this.WindowState == FormWindowState.Normal)
-            {
-                notifyIcon1.BalloonTipText = "Recording maximized";
-                notifyIcon1.ShowBalloonTip(1000);
-            }
-        }
-
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

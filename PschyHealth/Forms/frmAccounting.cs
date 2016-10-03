@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using MetroFramework.Controls;
+using System.Data.SqlClient;
 
 namespace PschyHealth
 {
@@ -42,8 +43,9 @@ namespace PschyHealth
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+            
 
-           // cMethods.fillDGV(dgvAccount, "Accounting", cmbAccCriteria);
+            cMethods.fillDGV(dgvAccount, "Accounting", cmbAccCriteria);
         }
         public frmAccounting()
         {
@@ -63,7 +65,7 @@ namespace PschyHealth
 
         private void txtAccSearch_TextChanged(object sender, EventArgs e)
         {
-            cMethods.filterDGV(dgvAccount, "Accounting", " WHERE " + cmbAccCriteria.Text + " LIKE '%" + txtAccSearch.Text + "%'");
+            
         }
 
         private void frmAccounting_Load(object sender, EventArgs e)
@@ -71,21 +73,92 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             uc.Dock = DockStyle.Fill;
             this.Controls.Add(uc);
+            
         }
 
         private void dgvAccount_SelectionChanged_1(object sender, EventArgs e)
         {
-            
+            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
         }
 
         private void txtAccSearch_TextChanged_1(object sender, EventArgs e)
         {
-            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
+            if (txtAccSearch.Text == "")
+                cMethods.fillDGV(dgvAccount, "Accounting");
+            else if(cMethods.validString(txtAccSearch.Text))
+            {
+                filter();
+            }
+            else
+            {
+                MessageBox.Show("Only numeric and alphabetic caracters are allowed");
+                txtAccSearch.Text = txtAccSearch.Text.Substring(0, txtAccSearch.Text.Length - 1);
+            }
         }
 
         private void pbMic_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbAccCriteria_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+        
+        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+
+
+        private void cmbAccCriteria_TextChanged_1(object sender, EventArgs e)
+        {
+            txtAccSearch.Clear();
+            metroComboBox1.SelectedIndex = -1;
+            if (cmbAccCriteria.Text != "")
+            {
+                txtAccSearch.Enabled = true;
+                if (cmbAccCriteria.Text == "Amount")
+                    metroComboBox1.Show();
+                else
+                    metroComboBox1.Hide();
+            }
+            else
+            {
+                txtAccSearch.Enabled = false;
+                txtAccSearch.Text = "";
+            }
+            cMethods.fillDGV(dgvAccount, "Accounting");
+        }
+
+        private void filter()
+        {
+            if (txtAccSearch.Text != "")
+                if (!metroComboBox1.Visible)
+                {
+                    cMethods.filterDGV(dgvAccount, "Accounting", " WHERE " + cmbAccCriteria.Text + " LIKE '%" + txtAccSearch.Text + "%'");
+                }
+                else
+                {
+                    cMethods.filterDGV(dgvAccount, "Accounting", " WHERE " + cmbAccCriteria.Text + " " + metroComboBox1.Text + " " + txtAccSearch.Text);
+                }
+        }
+
+        private void metroComboBox1_VisibleChanged_1(object sender, EventArgs e)
+        {
+            metroComboBox1.SelectedIndex = -1;
+            if (metroComboBox1.Visible == true)
+                txtAccSearch.Enabled = false;
+        }
+
+        private void metroComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (metroComboBox1.SelectedIndex != -1)
+                txtAccSearch.Enabled = true;
+            txtAccSearch.Clear();
         }
     }
 }

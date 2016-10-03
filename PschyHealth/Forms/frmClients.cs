@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MetroFramework.Controls;
 
 
 namespace PschyHealth
@@ -16,8 +17,6 @@ namespace PschyHealth
     public partial class frmClients : MetroForm
 
     {
-        
-        String criteria;
         //Constants
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -32,22 +31,20 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-            ucToolbar uc = new ucToolbar();
-            this.Controls.Add(uc);
-
-            /*
-            //Load the Form At Position of Main Form
-            int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
-            int HeightofMain = Application.OpenForms["frmMainPage"].Height;
-            int LocationMainX = Application.OpenForms["frmMainPage"].Location.X;
-            int locationMainy = Application.OpenForms["frmMainPage"].Location.Y;
+           ucToolbar uc = new ucToolbar();
+           this.Controls.Add(uc);
+           //Load the Form At Position of Main Form
+            //int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
+           // int HeightofMain = Application.OpenForms["frmMainPage"].Height;
+            ////int LocationMainX = Application.OpenForms["frmMainPage"].Location.X;
+           // int locationMainy = Application.OpenForms["frmMainPage"].Location.Y;
 
             //Set the Location
-            this.Location = new Point(LocationMainX, locationMainy + 30);
+            //this.Location = new Point(LocationMainX, locationMainy + 30);
 
-            */
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+            
 
             cMethods.fillDGV(dgvClients, "Clients", cmbClientCriteria);
         }
@@ -73,9 +70,9 @@ namespace PschyHealth
 
         private void frmClients_Load(object sender, EventArgs e)
         {
-            ucToolbar uc = new ucToolbar();
-            uc.Dock = DockStyle.Top;
-            this.Controls.Add(uc);
+           ucToolbar uc = new ucToolbar();
+           uc.Dock = DockStyle.Top;
+           this.Controls.Add(uc);
         }
 
         private void dgvClients_SelectionChanged_1(object sender, EventArgs e)
@@ -85,33 +82,72 @@ namespace PschyHealth
 
         private void txtClientsSearch_TextChanged(object sender, EventArgs e)
         {
-            cMethods.filterDGV(dgvClients, "Clients", criteria);
+            if (txtClientsSearch.Text == "")
+                cMethods.fillDGV(dgvClients, "Clients");
+            else if (cMethods.validString(txtClientsSearch.Text))
+            {
+                filter();
+            }
+            else
+            {
+                MessageBox.Show("Only numeric and alphabetic caracters are allowed");
+                txtClientsSearch.Text = txtClientsSearch.Text.Substring(0, txtClientsSearch.Text.Length - 1);
+            }
         }
 
         private void cmbClientCriteria_TextChanged(object sender, EventArgs e)
         {
+            txtClientsSearch.Clear();
+            cmbClientSymbol.SelectedIndex = -1;
             if (cmbClientCriteria.Text != "")
             {
                 txtClientsSearch.Enabled = true;
-                try
-                {
-                    criteria = " WHERE " + cmbClientCriteria.Text + " LIKE '%" + txtClientsSearch.Text + "%'";
-                    cMethods.filterDGV(dgvClients, "Clients", " WHERE " + cmbClientCriteria.Text + " LIKE '%" + txtClientsSearch.Text + "%'");
-                    cmbClientSymbol.Hide();
-                }
-                catch
-                {
-                    cmbClientSymbol.Show();
-                    criteria = " WHERE " + cmbClientCriteria.Text + " " + cmbClientSymbol + " " + txtClientsSearch.Text;
-                }
+
             }
             else
+            {
                 txtClientsSearch.Enabled = false;
+                txtClientsSearch.Text = "";
+            }
+            cMethods.fillDGV(dgvClients, "Clients");
         }
 
         private void pbMic_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbClientSymbol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbClientSymbol.Text != "")
+                txtClientsSearch.Enabled = true;
+            
+        }
+        private void filter()
+        {
+            if (txtClientsSearch.Text != "")
+                if (!cmbClientSymbol.Visible)
+                {
+                    cMethods.filterDGV(dgvClients, "Clients", " WHERE " + cmbClientCriteria.Text + " LIKE '%" + txtClientsSearch.Text + "%'");
+                }
+                else
+                {
+                    cMethods.filterDGV(dgvClients, "Clients", " WHERE " + cmbClientCriteria.Text + " " + cmbClientSymbol.Text + " " + txtClientsSearch.Text);
+                }
+        }
+
+        private void cmbClientSymbol_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cmbClientSymbol.SelectedIndex != -1)
+                txtClientsSearch.Enabled = true;
+            txtClientsSearch.Clear();
+        }
+
+        private void cmbClientSymbol_VisibleChanged(object sender, EventArgs e)
+        {
+            cmbClientSymbol.SelectedIndex = -1;
+            if (cmbClientSymbol.Visible == true)
+                txtClientsSearch.Enabled = false;
         }
     }
 }

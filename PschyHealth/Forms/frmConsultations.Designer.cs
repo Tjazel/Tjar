@@ -102,11 +102,13 @@
             ">",
             "<",
             "null"});
-            this.metroComboBox1.Location = new System.Drawing.Point(270, 28);
+            this.metroComboBox1.Location = new System.Drawing.Point(269, 28);
+            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(71, 30);
             this.metroComboBox1.TabIndex = 62;
             this.metroComboBox1.UseSelectable = true;
+            this.metroComboBox1.Visible = false;
             // 
             // cmbConsultCrit
             // 
@@ -124,6 +126,7 @@
             this.cmbConsultCrit.Style = MetroFramework.MetroColorStyle.Blue;
             this.cmbConsultCrit.TabIndex = 3;
             this.cmbConsultCrit.UseSelectable = true;
+            this.cmbConsultCrit.SelectedIndexChanged += new System.EventHandler(this.cmbConsultCrit_SelectedIndexChanged);
             // 
             // txtConsultationsSearch
             // 
@@ -157,6 +160,7 @@
             this.txtConsultationsSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtConsultationsSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultationsSearch.TextChanged += new System.EventHandler(this.txtConsultationsSearch_TextChanged);
+            this.txtConsultationsSearch.Click += new System.EventHandler(this.txtConsultationsSearch_Click);
             // 
             // metroLabel18
             // 
@@ -887,13 +891,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2334, 825);
+            this.ClientSize = new System.Drawing.Size(2777, 970);
             this.Controls.Add(this.pbMic);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvConsultations);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(2777, 970);
+            this.MinimumSize = new System.Drawing.Size(1918, 872);
             this.Movable = false;
             this.Name = "frmConsultations";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);

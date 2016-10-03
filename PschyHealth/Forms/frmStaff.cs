@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MetroFramework.Controls;
 
 namespace PschyHealth
 {
@@ -83,6 +84,91 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             uc.Dock = DockStyle.Fill;
             this.Controls.Add(uc);
+        }
+
+        private void cmbStaffCrit_TextChanged(object sender, EventArgs e)
+        {
+            metroTextBox17.Clear();
+            metroComboBox1.Text = "";
+            if (cmbStaffCrit.Text != "")
+            {
+                metroTextBox17.Enabled = true;
+            }
+            else
+            {
+                metroTextBox17.Enabled = false;
+                metroTextBox17.Text = "";
+            }
+        }
+
+        private void metroTextBox17_TextChanged(object sender, EventArgs e)
+        {
+            if (!metroComboBox1.Visible)
+            {
+                cMethods.filterDGV(dgvStaff, "Staff", " WHERE " + cmbStaffCrit.Text + " LIKE '%" + metroTextBox17.Text + "%'");
+            }
+            else
+            {
+                cMethods.filterDGV(dgvStaff, "Staff", " WHERE " + cmbStaffCrit.Text + " " + metroComboBox1.Text + " " + metroTextBox17.Text);
+            }
+        }
+
+        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (metroComboBox1.Text != "")
+                metroTextBox17.Enabled = true;
+        }
+
+        private void metroTextBox17_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void filter()
+        {
+            if (metroTextBox17.Text != "")
+                if (!metroComboBox1.Visible)
+                {
+                    cMethods.filterDGV(dgvStaff, "Staff", " WHERE " + cmbStaffCrit.Text + " LIKE '%" + metroTextBox17.Text + "%'");
+                }
+                else
+                {
+                    cMethods.filterDGV(dgvStaff, "MedicalAid", " WHERE " + cmbStaffCrit.Text + " " + metroComboBox1.Text + " " + metroTextBox17.Text);
+                }
+        }
+
+        private void cmbStaffCrit_TextChanged_1(object sender, EventArgs e)
+        {
+            if (cmbStaffCrit.Text != "")
+            {
+                metroTextBox17.Enabled = true;
+            }
+            else
+            {
+                metroTextBox17.Enabled = false;
+                metroTextBox17.Text = "";
+            }
+            cMethods.fillDGV(dgvStaff, "Staff");
+        }
+
+        private void metroTextBox17_TextChanged_1(object sender, EventArgs e)
+        {
+            if (metroTextBox17.Text == "")
+                cMethods.fillDGV(dgvStaff, "Staff");
+            else if (cMethods.validString(metroTextBox17.Text))
+            {
+                filter();
+            }
+            else
+            {
+                MessageBox.Show("Only numeric and alphabetic caracters are allowed");
+                metroTextBox17.Text = metroTextBox17.Text.Substring(0, metroTextBox17.Text.Length - 1);
+            }
+        }
+
+        private void metroComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (metroComboBox1.Text != "")
+                metroTextBox17.Enabled = true;
         }
     }
 }

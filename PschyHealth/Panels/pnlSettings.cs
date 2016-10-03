@@ -42,8 +42,7 @@ namespace PschyHealth
             /*this.swipe(false);
             pnlRecord pnlRecord = new pnlRecord(this);
             pnlRecord.swipe(true);*/
-            frmRecord r1 = new frmRecord();
-            r1.Show();
+           
             
             
 
