@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTextButton3 = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.cmbClientEthnic_Group = new MetroFramework.Controls.MetroComboBox();
@@ -142,9 +142,9 @@
             // 
             // 
             this.txtClientMaritial_Status.CustomButton.Image = null;
-            this.txtClientMaritial_Status.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.txtClientMaritial_Status.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtClientMaritial_Status.CustomButton.Name = "";
-            this.txtClientMaritial_Status.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientMaritial_Status.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientMaritial_Status.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientMaritial_Status.CustomButton.TabIndex = 1;
             this.txtClientMaritial_Status.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -173,9 +173,9 @@
             // 
             // 
             this.txtClientOccupation.CustomButton.Image = null;
-            this.txtClientOccupation.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.txtClientOccupation.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtClientOccupation.CustomButton.Name = "";
-            this.txtClientOccupation.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientOccupation.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientOccupation.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientOccupation.CustomButton.TabIndex = 1;
             this.txtClientOccupation.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -204,9 +204,9 @@
             // 
             // 
             this.txtClientMobile_Cellphone_Number.CustomButton.Image = null;
-            this.txtClientMobile_Cellphone_Number.CustomButton.Location = new System.Drawing.Point(53, 2);
+            this.txtClientMobile_Cellphone_Number.CustomButton.Location = new System.Drawing.Point(66, 2);
             this.txtClientMobile_Cellphone_Number.CustomButton.Name = "";
-            this.txtClientMobile_Cellphone_Number.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientMobile_Cellphone_Number.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientMobile_Cellphone_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientMobile_Cellphone_Number.CustomButton.TabIndex = 1;
             this.txtClientMobile_Cellphone_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -235,9 +235,9 @@
             // 
             // 
             this.txtClientHome_Telephone_Number.CustomButton.Image = null;
-            this.txtClientHome_Telephone_Number.CustomButton.Location = new System.Drawing.Point(53, 2);
+            this.txtClientHome_Telephone_Number.CustomButton.Location = new System.Drawing.Point(66, 2);
             this.txtClientHome_Telephone_Number.CustomButton.Name = "";
-            this.txtClientHome_Telephone_Number.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientHome_Telephone_Number.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientHome_Telephone_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientHome_Telephone_Number.CustomButton.TabIndex = 1;
             this.txtClientHome_Telephone_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -266,9 +266,9 @@
             // 
             // 
             this.txtClientAddress.CustomButton.Image = null;
-            this.txtClientAddress.CustomButton.Location = new System.Drawing.Point(66, 2);
+            this.txtClientAddress.CustomButton.Location = new System.Drawing.Point(82, 2);
             this.txtClientAddress.CustomButton.Name = "";
-            this.txtClientAddress.CustomButton.Size = new System.Drawing.Size(52, 52);
+            this.txtClientAddress.CustomButton.Size = new System.Drawing.Size(65, 65);
             this.txtClientAddress.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientAddress.CustomButton.TabIndex = 1;
             this.txtClientAddress.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -298,9 +298,9 @@
             // 
             // 
             this.txtCleintDate_of_birth.CustomButton.Image = null;
-            this.txtCleintDate_of_birth.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.txtCleintDate_of_birth.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtCleintDate_of_birth.CustomButton.Name = "";
-            this.txtCleintDate_of_birth.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtCleintDate_of_birth.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtCleintDate_of_birth.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtCleintDate_of_birth.CustomButton.TabIndex = 1;
             this.txtCleintDate_of_birth.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -345,9 +345,9 @@
             // 
             // 
             this.txtClientsSearch.CustomButton.Image = null;
-            this.txtClientsSearch.CustomButton.Location = new System.Drawing.Point(98, 1);
+            this.txtClientsSearch.CustomButton.Location = new System.Drawing.Point(122, 1);
             this.txtClientsSearch.CustomButton.Name = "";
-            this.txtClientsSearch.CustomButton.Size = new System.Drawing.Size(22, 22);
+            this.txtClientsSearch.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.txtClientsSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientsSearch.CustomButton.TabIndex = 1;
             this.txtClientsSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -399,6 +399,7 @@
             this.cmbClientSymbol.UseSelectable = true;
             this.cmbClientSymbol.Visible = false;
             this.cmbClientSymbol.SelectedIndexChanged += new System.EventHandler(this.cmbClientSymbol_SelectedIndexChanged_1);
+            this.cmbClientSymbol.VisibleChanged += new System.EventHandler(this.cmbClientSymbol_VisibleChanged);
             // 
             // txtClientSurname
             // 
@@ -406,9 +407,9 @@
             // 
             // 
             this.txtClientSurname.CustomButton.Image = null;
-            this.txtClientSurname.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.txtClientSurname.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtClientSurname.CustomButton.Name = "";
-            this.txtClientSurname.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientSurname.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientSurname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientSurname.CustomButton.TabIndex = 1;
             this.txtClientSurname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -437,9 +438,9 @@
             // 
             // 
             this.txtCleintFirst_Name.CustomButton.Image = null;
-            this.txtCleintFirst_Name.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.txtCleintFirst_Name.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtCleintFirst_Name.CustomButton.Name = "";
-            this.txtCleintFirst_Name.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtCleintFirst_Name.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtCleintFirst_Name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtCleintFirst_Name.CustomButton.TabIndex = 1;
             this.txtCleintFirst_Name.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -468,9 +469,9 @@
             // 
             // 
             this.txtClientID.CustomButton.Image = null;
-            this.txtClientID.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.txtClientID.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtClientID.CustomButton.Name = "";
-            this.txtClientID.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientID.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientID.CustomButton.TabIndex = 1;
             this.txtClientID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -658,9 +659,9 @@
             // 
             // 
             this.txtCleintsAuthorisation_Code.CustomButton.Image = null;
-            this.txtCleintsAuthorisation_Code.CustomButton.Location = new System.Drawing.Point(122, 2);
+            this.txtCleintsAuthorisation_Code.CustomButton.Location = new System.Drawing.Point(153, 2);
             this.txtCleintsAuthorisation_Code.CustomButton.Name = "";
-            this.txtCleintsAuthorisation_Code.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtCleintsAuthorisation_Code.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtCleintsAuthorisation_Code.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtCleintsAuthorisation_Code.CustomButton.TabIndex = 1;
             this.txtCleintsAuthorisation_Code.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -689,9 +690,9 @@
             // 
             // 
             this.txtCleintsMember_Number.CustomButton.Image = null;
-            this.txtCleintsMember_Number.CustomButton.Location = new System.Drawing.Point(122, 2);
+            this.txtCleintsMember_Number.CustomButton.Location = new System.Drawing.Point(153, 2);
             this.txtCleintsMember_Number.CustomButton.Name = "";
-            this.txtCleintsMember_Number.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtCleintsMember_Number.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtCleintsMember_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtCleintsMember_Number.CustomButton.TabIndex = 1;
             this.txtCleintsMember_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -720,9 +721,9 @@
             // 
             // 
             this.txtClientsMedical_Aid.CustomButton.Image = null;
-            this.txtClientsMedical_Aid.CustomButton.Location = new System.Drawing.Point(122, 2);
+            this.txtClientsMedical_Aid.CustomButton.Location = new System.Drawing.Point(153, 2);
             this.txtClientsMedical_Aid.CustomButton.Name = "";
-            this.txtClientsMedical_Aid.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientsMedical_Aid.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientsMedical_Aid.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientsMedical_Aid.CustomButton.TabIndex = 1;
             this.txtClientsMedical_Aid.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -855,37 +856,37 @@
             this.dgvClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClients.EnableHeadersVisualStyles = false;
             this.dgvClients.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvClients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvClients.Location = new System.Drawing.Point(391, 150);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClients.Size = new System.Drawing.Size(965, 470);
@@ -899,7 +900,7 @@
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
             this.pbMic.Location = new System.Drawing.Point(5, 36);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(2);
             this.pbMic.Name = "pbMic";
             this.pbMic.Size = new System.Drawing.Size(30, 22);
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -933,7 +934,7 @@
             this.Controls.Add(this.dgvClients);
             this.Movable = false;
             this.Name = "frmClients";
-            this.Padding = new System.Windows.Forms.Padding(22, 59, 22, 20);
+            this.Padding = new System.Windows.Forms.Padding(22, 60, 22, 20);
             this.Resizable = false;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

@@ -85,13 +85,16 @@ namespace PschyHealth
 
         private void txtConsultationsSearch_TextChanged(object sender, EventArgs e)
         {
-            if (!metroComboBox1.Visible)
+            if (txtConsultationsSearch.Text == "")
+                cMethods.fillDGV(dgvConsultations, "Consultations");
+            else if (cMethods.validString(txtConsultationsSearch.Text))
             {
-                cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE " + cmbConsultCrit.Text + " LIKE '%" + txtConsultationsSearch.Text + "%'");
+                filter();
             }
             else
             {
-                cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE " + cmbConsultCrit.Text + " " + metroComboBox1.Text + " " + txtConsultationsSearch.Text);
+                MessageBox.Show("Only numeric and alphabetic caracters are allowed");
+                txtConsultationsSearch.Text = txtConsultationsSearch.Text.Substring(0, txtConsultationsSearch.Text.Length - 1);
             }
         }
 
@@ -112,7 +115,6 @@ namespace PschyHealth
             else
             {
                 txtConsultationsSearch.Enabled = false;
-                txtConsultationsSearch.Text = "";
             }
         }
 
@@ -129,6 +131,48 @@ namespace PschyHealth
         private void txtConsultationsSearch_Click(object sender, EventArgs e)
         {
 
+        }
+        private void filter()
+        {
+            if (txtConsultationsSearch.Text != "")
+                if (!metroComboBox1.Visible)
+                {
+                    cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE " + cmbConsultCrit.Text + " LIKE '%" + txtConsultationsSearch.Text + "%'");
+                }
+                else
+                {
+                    cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE " + cmbConsultCrit.Text + " " + metroComboBox1.Text + " " + txtConsultationsSearch.Text);
+                }
+        }
+
+        private void metroComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (metroComboBox1.SelectedIndex != -1)
+                txtConsultationsSearch.Enabled = true;
+            txtConsultationsSearch.Clear();
+        }
+
+        private void cmbConsultCrit_TextChanged_1(object sender, EventArgs e)
+        {
+            txtConsultationsSearch.Clear();
+            metroComboBox1.SelectedIndex = -1;
+            if (cmbConsultCrit.Text != "")
+            {
+                txtConsultationsSearch.Enabled = true;
+            }
+            else
+            {
+                txtConsultationsSearch.Enabled = false;
+                txtConsultationsSearch.Text = "";
+            }
+            cMethods.fillDGV(dgvConsultations, "Accounting");
+        }
+
+        private void metroComboBox1_VisibleChanged(object sender, EventArgs e)
+        {
+            metroComboBox1.SelectedIndex = -1;
+            if (metroComboBox1.Visible == true)
+                txtConsultationsSearch.Enabled = false;
         }
     }
 }
