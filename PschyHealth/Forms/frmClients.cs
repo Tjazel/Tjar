@@ -44,6 +44,7 @@ namespace PschyHealth
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+            
 
             cMethods.fillDGV(dgvClients, "Clients", cmbClientCriteria);
         }
