@@ -102,24 +102,31 @@ namespace PschyHealth
 
         private void cmbConsultCrit_TextChanged(object sender, EventArgs e)
         {
+            txtConsultationsSearch.Clear();
+            metroComboBox1.Text = "";
             if (cmbConsultCrit.Text != "")
             {
                 txtConsultationsSearch.Enabled = true;
-                try
-                {
-                    cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE " + cmbConsultCrit.Text + " LIKE '%" + txtConsultationsSearch.Text + "%'");
-                    metroComboBox1.Hide();
-                }
-                catch
-                {
-                    metroComboBox1.Show();
-                }
+                metroComboBox1.Hide();
             }
             else
+            {
                 txtConsultationsSearch.Enabled = false;
+                txtConsultationsSearch.Text = "";
+            }
         }
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbConsultCrit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtConsultationsSearch_Click(object sender, EventArgs e)
         {
 
         }

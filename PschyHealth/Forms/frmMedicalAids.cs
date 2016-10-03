@@ -86,21 +86,17 @@ namespace PschyHealth
 
         private void cmbMedCrit_TextChanged(object sender, EventArgs e)
         {
-            if (metroComboBox1.Text != "")
+            metroTextBox17.Clear();
+            metroComboBox1.Text = "";
+            if (cmbMedCrit.Text != "")
             {
                 metroTextBox17.Enabled = true;
-                try
-                {
-                    cMethods.filterDGV(dgvMedicalAid, "MedicalAid", " WHERE " + cmbMedCrit.Text + " LIKE '%" + metroTextBox17.Text + "%'");
-                    metroComboBox1.Hide();
-                }
-                catch
-                {
-                    metroComboBox1.Show();
-                }
             }
             else
+            {
                 metroTextBox17.Enabled = false;
+                metroTextBox17.Text = "";
+            }
         }
 
         private void metroTextBox17_TextChanged(object sender, EventArgs e)
@@ -119,6 +115,11 @@ namespace PschyHealth
         {
             if (metroComboBox1.Text != "")
                 metroTextBox17.Enabled = true;
+        }
+
+        private void metroTextBox17_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
