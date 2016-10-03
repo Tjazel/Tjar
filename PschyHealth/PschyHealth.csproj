@@ -81,6 +81,12 @@
     <Compile Include="Forms\frmArchive.Designer.cs">
       <DependentUpon>frmArchive.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPayments.Designer.cs">
+      <DependentUpon>frmPayments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmArchive.resx">
       <DependentUpon>frmArchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPayments.resx">
+      <DependentUpon>frmPayments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmRecord.resx">
       <DependentUpon>frmRecord.cs</DependentUpon>
