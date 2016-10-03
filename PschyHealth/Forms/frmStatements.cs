@@ -15,6 +15,7 @@ namespace PschyHealth
     public partial class frmStatements : MetroForm
     {
         Methods cMethods = new Methods();
+        String correctSearch = "";
         //Constants
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -100,11 +101,14 @@ namespace PschyHealth
             else if (metroTextBox17.Text == String.Concat(metroTextBox17.Text.Where(Char.IsLetterOrDigit)))
             {
                 filter();
+                correctSearch = metroTextBox17.Text;
             }
             else
             {
                 MessageBox.Show("Only numeric and alphabetic caracters are allowed");
-                metroTextBox17.Text = metroTextBox17.Text.Substring(0, metroTextBox17.Text.Length - 1);
+                metroTextBox17.Text = correctSearch;
+                metroTextBox17.Focus();
+                metroTextBox17.SelectionStart = metroTextBox17.Text.Length;
             }
         }
 
