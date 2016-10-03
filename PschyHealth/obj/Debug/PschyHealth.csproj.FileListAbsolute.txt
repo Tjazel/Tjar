@@ -397,7 +397,6 @@ C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.frmEDICodes.r
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.frmLogin.resources
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.frmLockScreen.resources
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.frmSwitchUser.resources
-C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.Panels.frmRecord.resources
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.frmNotepad.resources
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.Forms.pnlClients.resources
 C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.Forms.pnlEDICodes.resources
@@ -621,3 +620,4 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.pn
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.ucToolbar.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.Forms.frmRecord.resources

@@ -530,6 +530,27 @@ namespace PschyHealth
                 frmStatements.Show();
             }
         }
+
+        private void btnRecordings_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmRecord")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmRecord frmRecord = new frmRecord();
+                frmRecord.Show();
+            }
+        }
     }
 
        

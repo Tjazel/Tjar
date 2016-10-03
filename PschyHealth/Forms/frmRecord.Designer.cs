@@ -1,4 +1,4 @@
-﻿namespace PschyHealth.Panels
+﻿namespace PschyHealth.Forms
 {
     partial class frmRecord
     {
@@ -28,124 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecord));
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.lblTimer = new MetroFramework.Controls.MetroLabel();
-            this.mtStopSave = new MetroFramework.Controls.MetroTile();
-            this.mtSave = new MetroFramework.Controls.MetroTile();
-            this.mtPause = new MetroFramework.Controls.MetroTile();
-            this.mtRecord = new MetroFramework.Controls.MetroTile();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.radialMenu1 = new DevComponents.DotNetBar.RadialMenu();
+            this.rdRecord = new DevComponents.DotNetBar.RadialMenuItem();
+            this.rdSave = new DevComponents.DotNetBar.RadialMenuItem();
+            this.rdPause = new DevComponents.DotNetBar.RadialMenuItem();
+            this.rdPlay = new DevComponents.DotNetBar.RadialMenuItem();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
-            // timer1
+            // radialMenu1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.radialMenu1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.rdRecord,
+            this.rdSave,
+            this.rdPause,
+            this.rdPlay});
+            this.radialMenu1.Location = new System.Drawing.Point(207, 150);
+            this.radialMenu1.Name = "radialMenu1";
+            this.radialMenu1.Size = new System.Drawing.Size(80, 80);
+            this.radialMenu1.Symbol = "";
+            this.radialMenu1.SymbolSize = 30F;
+            this.radialMenu1.TabIndex = 0;
+            this.radialMenu1.Text = "radialMenu1";
             // 
-            // metroLabel1
+            // rdRecord
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(241, 25);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(84, 20);
-            this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "metroLabel1";
+            this.rdRecord.Name = "rdRecord";
+            this.rdRecord.Symbol = "";
+            this.rdRecord.Text = "Record";
             // 
-            // lblTimer
+            // rdSave
             // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.Location = new System.Drawing.Point(241, 82);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(0, 0);
-            this.lblTimer.TabIndex = 1;
+            this.rdSave.Name = "rdSave";
+            this.rdSave.Symbol = "";
+            this.rdSave.Text = "Save/Stop";
             // 
-            // mtStopSave
+            // rdPause
             // 
-            this.mtStopSave.ActiveControl = null;
-            this.mtStopSave.Location = new System.Drawing.Point(447, 193);
-            this.mtStopSave.Name = "mtStopSave";
-            this.mtStopSave.Size = new System.Drawing.Size(208, 58);
-            this.mtStopSave.TabIndex = 5;
-           // this.mtStopSave.TileImage = global::PschyHealth.Properties.Resources.saveB;
-            this.mtStopSave.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mtStopSave.UseSelectable = true;
-            this.mtStopSave.UseTileImage = true;
+            this.rdPause.Name = "rdPause";
+            this.rdPause.Symbol = "";
+            this.rdPause.Text = "Pause";
             // 
-            // mtSave
+            // rdPlay
             // 
-            this.mtSave.ActiveControl = null;
-            this.mtSave.Location = new System.Drawing.Point(224, 193);
-            this.mtSave.Name = "mtSave";
-            this.mtSave.Size = new System.Drawing.Size(217, 58);
-            this.mtSave.TabIndex = 4;
-            this.mtSave.TileImage = global::PschyHealth.Properties.Resources.playB;
-            this.mtSave.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mtSave.UseSelectable = true;
-            this.mtSave.UseTileImage = true;
+            this.rdPlay.Name = "rdPlay";
+            this.rdPlay.Symbol = "";
+            this.rdPlay.Text = "Play";
             // 
-            // mtPause
+            // metroTextBox1
             // 
-            this.mtPause.ActiveControl = null;
-            this.mtPause.Location = new System.Drawing.Point(10, 193);
-            this.mtPause.Name = "mtPause";
-            this.mtPause.Size = new System.Drawing.Size(208, 58);
-            this.mtPause.TabIndex = 3;
-            this.mtPause.TileImage = ((System.Drawing.Image)(resources.GetObject("mtPause.TileImage")));
-            this.mtPause.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mtPause.UseSelectable = true;
-            this.mtPause.UseTileImage = true;
             // 
-            // mtRecord
             // 
-            this.mtRecord.ActiveControl = null;
-            this.mtRecord.Location = new System.Drawing.Point(10, 140);
-            this.mtRecord.Name = "mtRecord";
-            this.mtRecord.Size = new System.Drawing.Size(645, 47);
-            this.mtRecord.TabIndex = 2;
-            this.mtRecord.TileImage = global::PschyHealth.Properties.Resources.micOn;
-            this.mtRecord.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mtRecord.UseSelectable = true;
-            this.mtRecord.UseTileImage = true;
-            this.mtRecord.Click += new System.EventHandler(this.mtRecord_Click);
             // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.CustomButton.Visible = false;
+            this.metroTextBox1.Lines = new string[] {
+        "metroTextBox1"};
+            this.metroTextBox1.Location = new System.Drawing.Point(207, 31);
+            this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.PasswordChar = '\0';
+            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox1.SelectedText = "";
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.Size = new System.Drawing.Size(75, 23);
+            this.metroTextBox1.TabIndex = 1;
+            this.metroTextBox1.Text = "metroTextBox1";
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // frmRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 265);
-            this.Controls.Add(this.mtStopSave);
-            this.Controls.Add(this.mtSave);
-            this.Controls.Add(this.mtPause);
-            this.Controls.Add(this.mtRecord);
-            this.Controls.Add(this.lblTimer);
-            this.Controls.Add(this.metroLabel1);
+            this.ClientSize = new System.Drawing.Size(502, 253);
+            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.radialMenu1);
             this.Name = "frmRecord";
-            this.RightToLeftLayout = true;
             this.Text = "Record";
             this.Load += new System.EventHandler(this.frmRecord_Load);
-            this.SizeChanged += new System.EventHandler(this.frmRecord_SizeChanged);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Timer timer1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel lblTimer;
-        private MetroFramework.Controls.MetroTile mtRecord;
-        private MetroFramework.Controls.MetroTile mtPause;
-        private MetroFramework.Controls.MetroTile mtSave;
-        private MetroFramework.Controls.MetroTile mtStopSave;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private DevComponents.DotNetBar.RadialMenu radialMenu1;
+        private DevComponents.DotNetBar.RadialMenuItem rdRecord;
+        private DevComponents.DotNetBar.RadialMenuItem rdSave;
+        private DevComponents.DotNetBar.RadialMenuItem rdPause;
+        private DevComponents.DotNetBar.RadialMenuItem rdPlay;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
     }
 }
