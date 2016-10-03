@@ -63,7 +63,7 @@ namespace PschyHealth
 
         private void dgvStatements_SelectionChanged_1(object sender, EventArgs e)
         {
-            cMethods.fillTextbox(groupBox1, dgvStatements, "Stat", false);
+           // cMethods.fillTextbox(groupBox1, dgvStatements, "Stat", false);
         }
 
         private void pbBack_Click_1(object sender, EventArgs e)

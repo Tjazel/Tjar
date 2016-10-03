@@ -81,6 +81,12 @@
     <Compile Include="Forms\frmArchive.Designer.cs">
       <DependentUpon>frmArchive.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRecord.Designer.cs">
+      <DependentUpon>frmRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,12 +140,6 @@
     </Compile>
     <Compile Include="Forms\frmSwitchUser.Designer.cs">
       <DependentUpon>frmSwitchUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmRecord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmRecord.Designer.cs">
-      <DependentUpon>frmRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmNotepad.cs">
       <SubType>Form</SubType>
@@ -286,6 +286,9 @@
     <EmbeddedResource Include="Forms\frmArchive.resx">
       <DependentUpon>frmArchive.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRecord.resx">
+      <DependentUpon>frmRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMainPage.resx">
       <DependentUpon>frmMainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,9 +315,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSwitchUser.resx">
       <DependentUpon>frmSwitchUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmRecord.resx">
-      <DependentUpon>frmRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmNotepad.resx">
       <DependentUpon>frmNotepad.cs</DependentUpon>
@@ -812,6 +812,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Combo Chart_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circled Play_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Record_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Headset_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_48px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save as_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tape Drive_48px_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

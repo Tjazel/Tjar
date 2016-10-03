@@ -35,24 +35,8 @@
             this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTilePanel1 = new DevComponents.DotNetBar.Metro.MetroTilePanel();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
-            this.btn_StaffNew = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnClients = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnAccounting = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnPayments = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnMedicalAid = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnConsultations = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnDiagnostic = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnInfo = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnReports = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnDateAndTime = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnArchive = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnEmail = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnNotePad = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnCalender = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnAdressBook = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnStatements = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnStatistics = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.btnICD10 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.calendarView1 = new DevComponents.DotNetBar.Schedule.CalendarView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
@@ -83,6 +67,23 @@
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
             this.pbPersonalize = new System.Windows.Forms.PictureBox();
+            this.btn_StaffNew = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnClients = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnAccounting = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnPayments = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnMedicalAid = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnConsultations = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnDiagnostic = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnReports = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnArchive = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnEmail = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnNotePad = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnCalender = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnAdressBook = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnStatements = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnStatistics = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnICD10 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btnRecordings = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.ctxPersonalize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonalize)).BeginInit();
             this.SuspendLayout();
@@ -167,9 +168,7 @@
             this.btnMedicalAid,
             this.btnConsultations,
             this.btnDiagnostic,
-            this.btnInfo,
             this.btnReports,
-            this.btnDateAndTime,
             this.btnArchive,
             this.btnEmail,
             this.btnNotePad,
@@ -177,124 +176,15 @@
             this.btnAdressBook,
             this.btnStatements,
             this.btnStatistics,
-            this.btnICD10});
+            this.btnICD10,
+            this.btnRecordings,
+            this.btnInfo,
+            this.btnDateAndTime});
             // 
             // 
             // 
             this.itemContainer1.TitleStyle.Class = "MetroTileGroupTitle";
             this.itemContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // btn_StaffNew
-            // 
-            this.btn_StaffNew.Image = global::PschyHealth.Properties.Resources.Conference_48px;
-            this.btn_StaffNew.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_StaffNew.Name = "btn_StaffNew";
-            this.btn_StaffNew.SymbolColor = System.Drawing.Color.Empty;
-            this.btn_StaffNew.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedViolet;
-            this.btn_StaffNew.TileSize = new System.Drawing.Size(180, 120);
-            // 
-            // 
-            // 
-            this.btn_StaffNew.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btn_StaffNew.TitleText = "Staff";
-            this.btn_StaffNew.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_StaffNew.Click += new System.EventHandler(this.btn_StaffNew_Click);
-            // 
-            // btnClients
-            // 
-            this.btnClients.Image = global::PschyHealth.Properties.Resources.User_48px;
-            this.btnClients.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnClients.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
-            this.btnClients.Name = "btnClients";
-            this.btnClients.SymbolColor = System.Drawing.Color.Empty;
-            this.btnClients.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedOrange;
-            this.btnClients.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnClients.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnClients.TitleText = "Clients";
-            this.btnClients.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClients.Click += new System.EventHandler(this.btnClients_Click_1);
-            // 
-            // btnAccounting
-            // 
-            this.btnAccounting.Image = global::PschyHealth.Properties.Resources.Coins_48px;
-            this.btnAccounting.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAccounting.Name = "btnAccounting";
-            this.btnAccounting.SymbolColor = System.Drawing.Color.Empty;
-            this.btnAccounting.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Coffee;
-            this.btnAccounting.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnAccounting.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnAccounting.TitleText = "Accounting";
-            this.btnAccounting.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccounting.Click += new System.EventHandler(this.btnAccounting_Click);
-            // 
-            // btnPayments
-            // 
-            this.btnPayments.Image = global::PschyHealth.Properties.Resources.Receipt_48px_1;
-            this.btnPayments.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPayments.Name = "btnPayments";
-            this.btnPayments.SymbolColor = System.Drawing.Color.Empty;
-            this.btnPayments.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnPayments.TileSize = new System.Drawing.Size(180, 120);
-            // 
-            // 
-            // 
-            this.btnPayments.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnPayments.TitleText = "Payments";
-            this.btnPayments.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayments.Click += new System.EventHandler(this.btnDateAndTime_Click);
-            // 
-            // btnMedicalAid
-            // 
-            this.btnMedicalAid.Image = global::PschyHealth.Properties.Resources.Clinic_48px_1;
-            this.btnMedicalAid.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnMedicalAid.Name = "btnMedicalAid";
-            this.btnMedicalAid.SymbolColor = System.Drawing.Color.Empty;
-            this.btnMedicalAid.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
-            this.btnMedicalAid.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnMedicalAid.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnMedicalAid.TitleText = "Medical Aid";
-            this.btnMedicalAid.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMedicalAid.Click += new System.EventHandler(this.metroTileItem7_Click);
-            // 
-            // btnConsultations
-            // 
-            this.btnConsultations.Image = global::PschyHealth.Properties.Resources.Collaboration_48px_11;
-            this.btnConsultations.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnConsultations.Name = "btnConsultations";
-            this.btnConsultations.SymbolColor = System.Drawing.Color.Empty;
-            this.btnConsultations.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnConsultations.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnConsultations.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnConsultations.TitleText = "Consultations";
-            this.btnConsultations.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultations.Click += new System.EventHandler(this.metroTileItem10_Click);
-            // 
-            // btnDiagnostic
-            // 
-            this.btnDiagnostic.Image = global::PschyHealth.Properties.Resources.For_Beginner_48px;
-            this.btnDiagnostic.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDiagnostic.Name = "btnDiagnostic";
-            this.btnDiagnostic.SymbolColor = System.Drawing.Color.Empty;
-            this.btnDiagnostic.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnDiagnostic.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnDiagnostic.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnDiagnostic.TitleText = "Diagnostic Codes";
-            this.btnDiagnostic.TitleTextFont = new System.Drawing.Font("Adam", 16F, System.Drawing.FontStyle.Bold);
             // 
             // btnInfo
             // 
@@ -307,27 +197,8 @@
             this.btnInfo.Text = "8 out of 100 teens report having serious depression.";
             this.btnInfo.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
             this.btnInfo.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnInfo.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnInfo.TitleTextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnReports
-            // 
-            this.btnReports.Image = global::PschyHealth.Properties.Resources.Paste_48px1;
-            this.btnReports.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnReports.Name = "btnReports";
-            this.btnReports.SymbolColor = System.Drawing.Color.Empty;
-            this.btnReports.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Plum;
-            this.btnReports.TileSize = new System.Drawing.Size(180, 120);
-            // 
-            // 
-            // 
-            this.btnReports.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnReports.TitleText = "Reports";
-            this.btnReports.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btnDateAndTime
             // 
@@ -341,130 +212,6 @@
             // 
             this.btnDateAndTime.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnDateAndTime.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnArchive
-            // 
-            this.btnArchive.Image = global::PschyHealth.Properties.Resources.Micro_SD_48px_1;
-            this.btnArchive.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnArchive.Name = "btnArchive";
-            this.btnArchive.SymbolColor = System.Drawing.Color.Empty;
-            this.btnArchive.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnArchive.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnArchive.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnArchive.TitleText = "Archive";
-            this.btnArchive.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
-            // 
-            // btnEmail
-            // 
-            this.btnEmail.Image = global::PschyHealth.Properties.Resources.Message_48px_1;
-            this.btnEmail.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEmail.Name = "btnEmail";
-            this.btnEmail.SymbolColor = System.Drawing.Color.Empty;
-            this.btnEmail.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnEmail.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnEmail.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnEmail.TitleText = "E-mail";
-            this.btnEmail.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnNotePad
-            // 
-            this.btnNotePad.Image = global::PschyHealth.Properties.Resources.Edit_Property_48px_1;
-            this.btnNotePad.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnNotePad.Name = "btnNotePad";
-            this.btnNotePad.SymbolColor = System.Drawing.Color.Empty;
-            this.btnNotePad.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnNotePad.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnNotePad.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnNotePad.TitleText = "Note Pad";
-            this.btnNotePad.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotePad.Click += new System.EventHandler(this.btnNotePad_Click);
-            // 
-            // btnCalender
-            // 
-            this.btnCalender.Image = global::PschyHealth.Properties.Resources.Calendar_48px;
-            this.btnCalender.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCalender.Name = "btnCalender";
-            this.btnCalender.SymbolColor = System.Drawing.Color.Empty;
-            this.btnCalender.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnCalender.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnCalender.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnCalender.TitleText = "Calender";
-            this.btnCalender.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnAdressBook
-            // 
-            this.btnAdressBook.Image = global::PschyHealth.Properties.Resources.Contacts_48px;
-            this.btnAdressBook.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAdressBook.Name = "btnAdressBook";
-            this.btnAdressBook.SymbolColor = System.Drawing.Color.Empty;
-            this.btnAdressBook.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Maroon;
-            this.btnAdressBook.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnAdressBook.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnAdressBook.TitleText = "Adress Book";
-            this.btnAdressBook.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdressBook.Click += new System.EventHandler(this.btnAdressBook_Click);
-            // 
-            // btnStatements
-            // 
-            this.btnStatements.Image = global::PschyHealth.Properties.Resources.Copy_48px_1;
-            this.btnStatements.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnStatements.Name = "btnStatements";
-            this.btnStatements.SymbolColor = System.Drawing.Color.Empty;
-            this.btnStatements.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Olive;
-            this.btnStatements.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnStatements.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnStatements.TitleText = "Statements";
-            this.btnStatements.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatements.Click += new System.EventHandler(this.btnStatements_Click);
-            // 
-            // btnStatistics
-            // 
-            this.btnStatistics.Image = global::PschyHealth.Properties.Resources.Combo_Chart_48px;
-            this.btnStatistics.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.SymbolColor = System.Drawing.Color.Empty;
-            this.btnStatistics.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            this.btnStatistics.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnStatistics.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnStatistics.TitleText = "Statistics";
-            this.btnStatistics.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnICD10
-            // 
-            this.btnICD10.Image = global::PschyHealth.Properties.Resources.Mind_Map_48px;
-            this.btnICD10.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnICD10.Name = "btnICD10";
-            this.btnICD10.SymbolColor = System.Drawing.Color.Empty;
-            this.btnICD10.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            this.btnICD10.TileSize = new System.Drawing.Size(220, 120);
-            // 
-            // 
-            // 
-            this.btnICD10.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnICD10.TitleText = "ICD 10 Codes";
-            this.btnICD10.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // calendarView1
             // 
@@ -698,6 +445,273 @@
             this.pbPersonalize.TabStop = false;
             this.pbPersonalize.Click += new System.EventHandler(this.pbPersonalize_Click);
             // 
+            // btn_StaffNew
+            // 
+            this.btn_StaffNew.Image = global::PschyHealth.Properties.Resources.Conference_48px;
+            this.btn_StaffNew.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_StaffNew.Name = "btn_StaffNew";
+            this.btn_StaffNew.SymbolColor = System.Drawing.Color.Empty;
+            this.btn_StaffNew.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedViolet;
+            this.btn_StaffNew.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.btn_StaffNew.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btn_StaffNew.TitleText = "Staff";
+            this.btn_StaffNew.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_StaffNew.Click += new System.EventHandler(this.btn_StaffNew_Click);
+            // 
+            // btnClients
+            // 
+            this.btnClients.Image = global::PschyHealth.Properties.Resources.User_48px;
+            this.btnClients.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClients.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            this.btnClients.Name = "btnClients";
+            this.btnClients.SymbolColor = System.Drawing.Color.Empty;
+            this.btnClients.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedOrange;
+            this.btnClients.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnClients.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnClients.TitleText = "Clients";
+            this.btnClients.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click_1);
+            // 
+            // btnAccounting
+            // 
+            this.btnAccounting.Image = global::PschyHealth.Properties.Resources.Coins_48px;
+            this.btnAccounting.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAccounting.Name = "btnAccounting";
+            this.btnAccounting.SymbolColor = System.Drawing.Color.Empty;
+            this.btnAccounting.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Coffee;
+            this.btnAccounting.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnAccounting.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnAccounting.TitleText = "Accounting";
+            this.btnAccounting.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccounting.Click += new System.EventHandler(this.btnAccounting_Click);
+            // 
+            // btnPayments
+            // 
+            this.btnPayments.Image = global::PschyHealth.Properties.Resources.Receipt_48px_1;
+            this.btnPayments.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPayments.Name = "btnPayments";
+            this.btnPayments.SymbolColor = System.Drawing.Color.Empty;
+            this.btnPayments.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnPayments.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.btnPayments.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnPayments.TitleText = "Payments";
+            this.btnPayments.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayments.Click += new System.EventHandler(this.btnDateAndTime_Click);
+            // 
+            // btnMedicalAid
+            // 
+            this.btnMedicalAid.Image = global::PschyHealth.Properties.Resources.Clinic_48px_1;
+            this.btnMedicalAid.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMedicalAid.Name = "btnMedicalAid";
+            this.btnMedicalAid.SymbolColor = System.Drawing.Color.Empty;
+            this.btnMedicalAid.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
+            this.btnMedicalAid.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnMedicalAid.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnMedicalAid.TitleText = "Medical Aid";
+            this.btnMedicalAid.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMedicalAid.Click += new System.EventHandler(this.metroTileItem7_Click);
+            // 
+            // btnConsultations
+            // 
+            this.btnConsultations.Image = global::PschyHealth.Properties.Resources.Collaboration_48px_11;
+            this.btnConsultations.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConsultations.Name = "btnConsultations";
+            this.btnConsultations.SymbolColor = System.Drawing.Color.Empty;
+            this.btnConsultations.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnConsultations.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnConsultations.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnConsultations.TitleText = "Consultations";
+            this.btnConsultations.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultations.Click += new System.EventHandler(this.metroTileItem10_Click);
+            // 
+            // btnDiagnostic
+            // 
+            this.btnDiagnostic.Image = global::PschyHealth.Properties.Resources.For_Beginner_48px;
+            this.btnDiagnostic.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDiagnostic.Name = "btnDiagnostic";
+            this.btnDiagnostic.SymbolColor = System.Drawing.Color.Empty;
+            this.btnDiagnostic.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnDiagnostic.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnDiagnostic.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnDiagnostic.TitleText = "Diagnostic Codes";
+            this.btnDiagnostic.TitleTextFont = new System.Drawing.Font("Adam", 16F, System.Drawing.FontStyle.Bold);
+            // 
+            // btnReports
+            // 
+            this.btnReports.Image = global::PschyHealth.Properties.Resources.Paste_48px1;
+            this.btnReports.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnReports.Name = "btnReports";
+            this.btnReports.SymbolColor = System.Drawing.Color.Empty;
+            this.btnReports.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Plum;
+            this.btnReports.TileSize = new System.Drawing.Size(180, 120);
+            // 
+            // 
+            // 
+            this.btnReports.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnReports.TitleText = "Reports";
+            this.btnReports.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnArchive
+            // 
+            this.btnArchive.Image = global::PschyHealth.Properties.Resources.Micro_SD_48px_1;
+            this.btnArchive.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnArchive.Name = "btnArchive";
+            this.btnArchive.SymbolColor = System.Drawing.Color.Empty;
+            this.btnArchive.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnArchive.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnArchive.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnArchive.TitleText = "Archive";
+            this.btnArchive.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
+            // 
+            // btnEmail
+            // 
+            this.btnEmail.Image = global::PschyHealth.Properties.Resources.Message_48px_1;
+            this.btnEmail.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.SymbolColor = System.Drawing.Color.Empty;
+            this.btnEmail.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnEmail.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnEmail.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnEmail.TitleText = "E-mail";
+            this.btnEmail.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnNotePad
+            // 
+            this.btnNotePad.Image = global::PschyHealth.Properties.Resources.Edit_Property_48px_1;
+            this.btnNotePad.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNotePad.Name = "btnNotePad";
+            this.btnNotePad.SymbolColor = System.Drawing.Color.Empty;
+            this.btnNotePad.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnNotePad.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnNotePad.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnNotePad.TitleText = "Note Pad";
+            this.btnNotePad.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotePad.Click += new System.EventHandler(this.btnNotePad_Click);
+            // 
+            // btnCalender
+            // 
+            this.btnCalender.Image = global::PschyHealth.Properties.Resources.Calendar_48px;
+            this.btnCalender.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCalender.Name = "btnCalender";
+            this.btnCalender.SymbolColor = System.Drawing.Color.Empty;
+            this.btnCalender.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnCalender.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnCalender.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnCalender.TitleText = "Calender";
+            this.btnCalender.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnAdressBook
+            // 
+            this.btnAdressBook.Image = global::PschyHealth.Properties.Resources.Contacts_48px;
+            this.btnAdressBook.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAdressBook.Name = "btnAdressBook";
+            this.btnAdressBook.SymbolColor = System.Drawing.Color.Empty;
+            this.btnAdressBook.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Maroon;
+            this.btnAdressBook.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnAdressBook.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnAdressBook.TitleText = "Adress Book";
+            this.btnAdressBook.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdressBook.Click += new System.EventHandler(this.btnAdressBook_Click);
+            // 
+            // btnStatements
+            // 
+            this.btnStatements.Image = global::PschyHealth.Properties.Resources.Copy_48px_1;
+            this.btnStatements.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStatements.Name = "btnStatements";
+            this.btnStatements.SymbolColor = System.Drawing.Color.Empty;
+            this.btnStatements.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Olive;
+            this.btnStatements.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnStatements.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnStatements.TitleText = "Statements";
+            this.btnStatements.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatements.Click += new System.EventHandler(this.btnStatements_Click);
+            // 
+            // btnStatistics
+            // 
+            this.btnStatistics.Image = global::PschyHealth.Properties.Resources.Combo_Chart_48px;
+            this.btnStatistics.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStatistics.Name = "btnStatistics";
+            this.btnStatistics.SymbolColor = System.Drawing.Color.Empty;
+            this.btnStatistics.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            this.btnStatistics.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnStatistics.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnStatistics.TitleText = "Statistics";
+            this.btnStatistics.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnICD10
+            // 
+            this.btnICD10.Image = global::PschyHealth.Properties.Resources.Mind_Map_48px;
+            this.btnICD10.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnICD10.Name = "btnICD10";
+            this.btnICD10.SymbolColor = System.Drawing.Color.Empty;
+            this.btnICD10.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            this.btnICD10.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnICD10.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnICD10.TitleText = "ICD 10 Codes";
+            this.btnICD10.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnRecordings
+            // 
+            this.btnRecordings.Image = global::PschyHealth.Properties.Resources.Voice_Recognition_Scan_48px;
+            this.btnRecordings.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRecordings.Name = "btnRecordings";
+            this.btnRecordings.SymbolColor = System.Drawing.Color.Empty;
+            this.btnRecordings.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blueish;
+            this.btnRecordings.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.btnRecordings.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnRecordings.TitleText = "Recordings";
+            this.btnRecordings.TitleTextFont = new System.Drawing.Font("Adam", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecordings.Click += new System.EventHandler(this.btnRecordings_Click);
+            // 
             // frmMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -774,5 +788,6 @@
         private DevComponents.DotNetBar.Metro.MetroTileItem btnStatements;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnStatistics;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnICD10;
+        private DevComponents.DotNetBar.Metro.MetroTileItem btnRecordings;
     }
 }
