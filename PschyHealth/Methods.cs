@@ -22,7 +22,7 @@ namespace PschyHealth
     //The main reason for this class is to reuse code, thus not making the program too large, and also making it more efficient.
     class Methods
     {
-        SqlConnection conn = new SqlConnection("Data Source=jarvisdevelopment.database.windows.net;Initial Catalog=JarvisDev;User id=JohannJarvis;Password=allersJohann96;");
+        SqlConnection conn = new SqlConnection("Data Source=jarvisdevelopment.database.windows.net;Initial Catalog=JarvisDev;User ID = ProjectJarvis; Password = JarvisProject2016");
         //The fillDGV method is used to fill a datagridview with the information gathered from the database
         //The first fillDGV method is used to simply fill the metro grid with no extra operations.
         public void fillDGV(MetroGrid dgv, String sTable)
@@ -52,7 +52,7 @@ namespace PschyHealth
                 BindingSource bindingSource1 = new BindingSource();
 
                 String connectionString =
-                "Data Source = jarvisdevelopment.database.windows.net; Initial Catalog = JarvisDev; User ID = RuanJarvis; Password = Claassen93";
+                "Data Source = jarvisdevelopment.database.windows.net; Initial Catalog = JarvisDev; User ID = ProjectJarvis; Password = JarvisProject2016";
 
                 // Create a new data adapter based on the specified query.
                 dataAdapter = new SqlDataAdapter("SELECT * FROM " + sTable + filter, connectionString);
