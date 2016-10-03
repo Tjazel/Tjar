@@ -52,7 +52,6 @@
             this.Controls.Add(this.pbMic);
             this.Name = "frmArchive";
             this.Text = "frmArchive";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmArchive_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbMic)).EndInit();
             this.ResumeLayout(false);

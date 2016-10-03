@@ -233,6 +233,16 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Combo_Chart_48px {
+            get {
+                object obj = ResourceManager.GetObject("Combo_Chart_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Conference_48px {
             get {
                 object obj = ResourceManager.GetObject("Conference_48px", resourceCulture);

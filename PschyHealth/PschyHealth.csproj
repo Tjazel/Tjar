@@ -810,6 +810,9 @@
   <ItemGroup>
     <None Include="Resources\Edit Property_48px_1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Combo Chart_48px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

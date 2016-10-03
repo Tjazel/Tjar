@@ -58,7 +58,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmClients frmClients = new frmClients();
-                frmClients.ShowDialog();
+                frmClients.Show();
             }
         }
 
@@ -454,7 +454,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmArchive frmArchive = new frmArchive();
-                frmArchive.ShowDialog();
+                frmArchive.Show();
             }
         }
 
@@ -463,14 +463,72 @@ namespace PschyHealth
 
         }
 
-        private void metroTileItem2_Click(object sender, EventArgs e)
+        private void btnAdressBook_Click(object sender, EventArgs e)
         {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmAddressBook")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
 
+            if (IsOpen == false)
+            {
+                frmAddressBook frmAddressBook = new frmAddressBook();
+                frmAddressBook.Show();
+            }
         }
 
         private void pbPersonalize_Click(object sender, EventArgs e)
         {
             ctxPersonalize.Show(pbPersonalize, 0, pbPersonalize.Height);
+        }
+
+        private void btnNotePad_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmNotepad")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmNotepad frmNotepad = new frmNotepad();
+                frmNotepad.Show();
+            }
+        }
+
+        private void btnStatements_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmStatements")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmStatements frmStatements = new frmStatements();
+                frmStatements.Show();
+            }
         }
     }
 
