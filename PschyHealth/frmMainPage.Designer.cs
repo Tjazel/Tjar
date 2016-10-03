@@ -502,7 +502,7 @@
             this.btnAdressBook.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAdressBook.Name = "btnAdressBook";
             this.btnAdressBook.SymbolColor = System.Drawing.Color.Empty;
-            this.btnAdressBook.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.btnAdressBook.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Maroon;
             this.btnAdressBook.TileSize = new System.Drawing.Size(220, 120);
             // 
             // 
