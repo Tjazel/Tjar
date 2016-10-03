@@ -164,6 +164,11 @@ namespace PschyHealth
                 txtAccSearch.Enabled = true;
             txtAccSearch.Clear();
         }
+
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
 

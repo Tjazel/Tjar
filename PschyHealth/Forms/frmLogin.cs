@@ -29,19 +29,19 @@ namespace PschyHealth
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            frmMainPage f1 = new frmMainPage();
-            f1.Show();
-            this.Hide();
-            /* MetroGrid dgv = new MetroGrid();
-             dgv.Parent = this;
-             cMethods.fillDGV(dgv,"Staff");
-             for (int i = 0; i < dgv.RowCount; i++)
-             {
-                 if ((dgv.Rows[i].Cells["Username"].Value.ToString()==mtxb_Username.Text)&&(dgv.Rows[i].Cells["Password"].Value.ToString() == mtxb_Password.Text))
-                 {*/
-
-            /*  }
-          }*/
+            //Uncomment om die kode te gebruik ir login..... Ctrl + K, Ctrl + U
+            //Boolean loginCorrect = false;
+            //loginCorrect = cMethods.checkLogin(mtxb_Username.Text, mtxb_Password.Text);
+            //if (loginCorrect)
+            //{
+                frmMainPage f1 = new frmMainPage();
+                f1.Show();
+                this.Hide();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Input data incorrect, please try again.");
+            //}
         }
 
         private void metroLink1_Click(object sender, EventArgs e)

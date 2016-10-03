@@ -22,7 +22,7 @@ namespace PschyHealth
     //The main reason for this class is to reuse code, thus not making the program too large, and also making it more efficient.
     class Methods
     {
-        SqlConnection conn = new SqlConnection("Data Source=jarvisdevelopment.database.windows.net;Initial Catalog=JarvisDev;User id=JohannJarvis;Password=allersJohann96;");
+        SqlConnection conn = new SqlConnection("Data Source=jarvisdevelopment.database.windows.net;Initial Catalog=JarvisDev;User ID = ProjectJarvis; Password = JarvisProject2016");
         //The fillDGV method is used to fill a datagridview with the information gathered from the database
         //The first fillDGV method is used to simply fill the metro grid with no extra operations.
         public void fillDGV(MetroGrid dgv, String sTable)
@@ -52,7 +52,7 @@ namespace PschyHealth
                 BindingSource bindingSource1 = new BindingSource();
 
                 String connectionString =
-                "Data Source = jarvisdevelopment.database.windows.net; Initial Catalog = JarvisDev; User ID = RuanJarvis; Password = Claassen93";
+                "Data Source = jarvisdevelopment.database.windows.net; Initial Catalog = JarvisDev; User ID = ProjectJarvis; Password = JarvisProject2016";
 
                 // Create a new data adapter based on the specified query.
                 dataAdapter = new SqlDataAdapter("SELECT * FROM " + sTable + filter, connectionString);
@@ -113,6 +113,99 @@ namespace PschyHealth
                     recallFilter(dgv, sTable, filter);
                 }
             }
+        }
+
+        //Hierdie is die kode vir die Login
+        //public bool checkLogin(String username, String password)
+        //{
+        //SqlCommand cmd = new SqlCommand();
+        //SqlDataReader reader;
+
+        //cmd.CommandText = "SELECT * FROM Staff WHERE Username = @P1 AND Password = @P2";
+        //    cmd.Parameters.AddWithValue("@P1", username);
+        //    cmd.Parameters.AddWithValue("@P2", password);
+        //    cmd.CommandType = CommandType.Text;
+        //    cmd.Connection = conn;
+        //    conn.Open();
+
+        //reader = cmd.ExecuteReader();
+        //    DataTable dt = new DataTable();
+        //dt.Load(reader);
+        //    // Data is accessible through the DataReader object here.
+        //    if (dt.Rows.Count == 1)
+        //    {
+        //        conn.Close();
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        conn.Close();
+        //        return false;
+        //    }
+
+//}
+
+        public void insert(String table, String field)
+        {
+            SqlDataReader reader;
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "INSERT INTO @P1 VALUES (@P2)";
+            cmd.Parameters.AddWithValue("@P1", table);
+            cmd.Parameters.AddWithValue("@P2", field);
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            conn.Open();
+
+            reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+            conn.Close();
+
+        }
+
+        public void delete(String table, String field, String column)
+        {
+            SqlDataReader reader;
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "DELETE FROM @P1 WHERE @P3 = @P2";
+            cmd.Parameters.AddWithValue("@P1", table);
+            cmd.Parameters.AddWithValue("@P2", field);
+            cmd.Parameters.AddWithValue("@P3", column);
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            conn.Open();
+
+            reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+            conn.Close();
+
+        }
+
+        public void edit(String table, String column, String field, String selColumn, String selValue)
+        {
+            SqlDataReader reader;
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "UPDATE @P1 SET @P3 = @P2 WHERE @P4 = @P5";
+            cmd.Parameters.AddWithValue("@P1", table);
+            cmd.Parameters.AddWithValue("@P2", field);
+            cmd.Parameters.AddWithValue("@P3", column);
+            cmd.Parameters.AddWithValue("@P4", selColumn);
+            cmd.Parameters.AddWithValue("@P5", selValue);
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            conn.Open();
+
+            reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+            conn.Close();
         }
 
         public void filterDGV(MetroGrid dgv, String sTable, String filter)
