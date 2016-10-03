@@ -44,6 +44,7 @@ namespace PschyHealth
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+            
 
             cMethods.fillDGV(dgvClients, "Clients", cmbClientCriteria);
         }
@@ -81,37 +82,23 @@ namespace PschyHealth
 
         private void txtClientsSearch_TextChanged(object sender, EventArgs e)
         {
-            if(!cmbClientSymbol.Visible)
-            {
-                cMethods.filterDGV(dgvClients, "Clients", " WHERE " + cmbClientCriteria.Text + " LIKE '%" + txtClientsSearch.Text + "%'");
-            }
-            else
-            {
-                cMethods.filterDGV(dgvClients, "Clients", " WHERE " + cmbClientCriteria.Text + " " + cmbClientSymbol.Text + " " + txtClientsSearch.Text);
-            }
+            filter();
         }
 
         private void cmbClientCriteria_TextChanged(object sender, EventArgs e)
         {
+            txtClientsSearch.Clear();
+            cmbClientSymbol.SelectedIndex = -1;
             if (cmbClientCriteria.Text != "")
             {
                 txtClientsSearch.Enabled = true;
-                try
-                {
-                    cMethods.filterDGV(dgvClients, "Clients", " WHERE " + cmbClientCriteria.Text + " LIKE '%" + txtClientsSearch.Text + "%'");
-                    cmbClientSymbol.Hide();
-                }
-                catch
-                {
-                    cmbClientSymbol.Show();
-                    txtClientsSearch.Enabled = false;
-                }
             }
             else
             {
                 txtClientsSearch.Enabled = false;
                 txtClientsSearch.Text = "";
             }
+            cMethods.fillDGV(dgvClients, "Accounting");
         }
 
         private void pbMic_Click(object sender, EventArgs e)
@@ -123,6 +110,31 @@ namespace PschyHealth
         {
             if (cmbClientSymbol.Text != "")
                 txtClientsSearch.Enabled = true;
+        }
+        private void filter()
+        {
+            if (txtClientsSearch.Text != "")
+                if (!cmbClientSymbol.Visible)
+                {
+                    cMethods.filterDGV(dgvClients, "Clients", " WHERE " + cmbClientCriteria.Text + " LIKE '%" + txtClientsSearch.Text + "%'");
+                }
+                else
+                {
+                    cMethods.filterDGV(dgvClients, "Accounting", " WHERE " + cmbClientCriteria.Text + " " + cmbClientSymbol.Text + " " + txtClientsSearch.Text);
+                }
+        }
+
+        private void cmbClientSymbol_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if ((cmbClientCriteria.Text != "") && (cmbClientSymbol.Visible == false))
+            {
+                txtClientsSearch.Enabled = true;
+                filter();
+            }
+            else
+            {
+                txtClientsSearch.Enabled = false;
+            }
         }
     }
 }
