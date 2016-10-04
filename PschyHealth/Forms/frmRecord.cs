@@ -76,17 +76,16 @@ namespace PschyHealth.Forms
             lblTime.Text = Convert.ToString(hour + " : " + min + " : " + sec + " : " + ms);
             ms++;
 
-            if (ms > 10)
+            if(ms>10)
             {
                 sec++;
                 ms = 0;
-            }
-            else if (sec > 60)
+            }else if(sec>60)
             {
                 min++;
                 sec = 0;
             }
-            else if (min > 60)
+            else if(min>60)
             {
                 hour++;
                 min = 0;
@@ -111,16 +110,15 @@ namespace PschyHealth.Forms
             lblPlayBack.Visible = true;
             lblTime.Visible = false;
             pbRec.Visible = false;
-
-
-
+           
+           
+            
             if (musica == "")
             {
                 OpenFileDialog open = new OpenFileDialog();
                 open.Filter = "Wave|*.wav";
                 if (open.ShowDialog() == DialogResult.OK) { musica = open.FileName; }
-            }
-            else
+            } else
             {
                 OpenFileDialog open = new OpenFileDialog();
                 open.Filter = "Wave|*.wav";
@@ -129,11 +127,11 @@ namespace PschyHealth.Forms
             }
             txtName.Visible = false;
             lblPlayName.Visible = true;
-
+             
             pbWave.Visible = true;
             lblPlayBack.Visible = true;
             mciSendString("play " + musica, null, 0, 0);
-
+                
 
 
 
@@ -157,7 +155,7 @@ namespace PschyHealth.Forms
 
         private void rdSave_Click(object sender, EventArgs e)
         {
-
+            
 
             pbRec.Visible = false;
             timer1.Stop();

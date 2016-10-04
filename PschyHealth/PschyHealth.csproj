@@ -847,6 +847,12 @@
   <ItemGroup>
     <None Include="Resources\Audio Wave_48px_3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio Wave_48px_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Record_48px_5.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
