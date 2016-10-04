@@ -71,6 +71,8 @@ namespace PschyHealth
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
             cMethods.CheckFolder(path);
             cMethods.CheckFolder(path + @"\Archive");
+            cMethods.CheckFolder(path + @"\Recordings");
+            cMethods.CheckFolder(path + @"\Recordings\"+ DateTime.Now.Month.ToString());
             cMethods.CheckFolder(path + @"\Log");
             cMethods.CheckFolder(path + @"\Statements");
             cMethods.CheckFolder(path + @"\Archive\LogArchive");
@@ -501,6 +503,7 @@ namespace PschyHealth
         private void pbPersonalize_Click(object sender, EventArgs e)
         {
             ctxPersonalize.Show(pbPersonalize, 0, pbPersonalize.Height);
+            
         }
 
         private void btnNotePad_Click(object sender, EventArgs e)

@@ -78,6 +78,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
+            this.pbMicOff = new System.Windows.Forms.PictureBox();
             this.contexUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -87,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMicOff)).BeginInit();
             this.SuspendLayout();
             // 
             // ctxUser
@@ -575,26 +577,26 @@
             this.lockToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.contexUser.Name = "contextMenuStrip1";
-            this.contexUser.Size = new System.Drawing.Size(240, 76);
+            this.contexUser.Size = new System.Drawing.Size(246, 82);
             this.contexUser.Opening += new System.ComponentModel.CancelEventHandler(this.contexUser_Opening);
             // 
             // changeAccountSettingsToolStripMenuItem
             // 
             this.changeAccountSettingsToolStripMenuItem.Name = "changeAccountSettingsToolStripMenuItem";
-            this.changeAccountSettingsToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
+            this.changeAccountSettingsToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
             this.changeAccountSettingsToolStripMenuItem.Text = "Change account settings";
             // 
             // lockToolStripMenuItem
             // 
             this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
+            this.lockToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
             this.lockToolStripMenuItem.Text = "Lock";
             this.lockToolStripMenuItem.Click += new System.EventHandler(this.lockToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
             this.signOutToolStripMenuItem.Text = "Sign out";
             // 
             // pictureBox4
@@ -607,13 +609,14 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 43;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::PschyHealth.Properties.Resources.Gender_Neutral_User_48px_1;
             this.pictureBox2.Location = new System.Drawing.Point(1596, 9);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -643,13 +646,14 @@
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMic.TabIndex = 38;
             this.pbMic.TabStop = false;
+            this.pbMic.Click += new System.EventHandler(this.pbMic_Click);
             // 
             // pbSettings
             // 
             this.pbSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbSettings.Image = global::PschyHealth.Properties.Resources.Settings_48px;
             this.pbSettings.Location = new System.Drawing.Point(1786, 9);
-            this.pbSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbSettings.Margin = new System.Windows.Forms.Padding(4);
             this.pbSettings.Name = "pbSettings";
             this.pbSettings.Size = new System.Drawing.Size(40, 28);
             this.pbSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -662,7 +666,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::PschyHealth.Properties.Resources.Information_48px;
             this.pictureBox3.Location = new System.Drawing.Point(1749, 9);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -675,7 +679,7 @@
             this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbExit.Image = global::PschyHealth.Properties.Resources.Close_Window_48px;
             this.pbExit.Location = new System.Drawing.Point(1874, 9);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(4);
             this.pbExit.Name = "pbExit";
             this.pbExit.Size = new System.Drawing.Size(29, 28);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -688,13 +692,26 @@
             this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMinimize.Image = global::PschyHealth.Properties.Resources.Minimize_Window_48px;
             this.pbMinimize.Location = new System.Drawing.Point(1835, 9);
-            this.pbMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.pbMinimize.Name = "pbMinimize";
             this.pbMinimize.Size = new System.Drawing.Size(31, 28);
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMinimize.TabIndex = 47;
             this.pbMinimize.TabStop = false;
             this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
+            // 
+            // pbMicOff
+            // 
+            this.pbMicOff.Image = global::PschyHealth.Properties.Resources.No_Microphone_48px;
+            this.pbMicOff.Location = new System.Drawing.Point(1552, 9);
+            this.pbMicOff.Margin = new System.Windows.Forms.Padding(2);
+            this.pbMicOff.Name = "pbMicOff";
+            this.pbMicOff.Size = new System.Drawing.Size(38, 28);
+            this.pbMicOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMicOff.TabIndex = 48;
+            this.pbMicOff.TabStop = false;
+            this.pbMicOff.Visible = false;
+            this.pbMicOff.Click += new System.EventHandler(this.pbMicOff_Click);
             // 
             // ucToolbar
             // 
@@ -705,6 +722,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.pbMicOff);
             this.Controls.Add(this.pbMinimize);
             this.Controls.Add(this.pbExit);
             this.Controls.Add(this.tbMain);
@@ -728,6 +746,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMicOff)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,5 +803,6 @@
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.PictureBox pbMinimize;
+        private System.Windows.Forms.PictureBox pbMicOff;
     }
 }
