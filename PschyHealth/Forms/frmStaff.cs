@@ -174,5 +174,17 @@ namespace PschyHealth
             if (metroComboBox1.Text != "")
                 metroTextBox17.Enabled = true;
         }
+
+        private void metroTextButton5_Click(object sender, EventArgs e)
+        {
+            if (dgvStaff.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dgvStaff.SelectedRows[0].Index;
+
+                int rowID = int.Parse(dgvStaff[0, selectedIndex].Value.ToString());
+                cMethods.delete("Staff", rowID);
+            }
+
+        }
     }
 }

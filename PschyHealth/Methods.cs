@@ -197,20 +197,27 @@ namespace PschyHealth
 
         }
 
-        public void edit(String table, String column, String field, String selColumn, String selValue)
+        public void edit(String table, String column, String field, int rowID)
         {
             SqlDataReader reader;
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "UPDATE @P1 SET @P3 = @P2 WHERE @P4 = @P5";
+            cmd.CommandText = "UPDATE @P1 SET @P3 = @P2 WHERE RowID = @RowID";
             cmd.Parameters.AddWithValue("@P1", table);
             cmd.Parameters.AddWithValue("@P2", field);
             cmd.Parameters.AddWithValue("@P3", column);
-            cmd.Parameters.AddWithValue("@P4", selColumn);
-            cmd.Parameters.AddWithValue("@P5", selValue);
+            SqlParameter RowParameter = new SqlParameter();
+            RowParameter.ParameterName = "@RowID";
+            RowParameter.SqlDbType = SqlDbType.Int;
+            RowParameter.IsNullable = false;
+            RowParameter.Value = rowID;
+            cmd.Parameters.Add(RowParameter);
+
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
             conn.Open();
+            cmd.ExecuteNonQuery();
+
 
             reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();

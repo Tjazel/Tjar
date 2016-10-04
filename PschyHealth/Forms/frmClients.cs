@@ -153,5 +153,16 @@ namespace PschyHealth
             if (cmbClientSymbol.Visible == true)
                 txtClientsSearch.Enabled = false;
         }
+
+        private void btnDeleteClient_Click(object sender, EventArgs e)
+        {
+            if (dgvClients.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dgvClients.SelectedRows[0].Index;
+
+                int rowID = int.Parse(dgvClients[0, selectedIndex].Value.ToString());
+                cMethods.delete("Clients", rowID);
+            }
+        }
     }
 }

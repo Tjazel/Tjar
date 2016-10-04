@@ -183,5 +183,18 @@ namespace PschyHealth
                 metroTextBox17.Enabled = true;
             metroTextBox17.Clear();
         }
+
+        private void metroTextButton5_Click(object sender, EventArgs e)
+        {
+
+            if (dgvMedicalAid.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dgvMedicalAid.SelectedRows[0].Index;
+
+                int rowID = int.Parse(dgvMedicalAid[0, selectedIndex].Value.ToString());
+                cMethods.delete("MedicalAid", rowID);
+            }
+
+        }
     }
 }

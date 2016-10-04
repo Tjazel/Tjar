@@ -84,8 +84,10 @@
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
             this.pbPersonalize = new System.Windows.Forms.PictureBox();
+            this.dateNavigator1 = new DevComponents.DotNetBar.Schedule.DateNavigator();
             this.ctxPersonalize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonalize)).BeginInit();
+            this.dateNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTileFrame1
@@ -143,9 +145,10 @@
             this.metroTilePanel1.EnableDragDrop = true;
             this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.itemContainer1});
-            this.metroTilePanel1.Location = new System.Drawing.Point(10, 63);
+            this.metroTilePanel1.Location = new System.Drawing.Point(13, 78);
+            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTilePanel1.Name = "metroTilePanel1";
-            this.metroTilePanel1.Size = new System.Drawing.Size(1094, 715);
+            this.metroTilePanel1.Size = new System.Drawing.Size(1459, 880);
             this.metroTilePanel1.TabIndex = 30;
             this.metroTilePanel1.Text = "metroTilePanel1";
             this.metroTilePanel1.ItemClick += new System.EventHandler(this.metroTilePanel1_ItemClick);
@@ -492,17 +495,18 @@
             this.calendarView1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.calendarView1.ContainerControlProcessDialogKey = true;
             this.calendarView1.HighlightCurrentDay = true;
-            this.calendarView1.Location = new System.Drawing.Point(828, 62);
+            this.calendarView1.Location = new System.Drawing.Point(81, 21);
+            this.calendarView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.calendarView1.MultiUserTabHeight = 19;
             this.calendarView1.Name = "calendarView1";
             this.calendarView1.ShowOnlyWorkDayHours = true;
-            this.calendarView1.Size = new System.Drawing.Size(376, 542);
+            this.calendarView1.Size = new System.Drawing.Size(403, 663);
             this.calendarView1.TabIndex = 31;
             this.calendarView1.Text = "calendarView1";
             this.calendarView1.TimeIndicator.BorderColor = System.Drawing.Color.Empty;
             this.calendarView1.TimeIndicator.Tag = null;
             this.calendarView1.TimeSlotDuration = 30;
-            this.calendarView1.YearViewAppointmentLinkStyle = DevComponents.DotNetBar.Schedule.eYearViewLinkStyle.Style4;
+            this.calendarView1.YearViewNonAppointmentLink = DevComponents.DotNetBar.Schedule.eYearViewDayLink.Click;
             // 
             // timer1
             // 
@@ -588,7 +592,7 @@
             this.themeToolStripMenuItem,
             this.styleToolStripMenuItem});
             this.ctxPersonalize.Name = "ctxPersonalize";
-            this.ctxPersonalize.Size = new System.Drawing.Size(112, 48);
+            this.ctxPersonalize.Size = new System.Drawing.Size(130, 56);
             // 
             // themeToolStripMenuItem
             // 
@@ -597,25 +601,25 @@
             this.darkToolStripMenuItem,
             this.defaultToolStripMenuItem});
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            this.themeToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.themeToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
             this.themeToolStripMenuItem.Text = "Theme";
             // 
             // lightToolStripMenuItem
             // 
             this.lightToolStripMenuItem.Name = "lightToolStripMenuItem";
-            this.lightToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.lightToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.lightToolStripMenuItem.Text = "Light";
             // 
             // darkToolStripMenuItem
             // 
             this.darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            this.darkToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.darkToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.darkToolStripMenuItem.Text = "Dark";
             // 
             // defaultToolStripMenuItem
             // 
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.defaultToolStripMenuItem.Text = "Default";
             // 
             // styleToolStripMenuItem
@@ -633,96 +637,113 @@
             this.toolStripMenuItem11,
             this.toolStripMenuItem12});
             this.styleToolStripMenuItem.Name = "styleToolStripMenuItem";
-            this.styleToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.styleToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
             this.styleToolStripMenuItem.Text = "Style";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem2.Text = "1";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem3.Text = "2";
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem4.Text = "3";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem5.Text = "4";
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem6.Text = "5";
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem7.Text = "6";
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem8.Text = "7";
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem9.Text = "8";
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem10.Text = "9";
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem11.Text = "10";
             // 
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem12.Text = "11";
             // 
             // pbPersonalize
             // 
             this.pbPersonalize.Image = global::PschyHealth.Properties.Resources.Connect_Develop_48px;
-            this.pbPersonalize.Location = new System.Drawing.Point(22, 49);
-            this.pbPersonalize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbPersonalize.Location = new System.Drawing.Point(29, 60);
+            this.pbPersonalize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbPersonalize.Name = "pbPersonalize";
-            this.pbPersonalize.Size = new System.Drawing.Size(28, 22);
+            this.pbPersonalize.Size = new System.Drawing.Size(37, 27);
             this.pbPersonalize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPersonalize.TabIndex = 45;
             this.pbPersonalize.TabStop = false;
             this.pbPersonalize.Click += new System.EventHandler(this.pbPersonalize_Click);
             // 
+            // dateNavigator1
+            // 
+            this.dateNavigator1.CalendarView = this.calendarView1;
+            this.dateNavigator1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.dateNavigator1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.dateNavigator1.Controls.Add(this.calendarView1);
+            this.dateNavigator1.DisabledBackColor = System.Drawing.Color.Empty;
+            this.dateNavigator1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dateNavigator1.Location = new System.Drawing.Point(836, 74);
+            this.dateNavigator1.Name = "dateNavigator1";
+            this.dateNavigator1.Size = new System.Drawing.Size(516, 673);
+            this.dateNavigator1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.dateNavigator1.TabIndex = 46;
+            this.dateNavigator1.Text = "dateNavigator1";
+            // 
             // frmMainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 627);
+            this.ClientSize = new System.Drawing.Size(1379, 772);
+            this.Controls.Add(this.dateNavigator1);
             this.Controls.Add(this.pbPersonalize);
-            this.Controls.Add(this.calendarView1);
             this.Controls.Add(this.metroTilePanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMainPage";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainPage_FormClosing_1);
@@ -730,6 +751,8 @@
             this.SizeChanged += new System.EventHandler(this.frmMainPage_SizeChanged);
             this.ctxPersonalize.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonalize)).EndInit();
+            this.dateNavigator1.ResumeLayout(false);
+            this.dateNavigator1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -790,5 +813,6 @@
         private DevComponents.DotNetBar.Metro.MetroTileItem btnStatistics;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnICD10;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnRecordings;
+        private DevComponents.DotNetBar.Schedule.DateNavigator dateNavigator1;
     }
 }
