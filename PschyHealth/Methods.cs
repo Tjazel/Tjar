@@ -339,7 +339,7 @@ namespace PschyHealth
 
         public Boolean validString(String txt)
         {
-            char[] valids = { ' ','.' };
+            char[] valids = { ' ','.','-' };
             if (txt == String.Concat(txt.Where(Char.IsLetterOrDigit)))
             {
                 return true;
