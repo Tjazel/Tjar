@@ -551,6 +551,27 @@ namespace PschyHealth
                 frmRecord.Show();
             }
         }
+
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmPayments")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmPayments frmPayments = new frmPayments();
+                frmPayments.Show();
+            }
+        }
     }
 
        

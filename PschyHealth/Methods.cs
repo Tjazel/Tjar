@@ -22,7 +22,7 @@ namespace PschyHealth
     //The main reason for this class is to reuse code, thus not making the program too large, and also making it more efficient.
     class Methods
     {
-        SqlConnection conn = new SqlConnection("Data Source=jarvisdevelopment.database.windows.net;Initial Catalog=JarvisDev;User ID = ProjectJarvis; Password = JarvisProject2016");
+        SqlConnection conn = new SqlConnection("Data Source=jarvisdevelopment.database.windows.net;Initial Catalog=JarvisDev;User ID =ProjectJarvis; Password =JarvisProject2016;");
         //The fillDGV method is used to fill a datagridview with the information gathered from the database
         //The first fillDGV method is used to simply fill the metro grid with no extra operations.
         public void fillDGV(MetroGrid dgv, String sTable)
@@ -52,7 +52,7 @@ namespace PschyHealth
                 BindingSource bindingSource1 = new BindingSource();
 
                 String connectionString =
-                "Data Source = jarvisdevelopment.database.windows.net; Initial Catalog = JarvisDev; User ID = ProjectJarvis; Password = JarvisProject2016";
+                "Data Source = jarvisdevelopment.database.windows.net; Initial Catalog =JarvisDev; User ID =ProjectJarvis; Password =JarvisProject2016;";
 
                 // Create a new data adapter based on the specified query.
                 dataAdapter = new SqlDataAdapter("SELECT * FROM " + sTable + filter, connectionString);
@@ -165,24 +165,35 @@ namespace PschyHealth
 
         }
 
-        public void delete(String table, String field, String column)
+        public void delete(String table, int rowID)
         {
-            SqlDataReader reader;
-            SqlCommand cmd = new SqlCommand();
+             
+        string sql = "DELETE FROM @P1 WHERE RowID = @RowID";
 
-            cmd.CommandText = "DELETE FROM @P1 WHERE @P3 = @P2";
-            cmd.Parameters.AddWithValue("@P1", table);
-            cmd.Parameters.AddWithValue("@P2", field);
-            cmd.Parameters.AddWithValue("@P3", column);
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = conn;
-            conn.Open();
+        SqlCommand deleteRecord = new SqlCommand();
+        deleteRecord.Connection = conn;
+        deleteRecord.CommandType = CommandType.Text;
+        deleteRecord.CommandText = sql;
 
-            reader = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(reader);
+        SqlParameter RowParameter = new SqlParameter();
+        deleteRecord.Parameters.AddWithValue("@P1",table);
+        RowParameter.ParameterName = "@RowID";
+        RowParameter.SqlDbType = SqlDbType.Int;
+        RowParameter.IsNullable = false;
+        RowParameter.Value = rowID;
 
-            conn.Close();
+        deleteRecord.Parameters.Add(RowParameter);
+
+        deleteRecord.Connection.Open();
+
+        deleteRecord.ExecuteNonQuery();
+
+        deleteRecord.Connection.Close();
+
+        DataSet ds = new DataSet();
+        ds.GetChanges();
+        SqlDataAdapter dataAdapter = new SqlDataAdapter();
+        dataAdapter.Fill(ds,table);
 
         }
 
