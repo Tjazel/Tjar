@@ -622,3 +622,4 @@ C:\Users\Jaco\Source\Repos\Tjar4\PschyHealth\obj\Debug\PschyHealth.Forms.frmReco
 C:\Users\Johann\Source\Repos\TjarFin\PschyHealth\obj\Debug\PschyHealth.Forms.frmRecord.resources
 C:\Users\Jaco\Source\Repos\TjarBackup\Tjar4\PschyHealth\obj\Debug\PschyHealth.Forms.frmRecord.resources
 C:\Users\Jaco\Source\Repos\TjarBackup\Tjar4\PschyHealth\obj\Debug\PschyHealth.Forms.frmPayments.resources
+C:\Users\Johann\Source\Repos\TjarFin\PschyHealth\obj\Debug\PschyHealth.Forms.frmPayments.resources

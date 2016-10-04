@@ -49,6 +49,11 @@ namespace PschyHealth.Forms
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
 
+            cMethods.fillDGV(dgvPayments, "Clients");
+            cMethods.fillCMBrow(cmbClient,dgvPayments);
+            cMethods.fillDGV(dgvPayments, "Payments");
+            cMethods.fillDGV(dgvConsultations, "Consultations");
+
         }
 
         private void frmPayments_Load(object sender, EventArgs e)
@@ -61,6 +66,27 @@ namespace PschyHealth.Forms
         private void pbBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbPayments_Method_Of_Payments_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbClient_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cMethods.filterDGV(dgvPayments, "Payments", " WHERE Client_Surname = '" + cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) + "' AND Client_Name = '" + cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2) + "'");
+            cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE Surname = '" + cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) + "' AND Name = '" + cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2) + "'");
+        }
+
+        private void dgvConsultations_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            txtConsultation.Text = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells["ConaultationsID"].Value.ToString();
         }
     }
 }

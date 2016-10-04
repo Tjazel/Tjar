@@ -238,6 +238,18 @@ namespace PschyHealth
                 cmb.Items.Add(dgv.Columns[i].Name);
         }
 
+        public void fillCMBrow(MetroComboBox cmb, MetroGrid dgv)
+        {
+            cmb.Items.Clear();
+            string entry;
+            for (int i = 0; i < dgv.RowCount-1; i++)
+            {
+                entry = dgv.Rows[i].Cells["Surname"].Value.ToString() + ", " + dgv.Rows[i].Cells["First_Name"].Value.ToString();
+                if (!cmb.Items.Contains(entry))
+                    cmb.Items.Add(entry);
+            }
+        }
+
         public void fillTextbox(GroupBox gb, MetroGrid dgv, String extra, Boolean enabled)
         {
             try
