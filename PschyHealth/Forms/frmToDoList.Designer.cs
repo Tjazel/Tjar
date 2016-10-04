@@ -63,8 +63,10 @@
             this.cmbAccCriteria = new MetroFramework.Controls.MetroComboBox();
             this.txtAccSearch = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
+            this.pbBack = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTextBox5
@@ -601,11 +603,24 @@
             this.metroLabel17.TabIndex = 0;
             this.metroLabel17.Text = "Criteria:";
             // 
+            // pbBack
+            // 
+            this.pbBack.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
+            this.pbBack.Location = new System.Drawing.Point(32, 59);
+            this.pbBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbBack.Name = "pbBack";
+            this.pbBack.Size = new System.Drawing.Size(37, 27);
+            this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBack.TabIndex = 94;
+            this.pbBack.TabStop = false;
+            this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
+            // 
             // frmToDoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2777, 970);
+            this.Controls.Add(this.pbBack);
             this.Controls.Add(this.dgvAccount);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.groupBox3);
@@ -641,6 +656,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -679,5 +695,6 @@
         private MetroFramework.Controls.MetroComboBox cmbAccCriteria;
         private MetroFramework.Controls.MetroTextBox txtAccSearch;
         private MetroFramework.Controls.MetroLabel metroLabel17;
+        private System.Windows.Forms.PictureBox pbBack;
     }
 }
