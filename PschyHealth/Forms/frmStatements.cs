@@ -45,7 +45,8 @@ namespace PschyHealth
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
 
-            cMethods.fillDGV(dgvStatements, "Clients", cmbStatCrit);
+            cMethods.fillDGV(dgvStatements, "Clients");
+            cMethods.fillCMBrow(cmbClient, dgvStatements);
         }
         public frmStatements()
         {
@@ -154,6 +155,38 @@ namespace PschyHealth
             metroComboBox1.SelectedIndex = -1;
             if (metroComboBox1.Visible == true)
                 metroTextBox17.Enabled = false;
+        }
+
+        private void cmbClient_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string line;
+            lbStatements.Items.Clear();
+            cMethods.fillDGV(dgvStatements, "Consultations");
+            for (int i = 0; i < dgvStatements.RowCount-1; i++)
+            {
+                line = "";
+                if((cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) == dgvStatements.Rows[i].Cells["Surname"].Value.ToString()) || (cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2,1) == dgvStatements.Rows[i].Cells["Initials"].Value.ToString()))
+                {
+                    for (int k = 0; k < dgvStatements.ColumnCount; k++)
+                        line += dgvStatements.Rows[i].Cells[k].Value.ToString();
+                    lbStatements.Items.Add(line);
+                }
+                
+            }
+
+            cMethods.fillDGV(dgvStatements, "Payments");
+            for (int i = 0; i < dgvStatements.RowCount - 1; i++)
+            {
+                line = "";
+                if ((cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) == dgvStatements.Rows[i].Cells["Client_Surname"].Value.ToString()) || (cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2) == dgvStatements.Rows[i].Cells["Client_Name"].Value.ToString()))
+                {
+                    for (int k = 0; k < dgvStatements.ColumnCount; k++)
+                        line += dgvStatements.Rows[i].Cells[k].Value.ToString();
+                    lbStatements.Items.Add(line);
+                }
+
+            }
+            
         }
     }
 }

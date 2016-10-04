@@ -66,6 +66,20 @@ namespace PschyHealth
         {
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
+
+            String path = Environment.GetFolderPath(
+            Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
+            cMethods.CheckFolder(path);
+            cMethods.CheckFolder(path + @"\Archive");
+            cMethods.CheckFolder(path + @"\Log");
+            cMethods.CheckFolder(path + @"\Statements");
+            cMethods.CheckFolder(path + @"\Archive\LogArchive");
+            cMethods.CheckFolder(path + @"\Archive\StatementsArchive");
+            cMethods.CheckFolder(path + @"\Archive\ClientArchive");
+            cMethods.CheckFolder(path + @"\Archive\StaffArchive");
+            cMethods.CheckFolder(path + @"\Archive\AccountingArchive");
+            cMethods.CheckFolder(path + @"\Archive\ConsultationsArchive");
+            cMethods.CheckFile(path + @"\Log\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString());
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -86,7 +100,7 @@ namespace PschyHealth
             cMethods.CheckFolder(path + @"\Archive\StaffArchive");
             cMethods.CheckFolder(path + @"\Archive\AccountingArchive");
             cMethods.CheckFolder(path + @"\Archive\ConsultationsArchive");
-            cMethods.CheckFile(path + @"\Log\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString()); ;
+            cMethods.CheckFile(path + @"\Log\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString()) ;
             
         }
 
@@ -550,6 +564,32 @@ namespace PschyHealth
                 frmRecord frmRecord = new frmRecord();
                 frmRecord.Show();
             }
+        }
+
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmPayments")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmPayments frmPayments = new frmPayments();
+                frmPayments.Show();
+            }
+        }
+
+        private void frmMainPage_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 

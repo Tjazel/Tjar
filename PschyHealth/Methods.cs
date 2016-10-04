@@ -197,20 +197,27 @@ namespace PschyHealth
 
         }
 
-        public void edit(String table, String column, String field, String selColumn, String selValue)
+        public void edit(String table, String column, String field, int rowID)
         {
             SqlDataReader reader;
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "UPDATE @P1 SET @P3 = @P2 WHERE @P4 = @P5";
+            cmd.CommandText = "UPDATE @P1 SET @P3 = @P2 WHERE RowID = @RowID";
             cmd.Parameters.AddWithValue("@P1", table);
             cmd.Parameters.AddWithValue("@P2", field);
             cmd.Parameters.AddWithValue("@P3", column);
-            cmd.Parameters.AddWithValue("@P4", selColumn);
-            cmd.Parameters.AddWithValue("@P5", selValue);
+            SqlParameter RowParameter = new SqlParameter();
+            RowParameter.ParameterName = "@RowID";
+            RowParameter.SqlDbType = SqlDbType.Int;
+            RowParameter.IsNullable = false;
+            RowParameter.Value = rowID;
+            cmd.Parameters.Add(RowParameter);
+
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
             conn.Open();
+            cmd.ExecuteNonQuery();
+
 
             reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
@@ -236,6 +243,18 @@ namespace PschyHealth
             cmb.Items.Clear();
             for (int i = 0; i < dgv.ColumnCount; i++)
                 cmb.Items.Add(dgv.Columns[i].Name);
+        }
+
+        public void fillCMBrow(MetroComboBox cmb, MetroGrid dgv)
+        {
+            cmb.Items.Clear();
+            string entry;
+            for (int i = 0; i < dgv.RowCount-1; i++)
+            {
+                entry = dgv.Rows[i].Cells["Surname"].Value.ToString() + ", " + dgv.Rows[i].Cells["First_Name"].Value.ToString();
+                if (!cmb.Items.Contains(entry))
+                    cmb.Items.Add(entry);
+            }
         }
 
         public void fillTextbox(GroupBox gb, MetroGrid dgv, String extra, Boolean enabled)
@@ -350,7 +369,7 @@ namespace PschyHealth
 
         public Boolean validString(String txt)
         {
-            char[] valids = { ' ','.' };
+            char[] valids = { ' ','.','-' };
             if (txt == String.Concat(txt.Where(Char.IsLetterOrDigit)))
             {
                 return true;

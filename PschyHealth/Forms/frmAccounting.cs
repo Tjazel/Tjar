@@ -177,6 +177,44 @@ namespace PschyHealth
             }
 
         }
+
+        private void btnUpdateAccount_Click(object sender, EventArgs e)
+        {
+            if (dgvAccount.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dgvAccount.SelectedRows[0].Index;
+
+                int rowID = int.Parse(dgvAccount[0, selectedIndex].Value.ToString());
+                dgvAccount.Rows.RemoveAt(selectedIndex);
+
+                if(txtAccTransaction.Text!=null)
+                {
+                    cMethods.edit("Accounting", "Transaction_Number", txtAccTransaction.Text, rowID);
+                }
+                if (txtAccType.Text != null)
+                {
+                    cMethods.edit("Accounting", "Type", txtAccType.Text, rowID);
+                }
+                if (txtAccDate.Text != null)
+                {
+                    cMethods.edit("Accounting", "Date", txtAccDate.Text, rowID);
+                }
+                if (txtAccAmount.Text != null)
+                {
+                    cMethods.edit("Accounting", "Amount", txtAccAmount.Text, rowID);
+                }
+                if (txtAccDescription.Text != null)
+                {
+                    cMethods.edit("Accounting", "Description", txtAccDescription.Text, rowID);
+                }
+            }
+        }
+
+        private void btnAddAcount_Click(object sender, EventArgs e)
+        {
+            if((txtAccTransaction.Text != null)&& (txtAccType.Text != null)&& (txtAccDate.Text != null)&& (txtAccAmount.Text != null)&& (txtAccDescription.Text != null))
+            cMethods.insert("Accounting",txtAccTransaction.Text+txtAccDescription.Text+txtAccType.Text+txtAccAmount.Text+txtAccDate.Text);
+        }
     }
 }
 
