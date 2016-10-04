@@ -172,6 +172,7 @@ namespace PschyHealth
                 int selectedIndex = dgvAccount.SelectedRows[0].Index;
 
                 int rowID = int.Parse(dgvAccount[0, selectedIndex].Value.ToString());
+                dgvAccount.Rows.RemoveAt(selectedIndex);
                 cMethods.delete("Accounting",rowID);
             }
 
