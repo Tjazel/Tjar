@@ -84,8 +84,38 @@
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
             this.pbPersonalize = new System.Windows.Forms.PictureBox();
+            this.dateNavigator1 = new DevComponents.DotNetBar.Schedule.DateNavigator();
+            this.msmMain = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.cmbMain = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cmbGreen = new DevComponents.Editors.ComboItem();
+            this.cbOrange = new DevComponents.Editors.ComboItem();
+            this.cmbMagenta = new DevComponents.Editors.ComboItem();
+            this.cmbBlue = new DevComponents.Editors.ComboItem();
+            this.btnChange = new MetroFramework.Controls.MetroButton();
+            this.pnlColorChange = new MetroFramework.Controls.MetroPanel();
+            this.cmbTeal = new DevComponents.Editors.ComboItem();
+            this.cmbPlum = new DevComponents.Editors.ComboItem();
+            this.cmbCoffee = new DevComponents.Editors.ComboItem();
+            this.cmbRedOrange = new DevComponents.Editors.ComboItem();
+            this.cmbRedViolet = new DevComponents.Editors.ComboItem();
+            this.cmbOlive = new DevComponents.Editors.ComboItem();
+            this.cmbDarkOlive = new DevComponents.Editors.ComboItem();
+            this.cmbRust = new DevComponents.Editors.ComboItem();
+            this.cmbMaroon = new DevComponents.Editors.ComboItem();
+            this.cmbYellowish = new DevComponents.Editors.ComboItem();
+            this.cmbBlueish = new DevComponents.Editors.ComboItem();
+            this.cmbDarkBlue = new DevComponents.Editors.ComboItem();
+            this.cmbYellow = new DevComponents.Editors.ComboItem();
+            this.cmbGray = new DevComponents.Editors.ComboItem();
+            this.cmbDarkGreen = new DevComponents.Editors.ComboItem();
+            this.cmbMaroonWashed = new DevComponents.Editors.ComboItem();
+            this.cmbPlumWashed = new DevComponents.Editors.ComboItem();
+            this.cmbAzure = new DevComponents.Editors.ComboItem();
             this.ctxPersonalize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonalize)).BeginInit();
+            this.dateNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.msmMain)).BeginInit();
+            this.pnlColorChange.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTileFrame1
@@ -143,9 +173,10 @@
             this.metroTilePanel1.EnableDragDrop = true;
             this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.itemContainer1});
-            this.metroTilePanel1.Location = new System.Drawing.Point(10, 63);
+            this.metroTilePanel1.Location = new System.Drawing.Point(13, 78);
+            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTilePanel1.Name = "metroTilePanel1";
-            this.metroTilePanel1.Size = new System.Drawing.Size(1094, 715);
+            this.metroTilePanel1.Size = new System.Drawing.Size(1459, 880);
             this.metroTilePanel1.TabIndex = 30;
             this.metroTilePanel1.Text = "metroTilePanel1";
             this.metroTilePanel1.ItemClick += new System.EventHandler(this.metroTilePanel1_ItemClick);
@@ -184,6 +215,7 @@
             // 
             this.itemContainer1.TitleStyle.Class = "MetroTileGroupTitle";
             this.itemContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer1.Click += new System.EventHandler(this.itemContainer1_Click);
             // 
             // btn_StaffNew
             // 
@@ -200,6 +232,7 @@
             this.btn_StaffNew.TitleText = "Staff";
             this.btn_StaffNew.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_StaffNew.Click += new System.EventHandler(this.btn_StaffNew_Click);
+            this.btn_StaffNew.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_StaffNew_MouseDown);
             // 
             // btnClients
             // 
@@ -217,6 +250,7 @@
             this.btnClients.TitleText = "Clients";
             this.btnClients.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClients.Click += new System.EventHandler(this.btnClients_Click_1);
+            this.btnClients.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnClients_MouseDown);
             // 
             // btnAccounting
             // 
@@ -233,6 +267,7 @@
             this.btnAccounting.TitleText = "Accounting";
             this.btnAccounting.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccounting.Click += new System.EventHandler(this.btnAccounting_Click);
+            this.btnAccounting.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAccounting_MouseDown);
             // 
             // btnPayments
             // 
@@ -249,6 +284,7 @@
             this.btnPayments.TitleText = "Payments";
             this.btnPayments.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
+            this.btnPayments.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnPayments_MouseDown);
             // 
             // btnMedicalAid
             // 
@@ -265,6 +301,7 @@
             this.btnMedicalAid.TitleText = "Medical Aid";
             this.btnMedicalAid.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMedicalAid.Click += new System.EventHandler(this.metroTileItem7_Click);
+            this.btnMedicalAid.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnMedicalAid_MouseDown);
             // 
             // btnConsultations
             // 
@@ -281,6 +318,7 @@
             this.btnConsultations.TitleText = "Consultations";
             this.btnConsultations.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultations.Click += new System.EventHandler(this.metroTileItem10_Click);
+            this.btnConsultations.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnConsultations_MouseDown);
             // 
             // btnDiagnostic
             // 
@@ -296,6 +334,7 @@
             this.btnDiagnostic.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnDiagnostic.TitleText = "Diagnostic Codes";
             this.btnDiagnostic.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.btnDiagnostic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDiagnostic_MouseDown);
             // 
             // btnReports
             // 
@@ -311,6 +350,7 @@
             this.btnReports.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnReports.TitleText = "Reports";
             this.btnReports.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnReports_MouseDown);
             // 
             // btnArchive
             // 
@@ -327,6 +367,7 @@
             this.btnArchive.TitleText = "Archive";
             this.btnArchive.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
+            this.btnArchive.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnArchive_MouseDown);
             // 
             // btnEmail
             // 
@@ -342,6 +383,7 @@
             this.btnEmail.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnEmail.TitleText = "E-mail";
             this.btnEmail.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnEmail_MouseDown);
             // 
             // btnNotePad
             // 
@@ -358,6 +400,7 @@
             this.btnNotePad.TitleText = "Note Pad";
             this.btnNotePad.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotePad.Click += new System.EventHandler(this.btnNotePad_Click);
+            this.btnNotePad.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnNotePad_MouseDown);
             // 
             // btnCalender
             // 
@@ -373,6 +416,7 @@
             this.btnCalender.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnCalender.TitleText = "Calender";
             this.btnCalender.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalender.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCalender_MouseDown);
             // 
             // btnAdressBook
             // 
@@ -389,6 +433,7 @@
             this.btnAdressBook.TitleText = "Adress Book";
             this.btnAdressBook.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdressBook.Click += new System.EventHandler(this.btnAdressBook_Click);
+            this.btnAdressBook.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAdressBook_MouseDown);
             // 
             // btnStatements
             // 
@@ -405,6 +450,7 @@
             this.btnStatements.TitleText = "Statements";
             this.btnStatements.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatements.Click += new System.EventHandler(this.btnStatements_Click);
+            this.btnStatements.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnStatements_MouseDown);
             // 
             // btnStatistics
             // 
@@ -420,6 +466,7 @@
             this.btnStatistics.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnStatistics.TitleText = "Statistics";
             this.btnStatistics.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistics.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnStatistics_MouseDown);
             // 
             // btnICD10
             // 
@@ -435,6 +482,7 @@
             this.btnICD10.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnICD10.TitleText = "ICD 10 Codes";
             this.btnICD10.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnICD10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnICD10_MouseDown);
             // 
             // btnRecordings
             // 
@@ -451,6 +499,7 @@
             this.btnRecordings.TitleText = "Recordings";
             this.btnRecordings.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecordings.Click += new System.EventHandler(this.btnRecordings_Click);
+            this.btnRecordings.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnRecordings_MouseDown);
             // 
             // btnInfo
             // 
@@ -469,6 +518,7 @@
             this.btnInfo.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnInfo.TitleTextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnInfo_MouseDown);
             // 
             // btnDateAndTime
             // 
@@ -482,6 +532,7 @@
             // 
             this.btnDateAndTime.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnDateAndTime.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDateAndTime.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDateAndTime_MouseDown);
             // 
             // calendarView1
             // 
@@ -492,17 +543,18 @@
             this.calendarView1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.calendarView1.ContainerControlProcessDialogKey = true;
             this.calendarView1.HighlightCurrentDay = true;
-            this.calendarView1.Location = new System.Drawing.Point(828, 62);
+            this.calendarView1.Location = new System.Drawing.Point(24, 28);
+            this.calendarView1.Margin = new System.Windows.Forms.Padding(4);
             this.calendarView1.MultiUserTabHeight = 19;
             this.calendarView1.Name = "calendarView1";
             this.calendarView1.ShowOnlyWorkDayHours = true;
-            this.calendarView1.Size = new System.Drawing.Size(376, 542);
+            this.calendarView1.Size = new System.Drawing.Size(403, 663);
             this.calendarView1.TabIndex = 31;
             this.calendarView1.Text = "calendarView1";
             this.calendarView1.TimeIndicator.BorderColor = System.Drawing.Color.Empty;
             this.calendarView1.TimeIndicator.Tag = null;
             this.calendarView1.TimeSlotDuration = 30;
-            this.calendarView1.YearViewAppointmentLinkStyle = DevComponents.DotNetBar.Schedule.eYearViewLinkStyle.Style4;
+            this.calendarView1.YearViewNonAppointmentLink = DevComponents.DotNetBar.Schedule.eYearViewDayLink.Click;
             // 
             // timer1
             // 
@@ -588,7 +640,8 @@
             this.themeToolStripMenuItem,
             this.styleToolStripMenuItem});
             this.ctxPersonalize.Name = "ctxPersonalize";
-            this.ctxPersonalize.Size = new System.Drawing.Size(112, 48);
+            this.ctxPersonalize.Size = new System.Drawing.Size(130, 56);
+            this.ctxPersonalize.Opening += new System.ComponentModel.CancelEventHandler(this.ctxPersonalize_Opening);
             // 
             // themeToolStripMenuItem
             // 
@@ -597,25 +650,26 @@
             this.darkToolStripMenuItem,
             this.defaultToolStripMenuItem});
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            this.themeToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.themeToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
             this.themeToolStripMenuItem.Text = "Theme";
             // 
             // lightToolStripMenuItem
             // 
             this.lightToolStripMenuItem.Name = "lightToolStripMenuItem";
-            this.lightToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.lightToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.lightToolStripMenuItem.Text = "Light";
             // 
             // darkToolStripMenuItem
             // 
             this.darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            this.darkToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.darkToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.darkToolStripMenuItem.Text = "Dark";
+            this.darkToolStripMenuItem.Click += new System.EventHandler(this.darkToolStripMenuItem_Click);
             // 
             // defaultToolStripMenuItem
             // 
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.defaultToolStripMenuItem.Text = "Default";
             // 
             // styleToolStripMenuItem
@@ -633,96 +687,291 @@
             this.toolStripMenuItem11,
             this.toolStripMenuItem12});
             this.styleToolStripMenuItem.Name = "styleToolStripMenuItem";
-            this.styleToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.styleToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
             this.styleToolStripMenuItem.Text = "Style";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem2.Text = "1";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem3.Text = "2";
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem4.Text = "3";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem5.Text = "4";
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem6.Text = "5";
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem7.Text = "6";
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem8.Text = "7";
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem9.Text = "8";
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem10.Text = "9";
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem11.Text = "10";
             // 
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(86, 22);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem12.Text = "11";
             // 
             // pbPersonalize
             // 
             this.pbPersonalize.Image = global::PschyHealth.Properties.Resources.Connect_Develop_48px;
-            this.pbPersonalize.Location = new System.Drawing.Point(22, 49);
-            this.pbPersonalize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbPersonalize.Location = new System.Drawing.Point(29, 60);
+            this.pbPersonalize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbPersonalize.Name = "pbPersonalize";
-            this.pbPersonalize.Size = new System.Drawing.Size(28, 22);
+            this.pbPersonalize.Size = new System.Drawing.Size(37, 27);
             this.pbPersonalize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPersonalize.TabIndex = 45;
             this.pbPersonalize.TabStop = false;
             this.pbPersonalize.Click += new System.EventHandler(this.pbPersonalize_Click);
             // 
+            // dateNavigator1
+            // 
+            this.dateNavigator1.CalendarView = this.calendarView1;
+            this.dateNavigator1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.dateNavigator1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.dateNavigator1.Controls.Add(this.calendarView1);
+            this.dateNavigator1.DisabledBackColor = System.Drawing.Color.Empty;
+            this.dateNavigator1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dateNavigator1.Location = new System.Drawing.Point(938, 74);
+            this.dateNavigator1.Name = "dateNavigator1";
+            this.dateNavigator1.Size = new System.Drawing.Size(414, 673);
+            this.dateNavigator1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.dateNavigator1.TabIndex = 46;
+            this.dateNavigator1.Text = "dateNavigator1";
+            // 
+            // msmMain
+            // 
+            this.msmMain.Owner = null;
+            // 
+            // cmbMain
+            // 
+            this.cmbMain.DisplayMember = "Text";
+            this.cmbMain.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMain.FormattingEnabled = true;
+            this.cmbMain.ItemHeight = 16;
+            this.cmbMain.Items.AddRange(new object[] {
+            this.cmbGreen,
+            this.cbOrange,
+            this.cmbMagenta,
+            this.cmbBlue,
+            this.cmbTeal,
+            this.cmbPlum,
+            this.cmbCoffee,
+            this.cmbRedOrange,
+            this.cmbRedViolet,
+            this.cmbOlive,
+            this.cmbDarkOlive,
+            this.cmbRust,
+            this.cmbMaroon,
+            this.cmbYellowish,
+            this.cmbBlueish,
+            this.cmbDarkBlue,
+            this.cmbYellow,
+            this.cmbGray,
+            this.cmbDarkGreen,
+            this.cmbMaroonWashed,
+            this.cmbPlumWashed,
+            this.cmbAzure});
+            this.cmbMain.Location = new System.Drawing.Point(3, 3);
+            this.cmbMain.Name = "cmbMain";
+            this.cmbMain.Size = new System.Drawing.Size(142, 22);
+            this.cmbMain.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbMain.TabIndex = 48;
+            // 
+            // cmbGreen
+            // 
+            this.cmbGreen.BackColor = System.Drawing.Color.DarkGreen;
+            this.cmbGreen.Text = "Green";
+            // 
+            // cbOrange
+            // 
+            this.cbOrange.BackColor = System.Drawing.Color.Orange;
+            this.cbOrange.Text = "Orange";
+            // 
+            // cmbMagenta
+            // 
+            this.cmbMagenta.BackColor = System.Drawing.Color.DarkOrchid;
+            this.cmbMagenta.Text = "Magenta";
+            // 
+            // cmbBlue
+            // 
+            this.cmbBlue.BackColor = System.Drawing.Color.RoyalBlue;
+            this.cmbBlue.Text = "Blue";
+            // 
+            // btnChange
+            // 
+            this.btnChange.Location = new System.Drawing.Point(151, 0);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(176, 32);
+            this.btnChange.TabIndex = 49;
+            this.btnChange.Text = "Change tile color";
+            this.btnChange.UseSelectable = true;
+            this.btnChange.UseStyleColors = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
+            // pnlColorChange
+            // 
+            this.pnlColorChange.Controls.Add(this.cmbMain);
+            this.pnlColorChange.Controls.Add(this.btnChange);
+            this.pnlColorChange.HorizontalScrollbarBarColor = true;
+            this.pnlColorChange.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlColorChange.HorizontalScrollbarSize = 10;
+            this.pnlColorChange.Location = new System.Drawing.Point(176, 10);
+            this.pnlColorChange.Name = "pnlColorChange";
+            this.pnlColorChange.Size = new System.Drawing.Size(327, 32);
+            this.pnlColorChange.TabIndex = 50;
+            this.pnlColorChange.VerticalScrollbarBarColor = true;
+            this.pnlColorChange.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlColorChange.VerticalScrollbarSize = 10;
+            this.pnlColorChange.Visible = false;
+            
+            // 
+            // cmbTeal
+            // 
+            this.cmbTeal.BackColor = System.Drawing.Color.Teal;
+            this.cmbTeal.Text = "Teal";
+            // 
+            // cmbPlum
+            // 
+            this.cmbPlum.BackColor = System.Drawing.Color.Plum;
+            this.cmbPlum.Text = "Plum";
+            // 
+            // cmbCoffee
+            // 
+            this.cmbCoffee.BackColor = System.Drawing.Color.SaddleBrown;
+            this.cmbCoffee.Text = "Coffee";
+            // 
+            // cmbRedOrange
+            // 
+            this.cmbRedOrange.BackColor = System.Drawing.Color.Tomato;
+            this.cmbRedOrange.Text = "RedOrange";
+            // 
+            // cmbRedViolet
+            // 
+            this.cmbRedViolet.BackColor = System.Drawing.Color.RosyBrown;
+            this.cmbRedViolet.Text = "RedViolet";
+            // 
+            // cmbOlive
+            // 
+            this.cmbOlive.BackColor = System.Drawing.Color.Olive;
+            this.cmbOlive.Text = "Olive";
+            // 
+            // cmbDarkOlive
+            // 
+            this.cmbDarkOlive.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.cmbDarkOlive.Text = "DarkOlive";
+            // 
+            // cmbRust
+            // 
+            this.cmbRust.BackColor = System.Drawing.Color.Firebrick;
+            this.cmbRust.Text = "Rust";
+            // 
+            // cmbMaroon
+            // 
+            this.cmbMaroon.BackColor = System.Drawing.Color.Maroon;
+            this.cmbMaroon.Text = "Maroon";
+            // 
+            // cmbYellowish
+            // 
+            this.cmbYellowish.BackColor = System.Drawing.Color.Khaki;
+            this.cmbYellowish.Text = "Yellowish";
+            // 
+            // cmbBlueish
+            // 
+            this.cmbBlueish.BackColor = System.Drawing.Color.DodgerBlue;
+            this.cmbBlueish.Text = "Blueish";
+            // 
+            // cmbDarkBlue
+            // 
+            this.cmbDarkBlue.BackColor = System.Drawing.Color.DarkBlue;
+            this.cmbDarkBlue.Text = "DarkBlue";
+            // 
+            // cmbYellow
+            // 
+            this.cmbYellow.BackColor = System.Drawing.Color.Yellow;
+            this.cmbYellow.Text = "Yellow";
+            // 
+            // cmbGray
+            // 
+            this.cmbGray.BackColor = System.Drawing.Color.Gray;
+            this.cmbGray.Text = "Gray";
+            // 
+            // cmbDarkGreen
+            // 
+            this.cmbDarkGreen.BackColor = System.Drawing.Color.DarkGreen;
+            this.cmbDarkGreen.Text = "DarkGreen";
+            // 
+            // cmbMaroonWashed
+            // 
+            this.cmbMaroonWashed.BackColor = System.Drawing.Color.IndianRed;
+            this.cmbMaroonWashed.Text = "MaroonWashed";
+            // 
+            // cmbPlumWashed
+            // 
+            this.cmbPlumWashed.BackColor = System.Drawing.Color.Thistle;
+            this.cmbPlumWashed.Text = "PlumWashed";
+            // 
+            // cmbAzure
+            // 
+            this.cmbAzure.BackColor = System.Drawing.Color.Azure;
+            this.cmbAzure.Text = "Azure";
+            // 
             // frmMainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 627);
+            this.ClientSize = new System.Drawing.Size(1379, 772);
+            this.Controls.Add(this.pnlColorChange);
+            this.Controls.Add(this.dateNavigator1);
             this.Controls.Add(this.pbPersonalize);
-            this.Controls.Add(this.calendarView1);
             this.Controls.Add(this.metroTilePanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainPage";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainPage_FormClosing_1);
@@ -730,6 +979,10 @@
             this.SizeChanged += new System.EventHandler(this.frmMainPage_SizeChanged);
             this.ctxPersonalize.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonalize)).EndInit();
+            this.dateNavigator1.ResumeLayout(false);
+            this.dateNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.msmMain)).EndInit();
+            this.pnlColorChange.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -790,5 +1043,32 @@
         private DevComponents.DotNetBar.Metro.MetroTileItem btnStatistics;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnICD10;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnRecordings;
+        private DevComponents.DotNetBar.Schedule.DateNavigator dateNavigator1;
+        private MetroFramework.Components.MetroStyleManager msmMain;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbMain;
+        private DevComponents.Editors.ComboItem cmbGreen;
+        private DevComponents.Editors.ComboItem cbOrange;
+        private DevComponents.Editors.ComboItem cmbMagenta;
+        private DevComponents.Editors.ComboItem cmbBlue;
+        private MetroFramework.Controls.MetroButton btnChange;
+        private MetroFramework.Controls.MetroPanel pnlColorChange;
+        private DevComponents.Editors.ComboItem cmbTeal;
+        private DevComponents.Editors.ComboItem cmbPlum;
+        private DevComponents.Editors.ComboItem cmbCoffee;
+        private DevComponents.Editors.ComboItem cmbRedOrange;
+        private DevComponents.Editors.ComboItem cmbRedViolet;
+        private DevComponents.Editors.ComboItem cmbOlive;
+        private DevComponents.Editors.ComboItem cmbDarkOlive;
+        private DevComponents.Editors.ComboItem cmbRust;
+        private DevComponents.Editors.ComboItem cmbMaroon;
+        private DevComponents.Editors.ComboItem cmbYellowish;
+        private DevComponents.Editors.ComboItem cmbBlueish;
+        private DevComponents.Editors.ComboItem cmbDarkBlue;
+        private DevComponents.Editors.ComboItem cmbYellow;
+        private DevComponents.Editors.ComboItem cmbGray;
+        private DevComponents.Editors.ComboItem cmbDarkGreen;
+        private DevComponents.Editors.ComboItem cmbMaroonWashed;
+        private DevComponents.Editors.ComboItem cmbPlumWashed;
+        private DevComponents.Editors.ComboItem cmbAzure;
     }
 }

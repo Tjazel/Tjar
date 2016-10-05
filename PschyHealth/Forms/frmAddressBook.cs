@@ -27,8 +27,7 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-            ucToolbar uc = new ucToolbar();
-            this.Controls.Add(uc);
+           
 
             //Load the Form At Position of Main Form
             // int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
@@ -41,6 +40,9 @@ namespace PschyHealth
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+            this.WindowState = FormWindowState.Maximized;
+            ucToolbar uc = new ucToolbar();
+            this.Controls.Add(uc);
         }
 
         private void frmAddressBook_Load(object sender, EventArgs e)

@@ -103,6 +103,26 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Audio_Wave_48px_1 {
+            get {
+                object obj = ResourceManager.GetObject("Audio_Wave_48px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Audio_Wave_48px_3 {
+            get {
+                object obj = ResourceManager.GetObject("Audio_Wave_48px_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Barcode_48px {
             get {
                 object obj = ResourceManager.GetObject("Barcode_48px", resourceCulture);
@@ -766,6 +786,26 @@ namespace PschyHealth.Properties {
         internal static System.Drawing.Bitmap Record_48px {
             get {
                 object obj = ResourceManager.GetObject("Record_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Record_48px_3 {
+            get {
+                object obj = ResourceManager.GetObject("Record_48px_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Record_48px_4 {
+            get {
+                object obj = ResourceManager.GetObject("Record_48px_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

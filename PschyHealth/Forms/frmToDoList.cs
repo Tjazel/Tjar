@@ -22,5 +22,10 @@ namespace PschyHealth
         {
 
         }
+
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

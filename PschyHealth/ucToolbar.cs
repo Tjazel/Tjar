@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Speech.Recognition;
+using PschyHealth.Properties;
 
 namespace PschyHealth
 {
+   
     public partial class ucToolbar : UserControl
     {
+        int count = 0;
+        SpeechRecognitionEngine recEngine = new SpeechRecognitionEngine();
+
         frmMainPage _frmMain = new frmMainPage();
         public ucToolbar()
         {
@@ -20,7 +26,34 @@ namespace PschyHealth
 
         private void ucToolbar_Load(object sender, EventArgs e)
         {
+            
+            Choices command = new Choices();
+            command.Add(new String[] { "Clients", "Staff" });
+            GrammarBuilder gBuilder = new GrammarBuilder();
+            gBuilder.Append(command);
+            Grammar grammar = new Grammar(gBuilder);
+            recEngine.LoadGrammarAsync(grammar);
+            recEngine.SetInputToDefaultAudioDevice();
+            recEngine.SpeechRecognized += recEngine_SpeechRecognized;
+        }
 
+        private void recEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        {
+            //throw new NotImplementedException();
+            switch (e.Result.Text)
+            {
+                case "Clients":
+                    metroClients_Click( sender,  e);
+
+                    break;
+
+                case "Staff":
+                    metroStaff_Click(sender,e);
+
+                    break;
+
+              
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -199,6 +232,30 @@ namespace PschyHealth
         private void pbMinimize_Click(object sender, EventArgs e)
         {
             _frmMain.WindowState =FormWindowState.Minimized;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void pbMic_Click(object sender, EventArgs e)
+        {
+            pbMicOff.Visible = true;
+            pbMic.Visible = false;
+            recEngine.RecognizeAsync(RecognizeMode.Multiple);
+           
+
+           
+        }
+
+        private void pbMicOff_Click(object sender, EventArgs e)
+        {
+            pbMicOff.Visible = false;
+            pbMic.Visible = true;
+            recEngine.RecognizeAsyncStop();
         }
     }
 }
