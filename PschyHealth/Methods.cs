@@ -12,7 +12,7 @@ using System.Net.Mail;
 using System.Drawing;
 using MetroFramework.Controls;
 using System.Data.SqlClient;
-
+using Microsoft.Office.Interop;
 using System.Threading;
 
 
@@ -22,6 +22,8 @@ namespace PschyHealth
     //The main reason for this class is to reuse code, thus not making the program too large, and also making it more efficient.
     class Methods
     {
+        
+
         SqlConnection conn = new SqlConnection("Data Source=jarvisdevelopment.database.windows.net;Initial Catalog=JarvisDev;User ID =ProjectJarvis; Password =JarvisProject2016;");
         //The fillDGV method is used to fill a datagridview with the information gathered from the database
         //The first fillDGV method is used to simply fill the metro grid with no extra operations.
@@ -435,6 +437,62 @@ namespace PschyHealth
 
             pnl.Location = new Point(posX, posY);
             pnl.Show();
+        }
+
+        public void copyTemplate(String name, String newName)
+        {
+            string fileName = name;
+            string sourcePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\StatementTemplates\";
+            string targetPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + newName;
+
+            // Use Path class to manipulate file and directory paths.
+            string sourceFile = Path.Combine(sourcePath, fileName);
+            string destFile = Path.Combine(targetPath, fileName);
+
+            // To copy a folder's contents to a new location:
+            // Create a new target folder, if necessary.
+            if (!Directory.Exists(targetPath))
+            {
+                Directory.CreateDirectory(targetPath);
+            }
+
+            // To copy a file to another location and 
+            // overwrite the destination file if it already exists.
+            File.Copy(sourceFile, destFile, true);
+
+            // To copy all the files in one directory to another directory.
+            // Get the files in the source folder. (To recursively iterate through
+            // all subfolders under the current directory, see
+            // "How to: Iterate Through a Directory Tree.")
+            // Note: Check for target path was performed previously
+            //       in this code example.
+            if (Directory.Exists(sourcePath))
+            {
+                string[] files = Directory.GetFiles(sourcePath);
+
+                // Copy the files and overwrite destination files if they already exist.
+                foreach (string s in files)
+                {
+                    // Use static Path methods to extract only the file name from the path.
+                    fileName = Path.GetFileName(s);
+                    destFile = Path.Combine(targetPath, fileName);
+                    File.Copy(s, destFile, true);
+                }
+            }
+        }
+
+        public void ReplaceBookmarkText(Microsoft.Office.Interop.Word.Document doc,string bookmarkName,string text)
+        {
+            if (doc.Bookmarks.Exists(bookmarkName))
+            {
+                Object name = bookmarkName;
+                Microsoft.Office.Interop.Word.Range range =
+                doc.Bookmarks.get_Item(ref name).Range;
+                range.Text = text;
+                object newRange = range;
+                doc.Bookmarks.Add(bookmarkName, ref newRange);
+            }
+
         }
     }
 }

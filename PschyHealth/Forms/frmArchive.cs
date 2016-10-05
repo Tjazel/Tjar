@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using MetroFramework.Controls;
 using System.Data.SqlClient;
 using System.IO;
+using System.Globalization;
 
 namespace PschyHealth
 {
@@ -86,19 +87,24 @@ namespace PschyHealth
         private void cmbFolder_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbArcList.Items.Clear();
+            string month;
             string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + cmbFolder.Text + @"\";
             DirectoryInfo d = new DirectoryInfo(filepath);
             cmbFile.Items.Clear();
+            int pos1, pos2;
             try
             {
                 foreach (var file in d.GetFiles())
                 {
-                    cmbFile.Items.Add(file.Name);
+                    pos1 = file.Name.IndexOf("-") + 1;
+                    pos2 = file.Name.IndexOf(".");
+                    month = DateTimeFormatInfo.CurrentInfo.GetAbbreviatedMonthName(Convert.ToInt16(file.Name.Substring(pos1,pos2-pos1)));
+                    cmbFile.Items.Add(month + " " + file.Name.Substring(0,pos1-1));
                 }
             }
-            catch
+            catch (FileNotFoundException el)
             {
-
+                MessageBox.Show(el.Message);
             }
         }
 

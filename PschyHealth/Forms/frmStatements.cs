@@ -9,11 +9,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
+using System.Globalization;
+using Microsoft.Office.Interop.Word;
 
 namespace PschyHealth
 {
     public partial class frmStatements : MetroForm
     {
+        
+
+        Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
+
+        object fileName = @"C:\Templates\VerslagPschyHealth.docx";
+        object confirmConversions = Type.Missing;
+        object readOnly = Type.Missing;
+        object addToRecentFiles = Type.Missing;
+        object passwordDoc = Type.Missing;
+        object passwordTemplate = Type.Missing;
+        object revert = Type.Missing;
+        object writepwdoc = Type.Missing;
+        object writepwTemplate = Type.Missing;
+        object format = Type.Missing;
+        object encoding = Type.Missing;
+        object visible = Type.Missing;
+        object openRepair = Type.Missing;
+        object docDirection = Type.Missing;
+        object notEncoding = Type.Missing;
+        object xmlTransform = Type.Missing;
+
         Methods cMethods = new Methods();
         String correctSearch = "";
         //Constants
@@ -28,7 +52,7 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-           
+            
             /*
 
             //Load the Form At Position of Main Form
@@ -47,7 +71,16 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 
-            cMethods.fillDGV(dgvStatements, "Clients");
+            string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\StatementTemplates\";
+            DirectoryInfo d = new DirectoryInfo(filepath);
+            cmbFormat.Items.Clear();
+                foreach (var file in d.GetFiles())
+                {
+                    cmbFormat.Items.Add(file.Name);
+                }
+
+
+                cMethods.fillDGV(dgvStatements, "Clients");
             cMethods.fillCMBrow(cmbClient, dgvStatements);
         }
         public frmStatements()
@@ -161,34 +194,58 @@ namespace PschyHealth
 
         private void cmbClient_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int[] con = {1, 8, 7, 1, 2, 5, 10, 11 };//Verander 2 10
             string line;
             lbStatements.Items.Clear();
             cMethods.fillDGV(dgvStatements, "Consultations");
             for (int i = 0; i < dgvStatements.RowCount-1; i++)
             {
                 line = "";
-                if((cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) == dgvStatements.Rows[i].Cells["Surname"].Value.ToString()) || (cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2,1) == dgvStatements.Rows[i].Cells["Initials"].Value.ToString()))
+                if((cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) == dgvStatements.Rows[i].Cells["Surname"].Value.ToString()) || (cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2,1) == dgvStatements.Rows[i].Cells["Name"].Value.ToString()))
                 {
-                    for (int k = 0; k < dgvStatements.ColumnCount; k++)
-                        line += dgvStatements.Rows[i].Cells[k].Value.ToString();
+                    for (int k = 0; k < con.Length; k++)
+                        line += dgvStatements.Rows[i].Cells[con[k]].Value.ToString();
                     lbStatements.Items.Add(line);
                 }
                 
             }
-
+            int[] stat = {4,8};
             cMethods.fillDGV(dgvStatements, "Payments");
             for (int i = 0; i < dgvStatements.RowCount - 1; i++)
             {
                 line = "";
                 if ((cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) == dgvStatements.Rows[i].Cells["Client_Surname"].Value.ToString()) || (cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2) == dgvStatements.Rows[i].Cells["Client_Name"].Value.ToString()))
                 {
-                    for (int k = 0; k < dgvStatements.ColumnCount; k++)
-                        line += dgvStatements.Rows[i].Cells[k].Value.ToString();
+                    for (int k = 0; k < stat.Length; k++)
+                        line += dgvStatements.Rows[i].Cells[con[k]].Value.ToString();
                     lbStatements.Items.Add(line);
                 }
 
             }
             
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            String clientName = cmbClient.Text.Replace(" ", string.Empty);
+            String name = clientName + "(" + DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Year.ToString() + ")" + ".docx";
+            cMethods.CheckFolder(Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName);
+            cMethods.copyTemplate(cmbFormat.Text, clientName);
+            File.Move(Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + cmbFormat.Text, Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + name);
+            object fileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + name;
+
+            Document doc = wordApp.Documents.Open(ref fileName, ref confirmConversions, ref readOnly, ref addToRecentFiles,
+            ref passwordDoc, ref passwordTemplate, ref revert, ref writepwdoc, ref writepwTemplate, ref format, ref encoding, ref visible, ref openRepair,
+            ref docDirection, ref notEncoding, ref xmlTransform);
+
+            cMethods.ReplaceBookmarkText(doc, "Title", "Toets");
+            cMethods.ReplaceBookmarkText(doc, "Initials", "Dit Werk");
+            doc.Close();
+        }
+
+        private void cmbFormat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
