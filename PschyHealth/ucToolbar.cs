@@ -206,6 +206,12 @@ namespace PschyHealth
                     break;
                 }
             }
+
+            if (IsOpen == false)
+            {
+                frmConsultations frmConsultations = new frmConsultations();
+                frmConsultations.Show();
+            }
         }
 
         private void contexUser_Opening(object sender, CancelEventArgs e)

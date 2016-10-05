@@ -215,7 +215,7 @@ namespace PschyHealth
         private void btnAddAcount_Click(object sender, EventArgs e)
         {
             if((txtAccTransaction.Text != null)&& (txtAccType.Text != null)&& (txtAccDate.Text != null)&& (txtAccAmount.Text != null)&& (txtAccDescription.Text != null))
-            cMethods.insert("Accounting",txtAccTransaction.Text+txtAccDescription.Text+txtAccType.Text+txtAccAmount.Text+txtAccDate.Text);
+            cMethods.insert("Accounting",txtAccTransaction.Text+','+txtAccDescription.Text + ',' + txtAccType.Text + ',' + txtAccAmount.Text + ',' + txtAccDate.Text);
         }
     }
 }

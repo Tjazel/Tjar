@@ -134,9 +134,9 @@
             // 
             // 
             this.txtClientMaritial_Status.CustomButton.Image = null;
-            this.txtClientMaritial_Status.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.txtClientMaritial_Status.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtClientMaritial_Status.CustomButton.Name = "";
-            this.txtClientMaritial_Status.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientMaritial_Status.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientMaritial_Status.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientMaritial_Status.CustomButton.TabIndex = 1;
             this.txtClientMaritial_Status.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -165,9 +165,9 @@
             // 
             // 
             this.txtClientOccupation.CustomButton.Image = null;
-            this.txtClientOccupation.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.txtClientOccupation.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtClientOccupation.CustomButton.Name = "";
-            this.txtClientOccupation.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientOccupation.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientOccupation.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientOccupation.CustomButton.TabIndex = 1;
             this.txtClientOccupation.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -196,9 +196,9 @@
             // 
             // 
             this.txtClientMobile_Cellphone_Number.CustomButton.Image = null;
-            this.txtClientMobile_Cellphone_Number.CustomButton.Location = new System.Drawing.Point(53, 2);
+            this.txtClientMobile_Cellphone_Number.CustomButton.Location = new System.Drawing.Point(66, 2);
             this.txtClientMobile_Cellphone_Number.CustomButton.Name = "";
-            this.txtClientMobile_Cellphone_Number.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientMobile_Cellphone_Number.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientMobile_Cellphone_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientMobile_Cellphone_Number.CustomButton.TabIndex = 1;
             this.txtClientMobile_Cellphone_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -227,9 +227,9 @@
             // 
             // 
             this.txtClientHome_Telephone_Number.CustomButton.Image = null;
-            this.txtClientHome_Telephone_Number.CustomButton.Location = new System.Drawing.Point(53, 2);
+            this.txtClientHome_Telephone_Number.CustomButton.Location = new System.Drawing.Point(66, 2);
             this.txtClientHome_Telephone_Number.CustomButton.Name = "";
-            this.txtClientHome_Telephone_Number.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientHome_Telephone_Number.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientHome_Telephone_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientHome_Telephone_Number.CustomButton.TabIndex = 1;
             this.txtClientHome_Telephone_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -258,9 +258,9 @@
             // 
             // 
             this.txtClientAddress.CustomButton.Image = null;
-            this.txtClientAddress.CustomButton.Location = new System.Drawing.Point(66, 2);
+            this.txtClientAddress.CustomButton.Location = new System.Drawing.Point(82, 2);
             this.txtClientAddress.CustomButton.Name = "";
-            this.txtClientAddress.CustomButton.Size = new System.Drawing.Size(52, 52);
+            this.txtClientAddress.CustomButton.Size = new System.Drawing.Size(65, 65);
             this.txtClientAddress.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientAddress.CustomButton.TabIndex = 1;
             this.txtClientAddress.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -290,9 +290,9 @@
             // 
             // 
             this.txtCleintDate_of_birth.CustomButton.Image = null;
-            this.txtCleintDate_of_birth.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.txtCleintDate_of_birth.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtCleintDate_of_birth.CustomButton.Name = "";
-            this.txtCleintDate_of_birth.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtCleintDate_of_birth.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtCleintDate_of_birth.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtCleintDate_of_birth.CustomButton.TabIndex = 1;
             this.txtCleintDate_of_birth.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -337,9 +337,9 @@
             // 
             // 
             this.txtClientsSearch.CustomButton.Image = null;
-            this.txtClientsSearch.CustomButton.Location = new System.Drawing.Point(98, 1);
+            this.txtClientsSearch.CustomButton.Location = new System.Drawing.Point(122, 1);
             this.txtClientsSearch.CustomButton.Name = "";
-            this.txtClientsSearch.CustomButton.Size = new System.Drawing.Size(22, 22);
+            this.txtClientsSearch.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.txtClientsSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientsSearch.CustomButton.TabIndex = 1;
             this.txtClientsSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -398,9 +398,9 @@
             // 
             // 
             this.txtClientSurname.CustomButton.Image = null;
-            this.txtClientSurname.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.txtClientSurname.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtClientSurname.CustomButton.Name = "";
-            this.txtClientSurname.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientSurname.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientSurname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientSurname.CustomButton.TabIndex = 1;
             this.txtClientSurname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -429,9 +429,9 @@
             // 
             // 
             this.txtCleintFirst_Name.CustomButton.Image = null;
-            this.txtCleintFirst_Name.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.txtCleintFirst_Name.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtCleintFirst_Name.CustomButton.Name = "";
-            this.txtCleintFirst_Name.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtCleintFirst_Name.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtCleintFirst_Name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtCleintFirst_Name.CustomButton.TabIndex = 1;
             this.txtCleintFirst_Name.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -460,9 +460,9 @@
             // 
             // 
             this.txtClientID.CustomButton.Image = null;
-            this.txtClientID.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.txtClientID.CustomButton.Location = new System.Drawing.Point(130, 2);
             this.txtClientID.CustomButton.Name = "";
-            this.txtClientID.CustomButton.Size = new System.Drawing.Size(14, 14);
+            this.txtClientID.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtClientID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientID.CustomButton.TabIndex = 1;
             this.txtClientID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -595,6 +595,7 @@
             this.btnUpdateClient.Text = "Update Client";
             this.btnUpdateClient.UseSelectable = true;
             this.btnUpdateClient.UseVisualStyleBackColor = true;
+            this.btnUpdateClient.Click += new System.EventHandler(this.btnUpdateClient_Click);
             // 
             // metroLabel3
             // 
@@ -765,9 +766,9 @@
             // gbDependants
             // 
             this.gbDependants.Location = new System.Drawing.Point(5, 491);
-            this.gbDependants.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDependants.Margin = new System.Windows.Forms.Padding(2);
             this.gbDependants.Name = "gbDependants";
-            this.gbDependants.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDependants.Padding = new System.Windows.Forms.Padding(2);
             this.gbDependants.Size = new System.Drawing.Size(340, 158);
             this.gbDependants.TabIndex = 43;
             this.gbDependants.TabStop = false;
