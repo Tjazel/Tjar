@@ -96,6 +96,7 @@
             this.ctxUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ctxUser.AutoSize = true;
             this.ctxUser.BackColor = System.Drawing.Color.Transparent;
+            this.ctxUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ctxUser.Location = new System.Drawing.Point(1642, 16);
             this.ctxUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ctxUser.Name = "ctxUser";
@@ -601,6 +602,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::PschyHealth.Properties.Resources.Garage_Closed_48px;
             this.pictureBox4.Location = new System.Drawing.Point(1512, 9);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
@@ -614,6 +616,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::PschyHealth.Properties.Resources.Gender_Neutral_User_48px_1;
             this.pictureBox2.Location = new System.Drawing.Point(1596, 9);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -626,6 +629,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::PschyHealth.Properties.Resources.Double_Down_48px_1;
             this.pictureBox1.Location = new System.Drawing.Point(1464, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -651,6 +655,7 @@
             // pbSettings
             // 
             this.pbSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbSettings.Image = global::PschyHealth.Properties.Resources.Settings_48px;
             this.pbSettings.Location = new System.Drawing.Point(1786, 9);
             this.pbSettings.Margin = new System.Windows.Forms.Padding(4);
@@ -664,6 +669,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::PschyHealth.Properties.Resources.Information_48px;
             this.pictureBox3.Location = new System.Drawing.Point(1749, 9);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -677,6 +683,7 @@
             // pbExit
             // 
             this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbExit.Image = global::PschyHealth.Properties.Resources.Close_Window_48px;
             this.pbExit.Location = new System.Drawing.Point(1874, 9);
             this.pbExit.Margin = new System.Windows.Forms.Padding(4);
@@ -690,6 +697,7 @@
             // pbMinimize
             // 
             this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMinimize.Image = global::PschyHealth.Properties.Resources.Minimize_Window_48px;
             this.pbMinimize.Location = new System.Drawing.Point(1835, 9);
             this.pbMinimize.Margin = new System.Windows.Forms.Padding(4);
@@ -702,6 +710,7 @@
             // 
             // pbMicOff
             // 
+            this.pbMicOff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMicOff.Image = global::PschyHealth.Properties.Resources.No_Microphone_48px;
             this.pbMicOff.Location = new System.Drawing.Point(1552, 9);
             this.pbMicOff.Margin = new System.Windows.Forms.Padding(2);

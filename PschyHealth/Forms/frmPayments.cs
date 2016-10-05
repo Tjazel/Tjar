@@ -32,8 +32,7 @@ namespace PschyHealth.Forms
 
         protected override void OnLoad(EventArgs e)
         {
-            ucToolbar uc = new ucToolbar();
-            this.Controls.Add(uc);
+            
 
             /*
             //Load the Form At Position of Main Form
@@ -48,6 +47,9 @@ namespace PschyHealth.Forms
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+            this.WindowState = FormWindowState.Maximized;
+            ucToolbar uc = new ucToolbar();
+            this.Controls.Add(uc);
 
             cMethods.fillDGV(dgvPayments, "Clients");
             cMethods.fillCMBrow(cmbClient,dgvPayments);

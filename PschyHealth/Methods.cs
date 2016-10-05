@@ -412,5 +412,29 @@ namespace PschyHealth
             }
             return true;
         }
+
+
+        //Main page se tile kleure vind hier plaas
+        DevComponents.DotNetBar.Metro.MetroTileItem Knoppie = new DevComponents.DotNetBar.Metro.MetroTileItem();
+        public void dieKnoppie(DevComponents.DotNetBar.Metro.MetroTileItem keuse)
+        {
+            Knoppie = keuse;
+        }
+
+        public void kleur(DevComponents.DotNetBar.Metro.eMetroTileColor kl)
+        {
+            Knoppie.TileColor = kl;
+
+        }
+
+        public void pos(Form frm, Panel pnl)
+        {
+            frm.Cursor = new Cursor(Cursor.Current.Handle);
+            int posX = Cursor.Position.X;
+            int posY = Cursor.Position.Y;
+
+            pnl.Location = new Point(posX, posY);
+            pnl.Show();
+        }
     }
 }
