@@ -18,7 +18,7 @@ namespace PschyHealth
 {
     public partial class frmArchive : MetroForm
     {
-       
+        Methods cMethods = new Methods();
 
        // Constants
         const int AW_SLIDE = 0X40000;
@@ -98,7 +98,7 @@ namespace PschyHealth
                 {
                     pos1 = file.Name.IndexOf("-") + 1;
                     pos2 = file.Name.IndexOf(".");
-                    month = DateTimeFormatInfo.CurrentInfo.GetAbbreviatedMonthName(Convert.ToInt16(file.Name.Substring(pos1,pos2-pos1)));
+                    month = DateTimeFormatInfo.CurrentInfo.GetMonthName(Convert.ToInt16(file.Name.Substring(pos1,pos2-pos1)));
                     cmbFile.Items.Add(month + " " + file.Name.Substring(0,pos1-1));
                 }
             }
@@ -112,10 +112,13 @@ namespace PschyHealth
         {
             int counter = 0;
             string line;
+            string monthName = DateTime.ParseExact(cmbFile.Text.Substring(0, cmbFile.Text.IndexOf(" ")), "MMMM", CultureInfo.CurrentCulture).Month.ToString();
+            string year = cmbFile.Text.Substring(cmbFile.Text.IndexOf(" ") + 1, 4);
+            string fileName = year + "-" + monthName + ".txt";
             lbArcList.Items.Clear();
             // Read the file and display it line by line.
-            System.IO.StreamReader file =
-               new System.IO.StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + cmbFolder.Text + @"\" + cmbFile.Text);
+            StreamReader file =
+               new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + cmbFolder.Text + @"\" + fileName);
             while ((line = file.ReadLine()) != null)
             {
                 lbArcList.Items.Add(line);
@@ -123,6 +126,46 @@ namespace PschyHealth
             }
 
             file.Close();
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            string fields = "";
+            string row = lbArcList.Items[lbArcList.SelectedIndex].ToString();
+            string key = row.Substring(0, row.IndexOf(";"));
+            string values = "";
+            String table = cmbFolder.Text.Substring(0,cmbFolder.Text.Length-7);
+
+            MetroGrid dgv = new MetroGrid();
+            dgv.Parent = this;
+            cMethods.fillDGV(dgv, table);
+
+            for(int i = 0; i < dgv.ColumnCount; i++)
+            {
+                fields += dgv.Columns[i].Name + ",";
+                if(dgv.Columns[i].Name=="Amount")
+                    values += row.Substring(0, row.IndexOf(";")) + ",";
+                else
+                    values += "'" + row.Substring(0, row.IndexOf(";")) + "',";
+                row = row.Remove(0, row.IndexOf(";") + 1);
+            }
+            fields = fields.Substring(0, fields.Length - 1);
+            values = values.Substring(0, values.Length - 1);
+            cMethods.add(table, fields, values);
+            dgv.Hide();
+            dgv = null;
+            string monthName = DateTime.ParseExact(cmbFile.Text.Substring(0, cmbFile.Text.IndexOf(" ")), "MMMM", CultureInfo.CurrentCulture).Month.ToString();
+            string year = cmbFile.Text.Substring(cmbFile.Text.IndexOf(" ") + 1, 4);
+            string name = year + "-" + monthName + ".txt";
+            String fileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + cmbFolder.Text + @"\" + name;
+            var tempFile = Path.GetTempFileName();
+            var linesToKeep = File.ReadLines(fileName).Where(l => l != lbArcList.SelectedItem.ToString());
+
+            File.WriteAllLines(tempFile, linesToKeep);
+
+            File.Delete(fileName);
+            File.Move(tempFile, fileName);
+            lbArcList.Items.RemoveAt(lbArcList.SelectedIndex);
         }
     }
 }

@@ -40,7 +40,7 @@
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
             this.pbMic.Location = new System.Drawing.Point(17, 50);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(2);
             this.pbMic.Name = "pbMic";
             this.pbMic.Size = new System.Drawing.Size(28, 22);
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -85,7 +85,7 @@
             // lbArcList
             // 
             this.lbArcList.FormattingEnabled = true;
-            this.lbArcList.Location = new System.Drawing.Point(274, 246);
+            this.lbArcList.Location = new System.Drawing.Point(242, 246);
             this.lbArcList.Name = "lbArcList";
             this.lbArcList.Size = new System.Drawing.Size(591, 264);
             this.lbArcList.TabIndex = 64;
@@ -98,6 +98,7 @@
             this.metroButton1.TabIndex = 65;
             this.metroButton1.Text = "metroButton1";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // frmArchive
             // 
@@ -109,9 +110,9 @@
             this.Controls.Add(this.cmbFile);
             this.Controls.Add(this.cmbFolder);
             this.Controls.Add(this.pbMic);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmArchive";
-            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Text = "frmArchive";
             this.Load += new System.EventHandler(this.frmArchive_Load);
             this.Shown += new System.EventHandler(this.frmArchive_Shown);

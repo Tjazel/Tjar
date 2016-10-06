@@ -218,6 +218,8 @@ namespace PschyHealth
                     cMethods.edit("Accounting", field, value, " Transaction_Number = '" + dgvAccount.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString() + "'");
                 else if(button == "delete")
                     cMethods.delete("Accounting", "Transaction_Number = '" + rowID + "'");
+                else if (button == "archive")
+                    cMethods.Archive(dgvAccount, "Accounting", "Transaction_Number", dgvAccount.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString());
 
             }
             btnDeleteAccount.Enabled = true;
@@ -225,6 +227,16 @@ namespace PschyHealth
             btnAddAcount.Enabled = true;
             btnConfirm.Hide();
             filter();
+        }
+
+        private void metroTextButton1_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
+            btnDeleteAccount.Enabled = false;
+            btnUpdateAccount.Enabled = false;
+            btnAddAcount.Enabled = false;
+            button = "archive";
         }
     }
 }

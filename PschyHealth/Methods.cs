@@ -250,6 +250,26 @@ namespace PschyHealth
             }
         }
 
+        public void Archive(MetroGrid dgv, String table, String field, String crit)
+        {
+            String arch = "";
+            for(int i = 0; i < dgv.RowCount-1; i++)
+            {
+                if (dgv.Rows[i].Cells[field].Value.ToString() == crit)
+                {
+                    for (int j = 0; j < dgv.Columns.Count; j++)
+                    {
+                        arch += dgv.Rows[i].Cells[j].Value.ToString() + ";";
+                    }
+                    arch += "\r\n";
+                    WriteFile(Environment.GetFolderPath(
+                    Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + table + @"Archive\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString(), arch);
+                    delete(table, field + "='" + crit + "'");
+                }
+
+            }
+            
+        }
         public void Archive(MetroGrid dgv, String table, double months)
         {
             String arch = "";
@@ -266,7 +286,7 @@ namespace PschyHealth
                 {
                     for (int j = 0; j < dgv.Columns.Count; j++)
                     {
-                        arch += dgv.Rows[i].Cells[j].Value.ToString() + "; ";
+                        arch += dgv.Rows[i].Cells[j].Value.ToString() + ";";
                     }
                     arch += "\r\n";
                 }
