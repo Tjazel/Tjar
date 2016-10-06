@@ -51,14 +51,14 @@
             // 
             this.metroProgressBar1.Location = new System.Drawing.Point(244, 106);
             this.metroProgressBar1.Name = "metroProgressBar1";
-            this.metroProgressBar1.Size = new System.Drawing.Size(100, 23);
+            this.metroProgressBar1.Size = new System.Drawing.Size(104, 23);
             this.metroProgressBar1.TabIndex = 2;
             // 
             // pnlDBLoadingMessege
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SlateGray;
+            this.BackColor = System.Drawing.Color.Teal;
             this.Controls.Add(this.metroProgressBar1);
             this.Controls.Add(this.metroLabel1);
             this.Name = "pnlDBLoadingMessege";

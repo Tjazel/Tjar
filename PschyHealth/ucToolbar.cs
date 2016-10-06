@@ -263,6 +263,11 @@ namespace PschyHealth
             pbMic.Visible = true;
             recEngine.RecognizeAsyncStop();
         }
+
+        private void buttonItem3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

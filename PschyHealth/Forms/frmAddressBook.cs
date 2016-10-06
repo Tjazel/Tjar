@@ -51,5 +51,15 @@ namespace PschyHealth
             uc.Dock = DockStyle.Fill;
             this.Controls.Add(uc);
         }
+
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
