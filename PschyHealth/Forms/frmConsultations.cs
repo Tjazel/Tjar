@@ -17,6 +17,7 @@ namespace PschyHealth
 
     {
         String correctSearch = "";
+        String button = "";
         Methods cMethods = new Methods();
         //Constants
         const int AW_SLIDE = 0X40000;
@@ -179,6 +180,61 @@ namespace PschyHealth
             metroComboBox1.SelectedIndex = -1;
             if (metroComboBox1.Visible == true)
                 txtConsultationsSearch.Enabled = false;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", true, true);
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            btnAdd.Enabled = false;
+            button = "add";
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", true);
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            btnAdd.Enabled = false;
+            button = "edit";
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", false);
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            btnAdd.Enabled = false;
+            button = "delete";
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            String field;
+            String value;
+            if (dgvConsultations.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dgvConsultations.SelectedRows[0].Index;
+
+                String rowID = dgvConsultations[0, selectedIndex].Value.ToString();
+                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Cons");
+                if (button == "add")
+                    cMethods.add("Consultations", field, value);
+                else if (button == "edit")
+                    cMethods.edit("Consultations", field, value, " Consultation = '" + dgvConsultations.Rows[selectedIndex].Cells["Consultation"].Value.ToString() + "'");
+                else if (button == "delete")
+                    cMethods.delete("Consultations", "Consultation = '" + rowID + "'");
+
+            }
+            btnDelete.Enabled = true;
+            btnEdit.Enabled = true;
+            btnAdd.Enabled = true;
+            btnConfirm.Hide();
+            filter();
         }
     }
 }

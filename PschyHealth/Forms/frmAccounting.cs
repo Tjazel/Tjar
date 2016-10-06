@@ -179,7 +179,6 @@ namespace PschyHealth
             btnUpdateAccount.Enabled = false;
             btnAddAcount.Enabled = false;
             button = "delete";
-
         }
 
         private void btnUpdateAccount_Click(object sender, EventArgs e)
