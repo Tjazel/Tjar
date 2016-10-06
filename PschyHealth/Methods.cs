@@ -373,14 +373,61 @@ namespace PschyHealth
 
         //Main page se tile kleure vind hier plaas
         DevComponents.DotNetBar.Metro.MetroTileItem Knoppie = new DevComponents.DotNetBar.Metro.MetroTileItem();
+
+        public void defTileColors()
+        {
+            string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\TileColors\tileColors.txt";
+            StreamWriter write = File.AppendText(filename);
+
+
+            if (new FileInfo(filename).Length == 0)
+            {
+
+                write.WriteLine("btn_StaffNew/ Teal " + "\r\n" +
+                               "btnClients/ Teal " + "\r\n" +
+                               "btnAccounting/ Teal " + "\r\n" +
+                               "btnPayments/ Teal " + "\r\n" +
+                               "btnMedicalAid/ Teal " + "\r\n" +
+                               "btnConsultations/ Teal " + "\r\n" +
+                               "btnDiagnostic/ Teal " + "\r\n" +
+                               "btnReports/ Teal " + "\r\n" +
+                               "btnArchive/ Teal " + "\r\n" +
+                               "btnEmail/ Teal " + "\r\n" +
+                               "btnNotePad/ Teal " + "\r\n" +
+                               "btnCalender/ Teal " + "\r\n" +
+                               "btnAdressBook/ Teal " + "\r\n" +
+                               "btnStatements/ Teal " + "\r\n" +
+                               "btnStatistics/ Teal " + "\r\n" +
+                               "btnICD10/ Teal " + "\r\n" +
+                               "btnRecordings/ Teal " + "\r\n" +
+                               "btnDateAndTime/ Teal " + "\r\n" +
+                               "btnInfo/ Teal " + "\r\n");
+                write.Close();
+            }
+            else
+            {
+
+                write.Close();
+            }
+
+
+
+        }
         public void dieKnoppie(DevComponents.DotNetBar.Metro.MetroTileItem keuse)
         {
             Knoppie = keuse;
         }
 
+        public void fnTileColor(DevComponents.DotNetBar.Metro.MetroTileItem keuse, DevComponents.DotNetBar.Metro.eMetroTileColor kl)
+        {
+            keuse.TileColor = kl;
+        }
+
         public void kleur(DevComponents.DotNetBar.Metro.eMetroTileColor kl)
+
         {
             Knoppie.TileColor = kl;
+            writeToStylesTileColor(Knoppie, kl);
 
         }
 
@@ -392,6 +439,279 @@ namespace PschyHealth
 
             pnl.Location = new Point(posX, posY);
             pnl.Show();
+        }
+
+        public void readFromStyleColor(DevComponents.DotNetBar.Metro.MetroTileItem keuse)
+        {
+
+            DevComponents.DotNetBar.Metro.eMetroTileColor el = new DevComponents.DotNetBar.Metro.eMetroTileColor();
+            string line;
+            string[] words = new string[2];
+            char[] sep = { '/' };
+            bool found = false;
+            StreamReader lees; ;
+            string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\TileColors\tileColors.txt";
+
+
+            //lees die knoppie en kleur wat verander moet word
+            lees = File.OpenText(filename);
+            line = lees.ReadLine();
+
+            while (found == false)
+            {
+                // line = lees.ReadLine();
+
+                words = line.Split(sep);
+                if (words[0] == keuse.Name)
+                {
+                    // MessageBox.Show(words[1]);
+                    switch (words[1].Trim())
+                    {
+                        case "Green":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Green;
+                            fnTileColor(keuse, el);
+
+                            found = true;
+                            //  inputStream.Close();
+                            break;
+
+                        case "Orange":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            //  inputStream.Close();
+                            break;
+
+                        case "Magenta":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            //  inputStream.Close();
+                            break;
+
+                        case "Blue":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Blue;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            //  inputStream.Close();
+                            break;
+
+                        case "Teal":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "Plum":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Plum;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "Coffee":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Coffee;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "RedOrange":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.RedOrange;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "RedViolet":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.RedViolet;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "Olive":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Olive;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            //  inputStream.Close();
+                            break;
+
+                        case "DarkOlive":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkOlive;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            //  inputStream.Close();
+                            break;
+
+                        case "Rust":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Rust;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            //  inputStream.Close();
+                            break;
+
+                        case "Maroon":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Maroon;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "Yellowish":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Yellowish;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "Blueish":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Blueish;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "DarkBlue":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkBlue;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "Yellow":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Yellow;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "Gray":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Gray;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            //  inputStream.Close();
+                            break;
+
+                        case "DarkGreen":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkGreen;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "MaroonWashed":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.MaroonWashed;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "PlumWashed":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.PlumWashed;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            // inputStream.Close();
+                            break;
+
+                        case "Azure":
+                            el = DevComponents.DotNetBar.Metro.eMetroTileColor.Azure;
+                            fnTileColor(keuse, el);
+                            found = true;
+                            lees.Close();
+                            break;
+
+                    }
+
+                }
+                else
+                {
+                    line = lees.ReadLine();
+                }
+
+
+            }
+            lees.Close();
+
+
+        }
+
+        void File_DeleteLine(int Line, string Path)
+        {
+            StringBuilder sb = new StringBuilder();
+            using (StreamReader sr = new StreamReader(Path))
+            {
+                int Countup = 0;
+                while (!sr.EndOfStream)
+                {
+                    Countup++;
+                    if (Countup != Line)
+                    {
+                        using (StringWriter sw = new StringWriter(sb))
+                        {
+                            sw.WriteLine(sr.ReadLine());
+                        }
+                    }
+                    else
+                    {
+                        sr.ReadLine();
+                    }
+                }
+            }
+            using (StreamWriter sw = new StreamWriter(Path))
+            {
+                sw.Write(sb.ToString());
+            }
+        }
+
+        public void writeToStylesTileColor(DevComponents.DotNetBar.Metro.MetroTileItem keuse, DevComponents.DotNetBar.Metro.eMetroTileColor kl)
+        {
+
+            int lineNumber = 0;
+
+            string line;
+            string[] words = new string[2];
+            char[] sep = { '/' };
+            bool found = false;
+            StreamReader inputStream;
+            string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\TileColors\tileColors.txt";
+
+
+            //Kry die knoppie en kleur wat verander moet word
+            inputStream = File.OpenText(filename);
+            line = inputStream.ReadLine();
+
+            while (line != null && found == false)
+            {
+                lineNumber++;
+                words = line.Split(sep);
+                if (words[0] == keuse.Name)
+                {
+                    words[1] = " " + kl + " ";
+                    inputStream.Close();
+                    File_DeleteLine(lineNumber, filename);
+
+
+                    // MessageBox.Show(words[0] + words[1]);
+
+                    StreamWriter write = File.AppendText(@"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\TileColors\tileColors.txt");
+                    write.WriteLine(keuse.Name + "/" + words[1]);
+                    write.Close();
+
+
+
+                    found = true;
+                }
+                else
+                {
+                    line = inputStream.ReadLine();
+                }
+
+            }
+            inputStream.Close();
+            readFromStyleColor(keuse);
+
         }
 
         public void copyTemplate(String name, String newName)

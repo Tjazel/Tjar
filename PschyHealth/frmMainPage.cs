@@ -80,6 +80,13 @@ namespace PschyHealth
             cMethods.CheckFolder(path + @"\Recordings");
             cMethods.CheckFolder(path + @"\Recordings\" + DateTime.Now.Month.ToString());
             cMethods.CheckFolder(path + @"\Log");
+            cMethods.CheckFolder(path + @"\Styles");
+            cMethods.CheckFolder(path + @"\Styles\TileColors");
+            cMethods.CheckFile(path + @"\Styles\TileColors\tileColors");
+            cMethods.CheckFolder(path + @"\Styles\Theme");
+            cMethods.CheckFile(path + @"\Styles\Theme\theme");
+            cMethods.CheckFolder(path + @"\Styles\style");
+            cMethods.CheckFile(path + @"\Styles\style\style");
             cMethods.CheckFolder(path + @"\Statements");
             cMethods.CheckFolder(path + @"\StatementTemplates");
             cMethods.CheckFolder(path + @"\Archive\LogArchive");
@@ -89,6 +96,27 @@ namespace PschyHealth
             cMethods.CheckFolder(path + @"\Archive\AccountingArchive");
             cMethods.CheckFolder(path + @"\Archive\ConsultationsArchive");
             cMethods.CheckFile(path + @"\Log\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString());
+            cMethods.defTileColors();
+
+            cMethods.readFromStyleColor(btn_StaffNew);
+            cMethods.readFromStyleColor(btnClients);
+            cMethods.readFromStyleColor(btnAccounting);
+            cMethods.readFromStyleColor(btnPayments);
+            cMethods.readFromStyleColor(btnMedicalAid);
+            cMethods.readFromStyleColor(btnConsultations);
+            cMethods.readFromStyleColor(btnDiagnostic);
+            cMethods.readFromStyleColor(btnReports);
+            cMethods.readFromStyleColor(btnArchive);
+            cMethods.readFromStyleColor(btnEmail);
+            cMethods.readFromStyleColor(btnNotePad);
+            cMethods.readFromStyleColor(btnCalender);
+            cMethods.readFromStyleColor(btnAdressBook);
+            cMethods.readFromStyleColor(btnStatements);
+            cMethods.readFromStyleColor(btnStatistics);
+            cMethods.readFromStyleColor(btnICD10);
+            cMethods.readFromStyleColor(btnRecordings);
+            cMethods.readFromStyleColor(btnInfo);
+            cMethods.readFromStyleColor(btnDateAndTime);
 
 
         }
