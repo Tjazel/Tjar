@@ -22,7 +22,8 @@ namespace PschyHealth
     //The main reason for this class is to reuse code, thus not making the program too large, and also making it more efficient.
     class Methods
     {
-        
+        String connectionString =
+                "Data Source = jarvisdevelopment.database.windows.net; Initial Catalog =JarvisDev; User ID =ProjectJarvis; Password =JarvisProject2016;";
 
         SqlConnection conn = new SqlConnection("Data Source=jarvisdevelopment.database.windows.net;Initial Catalog=JarvisDev;User ID =ProjectJarvis; Password =JarvisProject2016;");
         //The fillDGV method is used to fill a datagridview with the information gathered from the database
@@ -53,8 +54,7 @@ namespace PschyHealth
                 SqlDataAdapter dataAdapter = new SqlDataAdapter();
                 BindingSource bindingSource1 = new BindingSource();
 
-                String connectionString =
-                "Data Source = jarvisdevelopment.database.windows.net; Initial Catalog =JarvisDev; User ID =ProjectJarvis; Password =JarvisProject2016;";
+                
 
                 // Create a new data adapter based on the specified query.
                 dataAdapter = new SqlDataAdapter("SELECT * FROM " + sTable + filter, connectionString);
@@ -145,88 +145,9 @@ namespace PschyHealth
         //        return false;
         //    }
 
-//}
+        //}
 
-        public void insert(String table, String field)
-        {
-            SqlDataReader reader;
-            SqlCommand cmd = new SqlCommand();
-
-            cmd.CommandText = "INSERT INTO @P1 VALUES (@P2)";
-            cmd.Parameters.AddWithValue("@P1", table);
-            cmd.Parameters.AddWithValue("@P2", field);
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = conn;
-            conn.Open();
-
-            reader = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-
-            conn.Close();
-
-        }
-
-        public void delete(String table, int rowID)
-        {
-             
-        string sql = "DELETE FROM @P1 WHERE RowID = @RowID";
-
-        SqlCommand deleteRecord = new SqlCommand();
-        deleteRecord.Connection = conn;
-        deleteRecord.CommandType = CommandType.Text;
-        deleteRecord.CommandText = sql;
-
-        SqlParameter RowParameter = new SqlParameter();
-        deleteRecord.Parameters.AddWithValue("@P1",table);
-        RowParameter.ParameterName = "@RowID";
-        RowParameter.SqlDbType = SqlDbType.Int;
-        RowParameter.IsNullable = false;
-        RowParameter.Value = rowID;
-
-        deleteRecord.Parameters.Add(RowParameter);
-
-        deleteRecord.Connection.Open();
-
-        deleteRecord.ExecuteNonQuery();
-
-        deleteRecord.Connection.Close();
-
-        DataSet ds = new DataSet();
-        ds.GetChanges();
-        SqlDataAdapter dataAdapter = new SqlDataAdapter();
-        dataAdapter.Fill(ds,table);
-
-        }
-
-        public void edit(String table, String column, String field, int rowID)
-        {
-            SqlDataReader reader;
-            SqlCommand cmd = new SqlCommand();
-
-            cmd.CommandText = "UPDATE @P1 SET @P3 = @P2 WHERE RowID = @RowID";
-            cmd.Parameters.AddWithValue("@P1", table);
-            cmd.Parameters.AddWithValue("@P2", field);
-            cmd.Parameters.AddWithValue("@P3", column);
-            SqlParameter RowParameter = new SqlParameter();
-            RowParameter.ParameterName = "@RowID";
-            RowParameter.SqlDbType = SqlDbType.Int;
-            RowParameter.IsNullable = false;
-            RowParameter.Value = rowID;
-            cmd.Parameters.Add(RowParameter);
-
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = conn;
-            conn.Open();
-            cmd.ExecuteNonQuery();
-
-
-            reader = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-
-            conn.Close();
-        }
+        
 
         public void filterDGV(MetroGrid dgv, String sTable, String filter)
         {
@@ -259,32 +180,37 @@ namespace PschyHealth
             }
         }
 
-        public void fillTextbox(GroupBox gb, MetroGrid dgv, String extra, Boolean enabled)
+        public void fillTextbox(GroupBox gb, MetroGrid dgv, String extra, Boolean enabled, Boolean empty)
         {
             try
             {
                 foreach (Control obj in gb.Controls)
                 {
-                    if ((obj is MetroTextBox)||(obj is MetroDateTime))
+                    if ((obj is MetroTextBox) || (obj is MetroDateTime))
                         extra = "txt" + extra;
                     else if (obj is MetroComboBox)
                         extra = "cmb" + extra;
                     else
                         goto out1;
                     obj.Enabled = enabled;
-                    Boolean fin = false;
-                    int i = 0;
-                    while ((i < dgv.ColumnCount) && (!fin))
+                    if (empty)
+                        obj.Text = "";
+                    else
                     {
-                        if (extra + dgv.Columns[i].Name == obj.Name)
+                        Boolean fin = false;
+                        int i = 0;
+                        while ((i < dgv.ColumnCount) && (!fin))
                         {
-                            obj.Text = dgv.Rows[dgv.SelectedRows[0].Index].Cells[i].Value.ToString();
-                            fin = true;
+                            if (extra + dgv.Columns[i].Name == obj.Name)
+                            {
+                                obj.Text = dgv.Rows[dgv.SelectedRows[0].Index].Cells[i].Value.ToString();
+                                fin = true;
+                            }
+                            else
+                                i++;
                         }
-                        else
-                            i++;
+                        extra = extra.Substring(3, extra.Length - 3);
                     }
-                    extra = extra.Substring(3, extra.Length - 3);
                 out1:;
                 }
             }
@@ -294,6 +220,11 @@ namespace PschyHealth
             }
 
 
+        }
+
+        public void fillTextbox(GroupBox gb, MetroGrid dgv, String extra, Boolean enabled)
+        {
+            fillTextbox(gb, dgv, extra, enabled, false);
         }
 
         public void CheckFolder(String path)
@@ -493,6 +424,195 @@ namespace PschyHealth
                 doc.Bookmarks.Add(bookmarkName, ref newRange);
             }
 
+        }
+
+        public void add(String table, String field, String values)
+        {
+            /*SqlDataReader reader;
+            
+
+            cmd.CommandText = "INSERT INTO @P1 VALUES (@P2)";
+            cmd.Parameters.AddWithValue("@P1", table);
+            cmd.Parameters.AddWithValue("@P2", field);
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            conn.Open();
+
+            reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+            conn.Close();*/
+
+
+            /*SqlCommand cmd = new SqlCommand();
+            string saveStaff = "INSERT into " + table + " (" + field + ") " + " VALUES ('" + values + "');";
+            cmd = new SqlCommand(saveStaff, conn);
+            cmd.ExecuteNonQuery();*/
+
+            try
+            {
+
+
+                conn.Open();
+                using (SqlCommand command = new SqlCommand("INSERT into " + table + " (" + field + ") " + " VALUES (" + values + ")", conn))
+                {
+                    command.ExecuteNonQuery();
+                }
+                conn.Close();
+
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
+
+
+        }
+
+        public void delete(String table, String crit)
+        {
+
+            /*string sql = "DELETE FROM @P1 WHERE RowID = @RowID";
+
+            SqlCommand deleteRecord = new SqlCommand();
+            deleteRecord.Connection = conn;
+            deleteRecord.CommandType = CommandType.Text;
+            deleteRecord.CommandText = sql;
+
+            SqlParameter RowParameter = new SqlParameter();
+            deleteRecord.Parameters.AddWithValue("@P1",table);
+            RowParameter.ParameterName = "@RowID";
+            RowParameter.SqlDbType = SqlDbType.Int;
+            RowParameter.IsNullable = false;
+            RowParameter.Value = rowID;
+
+            deleteRecord.Parameters.Add(RowParameter);
+
+            deleteRecord.Connection.Open();
+
+            deleteRecord.ExecuteNonQuery();
+
+            deleteRecord.Connection.Close();
+
+            DataSet ds = new DataSet();
+            ds.GetChanges();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter();
+            dataAdapter.Fill(ds,table);*/
+
+
+            try
+            {
+
+                conn.Open();
+                using (SqlCommand command = new SqlCommand("DELETE FROM " + table + " WHERE " + crit, conn))
+                {
+                    command.ExecuteNonQuery();
+                }
+                conn.Close();
+
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
+        }
+
+
+
+        public void edit(String table, String field, String values, String crit)
+        {
+            /*SqlDataReader reader;
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "UPDATE @P1 SET @P3 = @P2 WHERE RowID = @RowID";
+            cmd.Parameters.AddWithValue("@P1", table);
+            cmd.Parameters.AddWithValue("@P2", field);
+            cmd.Parameters.AddWithValue("@P3", column);
+            SqlParameter RowParameter = new SqlParameter();
+            RowParameter.ParameterName = "@RowID";
+            RowParameter.SqlDbType = SqlDbType.Int;
+            RowParameter.IsNullable = false;
+            RowParameter.Value = rowID;
+            cmd.Parameters.Add(RowParameter);
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+            conn.Open();
+            cmd.ExecuteNonQuery();
+
+
+            reader = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+            conn.Close();*/
+
+            try
+            {
+                field += ",";
+                values += ",";
+                string fld;
+                string val;
+                String setString = "";
+                while(field != "")
+                {
+                    fld = field.Substring(0, field.IndexOf(","));
+                    val = values.Substring(0, values.IndexOf(","));
+                    setString +=  fld + "=" + val + ",";
+
+
+                    field = field.Substring(field.IndexOf(",")+1);
+                    values = values.Substring(values.IndexOf(",")+1);
+                }
+                setString = setString.Substring(0, setString.Length-1);
+                conn.Open();
+                using (SqlCommand command = new SqlCommand("UPDATE " + table + " SET " + setString + " WHERE " + crit, conn))
+                {
+                    command.ExecuteNonQuery();
+                }
+                conn.Close();
+
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+            }
+        }
+
+        public void getFieldsAndValues(out String fields, out String values, GroupBox gb, String extra)
+        {
+            fields = "";
+            values = "";
+            String extra2 = "";
+            String current;
+            try
+            {
+                foreach (Control obj in gb.Controls)
+                {
+                    if ((obj is MetroTextBox) || (obj is MetroDateTime))
+                        extra2 = "txt" + extra;
+                    else if (obj is MetroComboBox)
+                        extra = "cmb" + extra;
+                    else
+                        goto out2;
+                    current = obj.Name.Substring(extra2.Length);
+                    
+                    fields += current + ",";
+                    if (current == "Amount")
+                        values += obj.Text + ",";
+                    else
+                        values += "'" +obj.Text + "',";
+
+                out2:;
+                }
+                values = values.Substring(0, values.Length - 1);
+                fields = fields.Substring(0, fields.Length - 1);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                return;
+            }
         }
     }
 }
