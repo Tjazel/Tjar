@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,9 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.msmNote = new MetroFramework.Components.MetroStyleManager(this.components);
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.msmNote)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -180,6 +183,10 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // msmNote
+            // 
+            this.msmNote.Owner = this;
+            // 
             // frmNotepad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -196,6 +203,7 @@
             this.Load += new System.EventHandler(this.frmNotepad_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.msmNote)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +228,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private MetroFramework.Components.MetroStyleManager msmNote;
     }
 }

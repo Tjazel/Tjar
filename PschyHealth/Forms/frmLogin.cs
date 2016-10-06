@@ -20,11 +20,12 @@ namespace PschyHealth
         public frmLogin()
         {
             InitializeComponent();
+            this.StyleManager = msmLogin;
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            cMethods.readTheme(msmLogin);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

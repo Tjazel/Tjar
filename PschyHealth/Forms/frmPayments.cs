@@ -28,11 +28,12 @@ namespace PschyHealth.Forms
         public frmPayments()
         {
             InitializeComponent();
+            this.StyleManager = msmPayments;
         }
 
         protected override void OnLoad(EventArgs e)
         {
-            
+            cMethods.readTheme(msmPayments);
 
             /*
             //Load the Form At Position of Main Form

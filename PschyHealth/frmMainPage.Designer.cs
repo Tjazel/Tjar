@@ -67,7 +67,6 @@
             this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.ctxPersonalize = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.themeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.darkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.styleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -109,10 +108,12 @@
             this.cmbAzure = new DevComponents.Editors.ComboItem();
             this.btnChange = new MetroFramework.Controls.MetroButton();
             this.pnlColorChange = new MetroFramework.Controls.MetroPanel();
+            this.pbReset = new System.Windows.Forms.PictureBox();
             this.ctxPersonalize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonalize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msmMain)).BeginInit();
             this.pnlColorChange.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReset)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTileFrame1
@@ -163,6 +164,7 @@
             // 
             // 
             // 
+            this.metroTilePanel1.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.metroTilePanel1.BackgroundStyle.Class = "MetroTilePanel";
             this.metroTilePanel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroTilePanel1.ContainerControlProcessDialogKey = true;
@@ -183,6 +185,8 @@
             // 
             // 
             // 
+            this.itemContainer1.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+            this.itemContainer1.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
             this.itemContainer1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemContainer1.ItemSpacing = 15;
             this.itemContainer1.MultiLine = true;
@@ -246,7 +250,7 @@
             this.btnClients.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnClients.TitleText = "Clients";
             this.btnClients.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClients.Click += new System.EventHandler(this.btnClients_Click_1);
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             this.btnClients.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnClients_MouseDown);
             // 
             // btnAccounting
@@ -621,18 +625,11 @@
             // themeToolStripMenuItem
             // 
             this.themeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lightToolStripMenuItem,
             this.darkToolStripMenuItem,
             this.defaultToolStripMenuItem});
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
             this.themeToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
             this.themeToolStripMenuItem.Text = "Theme";
-            // 
-            // lightToolStripMenuItem
-            // 
-            this.lightToolStripMenuItem.Name = "lightToolStripMenuItem";
-            this.lightToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
-            this.lightToolStripMenuItem.Text = "Light";
             // 
             // darkToolStripMenuItem
             // 
@@ -646,6 +643,7 @@
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
             this.defaultToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.defaultToolStripMenuItem.Text = "Default";
+            this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
             // 
             // styleToolStripMenuItem
             // 
@@ -745,7 +743,7 @@
             // 
             // msmMain
             // 
-            this.msmMain.Owner = null;
+            this.msmMain.Owner = this;
             // 
             // cmbMain
             // 
@@ -905,6 +903,7 @@
             // 
             // pnlColorChange
             // 
+            this.pnlColorChange.Controls.Add(this.pbReset);
             this.pnlColorChange.Controls.Add(this.cmbMain);
             this.pnlColorChange.Controls.Add(this.btnChange);
             this.pnlColorChange.HorizontalScrollbarBarColor = true;
@@ -912,12 +911,23 @@
             this.pnlColorChange.HorizontalScrollbarSize = 10;
             this.pnlColorChange.Location = new System.Drawing.Point(176, 10);
             this.pnlColorChange.Name = "pnlColorChange";
-            this.pnlColorChange.Size = new System.Drawing.Size(327, 32);
+            this.pnlColorChange.Size = new System.Drawing.Size(367, 32);
             this.pnlColorChange.TabIndex = 50;
             this.pnlColorChange.VerticalScrollbarBarColor = true;
             this.pnlColorChange.VerticalScrollbarHighlightOnWheel = false;
             this.pnlColorChange.VerticalScrollbarSize = 10;
             this.pnlColorChange.Visible = false;
+            // 
+            // pbReset
+            // 
+            this.pbReset.Image = global::PschyHealth.Properties.Resources.Restart_48px;
+            this.pbReset.Location = new System.Drawing.Point(333, 0);
+            this.pbReset.Name = "pbReset";
+            this.pbReset.Size = new System.Drawing.Size(34, 32);
+            this.pbReset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbReset.TabIndex = 50;
+            this.pbReset.TabStop = false;
+            this.pbReset.Click += new System.EventHandler(this.pbReset_Click);
             // 
             // frmMainPage
             // 
@@ -939,6 +949,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonalize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.msmMain)).EndInit();
             this.pnlColorChange.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbReset)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -979,7 +990,6 @@
         private System.Windows.Forms.PictureBox pbPersonalize;
         private System.Windows.Forms.ContextMenuStrip ctxPersonalize;
         private System.Windows.Forms.ToolStripMenuItem themeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lightToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem darkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem defaultToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem styleToolStripMenuItem;
@@ -1024,5 +1034,6 @@
         private DevComponents.Editors.ComboItem cmbMaroonWashed;
         private DevComponents.Editors.ComboItem cmbPlumWashed;
         private DevComponents.Editors.ComboItem cmbAzure;
+        private System.Windows.Forms.PictureBox pbReset;
     }
 }

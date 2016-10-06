@@ -33,7 +33,7 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-          
+            cMethods.readTheme(msmClients);
            //Load the Form At Position of Main Form
             //int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
            // int HeightofMain = Application.OpenForms["frmMainPage"].Height;
@@ -55,6 +55,7 @@ namespace PschyHealth
         public frmClients()
         {
             InitializeComponent();
+            this.StyleManager = msmClients;
         }
 
         private void pbBack_Click(object sender, EventArgs e)

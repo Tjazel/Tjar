@@ -714,6 +714,82 @@ namespace PschyHealth
 
         }
 
+        public void changeTheme(MetroFramework.Components.MetroStyleManager manager ,MetroFramework.MetroThemeStyle styl)
+        {
+            manager.Theme = styl;
+           
+        }
+
+        public void defTheme()
+        {
+            string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\Theme\theme.txt";
+            StreamWriter write = File.AppendText(filename);
+
+
+            if (new FileInfo(filename).Length == 0)
+            {
+                MetroFramework.MetroThemeStyle stylDefault = new MetroFramework.MetroThemeStyle();
+                write.WriteLine("" + stylDefault + "");
+                
+
+                write.Close();
+            }
+            else
+            {
+                write.Close();
+            }
+
+
+        }
+        public void writeTheme(MetroFramework.Components.MetroStyleManager manager, MetroFramework.MetroThemeStyle styl)
+        {
+            string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\Theme\theme.txt";
+            string line;
+            StreamReader lees = File.OpenText(filename);
+            line = lees.ReadLine();
+            if(line!=null)
+            {
+                line = line.Replace(line, "" + styl + "");
+                lees.Close();
+                MessageBox.Show(line);
+                File_DeleteLine(1, filename);
+            }
+            
+            StreamWriter write = File.AppendText(filename);
+            write.WriteLine(line);
+            write.Close();
+            readTheme(manager);
+
+            
+        }
+
+        public void readTheme(MetroFramework.Components.MetroStyleManager manager)
+        {
+            string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\Theme\theme.txt";
+            MetroFramework.MetroThemeStyle chosenStyle = new MetroFramework.MetroThemeStyle();
+            StreamReader lees = File.OpenText(filename);
+            string line = lees.ReadLine();
+            
+            if(line =="Dark")
+            {
+                chosenStyle = MetroFramework.MetroThemeStyle.Dark;
+            }else
+            {
+                chosenStyle = MetroFramework.MetroThemeStyle.Default;
+            }
+            changeTheme(manager, chosenStyle);
+            lees.Close();
+        }
+
+        public void cloneTheme(MetroFramework.Forms.MetroForm main,MetroFramework.Forms.MetroForm sub)
+        {
+            sub.StyleManager = main.StyleManager;
+            main.StyleManager.Clone(sub);
+        }
+        
+
+        
+
         public void copyTemplate(String name, String newName)
         {
             string fileName = name;

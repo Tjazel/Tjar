@@ -1,6 +1,6 @@
 ﻿namespace PschyHealth
 {
-    partial class frmEDICodes
+    partial class frmICD10Codes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -65,11 +66,13 @@
             this.metroTextButton2 = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pbMic = new System.Windows.Forms.PictureBox();
+            this.msmICD10 = new MetroFramework.Components.MetroStyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEDICodes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msmICD10)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTextBox17
@@ -732,7 +735,11 @@
             this.pbMic.TabStop = false;
             this.pbMic.Click += new System.EventHandler(this.pbMic_Click);
             // 
-            // frmEDICodes
+            // msmICD10
+            // 
+            this.msmICD10.Owner = this;
+            // 
+            // frmICD10Codes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -748,7 +755,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Movable = false;
-            this.Name = "frmEDICodes";
+            this.Name = "frmICD10Codes";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShowIcon = false;
@@ -761,6 +768,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msmICD10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -801,5 +809,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private System.Windows.Forms.PictureBox pbMic;
+        private MetroFramework.Components.MetroStyleManager msmICD10;
     }
 }
