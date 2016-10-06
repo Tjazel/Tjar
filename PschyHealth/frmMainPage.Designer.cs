@@ -54,7 +54,6 @@
             this.btnRecordings = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnInfo = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnDateAndTime = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.calendarView1 = new DevComponents.DotNetBar.Schedule.CalendarView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.controlContainerItem6 = new DevComponents.DotNetBar.ControlContainerItem();
@@ -84,15 +83,12 @@
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
             this.pbPersonalize = new System.Windows.Forms.PictureBox();
-            this.dateNavigator1 = new DevComponents.DotNetBar.Schedule.DateNavigator();
             this.msmMain = new MetroFramework.Components.MetroStyleManager(this.components);
             this.cmbMain = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.cmbGreen = new DevComponents.Editors.ComboItem();
             this.cbOrange = new DevComponents.Editors.ComboItem();
             this.cmbMagenta = new DevComponents.Editors.ComboItem();
             this.cmbBlue = new DevComponents.Editors.ComboItem();
-            this.btnChange = new MetroFramework.Controls.MetroButton();
-            this.pnlColorChange = new MetroFramework.Controls.MetroPanel();
             this.cmbTeal = new DevComponents.Editors.ComboItem();
             this.cmbPlum = new DevComponents.Editors.ComboItem();
             this.cmbCoffee = new DevComponents.Editors.ComboItem();
@@ -111,9 +107,10 @@
             this.cmbMaroonWashed = new DevComponents.Editors.ComboItem();
             this.cmbPlumWashed = new DevComponents.Editors.ComboItem();
             this.cmbAzure = new DevComponents.Editors.ComboItem();
+            this.btnChange = new MetroFramework.Controls.MetroButton();
+            this.pnlColorChange = new MetroFramework.Controls.MetroPanel();
             this.ctxPersonalize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonalize)).BeginInit();
-            this.dateNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.msmMain)).BeginInit();
             this.pnlColorChange.SuspendLayout();
             this.SuspendLayout();
@@ -534,28 +531,6 @@
             this.btnDateAndTime.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDateAndTime.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDateAndTime_MouseDown);
             // 
-            // calendarView1
-            // 
-            this.calendarView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.calendarView1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.calendarView1.ContainerControlProcessDialogKey = true;
-            this.calendarView1.HighlightCurrentDay = true;
-            this.calendarView1.Location = new System.Drawing.Point(24, 28);
-            this.calendarView1.Margin = new System.Windows.Forms.Padding(4);
-            this.calendarView1.MultiUserTabHeight = 19;
-            this.calendarView1.Name = "calendarView1";
-            this.calendarView1.ShowOnlyWorkDayHours = true;
-            this.calendarView1.Size = new System.Drawing.Size(403, 663);
-            this.calendarView1.TabIndex = 31;
-            this.calendarView1.Text = "calendarView1";
-            this.calendarView1.TimeIndicator.BorderColor = System.Drawing.Color.Empty;
-            this.calendarView1.TimeIndicator.Tag = null;
-            this.calendarView1.TimeSlotDuration = 30;
-            this.calendarView1.YearViewNonAppointmentLink = DevComponents.DotNetBar.Schedule.eYearViewDayLink.Click;
-            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
@@ -768,21 +743,6 @@
             this.pbPersonalize.TabStop = false;
             this.pbPersonalize.Click += new System.EventHandler(this.pbPersonalize_Click);
             // 
-            // dateNavigator1
-            // 
-            this.dateNavigator1.CalendarView = this.calendarView1;
-            this.dateNavigator1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.dateNavigator1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.dateNavigator1.Controls.Add(this.calendarView1);
-            this.dateNavigator1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.dateNavigator1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dateNavigator1.Location = new System.Drawing.Point(938, 74);
-            this.dateNavigator1.Name = "dateNavigator1";
-            this.dateNavigator1.Size = new System.Drawing.Size(414, 673);
-            this.dateNavigator1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.dateNavigator1.TabIndex = 46;
-            this.dateNavigator1.Text = "dateNavigator1";
-            // 
             // msmMain
             // 
             this.msmMain.Owner = null;
@@ -841,34 +801,6 @@
             // 
             this.cmbBlue.BackColor = System.Drawing.Color.RoyalBlue;
             this.cmbBlue.Text = "Blue";
-            // 
-            // btnChange
-            // 
-            this.btnChange.Location = new System.Drawing.Point(151, 0);
-            this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(176, 32);
-            this.btnChange.TabIndex = 49;
-            this.btnChange.Text = "Change tile color";
-            this.btnChange.UseSelectable = true;
-            this.btnChange.UseStyleColors = true;
-            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
-            // 
-            // pnlColorChange
-            // 
-            this.pnlColorChange.Controls.Add(this.cmbMain);
-            this.pnlColorChange.Controls.Add(this.btnChange);
-            this.pnlColorChange.HorizontalScrollbarBarColor = true;
-            this.pnlColorChange.HorizontalScrollbarHighlightOnWheel = false;
-            this.pnlColorChange.HorizontalScrollbarSize = 10;
-            this.pnlColorChange.Location = new System.Drawing.Point(176, 10);
-            this.pnlColorChange.Name = "pnlColorChange";
-            this.pnlColorChange.Size = new System.Drawing.Size(327, 32);
-            this.pnlColorChange.TabIndex = 50;
-            this.pnlColorChange.VerticalScrollbarBarColor = true;
-            this.pnlColorChange.VerticalScrollbarHighlightOnWheel = false;
-            this.pnlColorChange.VerticalScrollbarSize = 10;
-            this.pnlColorChange.Visible = false;
-            
             // 
             // cmbTeal
             // 
@@ -960,13 +892,39 @@
             this.cmbAzure.BackColor = System.Drawing.Color.Azure;
             this.cmbAzure.Text = "Azure";
             // 
+            // btnChange
+            // 
+            this.btnChange.Location = new System.Drawing.Point(151, 0);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(176, 32);
+            this.btnChange.TabIndex = 49;
+            this.btnChange.Text = "Change tile color";
+            this.btnChange.UseSelectable = true;
+            this.btnChange.UseStyleColors = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
+            // pnlColorChange
+            // 
+            this.pnlColorChange.Controls.Add(this.cmbMain);
+            this.pnlColorChange.Controls.Add(this.btnChange);
+            this.pnlColorChange.HorizontalScrollbarBarColor = true;
+            this.pnlColorChange.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlColorChange.HorizontalScrollbarSize = 10;
+            this.pnlColorChange.Location = new System.Drawing.Point(176, 10);
+            this.pnlColorChange.Name = "pnlColorChange";
+            this.pnlColorChange.Size = new System.Drawing.Size(327, 32);
+            this.pnlColorChange.TabIndex = 50;
+            this.pnlColorChange.VerticalScrollbarBarColor = true;
+            this.pnlColorChange.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlColorChange.VerticalScrollbarSize = 10;
+            this.pnlColorChange.Visible = false;
+            // 
             // frmMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1379, 772);
+            this.ClientSize = new System.Drawing.Size(2304, 1092);
             this.Controls.Add(this.pnlColorChange);
-            this.Controls.Add(this.dateNavigator1);
             this.Controls.Add(this.pbPersonalize);
             this.Controls.Add(this.metroTilePanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -979,8 +937,6 @@
             this.SizeChanged += new System.EventHandler(this.frmMainPage_SizeChanged);
             this.ctxPersonalize.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonalize)).EndInit();
-            this.dateNavigator1.ResumeLayout(false);
-            this.dateNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.msmMain)).EndInit();
             this.pnlColorChange.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -999,7 +955,6 @@
         private DevComponents.DotNetBar.Metro.MetroTileItem btnDiagnostic;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnInfo;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnReports;
-        private DevComponents.DotNetBar.Schedule.CalendarView calendarView1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private DevComponents.DotNetBar.Metro.MetroTileFrame metroTileFrame1;
@@ -1043,7 +998,6 @@
         private DevComponents.DotNetBar.Metro.MetroTileItem btnStatistics;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnICD10;
         private DevComponents.DotNetBar.Metro.MetroTileItem btnRecordings;
-        private DevComponents.DotNetBar.Schedule.DateNavigator dateNavigator1;
         private MetroFramework.Components.MetroStyleManager msmMain;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbMain;
         private DevComponents.Editors.ComboItem cmbGreen;

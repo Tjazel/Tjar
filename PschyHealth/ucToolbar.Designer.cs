@@ -413,6 +413,7 @@
             this.buttonItem3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.itemContainer6});
             this.buttonItem3.Text = "Medical Aids";
+            this.buttonItem3.Click += new System.EventHandler(this.buttonItem3_Click);
             // 
             // itemContainer6
             // 

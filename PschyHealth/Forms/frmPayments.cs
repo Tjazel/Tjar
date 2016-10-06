@@ -52,7 +52,7 @@ namespace PschyHealth.Forms
             this.Controls.Add(uc);
 
             cMethods.fillDGV(dgvPayments, "Clients");
-            cMethods.fillCMBrow(cmbClient,dgvPayments);
+            cMethods.fillCMBrow(cmbPaymentsClient,dgvPayments);
             cMethods.fillDGV(dgvPayments, "Payments");
             cMethods.fillDGV(dgvConsultations, "Consultations");
 
@@ -77,8 +77,8 @@ namespace PschyHealth.Forms
 
         private void cmbClient_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cMethods.filterDGV(dgvPayments, "Payments", " WHERE Client_Surname = '" + cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) + "' AND Client_Name = '" + cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2) + "'");
-            cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE Surname = '" + cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) + "' AND Name = '" + cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2) + "'");
+            cMethods.filterDGV(dgvPayments, "Payments", " WHERE Client_Surname = '" + cmbPaymentsClient.Text.Substring(0, cmbPaymentsClient.Text.IndexOf(",")) + "' AND Client_Name = '" + cmbPaymentsClient.Text.Substring(cmbPaymentsClient.Text.IndexOf(",") + 2) + "'");
+            cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE Surname = '" + cmbPaymentsClient.Text.Substring(0, cmbPaymentsClient.Text.IndexOf(",")) + "' AND Name = '" + cmbPaymentsClient.Text.Substring(cmbPaymentsClient.Text.IndexOf(",") + 2) + "'");
         }
 
         private void dgvConsultations_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -88,7 +88,17 @@ namespace PschyHealth.Forms
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            txtConsultation.Text = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells["ConaultationsID"].Value.ToString();
+            txtPaymentsConsultation.Text = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells["ConaultationsID"].Value.ToString();
+        }
+
+        private void txtConsultation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

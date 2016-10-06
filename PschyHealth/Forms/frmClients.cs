@@ -226,5 +226,10 @@ namespace PschyHealth
             btnConfirm.Hide();
             filter();
         }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

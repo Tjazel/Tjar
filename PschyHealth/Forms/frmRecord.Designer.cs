@@ -43,6 +43,7 @@
             this.pbWave = new System.Windows.Forms.PictureBox();
             this.lblPlayBack = new MetroFramework.Controls.MetroLabel();
             this.lblPlayName = new MetroFramework.Controls.MetroLabel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbRec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
@@ -55,7 +56,7 @@
             // 
             // 
             this.txtName.CustomButton.Image = null;
-            this.txtName.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.txtName.CustomButton.Location = new System.Drawing.Point(58, 1);
             this.txtName.CustomButton.Name = "";
             this.txtName.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -64,7 +65,7 @@
             this.txtName.CustomButton.UseSelectable = true;
             this.txtName.CustomButton.Visible = false;
             this.txtName.Lines = new string[0];
-            this.txtName.Location = new System.Drawing.Point(207, 31);
+            this.txtName.Location = new System.Drawing.Point(202, 31);
             this.txtName.MaxLength = 32767;
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
@@ -72,7 +73,7 @@
             this.txtName.SelectedText = "";
             this.txtName.SelectionLength = 0;
             this.txtName.SelectionStart = 0;
-            this.txtName.Size = new System.Drawing.Size(75, 23);
+            this.txtName.Size = new System.Drawing.Size(80, 23);
             this.txtName.TabIndex = 1;
             this.txtName.UseSelectable = true;
             this.txtName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -94,7 +95,7 @@
             // pbRec
             // 
             this.pbRec.Image = global::PschyHealth.Properties.Resources.Record_48px_3;
-            this.pbRec.Location = new System.Drawing.Point(326, 95);
+            this.pbRec.Location = new System.Drawing.Point(326, 108);
             this.pbRec.Name = "pbRec";
             this.pbRec.Size = new System.Drawing.Size(26, 16);
             this.pbRec.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,7 +137,7 @@
             this.rdSave,
             this.rdPause,
             this.rdPlay});
-            this.radialMenu1.Location = new System.Drawing.Point(202, 150);
+            this.radialMenu1.Location = new System.Drawing.Point(202, 160);
             this.radialMenu1.Name = "radialMenu1";
             this.radialMenu1.Size = new System.Drawing.Size(80, 80);
             this.radialMenu1.SymbolSize = 30F;
@@ -174,7 +175,7 @@
             // pbWave
             // 
             this.pbWave.Image = global::PschyHealth.Properties.Resources.Audio_Wave_48px_1;
-            this.pbWave.Location = new System.Drawing.Point(213, 65);
+            this.pbWave.Location = new System.Drawing.Point(213, 78);
             this.pbWave.Name = "pbWave";
             this.pbWave.Size = new System.Drawing.Size(60, 46);
             this.pbWave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -185,7 +186,7 @@
             // lblPlayBack
             // 
             this.lblPlayBack.AutoSize = true;
-            this.lblPlayBack.Location = new System.Drawing.Point(175, 114);
+            this.lblPlayBack.Location = new System.Drawing.Point(179, 127);
             this.lblPlayBack.Name = "lblPlayBack";
             this.lblPlayBack.Size = new System.Drawing.Size(136, 20);
             this.lblPlayBack.TabIndex = 52;
@@ -202,12 +203,22 @@
             this.lblPlayName.TabIndex = 53;
             this.lblPlayName.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(210, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 17);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Name :";
+            // 
             // frmRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(472, 253);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPlayName);
             this.Controls.Add(this.lblPlayBack);
             this.Controls.Add(this.pbWave);
@@ -218,6 +229,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.radialMenu1);
             this.Name = "frmRecord";
+            this.ShowInTaskbar = false;
             this.Text = "Record";
             this.Load += new System.EventHandler(this.frmRecord_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbRec)).EndInit();
@@ -245,5 +257,6 @@
         private System.Windows.Forms.PictureBox pbWave;
         private MetroFramework.Controls.MetroLabel lblPlayBack;
         private MetroFramework.Controls.MetroLabel lblPlayName;
+        private System.Windows.Forms.Label label1;
     }
 }

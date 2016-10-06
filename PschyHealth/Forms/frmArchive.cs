@@ -167,5 +167,10 @@ namespace PschyHealth
             File.Move(tempFile, fileName);
             lbArcList.Items.RemoveAt(lbArcList.SelectedIndex);
         }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
