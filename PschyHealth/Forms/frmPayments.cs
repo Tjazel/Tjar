@@ -88,7 +88,7 @@ namespace PschyHealth.Forms
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            txtConsultation.Text = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells["ConaultationsID"].Value.ToString();
+            txtConsultation.Text = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells["Consultation"].Value.ToString();
         }
     }
 }

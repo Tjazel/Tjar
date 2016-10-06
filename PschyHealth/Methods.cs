@@ -16,6 +16,7 @@ using Microsoft.Office.Interop;
 using System.Threading;
 
 
+
 namespace PschyHealth
 {
     //The Methods class saves a sertain methods and procedures that will be used in the program more than once.
@@ -49,6 +50,9 @@ namespace PschyHealth
         }
         public void silentFillDGV(MetroGrid dgv, String sTable, String filter, Boolean silent)
         {
+            pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
+            uc.Dock = DockStyle.Fill;
+     //       this.Controls.Add(uc);
             try
             {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter();
