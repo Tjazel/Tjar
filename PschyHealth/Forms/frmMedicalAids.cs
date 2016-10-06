@@ -193,9 +193,14 @@ namespace PschyHealth
             {
                 int selectedIndex = dgvMedicalAid.SelectedRows[0].Index;
 
-                int rowID = int.Parse(dgvMedicalAid[0, selectedIndex].Value.ToString());
-                cMethods.delete("MedicalAid", rowID);
+                string rowID = dgvMedicalAid[0, selectedIndex].Value.ToString();
+                cMethods.delete("MedicalAid", "Medical_Aid = '"+rowID+"'");
             }
+
+        }
+
+        private void metroTextButton3_Click(object sender, EventArgs e)
+        {
 
         }
     }

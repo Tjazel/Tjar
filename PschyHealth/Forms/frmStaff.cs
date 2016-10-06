@@ -181,10 +181,10 @@ namespace PschyHealth
         {
             if (dgvStaff.SelectedRows.Count > 0)
             {
-                int selectedIndex = dgvStaff.SelectedRows[0].Index;
+               // int selectedIndex = dgvStaff.SelectedRows[0].Index;
 
-                int rowID = int.Parse(dgvStaff[0, selectedIndex].Value.ToString());
-                cMethods.delete("Staff", rowID);
+               // int rowID = int.Parse(dgvStaff[0, selectedIndex].Value.ToString());
+              //  cMethods.delete("Staff", rowID);
             }
 
         }

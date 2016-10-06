@@ -18,6 +18,7 @@ namespace PschyHealth
     {
         Methods cMethods = new Methods();
         String correctSearch = "";
+        String button = "";
         //Constants
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -151,6 +152,9 @@ namespace PschyHealth
                 {
                     cMethods.filterDGV(dgvAccount, "Accounting", " WHERE " + cmbAccCriteria.Text + " " + metroComboBox1.Text + " " + txtAccSearch.Text);
                 }
+            else
+                cMethods.fillDGV(dgvAccount, "Accounting");
+
         }
 
         private void metroComboBox1_VisibleChanged_1(object sender, EventArgs e)
@@ -169,53 +173,58 @@ namespace PschyHealth
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            if (dgvAccount.SelectedRows.Count > 0)
-            {
-                int selectedIndex = dgvAccount.SelectedRows[0].Index;
-
-                int rowID = int.Parse(dgvAccount[0, selectedIndex].Value.ToString());
-                dgvAccount.Rows.RemoveAt(selectedIndex);
-                cMethods.delete("Accounting",rowID);
-            }
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
+            btnDeleteAccount.Enabled = false;
+            btnUpdateAccount.Enabled = false;
+            btnAddAcount.Enabled = false;
+            button = "delete";
 
         }
 
         private void btnUpdateAccount_Click(object sender, EventArgs e)
         {
-            if (dgvAccount.SelectedRows.Count > 0)
-            {
-                int selectedIndex = dgvAccount.SelectedRows[0].Index;
-
-                int rowID = int.Parse(dgvAccount[0, selectedIndex].Value.ToString());
-                dgvAccount.Rows.RemoveAt(selectedIndex);
-
-                if(txtAccTransaction.Text!=null)
-                {
-                    cMethods.edit("Accounting", "Transaction_Number", txtAccTransaction.Text, rowID);
-                }
-                if (txtAccType.Text != null)
-                {
-                    cMethods.edit("Accounting", "Type", txtAccType.Text, rowID);
-                }
-                if (txtAccDate.Text != null)
-                {
-                    cMethods.edit("Accounting", "Date", txtAccDate.Text, rowID);
-                }
-                if (txtAccAmount.Text != null)
-                {
-                    cMethods.edit("Accounting", "Amount", txtAccAmount.Text, rowID);
-                }
-                if (txtAccDescription.Text != null)
-                {
-                    cMethods.edit("Accounting", "Description", txtAccDescription.Text, rowID);
-                }
-            }
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", true);
+            btnDeleteAccount.Enabled = false;
+            btnUpdateAccount.Enabled = false;
+            btnAddAcount.Enabled = false;
+            button = "edit";
         }
 
         private void btnAddAcount_Click(object sender, EventArgs e)
         {
-            if((txtAccTransaction.Text != null)&& (txtAccType.Text != null)&& (txtAccDate.Text != null)&& (txtAccAmount.Text != null)&& (txtAccDescription.Text != null))
-            cMethods.insert("Accounting",txtAccTransaction.Text+','+txtAccDescription.Text + ',' + txtAccType.Text + ',' + txtAccAmount.Text + ',' + txtAccDate.Text);
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", true,true);
+            btnDeleteAccount.Enabled = false;
+            btnUpdateAccount.Enabled = false;
+            btnAddAcount.Enabled = false;
+            button = "add";
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            String field;
+            String value;
+            if (dgvAccount.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dgvAccount.SelectedRows[0].Index;
+
+                String rowID = dgvAccount[0, selectedIndex].Value.ToString();
+                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Acc");
+                if(button == "add")
+                    cMethods.add("Accounting", field, value);
+                else if(button == "edit")
+                    cMethods.edit("Accounting", field, value, " Transaction_Number = '" + dgvAccount.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString() + "'");
+                else if(button == "delete")
+                    cMethods.delete("Accounting", "Transaction_Number = '" + rowID + "'");
+
+            }
+            btnDeleteAccount.Enabled = true;
+            btnUpdateAccount.Enabled = true;
+            btnAddAcount.Enabled = true;
+            btnConfirm.Hide();
+            filter();
         }
     }
 }

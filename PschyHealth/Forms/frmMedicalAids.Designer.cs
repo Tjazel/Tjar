@@ -77,9 +77,9 @@
             // 
             // 
             this.txtMedicalAidsMedical_Aid.CustomButton.Image = null;
-            this.txtMedicalAidsMedical_Aid.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.txtMedicalAidsMedical_Aid.CustomButton.Location = new System.Drawing.Point(173, 1);
             this.txtMedicalAidsMedical_Aid.CustomButton.Name = "";
-            this.txtMedicalAidsMedical_Aid.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtMedicalAidsMedical_Aid.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtMedicalAidsMedical_Aid.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtMedicalAidsMedical_Aid.CustomButton.TabIndex = 1;
             this.txtMedicalAidsMedical_Aid.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -108,9 +108,9 @@
             // 
             // 
             this.txtMedicalAidsTelephone_Number.CustomButton.Image = null;
-            this.txtMedicalAidsTelephone_Number.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.txtMedicalAidsTelephone_Number.CustomButton.Location = new System.Drawing.Point(173, 1);
             this.txtMedicalAidsTelephone_Number.CustomButton.Name = "";
-            this.txtMedicalAidsTelephone_Number.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtMedicalAidsTelephone_Number.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtMedicalAidsTelephone_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtMedicalAidsTelephone_Number.CustomButton.TabIndex = 1;
             this.txtMedicalAidsTelephone_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -166,6 +166,7 @@
             this.metroTextButton3.Text = "Add Medical Aid";
             this.metroTextButton3.UseSelectable = true;
             this.metroTextButton3.UseVisualStyleBackColor = true;
+            this.metroTextButton3.Click += new System.EventHandler(this.metroTextButton3_Click);
             // 
             // dgvMedicalAid
             // 
@@ -266,9 +267,9 @@
             // 
             // 
             this.metroTextBox17.CustomButton.Image = null;
-            this.metroTextBox17.CustomButton.Location = new System.Drawing.Point(85, 1);
+            this.metroTextBox17.CustomButton.Location = new System.Drawing.Point(113, 1);
             this.metroTextBox17.CustomButton.Name = "";
-            this.metroTextBox17.CustomButton.Size = new System.Drawing.Size(20, 22);
+            this.metroTextBox17.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.metroTextBox17.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox17.CustomButton.TabIndex = 1;
             this.metroTextBox17.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -336,7 +337,7 @@
             "<",
             "null"});
             this.metroComboBox1.Location = new System.Drawing.Point(195, 25);
-            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(54, 29);
             this.metroComboBox1.TabIndex = 62;
@@ -373,7 +374,7 @@
             this.cmbMedical_AidsOption.FormattingEnabled = true;
             this.cmbMedical_AidsOption.ItemHeight = 23;
             this.cmbMedical_AidsOption.Location = new System.Drawing.Point(130, 172);
-            this.cmbMedical_AidsOption.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbMedical_AidsOption.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMedical_AidsOption.Name = "cmbMedical_AidsOption";
             this.cmbMedical_AidsOption.Size = new System.Drawing.Size(196, 29);
             this.cmbMedical_AidsOption.TabIndex = 14;
@@ -394,7 +395,7 @@
             this.cmbMedical_AidsPlan.FormattingEnabled = true;
             this.cmbMedical_AidsPlan.ItemHeight = 23;
             this.cmbMedical_AidsPlan.Location = new System.Drawing.Point(130, 114);
-            this.cmbMedical_AidsPlan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbMedical_AidsPlan.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMedical_AidsPlan.Name = "cmbMedical_AidsPlan";
             this.cmbMedical_AidsPlan.Size = new System.Drawing.Size(196, 29);
             this.cmbMedical_AidsPlan.TabIndex = 12;
@@ -414,7 +415,7 @@
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
             this.pbMic.Location = new System.Drawing.Point(22, 44);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(2);
             this.pbMic.Name = "pbMic";
             this.pbMic.Size = new System.Drawing.Size(28, 22);
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -426,7 +427,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2083, 788);
+            this.ClientSize = new System.Drawing.Size(1378, 780);
             this.Controls.Add(this.pbMic);
             this.Controls.Add(this.metroTextButton5);
             this.Controls.Add(this.metroTextButton4);
