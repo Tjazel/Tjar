@@ -23,6 +23,8 @@ namespace PschyHealth
     //The main reason for this class is to reuse code, thus not making the program too large, and also making it more efficient.
     class Methods
     {
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
+        
         String connectionString =
                 "Data Source = jarvisdevelopment.database.windows.net; Initial Catalog =JarvisDev; User ID =ProjectJarvis; Password =JarvisProject2016;";
 
@@ -372,8 +374,7 @@ namespace PschyHealth
 
 
         //Main page se tile kleure vind hier plaas
-        String path = Environment.GetFolderPath(
-           Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
+     
         DevComponents.DotNetBar.Metro.MetroTileItem Knoppie = new DevComponents.DotNetBar.Metro.MetroTileItem();
 
         public void defTileColors()
