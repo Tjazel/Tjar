@@ -207,7 +207,7 @@ namespace PschyHealth
             btnStaffDelete.Enabled = false;
             btnStaffUpdate.Enabled = false;
             button = "delete";
-        }
+        } 
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
