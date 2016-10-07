@@ -71,7 +71,7 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 
-            String path = Environment.GetFolderPath(
+            string path = Environment.GetFolderPath(
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
             cMethods.CheckFolder(path);
             cMethods.CheckFolder(path + @"\Archive");
