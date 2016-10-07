@@ -14,6 +14,8 @@ namespace PschyHealth
 {
     public partial class frmToDoList : MetroForm
     {
+        Methods cMethods = new Methods();
+
         //Constants
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -26,6 +28,28 @@ namespace PschyHealth
         {
             InitializeComponent();
             this.StyleManager = msmToDo;
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+
+
+            cMethods.readTheme(msmToDo);
+            /*Load the Form At Position of Main Form
+            int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
+            int HeightofMain = Application.OpenForms["frmMainPage"].Height;
+            int LocationMainX = Application.OpenForms["frmMainPage"].Location.X;
+            int locationMainy = Application.OpenForms["frmMainPage"].Location.Y;
+
+            //Set the Location
+            this.Location = new Point(LocationMainX, locationMainy + 30);
+             */
+
+            //Animate form
+            AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+            this.WindowState = FormWindowState.Maximized;
+            ucToolbar uc = new ucToolbar();
+            this.Controls.Add(uc);
         }
 
         private void frmToDoList_Load(object sender, EventArgs e)
