@@ -376,6 +376,7 @@ namespace PschyHealth
 
         public void defTileColors()
         {
+
             string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\TileColors\tileColors.txt";
             StreamWriter write = File.AppendText(filename);
 
@@ -409,6 +410,7 @@ namespace PschyHealth
 
                 write.Close();
             }
+
 
 
 
@@ -765,6 +767,7 @@ namespace PschyHealth
 
         public void readTheme(MetroFramework.Components.MetroStyleManager manager)
         {
+
             string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\Theme\theme.txt";
             MetroFramework.MetroThemeStyle chosenStyle = new MetroFramework.MetroThemeStyle();
             StreamReader lees = File.OpenText(filename);
@@ -779,6 +782,7 @@ namespace PschyHealth
             }
             changeTheme(manager, chosenStyle);
             lees.Close();
+
         }
 
         public void cloneTheme(MetroFramework.Forms.MetroForm main,MetroFramework.Forms.MetroForm sub)
