@@ -26,7 +26,7 @@ namespace PschyHealth
 
         [DllImport("user32")]
         static extern bool AnimateWindow(IntPtr hwnd, int time, int flags);
-        frmMainPage _frmMainpage = new frmMainPage();
+        
 
 
 
