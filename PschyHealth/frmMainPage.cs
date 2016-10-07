@@ -79,7 +79,7 @@ namespace PschyHealth
             cMethods.CheckFolder(path + @"\Recordings\" + DateTime.Now.Month.ToString());
             cMethods.CheckFolder(path + @"\Log");
             cMethods.CheckFolder(path + @"\Styles");
-            cMethods.CheckFolder(path + @"\Styles/Theme");
+           // cMethods.CheckFolder(path + @"\Styles\Theme");
             cMethods.CheckFolder(path + @"\Styles\TileColors");
             cMethods.CheckFile(path + @"\Styles\TileColors\tileColors");
             cMethods.CheckFolder(path + @"\Styles\Theme");
