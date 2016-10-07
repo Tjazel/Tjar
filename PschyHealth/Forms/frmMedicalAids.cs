@@ -247,5 +247,15 @@ namespace PschyHealth
             btnMedUpdate.Enabled = false;
             button = "delete";
         }
+
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
+            btnMedAdd.Enabled = false;
+            btnMedDelete.Enabled = false;
+            btnMedUpdate.Enabled = false;
+            button = "archive";
+        }
     }
 }

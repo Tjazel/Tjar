@@ -229,7 +229,7 @@ namespace PschyHealth
             filter();
         }
 
-        private void metroTextButton1_Click(object sender, EventArgs e)
+        private void btnArchive_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
             cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);

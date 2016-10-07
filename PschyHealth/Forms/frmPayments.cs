@@ -15,6 +15,7 @@ namespace PschyHealth.Forms
     {
         Methods cMethods = new Methods();
         String correctSearch = "";
+        String button = "";
         //Constants
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -89,7 +90,17 @@ namespace PschyHealth.Forms
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-           // txtConsultation.Text = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells["Consultation"].Value.ToString();
+       //     txtConsultation.Text = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells["Consultation"].Value.ToString();
+        }
+
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvPayments, "Payments", false);
+            btnAfbetaal.Enabled = false;
+            btnAfgeskryf.Enabled = false;
+            btnKortingAfbetaal.Enabled = false;
+            button = "archive";
         }
     }
 }
