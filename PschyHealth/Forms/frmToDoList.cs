@@ -54,7 +54,10 @@ namespace PschyHealth
 
         private void frmToDoList_Load(object sender, EventArgs e)
         {
-
+            AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
+            this.WindowState = FormWindowState.Maximized;
+            ucToolbar uc = new ucToolbar();
+            this.Controls.Add(uc);
         }
 
         private void pbBack_Click(object sender, EventArgs e)
