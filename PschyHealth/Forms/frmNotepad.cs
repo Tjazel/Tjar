@@ -131,5 +131,10 @@ namespace PschyHealth
                 richTextBox1.BackColor = cr.Color;
             }
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
