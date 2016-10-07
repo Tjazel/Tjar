@@ -372,11 +372,13 @@ namespace PschyHealth
 
 
         //Main page se tile kleure vind hier plaas
+        String path = Environment.GetFolderPath(
+           Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
         DevComponents.DotNetBar.Metro.MetroTileItem Knoppie = new DevComponents.DotNetBar.Metro.MetroTileItem();
 
         public void defTileColors()
         {
-            string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\TileColors\tileColors.txt";
+            string filename = path + @"\Styles\TileColors\tileColors.txt";
             StreamWriter write = File.AppendText(filename);
 
 
@@ -449,8 +451,8 @@ namespace PschyHealth
             string[] words = new string[2];
             char[] sep = { '/' };
             bool found = false;
-            StreamReader lees; ;
-            string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\TileColors\tileColors.txt";
+            StreamReader lees; 
+            string filename = path + @"\Styles\TileColors\tileColors.txt";
 
 
             //lees die knoppie en kleur wat verander moet word
@@ -675,7 +677,7 @@ namespace PschyHealth
             char[] sep = { '/' };
             bool found = false;
             StreamReader inputStream;
-            string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\TileColors\tileColors.txt";
+            string filename = path + @"\Styles\TileColors\tileColors.txt";
 
 
             //Kry die knoppie en kleur wat verander moet word
@@ -695,7 +697,7 @@ namespace PschyHealth
 
                     // MessageBox.Show(words[0] + words[1]);
 
-                    StreamWriter write = File.AppendText(@"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\TileColors\tileColors.txt");
+                    StreamWriter write = File.AppendText(path + @"\Styles\TileColors\tileColors.txt");
                     write.WriteLine(keuse.Name + "/" + words[1]);
                     write.Close();
 
@@ -722,7 +724,7 @@ namespace PschyHealth
 
         public void defTheme()
         {
-            string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\Theme\theme.txt";
+            string filename = path + @"\Styles\Theme\theme.txt";
             StreamWriter write = File.AppendText(filename);
 
 
@@ -743,7 +745,7 @@ namespace PschyHealth
         }
         public void writeTheme(MetroFramework.Components.MetroStyleManager manager, MetroFramework.MetroThemeStyle styl)
         {
-            string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\Theme\theme.txt";
+            string filename = path + @"\Styles\Theme\theme.txt";
             string line;
             StreamReader lees = File.OpenText(filename);
             line = lees.ReadLine();
@@ -765,7 +767,7 @@ namespace PschyHealth
 
         public void readTheme(MetroFramework.Components.MetroStyleManager manager)
         {
-            string filename = @"C:\Users\Jaco\Documents\JarvisDevelopment\Styles\Theme\theme.txt";
+            string filename = path + @"\Styles\Theme\theme.txt";
             MetroFramework.MetroThemeStyle chosenStyle = new MetroFramework.MetroThemeStyle();
             StreamReader lees = File.OpenText(filename);
             string line = lees.ReadLine();
