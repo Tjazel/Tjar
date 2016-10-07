@@ -127,22 +127,31 @@ namespace PschyHealth
         //Hierdie is die kode vir die Login
         //public bool checkLogin(String username, String password)
         //{
-        //SqlCommand cmd = new SqlCommand();
-        //SqlDataReader reader;
 
-        //cmd.CommandText = "SELECT * FROM Staff WHERE Username = @P1 AND Password = @P2";
+        //    SqlCommand cmd = new SqlCommand();
+        //    SqlDataReader reader, searcher;
+        //    string values = "";
+        //    cmd.CommandText = "SELECT * FROM Staff WHERE Username = @P1 AND Password = @P2";
         //    cmd.Parameters.AddWithValue("@P1", username);
         //    cmd.Parameters.AddWithValue("@P2", password);
         //    cmd.CommandType = CommandType.Text;
         //    cmd.Connection = conn;
         //    conn.Open();
 
-        //reader = cmd.ExecuteReader();
+            
+        //    searcher = cmd.ExecuteReader();
+        //    while (searcher.Read())
+        //    {
+        //        values = searcher["Admin"].ToString();
+        //    }
+        //    searcher.Close();
+        //    reader = cmd.ExecuteReader();
         //    DataTable dt = new DataTable();
-        //dt.Load(reader);
+        //    dt.Load(reader);
         //    // Data is accessible through the DataReader object here.
         //    if (dt.Rows.Count == 1)
         //    {
+        //        checkLogin(username, password, true, values);
         //        conn.Close();
         //        return true;
         //    }
@@ -152,9 +161,23 @@ namespace PschyHealth
         //        return false;
         //    }
 
+
         //}
 
-        
+
+
+        //public bool checkLogin(String username, String password, Boolean correct, String admin)
+        //{
+        //    if (admin == "False")
+        //    {
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        return true;
+        //    }
+        //}
+
 
         public void filterDGV(MetroGrid dgv, String sTable, String filter)
         {

@@ -45,7 +45,7 @@ namespace PschyHealth
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
 
-            cMethods.fillDGV(dgvEDICodes, "EDIcodes", cmbEDICrit);
+           // cMethods.fillDGV(dgvEDICodes, "EDIcodes", cmbEDICrit);
         }
         public frmICD10Codes()
         {
@@ -70,7 +70,7 @@ namespace PschyHealth
 
         private void dgvEDICodes_SelectionChanged_1(object sender, EventArgs e)
         {
-            cMethods.fillTextbox(groupBox1, dgvEDICodes, "EDI", false);
+         //   cMethods.fillTextbox(groupBox1, dgvEDICodes, "EDI", false);
         }
 
         private void pbMic_Click(object sender, EventArgs e)
