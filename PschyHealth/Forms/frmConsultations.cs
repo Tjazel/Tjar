@@ -213,6 +213,11 @@ namespace PschyHealth
             button = "delete";
         }
 
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             String field;
@@ -236,11 +241,6 @@ namespace PschyHealth
             btnAdd.Enabled = true;
             btnConfirm.Hide();
             filter();
-        }
-
-        private void lblBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

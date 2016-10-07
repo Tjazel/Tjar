@@ -16,7 +16,7 @@ namespace PschyHealth
     public partial class frmMedicalAids : MetroForm
     {
         Methods cMethods = new Methods();
-        
+        String button = "";
         String correctSearch = "";
         //Constants
         const int AW_SLIDE = 0X40000;
@@ -188,27 +188,64 @@ namespace PschyHealth
             metroTextBox17.Clear();
         }
 
-        private void metroTextButton5_Click(object sender, EventArgs e)
+        private void metroLabel5_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void btnMedAdd_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", true, true);
+            btnMedAdd.Enabled = false;
+            btnMedDelete.Enabled = false;
+            btnMedUpdate.Enabled = false;
+            button = "add";
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            String field;
+            String value;
             if (dgvMedicalAid.SelectedRows.Count > 0)
             {
                 int selectedIndex = dgvMedicalAid.SelectedRows[0].Index;
 
-                string rowID = dgvMedicalAid[0, selectedIndex].Value.ToString();
-                cMethods.delete("MedicalAid", "Medical_Aid = '"+rowID+"'");
+                String rowID = dgvMedicalAid[0, selectedIndex].Value.ToString();
+                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Med");
+                if (button == "add")
+                    cMethods.add("MedicalAid", field, value);
+                else if (button == "edit")
+                    cMethods.edit("MedicalAid", field, value, " Medical_Aid = '" + dgvMedicalAid.Rows[selectedIndex].Cells["Medical_Aid"].Value.ToString() + "'");
+                else if (button == "delete")
+                    cMethods.delete("MedicalAid", "Medical_Aid = '" + rowID + "'");
+
             }
-
+            btnMedAdd.Enabled = true;
+            btnMedDelete.Enabled = true;
+            btnMedUpdate.Enabled = true;
+            btnConfirm.Hide();
+            filter();
         }
 
-        private void metroTextButton3_Click(object sender, EventArgs e)
+        private void btnMedUpdate_Click(object sender, EventArgs e)
         {
-
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", true);
+            btnMedAdd.Enabled = false;
+            btnMedDelete.Enabled = false;
+            btnMedUpdate.Enabled = false;
+            button = "edit";
         }
 
-        private void metroLabel5_Click(object sender, EventArgs e)
+        private void btnMedDelete_Click(object sender, EventArgs e)
         {
-            this.Close();
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
+            btnMedAdd.Enabled = false;
+            btnMedDelete.Enabled = false;
+            btnMedUpdate.Enabled = false;
+            button = "delete";
         }
     }
 }
