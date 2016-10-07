@@ -991,6 +991,27 @@ namespace PschyHealth
                 frmClients.Show();
             }
         }
+
+        private void metroTileItem2_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmToDoList")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmToDoList frmToDoList = new frmToDoList();
+                frmToDoList.Show();
+            }
+        }
     }
 }
 

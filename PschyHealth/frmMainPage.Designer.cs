@@ -109,6 +109,7 @@
             this.btnChange = new MetroFramework.Controls.MetroButton();
             this.pnlColorChange = new MetroFramework.Controls.MetroPanel();
             this.pbReset = new System.Windows.Forms.PictureBox();
+            this.metroToDoList = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.ctxPersonalize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonalize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msmMain)).BeginInit();
@@ -172,10 +173,9 @@
             this.metroTilePanel1.EnableDragDrop = true;
             this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.itemContainer1});
-            this.metroTilePanel1.Location = new System.Drawing.Point(13, 78);
-            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTilePanel1.Location = new System.Drawing.Point(10, 63);
             this.metroTilePanel1.Name = "metroTilePanel1";
-            this.metroTilePanel1.Size = new System.Drawing.Size(1459, 880);
+            this.metroTilePanel1.Size = new System.Drawing.Size(1094, 715);
             this.metroTilePanel1.TabIndex = 30;
             this.metroTilePanel1.Text = "metroTilePanel1";
             this.metroTilePanel1.ItemClick += new System.EventHandler(this.metroTilePanel1_ItemClick);
@@ -210,7 +210,8 @@
             this.btnICD10,
             this.btnRecordings,
             this.btnInfo,
-            this.btnDateAndTime});
+            this.btnDateAndTime,
+            this.metroToDoList});
             // 
             // 
             // 
@@ -225,7 +226,7 @@
             this.btn_StaffNew.Name = "btn_StaffNew";
             this.btn_StaffNew.SymbolColor = System.Drawing.Color.Empty;
             this.btn_StaffNew.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedViolet;
-            this.btn_StaffNew.TileSize = new System.Drawing.Size(180, 120);
+            this.btn_StaffNew.TileSize = new System.Drawing.Size(220, 120);
             // 
             // 
             // 
@@ -277,7 +278,7 @@
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.SymbolColor = System.Drawing.Color.Empty;
             this.btnPayments.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnPayments.TileSize = new System.Drawing.Size(180, 120);
+            this.btnPayments.TileSize = new System.Drawing.Size(220, 120);
             // 
             // 
             // 
@@ -344,7 +345,7 @@
             this.btnReports.Name = "btnReports";
             this.btnReports.SymbolColor = System.Drawing.Color.Empty;
             this.btnReports.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Plum;
-            this.btnReports.TileSize = new System.Drawing.Size(180, 120);
+            this.btnReports.TileSize = new System.Drawing.Size(220, 120);
             // 
             // 
             // 
@@ -619,7 +620,7 @@
             this.themeToolStripMenuItem,
             this.styleToolStripMenuItem});
             this.ctxPersonalize.Name = "ctxPersonalize";
-            this.ctxPersonalize.Size = new System.Drawing.Size(130, 56);
+            this.ctxPersonalize.Size = new System.Drawing.Size(112, 48);
             this.ctxPersonalize.Opening += new System.ComponentModel.CancelEventHandler(this.ctxPersonalize_Opening);
             // 
             // themeToolStripMenuItem
@@ -628,20 +629,20 @@
             this.darkToolStripMenuItem,
             this.defaultToolStripMenuItem});
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            this.themeToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
+            this.themeToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.themeToolStripMenuItem.Text = "Theme";
             // 
             // darkToolStripMenuItem
             // 
             this.darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            this.darkToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.darkToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.darkToolStripMenuItem.Text = "Dark";
             this.darkToolStripMenuItem.Click += new System.EventHandler(this.darkToolStripMenuItem_Click);
             // 
             // defaultToolStripMenuItem
             // 
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
-            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
+            this.defaultToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.defaultToolStripMenuItem.Text = "Default";
             this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
             // 
@@ -660,82 +661,82 @@
             this.toolStripMenuItem11,
             this.toolStripMenuItem12});
             this.styleToolStripMenuItem.Name = "styleToolStripMenuItem";
-            this.styleToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
+            this.styleToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.styleToolStripMenuItem.Text = "Style";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(86, 22);
             this.toolStripMenuItem2.Text = "1";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(86, 22);
             this.toolStripMenuItem3.Text = "2";
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(86, 22);
             this.toolStripMenuItem4.Text = "3";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(86, 22);
             this.toolStripMenuItem5.Text = "4";
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(86, 22);
             this.toolStripMenuItem6.Text = "5";
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(86, 22);
             this.toolStripMenuItem7.Text = "6";
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(86, 22);
             this.toolStripMenuItem8.Text = "7";
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(86, 22);
             this.toolStripMenuItem9.Text = "8";
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(86, 22);
             this.toolStripMenuItem10.Text = "9";
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(86, 22);
             this.toolStripMenuItem11.Text = "10";
             // 
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(86, 22);
             this.toolStripMenuItem12.Text = "11";
             // 
             // pbPersonalize
             // 
             this.pbPersonalize.Image = global::PschyHealth.Properties.Resources.Connect_Develop_48px;
-            this.pbPersonalize.Location = new System.Drawing.Point(29, 60);
-            this.pbPersonalize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbPersonalize.Location = new System.Drawing.Point(22, 49);
+            this.pbPersonalize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbPersonalize.Name = "pbPersonalize";
-            this.pbPersonalize.Size = new System.Drawing.Size(37, 27);
+            this.pbPersonalize.Size = new System.Drawing.Size(28, 22);
             this.pbPersonalize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPersonalize.TabIndex = 45;
             this.pbPersonalize.TabStop = false;
@@ -774,9 +775,10 @@
             this.cmbMaroonWashed,
             this.cmbPlumWashed,
             this.cmbAzure});
-            this.cmbMain.Location = new System.Drawing.Point(3, 3);
+            this.cmbMain.Location = new System.Drawing.Point(2, 2);
+            this.cmbMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbMain.Name = "cmbMain";
-            this.cmbMain.Size = new System.Drawing.Size(142, 22);
+            this.cmbMain.Size = new System.Drawing.Size(108, 22);
             this.cmbMain.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmbMain.TabIndex = 48;
             // 
@@ -892,9 +894,10 @@
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(151, 0);
+            this.btnChange.Location = new System.Drawing.Point(113, 0);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(176, 32);
+            this.btnChange.Size = new System.Drawing.Size(132, 26);
             this.btnChange.TabIndex = 49;
             this.btnChange.Text = "Change tile color";
             this.btnChange.UseSelectable = true;
@@ -908,38 +911,53 @@
             this.pnlColorChange.Controls.Add(this.btnChange);
             this.pnlColorChange.HorizontalScrollbarBarColor = true;
             this.pnlColorChange.HorizontalScrollbarHighlightOnWheel = false;
-            this.pnlColorChange.HorizontalScrollbarSize = 10;
-            this.pnlColorChange.Location = new System.Drawing.Point(176, 10);
+            this.pnlColorChange.HorizontalScrollbarSize = 8;
+            this.pnlColorChange.Location = new System.Drawing.Point(132, 8);
+            this.pnlColorChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlColorChange.Name = "pnlColorChange";
-            this.pnlColorChange.Size = new System.Drawing.Size(367, 32);
+            this.pnlColorChange.Size = new System.Drawing.Size(275, 26);
             this.pnlColorChange.TabIndex = 50;
             this.pnlColorChange.VerticalScrollbarBarColor = true;
             this.pnlColorChange.VerticalScrollbarHighlightOnWheel = false;
-            this.pnlColorChange.VerticalScrollbarSize = 10;
+            this.pnlColorChange.VerticalScrollbarSize = 8;
             this.pnlColorChange.Visible = false;
             // 
             // pbReset
             // 
             this.pbReset.Image = global::PschyHealth.Properties.Resources.Restart_48px;
-            this.pbReset.Location = new System.Drawing.Point(333, 0);
+            this.pbReset.Location = new System.Drawing.Point(250, 0);
+            this.pbReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbReset.Name = "pbReset";
-            this.pbReset.Size = new System.Drawing.Size(34, 32);
+            this.pbReset.Size = new System.Drawing.Size(26, 26);
             this.pbReset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbReset.TabIndex = 50;
             this.pbReset.TabStop = false;
             this.pbReset.Click += new System.EventHandler(this.pbReset_Click);
             // 
+            // metroToDoList
+            // 
+            this.metroToDoList.ImageTextAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            this.metroToDoList.Name = "metroToDoList";
+            this.metroToDoList.SymbolColor = System.Drawing.Color.Empty;
+            this.metroToDoList.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroToDoList.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.metroToDoList.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroToDoList.TitleText = "To Do List";
+            this.metroToDoList.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroToDoList.Click += new System.EventHandler(this.metroTileItem2_Click);
+            // 
             // frmMainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2304, 1092);
+            this.ClientSize = new System.Drawing.Size(1728, 881);
             this.Controls.Add(this.pnlColorChange);
             this.Controls.Add(this.pbPersonalize);
             this.Controls.Add(this.metroTilePanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainPage";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainPage_FormClosing_1);
@@ -1035,5 +1053,6 @@
         private DevComponents.Editors.ComboItem cmbPlumWashed;
         private DevComponents.Editors.ComboItem cmbAzure;
         private System.Windows.Forms.PictureBox pbReset;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroToDoList;
     }
 }
