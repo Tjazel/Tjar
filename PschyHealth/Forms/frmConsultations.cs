@@ -242,5 +242,15 @@ namespace PschyHealth
             btnConfirm.Hide();
             filter();
         }
+
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", false);
+            btnAdd.Enabled = false;
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            button = "archive";
+        }
     }
 }

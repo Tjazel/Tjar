@@ -232,5 +232,21 @@ namespace PschyHealth
         {
             this.Close();
         }
+
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnArchive_Click_1(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvClients, "Clients", false);
+            btnAddExistingClient.Enabled = false;
+            btnAddNewClient.Enabled = false;
+            btnUpdateClient.Enabled = false;
+            btnDeleteClient.Enabled = false;
+            button = "archive";
+        }
     }
 }
