@@ -123,11 +123,11 @@
     <Compile Include="Forms\frmConsultations.Designer.cs">
       <DependentUpon>frmConsultations.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmEDICodes.cs">
+    <Compile Include="Forms\frmICD10Codes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmEDICodes.Designer.cs">
-      <DependentUpon>frmEDICodes.cs</DependentUpon>
+    <Compile Include="Forms\frmICD10Codes.Designer.cs">
+      <DependentUpon>frmICD10Codes.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
@@ -313,8 +313,8 @@
     <EmbeddedResource Include="Forms\frmConsultations.resx">
       <DependentUpon>frmConsultations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmEDICodes.resx">
-      <DependentUpon>frmEDICodes.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmICD10Codes.resx">
+      <DependentUpon>frmICD10Codes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

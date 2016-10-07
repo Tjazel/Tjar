@@ -31,6 +31,7 @@ namespace PschyHealth
         public frmArchive()
         {
             InitializeComponent();
+            this.StyleManager = msmArchive;
         }
 
         private void frmArchive_Load(object sender, EventArgs e)
@@ -41,8 +42,8 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-           
 
+            cMethods.readTheme(msmArchive);
            /* //Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
             int HeightOfMain = Application.OpenForms["frmMainPage"].Height;
@@ -154,18 +155,26 @@ namespace PschyHealth
             cMethods.add(table, fields, values);
             dgv.Hide();
             dgv = null;
+
             string monthName = DateTime.ParseExact(cmbFile.Text.Substring(0, cmbFile.Text.IndexOf(" ")), "MMMM", CultureInfo.CurrentCulture).Month.ToString();
             string year = cmbFile.Text.Substring(cmbFile.Text.IndexOf(" ") + 1, 4);
             string name = year + "-" + monthName + ".txt";
             String fileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + cmbFolder.Text + @"\" + name;
             var tempFile = Path.GetTempFileName();
+
             var linesToKeep = File.ReadLines(fileName).Where(l => l != lbArcList.SelectedItem.ToString());
 
             File.WriteAllLines(tempFile, linesToKeep);
 
             File.Delete(fileName);
             File.Move(tempFile, fileName);
+
             lbArcList.Items.RemoveAt(lbArcList.SelectedIndex);
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

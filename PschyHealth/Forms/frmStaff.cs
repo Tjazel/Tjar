@@ -31,7 +31,7 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-           
+            cMethods.readTheme(msmStaff);
 
             /*
             //Load the Form At Position of Main Form
@@ -55,6 +55,7 @@ namespace PschyHealth
         public frmStaff()
         {
             InitializeComponent();
+            this.StyleManager = msmStaff;
         }
 
         private void pbBack_Click(object sender, EventArgs e)

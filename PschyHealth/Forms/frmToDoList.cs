@@ -16,6 +16,7 @@ namespace PschyHealth
         public frmToDoList()
         {
             InitializeComponent();
+            this.StyleManager = msmToDo;
         }
 
         private void frmToDoList_Load(object sender, EventArgs e)

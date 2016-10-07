@@ -13,6 +13,7 @@ namespace PschyHealth
 {
     public partial class frmAddressBook : MetroForm
     {
+        Methods cMethods = new Methods();
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
         const int AW_HOR_NEGATIVE = 0X2;
@@ -23,11 +24,12 @@ namespace PschyHealth
         public frmAddressBook()
         {
             InitializeComponent();
+            this.StyleManager = msmAdBook;
         }
 
         protected override void OnLoad(EventArgs e)
         {
-           
+            cMethods.readTheme(msmAdBook);
 
             //Load the Form At Position of Main Form
             // int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
@@ -43,6 +45,10 @@ namespace PschyHealth
             this.WindowState = FormWindowState.Maximized;
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
+
+           
+
+            
         }
 
         private void frmAddressBook_Load(object sender, EventArgs e)
@@ -50,6 +56,16 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             uc.Dock = DockStyle.Fill;
             this.Controls.Add(uc);
+        }
+
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

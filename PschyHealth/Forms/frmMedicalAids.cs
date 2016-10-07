@@ -16,6 +16,7 @@ namespace PschyHealth
     public partial class frmMedicalAids : MetroForm
     {
         Methods cMethods = new Methods();
+        
         String correctSearch = "";
         //Constants
         const int AW_SLIDE = 0X40000;
@@ -29,7 +30,7 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-          
+            cMethods.readTheme(msmMedical);
 
             /*
             //Load the Form At Position of Main Form
@@ -53,6 +54,7 @@ namespace PschyHealth
         public frmMedicalAids()
         {
             InitializeComponent();
+            this.StyleManager = msmMedical;
         }
 
         private void pbBack_Click(object sender, EventArgs e)
@@ -202,6 +204,11 @@ namespace PschyHealth
         private void metroTextButton3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroLabel5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

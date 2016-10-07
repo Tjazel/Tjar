@@ -52,7 +52,7 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-            
+            cMethods.readTheme(msmStatements); 
             /*
 
             //Load the Form At Position of Main Form
@@ -86,6 +86,7 @@ namespace PschyHealth
         public frmStatements()
         {
             InitializeComponent();
+            this.StyleManager = msmStatements;
         }
 
         private void pbBack_Click(object sender, EventArgs e)

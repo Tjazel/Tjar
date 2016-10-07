@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,9 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.msmNote = new MetroFramework.Components.MetroStyleManager(this.components);
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.msmNote)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -59,7 +62,7 @@
             this.editToolStripMenuItem,
             this.fontToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.menuStrip1.Location = new System.Drawing.Point(933, 215);
+            this.menuStrip1.Location = new System.Drawing.Point(-858, 7);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(149, 28);
@@ -169,7 +172,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(-1, 39);
+            this.richTextBox1.Location = new System.Drawing.Point(7, 57);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(911, 638);
@@ -180,11 +183,15 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // msmNote
+            // 
+            this.msmNote.Owner = this;
+            // 
             // frmNotepad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2777, 1094);
+            this.ClientSize = new System.Drawing.Size(2777, 1092);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -196,6 +203,7 @@
             this.Load += new System.EventHandler(this.frmNotepad_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.msmNote)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +228,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private MetroFramework.Components.MetroStyleManager msmNote;
     }
 }

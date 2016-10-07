@@ -31,8 +31,8 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-            
 
+            cMethods.readTheme(msmConsult);
             /*
             //Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
@@ -55,6 +55,7 @@ namespace PschyHealth
         public frmConsultations()
         {
             InitializeComponent();
+            this.StyleManager = msmConsult;
         }
 
         private void Consultations_Load(object sender, EventArgs e)
@@ -235,6 +236,11 @@ namespace PschyHealth
             btnAdd.Enabled = true;
             btnConfirm.Hide();
             filter();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -28,11 +28,12 @@ namespace PschyHealth.Forms
         public frmPayments()
         {
             InitializeComponent();
+            this.StyleManager = msmPayments;
         }
 
         protected override void OnLoad(EventArgs e)
         {
-            
+            cMethods.readTheme(msmPayments);
 
             /*
             //Load the Form At Position of Main Form
@@ -88,7 +89,7 @@ namespace PschyHealth.Forms
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            txtConsultation.Text = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells["ConaultationsID"].Value.ToString();
+            txtConsultation.Text = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells["Consultation"].Value.ToString();
         }
     }
 }

@@ -31,16 +31,16 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-          
 
+            cMethods.readTheme(msmAcc);
             //Load the Form At Position of Main Form
-           // int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
-           // int HeightofMain = Application.OpenForms["frmMainPage"].Height;
-           // int LocationMainX = Application.OpenForms["frmMainPage"].Location.X;
-           // int locationMainy = Application.OpenForms["frmMainPage"].Location.Y;
+            // int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
+            // int HeightofMain = Application.OpenForms["frmMainPage"].Height;
+            // int LocationMainX = Application.OpenForms["frmMainPage"].Location.X;
+            // int locationMainy = Application.OpenForms["frmMainPage"].Location.Y;
 
             //Set the Location
-          //  this.Location = new Point(LocationMainX, locationMainy + 30);
+            //  this.Location = new Point(LocationMainX, locationMainy + 30);
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
@@ -48,12 +48,13 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 
-
+           
             cMethods.fillDGV(dgvAccount, "Accounting", cmbAccCriteria);
         }
         public frmAccounting()
         {
             InitializeComponent();
+            this.StyleManager = msmAcc;
         }
 
         private void pbBack_Click(object sender, EventArgs e)
