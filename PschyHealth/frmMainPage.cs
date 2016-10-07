@@ -1031,6 +1031,28 @@ namespace PschyHealth
             }
 
         }
+
+        private void btnEmail_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmEmail")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmEmail frmEmail = new frmEmail();
+                frmEmail.Show();
+            }
+
+        }
     }
 }
 

@@ -16,9 +16,11 @@ namespace PschyHealth
         {
             try
             {
+                
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmLogin());
+                frmLogin frmLogin = new frmLogin();
+                Application.Run(frmLogin);
             }
             catch(FormatException e)
             {

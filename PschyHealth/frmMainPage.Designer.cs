@@ -172,7 +172,7 @@
             this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.itemContainer1});
             this.metroTilePanel1.Location = new System.Drawing.Point(249, 104);
-            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTilePanel1.Name = "metroTilePanel1";
             this.metroTilePanel1.Padding = new System.Windows.Forms.Padding(50);
             this.metroTilePanel1.Size = new System.Drawing.Size(1459, 880);
@@ -800,6 +800,7 @@
             this.btnEmail.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnEmail.TitleText = "E-mail";
             this.btnEmail.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
             this.btnEmail.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnEmail_MouseDown);
             // 
             // btnNotePad
@@ -942,7 +943,7 @@
             this.Controls.Add(this.pnlColorChange);
             this.Controls.Add(this.pbPersonalize);
             this.Controls.Add(this.metroTilePanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainPage";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Teal;
