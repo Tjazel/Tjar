@@ -39,15 +39,11 @@
             this.pbBack = new System.Windows.Forms.PictureBox();
             this.dgvPayments = new MetroFramework.Controls.MetroGrid();
             this.txtPaymentMethod = new System.Windows.Forms.Label();
-            this.cmbPayments_Method_Of_Payments = new MetroFramework.Controls.MetroComboBox();
+            this.cmbPaymentsMethod = new MetroFramework.Controls.MetroComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtPayments_Amount = new MetroFramework.Controls.MetroTextBox();
-            this.txtPaymentsDiscount = new MetroFramework.Controls.MetroTextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtPaymentsAmount = new MetroFramework.Controls.MetroTextBox();
             this.btnAfbetaal = new MetroFramework.Controls.MetroButton();
-            this.btnAfgeskryf = new MetroFramework.Controls.MetroButton();
-            this.btnKortingAfbetaal = new MetroFramework.Controls.MetroButton();
-            this.cmbClient = new MetroFramework.Controls.MetroComboBox();
+            this.cmbPaymentsClient_Name = new MetroFramework.Controls.MetroComboBox();
             this.dgvConsultations = new MetroFramework.Controls.MetroGrid();
             this.btnConfirm = new MetroFramework.Controls.MetroButton();
             this.msmPayments = new MetroFramework.Components.MetroStyleManager(this.components);
@@ -56,12 +52,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPaymentsDate = new MetroFramework.Controls.MetroDateTime();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPaymentsClient_Surname = new MetroFramework.Controls.MetroComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtClient_Account_Number = new MetroFramework.Controls.MetroTextBox();
             this.btnArchive = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbPaymentsClient_Surname = new MetroFramework.Controls.MetroComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnClear = new MetroFramework.Controls.MetroButton();
+            this.cmbPaymentsDescription = new MetroFramework.Controls.MetroComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultations)).BeginInit();
@@ -73,7 +70,7 @@
             // 
             this.pbBack.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
             this.pbBack.Location = new System.Drawing.Point(2, 29);
-            this.pbBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbBack.Margin = new System.Windows.Forms.Padding(2);
             this.pbBack.Name = "pbBack";
             this.pbBack.Size = new System.Drawing.Size(28, 22);
             this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,7 +106,7 @@
             this.dgvPayments.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvPayments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvPayments.Location = new System.Drawing.Point(692, 80);
-            this.dgvPayments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPayments.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPayments.Name = "dgvPayments";
             this.dgvPayments.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -137,20 +134,20 @@
             this.txtPaymentMethod.TabIndex = 47;
             this.txtPaymentMethod.Text = "Method of payment :";
             // 
-            // cmbPayments_Method_Of_Payments
+            // cmbPaymentsMethod
             // 
-            this.cmbPayments_Method_Of_Payments.FormattingEnabled = true;
-            this.cmbPayments_Method_Of_Payments.ItemHeight = 23;
-            this.cmbPayments_Method_Of_Payments.Items.AddRange(new object[] {
+            this.cmbPaymentsMethod.FormattingEnabled = true;
+            this.cmbPaymentsMethod.ItemHeight = 23;
+            this.cmbPaymentsMethod.Items.AddRange(new object[] {
             "Member",
             "Medical Aid"});
-            this.cmbPayments_Method_Of_Payments.Location = new System.Drawing.Point(133, 165);
-            this.cmbPayments_Method_Of_Payments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cmbPayments_Method_Of_Payments.Name = "cmbPayments_Method_Of_Payments";
-            this.cmbPayments_Method_Of_Payments.Size = new System.Drawing.Size(121, 29);
-            this.cmbPayments_Method_Of_Payments.TabIndex = 48;
-            this.cmbPayments_Method_Of_Payments.UseSelectable = true;
-            this.cmbPayments_Method_Of_Payments.SelectedIndexChanged += new System.EventHandler(this.cmbPayments_Method_Of_Payments_SelectedIndexChanged);
+            this.cmbPaymentsMethod.Location = new System.Drawing.Point(133, 165);
+            this.cmbPaymentsMethod.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbPaymentsMethod.Name = "cmbPaymentsMethod";
+            this.cmbPaymentsMethod.Size = new System.Drawing.Size(121, 29);
+            this.cmbPaymentsMethod.TabIndex = 48;
+            this.cmbPaymentsMethod.UseSelectable = true;
+            this.cmbPaymentsMethod.SelectedIndexChanged += new System.EventHandler(this.cmbPayments_Method_Of_Payments_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -162,120 +159,60 @@
             this.label1.TabIndex = 49;
             this.label1.Text = "Amount :";
             // 
-            // txtPayments_Amount
+            // txtPaymentsAmount
             // 
             // 
             // 
             // 
-            this.txtPayments_Amount.CustomButton.Image = null;
-            this.txtPayments_Amount.CustomButton.Location = new System.Drawing.Point(76, 2);
-            this.txtPayments_Amount.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtPayments_Amount.CustomButton.Name = "";
-            this.txtPayments_Amount.CustomButton.Size = new System.Drawing.Size(11, 12);
-            this.txtPayments_Amount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtPayments_Amount.CustomButton.TabIndex = 1;
-            this.txtPayments_Amount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtPayments_Amount.CustomButton.UseSelectable = true;
-            this.txtPayments_Amount.CustomButton.Visible = false;
-            this.txtPayments_Amount.ForeColor = System.Drawing.Color.Snow;
-            this.txtPayments_Amount.Lines = new string[0];
-            this.txtPayments_Amount.Location = new System.Drawing.Point(133, 232);
-            this.txtPayments_Amount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtPayments_Amount.MaxLength = 32767;
-            this.txtPayments_Amount.Name = "txtPayments_Amount";
-            this.txtPayments_Amount.PasswordChar = '\0';
-            this.txtPayments_Amount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPayments_Amount.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtPayments_Amount.SelectedText = "";
-            this.txtPayments_Amount.SelectionLength = 0;
-            this.txtPayments_Amount.SelectionStart = 0;
-            this.txtPayments_Amount.Size = new System.Drawing.Size(120, 20);
-            this.txtPayments_Amount.TabIndex = 50;
-            this.txtPayments_Amount.UseSelectable = true;
-            this.txtPayments_Amount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtPayments_Amount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtPaymentsDiscount
-            // 
-            // 
-            // 
-            // 
-            this.txtPaymentsDiscount.CustomButton.Image = null;
-            this.txtPaymentsDiscount.CustomButton.Location = new System.Drawing.Point(76, 2);
-            this.txtPaymentsDiscount.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtPaymentsDiscount.CustomButton.Name = "";
-            this.txtPaymentsDiscount.CustomButton.Size = new System.Drawing.Size(11, 12);
-            this.txtPaymentsDiscount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtPaymentsDiscount.CustomButton.TabIndex = 1;
-            this.txtPaymentsDiscount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtPaymentsDiscount.CustomButton.UseSelectable = true;
-            this.txtPaymentsDiscount.CustomButton.Visible = false;
-            this.txtPaymentsDiscount.Lines = new string[0];
-            this.txtPaymentsDiscount.Location = new System.Drawing.Point(133, 263);
-            this.txtPaymentsDiscount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtPaymentsDiscount.MaxLength = 32767;
-            this.txtPaymentsDiscount.Name = "txtPaymentsDiscount";
-            this.txtPaymentsDiscount.PasswordChar = '\0';
-            this.txtPaymentsDiscount.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtPaymentsDiscount.SelectedText = "";
-            this.txtPaymentsDiscount.SelectionLength = 0;
-            this.txtPaymentsDiscount.SelectionStart = 0;
-            this.txtPaymentsDiscount.Size = new System.Drawing.Size(120, 20);
-            this.txtPaymentsDiscount.TabIndex = 52;
-            this.txtPaymentsDiscount.UseSelectable = true;
-            this.txtPaymentsDiscount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtPaymentsDiscount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 263);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "Discount :";
+            this.txtPaymentsAmount.CustomButton.Image = null;
+            this.txtPaymentsAmount.CustomButton.Location = new System.Drawing.Point(102, 2);
+            this.txtPaymentsAmount.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPaymentsAmount.CustomButton.Name = "";
+            this.txtPaymentsAmount.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.txtPaymentsAmount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPaymentsAmount.CustomButton.TabIndex = 1;
+            this.txtPaymentsAmount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPaymentsAmount.CustomButton.UseSelectable = true;
+            this.txtPaymentsAmount.CustomButton.Visible = false;
+            this.txtPaymentsAmount.ForeColor = System.Drawing.Color.Snow;
+            this.txtPaymentsAmount.Lines = new string[0];
+            this.txtPaymentsAmount.Location = new System.Drawing.Point(133, 232);
+            this.txtPaymentsAmount.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPaymentsAmount.MaxLength = 32767;
+            this.txtPaymentsAmount.Name = "txtPaymentsAmount";
+            this.txtPaymentsAmount.PasswordChar = '\0';
+            this.txtPaymentsAmount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtPaymentsAmount.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPaymentsAmount.SelectedText = "";
+            this.txtPaymentsAmount.SelectionLength = 0;
+            this.txtPaymentsAmount.SelectionStart = 0;
+            this.txtPaymentsAmount.Size = new System.Drawing.Size(120, 20);
+            this.txtPaymentsAmount.TabIndex = 50;
+            this.txtPaymentsAmount.UseSelectable = true;
+            this.txtPaymentsAmount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPaymentsAmount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btnAfbetaal
             // 
-            this.btnAfbetaal.Location = new System.Drawing.Point(30, 345);
-            this.btnAfbetaal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAfbetaal.Location = new System.Drawing.Point(23, 345);
+            this.btnAfbetaal.Margin = new System.Windows.Forms.Padding(2);
             this.btnAfbetaal.Name = "btnAfbetaal";
-            this.btnAfbetaal.Size = new System.Drawing.Size(56, 36);
+            this.btnAfbetaal.Size = new System.Drawing.Size(73, 36);
             this.btnAfbetaal.TabIndex = 53;
             this.btnAfbetaal.Text = "Down paid";
             this.btnAfbetaal.UseSelectable = true;
+            this.btnAfbetaal.Click += new System.EventHandler(this.btnAfbetaal_Click);
             // 
-            // btnAfgeskryf
+            // cmbPaymentsClient_Name
             // 
-            this.btnAfgeskryf.Location = new System.Drawing.Point(107, 345);
-            this.btnAfgeskryf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnAfgeskryf.Name = "btnAfgeskryf";
-            this.btnAfgeskryf.Size = new System.Drawing.Size(56, 36);
-            this.btnAfgeskryf.TabIndex = 55;
-            this.btnAfgeskryf.Text = "Written off";
-            this.btnAfgeskryf.UseSelectable = true;
-            // 
-            // btnKortingAfbetaal
-            // 
-            this.btnKortingAfbetaal.Location = new System.Drawing.Point(168, 345);
-            this.btnKortingAfbetaal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnKortingAfbetaal.Name = "btnKortingAfbetaal";
-            this.btnKortingAfbetaal.Size = new System.Drawing.Size(134, 36);
-            this.btnKortingAfbetaal.TabIndex = 56;
-            this.btnKortingAfbetaal.Text = "Bereken korting afbetaal";
-            this.btnKortingAfbetaal.UseSelectable = true;
-            // 
-            // cmbClient
-            // 
-            this.cmbClient.FormattingEnabled = true;
-            this.cmbClient.ItemHeight = 23;
-            this.cmbClient.Location = new System.Drawing.Point(133, 22);
-            this.cmbClient.Name = "cmbClient";
-            this.cmbClient.Size = new System.Drawing.Size(121, 29);
-            this.cmbClient.TabIndex = 57;
-            this.cmbClient.UseSelectable = true;
-            this.cmbClient.SelectedIndexChanged += new System.EventHandler(this.cmbClient_SelectedIndexChanged);
+            this.cmbPaymentsClient_Name.FormattingEnabled = true;
+            this.cmbPaymentsClient_Name.ItemHeight = 23;
+            this.cmbPaymentsClient_Name.Location = new System.Drawing.Point(133, 22);
+            this.cmbPaymentsClient_Name.Name = "cmbPaymentsClient_Name";
+            this.cmbPaymentsClient_Name.Size = new System.Drawing.Size(121, 29);
+            this.cmbPaymentsClient_Name.TabIndex = 57;
+            this.cmbPaymentsClient_Name.UseSelectable = true;
+            this.cmbPaymentsClient_Name.SelectedIndexChanged += new System.EventHandler(this.cmbClient_SelectedIndexChanged);
             // 
             // dgvConsultations
             // 
@@ -305,7 +242,7 @@
             this.dgvConsultations.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvConsultations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvConsultations.Location = new System.Drawing.Point(315, 80);
-            this.dgvConsultations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvConsultations.Margin = new System.Windows.Forms.Padding(2);
             this.dgvConsultations.Name = "dgvConsultations";
             this.dgvConsultations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -323,6 +260,7 @@
             this.dgvConsultations.TabIndex = 58;
             this.dgvConsultations.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dgvConsultations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultations_CellContentClick);
+            this.dgvConsultations.SelectionChanged += new System.EventHandler(this.dgvConsultations_SelectionChanged);
             // 
             // btnConfirm
             // 
@@ -354,19 +292,20 @@
             // 
             // 
             this.txtPaymentsConsultation.CustomButton.Image = null;
-            this.txtPaymentsConsultation.CustomButton.Location = new System.Drawing.Point(76, 2);
-            this.txtPaymentsConsultation.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaymentsConsultation.CustomButton.Location = new System.Drawing.Point(102, 2);
+            this.txtPaymentsConsultation.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtPaymentsConsultation.CustomButton.Name = "";
-            this.txtPaymentsConsultation.CustomButton.Size = new System.Drawing.Size(11, 12);
+            this.txtPaymentsConsultation.CustomButton.Size = new System.Drawing.Size(15, 15);
             this.txtPaymentsConsultation.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPaymentsConsultation.CustomButton.TabIndex = 1;
             this.txtPaymentsConsultation.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtPaymentsConsultation.CustomButton.UseSelectable = true;
             this.txtPaymentsConsultation.CustomButton.Visible = false;
+            this.txtPaymentsConsultation.Enabled = false;
             this.txtPaymentsConsultation.ForeColor = System.Drawing.Color.Snow;
             this.txtPaymentsConsultation.Lines = new string[0];
             this.txtPaymentsConsultation.Location = new System.Drawing.Point(133, 200);
-            this.txtPaymentsConsultation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaymentsConsultation.Margin = new System.Windows.Forms.Padding(2);
             this.txtPaymentsConsultation.MaxLength = 32767;
             this.txtPaymentsConsultation.Name = "txtPaymentsConsultation";
             this.txtPaymentsConsultation.PasswordChar = '\0';
@@ -380,6 +319,7 @@
             this.txtPaymentsConsultation.UseSelectable = true;
             this.txtPaymentsConsultation.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPaymentsConsultation.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPaymentsConsultation.EnabledChanged += new System.EventHandler(this.txtPaymentsConsultation_EnabledChanged);
             // 
             // label4
             // 
@@ -403,75 +343,13 @@
             // 
             // txtPaymentsDate
             // 
+            this.txtPaymentsDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtPaymentsDate.Location = new System.Drawing.Point(133, 301);
-            this.txtPaymentsDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaymentsDate.Margin = new System.Windows.Forms.Padding(2);
             this.txtPaymentsDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.txtPaymentsDate.Name = "txtPaymentsDate";
             this.txtPaymentsDate.Size = new System.Drawing.Size(121, 29);
             this.txtPaymentsDate.TabIndex = 66;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 77);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
-            this.label6.TabIndex = 68;
-            this.label6.Text = "Client surname :";
-            // 
-            // txtPaymentsClient_Surname
-            // 
-            this.txtPaymentsClient_Surname.FormattingEnabled = true;
-            this.txtPaymentsClient_Surname.ItemHeight = 23;
-            this.txtPaymentsClient_Surname.Location = new System.Drawing.Point(133, 66);
-            this.txtPaymentsClient_Surname.Name = "txtPaymentsClient_Surname";
-            this.txtPaymentsClient_Surname.Size = new System.Drawing.Size(121, 29);
-            this.txtPaymentsClient_Surname.TabIndex = 67;
-            this.txtPaymentsClient_Surname.UseSelectable = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(0, 120);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 13);
-            this.label7.TabIndex = 70;
-            this.label7.Text = "Client account number  :";
-            // 
-            // txtClient_Account_Number
-            // 
-            // 
-            // 
-            // 
-            this.txtClient_Account_Number.CustomButton.Image = null;
-            this.txtClient_Account_Number.CustomButton.Location = new System.Drawing.Point(76, 2);
-            this.txtClient_Account_Number.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtClient_Account_Number.CustomButton.Name = "";
-            this.txtClient_Account_Number.CustomButton.Size = new System.Drawing.Size(11, 12);
-            this.txtClient_Account_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtClient_Account_Number.CustomButton.TabIndex = 1;
-            this.txtClient_Account_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtClient_Account_Number.CustomButton.UseSelectable = true;
-            this.txtClient_Account_Number.CustomButton.Visible = false;
-            this.txtClient_Account_Number.ForeColor = System.Drawing.Color.Snow;
-            this.txtClient_Account_Number.Lines = new string[0];
-            this.txtClient_Account_Number.Location = new System.Drawing.Point(133, 113);
-            this.txtClient_Account_Number.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtClient_Account_Number.MaxLength = 32767;
-            this.txtClient_Account_Number.Name = "txtClient_Account_Number";
-            this.txtClient_Account_Number.PasswordChar = '\0';
-            this.txtClient_Account_Number.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtClient_Account_Number.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtClient_Account_Number.SelectedText = "";
-            this.txtClient_Account_Number.SelectionLength = 0;
-            this.txtClient_Account_Number.SelectionStart = 0;
-            this.txtClient_Account_Number.Size = new System.Drawing.Size(120, 20);
-            this.txtClient_Account_Number.TabIndex = 71;
-            this.txtClient_Account_Number.UseSelectable = true;
-            this.txtClient_Account_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtClient_Account_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btnArchive
             // 
@@ -488,24 +366,21 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmbClient);
-            this.groupBox1.Controls.Add(this.txtPaymentMethod);
-            this.groupBox1.Controls.Add(this.txtClient_Account_Number);
-            this.groupBox1.Controls.Add(this.cmbPayments_Method_Of_Payments);
             this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.cmbPaymentsDescription);
+            this.groupBox1.Controls.Add(this.btnClear);
+            this.groupBox1.Controls.Add(this.cmbPaymentsClient_Name);
+            this.groupBox1.Controls.Add(this.txtPaymentMethod);
+            this.groupBox1.Controls.Add(this.cmbPaymentsMethod);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtPayments_Amount);
-            this.groupBox1.Controls.Add(this.txtPaymentsClient_Surname);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtPaymentsAmount);
+            this.groupBox1.Controls.Add(this.cmbPaymentsClient_Surname);
             this.groupBox1.Controls.Add(this.txtPaymentsDate);
-            this.groupBox1.Controls.Add(this.txtPaymentsDiscount);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnAfbetaal);
             this.groupBox1.Controls.Add(this.txtPaymentsConsultation);
-            this.groupBox1.Controls.Add(this.btnAfgeskryf);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.btnKortingAfbetaal);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(2, 63);
             this.groupBox1.Name = "groupBox1";
@@ -513,6 +388,61 @@
             this.groupBox1.TabIndex = 73;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // cmbPaymentsClient_Surname
+            // 
+            this.cmbPaymentsClient_Surname.FormattingEnabled = true;
+            this.cmbPaymentsClient_Surname.ItemHeight = 23;
+            this.cmbPaymentsClient_Surname.Location = new System.Drawing.Point(133, 66);
+            this.cmbPaymentsClient_Surname.Name = "cmbPaymentsClient_Surname";
+            this.cmbPaymentsClient_Surname.Size = new System.Drawing.Size(121, 29);
+            this.cmbPaymentsClient_Surname.TabIndex = 67;
+            this.cmbPaymentsClient_Surname.UseSelectable = true;
+            this.cmbPaymentsClient_Surname.SelectedIndexChanged += new System.EventHandler(this.cmbPaymentsClient_Surname_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(38, 77);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 13);
+            this.label6.TabIndex = 68;
+            this.label6.Text = "Client surname :";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(178, 101);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 74;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseSelectable = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // cmbPaymentsDescription
+            // 
+            this.cmbPaymentsDescription.FormattingEnabled = true;
+            this.cmbPaymentsDescription.ItemHeight = 23;
+            this.cmbPaymentsDescription.Items.AddRange(new object[] {
+            "Payment",
+            "Discount",
+            "Writtem down"});
+            this.cmbPaymentsDescription.Location = new System.Drawing.Point(132, 130);
+            this.cmbPaymentsDescription.Name = "cmbPaymentsDescription";
+            this.cmbPaymentsDescription.Size = new System.Drawing.Size(121, 29);
+            this.cmbPaymentsDescription.TabIndex = 75;
+            this.cmbPaymentsDescription.UseSelectable = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(66, 133);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 13);
+            this.label7.TabIndex = 76;
+            this.label7.Text = "Payment :";
             // 
             // frmPayments
             // 
@@ -525,7 +455,7 @@
             this.Controls.Add(this.dgvConsultations);
             this.Controls.Add(this.dgvPayments);
             this.Controls.Add(this.pbBack);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPayments";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Load += new System.EventHandler(this.frmPayments_Load);
@@ -544,22 +474,14 @@
         private System.Windows.Forms.PictureBox pbBack;
         private MetroFramework.Controls.MetroGrid dgvPayments;
         private System.Windows.Forms.Label txtPaymentMethod;
-        private MetroFramework.Controls.MetroComboBox cmbPayments_Method_Of_Payments;
+        private MetroFramework.Controls.MetroComboBox cmbPaymentsMethod;
         private System.Windows.Forms.Label label1;
-        private MetroFramework.Controls.MetroTextBox txtPayments_Amount;
-        private MetroFramework.Controls.MetroTextBox txtPaymentsDiscount;
-        private System.Windows.Forms.Label label2;
+        private MetroFramework.Controls.MetroTextBox txtPaymentsAmount;
         private MetroFramework.Controls.MetroButton btnAfbetaal;
-        private MetroFramework.Controls.MetroButton btnAfgeskryf;
-        private MetroFramework.Controls.MetroButton btnKortingAfbetaal;
-        private MetroFramework.Controls.MetroComboBox cmbClient;
+        private MetroFramework.Controls.MetroComboBox cmbPaymentsClient_Name;
         private MetroFramework.Controls.MetroGrid dgvConsultations;
         private MetroFramework.Controls.MetroButton btnConfirm;
         private MetroFramework.Components.MetroStyleManager msmPayments;
-        private MetroFramework.Controls.MetroTextBox txtClient_Account_Number;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private MetroFramework.Controls.MetroComboBox txtPaymentsClient_Surname;
         private MetroFramework.Controls.MetroDateTime txtPaymentsDate;
         private System.Windows.Forms.Label label5;
         private MetroFramework.Controls.MetroTextBox txtPaymentsConsultation;
@@ -567,5 +489,10 @@
         private System.Windows.Forms.Label label3;
         private MetroFramework.Controls.MetroTextBox.MetroTextButton btnArchive;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label6;
+        private MetroFramework.Controls.MetroComboBox cmbPaymentsClient_Surname;
+        private MetroFramework.Controls.MetroButton btnClear;
+        private System.Windows.Forms.Label label7;
+        private MetroFramework.Controls.MetroComboBox cmbPaymentsDescription;
     }
 }
