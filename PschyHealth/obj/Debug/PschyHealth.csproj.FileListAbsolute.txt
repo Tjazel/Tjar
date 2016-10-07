@@ -874,3 +874,4 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar7\PschyHealth\obj\Debug\PschyHealth.pn
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar7\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar7\PschyHealth\obj\Debug\PschyHealth.ucToolbar.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar7\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Jaco\Source\Repos\Tjar6\PschyHealth\obj\Debug\PschyHealth.Forms.frmDiagnosticCodes.resources

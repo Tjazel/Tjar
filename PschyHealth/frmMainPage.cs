@@ -1009,6 +1009,28 @@ namespace PschyHealth
                 frmToDoList.Show();
             }
         }
+
+        private void btnDiagnostic_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmDiagnosticCodes")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmDiagnosticCodes frmDiagnosticCodes = new frmDiagnosticCodes();
+                frmDiagnosticCodes.Show();
+            }
+
+        }
     }
 }
 

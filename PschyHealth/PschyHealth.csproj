@@ -81,6 +81,12 @@
     <Compile Include="Forms\frmArchive.Designer.cs">
       <DependentUpon>frmArchive.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmDiagnosticCodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDiagnosticCodes.Designer.cs">
+      <DependentUpon>frmDiagnosticCodes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmPayments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmArchive.resx">
       <DependentUpon>frmArchive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDiagnosticCodes.resx">
+      <DependentUpon>frmDiagnosticCodes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPayments.resx">
       <DependentUpon>frmPayments.cs</DependentUpon>
@@ -882,6 +891,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checklist_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

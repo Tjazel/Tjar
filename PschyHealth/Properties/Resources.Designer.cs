@@ -163,6 +163,16 @@ namespace PschyHealth.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Checklist_48px {
+            get {
+                object obj = ResourceManager.GetObject("Checklist_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chili_golden_hour_gory_103630_1280x800 {
             get {
                 object obj = ResourceManager.GetObject("chili_golden_hour_gory_103630_1280x800", resourceCulture);
