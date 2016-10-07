@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPayments));
             this.pbBack = new System.Windows.Forms.PictureBox();
             this.dgvPayments = new MetroFramework.Controls.MetroGrid();
@@ -72,10 +72,10 @@
             // pbBack
             // 
             this.pbBack.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
-            this.pbBack.Location = new System.Drawing.Point(2, 29);
-            this.pbBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbBack.Location = new System.Drawing.Point(3, 36);
+            this.pbBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbBack.Name = "pbBack";
-            this.pbBack.Size = new System.Drawing.Size(28, 22);
+            this.pbBack.Size = new System.Drawing.Size(37, 27);
             this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBack.TabIndex = 45;
             this.pbBack.TabStop = false;
@@ -88,66 +88,65 @@
             this.dgvPayments.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPayments.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvPayments.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPayments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPayments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPayments.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPayments.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPayments.EnableHeadersVisualStyles = false;
             this.dgvPayments.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvPayments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.dgvPayments.Location = new System.Drawing.Point(692, 80);
-            this.dgvPayments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPayments.Location = new System.Drawing.Point(923, 98);
+            this.dgvPayments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvPayments.Name = "dgvPayments";
             this.dgvPayments.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPayments.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPayments.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPayments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPayments.RowTemplate.Height = 24;
             this.dgvPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPayments.Size = new System.Drawing.Size(335, 377);
+            this.dgvPayments.Size = new System.Drawing.Size(447, 464);
             this.dgvPayments.TabIndex = 46;
             this.dgvPayments.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // txtPaymentMethod
             // 
             this.txtPaymentMethod.AutoSize = true;
-            this.txtPaymentMethod.Location = new System.Drawing.Point(0, 165);
-            this.txtPaymentMethod.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtPaymentMethod.Location = new System.Drawing.Point(0, 203);
             this.txtPaymentMethod.Name = "txtPaymentMethod";
-            this.txtPaymentMethod.Size = new System.Drawing.Size(104, 13);
+            this.txtPaymentMethod.Size = new System.Drawing.Size(137, 17);
             this.txtPaymentMethod.TabIndex = 47;
             this.txtPaymentMethod.Text = "Method of payment :";
             // 
             // cmbPayments_Method_Of_Payments
             // 
             this.cmbPayments_Method_Of_Payments.FormattingEnabled = true;
-            this.cmbPayments_Method_Of_Payments.ItemHeight = 23;
+            this.cmbPayments_Method_Of_Payments.ItemHeight = 24;
             this.cmbPayments_Method_Of_Payments.Items.AddRange(new object[] {
             "Member",
             "Medical Aid"});
-            this.cmbPayments_Method_Of_Payments.Location = new System.Drawing.Point(133, 165);
-            this.cmbPayments_Method_Of_Payments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPayments_Method_Of_Payments.Location = new System.Drawing.Point(177, 203);
+            this.cmbPayments_Method_Of_Payments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbPayments_Method_Of_Payments.Name = "cmbPayments_Method_Of_Payments";
-            this.cmbPayments_Method_Of_Payments.Size = new System.Drawing.Size(121, 29);
+            this.cmbPayments_Method_Of_Payments.Size = new System.Drawing.Size(160, 30);
             this.cmbPayments_Method_Of_Payments.TabIndex = 48;
             this.cmbPayments_Method_Of_Payments.UseSelectable = true;
             this.cmbPayments_Method_Of_Payments.SelectedIndexChanged += new System.EventHandler(this.cmbPayments_Method_Of_Payments_SelectedIndexChanged);
@@ -155,10 +154,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 232);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(63, 286);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 49;
             this.label1.Text = "Amount :";
             // 
@@ -168,10 +166,10 @@
             // 
             // 
             this.txtPayments_Amount.CustomButton.Image = null;
-            this.txtPayments_Amount.CustomButton.Location = new System.Drawing.Point(76, 2);
-            this.txtPayments_Amount.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPayments_Amount.CustomButton.Location = new System.Drawing.Point(181, 1);
+            this.txtPayments_Amount.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPayments_Amount.CustomButton.Name = "";
-            this.txtPayments_Amount.CustomButton.Size = new System.Drawing.Size(11, 12);
+            this.txtPayments_Amount.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtPayments_Amount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPayments_Amount.CustomButton.TabIndex = 1;
             this.txtPayments_Amount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -179,8 +177,8 @@
             this.txtPayments_Amount.CustomButton.Visible = false;
             this.txtPayments_Amount.ForeColor = System.Drawing.Color.Snow;
             this.txtPayments_Amount.Lines = new string[0];
-            this.txtPayments_Amount.Location = new System.Drawing.Point(133, 232);
-            this.txtPayments_Amount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPayments_Amount.Location = new System.Drawing.Point(177, 286);
+            this.txtPayments_Amount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPayments_Amount.MaxLength = 32767;
             this.txtPayments_Amount.Name = "txtPayments_Amount";
             this.txtPayments_Amount.PasswordChar = '\0';
@@ -189,7 +187,7 @@
             this.txtPayments_Amount.SelectedText = "";
             this.txtPayments_Amount.SelectionLength = 0;
             this.txtPayments_Amount.SelectionStart = 0;
-            this.txtPayments_Amount.Size = new System.Drawing.Size(120, 20);
+            this.txtPayments_Amount.Size = new System.Drawing.Size(160, 25);
             this.txtPayments_Amount.TabIndex = 50;
             this.txtPayments_Amount.UseSelectable = true;
             this.txtPayments_Amount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -201,18 +199,18 @@
             // 
             // 
             this.txtPaymentsDiscount.CustomButton.Image = null;
-            this.txtPaymentsDiscount.CustomButton.Location = new System.Drawing.Point(76, 2);
-            this.txtPaymentsDiscount.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaymentsDiscount.CustomButton.Location = new System.Drawing.Point(181, 1);
+            this.txtPaymentsDiscount.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPaymentsDiscount.CustomButton.Name = "";
-            this.txtPaymentsDiscount.CustomButton.Size = new System.Drawing.Size(11, 12);
+            this.txtPaymentsDiscount.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtPaymentsDiscount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPaymentsDiscount.CustomButton.TabIndex = 1;
             this.txtPaymentsDiscount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtPaymentsDiscount.CustomButton.UseSelectable = true;
             this.txtPaymentsDiscount.CustomButton.Visible = false;
             this.txtPaymentsDiscount.Lines = new string[0];
-            this.txtPaymentsDiscount.Location = new System.Drawing.Point(133, 263);
-            this.txtPaymentsDiscount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaymentsDiscount.Location = new System.Drawing.Point(177, 324);
+            this.txtPaymentsDiscount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPaymentsDiscount.MaxLength = 32767;
             this.txtPaymentsDiscount.Name = "txtPaymentsDiscount";
             this.txtPaymentsDiscount.PasswordChar = '\0';
@@ -220,7 +218,7 @@
             this.txtPaymentsDiscount.SelectedText = "";
             this.txtPaymentsDiscount.SelectionLength = 0;
             this.txtPaymentsDiscount.SelectionStart = 0;
-            this.txtPaymentsDiscount.Size = new System.Drawing.Size(120, 20);
+            this.txtPaymentsDiscount.Size = new System.Drawing.Size(160, 25);
             this.txtPaymentsDiscount.TabIndex = 52;
             this.txtPaymentsDiscount.UseSelectable = true;
             this.txtPaymentsDiscount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -229,39 +227,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 263);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(55, 324);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(71, 17);
             this.label2.TabIndex = 51;
             this.label2.Text = "Discount :";
             // 
             // btnAfbetaal
             // 
-            this.btnAfbetaal.Location = new System.Drawing.Point(30, 345);
-            this.btnAfbetaal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAfbetaal.Location = new System.Drawing.Point(40, 425);
+            this.btnAfbetaal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAfbetaal.Name = "btnAfbetaal";
-            this.btnAfbetaal.Size = new System.Drawing.Size(56, 36);
+            this.btnAfbetaal.Size = new System.Drawing.Size(75, 44);
             this.btnAfbetaal.TabIndex = 53;
             this.btnAfbetaal.Text = "Down paid";
             this.btnAfbetaal.UseSelectable = true;
             // 
             // btnAfgeskryf
             // 
-            this.btnAfgeskryf.Location = new System.Drawing.Point(107, 345);
-            this.btnAfgeskryf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAfgeskryf.Location = new System.Drawing.Point(143, 425);
+            this.btnAfgeskryf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAfgeskryf.Name = "btnAfgeskryf";
-            this.btnAfgeskryf.Size = new System.Drawing.Size(56, 36);
+            this.btnAfgeskryf.Size = new System.Drawing.Size(75, 44);
             this.btnAfgeskryf.TabIndex = 55;
             this.btnAfgeskryf.Text = "Written off";
             this.btnAfgeskryf.UseSelectable = true;
             // 
             // btnKortingAfbetaal
             // 
-            this.btnKortingAfbetaal.Location = new System.Drawing.Point(168, 345);
-            this.btnKortingAfbetaal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKortingAfbetaal.Location = new System.Drawing.Point(224, 425);
+            this.btnKortingAfbetaal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnKortingAfbetaal.Name = "btnKortingAfbetaal";
-            this.btnKortingAfbetaal.Size = new System.Drawing.Size(134, 36);
+            this.btnKortingAfbetaal.Size = new System.Drawing.Size(179, 44);
             this.btnKortingAfbetaal.TabIndex = 56;
             this.btnKortingAfbetaal.Text = "Bereken korting afbetaal";
             this.btnKortingAfbetaal.UseSelectable = true;
@@ -269,10 +266,11 @@
             // cmbClient
             // 
             this.cmbClient.FormattingEnabled = true;
-            this.cmbClient.ItemHeight = 23;
-            this.cmbClient.Location = new System.Drawing.Point(133, 22);
+            this.cmbClient.ItemHeight = 24;
+            this.cmbClient.Location = new System.Drawing.Point(177, 27);
+            this.cmbClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbClient.Name = "cmbClient";
-            this.cmbClient.Size = new System.Drawing.Size(121, 29);
+            this.cmbClient.Size = new System.Drawing.Size(160, 30);
             this.cmbClient.TabIndex = 57;
             this.cmbClient.UseSelectable = true;
             this.cmbClient.SelectedIndexChanged += new System.EventHandler(this.cmbClient_SelectedIndexChanged);
@@ -284,51 +282,52 @@
             this.dgvConsultations.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConsultations.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvConsultations.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvConsultations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConsultations.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConsultations.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvConsultations.EnableHeadersVisualStyles = false;
             this.dgvConsultations.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvConsultations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.dgvConsultations.Location = new System.Drawing.Point(315, 80);
-            this.dgvConsultations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvConsultations.Location = new System.Drawing.Point(420, 98);
+            this.dgvConsultations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvConsultations.Name = "dgvConsultations";
             this.dgvConsultations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultations.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultations.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvConsultations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvConsultations.RowTemplate.Height = 24;
             this.dgvConsultations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsultations.Size = new System.Drawing.Size(354, 377);
+            this.dgvConsultations.Size = new System.Drawing.Size(472, 464);
             this.dgvConsultations.TabIndex = 58;
             this.dgvConsultations.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dgvConsultations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultations_CellContentClick);
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(315, 478);
+            this.btnConfirm.Location = new System.Drawing.Point(420, 588);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirm.Size = new System.Drawing.Size(100, 28);
             this.btnConfirm.TabIndex = 60;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseSelectable = true;
@@ -341,10 +340,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 31);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(33, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.Size = new System.Drawing.Size(90, 17);
             this.label3.TabIndex = 62;
             this.label3.Text = "Client name :";
             // 
@@ -354,10 +352,10 @@
             // 
             // 
             this.txtPaymentsConsultation.CustomButton.Image = null;
-            this.txtPaymentsConsultation.CustomButton.Location = new System.Drawing.Point(76, 2);
-            this.txtPaymentsConsultation.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaymentsConsultation.CustomButton.Location = new System.Drawing.Point(181, 1);
+            this.txtPaymentsConsultation.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPaymentsConsultation.CustomButton.Name = "";
-            this.txtPaymentsConsultation.CustomButton.Size = new System.Drawing.Size(11, 12);
+            this.txtPaymentsConsultation.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtPaymentsConsultation.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPaymentsConsultation.CustomButton.TabIndex = 1;
             this.txtPaymentsConsultation.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -365,8 +363,8 @@
             this.txtPaymentsConsultation.CustomButton.Visible = false;
             this.txtPaymentsConsultation.ForeColor = System.Drawing.Color.Snow;
             this.txtPaymentsConsultation.Lines = new string[0];
-            this.txtPaymentsConsultation.Location = new System.Drawing.Point(133, 200);
-            this.txtPaymentsConsultation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPaymentsConsultation.Location = new System.Drawing.Point(177, 246);
+            this.txtPaymentsConsultation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPaymentsConsultation.MaxLength = 32767;
             this.txtPaymentsConsultation.Name = "txtPaymentsConsultation";
             this.txtPaymentsConsultation.PasswordChar = '\0';
@@ -375,7 +373,7 @@
             this.txtPaymentsConsultation.SelectedText = "";
             this.txtPaymentsConsultation.SelectionLength = 0;
             this.txtPaymentsConsultation.SelectionStart = 0;
-            this.txtPaymentsConsultation.Size = new System.Drawing.Size(120, 20);
+            this.txtPaymentsConsultation.Size = new System.Drawing.Size(160, 25);
             this.txtPaymentsConsultation.TabIndex = 64;
             this.txtPaymentsConsultation.UseSelectable = true;
             this.txtPaymentsConsultation.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -384,59 +382,56 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(55, 200);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(73, 246);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.Size = new System.Drawing.Size(90, 17);
             this.label4.TabIndex = 63;
             this.label4.Text = "Consultation:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 308);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(55, 379);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.Size = new System.Drawing.Size(46, 17);
             this.label5.TabIndex = 65;
             this.label5.Text = "Date :";
             // 
             // txtPaymentsDate
             // 
-            this.txtPaymentsDate.Location = new System.Drawing.Point(133, 301);
-            this.txtPaymentsDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtPaymentsDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.txtPaymentsDate.Location = new System.Drawing.Point(177, 370);
+            this.txtPaymentsDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPaymentsDate.MinimumSize = new System.Drawing.Size(0, 30);
             this.txtPaymentsDate.Name = "txtPaymentsDate";
-            this.txtPaymentsDate.Size = new System.Drawing.Size(121, 29);
+            this.txtPaymentsDate.Size = new System.Drawing.Size(160, 30);
             this.txtPaymentsDate.TabIndex = 66;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 77);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(51, 95);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
+            this.label6.Size = new System.Drawing.Size(110, 17);
             this.label6.TabIndex = 68;
             this.label6.Text = "Client surname :";
             // 
             // txtPaymentsClient_Surname
             // 
             this.txtPaymentsClient_Surname.FormattingEnabled = true;
-            this.txtPaymentsClient_Surname.ItemHeight = 23;
-            this.txtPaymentsClient_Surname.Location = new System.Drawing.Point(133, 66);
+            this.txtPaymentsClient_Surname.ItemHeight = 24;
+            this.txtPaymentsClient_Surname.Location = new System.Drawing.Point(177, 81);
+            this.txtPaymentsClient_Surname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPaymentsClient_Surname.Name = "txtPaymentsClient_Surname";
-            this.txtPaymentsClient_Surname.Size = new System.Drawing.Size(121, 29);
+            this.txtPaymentsClient_Surname.Size = new System.Drawing.Size(160, 30);
             this.txtPaymentsClient_Surname.TabIndex = 67;
             this.txtPaymentsClient_Surname.UseSelectable = true;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(0, 120);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(0, 148);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 13);
+            this.label7.Size = new System.Drawing.Size(161, 17);
             this.label7.TabIndex = 70;
             this.label7.Text = "Client account number  :";
             // 
@@ -446,10 +441,10 @@
             // 
             // 
             this.txtClient_Account_Number.CustomButton.Image = null;
-            this.txtClient_Account_Number.CustomButton.Location = new System.Drawing.Point(76, 2);
-            this.txtClient_Account_Number.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtClient_Account_Number.CustomButton.Location = new System.Drawing.Point(181, 1);
+            this.txtClient_Account_Number.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClient_Account_Number.CustomButton.Name = "";
-            this.txtClient_Account_Number.CustomButton.Size = new System.Drawing.Size(11, 12);
+            this.txtClient_Account_Number.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtClient_Account_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClient_Account_Number.CustomButton.TabIndex = 1;
             this.txtClient_Account_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -457,8 +452,8 @@
             this.txtClient_Account_Number.CustomButton.Visible = false;
             this.txtClient_Account_Number.ForeColor = System.Drawing.Color.Snow;
             this.txtClient_Account_Number.Lines = new string[0];
-            this.txtClient_Account_Number.Location = new System.Drawing.Point(133, 113);
-            this.txtClient_Account_Number.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtClient_Account_Number.Location = new System.Drawing.Point(177, 139);
+            this.txtClient_Account_Number.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClient_Account_Number.MaxLength = 32767;
             this.txtClient_Account_Number.Name = "txtClient_Account_Number";
             this.txtClient_Account_Number.PasswordChar = '\0';
@@ -467,7 +462,7 @@
             this.txtClient_Account_Number.SelectedText = "";
             this.txtClient_Account_Number.SelectionLength = 0;
             this.txtClient_Account_Number.SelectionStart = 0;
-            this.txtClient_Account_Number.Size = new System.Drawing.Size(120, 20);
+            this.txtClient_Account_Number.Size = new System.Drawing.Size(160, 25);
             this.txtClient_Account_Number.TabIndex = 71;
             this.txtClient_Account_Number.UseSelectable = true;
             this.txtClient_Account_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -477,9 +472,10 @@
             // 
             this.btnArchive.Image = ((System.Drawing.Image)(resources.GetObject("btnArchive.Image")));
             this.btnArchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArchive.Location = new System.Drawing.Point(96, 478);
+            this.btnArchive.Location = new System.Drawing.Point(128, 588);
+            this.btnArchive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnArchive.Name = "btnArchive";
-            this.btnArchive.Size = new System.Drawing.Size(104, 23);
+            this.btnArchive.Size = new System.Drawing.Size(139, 28);
             this.btnArchive.TabIndex = 72;
             this.btnArchive.Text = "Archive";
             this.btnArchive.UseSelectable = true;
@@ -507,27 +503,29 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnKortingAfbetaal);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(2, 63);
+            this.groupBox1.Location = new System.Drawing.Point(3, 78);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(308, 394);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(411, 485);
             this.groupBox1.TabIndex = 73;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
             // frmPayments
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 634);
+            this.ClientSize = new System.Drawing.Size(1379, 780);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnArchive);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.dgvConsultations);
             this.Controls.Add(this.dgvPayments);
             this.Controls.Add(this.pbBack);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmPayments";
-            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.Load += new System.EventHandler(this.frmPayments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).EndInit();

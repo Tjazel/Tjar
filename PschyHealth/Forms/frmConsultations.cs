@@ -252,5 +252,15 @@ namespace PschyHealth
             btnEdit.Enabled = false;
             button = "archive";
         }
+
+        private void txtConsultationRatesAssesment_type_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtConsultationRatesMinutes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

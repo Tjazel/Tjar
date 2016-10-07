@@ -14,9 +14,17 @@ namespace PschyHealth
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new frmLogin());
+            }
+            catch(FormatException e)
+            {
+                MessageBox.Show("Hier is groot kak" + e);
+            }
+            
         }
     }
 }
