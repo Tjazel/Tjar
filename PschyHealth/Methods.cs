@@ -113,8 +113,9 @@ namespace PschyHealth
                 
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                MessageBox.Show(e.Message);
                 DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
@@ -126,22 +127,31 @@ namespace PschyHealth
         //Hierdie is die kode vir die Login
         //public bool checkLogin(String username, String password)
         //{
-        //SqlCommand cmd = new SqlCommand();
-        //SqlDataReader reader;
 
-        //cmd.CommandText = "SELECT * FROM Staff WHERE Username = @P1 AND Password = @P2";
+        //    SqlCommand cmd = new SqlCommand();
+        //    SqlDataReader reader, searcher;
+        //    string values = "";
+        //    cmd.CommandText = "SELECT * FROM Staff WHERE Username = @P1 AND Password = @P2";
         //    cmd.Parameters.AddWithValue("@P1", username);
         //    cmd.Parameters.AddWithValue("@P2", password);
         //    cmd.CommandType = CommandType.Text;
         //    cmd.Connection = conn;
         //    conn.Open();
 
-        //reader = cmd.ExecuteReader();
+            
+        //    searcher = cmd.ExecuteReader();
+        //    while (searcher.Read())
+        //    {
+        //        values = searcher["Admin"].ToString();
+        //    }
+        //    searcher.Close();
+        //    reader = cmd.ExecuteReader();
         //    DataTable dt = new DataTable();
-        //dt.Load(reader);
+        //    dt.Load(reader);
         //    // Data is accessible through the DataReader object here.
         //    if (dt.Rows.Count == 1)
         //    {
+        //        checkLogin(username, password, true, values);
         //        conn.Close();
         //        return true;
         //    }
@@ -151,9 +161,23 @@ namespace PschyHealth
         //        return false;
         //    }
 
+
         //}
 
-        
+
+
+        //public bool checkLogin(String username, String password, Boolean correct, String admin)
+        //{
+        //    if (admin == "False")
+        //    {
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        return true;
+        //    }
+        //}
+
 
         public void filterDGV(MetroGrid dgv, String sTable, String filter)
         {
@@ -174,6 +198,21 @@ namespace PschyHealth
                 cmb.Items.Add(dgv.Columns[i].Name);
         }
 
+
+        public void fillCMBrow(MetroComboBox cmb1, MetroComboBox cmb2, MetroGrid dgv)
+        {   
+            if(cmb1 != null)
+                cmb1.Items.Clear();
+            if (cmb2 != null)
+                cmb2.Items.Clear();
+            for (int i = 0; i < dgv.RowCount - 1; i++)
+            {
+                if (cmb1 != null)
+                    cmb1.Items.Add(dgv.Rows[i].Cells["First_Name"].Value.ToString());
+                if (cmb2 != null)
+                    cmb2.Items.Add(dgv.Rows[i].Cells["Surname"].Value.ToString());
+            }
+        }
         public void fillCMBrow(MetroComboBox cmb, MetroGrid dgv)
         {
             cmb.Items.Clear();
@@ -1016,7 +1055,7 @@ namespace PschyHealth
                     if ((obj is MetroTextBox) || (obj is MetroDateTime))
                         extra2 = "txt" + extra;
                     else if (obj is MetroComboBox)
-                        extra = "cmb" + extra;
+                        extra2 = "cmb" + extra;
                     else
                         goto out2;
                     current = obj.Name.Substring(extra2.Length);
@@ -1036,6 +1075,31 @@ namespace PschyHealth
             {
                 return;
             }
+        }
+
+        public double calculateAmount(String consultation, MetroGrid dgv)
+        {
+            double worked = 0;
+            if (consultation == "all")
+                fillDGV(dgv, "Consultations");
+            else
+                filterDGV(dgv, "Consultations", " WHERE Consultation = " + consultation);
+            for(int i = 0; i<dgv.RowCount-1; i++)
+            {
+                worked += Convert.ToDouble(dgv.Rows[i].Cells["Amount"].Value.ToString());
+            }
+
+            double payed = 0;
+            if (consultation == "all")
+                fillDGV(dgv, "Payments");
+            else
+                filterDGV(dgv, "Payments", " WHERE Consultation = " + consultation);
+            for (int i = 0; i < dgv.RowCount - 1; i++)
+            {
+                payed += Convert.ToDouble(dgv.Rows[i].Cells["Amount"].Value.ToString());
+            }
+
+            return worked - payed;
         }
     }
 }

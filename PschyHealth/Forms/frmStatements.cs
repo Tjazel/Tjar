@@ -195,9 +195,10 @@ namespace PschyHealth
 
         private void cmbClient_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int[] con = {1, 8, 7, 1, 2, 5, 10, 11 };//Verander 2 10
+            int[] con = {1,-1,8,7,2,10,6,11,-2,9};//Verander 2 10
             string line;
             lbStatements.Items.Clear();
+            lbStatements.Items.Add("Date	Method	Code	Description	ICD 10 code	Patient	Birthday	Dependency code	Debit	Credit	Balance");
             cMethods.fillDGV(dgvStatements, "Consultations");
             for (int i = 0; i < dgvStatements.RowCount-1; i++)
             {
@@ -205,12 +206,21 @@ namespace PschyHealth
                 if((cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) == dgvStatements.Rows[i].Cells["Surname"].Value.ToString()) || (cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2,1) == dgvStatements.Rows[i].Cells["Name"].Value.ToString()))
                 {
                     for (int k = 0; k < con.Length; k++)
-                        line += dgvStatements.Rows[i].Cells[con[k]].Value.ToString();
+                        if (con[k] == -1)
+                        {
+                            line += ";\t";
+                        }
+                        else if (con[k] == -2)
+                        {
+                            line += "00.00\t";
+                        }
+                        else
+                            line += dgvStatements.Rows[i].Cells[con[k]].Value.ToString() + ";\t";
                     lbStatements.Items.Add(line);
                 }
                 
             }
-            int[] stat = {4,8};
+            int[] stat = {5,1,-1,2,-1,-1,-1,-1,-2,4};
             cMethods.fillDGV(dgvStatements, "Payments");
             for (int i = 0; i < dgvStatements.RowCount - 1; i++)
             {
@@ -218,7 +228,16 @@ namespace PschyHealth
                 if ((cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) == dgvStatements.Rows[i].Cells["Client_Surname"].Value.ToString()) || (cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2) == dgvStatements.Rows[i].Cells["Client_Name"].Value.ToString()))
                 {
                     for (int k = 0; k < stat.Length; k++)
-                        line += dgvStatements.Rows[i].Cells[con[k]].Value.ToString();
+                        if (stat[k] == -1)
+                        {
+                            line += ";\t";
+                        }
+                        else if (stat[k] == -2)
+                        {
+                            line += "00.00\t";
+                        }
+                        else
+                            line += dgvStatements.Rows[i].Cells[stat[k]].Value.ToString()+";\t";
                     lbStatements.Items.Add(line);
                 }
 
@@ -228,19 +247,42 @@ namespace PschyHealth
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            String txt="";
             String clientName = cmbClient.Text.Replace(" ", string.Empty);
             String name = clientName + "(" + DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Year.ToString() + ")" + ".docx";
             cMethods.CheckFolder(Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName);
             cMethods.copyTemplate(cmbFormat.Text, clientName);
+
+            cMethods.filterDGV(dgvStatements, "Clients", " WHERE First_Name = '" + clientName.Substring(clientName.IndexOf(",")+1) + "' AND Surname = '" + clientName.Substring(0,clientName.IndexOf(",")) + "'");
+
+            String title;
             File.Move(Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + cmbFormat.Text, Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + name);
             object fileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + name;
 
             Document doc = wordApp.Documents.Open(ref fileName, ref confirmConversions, ref readOnly, ref addToRecentFiles,
             ref passwordDoc, ref passwordTemplate, ref revert, ref writepwdoc, ref writepwTemplate, ref format, ref encoding, ref visible, ref openRepair,
             ref docDirection, ref notEncoding, ref xmlTransform);
+            if (dgvStatements.Rows[0].Cells["Gender"].Value.ToString() == "Male")
+                title = "MR";
+            else
+                title = "MS";
+            for (int i = 1; i < lbStatements.Items.Count; i++)
+                txt += lbStatements.Items[i].ToString();
+            cMethods.ReplaceBookmarkText(doc, "Title", title);
+            cMethods.ReplaceBookmarkText(doc, "Initials", dgvStatements.Rows[0].Cells["First_Name"].Value.ToString());
+            cMethods.ReplaceBookmarkText(doc, "Surname", dgvStatements.Rows[0].Cells["Surname"].Value.ToString());
+            cMethods.ReplaceBookmarkText(doc, "Address", dgvStatements.Rows[0].Cells["Address"].Value.ToString());
+            cMethods.ReplaceBookmarkText(doc, "City", dgvStatements.Rows[0].Cells["City"].Value.ToString());
+            cMethods.ReplaceBookmarkText(doc, "Code", dgvStatements.Rows[0].Cells["City_Code"].Value.ToString());
+            cMethods.ReplaceBookmarkText(doc, "Date", DateTime.Now.ToShortDateString());
+            cMethods.ReplaceBookmarkText(doc, "AccountNo", dgvStatements.Rows[0].Cells["Account_Number"].Value.ToString());
+            cMethods.ReplaceBookmarkText(doc, "Medical", dgvStatements.Rows[0].Cells["Medical_Aid"].Value.ToString());
+            cMethods.ReplaceBookmarkText(doc, "Refferal", dgvStatements.Rows[0].Cells["Referral"].Value.ToString());
+            cMethods.ReplaceBookmarkText(doc, "RefPrak", dgvStatements.Rows[0].Cells["Referral_Practice"].Value.ToString());
+            cMethods.ReplaceBookmarkText(doc, "ICD10", "Dit Werk");
+            cMethods.ReplaceBookmarkText(doc, "Info", txt);
 
-            cMethods.ReplaceBookmarkText(doc, "Title", "Toets");
-            cMethods.ReplaceBookmarkText(doc, "Initials", "Dit Werk");
+
             doc.Close();
         }
 
