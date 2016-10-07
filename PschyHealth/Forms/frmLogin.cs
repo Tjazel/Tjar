@@ -14,6 +14,8 @@ namespace PschyHealth
 {
     public partial class frmLogin : MetroForm
     {
+        string path = Environment.GetFolderPath(
+          Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
         Methods cMethods = new Methods();
         frmForgotPassword frmForgotPassword = new frmForgotPassword();
 
@@ -25,7 +27,14 @@ namespace PschyHealth
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            cMethods.readTheme(msmLogin);
+           // cMethods.readTheme(msmLogin);
+            cMethods.CheckFolder(path + @"\Styles");
+            cMethods.CheckFolder(path + @"\Styles\TileColors");
+            cMethods.CheckFile(path + @"\Styles\TileColors\tileColors");
+            cMethods.CheckFolder(path + @"\Styles\Theme");
+            cMethods.CheckFile(path + @"\Styles\Theme\theme");
+            cMethods.CheckFolder(path + @"\Styles\style");
+            cMethods.CheckFile(path + @"\Styles\style\style");
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

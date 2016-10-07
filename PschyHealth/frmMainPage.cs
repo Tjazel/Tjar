@@ -71,24 +71,21 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 
-            String path = Environment.GetFolderPath(
+            string path = Environment.GetFolderPath(
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
             cMethods.CheckFolder(path);
             cMethods.CheckFolder(path + @"\Archive");
             cMethods.CheckFolder(path + @"\Recordings");
             cMethods.CheckFolder(path + @"\Recordings\" + DateTime.Now.Month.ToString());
-            cMethods.CheckFolder(path + @"\Log");
             cMethods.CheckFolder(path + @"\Styles");
-           // cMethods.CheckFolder(path + @"\Styles\Theme");
             cMethods.CheckFolder(path + @"\Styles\TileColors");
             cMethods.CheckFile(path + @"\Styles\TileColors\tileColors");
             cMethods.CheckFolder(path + @"\Styles\Theme");
             cMethods.CheckFile(path + @"\Styles\Theme\theme");
-           
             cMethods.CheckFolder(path + @"\Styles\style");
             cMethods.CheckFile(path + @"\Styles\style\style");
+            cMethods.CheckFolder(path + @"\Log");
             cMethods.CheckFolder(path + @"\Statements");
-            cMethods.CheckFolder(path + @"\StatementTemplates");
             cMethods.CheckFolder(path + @"\Archive\LogArchive");
             cMethods.CheckFolder(path + @"\Archive\StatementsArchive");
             cMethods.CheckFolder(path + @"\Archive\ClientArchive");
