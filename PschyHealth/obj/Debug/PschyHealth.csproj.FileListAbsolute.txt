@@ -875,3 +875,4 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar7\PschyHealth\obj\Debug\PschyHealth.Pr
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar7\PschyHealth\obj\Debug\PschyHealth.ucToolbar.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar7\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
 C:\Users\Jaco\Source\Repos\Tjar6\PschyHealth\obj\Debug\PschyHealth.Forms.frmDiagnosticCodes.resources
+C:\Users\Nithin\Desktop\Jarvis\Tjar\Tjar\PschyHealth\obj\Debug\PschyHealth.Forms.frmDiagnosticCodes.resources
