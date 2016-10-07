@@ -88,11 +88,6 @@ namespace PschyHealth.Forms
 
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-       //     txtConsultation.Text = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells["Consultation"].Value.ToString();
-        }
-
         private void btnArchive_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
@@ -101,6 +96,75 @@ namespace PschyHealth.Forms
             btnAfgeskryf.Enabled = false;
             btnKortingAfbetaal.Enabled = false;
             button = "archive";
+        }
+
+        private void btnPayAdd_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvPayments, "Pay", true, true);
+            btnAfbetaal.Enabled = false;
+            btnAfgeskryf.Enabled = false;
+            btnArchive.Enabled = false;
+            btnPayAdd.Enabled = false;
+            btnPayDelete.Enabled = false;
+            btnPayEdit.Enabled = false;
+            button = "add";
+        }
+
+        private void btnPayEdit_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvPayments, "Pay", true);
+            btnAfbetaal.Enabled = false;
+            btnAfgeskryf.Enabled = false;
+            btnArchive.Enabled = false;
+            btnPayAdd.Enabled = false;
+            btnPayDelete.Enabled = false;
+            btnPayEdit.Enabled = false;
+            button = "edit";
+        }
+
+        private void btnPayDelete_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvPayments, "Pay", false);
+            btnAfbetaal.Enabled = false;
+            btnAfgeskryf.Enabled = false;
+            btnArchive.Enabled = false;
+            btnPayAdd.Enabled = false;
+            btnPayDelete.Enabled = false;
+            btnPayEdit.Enabled = false;
+            button = "delete";
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            String field;
+            String value;
+            if (dgvPayments.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dgvPayments.SelectedRows[0].Index;
+
+                String rowID = dgvPayments[0, selectedIndex].Value.ToString();
+                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Acc");
+                if (button == "add")
+                    cMethods.add("Payments", field, value);
+                else if (button == "edit")
+                    cMethods.edit("Payments", field, value, " Payment_Order = '" + dgvPayments.Rows[selectedIndex].Cells["Payment_Order"].Value.ToString() + "'");
+                else if (button == "delete")
+                    cMethods.delete("Payments", "Transaction_Number = '" + rowID + "'");
+                else if (button == "archive")
+                    cMethods.Archive(dgvPayments, "Payments", "Payment_Order", dgvPayments.Rows[selectedIndex].Cells["Payment_Order"].Value.ToString());
+
+            }
+            btnAfbetaal.Enabled = true;
+            btnAfgeskryf.Enabled = true;
+            btnArchive.Enabled = true;
+            btnPayAdd.Enabled = true;
+            btnPayDelete.Enabled = true;
+            btnPayEdit.Enabled = true;
+            btnConfirm.Hide();
+            //filter();
         }
     }
 }
