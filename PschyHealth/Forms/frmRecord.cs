@@ -38,12 +38,13 @@ namespace PschyHealth.Forms
         public frmRecord()
         {
             InitializeComponent();
+            this.StyleManager = msmRecording;
         }
 
         protected override void OnLoad(EventArgs e)
         {
 
-
+            cMethods.readTheme(msmRecording);
             /*
             //Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;

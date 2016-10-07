@@ -13,6 +13,7 @@ namespace PschyHealth
 {
     public partial class frmNotepad : MetroForm
     {
+        Methods cMethods = new Methods();
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
         const int AW_HOR_NEGATIVE = 0X2;
@@ -23,12 +24,13 @@ namespace PschyHealth
         public frmNotepad()
         {
             InitializeComponent();
+            this.StyleManager = msmNote;
         }
 
         protected override void OnLoad(EventArgs e)
         {
-           
 
+            cMethods.readTheme(msmNote);
             /*
             //Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
@@ -128,6 +130,11 @@ namespace PschyHealth
             {
                 richTextBox1.BackColor = cr.Color;
             }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

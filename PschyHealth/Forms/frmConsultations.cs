@@ -31,8 +31,8 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-            
 
+            cMethods.readTheme(msmConsult);
             /*
             //Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
@@ -55,6 +55,7 @@ namespace PschyHealth
         public frmConsultations()
         {
             InitializeComponent();
+            this.StyleManager = msmConsult;
         }
 
         private void Consultations_Load(object sender, EventArgs e)
@@ -212,6 +213,11 @@ namespace PschyHealth
             button = "delete";
         }
 
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             String field;
@@ -237,9 +243,14 @@ namespace PschyHealth
             filter();
         }
 
-        private void lblBack_Click(object sender, EventArgs e)
+        private void btnArchive_Click(object sender, EventArgs e)
         {
-            this.Close();
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", false);
+            btnAdd.Enabled = false;
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            button = "archive";
         }
     }
 }

@@ -31,6 +31,7 @@ namespace PschyHealth
         public frmArchive()
         {
             InitializeComponent();
+            this.StyleManager = msmArchive;
         }
 
         private void frmArchive_Load(object sender, EventArgs e)
@@ -41,8 +42,8 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-           
 
+            cMethods.readTheme(msmArchive);
            /* //Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
             int HeightOfMain = Application.OpenForms["frmMainPage"].Height;

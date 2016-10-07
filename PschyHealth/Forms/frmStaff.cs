@@ -17,6 +17,7 @@ namespace PschyHealth
     {
         Methods cMethods = new Methods();
         String correctSearch = "";
+        String button = "";
         //Constants
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -25,13 +26,13 @@ namespace PschyHealth
 
         [DllImport("user32")]
         static extern bool AnimateWindow(IntPtr hwnd, int time, int flags);
-        frmMainPage _frmMainpage = new frmMainPage();
+        
 
 
 
         protected override void OnLoad(EventArgs e)
         {
-           
+            cMethods.readTheme(msmStaff);
 
             /*
             //Load the Form At Position of Main Form
@@ -55,6 +56,7 @@ namespace PschyHealth
         public frmStaff()
         {
             InitializeComponent();
+            this.StyleManager = msmStaff;
         }
 
         private void pbBack_Click(object sender, EventArgs e)
@@ -177,16 +179,70 @@ namespace PschyHealth
                 metroTextBox17.Enabled = true;
         }
 
-        private void metroTextButton5_Click(object sender, EventArgs e)
+        private void btnStaffAdd_Click(object sender, EventArgs e)
         {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvStaff, "Staff", true, true);
+            btnStaffAdd.Enabled = false;
+            btnStaffDelete.Enabled = false;
+            btnStaffUpdate.Enabled = false;
+            button = "add";
+        }
+
+        private void btnStaffUpdate_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvStaff, "Staff", true);
+            btnStaffAdd.Enabled = false;
+            btnStaffDelete.Enabled = false;
+            btnStaffUpdate.Enabled = false;
+            button = "edit";
+        }
+
+        private void btnStaffDelete_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvStaff, "Staff", false);
+            btnStaffAdd.Enabled = false;
+            btnStaffDelete.Enabled = false;
+            btnStaffUpdate.Enabled = false;
+            button = "delete";
+        } 
+
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            String field;
+            String value;
             if (dgvStaff.SelectedRows.Count > 0)
             {
-               // int selectedIndex = dgvStaff.SelectedRows[0].Index;
+                int selectedIndex = dgvStaff.SelectedRows[0].Index;
 
-               // int rowID = int.Parse(dgvStaff[0, selectedIndex].Value.ToString());
-              //  cMethods.delete("Staff", rowID);
+                String rowID = dgvStaff[0, selectedIndex].Value.ToString();
+                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Staff");
+                if (button == "add")
+                    cMethods.add("dgvStaff", field, value);
+                else if (button == "edit")
+                    cMethods.edit("dgvStaff", field, value, " ID = '" + dgvStaff.Rows[selectedIndex].Cells["ID"].Value.ToString() + "'");
+                else if (button == "delete")
+                    cMethods.delete("dgvStaff", "ID = '" + rowID + "'");
+
             }
+            btnStaffAdd.Enabled = true;
+            btnStaffDelete.Enabled = true;
+            btnStaffUpdate.Enabled = true;
+            btnConfirm.Hide();
+            filter();
+        }
 
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvStaff, "Staff", false);
+            btnStaffDelete.Enabled = false;
+            btnStaffAdd.Enabled = false;
+            btnStaffUpdate.Enabled = false;
+            button = "archive";
         }
     }
 }

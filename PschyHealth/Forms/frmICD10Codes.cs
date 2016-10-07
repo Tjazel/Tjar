@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 
 namespace PschyHealth
 {
-    public partial class frmEDICodes : MetroForm
+    public partial class frmICD10Codes : MetroForm
     {
         Methods cMethods = new Methods();
         //Constants
@@ -27,6 +27,7 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
+            cMethods.readTheme(msmICD10);
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 
@@ -46,9 +47,10 @@ namespace PschyHealth
 
             cMethods.fillDGV(dgvEDICodes, "EDIcodes", cmbEDICrit);
         }
-        public frmEDICodes()
+        public frmICD10Codes()
         {
             InitializeComponent();
+            this.StyleManager = msmICD10;
         }
 
         private void pbBack_Click(object sender, EventArgs e)

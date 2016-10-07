@@ -54,6 +54,7 @@
             this.btnRecordings = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnInfo = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.btnDateAndTime = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroToDoList = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.controlContainerItem6 = new DevComponents.DotNetBar.ControlContainerItem();
@@ -67,7 +68,6 @@
             this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.ctxPersonalize = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.themeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.darkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.styleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -163,6 +163,7 @@
             // 
             // 
             // 
+            this.metroTilePanel1.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.metroTilePanel1.BackgroundStyle.Class = "MetroTilePanel";
             this.metroTilePanel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroTilePanel1.ContainerControlProcessDialogKey = true;
@@ -171,7 +172,7 @@
             this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.itemContainer1});
             this.metroTilePanel1.Location = new System.Drawing.Point(13, 78);
-            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTilePanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTilePanel1.Name = "metroTilePanel1";
             this.metroTilePanel1.Size = new System.Drawing.Size(1459, 880);
             this.metroTilePanel1.TabIndex = 30;
@@ -183,6 +184,8 @@
             // 
             // 
             // 
+            this.itemContainer1.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+            this.itemContainer1.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
             this.itemContainer1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemContainer1.ItemSpacing = 15;
             this.itemContainer1.MultiLine = true;
@@ -206,7 +209,8 @@
             this.btnICD10,
             this.btnRecordings,
             this.btnInfo,
-            this.btnDateAndTime});
+            this.btnDateAndTime,
+            this.metroToDoList});
             // 
             // 
             // 
@@ -221,7 +225,7 @@
             this.btn_StaffNew.Name = "btn_StaffNew";
             this.btn_StaffNew.SymbolColor = System.Drawing.Color.Empty;
             this.btn_StaffNew.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedViolet;
-            this.btn_StaffNew.TileSize = new System.Drawing.Size(180, 120);
+            this.btn_StaffNew.TileSize = new System.Drawing.Size(220, 120);
             // 
             // 
             // 
@@ -246,7 +250,7 @@
             this.btnClients.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnClients.TitleText = "Clients";
             this.btnClients.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClients.Click += new System.EventHandler(this.btnClients_Click_1);
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             this.btnClients.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnClients_MouseDown);
             // 
             // btnAccounting
@@ -273,7 +277,7 @@
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.SymbolColor = System.Drawing.Color.Empty;
             this.btnPayments.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            this.btnPayments.TileSize = new System.Drawing.Size(180, 120);
+            this.btnPayments.TileSize = new System.Drawing.Size(220, 120);
             // 
             // 
             // 
@@ -340,7 +344,7 @@
             this.btnReports.Name = "btnReports";
             this.btnReports.SymbolColor = System.Drawing.Color.Empty;
             this.btnReports.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Plum;
-            this.btnReports.TileSize = new System.Drawing.Size(180, 120);
+            this.btnReports.TileSize = new System.Drawing.Size(220, 120);
             // 
             // 
             // 
@@ -531,6 +535,21 @@
             this.btnDateAndTime.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDateAndTime.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnDateAndTime_MouseDown);
             // 
+            // metroToDoList
+            // 
+            this.metroToDoList.ImageTextAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            this.metroToDoList.Name = "metroToDoList";
+            this.metroToDoList.SymbolColor = System.Drawing.Color.Empty;
+            this.metroToDoList.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroToDoList.TileSize = new System.Drawing.Size(220, 120);
+            // 
+            // 
+            // 
+            this.metroToDoList.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroToDoList.TitleText = "To Do List";
+            this.metroToDoList.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroToDoList.Click += new System.EventHandler(this.metroTileItem2_Click);
+            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
@@ -621,18 +640,11 @@
             // themeToolStripMenuItem
             // 
             this.themeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lightToolStripMenuItem,
             this.darkToolStripMenuItem,
             this.defaultToolStripMenuItem});
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
             this.themeToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
             this.themeToolStripMenuItem.Text = "Theme";
-            // 
-            // lightToolStripMenuItem
-            // 
-            this.lightToolStripMenuItem.Name = "lightToolStripMenuItem";
-            this.lightToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
-            this.lightToolStripMenuItem.Text = "Light";
             // 
             // darkToolStripMenuItem
             // 
@@ -646,6 +658,7 @@
             this.defaultToolStripMenuItem.Name = "defaultToolStripMenuItem";
             this.defaultToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.defaultToolStripMenuItem.Text = "Default";
+            this.defaultToolStripMenuItem.Click += new System.EventHandler(this.defaultToolStripMenuItem_Click);
             // 
             // styleToolStripMenuItem
             // 
@@ -745,7 +758,7 @@
             // 
             // msmMain
             // 
-            this.msmMain.Owner = null;
+            this.msmMain.Owner = this;
             // 
             // cmbMain
             // 
@@ -776,9 +789,10 @@
             this.cmbMaroonWashed,
             this.cmbPlumWashed,
             this.cmbAzure});
-            this.cmbMain.Location = new System.Drawing.Point(3, 3);
+            this.cmbMain.Location = new System.Drawing.Point(3, 2);
+            this.cmbMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbMain.Name = "cmbMain";
-            this.cmbMain.Size = new System.Drawing.Size(142, 22);
+            this.cmbMain.Size = new System.Drawing.Size(143, 22);
             this.cmbMain.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmbMain.TabIndex = 48;
             // 
@@ -895,6 +909,7 @@
             // btnChange
             // 
             this.btnChange.Location = new System.Drawing.Point(151, 0);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(176, 32);
             this.btnChange.TabIndex = 49;
@@ -911,23 +926,24 @@
             this.pnlColorChange.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlColorChange.HorizontalScrollbarSize = 10;
             this.pnlColorChange.Location = new System.Drawing.Point(176, 10);
+            this.pnlColorChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlColorChange.Name = "pnlColorChange";
-            this.pnlColorChange.Size = new System.Drawing.Size(327, 32);
+            this.pnlColorChange.Size = new System.Drawing.Size(328, 32);
             this.pnlColorChange.TabIndex = 50;
             this.pnlColorChange.VerticalScrollbarBarColor = true;
             this.pnlColorChange.VerticalScrollbarHighlightOnWheel = false;
-            this.pnlColorChange.VerticalScrollbarSize = 10;
+            this.pnlColorChange.VerticalScrollbarSize = 11;
             this.pnlColorChange.Visible = false;
             // 
             // frmMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2304, 1092);
+            this.ClientSize = new System.Drawing.Size(2304, 1084);
             this.Controls.Add(this.pnlColorChange);
             this.Controls.Add(this.pbPersonalize);
             this.Controls.Add(this.metroTilePanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMainPage";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Teal;
@@ -979,7 +995,6 @@
         private System.Windows.Forms.PictureBox pbPersonalize;
         private System.Windows.Forms.ContextMenuStrip ctxPersonalize;
         private System.Windows.Forms.ToolStripMenuItem themeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lightToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem darkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem defaultToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem styleToolStripMenuItem;
@@ -1024,5 +1039,6 @@
         private DevComponents.Editors.ComboItem cmbMaroonWashed;
         private DevComponents.Editors.ComboItem cmbPlumWashed;
         private DevComponents.Editors.ComboItem cmbAzure;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroToDoList;
     }
 }

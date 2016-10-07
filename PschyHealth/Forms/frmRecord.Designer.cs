@@ -44,10 +44,12 @@
             this.lblPlayBack = new MetroFramework.Controls.MetroLabel();
             this.lblPlayName = new MetroFramework.Controls.MetroLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.msmRecording = new MetroFramework.Components.MetroStyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbRec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbWave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msmRecording)).BeginInit();
             this.SuspendLayout();
             // 
             // txtName
@@ -212,6 +214,10 @@
             this.label1.TabIndex = 54;
             this.label1.Text = "Name :";
             // 
+            // msmRecording
+            // 
+            this.msmRecording.Owner = this;
+            // 
             // frmRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -236,6 +242,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbWave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msmRecording)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +265,6 @@
         private MetroFramework.Controls.MetroLabel lblPlayBack;
         private MetroFramework.Controls.MetroLabel lblPlayName;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Components.MetroStyleManager msmRecording;
     }
 }

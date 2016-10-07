@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmToDoList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -64,9 +65,11 @@
             this.txtAccSearch = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.pbBack = new System.Windows.Forms.PictureBox();
+            this.msmToDo = new MetroFramework.Components.MetroStyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msmToDo)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTextBox5
@@ -615,6 +618,10 @@
             this.pbBack.TabStop = false;
             this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
             // 
+            // msmToDo
+            // 
+            this.msmToDo.Owner = this;
+            // 
             // frmToDoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -657,6 +664,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msmToDo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -696,5 +704,6 @@
         private MetroFramework.Controls.MetroTextBox txtAccSearch;
         private MetroFramework.Controls.MetroLabel metroLabel17;
         private System.Windows.Forms.PictureBox pbBack;
+        private MetroFramework.Components.MetroStyleManager msmToDo;
     }
 }

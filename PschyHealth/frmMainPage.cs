@@ -19,6 +19,21 @@ namespace PschyHealth
 {
     public partial class frmMainPage : MetroForm
     {
+        //Objects van forms
+
+
+
+
+
+
+
+
+
+      
+        
+        
+
+
         //Vir die kleur van die tiles op die frmMain
         DevComponents.DotNetBar.Metro.eMetroTileColor el;
 
@@ -29,6 +44,7 @@ namespace PschyHealth
         public frmMainPage()
         {
             InitializeComponent();
+            this.StyleManager = msmMain;
             timer1.Start();
 
 
@@ -47,41 +63,29 @@ namespace PschyHealth
             pnlSettings.swipe(true);
         }
 
-        private void btnClients_Click_1(object sender, EventArgs e)
-        {
-            bool IsOpen = false;
-            FormCollection fc = Application.OpenForms;
-            foreach (Form f in fc)
-            {
-                if (f.Name == "frmClients")
-                {
-                    IsOpen = true;
-                    f.Focus();
-                    break;
-                }
-            }
-
-            if (IsOpen == false)
-            {
-                frmClients frmClients = new frmClients();
-                frmClients.Show();
-            }
-        }
+      
 
         protected override void OnLoad(EventArgs e)
         {
+           
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 
-            String path = Environment.GetFolderPath(
+            string path = Environment.GetFolderPath(
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
             cMethods.CheckFolder(path);
             cMethods.CheckFolder(path + @"\Archive");
             cMethods.CheckFolder(path + @"\Recordings");
             cMethods.CheckFolder(path + @"\Recordings\" + DateTime.Now.Month.ToString());
+            cMethods.CheckFolder(path + @"\Styles");
+            cMethods.CheckFolder(path + @"\Styles\TileColors");
+            cMethods.CheckFile(path + @"\Styles\TileColors\tileColors");
+            cMethods.CheckFolder(path + @"\Styles\Theme");
+            cMethods.CheckFile(path + @"\Styles\Theme\theme");
+            cMethods.CheckFolder(path + @"\Styles\style");
+            cMethods.CheckFile(path + @"\Styles\style\style");
             cMethods.CheckFolder(path + @"\Log");
             cMethods.CheckFolder(path + @"\Statements");
-            cMethods.CheckFolder(path + @"\StatementTemplates");
             cMethods.CheckFolder(path + @"\Archive\LogArchive");
             cMethods.CheckFolder(path + @"\Archive\StatementsArchive");
             cMethods.CheckFolder(path + @"\Archive\ClientArchive");
@@ -89,6 +93,46 @@ namespace PschyHealth
             cMethods.CheckFolder(path + @"\Archive\AccountingArchive");
             cMethods.CheckFolder(path + @"\Archive\ConsultationsArchive");
             cMethods.CheckFile(path + @"\Log\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString());
+            cMethods.defTileColors();//default tile colors
+            cMethods.defTheme();//Default theme
+
+            //Gee elke tile sy unieke kleur
+            cMethods.readFromStyleColor(btn_StaffNew);
+            cMethods.readFromStyleColor(btnClients);
+            cMethods.readFromStyleColor(btnAccounting);
+            cMethods.readFromStyleColor(btnPayments);
+            cMethods.readFromStyleColor(btnMedicalAid);
+            cMethods.readFromStyleColor(btnConsultations);
+            cMethods.readFromStyleColor(btnDiagnostic);
+            cMethods.readFromStyleColor(btnReports);
+            cMethods.readFromStyleColor(btnArchive);
+            cMethods.readFromStyleColor(btnEmail);
+            cMethods.readFromStyleColor(btnNotePad);
+            cMethods.readFromStyleColor(btnCalender);
+            cMethods.readFromStyleColor(btnAdressBook);
+            cMethods.readFromStyleColor(btnStatements);
+            cMethods.readFromStyleColor(btnStatistics);
+            cMethods.readFromStyleColor(btnICD10);
+            cMethods.readFromStyleColor(btnRecordings);
+            cMethods.readFromStyleColor(btnInfo);
+            cMethods.readFromStyleColor(btnDateAndTime);
+            cMethods.readTheme(msmMain);
+
+            //Clone die themes na elke form toe
+           // cMethods.cloneTheme(this, frmClients);
+            //cMethods.cloneTheme(this, frmStaff);
+           // cMethods.cloneTheme(this, frmAccounting);
+          //  cMethods.cloneTheme(this, frmPayments);
+           // cMethods.cloneTheme(this, frmMedicalAids);
+            //cMethods.cloneTheme(this, frmConsultations);
+           // cMethods.cloneTheme(this, frmArchive);
+           // cMethods.cloneTheme(this, frmNotepad);
+           // cMethods.cloneTheme(this, frmAddressBook);
+           // cMethods.cloneTheme(this, frmStatements);
+           // cMethods.cloneTheme(this, frmRecord);
+            //cMethods.cloneTheme(this, frmSettings);
+
+
 
 
         }
@@ -114,6 +158,7 @@ namespace PschyHealth
             cMethods.CheckFile(path + @"\Log\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString());
 
         }
+
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
@@ -218,7 +263,7 @@ namespace PschyHealth
 
             if (IsOpen == false)
             {
-                frmEDICodes frmEDICodes = new frmEDICodes();
+                frmICD10Codes frmEDICodes = new frmICD10Codes();
                 frmEDICodes.Show();
             }
         }
@@ -301,7 +346,7 @@ namespace PschyHealth
 
         }
 
-        private void sRecognize_speechRecognized(object sender, SpeechRecognizedEventArgs e)
+       /* private void sRecognize_speechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             //throw new NotImplementedException();
             if (e.Result.Text == "Clients")
@@ -331,7 +376,7 @@ namespace PschyHealth
                 pnlSettings.swipe(true);
             }
 
-        }
+        }*/
 
         private void pbMicOff_Click(object sender, EventArgs e)
         {
@@ -611,7 +656,8 @@ namespace PschyHealth
 
         private void darkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            cMethods.writeTheme(msmMain, MetroFramework.MetroThemeStyle.Dark);
+            this.Refresh();
         }
 
         private void btn_StaffNew_MouseDown(object sender, MouseEventArgs e)
@@ -912,7 +958,57 @@ namespace PschyHealth
             }
         }
 
-       
+        private void pbReset_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void defaultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cMethods.writeTheme(msmMain, MetroFramework.MetroThemeStyle.Default);
+        }
+
+        private void btnClients_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmClients")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmClients frmClients = new frmClients();
+                frmClients.Show();
+            }
+        }
+
+        private void metroTileItem2_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmToDoList")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmToDoList frmToDoList = new frmToDoList();
+                frmToDoList.Show();
+            }
+        }
     }
 }
 

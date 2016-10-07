@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pbMic = new System.Windows.Forms.PictureBox();
             this.cmbFolder = new MetroFramework.Controls.MetroComboBox();
             this.cmbFile = new MetroFramework.Controls.MetroComboBox();
@@ -37,7 +38,9 @@
             this.lblBack = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.msmArchive = new MetroFramework.Components.MetroStyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbMic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msmArchive)).BeginInit();
             this.SuspendLayout();
             // 
             // pbMic
@@ -91,7 +94,7 @@
             this.lbArcList.FormattingEnabled = true;
             this.lbArcList.ItemHeight = 16;
             this.lbArcList.Location = new System.Drawing.Point(311, 303);
-            this.lbArcList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbArcList.Margin = new System.Windows.Forms.Padding(4);
             this.lbArcList.Name = "lbArcList";
             this.lbArcList.Size = new System.Drawing.Size(787, 324);
             this.lbArcList.TabIndex = 64;
@@ -99,7 +102,7 @@
             // metroButton1
             // 
             this.metroButton1.Location = new System.Drawing.Point(828, 184);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(4);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(100, 30);
             this.metroButton1.TabIndex = 65;
@@ -149,6 +152,10 @@
             this.metroLabel3.TabIndex = 101;
             this.metroLabel3.Text = "Choose file";
             // 
+            // msmArchive
+            // 
+            this.msmArchive.Owner = this;
+            // 
             // frmArchive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -169,6 +176,7 @@
             this.Load += new System.EventHandler(this.frmArchive_Load);
             this.Shown += new System.EventHandler(this.frmArchive_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pbMic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msmArchive)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +193,6 @@
         private MetroFramework.Controls.MetroLabel lblBack;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Components.MetroStyleManager msmArchive;
     }
 }
