@@ -161,7 +161,7 @@ namespace PschyHealth
         private void btnDeleteClient_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvClients, "Clients", false);
+            cMethods.fillTextbox(groupBox1, dgvClients, "Client", false);
             btnDeleteClient.Enabled = false;
             btnUpdateClient.Enabled = false;
             btnAddNewClient.Enabled = false;
@@ -172,7 +172,7 @@ namespace PschyHealth
         private void btnUpdateClient_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvClients, "Clients", true);
+            cMethods.fillTextbox(groupBox1, dgvClients, "Client", true);
             btnDeleteClient.Enabled = false;
             btnUpdateClient.Enabled = false;
             btnAddNewClient.Enabled = false;
@@ -183,7 +183,7 @@ namespace PschyHealth
         private void btnAddExistingClient_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvClients, "Clients", true, true);
+            cMethods.fillTextbox(groupBox1, dgvClients, "Client", false, false);
             btnDeleteClient.Enabled = false;
             btnUpdateClient.Enabled = false;
             btnAddNewClient.Enabled = false;
@@ -194,7 +194,7 @@ namespace PschyHealth
         private void btnAddNewClient_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvClients, "Clients", true, true);
+            cMethods.fillTextbox(groupBox1, dgvClients, "Client", true, true);
             btnDeleteClient.Enabled = false;
             btnUpdateClient.Enabled = false;
             btnAddNewClient.Enabled = false;
@@ -204,20 +204,26 @@ namespace PschyHealth
 
         private void btnConfirm_Click_1(object sender, EventArgs e)
         {
-            String field;
-            String value;
+            String field, field2;
+            String value, value2;
             if (dgvClients.SelectedRows.Count > 0)
             {
                 int selectedIndex = dgvClients.SelectedRows[0].Index;
 
                 String rowID = dgvClients[0, selectedIndex].Value.ToString();
-                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Clients");
+                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Client");
+                cMethods.getFieldsAndValues(out field2, out value2, gbDependants, "Client");
                 if (button == "add")
-                    cMethods.add("Clients", field, value);
+                    cMethods.add("Clients", field + "," + field2, value + "," + value2);
                 else if (button == "edit")
                     cMethods.edit("Clients", field, value, " ID = '" + dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString() + "'");
                 else if (button == "delete")
                     cMethods.delete("Clients", "ID = '" + rowID + "'");
+                else if (button == "archive")
+                {
+                    
+                    cMethods.Archive(dgvClients, "Clients", "ID", dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString());
+                }
 
             }
             btnDeleteClient.Enabled = true;
