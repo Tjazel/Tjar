@@ -245,7 +245,6 @@
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(466, 237);
             this.txtMessage.TabIndex = 56;
-            this.txtMessage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // metroCheckBox1
             // 
@@ -361,6 +360,7 @@
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.pbBack);
             this.Name = "frmEmail";
+            this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.frmEmail_Load);
             this.Shown += new System.EventHandler(this.frmEmail_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.msmEmail)).EndInit();

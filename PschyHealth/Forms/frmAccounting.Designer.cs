@@ -70,47 +70,47 @@
             // 
             this.dgvAccount.AllowUserToOrderColumns = true;
             this.dgvAccount.AllowUserToResizeRows = false;
-            this.dgvAccount.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dgvAccount.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAccount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvAccount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAccount.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAccount.EnableHeadersVisualStyles = false;
             this.dgvAccount.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dgvAccount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.dgvAccount.Location = new System.Drawing.Point(329, 141);
+            this.dgvAccount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvAccount.Location = new System.Drawing.Point(439, 174);
+            this.dgvAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvAccount.Name = "dgvAccount";
             this.dgvAccount.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAccount.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAccount.Size = new System.Drawing.Size(654, 436);
-            this.dgvAccount.Style = MetroFramework.MetroColorStyle.Blue;
+            this.dgvAccount.Size = new System.Drawing.Size(872, 537);
             this.dgvAccount.TabIndex = 60;
-            this.dgvAccount.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dgvAccount.UseStyleColors = true;
             this.dgvAccount.SelectionChanged += new System.EventHandler(this.dgvAccount_SelectionChanged_1);
             // 
             // btnRefresh
@@ -120,9 +120,10 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(904, 104);
+            this.btnRefresh.Location = new System.Drawing.Point(1205, 128);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(34, 29);
+            this.btnRefresh.Size = new System.Drawing.Size(45, 36);
             this.btnRefresh.TabIndex = 59;
             this.btnRefresh.UseCustomForeColor = true;
             this.btnRefresh.UseSelectable = true;
@@ -134,16 +135,18 @@
             // 
             // 
             this.txtAccAmount.CustomButton.Image = null;
-            this.txtAccAmount.CustomButton.Location = new System.Drawing.Point(77, 1);
+            this.txtAccAmount.CustomButton.Location = new System.Drawing.Point(188, 2);
+            this.txtAccAmount.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccAmount.CustomButton.Name = "";
-            this.txtAccAmount.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtAccAmount.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtAccAmount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccAmount.CustomButton.TabIndex = 1;
             this.txtAccAmount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAccAmount.CustomButton.UseSelectable = true;
             this.txtAccAmount.CustomButton.Visible = false;
             this.txtAccAmount.Lines = new string[0];
-            this.txtAccAmount.Location = new System.Drawing.Point(123, 151);
+            this.txtAccAmount.Location = new System.Drawing.Point(164, 186);
+            this.txtAccAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccAmount.MaxLength = 32767;
             this.txtAccAmount.Name = "txtAccAmount";
             this.txtAccAmount.PasswordChar = '\0';
@@ -151,10 +154,10 @@
             this.txtAccAmount.SelectedText = "";
             this.txtAccAmount.SelectionLength = 0;
             this.txtAccAmount.SelectionStart = 0;
-            this.txtAccAmount.Size = new System.Drawing.Size(125, 23);
-            this.txtAccAmount.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAccAmount.Size = new System.Drawing.Size(167, 28);
             this.txtAccAmount.TabIndex = 13;
             this.txtAccAmount.UseSelectable = true;
+            this.txtAccAmount.UseStyleColors = true;
             this.txtAccAmount.WaterMark = "Enter Amount";
             this.txtAccAmount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAccAmount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -165,16 +168,18 @@
             // 
             // 
             this.txtAccType.CustomButton.Image = null;
-            this.txtAccType.CustomButton.Location = new System.Drawing.Point(77, 1);
+            this.txtAccType.CustomButton.Location = new System.Drawing.Point(188, 2);
+            this.txtAccType.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccType.CustomButton.Name = "";
-            this.txtAccType.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtAccType.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtAccType.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccType.CustomButton.TabIndex = 1;
             this.txtAccType.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAccType.CustomButton.UseSelectable = true;
             this.txtAccType.CustomButton.Visible = false;
             this.txtAccType.Lines = new string[0];
-            this.txtAccType.Location = new System.Drawing.Point(123, 122);
+            this.txtAccType.Location = new System.Drawing.Point(164, 150);
+            this.txtAccType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccType.MaxLength = 32767;
             this.txtAccType.Name = "txtAccType";
             this.txtAccType.PasswordChar = '\0';
@@ -182,10 +187,10 @@
             this.txtAccType.SelectedText = "";
             this.txtAccType.SelectionLength = 0;
             this.txtAccType.SelectionStart = 0;
-            this.txtAccType.Size = new System.Drawing.Size(125, 23);
-            this.txtAccType.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAccType.Size = new System.Drawing.Size(167, 28);
             this.txtAccType.TabIndex = 11;
             this.txtAccType.UseSelectable = true;
+            this.txtAccType.UseStyleColors = true;
             this.txtAccType.WaterMark = "Enter Type";
             this.txtAccType.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAccType.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -202,9 +207,11 @@
             this.groupBox1.Controls.Add(this.metroLabel4);
             this.groupBox1.Controls.Add(this.metroLabel3);
             this.groupBox1.Controls.Add(this.metroLabel1);
-            this.groupBox1.Location = new System.Drawing.Point(23, 63);
+            this.groupBox1.Location = new System.Drawing.Point(31, 78);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(275, 194);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(367, 239);
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
             // 
@@ -214,16 +221,18 @@
             // 
             // 
             this.txtAccDate.CustomButton.Image = null;
-            this.txtAccDate.CustomButton.Location = new System.Drawing.Point(77, 1);
+            this.txtAccDate.CustomButton.Location = new System.Drawing.Point(188, 2);
+            this.txtAccDate.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccDate.CustomButton.Name = "";
-            this.txtAccDate.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtAccDate.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtAccDate.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccDate.CustomButton.TabIndex = 1;
             this.txtAccDate.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAccDate.CustomButton.UseSelectable = true;
             this.txtAccDate.CustomButton.Visible = false;
             this.txtAccDate.Lines = new string[0];
-            this.txtAccDate.Location = new System.Drawing.Point(123, 93);
+            this.txtAccDate.Location = new System.Drawing.Point(164, 114);
+            this.txtAccDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccDate.MaxLength = 32767;
             this.txtAccDate.Name = "txtAccDate";
             this.txtAccDate.PasswordChar = '\0';
@@ -231,10 +240,10 @@
             this.txtAccDate.SelectedText = "";
             this.txtAccDate.SelectionLength = 0;
             this.txtAccDate.SelectionStart = 0;
-            this.txtAccDate.Size = new System.Drawing.Size(125, 23);
-            this.txtAccDate.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAccDate.Size = new System.Drawing.Size(167, 28);
             this.txtAccDate.TabIndex = 10;
             this.txtAccDate.UseSelectable = true;
+            this.txtAccDate.UseStyleColors = true;
             this.txtAccDate.WaterMark = "Enter Date";
             this.txtAccDate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAccDate.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -245,16 +254,18 @@
             // 
             // 
             this.txtAccDescription.CustomButton.Image = null;
-            this.txtAccDescription.CustomButton.Location = new System.Drawing.Point(77, 1);
+            this.txtAccDescription.CustomButton.Location = new System.Drawing.Point(188, 2);
+            this.txtAccDescription.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccDescription.CustomButton.Name = "";
-            this.txtAccDescription.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtAccDescription.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtAccDescription.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccDescription.CustomButton.TabIndex = 1;
             this.txtAccDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAccDescription.CustomButton.UseSelectable = true;
             this.txtAccDescription.CustomButton.Visible = false;
             this.txtAccDescription.Lines = new string[0];
-            this.txtAccDescription.Location = new System.Drawing.Point(123, 64);
+            this.txtAccDescription.Location = new System.Drawing.Point(164, 79);
+            this.txtAccDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccDescription.MaxLength = 32767;
             this.txtAccDescription.Name = "txtAccDescription";
             this.txtAccDescription.PasswordChar = '\0';
@@ -262,10 +273,10 @@
             this.txtAccDescription.SelectedText = "";
             this.txtAccDescription.SelectionLength = 0;
             this.txtAccDescription.SelectionStart = 0;
-            this.txtAccDescription.Size = new System.Drawing.Size(125, 23);
-            this.txtAccDescription.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAccDescription.Size = new System.Drawing.Size(167, 28);
             this.txtAccDescription.TabIndex = 9;
             this.txtAccDescription.UseSelectable = true;
+            this.txtAccDescription.UseStyleColors = true;
             this.txtAccDescription.WaterMark = "Enter Description";
             this.txtAccDescription.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAccDescription.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -276,16 +287,18 @@
             // 
             // 
             this.txtAccTransaction_Number.CustomButton.Image = null;
-            this.txtAccTransaction_Number.CustomButton.Location = new System.Drawing.Point(77, 1);
+            this.txtAccTransaction_Number.CustomButton.Location = new System.Drawing.Point(188, 2);
+            this.txtAccTransaction_Number.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccTransaction_Number.CustomButton.Name = "";
-            this.txtAccTransaction_Number.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtAccTransaction_Number.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.txtAccTransaction_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccTransaction_Number.CustomButton.TabIndex = 1;
             this.txtAccTransaction_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAccTransaction_Number.CustomButton.UseSelectable = true;
             this.txtAccTransaction_Number.CustomButton.Visible = false;
             this.txtAccTransaction_Number.Lines = new string[0];
-            this.txtAccTransaction_Number.Location = new System.Drawing.Point(123, 35);
+            this.txtAccTransaction_Number.Location = new System.Drawing.Point(164, 43);
+            this.txtAccTransaction_Number.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccTransaction_Number.MaxLength = 32767;
             this.txtAccTransaction_Number.Name = "txtAccTransaction_Number";
             this.txtAccTransaction_Number.PasswordChar = '\0';
@@ -294,10 +307,10 @@
             this.txtAccTransaction_Number.SelectionLength = 0;
             this.txtAccTransaction_Number.SelectionStart = 0;
             this.txtAccTransaction_Number.ShowClearButton = true;
-            this.txtAccTransaction_Number.Size = new System.Drawing.Size(125, 23);
-            this.txtAccTransaction_Number.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAccTransaction_Number.Size = new System.Drawing.Size(167, 28);
             this.txtAccTransaction_Number.TabIndex = 7;
             this.txtAccTransaction_Number.UseSelectable = true;
+            this.txtAccTransaction_Number.UseStyleColors = true;
             this.txtAccTransaction_Number.WaterMark = "Enter Transaction";
             this.txtAccTransaction_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAccTransaction_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -305,55 +318,66 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(56, 151);
+            this.metroLabel7.Location = new System.Drawing.Point(75, 186);
+            this.metroLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(59, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(61, 20);
             this.metroLabel7.TabIndex = 6;
             this.metroLabel7.Text = "Amount:";
+            this.metroLabel7.UseStyleColors = true;
             // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(76, 121);
+            this.metroLabel5.Location = new System.Drawing.Point(101, 149);
+            this.metroLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(39, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(42, 20);
             this.metroLabel5.TabIndex = 4;
             this.metroLabel5.Text = "Type:";
+            this.metroLabel5.UseStyleColors = true;
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(76, 93);
+            this.metroLabel4.Location = new System.Drawing.Point(101, 114);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(39, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(41, 20);
             this.metroLabel4.TabIndex = 3;
             this.metroLabel4.Text = "Date:";
+            this.metroLabel4.UseStyleColors = true;
             // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(38, 64);
+            this.metroLabel3.Location = new System.Drawing.Point(51, 79);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(77, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(82, 20);
             this.metroLabel3.TabIndex = 2;
             this.metroLabel3.Text = "Description:";
+            this.metroLabel3.UseStyleColors = true;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(39, 35);
+            this.metroLabel1.Location = new System.Drawing.Point(52, 43);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(81, 20);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Transaction:";
+            this.metroLabel1.UseStyleColors = true;
             // 
             // btnDeleteAccount
             // 
             this.btnDeleteAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteAccount.Image")));
             this.btnDeleteAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteAccount.Location = new System.Drawing.Point(548, 594);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(731, 731);
+            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
-            this.btnDeleteAccount.Size = new System.Drawing.Size(104, 23);
+            this.btnDeleteAccount.Size = new System.Drawing.Size(139, 28);
             this.btnDeleteAccount.TabIndex = 58;
             this.btnDeleteAccount.Text = "Delete";
             this.btnDeleteAccount.UseSelectable = true;
@@ -364,9 +388,10 @@
             // 
             this.btnUpdateAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateAccount.Image")));
             this.btnUpdateAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateAccount.Location = new System.Drawing.Point(435, 594);
+            this.btnUpdateAccount.Location = new System.Drawing.Point(580, 731);
+            this.btnUpdateAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdateAccount.Name = "btnUpdateAccount";
-            this.btnUpdateAccount.Size = new System.Drawing.Size(107, 23);
+            this.btnUpdateAccount.Size = new System.Drawing.Size(143, 28);
             this.btnUpdateAccount.TabIndex = 57;
             this.btnUpdateAccount.Text = "Update";
             this.btnUpdateAccount.UseSelectable = true;
@@ -376,11 +401,13 @@
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(17, 27);
+            this.metroLabel17.Location = new System.Drawing.Point(23, 33);
+            this.metroLabel17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel17.Size = new System.Drawing.Size(56, 20);
             this.metroLabel17.TabIndex = 0;
             this.metroLabel17.Text = "Criteria:";
+            this.metroLabel17.UseStyleColors = true;
             // 
             // groupBox3
             // 
@@ -389,9 +416,11 @@
             this.groupBox3.Controls.Add(this.cmbAccCriteria);
             this.groupBox3.Controls.Add(this.txtAccSearch);
             this.groupBox3.Controls.Add(this.metroLabel17);
-            this.groupBox3.Location = new System.Drawing.Point(418, 63);
+            this.groupBox3.Location = new System.Drawing.Point(557, 78);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(480, 71);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(640, 87);
             this.groupBox3.TabIndex = 55;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search Accounting";
@@ -399,18 +428,19 @@
             // metroComboBox1
             // 
             this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.ItemHeight = 24;
             this.metroComboBox1.Items.AddRange(new object[] {
             "=",
             ">",
             "<",
             "null"});
-            this.metroComboBox1.Location = new System.Drawing.Point(224, 23);
-            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroComboBox1.Location = new System.Drawing.Point(299, 28);
+            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(54, 29);
+            this.metroComboBox1.Size = new System.Drawing.Size(71, 30);
             this.metroComboBox1.TabIndex = 61;
             this.metroComboBox1.UseSelectable = true;
+            this.metroComboBox1.UseStyleColors = true;
             this.metroComboBox1.Visible = false;
             this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged_1);
             this.metroComboBox1.VisibleChanged += new System.EventHandler(this.metroComboBox1_VisibleChanged_1);
@@ -422,28 +452,32 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.ForeColor = System.Drawing.Color.Transparent;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(427, 19);
+            this.btnSearch.Location = new System.Drawing.Point(569, 23);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(34, 29);
+            this.btnSearch.Size = new System.Drawing.Size(45, 36);
             this.btnSearch.TabIndex = 47;
             this.btnSearch.UseCustomForeColor = true;
             this.btnSearch.UseSelectable = true;
+            this.btnSearch.UseStyleColors = true;
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // cmbAccCriteria
             // 
             this.cmbAccCriteria.FormattingEnabled = true;
-            this.cmbAccCriteria.ItemHeight = 23;
+            this.cmbAccCriteria.ItemHeight = 24;
             this.cmbAccCriteria.Items.AddRange(new object[] {
             "Transaction",
             "Number",
             "Type"});
-            this.cmbAccCriteria.Location = new System.Drawing.Point(78, 23);
+            this.cmbAccCriteria.Location = new System.Drawing.Point(104, 28);
+            this.cmbAccCriteria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbAccCriteria.Name = "cmbAccCriteria";
-            this.cmbAccCriteria.Size = new System.Drawing.Size(141, 29);
+            this.cmbAccCriteria.Size = new System.Drawing.Size(187, 30);
             this.cmbAccCriteria.Style = MetroFramework.MetroColorStyle.Blue;
             this.cmbAccCriteria.TabIndex = 3;
             this.cmbAccCriteria.UseSelectable = true;
+            this.cmbAccCriteria.UseStyleColors = true;
             this.cmbAccCriteria.TextChanged += new System.EventHandler(this.cmbAccCriteria_TextChanged_1);
             // 
             // txtAccSearch
@@ -452,16 +486,18 @@
             // 
             // 
             this.txtAccSearch.CustomButton.Image = null;
-            this.txtAccSearch.CustomButton.Location = new System.Drawing.Point(85, 1);
+            this.txtAccSearch.CustomButton.Location = new System.Drawing.Point(205, 2);
+            this.txtAccSearch.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccSearch.CustomButton.Name = "";
-            this.txtAccSearch.CustomButton.Size = new System.Drawing.Size(20, 22);
+            this.txtAccSearch.CustomButton.Size = new System.Drawing.Size(41, 38);
             this.txtAccSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccSearch.CustomButton.TabIndex = 1;
             this.txtAccSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAccSearch.CustomButton.UseSelectable = true;
             this.txtAccSearch.CustomButton.Visible = false;
             this.txtAccSearch.Lines = new string[0];
-            this.txtAccSearch.Location = new System.Drawing.Point(287, 19);
+            this.txtAccSearch.Location = new System.Drawing.Point(383, 23);
+            this.txtAccSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccSearch.MaxLength = 32767;
             this.txtAccSearch.Name = "txtAccSearch";
             this.txtAccSearch.PasswordChar = '\0';
@@ -469,10 +505,10 @@
             this.txtAccSearch.SelectedText = "";
             this.txtAccSearch.SelectionLength = 0;
             this.txtAccSearch.SelectionStart = 0;
-            this.txtAccSearch.Size = new System.Drawing.Size(141, 29);
-            this.txtAccSearch.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAccSearch.Size = new System.Drawing.Size(188, 36);
             this.txtAccSearch.TabIndex = 2;
             this.txtAccSearch.UseSelectable = true;
+            this.txtAccSearch.UseStyleColors = true;
             this.txtAccSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAccSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtAccSearch.TextChanged += new System.EventHandler(this.txtAccSearch_TextChanged_1);
@@ -484,9 +520,10 @@
             this.btnAddAcount.ForeColor = System.Drawing.Color.Maroon;
             this.btnAddAcount.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAcount.Image")));
             this.btnAddAcount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddAcount.Location = new System.Drawing.Point(329, 594);
+            this.btnAddAcount.Location = new System.Drawing.Point(439, 731);
+            this.btnAddAcount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddAcount.Name = "btnAddAcount";
-            this.btnAddAcount.Size = new System.Drawing.Size(97, 23);
+            this.btnAddAcount.Size = new System.Drawing.Size(129, 28);
             this.btnAddAcount.TabIndex = 56;
             this.btnAddAcount.Text = "Add";
             this.btnAddAcount.UseCustomBackColor = true;
@@ -498,10 +535,10 @@
             // pbMic
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
-            this.pbMic.Location = new System.Drawing.Point(22, 37);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbMic.Location = new System.Drawing.Point(29, 46);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbMic.Name = "pbMic";
-            this.pbMic.Size = new System.Drawing.Size(28, 22);
+            this.pbMic.Size = new System.Drawing.Size(37, 27);
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMic.TabIndex = 61;
             this.pbMic.TabStop = false;
@@ -514,9 +551,10 @@
             this.btnConfirm.ForeColor = System.Drawing.Color.Maroon;
             this.btnConfirm.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirm.Image")));
             this.btnConfirm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirm.Location = new System.Drawing.Point(99, 298);
+            this.btnConfirm.Location = new System.Drawing.Point(132, 367);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(97, 23);
+            this.btnConfirm.Size = new System.Drawing.Size(129, 28);
             this.btnConfirm.TabIndex = 62;
             this.btnConfirm.Text = "Add";
             this.btnConfirm.UseCustomBackColor = true;
@@ -530,9 +568,10 @@
             // 
             this.btnArchive.Image = ((System.Drawing.Image)(resources.GetObject("btnArchive.Image")));
             this.btnArchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArchive.Location = new System.Drawing.Point(670, 594);
+            this.btnArchive.Location = new System.Drawing.Point(893, 731);
+            this.btnArchive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnArchive.Name = "btnArchive";
-            this.btnArchive.Size = new System.Drawing.Size(104, 23);
+            this.btnArchive.Size = new System.Drawing.Size(139, 28);
             this.btnArchive.TabIndex = 63;
             this.btnArchive.Text = "Archive";
             this.btnArchive.UseSelectable = true;
@@ -545,9 +584,9 @@
             // 
             // frmAccounting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1728, 887);
+            this.ClientSize = new System.Drawing.Size(2304, 1092);
             this.Controls.Add(this.btnArchive);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.pbMic);
@@ -558,9 +597,11 @@
             this.Controls.Add(this.btnUpdateAccount);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnAddAcount);
-            this.MinimumSize = new System.Drawing.Size(1364, 708);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1819, 871);
             this.Movable = false;
             this.Name = "frmAccounting";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

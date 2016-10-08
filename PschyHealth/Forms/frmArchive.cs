@@ -19,6 +19,7 @@ namespace PschyHealth
     public partial class frmArchive : MetroForm
     {
         Methods cMethods = new Methods();
+        
 
        // Constants
         const int AW_SLIDE = 0X40000;
@@ -42,7 +43,7 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-
+            cMethods.readStyle(msmArchive);
             cMethods.readTheme(msmArchive);
            /* //Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
