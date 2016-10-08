@@ -302,6 +302,7 @@
             this.mtxb_Remarks.Size = new System.Drawing.Size(448, 145);
             this.mtxb_Remarks.TabIndex = 90;
             this.mtxb_Remarks.UseSelectable = true;
+            this.mtxb_Remarks.UseStyleColors = true;
             this.mtxb_Remarks.WaterMark = "Enter Additional Remarks";
             this.mtxb_Remarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Remarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -334,6 +335,7 @@
             this.mtxb_Zip.Size = new System.Drawing.Size(448, 28);
             this.mtxb_Zip.TabIndex = 89;
             this.mtxb_Zip.UseSelectable = true;
+            this.mtxb_Zip.UseStyleColors = true;
             this.mtxb_Zip.WaterMark = "Enter Zip Code";
             this.mtxb_Zip.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Zip.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -366,6 +368,7 @@
             this.mtxb_Address3.Size = new System.Drawing.Size(448, 28);
             this.mtxb_Address3.TabIndex = 88;
             this.mtxb_Address3.UseSelectable = true;
+            this.mtxb_Address3.UseStyleColors = true;
             this.mtxb_Address3.WaterMark = "Enter Address 3";
             this.mtxb_Address3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Address3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -398,6 +401,7 @@
             this.mtxb_Address2.Size = new System.Drawing.Size(448, 28);
             this.mtxb_Address2.TabIndex = 87;
             this.mtxb_Address2.UseSelectable = true;
+            this.mtxb_Address2.UseStyleColors = true;
             this.mtxb_Address2.WaterMark = "Enter Address 2";
             this.mtxb_Address2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Address2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -430,6 +434,7 @@
             this.mtxb_Address1.Size = new System.Drawing.Size(448, 28);
             this.mtxb_Address1.TabIndex = 86;
             this.mtxb_Address1.UseSelectable = true;
+            this.mtxb_Address1.UseStyleColors = true;
             this.mtxb_Address1.WaterMark = "Enter Address 1";
             this.mtxb_Address1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Address1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -462,6 +467,7 @@
             this.mtxb_Internet.Size = new System.Drawing.Size(448, 28);
             this.mtxb_Internet.TabIndex = 85;
             this.mtxb_Internet.UseSelectable = true;
+            this.mtxb_Internet.UseStyleColors = true;
             this.mtxb_Internet.WaterMark = "Enter Website URL";
             this.mtxb_Internet.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Internet.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -494,6 +500,7 @@
             this.mtxb_Email.Size = new System.Drawing.Size(448, 28);
             this.mtxb_Email.TabIndex = 84;
             this.mtxb_Email.UseSelectable = true;
+            this.mtxb_Email.UseStyleColors = true;
             this.mtxb_Email.WaterMark = "Enter Email Address";
             this.mtxb_Email.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Email.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -526,6 +533,7 @@
             this.mtxb_Cell.Size = new System.Drawing.Size(448, 28);
             this.mtxb_Cell.TabIndex = 83;
             this.mtxb_Cell.UseSelectable = true;
+            this.mtxb_Cell.UseStyleColors = true;
             this.mtxb_Cell.WaterMark = "Enter Cell Number";
             this.mtxb_Cell.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Cell.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -558,6 +566,7 @@
             this.mtxb_Fax.Size = new System.Drawing.Size(448, 28);
             this.mtxb_Fax.TabIndex = 82;
             this.mtxb_Fax.UseSelectable = true;
+            this.mtxb_Fax.UseStyleColors = true;
             this.mtxb_Fax.WaterMark = "Enter Fax Number";
             this.mtxb_Fax.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Fax.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -590,6 +599,7 @@
             this.mtxb_Tel.Size = new System.Drawing.Size(448, 28);
             this.mtxb_Tel.TabIndex = 81;
             this.mtxb_Tel.UseSelectable = true;
+            this.mtxb_Tel.UseStyleColors = true;
             this.mtxb_Tel.WaterMark = "Enter Tel Number";
             this.mtxb_Tel.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Tel.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -622,6 +632,7 @@
             this.mtxb_Contact.Size = new System.Drawing.Size(448, 28);
             this.mtxb_Contact.TabIndex = 80;
             this.mtxb_Contact.UseSelectable = true;
+            this.mtxb_Contact.UseStyleColors = true;
             this.mtxb_Contact.WaterMark = "Enter Contact";
             this.mtxb_Contact.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Contact.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -654,6 +665,7 @@
             this.mtxb_Name.Size = new System.Drawing.Size(448, 28);
             this.mtxb_Name.TabIndex = 79;
             this.mtxb_Name.UseSelectable = true;
+            this.mtxb_Name.UseStyleColors = true;
             this.mtxb_Name.WaterMark = "Enter Name";
             this.mtxb_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -686,6 +698,7 @@
             this.mtxb_Number.Size = new System.Drawing.Size(160, 28);
             this.mtxb_Number.TabIndex = 78;
             this.mtxb_Number.UseSelectable = true;
+            this.mtxb_Number.UseStyleColors = true;
             this.mtxb_Number.WaterMark = "Number";
             this.mtxb_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtxb_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -699,6 +712,7 @@
             this.metroLabel13.Size = new System.Drawing.Size(65, 20);
             this.metroLabel13.TabIndex = 77;
             this.metroLabel13.Text = "Remarks:";
+            this.metroLabel13.UseStyleColors = true;
             // 
             // metroLabel12
             // 
@@ -709,6 +723,7 @@
             this.metroLabel12.Size = new System.Drawing.Size(32, 20);
             this.metroLabel12.TabIndex = 76;
             this.metroLabel12.Text = "Zip:";
+            this.metroLabel12.UseStyleColors = true;
             // 
             // metroLabel11
             // 
@@ -719,6 +734,7 @@
             this.metroLabel11.Size = new System.Drawing.Size(74, 20);
             this.metroLabel11.TabIndex = 75;
             this.metroLabel11.Text = "Address 3:";
+            this.metroLabel11.UseStyleColors = true;
             // 
             // metroLabel10
             // 
@@ -729,6 +745,7 @@
             this.metroLabel10.Size = new System.Drawing.Size(74, 20);
             this.metroLabel10.TabIndex = 74;
             this.metroLabel10.Text = "Address 2:";
+            this.metroLabel10.UseStyleColors = true;
             // 
             // metroLabel9
             // 
@@ -739,6 +756,7 @@
             this.metroLabel9.Size = new System.Drawing.Size(71, 20);
             this.metroLabel9.TabIndex = 73;
             this.metroLabel9.Text = "Address 1:";
+            this.metroLabel9.UseStyleColors = true;
             // 
             // metroLabel8
             // 
@@ -749,6 +767,7 @@
             this.metroLabel8.Size = new System.Drawing.Size(60, 20);
             this.metroLabel8.TabIndex = 72;
             this.metroLabel8.Text = "Internet:";
+            this.metroLabel8.UseStyleColors = true;
             // 
             // metroLabel7
             // 
@@ -759,6 +778,7 @@
             this.metroLabel7.Size = new System.Drawing.Size(45, 20);
             this.metroLabel7.TabIndex = 71;
             this.metroLabel7.Text = "Email:";
+            this.metroLabel7.UseStyleColors = true;
             // 
             // metroLabel6
             // 
@@ -769,6 +789,7 @@
             this.metroLabel6.Size = new System.Drawing.Size(35, 20);
             this.metroLabel6.TabIndex = 70;
             this.metroLabel6.Text = "Cell:";
+            this.metroLabel6.UseStyleColors = true;
             // 
             // metroLabel5
             // 
@@ -779,6 +800,7 @@
             this.metroLabel5.Size = new System.Drawing.Size(31, 20);
             this.metroLabel5.TabIndex = 69;
             this.metroLabel5.Text = "Fax:";
+            this.metroLabel5.UseStyleColors = true;
             // 
             // metroLabel4
             // 
@@ -789,6 +811,7 @@
             this.metroLabel4.Size = new System.Drawing.Size(29, 20);
             this.metroLabel4.TabIndex = 68;
             this.metroLabel4.Text = "Tel:";
+            this.metroLabel4.UseStyleColors = true;
             // 
             // metroLabel3
             // 
@@ -799,6 +822,7 @@
             this.metroLabel3.Size = new System.Drawing.Size(59, 20);
             this.metroLabel3.TabIndex = 67;
             this.metroLabel3.Text = "Contact:";
+            this.metroLabel3.UseStyleColors = true;
             // 
             // metroLabel2
             // 
@@ -809,6 +833,7 @@
             this.metroLabel2.Size = new System.Drawing.Size(50, 20);
             this.metroLabel2.TabIndex = 66;
             this.metroLabel2.Text = "Name:";
+            this.metroLabel2.UseStyleColors = true;
             // 
             // metroLabel1
             // 
@@ -819,6 +844,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(65, 20);
             this.metroLabel1.TabIndex = 65;
             this.metroLabel1.Text = "Number:";
+            this.metroLabel1.UseStyleColors = true;
             // 
             // lblBack
             // 

@@ -74,7 +74,7 @@
             // 
             this.mtxb_Password.CustomButton.Image = null;
             this.mtxb_Password.CustomButton.Location = new System.Drawing.Point(154, 2);
-            this.mtxb_Password.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtxb_Password.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.mtxb_Password.CustomButton.Name = "";
             this.mtxb_Password.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.mtxb_Password.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -84,7 +84,7 @@
             this.mtxb_Password.CustomButton.Visible = false;
             this.mtxb_Password.Lines = new string[0];
             this.mtxb_Password.Location = new System.Drawing.Point(217, 149);
-            this.mtxb_Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtxb_Password.Margin = new System.Windows.Forms.Padding(4);
             this.mtxb_Password.MaxLength = 32767;
             this.mtxb_Password.Name = "mtxb_Password";
             this.mtxb_Password.PasswordChar = '\0';
@@ -107,7 +107,7 @@
             // 
             this.mtxb_Username.CustomButton.Image = null;
             this.mtxb_Username.CustomButton.Location = new System.Drawing.Point(154, 2);
-            this.mtxb_Username.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtxb_Username.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.mtxb_Username.CustomButton.Name = "";
             this.mtxb_Username.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.mtxb_Username.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -117,7 +117,7 @@
             this.mtxb_Username.CustomButton.Visible = false;
             this.mtxb_Username.Lines = new string[0];
             this.mtxb_Username.Location = new System.Drawing.Point(217, 92);
-            this.mtxb_Username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtxb_Username.Margin = new System.Windows.Forms.Padding(4);
             this.mtxb_Username.MaxLength = 32767;
             this.mtxb_Username.Name = "mtxb_Username";
             this.mtxb_Username.PasswordChar = '\0';
@@ -135,9 +135,10 @@
             // 
             // metroLink1
             // 
+            this.metroLink1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroLink1.DisplayFocus = true;
             this.metroLink1.Location = new System.Drawing.Point(305, 185);
-            this.metroLink1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroLink1.Margin = new System.Windows.Forms.Padding(4);
             this.metroLink1.Name = "metroLink1";
             this.metroLink1.Size = new System.Drawing.Size(143, 28);
             this.metroLink1.Style = MetroFramework.MetroColorStyle.Teal;
@@ -145,13 +146,14 @@
             this.metroLink1.Text = "Forgot Password";
             this.metroLink1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLink1.UseSelectable = true;
+            this.metroLink1.UseStyleColors = true;
             this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PschyHealth.Properties.Resources._1457474659_Password;
             this.pictureBox3.Location = new System.Drawing.Point(43, 138);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(48, 48);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -162,7 +164,7 @@
             // 
             this.pictureBox2.Image = global::PschyHealth.Properties.Resources._1457474833_Username;
             this.pictureBox2.Location = new System.Drawing.Point(43, 81);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -173,7 +175,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(405, 129);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -198,7 +200,7 @@
             this.Controls.Add(this.lbl_Username);
             this.Controls.Add(this.mtxb_Password);
             this.Controls.Add(this.mtxb_Username);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Movable = false;

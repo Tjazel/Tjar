@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Controls;
 
 namespace PschyHealth.Forms
 {
     public partial class frmPayments : MetroForm
     {
         Methods cMethods = new Methods();
+        Boolean breaking = false;
         String correctSearch = "";
         String button = "";
         //Constants
@@ -54,7 +56,7 @@ namespace PschyHealth.Forms
             this.Controls.Add(uc);
 
             cMethods.fillDGV(dgvPayments, "Clients");
-            cMethods.fillCMBrow(cmbClient,dgvPayments);
+            cMethods.fillCMBrow(cmbPaymentsClient_Name,cmbPaymentsClient_Surname, dgvPayments);
             cMethods.fillDGV(dgvPayments, "Payments");
             cMethods.fillDGV(dgvConsultations, "Consultations");
 
@@ -79,8 +81,27 @@ namespace PschyHealth.Forms
 
         private void cmbClient_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cMethods.filterDGV(dgvPayments, "Payments", " WHERE Client_Surname = '" + cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) + "' AND Client_Name = '" + cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2) + "'");
-            cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE Surname = '" + cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) + "' AND Name = '" + cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2) + "'");
+            breaking = true;
+            cmbPaymentsClient_Name.Enabled = false;
+            if (cmbPaymentsClient_Surname.Text == "")
+            {
+                cMethods.filterDGV(dgvPayments, "Clients", " WHERE First_Name = '" + cmbPaymentsClient_Name.Text + "'");
+                cMethods.fillCMBrow(null, cmbPaymentsClient_Surname, dgvPayments);
+                cMethods.filterDGV(dgvPayments, "Payments", " WHERE Client_Name = '" + cmbPaymentsClient_Name.Text+ "'");
+                cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE Name = '" + cmbPaymentsClient_Name.Text + "'");
+
+
+            }
+            else
+            {
+                cMethods.filterDGV(dgvPayments, "Clients", " WHERE First_Name = '" + cmbPaymentsClient_Name.Text + "'AND  Surname = '" + cmbPaymentsClient_Surname.Text + "'");
+                if(dgvPayments.RowCount <= 1)
+                    cmbPaymentsClient_Surname.Text = "";
+                else
+                cMethods.filterDGV(dgvPayments, "Payments", " WHERE Client_Surname = '" + cmbPaymentsClient_Surname.Text + "'AND Client_Name = '" + cmbPaymentsClient_Name.Text + "'");
+                cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE Surname = '" + cmbPaymentsClient_Surname.Text + "' AND Name = '" + cmbPaymentsClient_Name.Text + "'");
+            }
+
         }
 
         private void dgvConsultations_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -88,83 +109,80 @@ namespace PschyHealth.Forms
 
         }
 
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            String fields, values;
+            cMethods.getFieldsAndValues(out fields, out values, groupBox1, "Payments");
+            cMethods.add("Payments", fields, values);
+        }
+
         private void btnArchive_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
             cMethods.fillTextbox(groupBox1, dgvPayments, "Payments", false);
             btnAfbetaal.Enabled = false;
-            btnAfgeskryf.Enabled = false;
-            btnKortingAfbetaal.Enabled = false;
+            //btnAfgeskryf.Enabled = false;
+            //btnKortingAfbetaal.Enabled = false;
             button = "archive";
         }
 
-        private void btnPayAdd_Click(object sender, EventArgs e)
+        private void cmbPaymentsClient_Surname_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvPayments, "Pay", true, true);
-            btnAfbetaal.Enabled = false;
-            btnAfgeskryf.Enabled = false;
-            btnArchive.Enabled = false;
-            btnPayAdd.Enabled = false;
-            btnPayDelete.Enabled = false;
-            btnPayEdit.Enabled = false;
-            button = "add";
-        }
-
-        private void btnPayEdit_Click(object sender, EventArgs e)
-        {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvPayments, "Pay", true);
-            btnAfbetaal.Enabled = false;
-            btnAfgeskryf.Enabled = false;
-            btnArchive.Enabled = false;
-            btnPayAdd.Enabled = false;
-            btnPayDelete.Enabled = false;
-            btnPayEdit.Enabled = false;
-            button = "edit";
-        }
-
-        private void btnPayDelete_Click(object sender, EventArgs e)
-        {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvPayments, "Pay", false);
-            btnAfbetaal.Enabled = false;
-            btnAfgeskryf.Enabled = false;
-            btnArchive.Enabled = false;
-            btnPayAdd.Enabled = false;
-            btnPayDelete.Enabled = false;
-            btnPayEdit.Enabled = false;
-            button = "delete";
-        }
-
-        private void btnConfirm_Click(object sender, EventArgs e)
-        {
-            String field;
-            String value;
-            if (dgvPayments.SelectedRows.Count > 0)
+            breaking = true;
+            cmbPaymentsClient_Surname.Enabled = false;
+            if (cmbPaymentsClient_Name.Text == "")
             {
-                int selectedIndex = dgvPayments.SelectedRows[0].Index;
+                cMethods.filterDGV(dgvPayments, "Clients", " WHERE Surname = '" + cmbPaymentsClient_Surname.Text + "'");
+                cMethods.fillCMBrow(cmbPaymentsClient_Name, null, dgvPayments);
+                cMethods.filterDGV(dgvPayments, "Payments", " WHERE Client_Surname = '" + cmbPaymentsClient_Surname.Text + "'");
+                cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE Surname = '" + cmbPaymentsClient_Surname.Text + "'");
 
-                String rowID = dgvPayments[0, selectedIndex].Value.ToString();
-                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Acc");
-                if (button == "add")
-                    cMethods.add("Payments", field, value);
-                else if (button == "edit")
-                    cMethods.edit("Payments", field, value, " Payment_Order = '" + dgvPayments.Rows[selectedIndex].Cells["Payment_Order"].Value.ToString() + "'");
-                else if (button == "delete")
-                    cMethods.delete("Payments", "Transaction_Number = '" + rowID + "'");
-                else if (button == "archive")
-                    cMethods.Archive(dgvPayments, "Payments", "Payment_Order", dgvPayments.Rows[selectedIndex].Cells["Payment_Order"].Value.ToString());
 
             }
-            btnAfbetaal.Enabled = true;
-            btnAfgeskryf.Enabled = true;
-            btnArchive.Enabled = true;
-            btnPayAdd.Enabled = true;
-            btnPayDelete.Enabled = true;
-            btnPayEdit.Enabled = true;
-            btnConfirm.Hide();
-            //filter();
+            else
+            {
+                cMethods.filterDGV(dgvPayments, "Clients", " WHERE First_Name = '" + cmbPaymentsClient_Name.Text + "'AND  Surname = '" + cmbPaymentsClient_Surname.Text + "'");
+                if (dgvPayments.RowCount <= 1)
+                    cmbPaymentsClient_Name.Text = "";
+                cMethods.filterDGV(dgvPayments, "Payments", " WHERE Client_Surname = '" + cmbPaymentsClient_Surname.Text + "'AND Client_Name = '" + cmbPaymentsClient_Name.Text + "'");
+                cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE Surname = '" + cmbPaymentsClient_Surname.Text + "' AND Name = '" + cmbPaymentsClient_Name.Text + "'");
+            }
+        }
+
+        private void txtPaymentsConsultation_EnabledChanged(object sender, EventArgs e)
+        {
+            txtPaymentsConsultation.Enabled = false;
+        }
+
+        private void dgvConsultations_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvConsultations.RowCount > 0)
+            {
+                if(breaking != true)
+                    txtPaymentsConsultation.Text = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells["Consultation"].Value.ToString();
+            }
+            breaking = false;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            breaking = true;
+            cmbPaymentsClient_Name.Text = "";
+            cmbPaymentsClient_Surname.Text = "";
+            cmbPaymentsClient_Name.Enabled = true;
+            cmbPaymentsClient_Surname.Enabled = true;
+            cMethods.fillDGV(dgvPayments, "Clients");
+            cMethods.fillCMBrow(cmbPaymentsClient_Name, cmbPaymentsClient_Surname, dgvPayments);
+            cMethods.fillDGV(dgvPayments, "Payments");
+            cMethods.fillDGV(dgvConsultations, "Consultations");
+        }
+
+        private void btnAfbetaal_Click(object sender, EventArgs e)
+        {
+            MetroGrid dgv = new MetroGrid();
+            dgv.Parent = this;
+            dgv.Hide();
+            txtPaymentsAmount.Text = "" + cMethods.calculateAmount(txtPaymentsConsultation.Text, dgv);
         }
     }
 }
