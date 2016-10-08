@@ -422,7 +422,125 @@ namespace PschyHealth
         //Main page se tile kleure vind hier plaas
      
         DevComponents.DotNetBar.Metro.MetroTileItem Knoppie = new DevComponents.DotNetBar.Metro.MetroTileItem();
+        public void defStyle()
+        {
+            string filename = path + @"\Styles\style\style.txt";
+            MetroFramework.MetroColorStyle cl = new MetroFramework.MetroColorStyle();
+            cl = (MetroFramework.MetroColorStyle)4;
+            StreamWriter write = File.AppendText(filename);
 
+            if(new FileInfo(filename).Length==0)
+            {
+                write.WriteLine(""+cl+"");
+                write.Close();
+            }
+            else
+            {
+                write.Close();
+            }
+        }
+
+        public void writeStyle( MetroFramework.Components.MetroStyleManager manager, MetroFramework.MetroColorStyle cl)
+        {
+            string filename = path + @"\Styles\style\style.txt";
+            string line;
+            StreamReader lees = File.OpenText(filename);
+            line = lees.ReadLine();
+            if (line != null)
+            {
+                line = line.Replace(line, "" + cl + "");
+                lees.Close();
+               // MessageBox.Show(line);
+                File_DeleteLine(1, filename);
+            }
+
+            StreamWriter write = File.AppendText(filename);
+            write.WriteLine(line);
+            write.Close();
+            
+        }
+
+        public void readStyle(MetroFramework.Components.MetroStyleManager manager)
+        {
+            string filename = path + @"\Styles\style\style.txt";
+            MetroFramework.MetroColorStyle chosenStyle = new MetroFramework.MetroColorStyle();
+            StreamReader lees = File.OpenText(filename);
+            string line = lees.ReadLine();
+
+            
+            
+
+            switch(line)
+            {
+                case "Black":
+                    chosenStyle = (MetroFramework.MetroColorStyle)1;
+                    changeStyle(manager, chosenStyle);
+                    break;
+
+                case "White":
+                    chosenStyle = (MetroFramework.MetroColorStyle)2;
+                    changeStyle(manager, chosenStyle);
+                    break;
+                case "Silver":
+                    chosenStyle = (MetroFramework.MetroColorStyle)3;
+                    changeStyle(manager, chosenStyle);
+                    break;
+
+                case "Blue":
+                    chosenStyle = (MetroFramework.MetroColorStyle)4;
+                    changeStyle(manager, chosenStyle);
+                    break;
+                case "Green":
+                    chosenStyle = (MetroFramework.MetroColorStyle)5;
+                    changeStyle(manager, chosenStyle);
+                    break;
+                case "Lime":
+                    chosenStyle = (MetroFramework.MetroColorStyle)6;
+                    changeStyle(manager, chosenStyle);
+                    break;
+                case "Teal":
+                    chosenStyle = (MetroFramework.MetroColorStyle)7;
+                    changeStyle(manager, chosenStyle);
+                    break;
+                case "Orange":
+                    chosenStyle = (MetroFramework.MetroColorStyle)8;
+                    changeStyle(manager, chosenStyle);
+                    break;
+                case "Brown":
+                    chosenStyle = (MetroFramework.MetroColorStyle)9;
+                    changeStyle(manager, chosenStyle);
+                    break;
+                case "Pink":
+                    chosenStyle = (MetroFramework.MetroColorStyle)10;
+                    changeStyle(manager, chosenStyle);
+                    break;
+                case "Magenta":
+                    chosenStyle = (MetroFramework.MetroColorStyle)11;
+                    changeStyle(manager, chosenStyle);
+                    break;
+                case "Purple":
+                    chosenStyle = (MetroFramework.MetroColorStyle)12;
+                    changeStyle(manager, chosenStyle);
+                    break;
+                case "Red":
+                    chosenStyle = (MetroFramework.MetroColorStyle)13;
+                    changeStyle(manager, chosenStyle);
+                    break;
+                case "Yellow":
+                    chosenStyle = (MetroFramework.MetroColorStyle)14;
+                    changeStyle(manager, chosenStyle);
+                    break;
+
+            }
+            
+            lees.Close();
+            changeStyle(manager, chosenStyle);
+        }
+
+        public void changeStyle(MetroFramework.Components.MetroStyleManager manager, MetroFramework.MetroColorStyle cl)
+        {
+            manager.Style = cl;
+        }
         public void defTileColors()
         {
             string filename = path + @"\Styles\TileColors\tileColors.txt";
@@ -800,7 +918,7 @@ namespace PschyHealth
             {
                 line = line.Replace(line, "" + styl + "");
                 lees.Close();
-                MessageBox.Show(line);
+              //  MessageBox.Show(line);
                 File_DeleteLine(1, filename);
             }
             

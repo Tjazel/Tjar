@@ -30,6 +30,8 @@ namespace PschyHealth
         protected override void OnLoad(EventArgs e)
         {
             cMethods.readTheme(msmAdBook);
+            cMethods.readStyle(msmAdBook);
+            
 
             //Load the Form At Position of Main Form
             // int WidthOfMain = Application.OpenForms["frmMainPage"].Width;

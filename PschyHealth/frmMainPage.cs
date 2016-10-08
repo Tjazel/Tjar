@@ -20,20 +20,7 @@ namespace PschyHealth
     public partial class frmMainPage : MetroForm
     {
         //Objects van forms
-
-
-
-
-
-
-
-
-
-      
-        
-        
-
-
+        MetroFramework.MetroColorStyle cl = new MetroFramework.MetroColorStyle();
         //Vir die kleur van die tiles op die frmMain
         DevComponents.DotNetBar.Metro.eMetroTileColor el;
 
@@ -96,6 +83,7 @@ namespace PschyHealth
             cMethods.CheckFile(path + @"\Log\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString());
             cMethods.defTileColors();//default tile colors
             cMethods.defTheme();//Default theme
+            cMethods.defStyle();
 
             //Gee elke tile sy unieke kleur
             cMethods.readFromStyleColor(btn_StaffNew);
@@ -118,19 +106,22 @@ namespace PschyHealth
             cMethods.readFromStyleColor(btnInfo);
             cMethods.readFromStyleColor(btnDateAndTime);
             cMethods.readTheme(msmMain);
+            cMethods.readStyle(msmMain);
+            
+
 
             //Clone die themes na elke form toe
-           // cMethods.cloneTheme(this, frmClients);
+            // cMethods.cloneTheme(this, frmClients);
             //cMethods.cloneTheme(this, frmStaff);
-           // cMethods.cloneTheme(this, frmAccounting);
-          //  cMethods.cloneTheme(this, frmPayments);
-           // cMethods.cloneTheme(this, frmMedicalAids);
+            // cMethods.cloneTheme(this, frmAccounting);
+            //  cMethods.cloneTheme(this, frmPayments);
+            // cMethods.cloneTheme(this, frmMedicalAids);
             //cMethods.cloneTheme(this, frmConsultations);
-           // cMethods.cloneTheme(this, frmArchive);
-           // cMethods.cloneTheme(this, frmNotepad);
-           // cMethods.cloneTheme(this, frmAddressBook);
-           // cMethods.cloneTheme(this, frmStatements);
-           // cMethods.cloneTheme(this, frmRecord);
+            // cMethods.cloneTheme(this, frmArchive);
+            // cMethods.cloneTheme(this, frmNotepad);
+            // cMethods.cloneTheme(this, frmAddressBook);
+            // cMethods.cloneTheme(this, frmStatements);
+            // cMethods.cloneTheme(this, frmRecord);
             //cMethods.cloneTheme(this, frmSettings);
 
 
@@ -557,7 +548,7 @@ namespace PschyHealth
 
         private void pbPersonalize_Click(object sender, EventArgs e)
         {
-            ctxPersonalize.Show(pbPersonalize, 0, pbPersonalize.Height);
+            metroCtxPersonalize.Show(pbPersonalize, 0, pbPersonalize.Height);
 
         }
 
@@ -1031,6 +1022,154 @@ namespace PschyHealth
                 frmDiagnosticCodes.Show();
             }
 
+        }
+
+        private void btnEmail_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmEmail")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmEmail frmEmail = new frmEmail();
+                frmEmail.Show();
+            }
+
+        }
+
+      
+
+        private void darkToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cMethods.writeTheme(msmMain, MetroFramework.MetroThemeStyle.Dark);
+            this.Refresh();
+        }
+
+        private void defaultToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cMethods.writeTheme(msmMain, MetroFramework.MetroThemeStyle.Default);
+            this.Refresh();
+        }
+
+        private void blackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)1;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)2;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void silverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)3;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void blueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)4;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void greenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)5;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void limeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)6;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void tealToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)7;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void orangeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)8;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void brownToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)9;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void pinkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)10;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void magentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)11;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void purpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)12;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void redToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)13;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
+        }
+
+        private void yellowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl = (MetroFramework.MetroColorStyle)14;
+            cMethods.writeStyle(msmMain, cl);
+            cMethods.readStyle(msmMain);
+            this.Refresh();
         }
     }
 }
