@@ -101,6 +101,7 @@
             this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
             this.msmClients = new MetroFramework.Components.MetroStyleManager(this.components);
             this.btnArchive = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
@@ -1489,11 +1490,21 @@
             this.btnArchive.UseVisualStyleBackColor = true;
             this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click_1);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(622, 845);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 40);
+            this.button1.TabIndex = 103;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(2304, 1092);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnArchive);
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.metroLabel22);
@@ -1602,5 +1613,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel23;
         private MetroFramework.Controls.MetroComboBox cmbClientReferal;
         private MetroFramework.Controls.MetroComboBox cmbClientLanguage;
+        private System.Windows.Forms.Button button1;
     }
 }

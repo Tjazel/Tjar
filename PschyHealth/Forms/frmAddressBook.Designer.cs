@@ -233,7 +233,7 @@
             // 
             this.btnDeleteAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteAccount.Image")));
             this.btnDeleteAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteAccount.Location = new System.Drawing.Point(463, 729);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(993, 748);
             this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(109, 28);
@@ -246,7 +246,7 @@
             // 
             this.btnUpdateAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateAccount.Image")));
             this.btnUpdateAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateAccount.Location = new System.Drawing.Point(292, 729);
+            this.btnUpdateAccount.Location = new System.Drawing.Point(822, 748);
             this.btnUpdateAccount.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateAccount.Name = "btnUpdateAccount";
             this.btnUpdateAccount.Size = new System.Drawing.Size(109, 28);
@@ -262,7 +262,7 @@
             this.btnAddAcount.ForeColor = System.Drawing.Color.Maroon;
             this.btnAddAcount.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAcount.Image")));
             this.btnAddAcount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddAcount.Location = new System.Drawing.Point(124, 729);
+            this.btnAddAcount.Location = new System.Drawing.Point(654, 748);
             this.btnAddAcount.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddAcount.Name = "btnAddAcount";
             this.btnAddAcount.Size = new System.Drawing.Size(109, 28);

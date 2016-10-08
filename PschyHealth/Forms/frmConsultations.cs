@@ -259,9 +259,6 @@ namespace PschyHealth
 
         }
 
-        private void txtConsultationRatesMinutes_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
