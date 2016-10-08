@@ -106,6 +106,12 @@
     <Compile Include="Forms\frmEmail.Designer.cs">
       <DependentUpon>frmEmail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStatistics.Designer.cs">
+      <DependentUpon>frmStatistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     <EmbeddedResource Include="Forms\frmEmail.resx">
       <DependentUpon>frmEmail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStatistics.resx">
+      <DependentUpon>frmStatistics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMainPage.resx">
       <DependentUpon>frmMainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -437,6 +446,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -83,7 +83,7 @@
             this.mtxb_Password.Location = new System.Drawing.Point(163, 121);
             this.mtxb_Password.MaxLength = 32767;
             this.mtxb_Password.Name = "mtxb_Password";
-            this.mtxb_Password.PasswordChar = '\0';
+            this.mtxb_Password.PasswordChar = '*';
             this.mtxb_Password.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.mtxb_Password.SelectedText = "";
             this.mtxb_Password.SelectionLength = 0;
