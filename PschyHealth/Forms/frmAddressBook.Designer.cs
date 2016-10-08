@@ -29,20 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddressBook));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnRefresh = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSearch = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.cmbAccCriteria = new MetroFramework.Controls.MetroComboBox();
             this.txtAccSearch = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.btnDeleteAccount = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.btnUpdateAccount = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.btnAddAcount = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.mtxb_Remarks = new MetroFramework.Controls.MetroTextBox();
             this.mtxb_Zip = new MetroFramework.Controls.MetroTextBox();
             this.mtxb_Address3 = new MetroFramework.Controls.MetroTextBox();
@@ -73,31 +67,20 @@
             this.pbBack = new System.Windows.Forms.PictureBox();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.msmAdBook = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.btnArchive = new MetroFramework.Controls.MetroButton();
+            this.btnDelete = new MetroFramework.Controls.MetroButton();
+            this.btnUpdate = new MetroFramework.Controls.MetroButton();
+            this.btnAdd = new MetroFramework.Controls.MetroButton();
+            this.btnCancel = new MetroFramework.Controls.MetroButton();
+            this.btnConfirm = new MetroFramework.Controls.MetroButton();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msmAdBook)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(1303, 175);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(45, 36);
-            this.btnRefresh.TabIndex = 96;
-            this.btnRefresh.UseCustomForeColor = true;
-            this.btnRefresh.UseSelectable = true;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnSearch);
             this.groupBox3.Controls.Add(this.cmbAccCriteria);
             this.groupBox3.Controls.Add(this.txtAccSearch);
             this.groupBox3.Controls.Add(this.metroLabel17);
@@ -109,22 +92,6 @@
             this.groupBox3.TabIndex = 95;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search Address Book";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(569, 23);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(45, 36);
-            this.btnSearch.TabIndex = 47;
-            this.btnSearch.UseCustomForeColor = true;
-            this.btnSearch.UseSelectable = true;
-            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // cmbAccCriteria
             // 
@@ -138,9 +105,9 @@
             this.cmbAccCriteria.Margin = new System.Windows.Forms.Padding(4);
             this.cmbAccCriteria.Name = "cmbAccCriteria";
             this.cmbAccCriteria.Size = new System.Drawing.Size(187, 30);
-            this.cmbAccCriteria.Style = MetroFramework.MetroColorStyle.Blue;
             this.cmbAccCriteria.TabIndex = 3;
             this.cmbAccCriteria.UseSelectable = true;
+            this.cmbAccCriteria.UseStyleColors = true;
             // 
             // txtAccSearch
             // 
@@ -158,7 +125,7 @@
             this.txtAccSearch.CustomButton.UseSelectable = true;
             this.txtAccSearch.CustomButton.Visible = false;
             this.txtAccSearch.Lines = new string[0];
-            this.txtAccSearch.Location = new System.Drawing.Point(383, 23);
+            this.txtAccSearch.Location = new System.Drawing.Point(338, 28);
             this.txtAccSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtAccSearch.MaxLength = 32767;
             this.txtAccSearch.Name = "txtAccSearch";
@@ -168,9 +135,9 @@
             this.txtAccSearch.SelectionLength = 0;
             this.txtAccSearch.SelectionStart = 0;
             this.txtAccSearch.Size = new System.Drawing.Size(188, 36);
-            this.txtAccSearch.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccSearch.TabIndex = 2;
             this.txtAccSearch.UseSelectable = true;
+            this.txtAccSearch.UseStyleColors = true;
             this.txtAccSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAccSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -228,50 +195,6 @@
             this.metroGrid1.Size = new System.Drawing.Size(640, 489);
             this.metroGrid1.TabIndex = 94;
             this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // btnDeleteAccount
-            // 
-            this.btnDeleteAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteAccount.Image")));
-            this.btnDeleteAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteAccount.Location = new System.Drawing.Point(993, 748);
-            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDeleteAccount.Name = "btnDeleteAccount";
-            this.btnDeleteAccount.Size = new System.Drawing.Size(109, 28);
-            this.btnDeleteAccount.TabIndex = 93;
-            this.btnDeleteAccount.Text = "Delete";
-            this.btnDeleteAccount.UseSelectable = true;
-            this.btnDeleteAccount.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdateAccount
-            // 
-            this.btnUpdateAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateAccount.Image")));
-            this.btnUpdateAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateAccount.Location = new System.Drawing.Point(822, 748);
-            this.btnUpdateAccount.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUpdateAccount.Name = "btnUpdateAccount";
-            this.btnUpdateAccount.Size = new System.Drawing.Size(109, 28);
-            this.btnUpdateAccount.TabIndex = 92;
-            this.btnUpdateAccount.Text = "Update";
-            this.btnUpdateAccount.UseSelectable = true;
-            this.btnUpdateAccount.UseVisualStyleBackColor = true;
-            // 
-            // btnAddAcount
-            // 
-            this.btnAddAcount.BackColor = System.Drawing.Color.Maroon;
-            this.btnAddAcount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAcount.ForeColor = System.Drawing.Color.Maroon;
-            this.btnAddAcount.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAcount.Image")));
-            this.btnAddAcount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddAcount.Location = new System.Drawing.Point(654, 748);
-            this.btnAddAcount.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddAcount.Name = "btnAddAcount";
-            this.btnAddAcount.Size = new System.Drawing.Size(109, 28);
-            this.btnAddAcount.TabIndex = 91;
-            this.btnAddAcount.Text = "Add";
-            this.btnAddAcount.UseCustomBackColor = true;
-            this.btnAddAcount.UseCustomForeColor = true;
-            this.btnAddAcount.UseSelectable = true;
-            this.btnAddAcount.UseVisualStyleBackColor = false;
             // 
             // mtxb_Remarks
             // 
@@ -887,20 +810,83 @@
             // 
             this.msmAdBook.Owner = this;
             // 
+            // btnArchive
+            // 
+            this.btnArchive.Location = new System.Drawing.Point(1041, 730);
+            this.btnArchive.Name = "btnArchive";
+            this.btnArchive.Size = new System.Drawing.Size(121, 52);
+            this.btnArchive.TabIndex = 119;
+            this.btnArchive.Text = "Archive";
+            this.btnArchive.UseSelectable = true;
+            this.btnArchive.UseStyleColors = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(914, 730);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(121, 52);
+            this.btnDelete.TabIndex = 118;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseSelectable = true;
+            this.btnDelete.UseStyleColors = true;
+            this.btnDelete.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(787, 730);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(121, 52);
+            this.btnUpdate.TabIndex = 117;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseSelectable = true;
+            this.btnUpdate.UseStyleColors = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(655, 730);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(121, 52);
+            this.btnAdd.TabIndex = 116;
+            this.btnAdd.Text = "Add ";
+            this.btnAdd.UseSelectable = true;
+            this.btnAdd.UseStyleColors = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(258, 730);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(121, 52);
+            this.btnCancel.TabIndex = 121;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseSelectable = true;
+            this.btnCancel.UseStyleColors = true;
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Location = new System.Drawing.Point(124, 730);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(121, 52);
+            this.btnConfirm.TabIndex = 120;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseSelectable = true;
+            this.btnConfirm.UseStyleColors = true;
+            // 
             // frmAddressBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2304, 1092);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.btnArchive);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.metroLabel14);
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.pbBack);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.metroGrid1);
-            this.Controls.Add(this.btnDeleteAccount);
-            this.Controls.Add(this.btnUpdateAccount);
-            this.Controls.Add(this.btnAddAcount);
             this.Controls.Add(this.mtxb_Remarks);
             this.Controls.Add(this.mtxb_Zip);
             this.Controls.Add(this.mtxb_Address3);
@@ -943,17 +929,11 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnRefresh;
         private System.Windows.Forms.GroupBox groupBox3;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnSearch;
         private MetroFramework.Controls.MetroComboBox cmbAccCriteria;
         private MetroFramework.Controls.MetroTextBox txtAccSearch;
         private MetroFramework.Controls.MetroLabel metroLabel17;
         private MetroFramework.Controls.MetroGrid metroGrid1;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnDeleteAccount;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnUpdateAccount;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnAddAcount;
         private MetroFramework.Controls.MetroTextBox mtxb_Remarks;
         private MetroFramework.Controls.MetroTextBox mtxb_Zip;
         private MetroFramework.Controls.MetroTextBox mtxb_Address3;
@@ -984,5 +964,11 @@
         private System.Windows.Forms.PictureBox pbBack;
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Components.MetroStyleManager msmAdBook;
+        private MetroFramework.Controls.MetroButton btnArchive;
+        private MetroFramework.Controls.MetroButton btnDelete;
+        private MetroFramework.Controls.MetroButton btnUpdate;
+        private MetroFramework.Controls.MetroButton btnAdd;
+        private MetroFramework.Controls.MetroButton btnCancel;
+        private MetroFramework.Controls.MetroButton btnConfirm;
     }
 }

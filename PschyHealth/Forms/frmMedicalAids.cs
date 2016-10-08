@@ -31,6 +31,7 @@ namespace PschyHealth
         protected override void OnLoad(EventArgs e)
         {
             cMethods.readTheme(msmMedical);
+            cMethods.readStyle(msmMedical);
 
             /*
             //Load the Form At Position of Main Form
@@ -195,15 +196,40 @@ namespace PschyHealth
 
         private void btnMedAdd_Click(object sender, EventArgs e)
         {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", true, true);
-            btnMedAdd.Enabled = false;
-            btnMedDelete.Enabled = false;
-            btnMedUpdate.Enabled = false;
-            button = "add";
+           
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnMedUpdate_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnMedDelete_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void metroTextButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnConfirm_Click_1(object sender, EventArgs e)
         {
             String field;
             String value;
@@ -221,40 +247,61 @@ namespace PschyHealth
                     cMethods.delete("MedicalAid", "Medical_Aid = '" + rowID + "'");
 
             }
-            btnMedAdd.Enabled = true;
-            btnMedDelete.Enabled = true;
-            btnMedUpdate.Enabled = true;
+            btnMedAddi.Enabled = true;
+            btnMedDeletei.Enabled = true;
+            btnMedUpdatei.Enabled = true;
             btnConfirm.Hide();
+            btnCancel.Hide();
             filter();
         }
 
-        private void btnMedUpdate_Click(object sender, EventArgs e)
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            btnCancel.Hide();
+            btnConfirm.Hide();
+        }
+
+        private void btnMedAdd_Click_1(object sender, EventArgs e)
         {
             btnConfirm.Show();
+            btnCancel.Show();
+            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", true, true);
+            btnMedAddi.Enabled = false;
+            btnMedDeletei.Enabled = false;
+            btnMedUpdatei.Enabled = false;
+            button = "add";
+        }
+
+        private void btnMedUpdate_Click_1(object sender, EventArgs e)
+        {
+            btnCancel.Show();
+            btnConfirm.Show();
             cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", true);
-            btnMedAdd.Enabled = false;
-            btnMedDelete.Enabled = false;
-            btnMedUpdate.Enabled = false;
+            btnMedAddi.Enabled = false;
+            btnMedDeletei.Enabled = false;
+            btnMedUpdatei.Enabled = false;
             button = "edit";
         }
 
-        private void btnMedDelete_Click(object sender, EventArgs e)
+        private void btnMedDelete_Click_1(object sender, EventArgs e)
         {
             btnConfirm.Show();
+            btnCancel.Show();
             cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
-            btnMedAdd.Enabled = false;
-            btnMedDelete.Enabled = false;
-            btnMedUpdate.Enabled = false;
+            btnMedAddi.Enabled = false;
+            btnMedDeletei.Enabled = false;
+            btnMedUpdatei.Enabled = false;
             button = "delete";
         }
 
-        private void btnArchive_Click(object sender, EventArgs e)
+        private void btnMedArchive_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
+            btnCancel.Show();
             cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
-            btnMedAdd.Enabled = false;
-            btnMedDelete.Enabled = false;
-            btnMedUpdate.Enabled = false;
+            btnMedAddi.Enabled = false;
+            btnMedDeletei.Enabled = false;
+            btnMedUpdatei.Enabled = false;
             button = "archive";
         }
     }

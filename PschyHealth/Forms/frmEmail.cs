@@ -33,6 +33,7 @@ namespace PschyHealth
         protected override void OnLoad(EventArgs e)
         {
             cMethods.readTheme(msmEmail);
+            cMethods.readStyle(msmEmail);
 
         }
         
