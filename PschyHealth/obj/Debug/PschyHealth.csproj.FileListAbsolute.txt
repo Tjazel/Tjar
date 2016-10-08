@@ -876,3 +876,8 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar7\PschyHealth\obj\Debug\PschyHealth.cs
 C:\Users\Johann\Source\Repos\TjarFin\PschyHealth\obj\Debug\PschyHealth.frmICD10Codes.resources
 C:\Users\Johann\Source\Repos\TjarFin\PschyHealth\obj\Debug\PschyHealth.Forms.frmDiagnosticCodes.resources
 C:\Users\Johann\Source\Repos\TjarFin\PschyHealth\obj\Debug\PschyHealth.frmEmail.resources
+C:\Users\Nithin\Desktop\Jarvis\Tjar\Tjar\PschyHealth\obj\Debug\PschyHealth.Forms.frmDiagnosticCodes.resources
+C:\Users\Nithin\Desktop\Jarvis\Tjar\Tjar\PschyHealth\obj\Debug\PschyHealth.frmEmail.resources
+C:\Users\Jaco\Source\Repos\Tjar6\PschyHealth\obj\Debug\PschyHealth.Forms.frmDiagnosticCodes.resources
+C:\Users\Jaco\Source\Repos\Tjar6\PschyHealth\obj\Debug\PschyHealth.frmEmail.resources
+C:\Users\Jaco\Source\Repos\Tjar6\PschyHealth\obj\Debug\PschyHealth.frmStatistics.resources

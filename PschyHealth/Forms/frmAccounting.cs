@@ -196,6 +196,7 @@ namespace PschyHealth
 
         private void btnAddAcount_Click(object sender, EventArgs e)
         {
+            btnCancel.Show();
             btnConfirm.Show();
             cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", true,true);
             btnDeleteAccount.Enabled = false;
@@ -228,6 +229,7 @@ namespace PschyHealth
             btnUpdateAccount.Enabled = true;
             btnAddAcount.Enabled = true;
             btnConfirm.Hide();
+            btnCancel.Hide();
             filter();
         }
 
@@ -240,6 +242,17 @@ namespace PschyHealth
             btnAddAcount.Enabled = false;
             button = "archive";
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Hide();
+            btnCancel.Hide();
+            btnDeleteAccount.Enabled = true;
+            btnUpdateAccount.Enabled = true;
+            btnAddAcount.Enabled = true;
+        }
+
+       
     }
 }
 

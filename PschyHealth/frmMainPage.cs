@@ -55,8 +55,8 @@ namespace PschyHealth
         protected override void OnLoad(EventArgs e)
         {
            
-           // ucToolbar uc = new ucToolbar();
-          //  this.Controls.Add(uc);
+            ucToolbar uc = new ucToolbar();
+            this.Controls.Add(uc);
 
             string path = Environment.GetFolderPath(
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
@@ -131,9 +131,9 @@ namespace PschyHealth
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           // ucToolbar uc = new ucToolbar();
-           // uc.Dock = DockStyle.Fill;
-           // this.Controls.Add(uc);
+            ucToolbar uc = new ucToolbar();
+            uc.Dock = DockStyle.Fill;
+            this.Controls.Add(uc);
 
             String path = Environment.GetFolderPath(
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
@@ -1170,6 +1170,28 @@ namespace PschyHealth
             cMethods.writeStyle(msmMain, cl);
             cMethods.readStyle(msmMain);
             this.Refresh();
+        }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmStatistics")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmStatistics frmStatistics = new frmStatistics();
+                frmStatistics.Show();
+            }
         }
     }
 }
