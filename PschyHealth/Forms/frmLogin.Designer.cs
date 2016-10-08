@@ -129,7 +129,6 @@
             // 
             // metroLink1
             // 
-            this.metroLink1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroLink1.DisplayFocus = true;
             this.metroLink1.Location = new System.Drawing.Point(229, 150);
             this.metroLink1.Name = "metroLink1";
@@ -139,7 +138,6 @@
             this.metroLink1.Text = "Forgot Password";
             this.metroLink1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroLink1.UseSelectable = true;
-            this.metroLink1.UseStyleColors = true;
             this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // pictureBox3

@@ -111,9 +111,28 @@ namespace PschyHealth.Forms
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            breaking = true;
+            double total = 0;
             String fields, values;
             cMethods.getFieldsAndValues(out fields, out values, groupBox1, "Payments");
             cMethods.add("Payments", fields, values);
+            MetroGrid dgv = new MetroGrid();
+            dgv.Parent = this;
+            dgv.Hide();
+            cMethods.filterDGV(dgvPayments, "Consultations", " WHERE Surname = '" + cmbPaymentsClient_Surname.Text + "' AND Name = '" + cmbPaymentsClient_Name.Text + "'");
+            for(int i = 0; i < dgvPayments.RowCount - 1; i++)
+            {
+                total += cMethods.calculateAmount(dgvPayments.Rows[i].Cells["Consultation"].Value.ToString(), dgv);
+            }
+            cMethods.fillDGV(dgvPayments, "Payments");
+            cMethods.fillDGV(dgvConsultations, "Consultations");
+            if(total == 0)
+            {
+                cMethods.edit("Clients", "Date_Finished", "'" + DateTime.Now.ToShortDateString() + "'", " Surname = '" + cmbPaymentsClient_Surname.Text + "' AND First_Name = '" + cmbPaymentsClient_Name.Text + "'");
+                cMethods.edit("Consultations", "Date_Finished", "'" + DateTime.Now.ToShortDateString() + "'", " Surname = '" + cmbPaymentsClient_Surname.Text + "' AND Name = '" + cmbPaymentsClient_Name.Text + "'");
+                cMethods.edit("Payments", "Date_Finished", "'" + DateTime.Now.ToShortDateString() + "'", " Client_Surname = '" + cmbPaymentsClient_Surname.Text + "' AND Client_Name = '" + cmbPaymentsClient_Name.Text + "'");
+            }
+            dgv = null;
         }
 
         private void btnArchive_Click(object sender, EventArgs e)

@@ -58,9 +58,15 @@ namespace PschyHealth
         }
         public void silentFillDGV(MetroGrid dgv, String sTable, String filter, Boolean silent)
         {
-            pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
-            uc.Dock = DockStyle.Fill;
-     //       this.Controls.Add(uc);
+            /*pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
+            uc.Hide();
+            uc.Parent = frmMainPage.ActiveForm;
+            uc.Left = 500;
+            uc.Top = 300;
+            uc.Show();
+            uc.BringToFront();*/
+            
+            Thread.Sleep(100);
             try
             {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter();
@@ -85,6 +91,7 @@ namespace PschyHealth
                 dgv.BringToFront();
                 //dgv.AutoResizeColumns(
                 //DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+                //uc.Hide();
             }
             catch (SqlException e)
             {

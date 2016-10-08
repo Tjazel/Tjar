@@ -38,7 +38,6 @@ namespace PschyHealth
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
-       
         {
             //Uncomment om die kode te gebruik ir login..... Ctrl + K, Ctrl + U
             //Boolean loginCorrect = false;
@@ -62,6 +61,6 @@ namespace PschyHealth
            
         }
 
-        
+
     }
 }

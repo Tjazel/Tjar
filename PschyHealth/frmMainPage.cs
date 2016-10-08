@@ -55,8 +55,8 @@ namespace PschyHealth
         protected override void OnLoad(EventArgs e)
         {
            
-            ucToolbar uc = new ucToolbar();
-            this.Controls.Add(uc);
+           // ucToolbar uc = new ucToolbar();
+          //  this.Controls.Add(uc);
 
             string path = Environment.GetFolderPath(
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
@@ -77,6 +77,7 @@ namespace PschyHealth
             cMethods.CheckFolder(path + @"\Archive\StatementsArchive");
             cMethods.CheckFolder(path + @"\Archive\ClientArchive");
             cMethods.CheckFolder(path + @"\Archive\StaffArchive");
+            cMethods.CheckFolder(path + @"\Archive\PaymentsArchive");
             cMethods.CheckFolder(path + @"\Archive\AccountingArchive");
             cMethods.CheckFolder(path + @"\Archive\ConsultationsArchive");
             cMethods.CheckFile(path + @"\Log\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString());
@@ -130,9 +131,9 @@ namespace PschyHealth
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ucToolbar uc = new ucToolbar();
-            uc.Dock = DockStyle.Fill;
-            this.Controls.Add(uc);
+           // ucToolbar uc = new ucToolbar();
+           // uc.Dock = DockStyle.Fill;
+           // this.Controls.Add(uc);
 
             String path = Environment.GetFolderPath(
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";

@@ -221,11 +221,11 @@ namespace PschyHealth
                 String rowID = dgvStaff[0, selectedIndex].Value.ToString();
                 cMethods.getFieldsAndValues(out field, out value, groupBox1, "Staff");
                 if (button == "add")
-                    cMethods.add("dgvStaff", field, value);
+                    cMethods.add("Staff", field, value);
                 else if (button == "edit")
-                    cMethods.edit("dgvStaff", field, value, " ID = '" + dgvStaff.Rows[selectedIndex].Cells["ID"].Value.ToString() + "'");
+                    cMethods.edit("Staff", field, value, " ID = '" + dgvStaff.Rows[selectedIndex].Cells["ID"].Value.ToString() + "'");
                 else if (button == "delete")
-                    cMethods.delete("dgvStaff", "ID = '" + rowID + "'");
+                    cMethods.delete("Staff", "ID = '" + rowID + "'");
 
             }
             btnStaffAdd.Enabled = true;
@@ -244,5 +244,7 @@ namespace PschyHealth
             btnStaffUpdate.Enabled = false;
             button = "archive";
         }
+
+       
     }
 }
