@@ -34,6 +34,7 @@ namespace PschyHealth
         protected override void OnLoad(EventArgs e)
         {
             cMethods.readTheme(msmClients);
+            cMethods.readStyle(msmClients);
            //Load the Form At Position of Main Form
             //int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
            // int HeightofMain = Application.OpenForms["frmMainPage"].Height;
@@ -254,5 +255,7 @@ namespace PschyHealth
             btnDeleteClient.Enabled = false;
             button = "archive";
         }
+
+        
     }
 }

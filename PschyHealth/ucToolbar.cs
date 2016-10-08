@@ -237,7 +237,9 @@ namespace PschyHealth
 
         private void pbMinimize_Click(object sender, EventArgs e)
         {
+            _frmMain.Height = 50;
             _frmMain.WindowState =FormWindowState.Minimized;
+            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)

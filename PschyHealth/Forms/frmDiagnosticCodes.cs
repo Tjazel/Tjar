@@ -31,6 +31,7 @@ namespace PschyHealth.Forms
         protected override void OnLoad(EventArgs e)
         {
             cMethods.readTheme(msmDiagnostic);
+            cMethods.readStyle(msmDiagnostic);
 
             /*
             //Load the Form At Position of Main Form
