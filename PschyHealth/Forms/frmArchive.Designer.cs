@@ -64,7 +64,7 @@
             ">",
             "<",
             "null"});
-            this.cmbFolder.Location = new System.Drawing.Point(385, 184);
+            this.cmbFolder.Location = new System.Drawing.Point(311, 184);
             this.cmbFolder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbFolder.Name = "cmbFolder";
             this.cmbFolder.Size = new System.Drawing.Size(179, 30);
@@ -81,7 +81,7 @@
             ">",
             "<",
             "null"});
-            this.cmbFile.Location = new System.Drawing.Point(600, 184);
+            this.cmbFile.Location = new System.Drawing.Point(496, 184);
             this.cmbFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbFile.Name = "cmbFile";
             this.cmbFile.Size = new System.Drawing.Size(200, 30);
@@ -101,7 +101,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(828, 184);
+            this.metroButton1.Location = new System.Drawing.Point(722, 184);
             this.metroButton1.Margin = new System.Windows.Forms.Padding(4);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(100, 30);
@@ -116,6 +116,7 @@
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.Location = new System.Drawing.Point(591, 64);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(600, 0, 600, 0);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(75, 25);
             this.metroLabel1.TabIndex = 66;
@@ -137,7 +138,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(385, 148);
+            this.metroLabel2.Location = new System.Drawing.Point(311, 148);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(96, 20);
             this.metroLabel2.TabIndex = 100;
@@ -146,7 +147,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(600, 148);
+            this.metroLabel3.Location = new System.Drawing.Point(496, 148);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(78, 20);
             this.metroLabel3.TabIndex = 101;

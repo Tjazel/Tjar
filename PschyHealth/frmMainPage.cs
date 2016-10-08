@@ -55,8 +55,8 @@ namespace PschyHealth
         protected override void OnLoad(EventArgs e)
         {
            
-            ucToolbar uc = new ucToolbar();
-            this.Controls.Add(uc);
+           // ucToolbar uc = new ucToolbar();
+          //  this.Controls.Add(uc);
 
             string path = Environment.GetFolderPath(
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
@@ -131,9 +131,9 @@ namespace PschyHealth
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ucToolbar uc = new ucToolbar();
-            uc.Dock = DockStyle.Fill;
-            this.Controls.Add(uc);
+           // ucToolbar uc = new ucToolbar();
+           // uc.Dock = DockStyle.Fill;
+           // this.Controls.Add(uc);
 
             String path = Environment.GetFolderPath(
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";

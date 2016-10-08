@@ -33,6 +33,7 @@ namespace PschyHealth
         {
 
             cMethods.readTheme(msmConsult);
+            cMethods.readStyle(msmConsult);
             /*
             //Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
