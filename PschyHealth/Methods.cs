@@ -68,7 +68,8 @@ namespace PschyHealth
             uc.Show();
             uc.BringToFront();
 
-            await Task.Delay(200);
+            await Task.Delay(100);
+            Thread.Sleep(1000);
             try
             {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter();
@@ -94,6 +95,8 @@ namespace PschyHealth
                 //dgv.AutoResizeColumns(
                 //DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
                 uc.Hide();
+                uc.SendToBack();
+                uc = null;
             }
             catch (SqlException e)
             {
