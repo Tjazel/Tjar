@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmToDoList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
@@ -54,9 +54,6 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.btnDeleteAccount = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.btnUpdateAccount = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.btnAddAcount = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.dgvAccount = new MetroFramework.Controls.MetroGrid();
             this.btnRefresh = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -66,6 +63,12 @@
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.pbBack = new System.Windows.Forms.PictureBox();
             this.msmToDo = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.btnStaffArchive = new MetroFramework.Controls.MetroButton();
+            this.btnStaffDelete = new MetroFramework.Controls.MetroButton();
+            this.btnStaffUpdate = new MetroFramework.Controls.MetroButton();
+            this.btnStaffAdd = new MetroFramework.Controls.MetroButton();
+            this.btnCancel = new MetroFramework.Controls.MetroButton();
+            this.btnConfirm = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
@@ -407,50 +410,6 @@
             this.metroLabel1.TabIndex = 67;
             this.metroLabel1.Text = "Number:";
             // 
-            // btnDeleteAccount
-            // 
-            this.btnDeleteAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteAccount.Image")));
-            this.btnDeleteAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteAccount.Location = new System.Drawing.Point(1000, 692);
-            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDeleteAccount.Name = "btnDeleteAccount";
-            this.btnDeleteAccount.Size = new System.Drawing.Size(115, 28);
-            this.btnDeleteAccount.TabIndex = 88;
-            this.btnDeleteAccount.Text = "Delete";
-            this.btnDeleteAccount.UseSelectable = true;
-            this.btnDeleteAccount.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdateAccount
-            // 
-            this.btnUpdateAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateAccount.Image")));
-            this.btnUpdateAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateAccount.Location = new System.Drawing.Point(864, 692);
-            this.btnUpdateAccount.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUpdateAccount.Name = "btnUpdateAccount";
-            this.btnUpdateAccount.Size = new System.Drawing.Size(115, 28);
-            this.btnUpdateAccount.TabIndex = 87;
-            this.btnUpdateAccount.Text = "Update";
-            this.btnUpdateAccount.UseSelectable = true;
-            this.btnUpdateAccount.UseVisualStyleBackColor = true;
-            // 
-            // btnAddAcount
-            // 
-            this.btnAddAcount.BackColor = System.Drawing.Color.Maroon;
-            this.btnAddAcount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAcount.ForeColor = System.Drawing.Color.Maroon;
-            this.btnAddAcount.Image = ((System.Drawing.Image)(resources.GetObject("btnAddAcount.Image")));
-            this.btnAddAcount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddAcount.Location = new System.Drawing.Point(723, 692);
-            this.btnAddAcount.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddAcount.Name = "btnAddAcount";
-            this.btnAddAcount.Size = new System.Drawing.Size(115, 28);
-            this.btnAddAcount.TabIndex = 86;
-            this.btnAddAcount.Text = "Add";
-            this.btnAddAcount.UseCustomBackColor = true;
-            this.btnAddAcount.UseCustomForeColor = true;
-            this.btnAddAcount.UseSelectable = true;
-            this.btnAddAcount.UseVisualStyleBackColor = false;
-            // 
             // dgvAccount
             // 
             this.dgvAccount.AllowUserToOrderColumns = true;
@@ -459,23 +418,23 @@
             this.dgvAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAccount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvAccount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAccount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAccount.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvAccount.EnableHeadersVisualStyles = false;
             this.dgvAccount.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvAccount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -483,14 +442,14 @@
             this.dgvAccount.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAccount.Name = "dgvAccount";
             this.dgvAccount.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvAccount.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAccount.Size = new System.Drawing.Size(943, 496);
@@ -622,20 +581,83 @@
             // 
             this.msmToDo.Owner = this;
             // 
+            // btnStaffArchive
+            // 
+            this.btnStaffArchive.Location = new System.Drawing.Point(1123, 711);
+            this.btnStaffArchive.Name = "btnStaffArchive";
+            this.btnStaffArchive.Size = new System.Drawing.Size(121, 52);
+            this.btnStaffArchive.TabIndex = 119;
+            this.btnStaffArchive.Text = "Archive";
+            this.btnStaffArchive.UseSelectable = true;
+            this.btnStaffArchive.UseStyleColors = true;
+            // 
+            // btnStaffDelete
+            // 
+            this.btnStaffDelete.Location = new System.Drawing.Point(996, 711);
+            this.btnStaffDelete.Name = "btnStaffDelete";
+            this.btnStaffDelete.Size = new System.Drawing.Size(121, 52);
+            this.btnStaffDelete.TabIndex = 118;
+            this.btnStaffDelete.Text = "Delete";
+            this.btnStaffDelete.UseSelectable = true;
+            this.btnStaffDelete.UseStyleColors = true;
+            // 
+            // btnStaffUpdate
+            // 
+            this.btnStaffUpdate.Location = new System.Drawing.Point(864, 711);
+            this.btnStaffUpdate.Name = "btnStaffUpdate";
+            this.btnStaffUpdate.Size = new System.Drawing.Size(121, 52);
+            this.btnStaffUpdate.TabIndex = 117;
+            this.btnStaffUpdate.Text = "Update ";
+            this.btnStaffUpdate.UseSelectable = true;
+            this.btnStaffUpdate.UseStyleColors = true;
+            // 
+            // btnStaffAdd
+            // 
+            this.btnStaffAdd.Location = new System.Drawing.Point(737, 711);
+            this.btnStaffAdd.Name = "btnStaffAdd";
+            this.btnStaffAdd.Size = new System.Drawing.Size(121, 52);
+            this.btnStaffAdd.TabIndex = 116;
+            this.btnStaffAdd.Text = "Add";
+            this.btnStaffAdd.UseSelectable = true;
+            this.btnStaffAdd.UseStyleColors = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(318, 618);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(121, 52);
+            this.btnCancel.TabIndex = 121;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseSelectable = true;
+            this.btnCancel.UseStyleColors = true;
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Location = new System.Drawing.Point(136, 618);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(121, 52);
+            this.btnConfirm.TabIndex = 120;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseSelectable = true;
+            this.btnConfirm.UseStyleColors = true;
+            // 
             // frmToDoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2777, 970);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.btnStaffArchive);
+            this.Controls.Add(this.btnStaffDelete);
+            this.Controls.Add(this.btnStaffUpdate);
+            this.Controls.Add(this.btnStaffAdd);
             this.Controls.Add(this.pbBack);
             this.Controls.Add(this.dgvAccount);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.metroTextBox5);
             this.Controls.Add(this.metroLabel10);
-            this.Controls.Add(this.btnDeleteAccount);
-            this.Controls.Add(this.btnUpdateAccount);
-            this.Controls.Add(this.btnAddAcount);
             this.Controls.Add(this.metroTextBox4);
             this.Controls.Add(this.metroCheckBox2);
             this.Controls.Add(this.metroCheckBox1);
@@ -674,9 +696,6 @@
 
         private MetroFramework.Controls.MetroTextBox metroTextBox5;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnDeleteAccount;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnUpdateAccount;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnAddAcount;
         private MetroFramework.Controls.MetroTextBox metroTextBox4;
         private MetroFramework.Controls.MetroCheckBox metroCheckBox2;
         private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
@@ -705,5 +724,11 @@
         private MetroFramework.Controls.MetroLabel metroLabel17;
         private System.Windows.Forms.PictureBox pbBack;
         private MetroFramework.Components.MetroStyleManager msmToDo;
+        private MetroFramework.Controls.MetroButton btnStaffArchive;
+        private MetroFramework.Controls.MetroButton btnStaffDelete;
+        private MetroFramework.Controls.MetroButton btnStaffUpdate;
+        private MetroFramework.Controls.MetroButton btnStaffAdd;
+        private MetroFramework.Controls.MetroButton btnCancel;
+        private MetroFramework.Controls.MetroButton btnConfirm;
     }
 }

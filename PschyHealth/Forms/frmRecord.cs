@@ -45,6 +45,7 @@ namespace PschyHealth.Forms
         {
 
             cMethods.readTheme(msmRecording);
+            cMethods.readStyle(msmRecording);
             /*
             //Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;

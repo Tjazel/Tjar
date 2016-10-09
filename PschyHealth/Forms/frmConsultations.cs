@@ -187,6 +187,7 @@ namespace PschyHealth
         private void btnAdd_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
+            btnCancel.Show();
             cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", true, true);
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
@@ -197,6 +198,7 @@ namespace PschyHealth
         private void btnEdit_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
+            btnCancel.Show();
             cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", true);
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
@@ -207,6 +209,7 @@ namespace PschyHealth
         private void btnDelete_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
+            btnCancel.Show();
             cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", false);
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
@@ -220,6 +223,37 @@ namespace PschyHealth
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtConsultationRatesAssesment_type_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnArchive_Click_1(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            btnCancel.Show();
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", false);
+            btnAdd.Enabled = false;
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            button = "archive";
+        }
+
+        private void btnConfirm_Click_1(object sender, EventArgs e)
         {
             String field;
             String value;
@@ -241,27 +275,17 @@ namespace PschyHealth
             btnEdit.Enabled = true;
             btnAdd.Enabled = true;
             btnConfirm.Hide();
+            btnCancel.Hide();
             filter();
         }
 
-        private void btnArchive_Click(object sender, EventArgs e)
+        private void btnCancel_Click_1(object sender, EventArgs e)
         {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", false);
+            btnCancel.Hide();
+            btnConfirm.Hide();
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
-            button = "archive";
-        }
-
-        private void txtConsultationRatesAssesment_type_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtConsultationRatesMinutes_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

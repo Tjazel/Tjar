@@ -12,6 +12,9 @@ using System.Windows.Forms;
 using System.Speech.Recognition;
 using System.Speech.Synthesis;
 using MetroFramework.Controls;
+using System.Threading;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 
 
@@ -34,9 +37,10 @@ namespace PschyHealth
             this.StyleManager = msmMain;
             timer1.Start();
 
-
-
         }
+        [DllImport("user32.dll")]
+        static extern IntPtr setParent(IntPtr hwc, IntPtr hwp);
+        
 
 
 
@@ -55,8 +59,8 @@ namespace PschyHealth
         protected override void OnLoad(EventArgs e)
         {
            
-           // ucToolbar uc = new ucToolbar();
-          //  this.Controls.Add(uc);
+            ucToolbar uc = new ucToolbar();
+            this.Controls.Add(uc);
 
             string path = Environment.GetFolderPath(
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
@@ -131,9 +135,9 @@ namespace PschyHealth
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           // ucToolbar uc = new ucToolbar();
-           // uc.Dock = DockStyle.Fill;
-           // this.Controls.Add(uc);
+            ucToolbar uc = new ucToolbar();
+            uc.Dock = DockStyle.Fill;
+            this.Controls.Add(uc);
 
             String path = Environment.GetFolderPath(
             Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
@@ -1170,6 +1174,36 @@ namespace PschyHealth
             cMethods.writeStyle(msmMain, cl);
             cMethods.readStyle(msmMain);
             this.Refresh();
+        }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+
+            bool IsOpen = false;
+            FormCollection fc = Application.OpenForms;
+            foreach (Form f in fc)
+            {
+                if (f.Name == "frmStatistics")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmStatistics frmStatistics = new frmStatistics();
+                frmStatistics.Show();
+            }
+        }
+
+        private void btnCalender_Click(object sender, EventArgs e)
+        {
+           // Process p = Process.Start(@"‪C:\Users\Jaco\Desktop\Calendar - Shortcut.lnk");
+            Thread.Sleep(100000000);
+            p.WaitForInputIdle();
+            setParent(p.MainWindowHandle, this.Handle);
         }
     }
 }
