@@ -1298,7 +1298,7 @@ namespace PschyHealth
                     current = obj.Name.Substring(extra2.Length);
                     
                     fields += current + ",";
-                    if (current == "Amount"))
+                    if (current == "Amount")
                         values += obj.Text + ",";
                     else
                         values += "'" +obj.Text + "',";
