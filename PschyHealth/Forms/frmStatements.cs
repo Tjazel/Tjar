@@ -13,11 +13,13 @@ using System.IO;
 using System.Globalization;
 using Microsoft.Office.Interop.Word;
 using System.Threading;
+using System.Diagnostics;
 
 namespace PschyHealth
 {
     public partial class frmStatements : MetroForm
     {
+        string filename;
         
 
         Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application();
@@ -298,6 +300,36 @@ namespace PschyHealth
         {
            // if(cmbClient.Items.Count == 0)
               //  cMethods.fillCMBrow(cmbClient, dgvStatements);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.InitialDirectory = Environment.GetFolderPath(
+            Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements";
+            DialogResult dr = openFileDialog1.ShowDialog();
+            string[] s = openFileDialog1.FileName.Split('.');
+            if (dr.ToString() == "OK")
+            {
+                if (s.Length > 1)
+                    if (s[1] == "doc" || s[1] == "docx" || s[1] == "jpg")
+                        filename = openFileDialog1.FileName;
+                    else
+                        MessageBox.Show("Please select doc,docx,jpeg file !!");
+            }
+
+            if (string.IsNullOrEmpty(filename.Trim()))
+            {
+
+                MessageBox.Show("Please Select file.");
+                return;
+            }
+
+            ProcessStartInfo info = new ProcessStartInfo(filename.Trim());
+            info.Verb = "Print";
+            info.CreateNoWindow = true;
+            info.WindowStyle = ProcessWindowStyle.Hidden;
+            Process.Start(info);
         }
     }
 }
