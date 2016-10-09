@@ -209,5 +209,20 @@ namespace PschyHealth.Forms
             //btnKortingAfbetaal.Enabled = false;
             button = "archive";
         }
+
+        private void btnPaymentsAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPaymentsUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPaymentsDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

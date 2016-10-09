@@ -376,6 +376,7 @@ namespace PschyHealth
             }
             catch (ArgumentOutOfRangeException)
             {
+                conn.Close();
                 return;
             }
 
@@ -1159,6 +1160,7 @@ namespace PschyHealth
             }
             catch (SystemException ex)
             {
+                conn.Close();
                 MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
             }
 
@@ -1209,6 +1211,7 @@ namespace PschyHealth
             }
             catch (SystemException ex)
             {
+                conn.Close();
                 MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
             }
         }
@@ -1271,6 +1274,7 @@ namespace PschyHealth
             }
             catch (SystemException ex)
             {
+                conn.Close();
                 MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
             }
         }
@@ -1294,7 +1298,7 @@ namespace PschyHealth
                     current = obj.Name.Substring(extra2.Length);
                     
                     fields += current + ",";
-                    if (current == "Amount")
+                    if (current == "Amount"))
                         values += obj.Text + ",";
                     else
                         values += "'" +obj.Text + "',";
@@ -1306,6 +1310,7 @@ namespace PschyHealth
             }
             catch (ArgumentOutOfRangeException)
             {
+                conn.Close();
                 return;
             }
         }

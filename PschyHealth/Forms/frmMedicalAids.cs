@@ -194,41 +194,6 @@ namespace PschyHealth
             this.Close();
         }
 
-        private void btnMedAdd_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnConfirm_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnMedUpdate_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnMedDelete_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnArchive_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void metroTextButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-          
-        }
-
         private void btnConfirm_Click_1(object sender, EventArgs e)
         {
             String field;
