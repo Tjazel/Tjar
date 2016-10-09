@@ -369,6 +369,7 @@
             this.btnReadMail.Text = "Read my e-mails";
             this.btnReadMail.UseSelectable = true;
             this.btnReadMail.UseStyleColors = true;
+            this.btnReadMail.Click += new System.EventHandler(this.btnReadMail_Click);
             // 
             // frmEmail
             // 

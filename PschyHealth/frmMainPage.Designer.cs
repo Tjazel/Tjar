@@ -423,6 +423,7 @@
             this.btnCalender.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.btnCalender.TitleText = "Calender";
             this.btnCalender.TitleTextFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalender.Click += new System.EventHandler(this.btnCalender_Click);
             this.btnCalender.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCalender_MouseDown);
             // 
             // btnAdressBook

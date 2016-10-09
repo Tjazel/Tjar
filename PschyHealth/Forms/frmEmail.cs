@@ -210,5 +210,10 @@ namespace PschyHealth
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnReadMail_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://accounts.google.com/ServiceLogin?continue=http%3A%2F%2Fmail.google.com%2Fmail%2F%3Fpc%3Den-ha-ssa-ssa-bk-xplatform1&service=mail&dsh=-5045828807217068288#identifier");
+        }
     }
 }

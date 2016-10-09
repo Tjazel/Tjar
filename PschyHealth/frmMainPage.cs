@@ -12,6 +12,9 @@ using System.Windows.Forms;
 using System.Speech.Recognition;
 using System.Speech.Synthesis;
 using MetroFramework.Controls;
+using System.Threading;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 
 
@@ -34,9 +37,10 @@ namespace PschyHealth
             this.StyleManager = msmMain;
             timer1.Start();
 
-
-
         }
+        [DllImport("user32.dll")]
+        static extern IntPtr setParent(IntPtr hwc, IntPtr hwp);
+        
 
 
 
@@ -1192,6 +1196,14 @@ namespace PschyHealth
                 frmStatistics frmStatistics = new frmStatistics();
                 frmStatistics.Show();
             }
+        }
+
+        private void btnCalender_Click(object sender, EventArgs e)
+        {
+           // Process p = Process.Start(@"‪C:\Users\Jaco\Desktop\Calendar - Shortcut.lnk");
+            Thread.Sleep(100000000);
+            p.WaitForInputIdle();
+            setParent(p.MainWindowHandle, this.Handle);
         }
     }
 }
