@@ -14,6 +14,7 @@ namespace PschyHealth
     public partial class frmStatistics : MetroForm
     {
         //Constants
+        Methods cMethods = new Methods();
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
         const int AW_HOR_NEGATIVE = 0X2;
@@ -50,9 +51,24 @@ namespace PschyHealth
 
         }
 
-        private void metroTile1_Click(object sender, EventArgs e)
+        private void btnMaandelikseGeld_Click(object sender, EventArgs e)
         {
+            txtStatistics.Text = cMethods.fillText(btnMaandelikseGeld.Text);
+        }
 
+        private void btnGeldvloei_Click(object sender, EventArgs e)
+        {
+            txtStatistics.Text = cMethods.fillText(btnGeldvloei.Text);
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbMic_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

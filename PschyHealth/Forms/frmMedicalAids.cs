@@ -247,9 +247,9 @@ namespace PschyHealth
                     cMethods.delete("MedicalAid", "Medical_Aid = '" + rowID + "'");
 
             }
-            btnMedAddi.Enabled = true;
-            btnMedDeletei.Enabled = true;
-            btnMedUpdatei.Enabled = true;
+            btnMedAdd.Enabled = true;
+            btnMedDelete.Enabled = true;
+            btnMedUpdate.Enabled = true;
             btnConfirm.Hide();
             btnCancel.Hide();
             filter();
@@ -266,9 +266,9 @@ namespace PschyHealth
             btnConfirm.Show();
             btnCancel.Show();
             cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", true, true);
-            btnMedAddi.Enabled = false;
-            btnMedDeletei.Enabled = false;
-            btnMedUpdatei.Enabled = false;
+            btnMedAdd.Enabled = false;
+            btnMedDelete.Enabled = false;
+            btnMedUpdate.Enabled = false;
             button = "add";
         }
 
@@ -277,9 +277,9 @@ namespace PschyHealth
             btnCancel.Show();
             btnConfirm.Show();
             cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", true);
-            btnMedAddi.Enabled = false;
-            btnMedDeletei.Enabled = false;
-            btnMedUpdatei.Enabled = false;
+            btnMedAdd.Enabled = false;
+            btnMedDelete.Enabled = false;
+            btnMedUpdate.Enabled = false;
             button = "edit";
         }
 
@@ -288,9 +288,9 @@ namespace PschyHealth
             btnConfirm.Show();
             btnCancel.Show();
             cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
-            btnMedAddi.Enabled = false;
-            btnMedDeletei.Enabled = false;
-            btnMedUpdatei.Enabled = false;
+            btnMedAdd.Enabled = false;
+            btnMedDelete.Enabled = false;
+            btnMedUpdate.Enabled = false;
             button = "delete";
         }
 
@@ -299,9 +299,9 @@ namespace PschyHealth
             btnConfirm.Show();
             btnCancel.Show();
             cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
-            btnMedAddi.Enabled = false;
-            btnMedDeletei.Enabled = false;
-            btnMedUpdatei.Enabled = false;
+            btnMedAdd.Enabled = false;
+            btnMedDelete.Enabled = false;
+            btnMedUpdate.Enabled = false;
             button = "archive";
         }
     }
