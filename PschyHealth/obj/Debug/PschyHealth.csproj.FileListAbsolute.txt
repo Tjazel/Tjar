@@ -882,3 +882,4 @@ C:\Users\Jaco\Source\Repos\Tjar6\PschyHealth\obj\Debug\PschyHealth.Forms.frmDiag
 C:\Users\Jaco\Source\Repos\Tjar6\PschyHealth\obj\Debug\PschyHealth.frmEmail.resources
 C:\Users\Jaco\Source\Repos\Tjar6\PschyHealth\obj\Debug\PschyHealth.frmStatistics.resources
 C:\Users\Nithin\Desktop\Jarvis\Tjar\Tjar\PschyHealth\obj\Debug\PschyHealth.frmStatistics.resources
+C:\Users\Johann\Source\Repos\TjarFin\PschyHealth\obj\Debug\PschyHealth.frmStatistics.resources

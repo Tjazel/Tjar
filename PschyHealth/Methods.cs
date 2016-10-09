@@ -29,7 +29,7 @@ namespace PschyHealth
     class Methods
     {
         string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment";
-        
+
         String connectionString =
                 "Data Source = jarvisdevelopment.database.windows.net; Initial Catalog =JarvisDev; User ID =ProjectJarvis; Password =JarvisProject2016;";
 
@@ -53,11 +53,14 @@ namespace PschyHealth
 
         public void silentFillDGV(MetroGrid dgv, String sTable, Boolean silent)
         {
-            silentFillDGV(dgv,sTable,"",true);
+            silentFillDGV(dgv, sTable, "", true);
         }
-        public async void silentFillDGV(MetroGrid dgv, String sTable, String filter, Boolean silent)
+
+
+
+        public void silentFillDGV(MetroGrid dgv, String sTable, String filter, Boolean silent)
         {
-            
+
 
             pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
             uc.Hide();
@@ -66,15 +69,15 @@ namespace PschyHealth
             uc.Top = 300;
             uc.Show();
             uc.BringToFront();
-
-            await Task.Delay(100);
+            Application.DoEvents();
+            //await Task.Delay(50);
             Thread.Sleep(1000);
             try
             {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter();
                 BindingSource bindingSource1 = new BindingSource();
 
-                
+
 
                 // Create a new data adapter based on the specified query.
                 dataAdapter = new SqlDataAdapter("SELECT * FROM " + sTable + filter, connectionString);
@@ -94,6 +97,7 @@ namespace PschyHealth
                 //dgv.AutoResizeColumns(
                 //DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
                 uc.Hide();
+
                 uc.SendToBack();
                 uc = null;
             }
@@ -112,7 +116,7 @@ namespace PschyHealth
                             Thread.Sleep(5000);
                             recallFilter(dgv, sTable, filter);
                         }
-                    }           
+                    }
                     else
                     {
                         DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
@@ -127,7 +131,7 @@ namespace PschyHealth
                     Thread.Sleep(5000);
                     recallFilter(dgv, sTable, filter);
                 }
-                
+
 
             }
             catch (Exception e)
@@ -143,7 +147,7 @@ namespace PschyHealth
 
         public string fillText(string buttonText)
         {
-            if (buttonText=="Maandeliks")
+            if (buttonText == "Maandeliks")
             {
                 string good = "";
                 for (int i = 0; i <= 12; i++)
@@ -153,7 +157,7 @@ namespace PschyHealth
                     SqlCommand cmd = new SqlCommand();
                     SqlDataReader reader;
                     cmd.CommandText = "SELECT * FROM Accounting WHERE Date LIKE @P1 AND Type = Income";
-                    cmd.Parameters.AddWithValue("@P1", "*-*"+Convert.ToString(i)+"*");
+                    cmd.Parameters.AddWithValue("@P1", "*-*" + Convert.ToString(i) + "*");
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = conn;
                     conn.Open();
@@ -313,26 +317,30 @@ namespace PschyHealth
                 cmb.Items.Add(dgv.Columns[i].Name);
         }
 
-
-        public void fillCMBrow(MetroComboBox cmb1, MetroComboBox cmb2, MetroGrid dgv)
-        {   
-            if(cmb1 != null)
+        public void fillCMBrow(MetroComboBox cmb1, MetroComboBox cmb2, MetroGrid dgv,String s1, String s2)
+        {
+            if (cmb1 != null)
                 cmb1.Items.Clear();
             if (cmb2 != null)
                 cmb2.Items.Clear();
             for (int i = 0; i < dgv.RowCount - 1; i++)
             {
                 if (cmb1 != null)
-                    cmb1.Items.Add(dgv.Rows[i].Cells["First_Name"].Value.ToString());
+                    cmb1.Items.Add(dgv.Rows[i].Cells[s1].Value.ToString());
                 if (cmb2 != null)
-                    cmb2.Items.Add(dgv.Rows[i].Cells["Surname"].Value.ToString());
+                    cmb2.Items.Add(dgv.Rows[i].Cells[s2].Value.ToString());
             }
+        }
+
+        public void fillCMBrow(MetroComboBox cmb1, MetroComboBox cmb2, MetroGrid dgv)
+        {
+            fillCMBrow(cmb1, cmb2, dgv, "First_Name", "Surname");
         }
         public void fillCMBrow(MetroComboBox cmb, MetroGrid dgv)
         {
             cmb.Items.Clear();
             string entry;
-            for (int i = 0; i < dgv.RowCount-1; i++)
+            for (int i = 0; i < dgv.RowCount - 1; i++)
             {
                 entry = dgv.Rows[i].Cells["Surname"].Value.ToString() + ", " + dgv.Rows[i].Cells["First_Name"].Value.ToString();
                 if (!cmb.Items.Contains(entry))
@@ -412,8 +420,13 @@ namespace PschyHealth
 
         public void Archive(MetroGrid dgv, String table, String field, String crit)
         {
+            Archive(dgv, table, field, crit, 0);
+        }
+
+        public void Archive(MetroGrid dgv, String table, String field, String crit, int month)
+        {
             String arch = "";
-            for(int i = 0; i < dgv.RowCount-1; i++)
+            for (int i = 0; i < dgv.RowCount - 1; i++)
             {
                 if (dgv.Rows[i].Cells[field].Value.ToString() == crit)
                 {
@@ -423,12 +436,12 @@ namespace PschyHealth
                     }
                     arch += "\r\n";
                     WriteFile(Environment.GetFolderPath(
-                    Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + table + @"Archive\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString(), arch);
+                    Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + table + @"Archive\" + DateTime.Now.Year.ToString() + @"-" + (Convert.ToInt16(DateTime.Now.Month.ToString()) - month), arch);
                     delete(table, field + "='" + crit + "'");
                 }
 
             }
-            
+
         }
         public void Archive(MetroGrid dgv, String table, double months)
         {
@@ -457,7 +470,7 @@ namespace PschyHealth
 
         public Boolean validNumber(String txt)
         {
-            string[] valids = { "."};
+            string[] valids = { "." };
             if (txt == String.Concat(txt.Where(Char.IsDigit)))
             {
                 return true;
@@ -482,7 +495,7 @@ namespace PschyHealth
 
         public Boolean validString(String txt)
         {
-            char[] valids = { ' ','.','-' };
+            char[] valids = { ' ', '.', '-' };
             if (txt == String.Concat(txt.Where(Char.IsLetterOrDigit)))
             {
                 return true;
@@ -499,7 +512,7 @@ namespace PschyHealth
                 }
                 return true;
             }
-                
+
         }
 
         public Boolean validDate(String txt)
@@ -519,7 +532,7 @@ namespace PschyHealth
                 if (k > 2)
                     return false;
             }
-            if(dtxt != String.Concat(txt.Where(Char.IsDigit))||(dtxt.Length>8)|| (dtxt.Length < 6))
+            if (dtxt != String.Concat(txt.Where(Char.IsDigit)) || (dtxt.Length > 8) || (dtxt.Length < 6))
             {
                 return false;
             }
@@ -528,7 +541,7 @@ namespace PschyHealth
 
 
         //Main page se tile kleure vind hier plaas
-     
+
         DevComponents.DotNetBar.Metro.MetroTileItem Knoppie = new DevComponents.DotNetBar.Metro.MetroTileItem();
         public void defStyle()
         {
@@ -537,9 +550,9 @@ namespace PschyHealth
             cl = (MetroFramework.MetroColorStyle)4;
             StreamWriter write = File.AppendText(filename);
 
-            if(new FileInfo(filename).Length==0)
+            if (new FileInfo(filename).Length == 0)
             {
-                write.WriteLine(""+cl+"");
+                write.WriteLine("" + cl + "");
                 write.Close();
             }
             else
@@ -548,7 +561,7 @@ namespace PschyHealth
             }
         }
 
-        public void writeStyle( MetroFramework.Components.MetroStyleManager manager, MetroFramework.MetroColorStyle cl)
+        public void writeStyle(MetroFramework.Components.MetroStyleManager manager, MetroFramework.MetroColorStyle cl)
         {
             string filename = path + @"\Styles\style\style.txt";
             string line;
@@ -558,14 +571,14 @@ namespace PschyHealth
             {
                 line = line.Replace(line, "" + cl + "");
                 lees.Close();
-               // MessageBox.Show(line);
+                // MessageBox.Show(line);
                 File_DeleteLine(1, filename);
             }
 
             StreamWriter write = File.AppendText(filename);
             write.WriteLine(line);
             write.Close();
-            
+
         }
 
         public void readStyle(MetroFramework.Components.MetroStyleManager manager)
@@ -575,10 +588,10 @@ namespace PschyHealth
             StreamReader lees = File.OpenText(filename);
             string line = lees.ReadLine();
 
-            
-            
 
-            switch(line)
+
+
+            switch (line)
             {
                 case "Black":
                     chosenStyle = (MetroFramework.MetroColorStyle)1;
@@ -640,7 +653,7 @@ namespace PschyHealth
                     break;
 
             }
-            
+
             lees.Close();
             changeStyle(manager, chosenStyle);
         }
@@ -724,7 +737,7 @@ namespace PschyHealth
             string[] words = new string[2];
             char[] sep = { '/' };
             bool found = false;
-            StreamReader lees; 
+            StreamReader lees;
             string filename = path + @"\Styles\TileColors\tileColors.txt";
 
 
@@ -989,10 +1002,10 @@ namespace PschyHealth
 
         }
 
-        public void changeTheme(MetroFramework.Components.MetroStyleManager manager ,MetroFramework.MetroThemeStyle styl)
+        public void changeTheme(MetroFramework.Components.MetroStyleManager manager, MetroFramework.MetroThemeStyle styl)
         {
             manager.Theme = styl;
-           
+
         }
 
         public void defTheme()
@@ -1005,7 +1018,7 @@ namespace PschyHealth
             {
                 MetroFramework.MetroThemeStyle stylDefault = new MetroFramework.MetroThemeStyle();
                 write.WriteLine("" + stylDefault + "");
-                
+
 
                 write.Close();
             }
@@ -1022,20 +1035,20 @@ namespace PschyHealth
             string line;
             StreamReader lees = File.OpenText(filename);
             line = lees.ReadLine();
-            if(line!=null)
+            if (line != null)
             {
                 line = line.Replace(line, "" + styl + "");
                 lees.Close();
-              //  MessageBox.Show(line);
+                //  MessageBox.Show(line);
                 File_DeleteLine(1, filename);
             }
-            
+
             StreamWriter write = File.AppendText(filename);
             write.WriteLine(line);
             write.Close();
             readTheme(manager);
 
-            
+
         }
 
         public void readTheme(MetroFramework.Components.MetroStyleManager manager)
@@ -1044,11 +1057,11 @@ namespace PschyHealth
             MetroFramework.MetroThemeStyle chosenStyle = new MetroFramework.MetroThemeStyle();
             StreamReader lees = File.OpenText(filename);
             string line = lees.ReadLine();
-            
-            if(line =="Dark")
+
+            if (line == "Dark")
             {
                 chosenStyle = MetroFramework.MetroThemeStyle.Dark;
-            }else
+            } else
             {
                 chosenStyle = MetroFramework.MetroThemeStyle.Default;
             }
@@ -1056,14 +1069,14 @@ namespace PschyHealth
             lees.Close();
         }
 
-        public void cloneTheme(MetroFramework.Forms.MetroForm main,MetroFramework.Forms.MetroForm sub)
+        public void cloneTheme(MetroFramework.Forms.MetroForm main, MetroFramework.Forms.MetroForm sub)
         {
             sub.StyleManager = main.StyleManager;
             main.StyleManager.Clone(sub);
         }
-        
 
-        
+
+
 
         public void copyTemplate(String name, String newName)
         {
@@ -1107,7 +1120,7 @@ namespace PschyHealth
             }
         }
 
-        public void ReplaceBookmarkText(Microsoft.Office.Interop.Word.Document doc,string bookmarkName,string text)
+        public void ReplaceBookmarkText(Microsoft.Office.Interop.Word.Document doc, string bookmarkName, string text)
         {
             if (doc.Bookmarks.Exists(bookmarkName))
             {
@@ -1250,17 +1263,17 @@ namespace PschyHealth
                 string fld;
                 string val;
                 String setString = "";
-                while(field != "")
+                while (field != "")
                 {
                     fld = field.Substring(0, field.IndexOf(","));
                     val = values.Substring(0, values.IndexOf(","));
-                    setString +=  fld + "=" + val + ",";
+                    setString += fld + "=" + val + ",";
 
 
-                    field = field.Substring(field.IndexOf(",")+1);
-                    values = values.Substring(values.IndexOf(",")+1);
+                    field = field.Substring(field.IndexOf(",") + 1);
+                    values = values.Substring(values.IndexOf(",") + 1);
                 }
-                setString = setString.Substring(0, setString.Length-1);
+                setString = setString.Substring(0, setString.Length - 1);
                 conn.Open();
                 using (SqlCommand command = new SqlCommand("UPDATE " + table + " SET " + setString + " WHERE " + crit, conn))
                 {
@@ -1292,14 +1305,14 @@ namespace PschyHealth
                     else
                         goto out2;
                     current = obj.Name.Substring(extra2.Length);
-                    
+
                     fields += current + ",";
                     if (current == "Amount")
                         values += obj.Text + ",";
                     else
-                        values += "'" +obj.Text + "',";
+                        values += "'" + obj.Text + "',";
 
-                out2:;
+                    out2:;
                 }
                 values = values.Substring(0, values.Length - 1);
                 fields = fields.Substring(0, fields.Length - 1);
@@ -1317,7 +1330,7 @@ namespace PschyHealth
                 fillDGV(dgv, "Consultations");
             else
                 filterDGV(dgv, "Consultations", " WHERE Consultation = " + consultation);
-            for(int i = 0; i<dgv.RowCount-1; i++)
+            for (int i = 0; i < dgv.RowCount - 1; i++)
             {
                 worked += Convert.ToDouble(dgv.Rows[i].Cells["Amount"].Value.ToString());
             }
@@ -1334,5 +1347,90 @@ namespace PschyHealth
 
             return worked - payed;
         }
+
+        public String Analysis(String folder1, String folder2, String type, MetroComboBox cmb)
+        {
+            String month;
+            String amount;
+            Double total = 0;
+            String subA="", subB="";
+            String text = "";
+            int f1=0, f2 = 0;
+            if (type == "Tax")
+            {
+                f1 = 4;
+                f2 = 3;
+            }
+            else if (type == "Analysis")
+            {
+                f1 = 9;
+                f2 = 4;
+            }
+            
+            string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + folder1 + "Archive";
+            DirectoryInfo d = new DirectoryInfo(filepath);
+            string filepath2 = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + folder2 + "Archive";
+            DirectoryInfo d2 = new DirectoryInfo(filepath2);
+            foreach (var fle in d.GetFiles())
+            {
+                if (fle.Name.Substring(0, 4) == cmb.Text)
+                {
+                    month = fle.Name.Substring(5,fle.Name.IndexOf(".")-5);
+                    foreach (var fle2 in d2.GetFiles())
+                    {
+                        if(fle.Name == fle2.Name)
+                        {
+                            StreamReader file1 =
+                           new StreamReader(filepath + @"\" + fle.Name);
+                            StreamReader file2 =
+                           new StreamReader(filepath2 + @"\" + fle2.Name);
+
+                            string line;
+                            while ((line = file1.ReadLine()) != null)
+                            {
+                                for (int i = 0; i < f1; i++)
+                                {
+                                    
+                                    line = line.Remove(0, line.IndexOf(";") + 1);
+                                }
+                                amount = line.Substring(0, line.IndexOf(";"));
+                                total += Convert.ToDouble(amount);
+                            }
+                            subA = total + "";
+                            total = 0;
+                            String income = "";
+                            while ((line = file2.ReadLine()) != null)
+                            {
+                                for (int i = 0; i < f2; i++)
+                                {
+                                    if (i == 2)
+                                        income = line.Substring(0, line.IndexOf(";"));
+                                    line = line.Remove(0, line.IndexOf(";") + 1);
+                                }
+                                amount = line.Substring(0, line.IndexOf(";"));
+                                if (income == "Income")
+                                    total -= Convert.ToDouble(amount);
+                                else
+                                    total += Convert.ToDouble(amount);
+                            }
+                            subB = total + "";
+                            total = 0;
+                            if (subA == "")
+                                subA = "0";
+                            if (subB == "")
+                                subB = "0";
+
+                            text += month + "\t" + subA + "\t\t" + subB + "\r\n";
+
+                        }
+                    }
+                    
+                    
+                }
+            }
+            return text;
+        }
+            
+            
     }
 }

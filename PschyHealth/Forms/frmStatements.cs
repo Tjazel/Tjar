@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.IO;
 using System.Globalization;
 using Microsoft.Office.Interop.Word;
+using System.Threading;
 
 namespace PschyHealth
 {
@@ -75,13 +76,14 @@ namespace PschyHealth
             string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\StatementTemplates\";
             DirectoryInfo d = new DirectoryInfo(filepath);
             cmbFormat.Items.Clear();
-                foreach (var file in d.GetFiles())
-                {
-                    cmbFormat.Items.Add(file.Name);
-                }
+            foreach (var file in d.GetFiles())
+            {
+                cmbFormat.Items.Add(file.Name);
+            }
 
 
-                cMethods.fillDGV(dgvStatements, "Clients");
+            cMethods.fillDGV(dgvStatements, "Clients");
+            
             cMethods.fillCMBrow(cmbClient, dgvStatements);
         }
         public frmStatements()
@@ -290,6 +292,12 @@ namespace PschyHealth
         private void cmbFormat_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbClient_Click(object sender, EventArgs e)
+        {
+           // if(cmbClient.Items.Count == 0)
+              //  cMethods.fillCMBrow(cmbClient, dgvStatements);
         }
     }
 }

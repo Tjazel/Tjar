@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.txtStatistics = new MetroFramework.Controls.MetroTextBox();
-            this.btnMaandelikseGeld = new MetroFramework.Controls.MetroTile();
-            this.btnGeldvloei = new MetroFramework.Controls.MetroTile();
+            this.btnTax = new MetroFramework.Controls.MetroTile();
+            this.btnAnalysis = new MetroFramework.Controls.MetroTile();
             this.lblBack = new MetroFramework.Controls.MetroLabel();
             this.pbMic = new System.Windows.Forms.PictureBox();
+            this.cmbYear = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbMic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,10 +43,10 @@
             // 
             // 
             this.txtStatistics.CustomButton.Image = null;
-            this.txtStatistics.CustomButton.Location = new System.Drawing.Point(137, 2);
-            this.txtStatistics.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStatistics.CustomButton.Location = new System.Drawing.Point(183, 2);
+            this.txtStatistics.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtStatistics.CustomButton.Name = "";
-            this.txtStatistics.CustomButton.Size = new System.Drawing.Size(112, 121);
+            this.txtStatistics.CustomButton.Size = new System.Drawing.Size(149, 149);
             this.txtStatistics.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtStatistics.CustomButton.TabIndex = 1;
             this.txtStatistics.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -53,7 +54,7 @@
             this.txtStatistics.CustomButton.Visible = false;
             this.txtStatistics.Lines = new string[0];
             this.txtStatistics.Location = new System.Drawing.Point(165, 63);
-            this.txtStatistics.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStatistics.Margin = new System.Windows.Forms.Padding(2);
             this.txtStatistics.MaxLength = 32767;
             this.txtStatistics.Multiline = true;
             this.txtStatistics.Name = "txtStatistics";
@@ -68,31 +69,31 @@
             this.txtStatistics.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtStatistics.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // btnMaandelikseGeld
+            // btnTax
             // 
-            this.btnMaandelikseGeld.ActiveControl = null;
-            this.btnMaandelikseGeld.Location = new System.Drawing.Point(165, 230);
-            this.btnMaandelikseGeld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnMaandelikseGeld.Name = "btnMaandelikseGeld";
-            this.btnMaandelikseGeld.Size = new System.Drawing.Size(119, 36);
-            this.btnMaandelikseGeld.TabIndex = 1;
-            this.btnMaandelikseGeld.Text = "Maandeliks";
-            this.btnMaandelikseGeld.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnMaandelikseGeld.UseSelectable = true;
-            this.btnMaandelikseGeld.Click += new System.EventHandler(this.btnMaandelikseGeld_Click);
+            this.btnTax.ActiveControl = null;
+            this.btnTax.Location = new System.Drawing.Point(165, 230);
+            this.btnTax.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTax.Name = "btnTax";
+            this.btnTax.Size = new System.Drawing.Size(119, 36);
+            this.btnTax.TabIndex = 1;
+            this.btnTax.Text = "Maandeliks";
+            this.btnTax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTax.UseSelectable = true;
+            this.btnTax.Click += new System.EventHandler(this.btnMaandelikseGeld_Click);
             // 
-            // btnGeldvloei
+            // btnAnalysis
             // 
-            this.btnGeldvloei.ActiveControl = null;
-            this.btnGeldvloei.Location = new System.Drawing.Point(381, 230);
-            this.btnGeldvloei.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnGeldvloei.Name = "btnGeldvloei";
-            this.btnGeldvloei.Size = new System.Drawing.Size(119, 36);
-            this.btnGeldvloei.TabIndex = 2;
-            this.btnGeldvloei.Text = "Geldvloei";
-            this.btnGeldvloei.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnGeldvloei.UseSelectable = true;
-            this.btnGeldvloei.Click += new System.EventHandler(this.btnGeldvloei_Click);
+            this.btnAnalysis.ActiveControl = null;
+            this.btnAnalysis.Location = new System.Drawing.Point(381, 230);
+            this.btnAnalysis.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAnalysis.Name = "btnAnalysis";
+            this.btnAnalysis.Size = new System.Drawing.Size(119, 36);
+            this.btnAnalysis.TabIndex = 2;
+            this.btnAnalysis.Text = "Geldvloei";
+            this.btnAnalysis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAnalysis.UseSelectable = true;
+            this.btnAnalysis.Click += new System.EventHandler(this.btnGeldvloei_Click);
             // 
             // lblBack
             // 
@@ -121,19 +122,31 @@
             this.pbMic.TabStop = false;
             this.pbMic.Click += new System.EventHandler(this.pbMic_Click);
             // 
+            // cmbYear
+            // 
+            this.cmbYear.FormattingEnabled = true;
+            this.cmbYear.ItemHeight = 23;
+            this.cmbYear.Location = new System.Drawing.Point(18, 127);
+            this.cmbYear.Name = "cmbYear";
+            this.cmbYear.Size = new System.Drawing.Size(121, 29);
+            this.cmbYear.TabIndex = 104;
+            this.cmbYear.UseSelectable = true;
+            this.cmbYear.UseStyleColors = true;
+            // 
             // frmStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 327);
+            this.Controls.Add(this.cmbYear);
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.pbMic);
-            this.Controls.Add(this.btnGeldvloei);
-            this.Controls.Add(this.btnMaandelikseGeld);
+            this.Controls.Add(this.btnAnalysis);
+            this.Controls.Add(this.btnTax);
             this.Controls.Add(this.txtStatistics);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmStatistics";
-            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Load += new System.EventHandler(this.frmStatistics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbMic)).EndInit();
             this.ResumeLayout(false);
@@ -144,9 +157,10 @@
         #endregion
 
         private MetroFramework.Controls.MetroTextBox txtStatistics;
-        private MetroFramework.Controls.MetroTile btnMaandelikseGeld;
-        private MetroFramework.Controls.MetroTile btnGeldvloei;
+        private MetroFramework.Controls.MetroTile btnTax;
+        private MetroFramework.Controls.MetroTile btnAnalysis;
         private MetroFramework.Controls.MetroLabel lblBack;
         private System.Windows.Forms.PictureBox pbMic;
+        private MetroFramework.Controls.MetroComboBox cmbYear;
     }
 }

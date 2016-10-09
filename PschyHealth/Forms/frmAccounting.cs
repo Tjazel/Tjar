@@ -49,8 +49,19 @@ namespace PschyHealth
             this.WindowState = FormWindowState.Maximized;
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
+            String dt;
 
-           
+
+            cMethods.fillDGV(dgvAccount, "Accounting", cmbAccCriteria);
+            int diff;
+            for (int i = 0; i < dgvAccount.RowCount - 1; i++)
+            {
+                dt = dgvAccount.Rows[i].Cells["Date"].Value.ToString();
+                dt = dt.Substring(0, dt.IndexOf(@"/"));
+                diff = Convert.ToInt16(DateTime.Now.Month.ToString()) - Convert.ToInt16(dt);
+                if (diff > 0)
+                    cMethods.Archive(dgvAccount, "Accounting", "Transaction_Number", dgvAccount.Rows[i].Cells["Transaction_Number"].Value.ToString());
+            }
             cMethods.fillDGV(dgvAccount, "Accounting", cmbAccCriteria);
         }
         public frmAccounting()

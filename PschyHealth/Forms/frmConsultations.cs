@@ -51,7 +51,12 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 
-            cMethods.fillDGV(dgvConsultations, "Consultations", cmbConsultCrit);
+            cMethods.fillDGV(dgvConsultations, "Clients");
+            cMethods.fillCMBrow(cmbConsultationsName, cmbConsultationsSurname, dgvConsultations);
+
+            cMethods.fillDGV(dgvConsultations, "Consultations");
+
+
         }
         public frmConsultations()
         {
@@ -257,6 +262,7 @@ namespace PschyHealth
         {
             String field;
             String value;
+            Boolean b = true;
             if (dgvConsultations.SelectedRows.Count > 0)
             {
                 int selectedIndex = dgvConsultations.SelectedRows[0].Index;
@@ -264,7 +270,21 @@ namespace PschyHealth
                 String rowID = dgvConsultations[0, selectedIndex].Value.ToString();
                 cMethods.getFieldsAndValues(out field, out value, groupBox1, "Cons");
                 if (button == "add")
+                {
+                    String name = cmbConsultationsName.Text;
+                    String surname = cmbConsultationsSurname.Text;
                     cMethods.add("Consultations", field, value);
+                    cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE Name = '" + name + "' AND Surname = '" + surname + "'");
+                    for (int i = 0; i < dgvConsultations.RowCount - 1; i++)
+                        if (dgvConsultations.Rows[i].Cells["Date_Finished"].Value.ToString() != "")
+                            b = false;
+                    if (!b)
+                    {
+                        cMethods.edit("Clients", "Date_Finished", "''", " Surname = '" + surname + "' AND First_Name = '" + name + "'");
+                        cMethods.edit("Consultations", "Date_Finished", "''", " Surname = '" + surname + "' AND Name = '" + name + "'");
+                        cMethods.edit("Payments", "Date_Finished", "''", " Client_Surname = '" + surname + "' AND Client_Name = '" + name + "'");
+                    }
+                }
                 else if (button == "edit")
                     cMethods.edit("Consultations", field, value, " Consultation = '" + dgvConsultations.Rows[selectedIndex].Cells["Consultation"].Value.ToString() + "'");
                 else if (button == "delete")
