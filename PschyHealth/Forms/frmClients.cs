@@ -159,49 +159,13 @@ namespace PschyHealth
                 txtClientsSearch.Enabled = false;
         }
 
-        private void btnDeleteClient_Click(object sender, EventArgs e)
-        {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvClients, "Client", false);
-            btnDeleteClient.Enabled = false;
-            btnUpdateClient.Enabled = false;
-            btnAddNewClient.Enabled = false;
-            btnAddExistingClient.Enabled = false;
-            button = "delete";
-        }
+       
 
-        private void btnUpdateClient_Click(object sender, EventArgs e)
-        {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvClients, "Client", true);
-            btnDeleteClient.Enabled = false;
-            btnUpdateClient.Enabled = false;
-            btnAddNewClient.Enabled = false;
-            btnAddExistingClient.Enabled = false;
-            button = "edit";
-        }
+       
 
-        private void btnAddExistingClient_Click(object sender, EventArgs e)
-        {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvClients, "Client", false, false);
-            btnDeleteClient.Enabled = false;
-            btnUpdateClient.Enabled = false;
-            btnAddNewClient.Enabled = false;
-            btnAddExistingClient.Enabled = false;
-            button = "add";
-        }
+       
 
-        private void btnAddNewClient_Click(object sender, EventArgs e)
-        {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvClients, "Client", true, true);
-            btnDeleteClient.Enabled = false;
-            btnUpdateClient.Enabled = false;
-            btnAddNewClient.Enabled = false;
-            btnAddExistingClient.Enabled = false;
-            button = "add";
-        }
+       
 
         private void btnConfirm_Click_1(object sender, EventArgs e)
         {
@@ -227,11 +191,12 @@ namespace PschyHealth
                 }
 
             }
-            btnDeleteClient.Enabled = true;
-            btnUpdateClient.Enabled = true;
-            btnAddNewClient.Enabled = true;
-            btnAddExistingClient.Enabled = true;
-            btnConfirm.Hide();
+            btnAddExClient.Enabled = true;
+            btnaddNewclient.Enabled = true;
+            btnUpdate.Enabled = true;
+            btnDelete.Enabled = true;
+            btnConnfirm.Hide();
+            btnCanccel.Hide();
             filter();
         }
 
@@ -247,15 +212,136 @@ namespace PschyHealth
 
         private void btnArchive_Click_1(object sender, EventArgs e)
         {
-            btnConfirm.Show();
+            btnConnfirm.Show();
+            btnCanccel.Show();
             cMethods.fillTextbox(groupBox1, dgvClients, "Clients", false);
-            btnAddExistingClient.Enabled = false;
-            btnAddNewClient.Enabled = false;
-            btnUpdateClient.Enabled = false;
-            btnDeleteClient.Enabled = false;
+            btnAddExClient.Enabled = false;
+            btnaddNewclient.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
             button = "archive";
         }
 
-        
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            btnCanccel.Hide();
+            btnConnfirm.Hide();
+            btnAddExClient.Enabled = true; 
+            btnaddNewclient.Enabled = true;
+            btnUpdate.Enabled = true;
+            btnDelete.Enabled = true;
+        }
+
+        private void btnAddExClient_Click(object sender, EventArgs e)
+        {
+            btnConnfirm.Show();
+            btnCanccel.Show();
+            cMethods.fillTextbox(groupBox1, dgvClients, "Client", false, false);
+            btnAddExClient.Enabled = false;
+            btnaddNewclient.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
+            button = "add";
+        }
+
+        private void addNewclient_Click(object sender, EventArgs e)
+        {
+            btnConnfirm.Show();
+            btnCanccel.Show();
+            cMethods.fillTextbox(groupBox1, dgvClients, "Client", true, true);
+            btnAddExClient.Enabled = false;
+            btnaddNewclient.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
+            button = "add";
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            btnConnfirm.Show();
+            btnCanccel.Show();
+            cMethods.fillTextbox(groupBox1, dgvClients, "Client", true);
+            btnAddExClient.Enabled = false;
+            btnaddNewclient.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
+            button = "edit";
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            btnConnfirm.Show();
+            btnCanccel.Show();
+            cMethods.fillTextbox(groupBox1, dgvClients, "Client", false);
+            btnAddExClient.Enabled = false;
+            btnaddNewclient.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
+            button = "delete";
+        }
+
+        private void btnArchiv_Click(object sender, EventArgs e)
+        {
+            btnConnfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvClients, "Clients", false);
+            btnAddExClient.Enabled = false;
+            btnaddNewclient.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
+            button = "archive";
+        }
+
+        private void btnConnfirm_Click(object sender, EventArgs e)
+        {
+            String field, field2;
+            String value, value2;
+            if (dgvClients.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dgvClients.SelectedRows[0].Index;
+
+                String rowID = dgvClients[0, selectedIndex].Value.ToString();
+                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Client");
+                cMethods.getFieldsAndValues(out field2, out value2, gbDependants, "Client");
+                if (button == "add")
+                    cMethods.add("Clients", field + "," + field2, value + "," + value2);
+                else if (button == "edit")
+                    cMethods.edit("Clients", field, value, " ID = '" + dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString() + "'");
+                else if (button == "delete")
+                    cMethods.delete("Clients", "ID = '" + rowID + "'");
+                else if (button == "archive")
+                {
+
+                    cMethods.Archive(dgvClients, "Clients", "ID", dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString());
+                }
+
+            }
+            btnAddExClient.Enabled = true;
+            btnaddNewclient.Enabled = true;
+            btnUpdate.Enabled = true;
+            btnDelete.Enabled = true;
+            btnConnfirm.Hide();
+            btnCanccel.Hide();
+            filter();
+        }
+
+        private void btnCanccel_Click(object sender, EventArgs e)
+        {
+            btnCanccel.Hide();
+            btnConnfirm.Hide();
+            btnAddExClient.Enabled = true;
+            btnaddNewclient.Enabled = true;
+            btnUpdate.Enabled = true;
+            btnDelete.Enabled = true;
+        }
+
+        private void btnAddNewClient_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteClient_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

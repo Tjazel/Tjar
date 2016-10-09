@@ -28,6 +28,7 @@ namespace PschyHealth
         protected override void OnLoad(EventArgs e)
         {
             cMethods.readTheme(msmICD10);
+            cMethods.readStyle(msmICD10);
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 

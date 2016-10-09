@@ -42,9 +42,9 @@
             this.rdPlay = new DevComponents.DotNetBar.RadialMenuItem();
             this.pbWave = new System.Windows.Forms.PictureBox();
             this.lblPlayBack = new MetroFramework.Controls.MetroLabel();
-            this.lblPlayName = new MetroFramework.Controls.MetroLabel();
-            this.label1 = new System.Windows.Forms.Label();
             this.msmRecording = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lblPlayName = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbRec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
@@ -196,27 +196,26 @@
             this.lblPlayBack.UseStyleColors = true;
             this.lblPlayBack.Visible = false;
             // 
-            // lblPlayName
-            // 
-            this.lblPlayName.AutoSize = true;
-            this.lblPlayName.Location = new System.Drawing.Point(202, 11);
-            this.lblPlayName.Name = "lblPlayName";
-            this.lblPlayName.Size = new System.Drawing.Size(0, 0);
-            this.lblPlayName.TabIndex = 53;
-            this.lblPlayName.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(210, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 17);
-            this.label1.TabIndex = 54;
-            this.label1.Text = "Name :";
-            // 
             // msmRecording
             // 
             this.msmRecording.Owner = this;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(213, 8);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(47, 20);
+            this.metroLabel1.TabIndex = 53;
+            this.metroLabel1.Text = "Name";
+            // 
+            // lblPlayName
+            // 
+            this.lblPlayName.AutoSize = true;
+            this.lblPlayName.Location = new System.Drawing.Point(88, 100);
+            this.lblPlayName.Name = "lblPlayName";
+            this.lblPlayName.Size = new System.Drawing.Size(0, 0);
+            this.lblPlayName.TabIndex = 54;
             // 
             // frmRecord
             // 
@@ -224,8 +223,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(472, 253);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPlayName);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.lblPlayBack);
             this.Controls.Add(this.pbWave);
             this.Controls.Add(this.pbRec);
@@ -263,8 +262,8 @@
         private System.Windows.Forms.PictureBox pbRec;
         private System.Windows.Forms.PictureBox pbWave;
         private MetroFramework.Controls.MetroLabel lblPlayBack;
-        private MetroFramework.Controls.MetroLabel lblPlayName;
-        private System.Windows.Forms.Label label1;
         private MetroFramework.Components.MetroStyleManager msmRecording;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblPlayName;
     }
 }

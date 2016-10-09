@@ -35,6 +35,7 @@ namespace PschyHealth
 
 
             cMethods.readTheme(msmToDo);
+            cMethods.readStyle(msmToDo);
             /*Load the Form At Position of Main Form
             int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
             int HeightofMain = Application.OpenForms["frmMainPage"].Height;
@@ -63,6 +64,11 @@ namespace PschyHealth
         private void pbBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAddAcount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

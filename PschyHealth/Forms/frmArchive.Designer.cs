@@ -70,6 +70,7 @@
             this.cmbFolder.Size = new System.Drawing.Size(179, 30);
             this.cmbFolder.TabIndex = 62;
             this.cmbFolder.UseSelectable = true;
+            this.cmbFolder.UseStyleColors = true;
             this.cmbFolder.SelectedIndexChanged += new System.EventHandler(this.cmbFolder_SelectedIndexChanged);
             // 
             // cmbFile
@@ -87,6 +88,7 @@
             this.cmbFile.Size = new System.Drawing.Size(200, 30);
             this.cmbFile.TabIndex = 63;
             this.cmbFile.UseSelectable = true;
+            this.cmbFile.UseStyleColors = true;
             this.cmbFile.SelectedIndexChanged += new System.EventHandler(this.cmbFile_SelectedIndexChanged);
             // 
             // lbArcList
@@ -108,6 +110,7 @@
             this.metroButton1.TabIndex = 65;
             this.metroButton1.Text = "Confirm";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.UseStyleColors = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroLabel1
@@ -121,6 +124,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(75, 25);
             this.metroLabel1.TabIndex = 66;
             this.metroLabel1.Text = "Archive";
+            this.metroLabel1.UseStyleColors = true;
             // 
             // lblBack
             // 
@@ -133,6 +137,7 @@
             this.lblBack.Size = new System.Drawing.Size(51, 25);
             this.lblBack.TabIndex = 99;
             this.lblBack.Text = "Back";
+            this.lblBack.UseStyleColors = true;
             this.lblBack.Click += new System.EventHandler(this.lblBack_Click);
             // 
             // metroLabel2
@@ -143,6 +148,7 @@
             this.metroLabel2.Size = new System.Drawing.Size(96, 20);
             this.metroLabel2.TabIndex = 100;
             this.metroLabel2.Text = "Choose folder";
+            this.metroLabel2.UseStyleColors = true;
             // 
             // metroLabel3
             // 
@@ -152,6 +158,7 @@
             this.metroLabel3.Size = new System.Drawing.Size(78, 20);
             this.metroLabel3.TabIndex = 101;
             this.metroLabel3.Text = "Choose file";
+            this.metroLabel3.UseStyleColors = true;
             // 
             // msmArchive
             // 

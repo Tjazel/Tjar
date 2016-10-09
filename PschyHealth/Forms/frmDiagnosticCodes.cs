@@ -62,5 +62,10 @@ namespace PschyHealth.Forms
         {
             this.Close();
         }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

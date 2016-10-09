@@ -32,40 +32,33 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicalAids));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtMedicalAidsMedical_Aid = new MetroFramework.Controls.MetroTextBox();
             this.txtMedicalAidsTelephone_Number = new MetroFramework.Controls.MetroTextBox();
-            this.btnMedDelete = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.btnMedUpdate = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.btnMedAdd = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.dgvMedicalAid = new MetroFramework.Controls.MetroGrid();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.cmbMedCrit = new MetroFramework.Controls.MetroComboBox();
             this.metroTextBox17 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextButton2 = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblBack = new MetroFramework.Controls.MetroLabel();
             this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
-            this.cmbMedical_AidsOption = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.cmbMedical_AidsPlan = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.pbMic = new System.Windows.Forms.PictureBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.msmMedical = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.btnConfirm = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
-            this.btnArchive = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
+            this.btnCancel = new MetroFramework.Controls.MetroButton();
+            this.btnConfirm = new MetroFramework.Controls.MetroButton();
+            this.btnMedArchive = new MetroFramework.Controls.MetroButton();
+            this.btnMedDelete = new MetroFramework.Controls.MetroButton();
+            this.btnMedUpdate = new MetroFramework.Controls.MetroButton();
+            this.btnMedAdd = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicalAid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMic)).BeginInit();
@@ -105,9 +98,9 @@
             this.txtMedicalAidsMedical_Aid.SelectionLength = 0;
             this.txtMedicalAidsMedical_Aid.SelectionStart = 0;
             this.txtMedicalAidsMedical_Aid.Size = new System.Drawing.Size(195, 23);
-            this.txtMedicalAidsMedical_Aid.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtMedicalAidsMedical_Aid.TabIndex = 7;
             this.txtMedicalAidsMedical_Aid.UseSelectable = true;
+            this.txtMedicalAidsMedical_Aid.UseStyleColors = true;
             this.txtMedicalAidsMedical_Aid.WaterMark = "Enter Medical Aid Name";
             this.txtMedicalAidsMedical_Aid.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtMedicalAidsMedical_Aid.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -136,85 +129,50 @@
             this.txtMedicalAidsTelephone_Number.SelectionLength = 0;
             this.txtMedicalAidsTelephone_Number.SelectionStart = 0;
             this.txtMedicalAidsTelephone_Number.Size = new System.Drawing.Size(195, 23);
-            this.txtMedicalAidsTelephone_Number.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtMedicalAidsTelephone_Number.TabIndex = 6;
             this.txtMedicalAidsTelephone_Number.UseSelectable = true;
+            this.txtMedicalAidsTelephone_Number.UseStyleColors = true;
             this.txtMedicalAidsTelephone_Number.WaterMark = "Enter Number";
             this.txtMedicalAidsTelephone_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtMedicalAidsTelephone_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // btnMedDelete
-            // 
-            this.btnMedDelete.Image = null;
-            this.btnMedDelete.Location = new System.Drawing.Point(886, 631);
-            this.btnMedDelete.Name = "btnMedDelete";
-            this.btnMedDelete.Size = new System.Drawing.Size(118, 23);
-            this.btnMedDelete.TabIndex = 41;
-            this.btnMedDelete.Text = "Delete Medical Aid";
-            this.btnMedDelete.UseSelectable = true;
-            this.btnMedDelete.UseVisualStyleBackColor = true;
-            this.btnMedDelete.Click += new System.EventHandler(this.btnMedDelete_Click);
-            // 
-            // btnMedUpdate
-            // 
-            this.btnMedUpdate.Image = null;
-            this.btnMedUpdate.Location = new System.Drawing.Point(721, 631);
-            this.btnMedUpdate.Name = "btnMedUpdate";
-            this.btnMedUpdate.Size = new System.Drawing.Size(118, 23);
-            this.btnMedUpdate.TabIndex = 40;
-            this.btnMedUpdate.Text = "Update Medical Aid";
-            this.btnMedUpdate.UseSelectable = true;
-            this.btnMedUpdate.UseVisualStyleBackColor = true;
-            this.btnMedUpdate.Click += new System.EventHandler(this.btnMedUpdate_Click);
-            // 
-            // btnMedAdd
-            // 
-            this.btnMedAdd.Image = null;
-            this.btnMedAdd.Location = new System.Drawing.Point(554, 631);
-            this.btnMedAdd.Name = "btnMedAdd";
-            this.btnMedAdd.Size = new System.Drawing.Size(118, 23);
-            this.btnMedAdd.TabIndex = 39;
-            this.btnMedAdd.Text = "Add Medical Aid";
-            this.btnMedAdd.UseSelectable = true;
-            this.btnMedAdd.UseVisualStyleBackColor = true;
-            this.btnMedAdd.Click += new System.EventHandler(this.btnMedAdd_Click);
             // 
             // dgvMedicalAid
             // 
             this.dgvMedicalAid.AllowUserToResizeRows = false;
             this.dgvMedicalAid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMedicalAid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvMedicalAid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dgvMedicalAid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvMedicalAid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMedicalAid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvMedicalAid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMedicalAid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMedicalAid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMedicalAid.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMedicalAid.EnableHeadersVisualStyles = false;
             this.dgvMedicalAid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dgvMedicalAid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dgvMedicalAid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvMedicalAid.Location = new System.Drawing.Point(391, 151);
             this.dgvMedicalAid.Name = "dgvMedicalAid";
+            this.dgvMedicalAid.ReadOnly = true;
             this.dgvMedicalAid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -222,9 +180,8 @@
             this.dgvMedicalAid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvMedicalAid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMedicalAid.Size = new System.Drawing.Size(613, 465);
-            this.dgvMedicalAid.Style = MetroFramework.MetroColorStyle.Blue;
             this.dgvMedicalAid.TabIndex = 37;
-            this.dgvMedicalAid.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dgvMedicalAid.UseStyleColors = true;
             this.dgvMedicalAid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             this.dgvMedicalAid.SelectionChanged += new System.EventHandler(this.dgvMedicalAid_SelectionChanged_1);
             // 
@@ -237,15 +194,7 @@
             this.metroLabel2.Size = new System.Drawing.Size(72, 19);
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "Aid Name:";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(959, 112);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 33);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 42;
-            this.pictureBox2.TabStop = false;
+            this.metroLabel2.UseStyleColors = true;
             // 
             // metroLabel1
             // 
@@ -256,6 +205,7 @@
             this.metroLabel1.Size = new System.Drawing.Size(126, 19);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Telephone number:";
+            this.metroLabel1.UseStyleColors = true;
             // 
             // cmbMedCrit
             // 
@@ -312,17 +262,6 @@
             this.metroLabel18.TabIndex = 32;
             this.metroLabel18.Text = "Search For:";
             // 
-            // metroTextButton2
-            // 
-            this.metroTextButton2.Image = null;
-            this.metroTextButton2.Location = new System.Drawing.Point(391, 631);
-            this.metroTextButton2.Name = "metroTextButton2";
-            this.metroTextButton2.Size = new System.Drawing.Size(118, 23);
-            this.metroTextButton2.TabIndex = 38;
-            this.metroTextButton2.Text = "Search";
-            this.metroTextButton2.UseSelectable = true;
-            this.metroTextButton2.UseVisualStyleBackColor = true;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.metroComboBox1);
@@ -348,7 +287,7 @@
             "<",
             "null"});
             this.metroComboBox1.Location = new System.Drawing.Point(195, 25);
-            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(54, 29);
             this.metroComboBox1.TabIndex = 62;
@@ -368,17 +307,13 @@
             // 
             this.groupBox1.Controls.Add(this.lblBack);
             this.groupBox1.Controls.Add(this.metroLabel22);
-            this.groupBox1.Controls.Add(this.cmbMedical_AidsOption);
-            this.groupBox1.Controls.Add(this.metroLabel4);
-            this.groupBox1.Controls.Add(this.cmbMedical_AidsPlan);
-            this.groupBox1.Controls.Add(this.metroLabel3);
             this.groupBox1.Controls.Add(this.txtMedicalAidsMedical_Aid);
             this.groupBox1.Controls.Add(this.txtMedicalAidsTelephone_Number);
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.metroLabel1);
-            this.groupBox1.Location = new System.Drawing.Point(23, 80);
+            this.groupBox1.Location = new System.Drawing.Point(34, 186);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(350, 258);
+            this.groupBox1.Size = new System.Drawing.Size(350, 115);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             // 
@@ -407,53 +342,11 @@
             this.metroLabel22.TabIndex = 102;
             this.metroLabel22.Text = "Clients";
             // 
-            // cmbMedical_AidsOption
-            // 
-            this.cmbMedical_AidsOption.FormattingEnabled = true;
-            this.cmbMedical_AidsOption.ItemHeight = 23;
-            this.cmbMedical_AidsOption.Location = new System.Drawing.Point(130, 172);
-            this.cmbMedical_AidsOption.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbMedical_AidsOption.Name = "cmbMedical_AidsOption";
-            this.cmbMedical_AidsOption.Size = new System.Drawing.Size(196, 29);
-            this.cmbMedical_AidsOption.TabIndex = 14;
-            this.cmbMedical_AidsOption.UseSelectable = true;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(68, 180);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(55, 19);
-            this.metroLabel4.TabIndex = 13;
-            this.metroLabel4.Text = "Option:";
-            // 
-            // cmbMedical_AidsPlan
-            // 
-            this.cmbMedical_AidsPlan.FormattingEnabled = true;
-            this.cmbMedical_AidsPlan.ItemHeight = 23;
-            this.cmbMedical_AidsPlan.Location = new System.Drawing.Point(130, 114);
-            this.cmbMedical_AidsPlan.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbMedical_AidsPlan.Name = "cmbMedical_AidsPlan";
-            this.cmbMedical_AidsPlan.Size = new System.Drawing.Size(196, 29);
-            this.cmbMedical_AidsPlan.TabIndex = 12;
-            this.cmbMedical_AidsPlan.UseSelectable = true;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(81, 114);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(38, 19);
-            this.metroLabel3.TabIndex = 11;
-            this.metroLabel3.Text = "Plan:";
-            // 
             // pbMic
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
             this.pbMic.Location = new System.Drawing.Point(22, 44);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(2);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbMic.Name = "pbMic";
             this.pbMic.Size = new System.Drawing.Size(28, 22);
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -473,6 +366,7 @@
             this.metroLabel5.Size = new System.Drawing.Size(48, 25);
             this.metroLabel5.TabIndex = 102;
             this.metroLabel5.Text = "Back";
+            this.metroLabel5.UseStyleColors = true;
             this.metroLabel5.Click += new System.EventHandler(this.metroLabel5_Click);
             // 
             // metroLabel6
@@ -486,52 +380,101 @@
             this.metroLabel6.Size = new System.Drawing.Size(113, 25);
             this.metroLabel6.TabIndex = 103;
             this.metroLabel6.Text = "Medical Aids";
+            this.metroLabel6.UseStyleColors = true;
             // 
             // msmMedical
             // 
             this.msmMedical.Owner = this;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(145, 375);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(91, 42);
+            this.btnCancel.TabIndex = 126;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseSelectable = true;
+            this.btnCancel.UseStyleColors = true;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
+            // 
             // btnConfirm
             // 
-            this.btnConfirm.Image = null;
-            this.btnConfirm.Location = new System.Drawing.Point(554, 692);
+            this.btnConfirm.Location = new System.Drawing.Point(44, 375);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(118, 23);
-            this.btnConfirm.TabIndex = 104;
+            this.btnConfirm.Size = new System.Drawing.Size(91, 42);
+            this.btnConfirm.TabIndex = 125;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseSelectable = true;
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.btnConfirm.UseStyleColors = true;
+            this.btnConfirm.Visible = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click_1);
             // 
-            // btnArchive
+            // btnMedArchive
             // 
-            this.btnArchive.Image = ((System.Drawing.Image)(resources.GetObject("btnArchive.Image")));
-            this.btnArchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArchive.Location = new System.Drawing.Point(721, 692);
-            this.btnArchive.Name = "btnArchive";
-            this.btnArchive.Size = new System.Drawing.Size(118, 23);
-            this.btnArchive.TabIndex = 105;
-            this.btnArchive.Text = "Archive";
-            this.btnArchive.UseSelectable = true;
-            this.btnArchive.UseVisualStyleBackColor = true;
-            this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
+            this.btnMedArchive.Location = new System.Drawing.Point(1010, 673);
+            this.btnMedArchive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMedArchive.Name = "btnMedArchive";
+            this.btnMedArchive.Size = new System.Drawing.Size(91, 42);
+            this.btnMedArchive.TabIndex = 131;
+            this.btnMedArchive.Text = "Archive";
+            this.btnMedArchive.UseSelectable = true;
+            this.btnMedArchive.UseStyleColors = true;
+            this.btnMedArchive.Click += new System.EventHandler(this.btnMedArchive_Click);
+            // 
+            // btnMedDelete
+            // 
+            this.btnMedDelete.Location = new System.Drawing.Point(864, 673);
+            this.btnMedDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMedDelete.Name = "btnMedDelete";
+            this.btnMedDelete.Size = new System.Drawing.Size(91, 42);
+            this.btnMedDelete.TabIndex = 130;
+            this.btnMedDelete.Text = "Delete";
+            this.btnMedDelete.UseSelectable = true;
+            this.btnMedDelete.UseStyleColors = true;
+            this.btnMedDelete.Click += new System.EventHandler(this.btnMedDelete_Click_1);
+            // 
+            // btnMedUpdate
+            // 
+            this.btnMedUpdate.Location = new System.Drawing.Point(711, 673);
+            this.btnMedUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMedUpdate.Name = "btnMedUpdate";
+            this.btnMedUpdate.Size = new System.Drawing.Size(91, 42);
+            this.btnMedUpdate.TabIndex = 129;
+            this.btnMedUpdate.Text = "Update ";
+            this.btnMedUpdate.UseSelectable = true;
+            this.btnMedUpdate.UseStyleColors = true;
+            this.btnMedUpdate.Click += new System.EventHandler(this.btnMedUpdate_Click_1);
+            // 
+            // btnMedAdd
+            // 
+            this.btnMedAdd.Location = new System.Drawing.Point(554, 673);
+            this.btnMedAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMedAdd.Name = "btnMedAdd";
+            this.btnMedAdd.Size = new System.Drawing.Size(91, 42);
+            this.btnMedAdd.TabIndex = 128;
+            this.btnMedAdd.Text = "Add new";
+            this.btnMedAdd.UseSelectable = true;
+            this.btnMedAdd.UseStyleColors = true;
+            this.btnMedAdd.Click += new System.EventHandler(this.btnMedAdd_Click_1);
             // 
             // frmMedicalAids
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1378, 780);
-            this.Controls.Add(this.btnArchive);
+            this.Controls.Add(this.btnMedArchive);
+            this.Controls.Add(this.btnMedDelete);
+            this.Controls.Add(this.btnMedUpdate);
+            this.Controls.Add(this.btnMedAdd);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.pbMic);
-            this.Controls.Add(this.btnMedDelete);
-            this.Controls.Add(this.btnMedUpdate);
-            this.Controls.Add(this.btnMedAdd);
             this.Controls.Add(this.dgvMedicalAid);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.metroTextButton2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximumSize = new System.Drawing.Size(2083, 788);
@@ -543,7 +486,6 @@
             this.Load += new System.EventHandler(this.frmMedicalAids_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicalAid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -560,32 +502,27 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroTextBox txtMedicalAidsMedical_Aid;
         private MetroFramework.Controls.MetroTextBox txtMedicalAidsTelephone_Number;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnMedDelete;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnMedUpdate;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnMedAdd;
         private MetroFramework.Controls.MetroGrid dgvMedicalAid;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroComboBox cmbMedCrit;
         private MetroFramework.Controls.MetroTextBox metroTextBox17;
         private MetroFramework.Controls.MetroLabel metroLabel18;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton metroTextButton2;
         private System.Windows.Forms.GroupBox groupBox2;
         private MetroFramework.Controls.MetroLabel metroLabel17;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private System.Windows.Forms.PictureBox pbMic;
-        private MetroFramework.Controls.MetroComboBox cmbMedical_AidsOption;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroComboBox cmbMedical_AidsPlan;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel lblBack;
         private MetroFramework.Controls.MetroLabel metroLabel22;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Components.MetroStyleManager msmMedical;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnConfirm;
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnArchive;
+        private MetroFramework.Controls.MetroButton btnCancel;
+        private MetroFramework.Controls.MetroButton btnConfirm;
+        private MetroFramework.Controls.MetroButton btnMedArchive;
+        private MetroFramework.Controls.MetroButton btnMedDelete;
+        private MetroFramework.Controls.MetroButton btnMedUpdate;
+        private MetroFramework.Controls.MetroButton btnMedAdd;
     }
 }

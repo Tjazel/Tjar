@@ -40,7 +40,6 @@
             this.txtTo = new MetroFramework.Controls.MetroTextBox();
             this.txtCC = new MetroFramework.Controls.MetroTextBox();
             this.txtSubject = new MetroFramework.Controls.MetroTextBox();
-            this.txtMessage = new System.Windows.Forms.TextBox();
             this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
             this.btnSendEmail = new MetroFramework.Controls.MetroButton();
             this.cmb1 = new MetroFramework.Controls.MetroComboBox();
@@ -48,6 +47,8 @@
             this.btnSend = new MetroFramework.Controls.MetroButton();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pbExit = new System.Windows.Forms.PictureBox();
+            this.txtMessage = new MetroFramework.Controls.MetroTextBox();
+            this.btnReadMail = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.msmEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
@@ -237,15 +238,6 @@
             this.txtSubject.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSubject.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txtMessage
-            // 
-            this.txtMessage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMessage.Location = new System.Drawing.Point(106, 331);
-            this.txtMessage.Multiline = true;
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(466, 237);
-            this.txtMessage.TabIndex = 56;
-            // 
             // metroCheckBox1
             // 
             this.metroCheckBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -282,6 +274,7 @@
             this.cmb1.Size = new System.Drawing.Size(191, 30);
             this.cmb1.TabIndex = 60;
             this.cmb1.UseSelectable = true;
+            this.cmb1.UseStyleColors = true;
             this.cmb1.Visible = false;
             this.cmb1.SelectedIndexChanged += new System.EventHandler(this.cmb1_SelectedIndexChanged);
             // 
@@ -336,11 +329,55 @@
             this.pbExit.TabStop = false;
             this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
+            // txtMessage
+            // 
+            // 
+            // 
+            // 
+            this.txtMessage.CustomButton.Image = null;
+            this.txtMessage.CustomButton.Location = new System.Drawing.Point(230, 1);
+            this.txtMessage.CustomButton.Name = "";
+            this.txtMessage.CustomButton.Size = new System.Drawing.Size(235, 235);
+            this.txtMessage.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtMessage.CustomButton.TabIndex = 1;
+            this.txtMessage.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtMessage.CustomButton.UseSelectable = true;
+            this.txtMessage.CustomButton.Visible = false;
+            this.txtMessage.Lines = new string[0];
+            this.txtMessage.Location = new System.Drawing.Point(106, 331);
+            this.txtMessage.MaxLength = 32767;
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.PasswordChar = '\0';
+            this.txtMessage.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMessage.SelectedText = "";
+            this.txtMessage.SelectionLength = 0;
+            this.txtMessage.SelectionStart = 0;
+            this.txtMessage.Size = new System.Drawing.Size(466, 237);
+            this.txtMessage.TabIndex = 65;
+            this.txtMessage.UseSelectable = true;
+            this.txtMessage.UseStyleColors = true;
+            this.txtMessage.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtMessage.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btnReadMail
+            // 
+            this.btnReadMail.Location = new System.Drawing.Point(106, 689);
+            this.btnReadMail.Name = "btnReadMail";
+            this.btnReadMail.Size = new System.Drawing.Size(147, 65);
+            this.btnReadMail.TabIndex = 66;
+            this.btnReadMail.Text = "Read my e-mails";
+            this.btnReadMail.UseSelectable = true;
+            this.btnReadMail.UseStyleColors = true;
+            this.btnReadMail.Click += new System.EventHandler(this.btnReadMail_Click);
+            // 
             // frmEmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 1084);
+            this.Controls.Add(this.btnReadMail);
+            this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.pbMinimize);
             this.Controls.Add(this.pbExit);
             this.Controls.Add(this.btnSend);
@@ -348,7 +385,6 @@
             this.Controls.Add(this.cmb1);
             this.Controls.Add(this.btnSendEmail);
             this.Controls.Add(this.metroCheckBox1);
-            this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.txtSubject);
             this.Controls.Add(this.txtCC);
             this.Controls.Add(this.txtTo);
@@ -377,7 +413,6 @@
         private MetroFramework.Components.MetroStyleManager msmEmail;
         private System.Windows.Forms.PictureBox pbBack;
         private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
-        private System.Windows.Forms.TextBox txtMessage;
         private MetroFramework.Controls.MetroTextBox txtSubject;
         private MetroFramework.Controls.MetroTextBox txtCC;
         private MetroFramework.Controls.MetroTextBox txtTo;
@@ -393,5 +428,7 @@
         private MetroFramework.Controls.MetroButton btnSend;
         private System.Windows.Forms.PictureBox pbMinimize;
         private System.Windows.Forms.PictureBox pbExit;
+        private MetroFramework.Controls.MetroButton btnReadMail;
+        private MetroFramework.Controls.MetroTextBox txtMessage;
     }
 }

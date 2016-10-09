@@ -37,6 +37,7 @@ namespace PschyHealth.Forms
         protected override void OnLoad(EventArgs e)
         {
             cMethods.readTheme(msmPayments);
+            cMethods.readStyle(msmPayments);
 
             /*
             //Load the Form At Position of Main Form
@@ -137,12 +138,7 @@ namespace PschyHealth.Forms
 
         private void btnArchive_Click(object sender, EventArgs e)
         {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvPayments, "Payments", false);
-            btnAfbetaal.Enabled = false;
-            //btnAfgeskryf.Enabled = false;
-            //btnKortingAfbetaal.Enabled = false;
-            button = "archive";
+          
         }
 
         private void cmbPaymentsClient_Surname_SelectedIndexChanged(object sender, EventArgs e)
@@ -202,6 +198,16 @@ namespace PschyHealth.Forms
             dgv.Parent = this;
             dgv.Hide();
             txtPaymentsAmount.Text = "" + cMethods.calculateAmount(txtPaymentsConsultation.Text, dgv);
+        }
+
+        private void btnArchiv_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvPayments, "Payments", false);
+            btnAfbetaal.Enabled = false;
+            //btnAfgeskryf.Enabled = false;
+            //btnKortingAfbetaal.Enabled = false;
+            button = "archive";
         }
     }
 }

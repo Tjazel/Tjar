@@ -52,7 +52,8 @@ namespace PschyHealth
 
         protected override void OnLoad(EventArgs e)
         {
-            cMethods.readTheme(msmStatements); 
+            cMethods.readTheme(msmStatements);
+            cMethods.readStyle(msmStatements);
             /*
 
             //Load the Form At Position of Main Form

@@ -176,36 +176,76 @@ namespace PschyHealth
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
-            btnDeleteAccount.Enabled = false;
-            btnUpdateAccount.Enabled = false;
-            btnAddAcount.Enabled = false;
-            button = "delete";
+           
         }
 
         private void btnUpdateAccount_Click(object sender, EventArgs e)
         {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", true);
-            btnDeleteAccount.Enabled = false;
-            btnUpdateAccount.Enabled = false;
-            btnAddAcount.Enabled = false;
-            button = "edit";
+           
         }
 
         private void btnAddAcount_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnAddAcount_Click_1(object sender, EventArgs e)
+        {
             btnCancel.Show();
             btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", true,true);
+            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", true, true);
             btnDeleteAccount.Enabled = false;
-            btnUpdateAccount.Enabled = false;
+            btnUpdatAccount.Enabled = false;
             btnAddAcount.Enabled = false;
             button = "add";
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void btnUpdatAccount_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", true);
+            btnDeleteAccount.Enabled = false;
+            btnUpdatAccount.Enabled = false;
+            btnAddAcount.Enabled = false;
+            button = "edit";
+        }
+
+        private void btnDeleteAccount_Click_1(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
+            btnDeleteAccount.Enabled = false;
+            btnUpdatAccount.Enabled = false;
+            btnAddAcount.Enabled = false;
+            button = "delete";
+        }
+
+        private void btnArchive_Click_1(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
+            btnDeleteAccount.Enabled = false;
+            btnUpdatAccount.Enabled = false;
+            btnAddAcount.Enabled = false;
+            button = "archive";
+        }
+
+        private void btnConnfirm_Click(object sender, EventArgs e)
         {
             String field;
             String value;
@@ -215,44 +255,32 @@ namespace PschyHealth
 
                 String rowID = dgvAccount[0, selectedIndex].Value.ToString();
                 cMethods.getFieldsAndValues(out field, out value, groupBox1, "Acc");
-                if(button == "add")
+                if (button == "add")
                     cMethods.add("Accounting", field, value);
-                else if(button == "edit")
+                else if (button == "edit")
                     cMethods.edit("Accounting", field, value, " Transaction_Number = '" + dgvAccount.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString() + "'");
-                else if(button == "delete")
+                else if (button == "delete")
                     cMethods.delete("Accounting", "Transaction_Number = '" + rowID + "'");
                 else if (button == "archive")
                     cMethods.Archive(dgvAccount, "Accounting", "Transaction_Number", dgvAccount.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString());
 
             }
             btnDeleteAccount.Enabled = true;
-            btnUpdateAccount.Enabled = true;
+            btnUpdatAccount.Enabled = true;
             btnAddAcount.Enabled = true;
             btnConfirm.Hide();
             btnCancel.Hide();
             filter();
         }
 
-        private void btnArchive_Click(object sender, EventArgs e)
-        {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
-            btnDeleteAccount.Enabled = false;
-            btnUpdateAccount.Enabled = false;
-            btnAddAcount.Enabled = false;
-            button = "archive";
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnCanccel_Click(object sender, EventArgs e)
         {
             btnConfirm.Hide();
             btnCancel.Hide();
             btnDeleteAccount.Enabled = true;
-            btnUpdateAccount.Enabled = true;
+            btnUpdatAccount.Enabled = true;
             btnAddAcount.Enabled = true;
         }
-
-       
     }
 }
 

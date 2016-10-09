@@ -33,6 +33,7 @@ namespace PschyHealth
         protected override void OnLoad(EventArgs e)
         {
             cMethods.readTheme(msmStaff);
+            cMethods.readStyle(msmStaff);
 
             /*
             //Load the Form At Position of Main Form
@@ -181,7 +182,39 @@ namespace PschyHealth
 
         private void btnStaffAdd_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnStaffUpdate_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnStaffDelete_Click(object sender, EventArgs e)
+        {
+           
+        } 
+
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnStaffAdd_Click_1(object sender, EventArgs e)
+        {
             btnConfirm.Show();
+            btnCancel.Show();
             cMethods.fillTextbox(groupBox1, dgvStaff, "Staff", true, true);
             btnStaffAdd.Enabled = false;
             btnStaffDelete.Enabled = false;
@@ -189,9 +222,10 @@ namespace PschyHealth
             button = "add";
         }
 
-        private void btnStaffUpdate_Click(object sender, EventArgs e)
+        private void btnStaffUpdate_Click_1(object sender, EventArgs e)
         {
             btnConfirm.Show();
+            btnCancel.Show();
             cMethods.fillTextbox(groupBox1, dgvStaff, "Staff", true);
             btnStaffAdd.Enabled = false;
             btnStaffDelete.Enabled = false;
@@ -199,18 +233,29 @@ namespace PschyHealth
             button = "edit";
         }
 
-        private void btnStaffDelete_Click(object sender, EventArgs e)
+        private void btnStaffDelete_Click_1(object sender, EventArgs e)
         {
             btnConfirm.Show();
+            btnCancel.Show();
             cMethods.fillTextbox(groupBox1, dgvStaff, "Staff", false);
             btnStaffAdd.Enabled = false;
             btnStaffDelete.Enabled = false;
             btnStaffUpdate.Enabled = false;
             button = "delete";
-        } 
+        }
 
+        private void btnStaffArchive_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            btnCancel.Show();
+            cMethods.fillTextbox(groupBox1, dgvStaff, "Staff", false);
+            btnStaffDelete.Enabled = false;
+            btnStaffAdd.Enabled = false;
+            btnStaffUpdate.Enabled = false;
+            button = "archive";
+        }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void btnConfirm_Click_1(object sender, EventArgs e)
         {
             String field;
             String value;
@@ -232,19 +277,17 @@ namespace PschyHealth
             btnStaffDelete.Enabled = true;
             btnStaffUpdate.Enabled = true;
             btnConfirm.Hide();
+            btnCancel.Hide();
             filter();
         }
 
-        private void btnArchive_Click(object sender, EventArgs e)
+        private void btnCancel_Click_1(object sender, EventArgs e)
         {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvStaff, "Staff", false);
-            btnStaffDelete.Enabled = false;
-            btnStaffAdd.Enabled = false;
-            btnStaffUpdate.Enabled = false;
-            button = "archive";
+            btnStaffAdd.Enabled = true;
+            btnStaffDelete.Enabled = true;
+            btnStaffUpdate.Enabled = true;
+            btnConfirm.Hide();
+            btnCancel.Hide();
         }
-
-       
     }
 }
