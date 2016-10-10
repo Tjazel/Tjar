@@ -130,7 +130,6 @@ namespace PschyHealth
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-
         }
 
 
@@ -292,6 +291,19 @@ namespace PschyHealth
             btnUpdatAccount.Enabled = true;
             btnAddAcount.Enabled = true;
         }
+
+        //private void txtAccTransaction_Number_Leave(object sender, EventArgs e)
+        //{
+        //    if(!cMethods.validString(txtAccTransaction_Number.Text))
+        //    {
+        //        txtAccTransaction_Number.BackColor = Color.Red;
+        //    }
+        //}
+
+        //private void txtAccTransaction_Number_Enter(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }
 

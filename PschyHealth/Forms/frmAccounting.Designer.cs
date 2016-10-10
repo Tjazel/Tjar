@@ -116,9 +116,9 @@
             // 
             // 
             this.txtAccAmount.CustomButton.Image = null;
-            this.txtAccAmount.CustomButton.Location = new System.Drawing.Point(77, 1);
+            this.txtAccAmount.CustomButton.Location = new System.Drawing.Point(103, 1);
             this.txtAccAmount.CustomButton.Name = "";
-            this.txtAccAmount.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtAccAmount.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAccAmount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccAmount.CustomButton.TabIndex = 1;
             this.txtAccAmount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -148,9 +148,9 @@
             // 
             // 
             this.txtAccType.CustomButton.Image = null;
-            this.txtAccType.CustomButton.Location = new System.Drawing.Point(77, 1);
+            this.txtAccType.CustomButton.Location = new System.Drawing.Point(103, 1);
             this.txtAccType.CustomButton.Name = "";
-            this.txtAccType.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtAccType.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAccType.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccType.CustomButton.TabIndex = 1;
             this.txtAccType.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -197,10 +197,10 @@
             this.cmbAccDate.Enabled = false;
             this.cmbAccDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.cmbAccDate.Location = new System.Drawing.Point(185, 93);
-            this.cmbAccDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbAccDate.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAccDate.MinimumSize = new System.Drawing.Size(0, 29);
             this.cmbAccDate.Name = "cmbAccDate";
-            this.cmbAccDate.Size = new System.Drawing.Size(126, 30);
+            this.cmbAccDate.Size = new System.Drawing.Size(126, 29);
             this.cmbAccDate.TabIndex = 65;
             this.cmbAccDate.UseStyleColors = true;
             // 
@@ -210,9 +210,9 @@
             // 
             // 
             this.txtAccDescription.CustomButton.Image = null;
-            this.txtAccDescription.CustomButton.Location = new System.Drawing.Point(77, 1);
+            this.txtAccDescription.CustomButton.Location = new System.Drawing.Point(103, 1);
             this.txtAccDescription.CustomButton.Name = "";
-            this.txtAccDescription.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtAccDescription.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAccDescription.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccDescription.CustomButton.TabIndex = 1;
             this.txtAccDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -242,9 +242,9 @@
             // 
             // 
             this.txtAccTransaction_Number.CustomButton.Image = null;
-            this.txtAccTransaction_Number.CustomButton.Location = new System.Drawing.Point(77, 1);
+            this.txtAccTransaction_Number.CustomButton.Location = new System.Drawing.Point(103, 1);
             this.txtAccTransaction_Number.CustomButton.Name = "";
-            this.txtAccTransaction_Number.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txtAccTransaction_Number.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAccTransaction_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccTransaction_Number.CustomButton.TabIndex = 1;
             this.txtAccTransaction_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -253,7 +253,7 @@
             this.txtAccTransaction_Number.Enabled = false;
             this.txtAccTransaction_Number.Lines = new string[0];
             this.txtAccTransaction_Number.Location = new System.Drawing.Point(185, 35);
-            this.txtAccTransaction_Number.MaxLength = 32767;
+            this.txtAccTransaction_Number.MaxLength = 20;
             this.txtAccTransaction_Number.Name = "txtAccTransaction_Number";
             this.txtAccTransaction_Number.PasswordChar = '\0';
             this.txtAccTransaction_Number.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -268,6 +268,8 @@
             this.txtAccTransaction_Number.WaterMark = "Enter Transaction";
             this.txtAccTransaction_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAccTransaction_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAccTransaction_Number.Enter += new System.EventHandler(this.txtAccTransaction_Number_Enter);
+            this.txtAccTransaction_Number.Leave += new System.EventHandler(this.txtAccTransaction_Number_Leave);
             // 
             // metroLabel7
             // 
@@ -352,7 +354,7 @@
             "<",
             "null"});
             this.metroComboBox1.Location = new System.Drawing.Point(224, 23);
-            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(54, 29);
             this.metroComboBox1.TabIndex = 61;
@@ -384,9 +386,9 @@
             // 
             // 
             this.txtAccSearch.CustomButton.Image = null;
-            this.txtAccSearch.CustomButton.Location = new System.Drawing.Point(85, 1);
+            this.txtAccSearch.CustomButton.Location = new System.Drawing.Point(113, 1);
             this.txtAccSearch.CustomButton.Name = "";
-            this.txtAccSearch.CustomButton.Size = new System.Drawing.Size(20, 22);
+            this.txtAccSearch.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.txtAccSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccSearch.CustomButton.TabIndex = 1;
             this.txtAccSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -413,7 +415,7 @@
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
             this.pbMic.Location = new System.Drawing.Point(22, 37);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(2);
             this.pbMic.Name = "pbMic";
             this.pbMic.Size = new System.Drawing.Size(28, 22);
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -428,7 +430,7 @@
             // btnArchive
             // 
             this.btnArchive.Location = new System.Drawing.Point(625, 622);
-            this.btnArchive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnArchive.Margin = new System.Windows.Forms.Padding(2);
             this.btnArchive.Name = "btnArchive";
             this.btnArchive.Size = new System.Drawing.Size(91, 42);
             this.btnArchive.TabIndex = 115;
@@ -440,7 +442,7 @@
             // btnDeleteAccount
             // 
             this.btnDeleteAccount.Location = new System.Drawing.Point(530, 622);
-            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(91, 42);
             this.btnDeleteAccount.TabIndex = 114;
@@ -452,7 +454,7 @@
             // btnUpdatAccount
             // 
             this.btnUpdatAccount.Location = new System.Drawing.Point(434, 622);
-            this.btnUpdatAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdatAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdatAccount.Name = "btnUpdatAccount";
             this.btnUpdatAccount.Size = new System.Drawing.Size(91, 42);
             this.btnUpdatAccount.TabIndex = 112;
@@ -464,7 +466,7 @@
             // btnAddAcount
             // 
             this.btnAddAcount.Location = new System.Drawing.Point(335, 622);
-            this.btnAddAcount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddAcount.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddAcount.Name = "btnAddAcount";
             this.btnAddAcount.Size = new System.Drawing.Size(91, 42);
             this.btnAddAcount.TabIndex = 111;
@@ -476,7 +478,7 @@
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(122, 518);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(91, 42);
             this.btnCancel.TabIndex = 117;
@@ -488,7 +490,7 @@
             // btnConfirm
             // 
             this.btnConfirm.Location = new System.Drawing.Point(22, 518);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(91, 42);
             this.btnConfirm.TabIndex = 116;
