@@ -349,7 +349,7 @@ namespace PschyHealth
                 txtAccAmount.Text = "";
                 txtAccAmount.WaterMarkColor = Color.Red;
                 txtAccAmount.WaterMark = "Incorrect Format";
-                validFields = cMethods.isNumber(txtAccAmount.Text);
+                validFields = cMethods.isMoney(txtAccAmount.Text);
             }
         }
     }

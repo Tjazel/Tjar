@@ -1357,7 +1357,7 @@ namespace PschyHealth
 
         public bool isMoney(String text)
         {
-            if (Regex.IsMatch(text, @"/^[+-]?((\d+(\.\d*)?)|(\.\d+))$/"))
+            if (Regex.IsMatch(text, @"^[+-]?((\d+(\.\d*)?)|(\.\d+))$"))
                 return true;
             else
             {
