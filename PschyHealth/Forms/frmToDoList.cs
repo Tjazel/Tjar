@@ -59,6 +59,8 @@ namespace PschyHealth
             this.WindowState = FormWindowState.Maximized;
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
+
+           
         }
 
         private void pbBack_Click(object sender, EventArgs e)
@@ -69,6 +71,11 @@ namespace PschyHealth
         private void btnAddAcount_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnStaffAdd_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

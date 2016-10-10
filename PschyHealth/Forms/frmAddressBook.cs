@@ -13,8 +13,9 @@ namespace PschyHealth
 {
     public partial class frmAddressBook : MetroForm
     {
-        String button = "";
         Methods cMethods = new Methods();
+        String button = "";
+        String correctSearch = "";
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
         const int AW_HOR_NEGATIVE = 0X2;
@@ -32,7 +33,7 @@ namespace PschyHealth
         {
             cMethods.readTheme(msmAdBook);
             cMethods.readStyle(msmAdBook);
-
+            
 
             //Load the Form At Position of Main Form
             // int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
@@ -45,13 +46,11 @@ namespace PschyHealth
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
-            this.WindowState = FormWindowState.Maximized;
+           // this.WindowState = FormWindowState.Maximized;
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 
-
-
-
+            cMethods.fillDGV(dgvAddressBook, "AddressBook", cmbAddressBookCriteria);
         }
 
         private void frmAddressBook_Load(object sender, EventArgs e)
@@ -59,8 +58,6 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             uc.Dock = DockStyle.Fill;
             this.Controls.Add(uc);
-            btnCancel.Show();
-            btnConfirm.Show();
         }
 
         private void pbBack_Click(object sender, EventArgs e)
@@ -80,56 +77,69 @@ namespace PschyHealth
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnConfirm_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAddAcount_Click_1(object sender, EventArgs e)
-        {
+            btnConfirm.Show();
             btnCancel.Show();
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox3, dgvAddressBook, "Acc", true, true);
-            btnAdd.Enabled = false;
-            btnDelete.Enabled = false;
-            btnUpdate.Enabled = false;
-            button = "add";
-        }
-
-        private void btnUpdatAccount_Click(object sender, EventArgs e)
-        {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox3, dgvAddressBook, "Acc", true);
-            btnAdd.Enabled = false;
-            btnDelete.Enabled = false;
-            btnUpdate.Enabled = false;
-            button = "edit";
-        }
-
-        private void btnDeleteAccount_Click_1(object sender, EventArgs e)
-        {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox3, dgvAddressBook, "Acc", false);
+            cMethods.fillTextbox(groupBox1, dgvAddressBook, "AddressBook", false);
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
             button = "delete";
         }
 
-        private void btnArchive_Click_1(object sender, EventArgs e)
+        private void txtAddressBookSearch_TextChanged(object sender, EventArgs e)
         {
-            btnConfirm.Show();
-            cMethods.fillTextbox(groupBox3, dgvAddressBook, "Acc", false);
-            btnAdd.Enabled = false;
-            btnDelete.Enabled = false;
-            btnUpdate.Enabled = false;
-            button = "archive";
+            if (txtAddressBookSearch.Text == "")
+                cMethods.fillDGV(dgvAddressBook, "AddressBook");
+            else if (cMethods.validString(txtAddressBookSearch.Text))
+            {
+                filter();
+                correctSearch = txtAddressBookSearch.Text;
+            }
+            else
+            {
+                MessageBox.Show("Only numeric and alphabetic caracters are allowed");
+                txtAddressBookSearch.Text = correctSearch;
+                txtAddressBookSearch.Focus();
+                txtAddressBookSearch.SelectionStart = txtAddressBookSearch.Text.Length;
+            }
         }
 
-        private void btnConnfirm_Click(object sender, EventArgs e)
+        private void dgvAddressBook_SelectionChanged(object sender, EventArgs e)
+        {
+            cMethods.fillTextbox(groupBox1, dgvAddressBook, "AddressBook", false);
+        }
+
+        private void cmbAddressBookCriteria_TextChanged(object sender, EventArgs e)
+        {
+            txtAddressBookSearch.Clear();
+            cmbAddressBookCriteria.SelectedIndex = -1;
+            if (cmbAddressBookCriteria.Text != "")
+            {
+                txtAddressBookSearch.Enabled = true;
+
+            }
+            else
+            {
+                txtAddressBookSearch.Enabled = false;
+                txtAddressBookSearch.Text = "";
+            }
+            cMethods.fillDGV(dgvAddressBook, "AddressBook");
+        }
+
+        private void filter()
+        {
+            if (txtAddressBookSearch.Text != "")
+                if (!cmbAddressBookCriteria.Visible)
+                {
+                    cMethods.filterDGV(dgvAddressBook, "AddressBook", " WHERE " + cmbAddressBookCriteria.Text + " LIKE '%" + txtAddressBookSearch.Text + "%'");
+                }
+                else
+                {
+                    cMethods.filterDGV(dgvAddressBook, "AddressBook", " WHERE " + cmbAddressBookCriteria.Text + " " + txtAddressBookSearch.Text);
+                }
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
             String field;
             String value;
@@ -138,15 +148,13 @@ namespace PschyHealth
                 int selectedIndex = dgvAddressBook.SelectedRows[0].Index;
 
                 String rowID = dgvAddressBook[0, selectedIndex].Value.ToString();
-                cMethods.getFieldsAndValues(out field, out value, groupBox3, "Acc");
+                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Med");
                 if (button == "add")
-                    cMethods.add("Accounting", field, value);
+                    cMethods.add("MedicalAid", field, value);
                 else if (button == "edit")
-                    cMethods.edit("Accounting", field, value, " Transaction_Number = '" + dgvAddressBook.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString() + "'");
+                    cMethods.edit("MedicalAid", field, value, " Medical_Aid = '" + dgvAddressBook.Rows[selectedIndex].Cells["Medical_Aid"].Value.ToString() + "'");
                 else if (button == "delete")
-                    cMethods.delete("Accounting", "Transaction_Number = '" + rowID + "'");
-                else if (button == "archive")
-                    cMethods.Archive(dgvAddressBook, "Accounting", "Transaction_Number", dgvAddressBook.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString());
+                    cMethods.delete("MedicalAid", "Medical_Aid = '" + rowID + "'");
 
             }
             btnAdd.Enabled = true;
@@ -154,31 +162,46 @@ namespace PschyHealth
             btnUpdate.Enabled = true;
             btnConfirm.Hide();
             btnCancel.Hide();
-            //filter();
+            filter();
         }
 
-        private void btnCanccel_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            btnConfirm.Hide();
             btnCancel.Hide();
-            btnAdd.Enabled = true;
-            btnDelete.Enabled = true;
-            btnUpdate.Enabled = true;
+            btnConfirm.Hide();
         }
 
-        //private void filter()
-        //{
-        //    if (txtAddressBookSearch.Text != "")
-        //        if (!metroComboBox1.Visible)
-        //        {
-        //            cMethods.filterDGV(dgvAddressBook, "Accounting", " WHERE " + cmbAddressBookCriteria.Text + " LIKE '%" + txtAddressBookSearch.Text + "%'");
-        //        }
-        //        else
-        //        {
-        //            cMethods.filterDGV(dgvAddressBook, "Accounting", " WHERE " + cmbAddressBookCriteria.Text + " " + metroComboBox1.Text + " " + txtAddressBookSearch.Text);
-        //        }
-        //    else
-        //        cMethods.fillDGV(dgvAddressBook, "Accounting");
-        //}
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            btnCancel.Show();
+            cMethods.fillTextbox(groupBox1, dgvAddressBook, "AddressBook", true, true);
+            btnAdd.Enabled = false;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            button = "add";
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            btnCancel.Show();
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvAddressBook, "AddressBook", true);
+            btnAdd.Enabled = false;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            button = "edit";
+        }
+
+        private void btnArchive_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            btnCancel.Show();
+            cMethods.fillTextbox(groupBox1, dgvAddressBook, "AddressBook", false);
+            btnAdd.Enabled = false;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            button = "archive";
+        }
     }
 }
