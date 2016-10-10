@@ -1203,8 +1203,12 @@ namespace PschyHealth
 
         private void btnCalender_Click(object sender, EventArgs e)
         {
-          //  Process p = Process.Start(@"‪C:\Users\Jaco\Desktop\Calendar - Shortcut.lnk");
-          //  Thread.Sleep(100000000);
+                // Process p = Process.Start(@"‪C:\Users\Tjaart Prinsloo\Desktop\Calendar - Shortcut.lnk");
+                // Thread.Sleep(500);
+
+            Process p = Process.Start(@"C:\Users\Tjaart Prinsloo\Desktop\Calendar - Shortcut.lnk");
+            Thread.Sleep(500); 
+
            // p.WaitForInputIdle();
            // setParent(p.MainWindowHandle, this.Handle);
         }
