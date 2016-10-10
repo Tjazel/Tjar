@@ -991,3 +991,7 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar9\PschyHealth\obj\Debug\PschyHealth.uc
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar9\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar9\PschyHealth\obj\Debug\PschyHealth.exe
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar9\PschyHealth\obj\Debug\PschyHealth.pdb
+C:\Users\Jaco\Source\Repos\Tjar8\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Jaco\Source\Repos\Tjar8\PschyHealth\obj\Debug\PschyHealth.csproj.ResolveComReference.cache
+C:\Users\Jaco\Source\Repos\Tjar8\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Jaco\Source\Repos\Tjar8\PschyHealth\obj\Debug\PschyHealth.pdb
