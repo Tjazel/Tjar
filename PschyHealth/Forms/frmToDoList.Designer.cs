@@ -81,9 +81,9 @@
             // 
             // 
             this.metroTextBox5.CustomButton.Image = null;
-            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(163, 1);
+            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(217, 1);
             this.metroTextBox5.CustomButton.Name = "";
-            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(89, 97);
+            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(119, 119);
             this.metroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox5.CustomButton.TabIndex = 1;
             this.metroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -121,9 +121,9 @@
             // 
             // 
             this.metroTextBox4.CustomButton.Image = null;
-            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(170, 1);
             this.metroTextBox4.CustomButton.Name = "";
-            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox4.CustomButton.TabIndex = 1;
             this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -202,7 +202,7 @@
             this.metroDateTime2.Location = new System.Drawing.Point(102, 203);
             this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime2.Name = "metroDateTime2";
-            this.metroDateTime2.Size = new System.Drawing.Size(193, 30);
+            this.metroDateTime2.Size = new System.Drawing.Size(193, 29);
             this.metroDateTime2.TabIndex = 80;
             // 
             // metroDateTime1
@@ -210,7 +210,7 @@
             this.metroDateTime1.Location = new System.Drawing.Point(102, 167);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
             this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(192, 30);
+            this.metroDateTime1.Size = new System.Drawing.Size(192, 29);
             this.metroDateTime1.TabIndex = 79;
             // 
             // metroTextBox3
@@ -219,9 +219,9 @@
             // 
             // 
             this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(170, 1);
             this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox3.CustomButton.TabIndex = 1;
             this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -249,9 +249,9 @@
             // 
             // 
             this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(170, 1);
             this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox2.CustomButton.TabIndex = 1;
             this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -279,9 +279,9 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(74, 1);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(99, 1);
             this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox1.CustomButton.TabIndex = 1;
             this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -497,9 +497,9 @@
             // 
             // 
             this.txtAccSearch.CustomButton.Image = null;
-            this.txtAccSearch.CustomButton.Location = new System.Drawing.Point(85, 1);
+            this.txtAccSearch.CustomButton.Location = new System.Drawing.Point(113, 1);
             this.txtAccSearch.CustomButton.Name = "";
-            this.txtAccSearch.CustomButton.Size = new System.Drawing.Size(20, 22);
+            this.txtAccSearch.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.txtAccSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccSearch.CustomButton.TabIndex = 1;
             this.txtAccSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -534,7 +534,7 @@
             // 
             this.pbBack.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
             this.pbBack.Location = new System.Drawing.Point(24, 48);
-            this.pbBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbBack.Margin = new System.Windows.Forms.Padding(2);
             this.pbBack.Name = "pbBack";
             this.pbBack.Size = new System.Drawing.Size(28, 22);
             this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -549,7 +549,7 @@
             // btnStaffArchive
             // 
             this.btnStaffArchive.Location = new System.Drawing.Point(842, 578);
-            this.btnStaffArchive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStaffArchive.Margin = new System.Windows.Forms.Padding(2);
             this.btnStaffArchive.Name = "btnStaffArchive";
             this.btnStaffArchive.Size = new System.Drawing.Size(91, 42);
             this.btnStaffArchive.TabIndex = 119;
@@ -560,7 +560,7 @@
             // btnStaffDelete
             // 
             this.btnStaffDelete.Location = new System.Drawing.Point(747, 578);
-            this.btnStaffDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStaffDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnStaffDelete.Name = "btnStaffDelete";
             this.btnStaffDelete.Size = new System.Drawing.Size(91, 42);
             this.btnStaffDelete.TabIndex = 118;
@@ -571,7 +571,7 @@
             // btnStaffUpdate
             // 
             this.btnStaffUpdate.Location = new System.Drawing.Point(648, 578);
-            this.btnStaffUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStaffUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnStaffUpdate.Name = "btnStaffUpdate";
             this.btnStaffUpdate.Size = new System.Drawing.Size(91, 42);
             this.btnStaffUpdate.TabIndex = 117;
@@ -582,18 +582,19 @@
             // btnStaffAdd
             // 
             this.btnStaffAdd.Location = new System.Drawing.Point(553, 578);
-            this.btnStaffAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStaffAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnStaffAdd.Name = "btnStaffAdd";
             this.btnStaffAdd.Size = new System.Drawing.Size(91, 42);
             this.btnStaffAdd.TabIndex = 116;
             this.btnStaffAdd.Text = "Add";
             this.btnStaffAdd.UseSelectable = true;
             this.btnStaffAdd.UseStyleColors = true;
+            this.btnStaffAdd.Click += new System.EventHandler(this.btnStaffAdd_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(238, 502);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(91, 42);
             this.btnCancel.TabIndex = 121;
@@ -604,7 +605,7 @@
             // btnConfirm
             // 
             this.btnConfirm.Location = new System.Drawing.Point(102, 502);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(91, 42);
             this.btnConfirm.TabIndex = 120;
