@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cmbAccCriteria = new MetroFramework.Controls.MetroComboBox();
-            this.txtAccSearch = new MetroFramework.Controls.MetroTextBox();
+            this.cmbAddressBookCriteria = new MetroFramework.Controls.MetroComboBox();
+            this.txtAddressBookSearch = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.dgvAddressBook = new MetroFramework.Controls.MetroGrid();
             this.txtAddressBookZip_Code = new MetroFramework.Controls.MetroTextBox();
@@ -71,81 +71,79 @@
             this.btnAdd = new MetroFramework.Controls.MetroButton();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnConfirm = new MetroFramework.Controls.MetroButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddressBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msmAdBook)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cmbAccCriteria);
-            this.groupBox3.Controls.Add(this.txtAccSearch);
+            this.groupBox3.Controls.Add(this.cmbAddressBookCriteria);
+            this.groupBox3.Controls.Add(this.txtAddressBookSearch);
             this.groupBox3.Controls.Add(this.metroLabel17);
-            this.groupBox3.Location = new System.Drawing.Point(655, 106);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Location = new System.Drawing.Point(491, 86);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(640, 87);
+            this.groupBox3.Size = new System.Drawing.Size(480, 71);
             this.groupBox3.TabIndex = 95;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search Address Book";
             // 
-            // cmbAccCriteria
+            // cmbAddressBookCriteria
             // 
-            this.cmbAccCriteria.FormattingEnabled = true;
-            this.cmbAccCriteria.ItemHeight = 24;
-            this.cmbAccCriteria.Items.AddRange(new object[] {
+            this.cmbAddressBookCriteria.FormattingEnabled = true;
+            this.cmbAddressBookCriteria.ItemHeight = 23;
+            this.cmbAddressBookCriteria.Items.AddRange(new object[] {
             "Name",
             "Email",
             "Tel"});
-            this.cmbAccCriteria.Location = new System.Drawing.Point(104, 28);
-            this.cmbAccCriteria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbAccCriteria.Name = "cmbAccCriteria";
-            this.cmbAccCriteria.Size = new System.Drawing.Size(187, 30);
-            this.cmbAccCriteria.TabIndex = 3;
-            this.cmbAccCriteria.UseSelectable = true;
-            this.cmbAccCriteria.UseStyleColors = true;
+            this.cmbAddressBookCriteria.Location = new System.Drawing.Point(78, 23);
+            this.cmbAddressBookCriteria.Name = "cmbAddressBookCriteria";
+            this.cmbAddressBookCriteria.Size = new System.Drawing.Size(141, 29);
+            this.cmbAddressBookCriteria.TabIndex = 3;
+            this.cmbAddressBookCriteria.UseSelectable = true;
+            this.cmbAddressBookCriteria.UseStyleColors = true;
+            this.cmbAddressBookCriteria.TextChanged += new System.EventHandler(this.cmbAddressBookCriteria_TextChanged);
             // 
-            // txtAccSearch
-            // 
-            // 
+            // txtAddressBookSearch
             // 
             // 
-            this.txtAccSearch.CustomButton.Image = null;
-            this.txtAccSearch.CustomButton.Location = new System.Drawing.Point(205, 2);
-            this.txtAccSearch.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtAccSearch.CustomButton.Name = "";
-            this.txtAccSearch.CustomButton.Size = new System.Drawing.Size(41, 38);
-            this.txtAccSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtAccSearch.CustomButton.TabIndex = 1;
-            this.txtAccSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtAccSearch.CustomButton.UseSelectable = true;
-            this.txtAccSearch.CustomButton.Visible = false;
-            this.txtAccSearch.Lines = new string[0];
-            this.txtAccSearch.Location = new System.Drawing.Point(339, 28);
-            this.txtAccSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtAccSearch.MaxLength = 32767;
-            this.txtAccSearch.Name = "txtAccSearch";
-            this.txtAccSearch.PasswordChar = '\0';
-            this.txtAccSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtAccSearch.SelectedText = "";
-            this.txtAccSearch.SelectionLength = 0;
-            this.txtAccSearch.SelectionStart = 0;
-            this.txtAccSearch.Size = new System.Drawing.Size(188, 36);
-            this.txtAccSearch.TabIndex = 2;
-            this.txtAccSearch.UseSelectable = true;
-            this.txtAccSearch.UseStyleColors = true;
-            this.txtAccSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtAccSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // 
+            this.txtAddressBookSearch.CustomButton.Image = null;
+            this.txtAddressBookSearch.CustomButton.Location = new System.Drawing.Point(113, 1);
+            this.txtAddressBookSearch.CustomButton.Name = "";
+            this.txtAddressBookSearch.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtAddressBookSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookSearch.CustomButton.TabIndex = 1;
+            this.txtAddressBookSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookSearch.CustomButton.UseSelectable = true;
+            this.txtAddressBookSearch.CustomButton.Visible = false;
+            this.txtAddressBookSearch.Lines = new string[0];
+            this.txtAddressBookSearch.Location = new System.Drawing.Point(254, 23);
+            this.txtAddressBookSearch.MaxLength = 32767;
+            this.txtAddressBookSearch.Name = "txtAddressBookSearch";
+            this.txtAddressBookSearch.PasswordChar = '\0';
+            this.txtAddressBookSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookSearch.SelectedText = "";
+            this.txtAddressBookSearch.SelectionLength = 0;
+            this.txtAddressBookSearch.SelectionStart = 0;
+            this.txtAddressBookSearch.Size = new System.Drawing.Size(141, 29);
+            this.txtAddressBookSearch.TabIndex = 2;
+            this.txtAddressBookSearch.UseSelectable = true;
+            this.txtAddressBookSearch.UseStyleColors = true;
+            this.txtAddressBookSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookSearch.TextChanged += new System.EventHandler(this.txtAddressBookSearch_TextChanged);
             // 
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(23, 33);
-            this.metroLabel17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel17.Location = new System.Drawing.Point(17, 27);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(56, 20);
+            this.metroLabel17.Size = new System.Drawing.Size(55, 19);
             this.metroLabel17.TabIndex = 0;
             this.metroLabel17.Text = "Criteria:";
             // 
@@ -156,43 +154,43 @@
             this.dgvAddressBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAddressBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvAddressBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAddressBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAddressBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvAddressBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAddressBook.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAddressBook.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvAddressBook.EnableHeadersVisualStyles = false;
             this.dgvAddressBook.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvAddressBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.dgvAddressBook.Location = new System.Drawing.Point(655, 222);
-            this.dgvAddressBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvAddressBook.Location = new System.Drawing.Point(491, 180);
             this.dgvAddressBook.Name = "dgvAddressBook";
             this.dgvAddressBook.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAddressBook.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAddressBook.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvAddressBook.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvAddressBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAddressBook.Size = new System.Drawing.Size(640, 489);
+            this.dgvAddressBook.Size = new System.Drawing.Size(480, 397);
             this.dgvAddressBook.TabIndex = 94;
             this.dgvAddressBook.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dgvAddressBook.SelectionChanged += new System.EventHandler(this.dgvAddressBook_SelectionChanged);
             // 
             // txtAddressBookZip_Code
             // 
@@ -200,18 +198,16 @@
             // 
             // 
             this.txtAddressBookZip_Code.CustomButton.Image = null;
-            this.txtAddressBookZip_Code.CustomButton.Location = new System.Drawing.Point(563, 2);
-            this.txtAddressBookZip_Code.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookZip_Code.CustomButton.Location = new System.Drawing.Point(314, 1);
             this.txtAddressBookZip_Code.CustomButton.Name = "";
-            this.txtAddressBookZip_Code.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtAddressBookZip_Code.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAddressBookZip_Code.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAddressBookZip_Code.CustomButton.TabIndex = 1;
             this.txtAddressBookZip_Code.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAddressBookZip_Code.CustomButton.UseSelectable = true;
             this.txtAddressBookZip_Code.CustomButton.Visible = false;
             this.txtAddressBookZip_Code.Lines = new string[0];
-            this.txtAddressBookZip_Code.Location = new System.Drawing.Point(124, 527);
-            this.txtAddressBookZip_Code.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookZip_Code.Location = new System.Drawing.Point(74, 372);
             this.txtAddressBookZip_Code.MaxLength = 32767;
             this.txtAddressBookZip_Code.Name = "txtAddressBookZip_Code";
             this.txtAddressBookZip_Code.PasswordChar = '\0';
@@ -219,7 +215,7 @@
             this.txtAddressBookZip_Code.SelectedText = "";
             this.txtAddressBookZip_Code.SelectionLength = 0;
             this.txtAddressBookZip_Code.SelectionStart = 0;
-            this.txtAddressBookZip_Code.Size = new System.Drawing.Size(448, 28);
+            this.txtAddressBookZip_Code.Size = new System.Drawing.Size(336, 23);
             this.txtAddressBookZip_Code.TabIndex = 89;
             this.txtAddressBookZip_Code.UseSelectable = true;
             this.txtAddressBookZip_Code.UseStyleColors = true;
@@ -233,18 +229,16 @@
             // 
             // 
             this.txtAddressBookAddress3.CustomButton.Image = null;
-            this.txtAddressBookAddress3.CustomButton.Location = new System.Drawing.Point(563, 2);
-            this.txtAddressBookAddress3.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookAddress3.CustomButton.Location = new System.Drawing.Point(314, 1);
             this.txtAddressBookAddress3.CustomButton.Name = "";
-            this.txtAddressBookAddress3.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtAddressBookAddress3.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAddressBookAddress3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAddressBookAddress3.CustomButton.TabIndex = 1;
             this.txtAddressBookAddress3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAddressBookAddress3.CustomButton.UseSelectable = true;
             this.txtAddressBookAddress3.CustomButton.Visible = false;
             this.txtAddressBookAddress3.Lines = new string[0];
-            this.txtAddressBookAddress3.Location = new System.Drawing.Point(124, 489);
-            this.txtAddressBookAddress3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookAddress3.Location = new System.Drawing.Point(74, 341);
             this.txtAddressBookAddress3.MaxLength = 32767;
             this.txtAddressBookAddress3.Name = "txtAddressBookAddress3";
             this.txtAddressBookAddress3.PasswordChar = '\0';
@@ -252,7 +246,7 @@
             this.txtAddressBookAddress3.SelectedText = "";
             this.txtAddressBookAddress3.SelectionLength = 0;
             this.txtAddressBookAddress3.SelectionStart = 0;
-            this.txtAddressBookAddress3.Size = new System.Drawing.Size(448, 28);
+            this.txtAddressBookAddress3.Size = new System.Drawing.Size(336, 23);
             this.txtAddressBookAddress3.TabIndex = 88;
             this.txtAddressBookAddress3.UseSelectable = true;
             this.txtAddressBookAddress3.UseStyleColors = true;
@@ -266,18 +260,16 @@
             // 
             // 
             this.txtAddressBookAddress2.CustomButton.Image = null;
-            this.txtAddressBookAddress2.CustomButton.Location = new System.Drawing.Point(563, 2);
-            this.txtAddressBookAddress2.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookAddress2.CustomButton.Location = new System.Drawing.Point(314, 1);
             this.txtAddressBookAddress2.CustomButton.Name = "";
-            this.txtAddressBookAddress2.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtAddressBookAddress2.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAddressBookAddress2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAddressBookAddress2.CustomButton.TabIndex = 1;
             this.txtAddressBookAddress2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAddressBookAddress2.CustomButton.UseSelectable = true;
             this.txtAddressBookAddress2.CustomButton.Visible = false;
             this.txtAddressBookAddress2.Lines = new string[0];
-            this.txtAddressBookAddress2.Location = new System.Drawing.Point(124, 450);
-            this.txtAddressBookAddress2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookAddress2.Location = new System.Drawing.Point(74, 310);
             this.txtAddressBookAddress2.MaxLength = 32767;
             this.txtAddressBookAddress2.Name = "txtAddressBookAddress2";
             this.txtAddressBookAddress2.PasswordChar = '\0';
@@ -285,7 +277,7 @@
             this.txtAddressBookAddress2.SelectedText = "";
             this.txtAddressBookAddress2.SelectionLength = 0;
             this.txtAddressBookAddress2.SelectionStart = 0;
-            this.txtAddressBookAddress2.Size = new System.Drawing.Size(448, 28);
+            this.txtAddressBookAddress2.Size = new System.Drawing.Size(336, 23);
             this.txtAddressBookAddress2.TabIndex = 87;
             this.txtAddressBookAddress2.UseSelectable = true;
             this.txtAddressBookAddress2.UseStyleColors = true;
@@ -299,18 +291,16 @@
             // 
             // 
             this.txtAddressBookAddress1.CustomButton.Image = null;
-            this.txtAddressBookAddress1.CustomButton.Location = new System.Drawing.Point(563, 2);
-            this.txtAddressBookAddress1.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookAddress1.CustomButton.Location = new System.Drawing.Point(314, 1);
             this.txtAddressBookAddress1.CustomButton.Name = "";
-            this.txtAddressBookAddress1.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtAddressBookAddress1.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAddressBookAddress1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAddressBookAddress1.CustomButton.TabIndex = 1;
             this.txtAddressBookAddress1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAddressBookAddress1.CustomButton.UseSelectable = true;
             this.txtAddressBookAddress1.CustomButton.Visible = false;
             this.txtAddressBookAddress1.Lines = new string[0];
-            this.txtAddressBookAddress1.Location = new System.Drawing.Point(124, 412);
-            this.txtAddressBookAddress1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookAddress1.Location = new System.Drawing.Point(74, 279);
             this.txtAddressBookAddress1.MaxLength = 32767;
             this.txtAddressBookAddress1.Name = "txtAddressBookAddress1";
             this.txtAddressBookAddress1.PasswordChar = '\0';
@@ -318,7 +308,7 @@
             this.txtAddressBookAddress1.SelectedText = "";
             this.txtAddressBookAddress1.SelectionLength = 0;
             this.txtAddressBookAddress1.SelectionStart = 0;
-            this.txtAddressBookAddress1.Size = new System.Drawing.Size(448, 28);
+            this.txtAddressBookAddress1.Size = new System.Drawing.Size(336, 23);
             this.txtAddressBookAddress1.TabIndex = 86;
             this.txtAddressBookAddress1.UseSelectable = true;
             this.txtAddressBookAddress1.UseStyleColors = true;
@@ -332,18 +322,16 @@
             // 
             // 
             this.txtAddressBookWebsite.CustomButton.Image = null;
-            this.txtAddressBookWebsite.CustomButton.Location = new System.Drawing.Point(563, 2);
-            this.txtAddressBookWebsite.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookWebsite.CustomButton.Location = new System.Drawing.Point(314, 1);
             this.txtAddressBookWebsite.CustomButton.Name = "";
-            this.txtAddressBookWebsite.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtAddressBookWebsite.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAddressBookWebsite.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAddressBookWebsite.CustomButton.TabIndex = 1;
             this.txtAddressBookWebsite.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAddressBookWebsite.CustomButton.UseSelectable = true;
             this.txtAddressBookWebsite.CustomButton.Visible = false;
             this.txtAddressBookWebsite.Lines = new string[0];
-            this.txtAddressBookWebsite.Location = new System.Drawing.Point(124, 374);
-            this.txtAddressBookWebsite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookWebsite.Location = new System.Drawing.Point(74, 248);
             this.txtAddressBookWebsite.MaxLength = 32767;
             this.txtAddressBookWebsite.Name = "txtAddressBookWebsite";
             this.txtAddressBookWebsite.PasswordChar = '\0';
@@ -351,7 +339,7 @@
             this.txtAddressBookWebsite.SelectedText = "";
             this.txtAddressBookWebsite.SelectionLength = 0;
             this.txtAddressBookWebsite.SelectionStart = 0;
-            this.txtAddressBookWebsite.Size = new System.Drawing.Size(448, 28);
+            this.txtAddressBookWebsite.Size = new System.Drawing.Size(336, 23);
             this.txtAddressBookWebsite.TabIndex = 85;
             this.txtAddressBookWebsite.UseSelectable = true;
             this.txtAddressBookWebsite.UseStyleColors = true;
@@ -365,18 +353,16 @@
             // 
             // 
             this.txtAddressBookEmail_Number.CustomButton.Image = null;
-            this.txtAddressBookEmail_Number.CustomButton.Location = new System.Drawing.Point(563, 2);
-            this.txtAddressBookEmail_Number.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookEmail_Number.CustomButton.Location = new System.Drawing.Point(314, 1);
             this.txtAddressBookEmail_Number.CustomButton.Name = "";
-            this.txtAddressBookEmail_Number.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtAddressBookEmail_Number.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAddressBookEmail_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAddressBookEmail_Number.CustomButton.TabIndex = 1;
             this.txtAddressBookEmail_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAddressBookEmail_Number.CustomButton.UseSelectable = true;
             this.txtAddressBookEmail_Number.CustomButton.Visible = false;
             this.txtAddressBookEmail_Number.Lines = new string[0];
-            this.txtAddressBookEmail_Number.Location = new System.Drawing.Point(124, 336);
-            this.txtAddressBookEmail_Number.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookEmail_Number.Location = new System.Drawing.Point(74, 217);
             this.txtAddressBookEmail_Number.MaxLength = 32767;
             this.txtAddressBookEmail_Number.Name = "txtAddressBookEmail_Number";
             this.txtAddressBookEmail_Number.PasswordChar = '\0';
@@ -384,7 +370,7 @@
             this.txtAddressBookEmail_Number.SelectedText = "";
             this.txtAddressBookEmail_Number.SelectionLength = 0;
             this.txtAddressBookEmail_Number.SelectionStart = 0;
-            this.txtAddressBookEmail_Number.Size = new System.Drawing.Size(448, 28);
+            this.txtAddressBookEmail_Number.Size = new System.Drawing.Size(336, 23);
             this.txtAddressBookEmail_Number.TabIndex = 84;
             this.txtAddressBookEmail_Number.UseSelectable = true;
             this.txtAddressBookEmail_Number.UseStyleColors = true;
@@ -398,18 +384,16 @@
             // 
             // 
             this.txtAddressBookCellphone_Number.CustomButton.Image = null;
-            this.txtAddressBookCellphone_Number.CustomButton.Location = new System.Drawing.Point(563, 2);
-            this.txtAddressBookCellphone_Number.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookCellphone_Number.CustomButton.Location = new System.Drawing.Point(314, 1);
             this.txtAddressBookCellphone_Number.CustomButton.Name = "";
-            this.txtAddressBookCellphone_Number.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtAddressBookCellphone_Number.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAddressBookCellphone_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAddressBookCellphone_Number.CustomButton.TabIndex = 1;
             this.txtAddressBookCellphone_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAddressBookCellphone_Number.CustomButton.UseSelectable = true;
             this.txtAddressBookCellphone_Number.CustomButton.Visible = false;
             this.txtAddressBookCellphone_Number.Lines = new string[0];
-            this.txtAddressBookCellphone_Number.Location = new System.Drawing.Point(124, 298);
-            this.txtAddressBookCellphone_Number.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookCellphone_Number.Location = new System.Drawing.Point(74, 186);
             this.txtAddressBookCellphone_Number.MaxLength = 32767;
             this.txtAddressBookCellphone_Number.Name = "txtAddressBookCellphone_Number";
             this.txtAddressBookCellphone_Number.PasswordChar = '\0';
@@ -417,7 +401,7 @@
             this.txtAddressBookCellphone_Number.SelectedText = "";
             this.txtAddressBookCellphone_Number.SelectionLength = 0;
             this.txtAddressBookCellphone_Number.SelectionStart = 0;
-            this.txtAddressBookCellphone_Number.Size = new System.Drawing.Size(448, 28);
+            this.txtAddressBookCellphone_Number.Size = new System.Drawing.Size(336, 23);
             this.txtAddressBookCellphone_Number.TabIndex = 83;
             this.txtAddressBookCellphone_Number.UseSelectable = true;
             this.txtAddressBookCellphone_Number.UseStyleColors = true;
@@ -431,18 +415,16 @@
             // 
             // 
             this.txtAddressBookFax_Number.CustomButton.Image = null;
-            this.txtAddressBookFax_Number.CustomButton.Location = new System.Drawing.Point(563, 2);
-            this.txtAddressBookFax_Number.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookFax_Number.CustomButton.Location = new System.Drawing.Point(314, 1);
             this.txtAddressBookFax_Number.CustomButton.Name = "";
-            this.txtAddressBookFax_Number.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtAddressBookFax_Number.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAddressBookFax_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAddressBookFax_Number.CustomButton.TabIndex = 1;
             this.txtAddressBookFax_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAddressBookFax_Number.CustomButton.UseSelectable = true;
             this.txtAddressBookFax_Number.CustomButton.Visible = false;
             this.txtAddressBookFax_Number.Lines = new string[0];
-            this.txtAddressBookFax_Number.Location = new System.Drawing.Point(124, 260);
-            this.txtAddressBookFax_Number.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookFax_Number.Location = new System.Drawing.Point(74, 155);
             this.txtAddressBookFax_Number.MaxLength = 32767;
             this.txtAddressBookFax_Number.Name = "txtAddressBookFax_Number";
             this.txtAddressBookFax_Number.PasswordChar = '\0';
@@ -450,7 +432,7 @@
             this.txtAddressBookFax_Number.SelectedText = "";
             this.txtAddressBookFax_Number.SelectionLength = 0;
             this.txtAddressBookFax_Number.SelectionStart = 0;
-            this.txtAddressBookFax_Number.Size = new System.Drawing.Size(448, 28);
+            this.txtAddressBookFax_Number.Size = new System.Drawing.Size(336, 23);
             this.txtAddressBookFax_Number.TabIndex = 82;
             this.txtAddressBookFax_Number.UseSelectable = true;
             this.txtAddressBookFax_Number.UseStyleColors = true;
@@ -464,18 +446,16 @@
             // 
             // 
             this.txtAddressBookTelephone_Number.CustomButton.Image = null;
-            this.txtAddressBookTelephone_Number.CustomButton.Location = new System.Drawing.Point(563, 2);
-            this.txtAddressBookTelephone_Number.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookTelephone_Number.CustomButton.Location = new System.Drawing.Point(314, 1);
             this.txtAddressBookTelephone_Number.CustomButton.Name = "";
-            this.txtAddressBookTelephone_Number.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtAddressBookTelephone_Number.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAddressBookTelephone_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAddressBookTelephone_Number.CustomButton.TabIndex = 1;
             this.txtAddressBookTelephone_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAddressBookTelephone_Number.CustomButton.UseSelectable = true;
             this.txtAddressBookTelephone_Number.CustomButton.Visible = false;
             this.txtAddressBookTelephone_Number.Lines = new string[0];
-            this.txtAddressBookTelephone_Number.Location = new System.Drawing.Point(124, 222);
-            this.txtAddressBookTelephone_Number.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookTelephone_Number.Location = new System.Drawing.Point(74, 124);
             this.txtAddressBookTelephone_Number.MaxLength = 32767;
             this.txtAddressBookTelephone_Number.Name = "txtAddressBookTelephone_Number";
             this.txtAddressBookTelephone_Number.PasswordChar = '\0';
@@ -483,7 +463,7 @@
             this.txtAddressBookTelephone_Number.SelectedText = "";
             this.txtAddressBookTelephone_Number.SelectionLength = 0;
             this.txtAddressBookTelephone_Number.SelectionStart = 0;
-            this.txtAddressBookTelephone_Number.Size = new System.Drawing.Size(448, 28);
+            this.txtAddressBookTelephone_Number.Size = new System.Drawing.Size(336, 23);
             this.txtAddressBookTelephone_Number.TabIndex = 81;
             this.txtAddressBookTelephone_Number.UseSelectable = true;
             this.txtAddressBookTelephone_Number.UseStyleColors = true;
@@ -497,18 +477,16 @@
             // 
             // 
             this.txtAddressBookSurname.CustomButton.Image = null;
-            this.txtAddressBookSurname.CustomButton.Location = new System.Drawing.Point(563, 2);
-            this.txtAddressBookSurname.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookSurname.CustomButton.Location = new System.Drawing.Point(314, 1);
             this.txtAddressBookSurname.CustomButton.Name = "";
-            this.txtAddressBookSurname.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtAddressBookSurname.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAddressBookSurname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAddressBookSurname.CustomButton.TabIndex = 1;
             this.txtAddressBookSurname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAddressBookSurname.CustomButton.UseSelectable = true;
             this.txtAddressBookSurname.CustomButton.Visible = false;
             this.txtAddressBookSurname.Lines = new string[0];
-            this.txtAddressBookSurname.Location = new System.Drawing.Point(124, 183);
-            this.txtAddressBookSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookSurname.Location = new System.Drawing.Point(74, 93);
             this.txtAddressBookSurname.MaxLength = 32767;
             this.txtAddressBookSurname.Name = "txtAddressBookSurname";
             this.txtAddressBookSurname.PasswordChar = '\0';
@@ -516,7 +494,7 @@
             this.txtAddressBookSurname.SelectedText = "";
             this.txtAddressBookSurname.SelectionLength = 0;
             this.txtAddressBookSurname.SelectionStart = 0;
-            this.txtAddressBookSurname.Size = new System.Drawing.Size(448, 28);
+            this.txtAddressBookSurname.Size = new System.Drawing.Size(336, 23);
             this.txtAddressBookSurname.TabIndex = 80;
             this.txtAddressBookSurname.UseSelectable = true;
             this.txtAddressBookSurname.UseStyleColors = true;
@@ -530,18 +508,16 @@
             // 
             // 
             this.txtAddressBookName.CustomButton.Image = null;
-            this.txtAddressBookName.CustomButton.Location = new System.Drawing.Point(563, 2);
-            this.txtAddressBookName.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookName.CustomButton.Location = new System.Drawing.Point(314, 1);
             this.txtAddressBookName.CustomButton.Name = "";
-            this.txtAddressBookName.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtAddressBookName.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAddressBookName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAddressBookName.CustomButton.TabIndex = 1;
             this.txtAddressBookName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAddressBookName.CustomButton.UseSelectable = true;
             this.txtAddressBookName.CustomButton.Visible = false;
             this.txtAddressBookName.Lines = new string[0];
-            this.txtAddressBookName.Location = new System.Drawing.Point(124, 145);
-            this.txtAddressBookName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookName.Location = new System.Drawing.Point(74, 62);
             this.txtAddressBookName.MaxLength = 32767;
             this.txtAddressBookName.Name = "txtAddressBookName";
             this.txtAddressBookName.PasswordChar = '\0';
@@ -549,7 +525,7 @@
             this.txtAddressBookName.SelectedText = "";
             this.txtAddressBookName.SelectionLength = 0;
             this.txtAddressBookName.SelectionStart = 0;
-            this.txtAddressBookName.Size = new System.Drawing.Size(448, 28);
+            this.txtAddressBookName.Size = new System.Drawing.Size(336, 23);
             this.txtAddressBookName.TabIndex = 79;
             this.txtAddressBookName.UseSelectable = true;
             this.txtAddressBookName.UseStyleColors = true;
@@ -563,18 +539,16 @@
             // 
             // 
             this.txtAddressBookNumber.CustomButton.Image = null;
-            this.txtAddressBookNumber.CustomButton.Location = new System.Drawing.Point(179, 2);
-            this.txtAddressBookNumber.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookNumber.CustomButton.Location = new System.Drawing.Point(98, 1);
             this.txtAddressBookNumber.CustomButton.Name = "";
-            this.txtAddressBookNumber.CustomButton.Size = new System.Drawing.Size(31, 28);
+            this.txtAddressBookNumber.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtAddressBookNumber.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAddressBookNumber.CustomButton.TabIndex = 1;
             this.txtAddressBookNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtAddressBookNumber.CustomButton.UseSelectable = true;
             this.txtAddressBookNumber.CustomButton.Visible = false;
             this.txtAddressBookNumber.Lines = new string[0];
-            this.txtAddressBookNumber.Location = new System.Drawing.Point(124, 106);
-            this.txtAddressBookNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddressBookNumber.Location = new System.Drawing.Point(74, 30);
             this.txtAddressBookNumber.MaxLength = 32767;
             this.txtAddressBookNumber.Name = "txtAddressBookNumber";
             this.txtAddressBookNumber.PasswordChar = '\0';
@@ -582,7 +556,7 @@
             this.txtAddressBookNumber.SelectedText = "";
             this.txtAddressBookNumber.SelectionLength = 0;
             this.txtAddressBookNumber.SelectionStart = 0;
-            this.txtAddressBookNumber.Size = new System.Drawing.Size(160, 28);
+            this.txtAddressBookNumber.Size = new System.Drawing.Size(120, 23);
             this.txtAddressBookNumber.TabIndex = 78;
             this.txtAddressBookNumber.UseSelectable = true;
             this.txtAddressBookNumber.UseStyleColors = true;
@@ -593,10 +567,9 @@
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(75, 532);
-            this.metroLabel12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel12.Location = new System.Drawing.Point(37, 376);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(32, 20);
+            this.metroLabel12.Size = new System.Drawing.Size(31, 19);
             this.metroLabel12.TabIndex = 76;
             this.metroLabel12.Text = "Zip:";
             this.metroLabel12.UseStyleColors = true;
@@ -604,10 +577,9 @@
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(23, 494);
-            this.metroLabel11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel11.Location = new System.Drawing.Point(17, 401);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(74, 20);
+            this.metroLabel11.Size = new System.Drawing.Size(70, 19);
             this.metroLabel11.TabIndex = 75;
             this.metroLabel11.Text = "Address 3:";
             this.metroLabel11.UseStyleColors = true;
@@ -615,10 +587,9 @@
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(23, 455);
-            this.metroLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel10.Location = new System.Drawing.Point(17, 370);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(74, 20);
+            this.metroLabel10.Size = new System.Drawing.Size(70, 19);
             this.metroLabel10.TabIndex = 74;
             this.metroLabel10.Text = "Address 2:";
             this.metroLabel10.UseStyleColors = true;
@@ -626,10 +597,9 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(25, 417);
-            this.metroLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel9.Location = new System.Drawing.Point(0, 283);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(71, 20);
+            this.metroLabel9.Size = new System.Drawing.Size(68, 19);
             this.metroLabel9.TabIndex = 73;
             this.metroLabel9.Text = "Address 1:";
             this.metroLabel9.UseStyleColors = true;
@@ -637,10 +607,9 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(41, 379);
-            this.metroLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel8.Location = new System.Drawing.Point(12, 252);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(65, 20);
+            this.metroLabel8.Size = new System.Drawing.Size(62, 19);
             this.metroLabel8.TabIndex = 72;
             this.metroLabel8.Text = "Website :";
             this.metroLabel8.UseStyleColors = true;
@@ -648,10 +617,9 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(57, 341);
-            this.metroLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel7.Location = new System.Drawing.Point(24, 221);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(45, 20);
+            this.metroLabel7.Size = new System.Drawing.Size(44, 19);
             this.metroLabel7.TabIndex = 71;
             this.metroLabel7.Text = "Email:";
             this.metroLabel7.UseStyleColors = true;
@@ -659,10 +627,9 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(71, 303);
-            this.metroLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel6.Location = new System.Drawing.Point(34, 190);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(35, 20);
+            this.metroLabel6.Size = new System.Drawing.Size(34, 19);
             this.metroLabel6.TabIndex = 70;
             this.metroLabel6.Text = "Cell:";
             this.metroLabel6.UseStyleColors = true;
@@ -670,10 +637,9 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(75, 265);
-            this.metroLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel5.Location = new System.Drawing.Point(37, 159);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(31, 20);
+            this.metroLabel5.Size = new System.Drawing.Size(31, 19);
             this.metroLabel5.TabIndex = 69;
             this.metroLabel5.Text = "Fax:";
             this.metroLabel5.UseStyleColors = true;
@@ -681,10 +647,9 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(78, 222);
-            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel4.Location = new System.Drawing.Point(39, 124);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(29, 20);
+            this.metroLabel4.Size = new System.Drawing.Size(27, 19);
             this.metroLabel4.TabIndex = 68;
             this.metroLabel4.Text = "Tel:";
             this.metroLabel4.UseStyleColors = true;
@@ -692,10 +657,9 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(40, 188);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel3.Location = new System.Drawing.Point(11, 97);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(71, 20);
+            this.metroLabel3.Size = new System.Drawing.Size(68, 19);
             this.metroLabel3.TabIndex = 67;
             this.metroLabel3.Text = "Surname :";
             this.metroLabel3.UseStyleColors = true;
@@ -703,10 +667,9 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(52, 150);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel2.Location = new System.Drawing.Point(20, 66);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(50, 20);
+            this.metroLabel2.Size = new System.Drawing.Size(48, 19);
             this.metroLabel2.TabIndex = 66;
             this.metroLabel2.Text = "Name:";
             this.metroLabel2.UseStyleColors = true;
@@ -714,10 +677,9 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(33, 112);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(6, 35);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(65, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(62, 19);
             this.metroLabel1.TabIndex = 65;
             this.metroLabel1.Text = "Number:";
             this.metroLabel1.UseStyleColors = true;
@@ -728,9 +690,10 @@
             this.lblBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBack.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblBack.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblBack.Location = new System.Drawing.Point(76, 62);
+            this.lblBack.Location = new System.Drawing.Point(57, 50);
+            this.lblBack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBack.Name = "lblBack";
-            this.lblBack.Size = new System.Drawing.Size(51, 25);
+            this.lblBack.Size = new System.Drawing.Size(48, 25);
             this.lblBack.TabIndex = 98;
             this.lblBack.Text = "Back";
             this.lblBack.Click += new System.EventHandler(this.lblBack_Click);
@@ -739,10 +702,10 @@
             // 
             this.pbBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbBack.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
-            this.pbBack.Location = new System.Drawing.Point(33, 59);
-            this.pbBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbBack.Location = new System.Drawing.Point(25, 48);
+            this.pbBack.Margin = new System.Windows.Forms.Padding(2);
             this.pbBack.Name = "pbBack";
-            this.pbBack.Size = new System.Drawing.Size(37, 27);
+            this.pbBack.Size = new System.Drawing.Size(28, 22);
             this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBack.TabIndex = 97;
             this.pbBack.TabStop = false;
@@ -753,11 +716,12 @@
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel14.Location = new System.Drawing.Point(637, 59);
+            this.metroLabel14.Location = new System.Drawing.Point(478, 48);
+            this.metroLabel14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(121, 25);
+            this.metroLabel14.Size = new System.Drawing.Size(123, 25);
             this.metroLabel14.TabIndex = 99;
-            this.metroLabel14.Text = "Addressbook";
+            this.metroLabel14.Text = "Address Book";
             // 
             // msmAdBook
             // 
@@ -765,21 +729,22 @@
             // 
             // btnArchive
             // 
-            this.btnArchive.Location = new System.Drawing.Point(1041, 730);
-            this.btnArchive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnArchive.Location = new System.Drawing.Point(781, 593);
+            this.btnArchive.Margin = new System.Windows.Forms.Padding(2);
             this.btnArchive.Name = "btnArchive";
-            this.btnArchive.Size = new System.Drawing.Size(121, 52);
+            this.btnArchive.Size = new System.Drawing.Size(91, 42);
             this.btnArchive.TabIndex = 119;
             this.btnArchive.Text = "Archive";
             this.btnArchive.UseSelectable = true;
             this.btnArchive.UseStyleColors = true;
+            this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(915, 730);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(686, 593);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(121, 52);
+            this.btnDelete.Size = new System.Drawing.Size(91, 42);
             this.btnDelete.TabIndex = 118;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseSelectable = true;
@@ -788,53 +753,89 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(787, 730);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(590, 593);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(121, 52);
+            this.btnUpdate.Size = new System.Drawing.Size(91, 42);
             this.btnUpdate.TabIndex = 117;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseSelectable = true;
             this.btnUpdate.UseStyleColors = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(655, 730);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Location = new System.Drawing.Point(491, 593);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(121, 52);
+            this.btnAdd.Size = new System.Drawing.Size(91, 42);
             this.btnAdd.TabIndex = 116;
             this.btnAdd.Text = "Add ";
             this.btnAdd.UseSelectable = true;
             this.btnAdd.UseStyleColors = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(259, 730);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(194, 593);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(121, 52);
+            this.btnCancel.Size = new System.Drawing.Size(91, 42);
             this.btnCancel.TabIndex = 121;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseSelectable = true;
             this.btnCancel.UseStyleColors = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(124, 730);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConfirm.Location = new System.Drawing.Point(93, 593);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(121, 52);
+            this.btnConfirm.Size = new System.Drawing.Size(91, 42);
             this.btnConfirm.TabIndex = 120;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseSelectable = true;
             this.btnConfirm.UseStyleColors = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtAddressBookZip_Code);
+            this.groupBox1.Controls.Add(this.txtAddressBookAddress3);
+            this.groupBox1.Controls.Add(this.txtAddressBookAddress2);
+            this.groupBox1.Controls.Add(this.txtAddressBookAddress1);
+            this.groupBox1.Controls.Add(this.txtAddressBookWebsite);
+            this.groupBox1.Controls.Add(this.txtAddressBookEmail_Number);
+            this.groupBox1.Controls.Add(this.txtAddressBookCellphone_Number);
+            this.groupBox1.Controls.Add(this.txtAddressBookFax_Number);
+            this.groupBox1.Controls.Add(this.txtAddressBookTelephone_Number);
+            this.groupBox1.Controls.Add(this.txtAddressBookSurname);
+            this.groupBox1.Controls.Add(this.txtAddressBookName);
+            this.groupBox1.Controls.Add(this.txtAddressBookNumber);
+            this.groupBox1.Controls.Add(this.metroLabel12);
+            this.groupBox1.Controls.Add(this.metroLabel9);
+            this.groupBox1.Controls.Add(this.metroLabel8);
+            this.groupBox1.Controls.Add(this.metroLabel7);
+            this.groupBox1.Controls.Add(this.metroLabel6);
+            this.groupBox1.Controls.Add(this.metroLabel5);
+            this.groupBox1.Controls.Add(this.metroLabel4);
+            this.groupBox1.Controls.Add(this.metroLabel3);
+            this.groupBox1.Controls.Add(this.metroLabel2);
+            this.groupBox1.Controls.Add(this.metroLabel1);
+            this.groupBox1.Location = new System.Drawing.Point(19, 79);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(435, 421);
+            this.groupBox1.TabIndex = 122;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Address Book Information";
             // 
             // frmAddressBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 804);
+            this.ClientSize = new System.Drawing.Size(1280, 800);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnArchive);
@@ -846,33 +847,9 @@
             this.Controls.Add(this.pbBack);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dgvAddressBook);
-            this.Controls.Add(this.txtAddressBookZip_Code);
-            this.Controls.Add(this.txtAddressBookAddress3);
-            this.Controls.Add(this.txtAddressBookAddress2);
-            this.Controls.Add(this.txtAddressBookAddress1);
-            this.Controls.Add(this.txtAddressBookWebsite);
-            this.Controls.Add(this.txtAddressBookEmail_Number);
-            this.Controls.Add(this.txtAddressBookCellphone_Number);
-            this.Controls.Add(this.txtAddressBookFax_Number);
-            this.Controls.Add(this.txtAddressBookTelephone_Number);
-            this.Controls.Add(this.txtAddressBookSurname);
-            this.Controls.Add(this.txtAddressBookName);
-            this.Controls.Add(this.txtAddressBookNumber);
-            this.Controls.Add(this.metroLabel12);
             this.Controls.Add(this.metroLabel11);
             this.Controls.Add(this.metroLabel10);
-            this.Controls.Add(this.metroLabel9);
-            this.Controls.Add(this.metroLabel8);
-            this.Controls.Add(this.metroLabel7);
-            this.Controls.Add(this.metroLabel6);
-            this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroLabel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAddressBook";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Style = MetroFramework.MetroColorStyle.Teal;
@@ -882,6 +859,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddressBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.msmAdBook)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -889,8 +868,8 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox3;
-        private MetroFramework.Controls.MetroComboBox cmbAccCriteria;
-        private MetroFramework.Controls.MetroTextBox txtAccSearch;
+        private MetroFramework.Controls.MetroComboBox cmbAddressBookCriteria;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookSearch;
         private MetroFramework.Controls.MetroLabel metroLabel17;
         private MetroFramework.Controls.MetroGrid dgvAddressBook;
         private MetroFramework.Controls.MetroTextBox txtAddressBookZip_Code;
@@ -927,5 +906,6 @@
         private MetroFramework.Controls.MetroButton btnAdd;
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroButton btnConfirm;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
