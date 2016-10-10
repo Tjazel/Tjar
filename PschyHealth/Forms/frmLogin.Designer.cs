@@ -71,9 +71,9 @@
             // 
             // 
             this.mtxb_Password.CustomButton.Image = null;
-            this.mtxb_Password.CustomButton.Location = new System.Drawing.Point(85, 1);
+            this.mtxb_Password.CustomButton.Location = new System.Drawing.Point(113, 1);
             this.mtxb_Password.CustomButton.Name = "";
-            this.mtxb_Password.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.mtxb_Password.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxb_Password.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxb_Password.CustomButton.TabIndex = 1;
             this.mtxb_Password.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -102,9 +102,9 @@
             // 
             // 
             this.mtxb_Username.CustomButton.Image = null;
-            this.mtxb_Username.CustomButton.Location = new System.Drawing.Point(85, 1);
+            this.mtxb_Username.CustomButton.Location = new System.Drawing.Point(113, 1);
             this.mtxb_Username.CustomButton.Name = "";
-            this.mtxb_Username.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.mtxb_Username.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.mtxb_Username.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mtxb_Username.CustomButton.TabIndex = 1;
             this.mtxb_Username.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -188,6 +188,7 @@
             this.Controls.Add(this.lbl_Username);
             this.Controls.Add(this.mtxb_Password);
             this.Controls.Add(this.mtxb_Username);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Movable = false;
