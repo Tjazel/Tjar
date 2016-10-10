@@ -58,16 +58,18 @@
             // 
             // 
             this.txtName.CustomButton.Image = null;
-            this.txtName.CustomButton.Location = new System.Drawing.Point(58, 1);
+            this.txtName.CustomButton.Location = new System.Drawing.Point(32, 1);
+            this.txtName.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.CustomButton.Name = "";
-            this.txtName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtName.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.txtName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtName.CustomButton.TabIndex = 1;
             this.txtName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtName.CustomButton.UseSelectable = true;
             this.txtName.CustomButton.Visible = false;
             this.txtName.Lines = new string[0];
-            this.txtName.Location = new System.Drawing.Point(202, 31);
+            this.txtName.Location = new System.Drawing.Point(152, 25);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.MaxLength = 32767;
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
@@ -75,7 +77,7 @@
             this.txtName.SelectedText = "";
             this.txtName.SelectionLength = 0;
             this.txtName.SelectionStart = 0;
-            this.txtName.Size = new System.Drawing.Size(80, 23);
+            this.txtName.Size = new System.Drawing.Size(60, 19);
             this.txtName.TabIndex = 1;
             this.txtName.UseSelectable = true;
             this.txtName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -85,7 +87,8 @@
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblTime.Location = new System.Drawing.Point(207, 95);
+            this.lblTime.Location = new System.Drawing.Point(155, 77);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(0, 0);
             this.lblTime.TabIndex = 2;
@@ -97,9 +100,10 @@
             // pbRec
             // 
             this.pbRec.Image = global::PschyHealth.Properties.Resources.Record_48px_3;
-            this.pbRec.Location = new System.Drawing.Point(326, 108);
+            this.pbRec.Location = new System.Drawing.Point(244, 88);
+            this.pbRec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbRec.Name = "pbRec";
-            this.pbRec.Size = new System.Drawing.Size(26, 16);
+            this.pbRec.Size = new System.Drawing.Size(20, 13);
             this.pbRec.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbRec.TabIndex = 50;
             this.pbRec.TabStop = false;
@@ -109,10 +113,9 @@
             // 
             this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMinimize.Image = global::PschyHealth.Properties.Resources.Minimize_Window_48px;
-            this.pbMinimize.Location = new System.Drawing.Point(397, 11);
-            this.pbMinimize.Margin = new System.Windows.Forms.Padding(4);
+            this.pbMinimize.Location = new System.Drawing.Point(298, 9);
             this.pbMinimize.Name = "pbMinimize";
-            this.pbMinimize.Size = new System.Drawing.Size(31, 28);
+            this.pbMinimize.Size = new System.Drawing.Size(23, 23);
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMinimize.TabIndex = 49;
             this.pbMinimize.TabStop = false;
@@ -122,10 +125,9 @@
             // 
             this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbExit.Image = global::PschyHealth.Properties.Resources.Close_Window_48px;
-            this.pbExit.Location = new System.Drawing.Point(436, 11);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(4);
+            this.pbExit.Location = new System.Drawing.Point(327, 9);
             this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(29, 28);
+            this.pbExit.Size = new System.Drawing.Size(22, 23);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit.TabIndex = 48;
             this.pbExit.TabStop = false;
@@ -139,9 +141,10 @@
             this.rdSave,
             this.rdPause,
             this.rdPlay});
-            this.radialMenu1.Location = new System.Drawing.Point(202, 160);
+            this.radialMenu1.Location = new System.Drawing.Point(152, 130);
+            this.radialMenu1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radialMenu1.Name = "radialMenu1";
-            this.radialMenu1.Size = new System.Drawing.Size(80, 80);
+            this.radialMenu1.Size = new System.Drawing.Size(60, 65);
             this.radialMenu1.SymbolSize = 30F;
             this.radialMenu1.TabIndex = 0;
             this.radialMenu1.Text = "radialMenu1";
@@ -177,9 +180,10 @@
             // pbWave
             // 
             this.pbWave.Image = global::PschyHealth.Properties.Resources.Audio_Wave_48px_1;
-            this.pbWave.Location = new System.Drawing.Point(213, 78);
+            this.pbWave.Location = new System.Drawing.Point(160, 63);
+            this.pbWave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbWave.Name = "pbWave";
-            this.pbWave.Size = new System.Drawing.Size(60, 46);
+            this.pbWave.Size = new System.Drawing.Size(45, 37);
             this.pbWave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbWave.TabIndex = 51;
             this.pbWave.TabStop = false;
@@ -188,9 +192,10 @@
             // lblPlayBack
             // 
             this.lblPlayBack.AutoSize = true;
-            this.lblPlayBack.Location = new System.Drawing.Point(179, 127);
+            this.lblPlayBack.Location = new System.Drawing.Point(134, 103);
+            this.lblPlayBack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPlayBack.Name = "lblPlayBack";
-            this.lblPlayBack.Size = new System.Drawing.Size(136, 20);
+            this.lblPlayBack.Size = new System.Drawing.Size(129, 19);
             this.lblPlayBack.TabIndex = 52;
             this.lblPlayBack.Text = "Playback in progress";
             this.lblPlayBack.UseStyleColors = true;
@@ -203,26 +208,28 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(213, 8);
+            this.metroLabel1.Location = new System.Drawing.Point(160, 6);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(47, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(45, 19);
             this.metroLabel1.TabIndex = 53;
             this.metroLabel1.Text = "Name";
             // 
             // lblPlayName
             // 
             this.lblPlayName.AutoSize = true;
-            this.lblPlayName.Location = new System.Drawing.Point(88, 100);
+            this.lblPlayName.Location = new System.Drawing.Point(66, 81);
+            this.lblPlayName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPlayName.Name = "lblPlayName";
             this.lblPlayName.Size = new System.Drawing.Size(0, 0);
             this.lblPlayName.TabIndex = 54;
             // 
             // frmRecord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(472, 253);
+            this.ClientSize = new System.Drawing.Size(354, 206);
             this.Controls.Add(this.lblPlayName);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.lblPlayBack);
@@ -233,7 +240,10 @@
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.radialMenu1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmRecord";
+            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Record";
             this.Load += new System.EventHandler(this.frmRecord_Load);

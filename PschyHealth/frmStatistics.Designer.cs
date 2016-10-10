@@ -147,6 +147,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmStatistics";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.frmStatistics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbMic)).EndInit();
             this.ResumeLayout(false);
