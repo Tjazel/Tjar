@@ -85,6 +85,9 @@ namespace PschyHealth
             cMethods.CheckFolder(path + @"\Archive\AccountingArchive");
             cMethods.CheckFolder(path + @"\Archive\ConsultationsArchive");
             cMethods.CheckFile(path + @"\Log\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString());
+            cMethods.CheckFile(path + @"\Archive\ConsultationsArchive\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString());
+            cMethods.CheckFile(path + @"\Archive\AccountingArchive\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString());
+            cMethods.CheckFile(path + @"\Archive\PaymentsArchive\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString());
             cMethods.defTileColors();//default tile colors
             cMethods.defTheme();//Default theme
             cMethods.defStyle();
@@ -1200,8 +1203,12 @@ namespace PschyHealth
 
         private void btnCalender_Click(object sender, EventArgs e)
         {
-           //// Process p = Process.Start(@"‪C:\Users\Jaco\Desktop\Calendar - Shortcut.lnk");
-           // Thread.Sleep(100000000);
+                // Process p = Process.Start(@"‪C:\Users\Tjaart Prinsloo\Desktop\Calendar - Shortcut.lnk");
+                // Thread.Sleep(500);
+
+            Process p = Process.Start(@"C:\Users\Tjaart Prinsloo\Desktop\Calendar - Shortcut.lnk");
+            Thread.Sleep(500); 
+
            // p.WaitForInputIdle();
            // setParent(p.MainWindowHandle, this.Handle);
         }

@@ -48,6 +48,7 @@
             this.btnCreate = new MetroFramework.Controls.MetroButton();
             this.cmbFormat = new MetroFramework.Controls.MetroComboBox();
             this.msmStatements = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.btnPrint = new MetroFramework.Controls.MetroButton();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatements)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
@@ -274,20 +275,21 @@
             this.cmbClient.UseSelectable = true;
             this.cmbClient.UseStyleColors = true;
             this.cmbClient.SelectedIndexChanged += new System.EventHandler(this.cmbClient_SelectedIndexChanged);
+            this.cmbClient.Click += new System.EventHandler(this.cmbClient_Click);
             // 
             // lbStatements
             // 
             this.lbStatements.FormattingEnabled = true;
             this.lbStatements.ItemHeight = 16;
-            this.lbStatements.Location = new System.Drawing.Point(502, 242);
+            this.lbStatements.Location = new System.Drawing.Point(444, 215);
             this.lbStatements.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbStatements.Name = "lbStatements";
-            this.lbStatements.Size = new System.Drawing.Size(822, 436);
+            this.lbStatements.Size = new System.Drawing.Size(823, 436);
             this.lbStatements.TabIndex = 46;
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(153, 266);
+            this.btnCreate.Location = new System.Drawing.Point(213, 266);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(100, 28);
@@ -314,11 +316,24 @@
             // 
             this.msmStatements.Owner = this;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(53, 266);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(100, 28);
+            this.btnPrint.TabIndex = 49;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseSelectable = true;
+            this.btnPrint.UseStyleColors = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // frmStatements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1379, 780);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.cmbFormat);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.lbStatements);
@@ -364,5 +379,6 @@
         private MetroFramework.Controls.MetroButton btnCreate;
         private MetroFramework.Controls.MetroComboBox cmbFormat;
         private MetroFramework.Components.MetroStyleManager msmStatements;
+        private MetroFramework.Controls.MetroButton btnPrint;
     }
 }

@@ -62,7 +62,7 @@
             this.editToolStripMenuItem,
             this.fontToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.menuStrip1.Location = new System.Drawing.Point(-644, 6);
+            this.menuStrip1.Location = new System.Drawing.Point(-1043, -32);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(217, 23);
             this.menuStrip1.TabIndex = 0;
@@ -172,7 +172,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(196, 63);
+            this.richTextBox1.Location = new System.Drawing.Point(122, 21);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(684, 519);
             this.richTextBox1.TabIndex = 1;
@@ -190,12 +190,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2083, 881);
+            this.ClientSize = new System.Drawing.Size(1284, 804);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmNotepad";
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Load += new System.EventHandler(this.frmNotepad_Load);
             this.menuStrip1.ResumeLayout(false);

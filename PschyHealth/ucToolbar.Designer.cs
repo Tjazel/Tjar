@@ -205,8 +205,8 @@
             // 
             // 
             // 
-            this.tbMain.BackgroundStyle.BackColor = System.Drawing.Color.Gainsboro;
-            this.tbMain.BackgroundStyle.BackColor2 = System.Drawing.Color.Gainsboro;
+            this.tbMain.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
+            this.tbMain.BackgroundStyle.BackColor2 = System.Drawing.Color.Transparent;
             this.tbMain.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tbMain.ContainerControlProcessDialogKey = true;
             this.tbMain.DragDropSupport = true;
@@ -579,26 +579,26 @@
             this.lockToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.contexUser.Name = "contextMenuStrip1";
-            this.contexUser.Size = new System.Drawing.Size(246, 82);
+            this.contexUser.Size = new System.Drawing.Size(240, 76);
             this.contexUser.Opening += new System.ComponentModel.CancelEventHandler(this.contexUser_Opening);
             // 
             // changeAccountSettingsToolStripMenuItem
             // 
             this.changeAccountSettingsToolStripMenuItem.Name = "changeAccountSettingsToolStripMenuItem";
-            this.changeAccountSettingsToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.changeAccountSettingsToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
             this.changeAccountSettingsToolStripMenuItem.Text = "Change account settings";
             // 
             // lockToolStripMenuItem
             // 
             this.lockToolStripMenuItem.Name = "lockToolStripMenuItem";
-            this.lockToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.lockToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
             this.lockToolStripMenuItem.Text = "Lock";
             this.lockToolStripMenuItem.Click += new System.EventHandler(this.lockToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(239, 24);
             this.signOutToolStripMenuItem.Text = "Sign out";
             // 
             // pictureBox4
@@ -730,7 +730,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.pbMicOff);
             this.Controls.Add(this.pbMinimize);

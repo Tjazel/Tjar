@@ -13,6 +13,7 @@ namespace PschyHealth
 {
     public partial class frmStatistics : MetroForm
     {
+
         //Constants
         Methods cMethods = new Methods();
         const int AW_SLIDE = 0X40000;
@@ -44,6 +45,10 @@ namespace PschyHealth
             this.WindowState = FormWindowState.Maximized;
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
+
+            int year = Convert.ToInt16(DateTime.Now.Year.ToString());
+            for (int i = 2016; i <= year; i++)
+                cmbYear.Items.Add(i);
         }
 
         private void frmStatistics_Load(object sender, EventArgs e)
@@ -53,12 +58,16 @@ namespace PschyHealth
 
         private void btnMaandelikseGeld_Click(object sender, EventArgs e)
         {
-            txtStatistics.Text = cMethods.fillText(btnMaandelikseGeld.Text);
+            txtStatistics.Text = "Month\tIncome\t\tExpeces\r\n";
+            
+            txtStatistics.AppendText(cMethods.Analysis("Payments", "Accounting", "Tax", cmbYear));
         }
 
         private void btnGeldvloei_Click(object sender, EventArgs e)
         {
-            txtStatistics.Text = cMethods.fillText(btnGeldvloei.Text);
+            txtStatistics.Text = "Month\tConsultations\tPayments\r\n";
+
+            txtStatistics.AppendText(cMethods.Analysis("Consultations", "Payments", "Tax", cmbYear));
         }
 
         private void lblBack_Click(object sender, EventArgs e)

@@ -214,6 +214,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "frmCrashReport";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Crash Report for PschyHealth";
             this.Load += new System.EventHandler(this.Form2_Load);
