@@ -309,7 +309,7 @@ namespace PschyHealth
             btnAddAcount.Enabled = true;
         }
 
-        private void txtAccTransaction_Number_Leave_1(object sender, EventArgs e)
+        private void txtAccTransaction_Number_Leave(object sender, EventArgs e)
         {
             if (!cMethods.isNumber(txtAccTransaction_Number.Text))
             {

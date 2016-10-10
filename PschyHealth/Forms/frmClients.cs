@@ -343,5 +343,10 @@ namespace PschyHealth
         {
 
         }
+
+        private void txtClientDateFinished_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
