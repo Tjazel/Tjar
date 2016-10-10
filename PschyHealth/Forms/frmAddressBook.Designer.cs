@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cmbAddressBookCriteria = new MetroFramework.Controls.MetroComboBox();
             this.txtAddressBookSearch = new MetroFramework.Controls.MetroTextBox();
@@ -42,7 +42,7 @@
             this.txtAddressBookAddress2 = new MetroFramework.Controls.MetroTextBox();
             this.txtAddressBookAddress1 = new MetroFramework.Controls.MetroTextBox();
             this.txtAddressBookWebsite = new MetroFramework.Controls.MetroTextBox();
-            this.txtAddressBookEmail_Number = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddressBookEmail_Address = new MetroFramework.Controls.MetroTextBox();
             this.txtAddressBookCellphone_Number = new MetroFramework.Controls.MetroTextBox();
             this.txtAddressBookFax_Number = new MetroFramework.Controls.MetroTextBox();
             this.txtAddressBookTelephone_Number = new MetroFramework.Controls.MetroTextBox();
@@ -154,37 +154,37 @@
             this.dgvAddressBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAddressBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvAddressBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAddressBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAddressBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAddressBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAddressBook.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAddressBook.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAddressBook.EnableHeadersVisualStyles = false;
             this.dgvAddressBook.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvAddressBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvAddressBook.Location = new System.Drawing.Point(491, 180);
             this.dgvAddressBook.Name = "dgvAddressBook";
             this.dgvAddressBook.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAddressBook.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAddressBook.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAddressBook.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvAddressBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAddressBook.Size = new System.Drawing.Size(480, 397);
@@ -222,6 +222,7 @@
             this.txtAddressBookZip_Code.WaterMark = "Enter Zip Code";
             this.txtAddressBookZip_Code.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAddressBookZip_Code.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookZip_Code.Leave += new System.EventHandler(this.txtAddressBookZip_Code_Leave);
             // 
             // txtAddressBookAddress3
             // 
@@ -253,6 +254,7 @@
             this.txtAddressBookAddress3.WaterMark = "Enter Address 3";
             this.txtAddressBookAddress3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAddressBookAddress3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookAddress3.Leave += new System.EventHandler(this.txtAddressBookAddress3_Leave);
             // 
             // txtAddressBookAddress2
             // 
@@ -284,6 +286,7 @@
             this.txtAddressBookAddress2.WaterMark = "Enter Address 2";
             this.txtAddressBookAddress2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAddressBookAddress2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookAddress2.Leave += new System.EventHandler(this.txtAddressBookAddress2_Leave);
             // 
             // txtAddressBookAddress1
             // 
@@ -315,6 +318,7 @@
             this.txtAddressBookAddress1.WaterMark = "Enter Address 1";
             this.txtAddressBookAddress1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAddressBookAddress1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookAddress1.Leave += new System.EventHandler(this.txtAddressBookAddress1_Leave);
             // 
             // txtAddressBookWebsite
             // 
@@ -346,37 +350,39 @@
             this.txtAddressBookWebsite.WaterMark = "Enter Website URL";
             this.txtAddressBookWebsite.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAddressBookWebsite.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookWebsite.Leave += new System.EventHandler(this.txtAddressBookWebsite_Leave);
             // 
-            // txtAddressBookEmail_Number
+            // txtAddressBookEmail_Address
             // 
             // 
             // 
             // 
-            this.txtAddressBookEmail_Number.CustomButton.Image = null;
-            this.txtAddressBookEmail_Number.CustomButton.Location = new System.Drawing.Point(314, 1);
-            this.txtAddressBookEmail_Number.CustomButton.Name = "";
-            this.txtAddressBookEmail_Number.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtAddressBookEmail_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtAddressBookEmail_Number.CustomButton.TabIndex = 1;
-            this.txtAddressBookEmail_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtAddressBookEmail_Number.CustomButton.UseSelectable = true;
-            this.txtAddressBookEmail_Number.CustomButton.Visible = false;
-            this.txtAddressBookEmail_Number.Lines = new string[0];
-            this.txtAddressBookEmail_Number.Location = new System.Drawing.Point(74, 217);
-            this.txtAddressBookEmail_Number.MaxLength = 32767;
-            this.txtAddressBookEmail_Number.Name = "txtAddressBookEmail_Number";
-            this.txtAddressBookEmail_Number.PasswordChar = '\0';
-            this.txtAddressBookEmail_Number.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtAddressBookEmail_Number.SelectedText = "";
-            this.txtAddressBookEmail_Number.SelectionLength = 0;
-            this.txtAddressBookEmail_Number.SelectionStart = 0;
-            this.txtAddressBookEmail_Number.Size = new System.Drawing.Size(336, 23);
-            this.txtAddressBookEmail_Number.TabIndex = 84;
-            this.txtAddressBookEmail_Number.UseSelectable = true;
-            this.txtAddressBookEmail_Number.UseStyleColors = true;
-            this.txtAddressBookEmail_Number.WaterMark = "Enter Email Address";
-            this.txtAddressBookEmail_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtAddressBookEmail_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookEmail_Address.CustomButton.Image = null;
+            this.txtAddressBookEmail_Address.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtAddressBookEmail_Address.CustomButton.Name = "";
+            this.txtAddressBookEmail_Address.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookEmail_Address.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookEmail_Address.CustomButton.TabIndex = 1;
+            this.txtAddressBookEmail_Address.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookEmail_Address.CustomButton.UseSelectable = true;
+            this.txtAddressBookEmail_Address.CustomButton.Visible = false;
+            this.txtAddressBookEmail_Address.Lines = new string[0];
+            this.txtAddressBookEmail_Address.Location = new System.Drawing.Point(74, 217);
+            this.txtAddressBookEmail_Address.MaxLength = 32767;
+            this.txtAddressBookEmail_Address.Name = "txtAddressBookEmail_Address";
+            this.txtAddressBookEmail_Address.PasswordChar = '\0';
+            this.txtAddressBookEmail_Address.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookEmail_Address.SelectedText = "";
+            this.txtAddressBookEmail_Address.SelectionLength = 0;
+            this.txtAddressBookEmail_Address.SelectionStart = 0;
+            this.txtAddressBookEmail_Address.Size = new System.Drawing.Size(336, 23);
+            this.txtAddressBookEmail_Address.TabIndex = 84;
+            this.txtAddressBookEmail_Address.UseSelectable = true;
+            this.txtAddressBookEmail_Address.UseStyleColors = true;
+            this.txtAddressBookEmail_Address.WaterMark = "Enter Email Address";
+            this.txtAddressBookEmail_Address.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookEmail_Address.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookEmail_Address.Leave += new System.EventHandler(this.txtAddressBookEmail_Number_Leave);
             // 
             // txtAddressBookCellphone_Number
             // 
@@ -408,6 +414,7 @@
             this.txtAddressBookCellphone_Number.WaterMark = "Enter Cell Number";
             this.txtAddressBookCellphone_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAddressBookCellphone_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookCellphone_Number.Leave += new System.EventHandler(this.txtAddressBookCellphone_Number_Leave);
             // 
             // txtAddressBookFax_Number
             // 
@@ -439,6 +446,7 @@
             this.txtAddressBookFax_Number.WaterMark = "Enter Fax Number";
             this.txtAddressBookFax_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAddressBookFax_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookFax_Number.Leave += new System.EventHandler(this.txtAddressBookFax_Number_Leave);
             // 
             // txtAddressBookTelephone_Number
             // 
@@ -470,6 +478,7 @@
             this.txtAddressBookTelephone_Number.WaterMark = "Enter Tel Number";
             this.txtAddressBookTelephone_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAddressBookTelephone_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookTelephone_Number.Leave += new System.EventHandler(this.txtAddressBookTelephone_Number_Leave);
             // 
             // txtAddressBookSurname
             // 
@@ -501,6 +510,7 @@
             this.txtAddressBookSurname.WaterMark = "Enter Contact";
             this.txtAddressBookSurname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAddressBookSurname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookSurname.Leave += new System.EventHandler(this.txtAddressBookSurname_Leave);
             // 
             // txtAddressBookName
             // 
@@ -532,6 +542,7 @@
             this.txtAddressBookName.WaterMark = "Enter Name";
             this.txtAddressBookName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAddressBookName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookName.Leave += new System.EventHandler(this.txtAddressBookName_Leave);
             // 
             // txtAddressBookNumber
             // 
@@ -563,6 +574,7 @@
             this.txtAddressBookNumber.WaterMark = "Number";
             this.txtAddressBookNumber.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAddressBookNumber.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookNumber.Leave += new System.EventHandler(this.txtAddressBookNumber_Leave);
             // 
             // metroLabel12
             // 
@@ -806,7 +818,7 @@
             this.groupBox1.Controls.Add(this.txtAddressBookAddress2);
             this.groupBox1.Controls.Add(this.txtAddressBookAddress1);
             this.groupBox1.Controls.Add(this.txtAddressBookWebsite);
-            this.groupBox1.Controls.Add(this.txtAddressBookEmail_Number);
+            this.groupBox1.Controls.Add(this.txtAddressBookEmail_Address);
             this.groupBox1.Controls.Add(this.txtAddressBookCellphone_Number);
             this.groupBox1.Controls.Add(this.txtAddressBookFax_Number);
             this.groupBox1.Controls.Add(this.txtAddressBookTelephone_Number);
@@ -877,7 +889,7 @@
         private MetroFramework.Controls.MetroTextBox txtAddressBookAddress2;
         private MetroFramework.Controls.MetroTextBox txtAddressBookAddress1;
         private MetroFramework.Controls.MetroTextBox txtAddressBookWebsite;
-        private MetroFramework.Controls.MetroTextBox txtAddressBookEmail_Number;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookEmail_Address;
         private MetroFramework.Controls.MetroTextBox txtAddressBookCellphone_Number;
         private MetroFramework.Controls.MetroTextBox txtAddressBookFax_Number;
         private MetroFramework.Controls.MetroTextBox txtAddressBookTelephone_Number;

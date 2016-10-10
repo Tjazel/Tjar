@@ -1289,6 +1289,83 @@ namespace PschyHealth
             }
         }
 
+        public bool isEmail(String text)
+        {
+            if (Regex.IsMatch(text, @"^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"))
+                return true;
+            else
+            {
+                //MessageBox.Show("Please make sure that you correctly typed in the textbox");
+                return false;
+            }
+        }
+
+        public bool isTelephone(String text)
+        {
+            if (Regex.IsMatch(text, @"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"))
+                return true;
+            else
+            {
+                //MessageBox.Show("Please make sure that it is a valid number");
+                return false;
+            }
+        }
+
+        public bool isText(String text)
+        {
+            if (Regex.IsMatch(text, @"^[a-zA-Z0-9]*$"))
+                return true;
+            else
+            {
+                //MessageBox.Show("Please make sure that you correctly typed in the textbox");
+                return false;
+            }
+        }
+
+        public bool isTextWithSpace(String text)
+        {
+            if (Regex.IsMatch(text, @"^[a-zA-Z0-9 ]*$"))
+                return true;
+            else
+            {
+                //MessageBox.Show("Please make sure that you correctly typed in the textbox");
+                return false;
+            }
+        }
+
+        public bool isURL(String text)
+        {
+            if (Regex.IsMatch(text, @"(http(s)?://)?([\w-]+\.)+[\w-]+[.com]+(/[/?%&=]*)?"))
+                return true;
+            else
+            {
+                //MessageBox.Show("Please make sure that you correctly typed in the textbox");
+                return false;
+            }
+        }
+
+        public bool isNumber(String text)
+        {
+            if (Regex.IsMatch(text, @"^[0-9]*$"))
+                return true;
+            else
+            {
+                //MessageBox.Show("Please make sure that it is a valid number");
+                return false;
+            }
+        }
+
+        public bool isMoney(String text)
+        {
+            if (Regex.IsMatch(text, @"/^[+-]?((\d+(\.\d*)?)|(\.\d+))$/"))
+                return true;
+            else
+            {
+                //MessageBox.Show("Please make sure that it is a valid number");
+                return false;
+            }
+        }
+
         public void getFieldsAndValues(out String fields, out String values, GroupBox gb, String extra)
         {
             fields = "";

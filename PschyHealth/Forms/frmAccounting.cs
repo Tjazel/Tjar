@@ -16,6 +16,7 @@ namespace PschyHealth
 {
     public partial class frmAccounting : MetroForm
     {
+        bool validFields = true;
         Methods cMethods = new Methods();
         String correctSearch = "";
         String button = "";
@@ -57,7 +58,7 @@ namespace PschyHealth
             for (int i = 0; i < dgvAccount.RowCount - 1; i++)
             {
                 dt = dgvAccount.Rows[i].Cells["Date"].Value.ToString();
-                dt = dt.Substring(0, dt.IndexOf(@"/"));
+                dt = dt.Substring(0, dt.IndexOf(@"-"));
                 diff = Convert.ToInt16(DateTime.Now.Month.ToString()) - Convert.ToInt16(dt);
                 if (diff > 0)
                     cMethods.Archive(dgvAccount, "Accounting", "Transaction_Number", dgvAccount.Rows[i].Cells["Transaction_Number"].Value.ToString());
@@ -257,30 +258,46 @@ namespace PschyHealth
 
         private void btnConnfirm_Click(object sender, EventArgs e)
         {
-            String field;
-            String value;
-            if (dgvAccount.SelectedRows.Count > 0)
+            //bool accept = true;
+            //foreach(Control obj in groupBox1.Controls)
+            //{
+            //    string name = "";
+            //    if(obj is MetroTextBox)
+            //    {
+            //        name = obj.Name;
+            //    }
+            //}
+            if (validFields)
             {
-                int selectedIndex = dgvAccount.SelectedRows[0].Index;
+                String field;
+                String value;
+                if (dgvAccount.SelectedRows.Count > 0)
+                {
+                    int selectedIndex = dgvAccount.SelectedRows[0].Index;
 
-                String rowID = dgvAccount[0, selectedIndex].Value.ToString();
-                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Acc");
-                if (button == "add")
-                    cMethods.add("Accounting", field, value);
-                else if (button == "edit")
-                    cMethods.edit("Accounting", field, value, " Transaction_Number = '" + dgvAccount.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString() + "'");
-                else if (button == "delete")
-                    cMethods.delete("Accounting", "Transaction_Number = '" + rowID + "'");
-                else if (button == "archive")
-                    cMethods.Archive(dgvAccount, "Accounting", "Transaction_Number", dgvAccount.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString());
+                    String rowID = dgvAccount[0, selectedIndex].Value.ToString();
+                    cMethods.getFieldsAndValues(out field, out value, groupBox1, "Acc");
+                    if (button == "add")
+                        cMethods.add("Accounting", field, value);
+                    else if (button == "edit")
+                        cMethods.edit("Accounting", field, value, " Transaction_Number = '" + dgvAccount.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString() + "'");
+                    else if (button == "delete")
+                        cMethods.delete("Accounting", "Transaction_Number = '" + rowID + "'");
+                    else if (button == "archive")
+                        cMethods.Archive(dgvAccount, "Accounting", "Transaction_Number", dgvAccount.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString());
 
+                }
+                btnDeleteAccount.Enabled = true;
+                btnUpdatAccount.Enabled = true;
+                btnAddAcount.Enabled = true;
+                btnConfirm.Hide();
+                btnCancel.Hide();
+                filter();
             }
-            btnDeleteAccount.Enabled = true;
-            btnUpdatAccount.Enabled = true;
-            btnAddAcount.Enabled = true;
-            btnConfirm.Hide();
-            btnCancel.Hide();
-            filter();
+            else
+            {
+                MessageBox.Show("Invalid field data, please go through your inputs.");
+            }
         }
 
         private void btnCanccel_Click(object sender, EventArgs e)
@@ -292,18 +309,49 @@ namespace PschyHealth
             btnAddAcount.Enabled = true;
         }
 
-        //private void txtAccTransaction_Number_Leave(object sender, EventArgs e)
-        //{
-        //    if(!cMethods.validString(txtAccTransaction_Number.Text))
-        //    {
-        //        txtAccTransaction_Number.BackColor = Color.Red;
-        //    }
-        //}
+        private void txtAccTransaction_Number_Leave_1(object sender, EventArgs e)
+        {
+            if (!cMethods.isNumber(txtAccTransaction_Number.Text))
+            {
+                txtAccTransaction_Number.Text = "";
+                txtAccTransaction_Number.WaterMarkColor = Color.Red;
+                txtAccTransaction_Number.WaterMark = "Incorrect Number";
+                validFields = cMethods.isNumber(txtAccTransaction_Number.Text);
+            }
+        }
 
-        //private void txtAccTransaction_Number_Enter(object sender, EventArgs e)
-        //{
+        private void txtAccDescription_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isTextWithSpace(txtAccDescription.Text))
+            {
+                txtAccDescription.Text = "";
+                txtAccDescription.WaterMarkColor = Color.Red;
+                txtAccDescription.WaterMark = "No unusual characters";
+                validFields = cMethods.isNumber(txtAccDescription.Text);
+            }
+        }
 
-        //}
+        private void txtAccType_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isText(txtAccType.Text))
+            {
+                txtAccType.Text = "";
+                txtAccType.WaterMarkColor = Color.Red;
+                txtAccType.WaterMark = "Single phrase";
+                validFields = cMethods.isNumber(txtAccType.Text);
+            }
+        }
+
+        private void txtAccAmount_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isMoney(txtAccAmount.Text))
+            {
+                txtAccAmount.Text = "";
+                txtAccAmount.WaterMarkColor = Color.Red;
+                txtAccAmount.WaterMark = "Incorrect Format";
+                validFields = cMethods.isNumber(txtAccAmount.Text);
+            }
+        }
     }
 }
 
