@@ -883,3 +883,7 @@ C:\Users\Jaco\Source\Repos\Tjar6\PschyHealth\obj\Debug\PschyHealth.frmEmail.reso
 C:\Users\Jaco\Source\Repos\Tjar6\PschyHealth\obj\Debug\PschyHealth.frmStatistics.resources
 C:\Users\Nithin\Desktop\Jarvis\Tjar\Tjar\PschyHealth\obj\Debug\PschyHealth.frmStatistics.resources
 C:\Users\Johann\Source\Repos\TjarFin\PschyHealth\obj\Debug\PschyHealth.frmStatistics.resources
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar9\PschyHealth\bin\Debug\PschyHealth.exe.config
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar9\PschyHealth\obj\Debug\PschyHealth.csproj.ResolveComReference.cache
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar9\PschyHealth\obj\Debug\PschyHealth.exe
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar9\PschyHealth\obj\Debug\PschyHealth.pdb
