@@ -1203,19 +1203,10 @@ namespace PschyHealth
 
         private void btnCalender_Click(object sender, EventArgs e)
         {
-            /*
-            Process p = Process.Start(@"‪C:\Users\Jaco\Desktop\Calendar - Shortcut.lnk");
-            Thread.Sleep(100000000);
-            p.WaitForInputIdle();
-            setParent(p.MainWindowHandle, this.Handle);
-            */
-
-            //string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-            // string path = "C:Users" + "\\" + userName + "\\Source\\Repos\\Tjar10\\Calendar - Shortcut.lnk";
-            Process p = Process.Start(@"C:Users\Tjaart Prinsloo\Source\Repos\Tjar10\Calendar - Shortcut.lnk");
-            Thread.Sleep(500);
-
-          
+          //  Process p = Process.Start(@"‪C:\Users\Jaco\Desktop\Calendar - Shortcut.lnk");
+          //  Thread.Sleep(100000000);
+           // p.WaitForInputIdle();
+           // setParent(p.MainWindowHandle, this.Handle);
         }
     }
 }
