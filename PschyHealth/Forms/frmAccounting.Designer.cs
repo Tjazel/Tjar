@@ -268,8 +268,8 @@
             this.txtAccTransaction_Number.WaterMark = "Enter Transaction";
             this.txtAccTransaction_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAccTransaction_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtAccTransaction_Number.Enter += new System.EventHandler(this.txtAccTransaction_Number_Enter);
-            this.txtAccTransaction_Number.Leave += new System.EventHandler(this.txtAccTransaction_Number_Leave);
+            //this.txtAccTransaction_Number.Enter += new System.EventHandler(this.txtAccTransaction_Number_Enter);
+            //this.txtAccTransaction_Number.Leave += new System.EventHandler(this.txtAccTransaction_Number_Leave);
             // 
             // metroLabel7
             // 

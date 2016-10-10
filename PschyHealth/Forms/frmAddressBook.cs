@@ -13,6 +13,7 @@ namespace PschyHealth
 {
     public partial class frmAddressBook : MetroForm
     {
+        String button = "";
         Methods cMethods = new Methods();
         const int AW_SLIDE = 0X40000;
         const int AW_HOR_POSITIVE = 0X1;
@@ -31,7 +32,7 @@ namespace PschyHealth
         {
             cMethods.readTheme(msmAdBook);
             cMethods.readStyle(msmAdBook);
-            
+
 
             //Load the Form At Position of Main Form
             // int WidthOfMain = Application.OpenForms["frmMainPage"].Width;
@@ -48,9 +49,9 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 
-           
 
-            
+
+
         }
 
         private void frmAddressBook_Load(object sender, EventArgs e)
@@ -58,6 +59,8 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             uc.Dock = DockStyle.Fill;
             this.Controls.Add(uc);
+            btnCancel.Show();
+            btnConfirm.Show();
         }
 
         private void pbBack_Click(object sender, EventArgs e)
@@ -79,5 +82,103 @@ namespace PschyHealth
         {
 
         }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddAcount_Click_1(object sender, EventArgs e)
+        {
+            btnCancel.Show();
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox3, dgvAddressBook, "Acc", true, true);
+            btnAdd.Enabled = false;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            button = "add";
+        }
+
+        private void btnUpdatAccount_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox3, dgvAddressBook, "Acc", true);
+            btnAdd.Enabled = false;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            button = "edit";
+        }
+
+        private void btnDeleteAccount_Click_1(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox3, dgvAddressBook, "Acc", false);
+            btnAdd.Enabled = false;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            button = "delete";
+        }
+
+        private void btnArchive_Click_1(object sender, EventArgs e)
+        {
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox3, dgvAddressBook, "Acc", false);
+            btnAdd.Enabled = false;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            button = "archive";
+        }
+
+        private void btnConnfirm_Click(object sender, EventArgs e)
+        {
+            String field;
+            String value;
+            if (dgvAddressBook.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dgvAddressBook.SelectedRows[0].Index;
+
+                String rowID = dgvAddressBook[0, selectedIndex].Value.ToString();
+                cMethods.getFieldsAndValues(out field, out value, groupBox3, "Acc");
+                if (button == "add")
+                    cMethods.add("Accounting", field, value);
+                else if (button == "edit")
+                    cMethods.edit("Accounting", field, value, " Transaction_Number = '" + dgvAddressBook.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString() + "'");
+                else if (button == "delete")
+                    cMethods.delete("Accounting", "Transaction_Number = '" + rowID + "'");
+                else if (button == "archive")
+                    cMethods.Archive(dgvAddressBook, "Accounting", "Transaction_Number", dgvAddressBook.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString());
+
+            }
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = true;
+            btnUpdate.Enabled = true;
+            btnConfirm.Hide();
+            btnCancel.Hide();
+            //filter();
+        }
+
+        private void btnCanccel_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Hide();
+            btnCancel.Hide();
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = true;
+            btnUpdate.Enabled = true;
+        }
+
+        //private void filter()
+        //{
+        //    if (txtAddressBookSearch.Text != "")
+        //        if (!metroComboBox1.Visible)
+        //        {
+        //            cMethods.filterDGV(dgvAddressBook, "Accounting", " WHERE " + cmbAddressBookCriteria.Text + " LIKE '%" + txtAddressBookSearch.Text + "%'");
+        //        }
+        //        else
+        //        {
+        //            cMethods.filterDGV(dgvAddressBook, "Accounting", " WHERE " + cmbAddressBookCriteria.Text + " " + metroComboBox1.Text + " " + txtAddressBookSearch.Text);
+        //        }
+        //    else
+        //        cMethods.fillDGV(dgvAddressBook, "Accounting");
+        //}
     }
 }
