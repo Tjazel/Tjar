@@ -51,15 +51,15 @@ namespace PschyHealth
 
         }
 
-        //private void btnMaandelikseGeld_Click(object sender, EventArgs e)
-        //{
-        //    txtStatistics.Text = cMethods.fillText(btnMaandelikseGeld.Text);
-        //}
+        private void btnMaandelikseGeld_Click(object sender, EventArgs e)
+        {
+            txtStatistics.Text = cMethods.fillText(btnMaandelikseGeld.Text);
+        }
 
-        //private void btnGeldvloei_Click(object sender, EventArgs e)
-        //{
-        //    txtStatistics.Text = cMethods.fillText(btnGeldvloei.Text);
-        //}
+        private void btnGeldvloei_Click(object sender, EventArgs e)
+        {
+            txtStatistics.Text = cMethods.fillText(btnGeldvloei.Text);
+        }
 
         private void lblBack_Click(object sender, EventArgs e)
         {
