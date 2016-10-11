@@ -1219,6 +1219,11 @@ namespace PschyHealth
            // p.WaitForInputIdle();
            // setParent(p.MainWindowHandle, this.Handle);
         }
+
+        private void metroTilePanel1_MouseHover(object sender, EventArgs e)
+        {
+            pnlColorChange.Hide();
+        }
     }
 }
 

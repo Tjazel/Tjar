@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Controls;
 
 namespace PschyHealth
 {
@@ -142,6 +143,19 @@ namespace PschyHealth
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            validFields = true;
+            foreach (Control obj in groupBox1.Controls)
+            {
+                if (obj is MetroTextBox)
+                {
+                    MetroTextBox txt = new MetroTextBox();
+                    txt = obj as MetroTextBox;
+                    if ((txt.WaterMarkColor == Color.Red) && (txt.Text == ""))
+                    {
+                        validFields = false;
+                    }
+                }
+            }
             if (validFields)
             {
                 String field;
@@ -160,6 +174,7 @@ namespace PschyHealth
                         cMethods.delete("MedicalAid", "Medical_Aid = '" + rowID + "'");
 
                 }
+                btnArchive.Enabled = true;
                 btnAdd.Enabled = true;
                 btnDelete.Enabled = true;
                 btnUpdate.Enabled = true;
@@ -187,6 +202,7 @@ namespace PschyHealth
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
+            btnArchive.Enabled = false;
             button = "add";
         }
 
@@ -198,6 +214,7 @@ namespace PschyHealth
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
+            btnArchive.Enabled = false;
             button = "edit";
         }
 
@@ -209,6 +226,7 @@ namespace PschyHealth
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
+            btnArchive.Enabled = false;
             button = "archive";
         }
 
@@ -221,6 +239,11 @@ namespace PschyHealth
                 txtAddressBookNumber.WaterMark = "Invalid number";
                 validFields = cMethods.isNumber(txtAddressBookNumber.Text);
             }
+            else if (txtAddressBookNumber.Text == "")
+            {
+                txtAddressBookNumber.WaterMarkColor = Color.Red;
+                txtAddressBookNumber.WaterMark = "Please Input a Number";
+            }
         }
 
         private void txtAddressBookName_Leave(object sender, EventArgs e)
@@ -232,6 +255,12 @@ namespace PschyHealth
                 txtAddressBookName.WaterMark = "Invalid Name";
                 validFields = cMethods.isTextWithSpace(txtAddressBookName.Text);
             }
+            else if(txtAddressBookName.Text == "")
+            {
+                txtAddressBookName.WaterMarkColor = Color.Red;
+                txtAddressBookName.WaterMark = "Please Input a Name";
+            }
+
         }
 
         private void txtAddressBookSurname_Leave(object sender, EventArgs e)
@@ -242,6 +271,11 @@ namespace PschyHealth
                 txtAddressBookSurname.WaterMarkColor = Color.Red;
                 txtAddressBookSurname.WaterMark = "Invalid Surname";
                 validFields = cMethods.isTextWithSpace(txtAddressBookSurname.Text);
+            }
+            else if (txtAddressBookSurname.Text == "")
+            {
+                txtAddressBookName.WaterMarkColor = Color.Red;
+                txtAddressBookName.WaterMark = "Please Input a Surname";
             }
         }
 
