@@ -268,7 +268,7 @@ namespace PschyHealth
                 {
                     MetroTextBox txt = new MetroTextBox();
                     txt = obj as MetroTextBox;
-                    if ((txt.WaterMarkColor == Color.Red)&&(txt.Text == ""))
+                    if ((txt.WaterMarkColor == Color.Red)&&(txt.Text == "")||(txt.Text == ""))
                     {
                         validFields = false;
                     }
