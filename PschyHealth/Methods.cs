@@ -74,6 +74,7 @@ namespace PschyHealth
             Thread.Sleep(1000);
             try
             {
+
                 SqlDataAdapter dataAdapter = new SqlDataAdapter();
                 BindingSource bindingSource1 = new BindingSource();
 
@@ -99,7 +100,9 @@ namespace PschyHealth
                 uc.Hide();
 
                 uc.SendToBack();
+                uc.Visible = false;
                 uc = null;
+
             }
             catch (SqlException e)
             {
@@ -136,6 +139,7 @@ namespace PschyHealth
             }
             catch (Exception e)
             {
+
                 MessageBox.Show(e.Message);
                 DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -455,7 +459,7 @@ namespace PschyHealth
                 int mon = Convert.ToInt16(date.Substring(0, index1));
                 int day = Convert.ToInt16(date.Substring(index1 + 1, index2 - index1 - 1));
                 double diff = (Convert.ToInt16(DateTime.Now.Year) - year) * 12 + (Convert.ToInt16(DateTime.Now.Month) - mon) + (Convert.ToInt16(DateTime.Now.Day) - day) / 30;
-                if (diff > months)
+                if (diff > months && months < 600)
                 {
                     for (int j = 0; j < dgv.Columns.Count; j++)
                     {
@@ -1343,6 +1347,41 @@ namespace PschyHealth
             for (int i = 0; i < dgv.RowCount - 1; i++)
             {
                 payed += Convert.ToDouble(dgv.Rows[i].Cells["Amount"].Value.ToString());
+            }
+
+            return worked - payed;
+        }
+        public double calculateAmount(String name, String surname, MetroGrid dgv, double diff1, double diff2)
+        {
+            double worked = 0;
+            filterDGV(dgv, "Consultations", " WHERE Name = '" + name + "' AND Surname = '" + surname + "'");
+            for (int i = 0; i < dgv.RowCount - 1; i++)
+            {
+                String date = dgv.Rows[i].Cells["Date"].Value.ToString();
+                int index1 = date.IndexOf(@"/");
+                int index2 = date.LastIndexOf(@"/");
+                int year = Convert.ToInt16(date.Substring(index2 + 1, 4));
+                int mon = Convert.ToInt16(date.Substring(0, index1));
+                int day = Convert.ToInt16(date.Substring(index1 + 1, index2 - index1 - 1));
+                double diff = (Convert.ToInt16(DateTime.Now.Year) - year) * 365  + (Convert.ToInt16(DateTime.Now.Month) - mon)*30 + (Convert.ToInt16(DateTime.Now.Day) - day);
+                if (diff >= diff1 && diff < diff2)
+                worked += Convert.ToDouble(dgv.Rows[i].Cells["Amount"].Value.ToString());
+            }
+
+            double payed = 0;
+
+            filterDGV(dgv, "Payments", " WHERE Client_Name = '" + name + "' AND Client_Surname = '" + surname + "'");
+            for (int i = 0; i < dgv.RowCount - 1; i++)
+            {
+                String date = dgv.Rows[i].Cells["Date"].Value.ToString();
+                int index1 = date.IndexOf(@"/");
+                int index2 = date.LastIndexOf(@"/");
+                int year = Convert.ToInt16(date.Substring(index2 + 1, 4));
+                int mon = Convert.ToInt16(date.Substring(0, index1));
+                int day = Convert.ToInt16(date.Substring(index1 + 1, index2 - index1 - 1));
+                double diff = (Convert.ToInt16(DateTime.Now.Year) - year) * 365 + (Convert.ToInt16(DateTime.Now.Month) - mon) * 30 + (Convert.ToInt16(DateTime.Now.Day) - day);
+                if (diff >= diff1 && diff < diff2)
+                    payed += Convert.ToDouble(dgv.Rows[i].Cells["Amount"].Value.ToString());
             }
 
             return worked - payed;

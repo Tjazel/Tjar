@@ -273,9 +273,11 @@ namespace PschyHealth
                 title = "MS";
             for (int i = 1; i < lbStatements.Items.Count; i++)
                 txt += lbStatements.Items[i].ToString();
+            String name1 = dgvStatements.Rows[0].Cells["First_Name"].Value.ToString();
+            String surname = dgvStatements.Rows[0].Cells["Surname"].Value.ToString();
             cMethods.ReplaceBookmarkText(doc, "Title", title);
-            cMethods.ReplaceBookmarkText(doc, "Initials", dgvStatements.Rows[0].Cells["First_Name"].Value.ToString());
-            cMethods.ReplaceBookmarkText(doc, "Surname", dgvStatements.Rows[0].Cells["Surname"].Value.ToString());
+            cMethods.ReplaceBookmarkText(doc, "Initials", name1);
+            cMethods.ReplaceBookmarkText(doc, "Surname", surname);
             cMethods.ReplaceBookmarkText(doc, "Address", dgvStatements.Rows[0].Cells["Address"].Value.ToString());
             cMethods.ReplaceBookmarkText(doc, "City", dgvStatements.Rows[0].Cells["City"].Value.ToString());
             cMethods.ReplaceBookmarkText(doc, "Code", dgvStatements.Rows[0].Cells["City_Code"].Value.ToString());
@@ -284,8 +286,18 @@ namespace PschyHealth
             cMethods.ReplaceBookmarkText(doc, "Medical", dgvStatements.Rows[0].Cells["Medical_Aid"].Value.ToString());
             cMethods.ReplaceBookmarkText(doc, "Refferal", dgvStatements.Rows[0].Cells["Referral"].Value.ToString());
             cMethods.ReplaceBookmarkText(doc, "RefPrak", dgvStatements.Rows[0].Cells["Referral_Practice"].Value.ToString());
-            cMethods.ReplaceBookmarkText(doc, "ICD10", "Dit Werk");
+
+            cMethods.filterDGV(dgvStatements, "Consultations", " WHERE Name = '" + clientName.Substring(clientName.IndexOf(",") + 1) + "' AND Surname = '" + clientName.Substring(0, clientName.IndexOf(",")) + "'");
+
+            cMethods.ReplaceBookmarkText(doc, "ICD10", dgvStatements.Rows[0].Cells["ICD10"].Value.ToString());
             cMethods.ReplaceBookmarkText(doc, "Info", txt);
+            
+            cMethods.ReplaceBookmarkText(doc, "D1", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 120, 99999)));
+            cMethods.ReplaceBookmarkText(doc, "D2", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 90, 120)));
+            cMethods.ReplaceBookmarkText(doc, "D3", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 60, 90)));
+            cMethods.ReplaceBookmarkText(doc, "D4", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 30, 60)));
+            cMethods.ReplaceBookmarkText(doc, "D5", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 0, 30)));
+            cMethods.ReplaceBookmarkText(doc, "AmmountDue", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 0, 99999)));
 
 
             doc.Close();
@@ -330,6 +342,11 @@ namespace PschyHealth
             info.CreateNoWindow = true;
             info.WindowStyle = ProcessWindowStyle.Hidden;
             Process.Start(info);
+        }
+
+        private void dgvStatements_VisibleChanged(object sender, EventArgs e)
+        {
+            dgvStatements.Visible = false;
         }
     }
 }
