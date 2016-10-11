@@ -421,6 +421,10 @@ namespace PschyHealth
             dgv.Parent = this;
             cMethods.silentFillDGV(dgv, "Consultations", true);
             cMethods.Archive(dgv, "Consultations", 6);
+            cMethods.silentFillDGV(dgv, "Clients", true);
+            cMethods.Archive(dgv, "Clients", 6);
+            cMethods.silentFillDGV(dgv, "Payments", true);
+            cMethods.Archive(dgv, "Payments", 6);
         }
 
         private void metroLabel3_Click(object sender, EventArgs e)

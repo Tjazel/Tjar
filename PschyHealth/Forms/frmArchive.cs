@@ -102,6 +102,7 @@ namespace PschyHealth
                     pos2 = file.Name.IndexOf(".");
                     month = DateTimeFormatInfo.CurrentInfo.GetMonthName(Convert.ToInt16(file.Name.Substring(pos1,pos2-pos1)));
                     cmbFile.Items.Add(month + " " + file.Name.Substring(0,pos1-1));
+                    cmbFile.Enabled = true;
                 }
             }
             catch (FileNotFoundException el)
@@ -126,7 +127,7 @@ namespace PschyHealth
                 lbArcList.Items.Add(line);
                 counter++;
             }
-
+            metroButton1.Enabled = true;
             file.Close();
         }
 

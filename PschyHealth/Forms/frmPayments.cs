@@ -82,6 +82,7 @@ namespace PschyHealth.Forms
 
         private void cmbClient_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cmbPaymentsClient_Surname.SelectedIndex = cmbPaymentsClient_Name.SelectedIndex;
             breaking = true;
             cmbPaymentsClient_Name.Enabled = false;
             if (cmbPaymentsClient_Surname.Text == "")
@@ -143,6 +144,7 @@ namespace PschyHealth.Forms
 
         private void cmbPaymentsClient_Surname_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cmbPaymentsClient_Name.SelectedIndex = cmbPaymentsClient_Surname.SelectedIndex;
             breaking = true;
             cmbPaymentsClient_Surname.Enabled = false;
             if (cmbPaymentsClient_Name.Text == "")
@@ -181,15 +183,7 @@ namespace PschyHealth.Forms
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            breaking = true;
-            cmbPaymentsClient_Name.Text = "";
-            cmbPaymentsClient_Surname.Text = "";
-            cmbPaymentsClient_Name.Enabled = true;
-            cmbPaymentsClient_Surname.Enabled = true;
-            cMethods.fillDGV(dgvPayments, "Clients");
-            cMethods.fillCMBrow(cmbPaymentsClient_Name, cmbPaymentsClient_Surname, dgvPayments);
-            cMethods.fillDGV(dgvPayments, "Payments");
-            cMethods.fillDGV(dgvConsultations, "Consultations");
+            
         }
 
         private void btnAfbetaal_Click(object sender, EventArgs e)

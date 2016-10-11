@@ -69,7 +69,7 @@ namespace PschyHealth
             cMethods.fillDGV(dgvConsultations, "Clients");
             cMethods.fillCMBrow(cmbConsultationsName, cmbConsultationsSurname, dgvConsultations);
 
-            //cMethods.fillDGV(dgvConsultations, "Consultations");
+            cMethods.fillDGV(dgvConsultations, "Consultations");
 
 
         }
@@ -337,16 +337,16 @@ namespace PschyHealth
             cmbConsultationsName.SelectedIndex = cmbConsultationsSurname.SelectedIndex;
             dgv.Parent = this;
             dgv.Hide();
-            if (cmbConsultationsDependant_Name.Text != "")
-                cMethods.filterDGV(dgvConsultations, "Clients", " WHERE  Surname = '" + cmbConsultationsSurname.Text + "' AND First_Name = '" + cmbConsultationsName.Text + "'");
+            if (cmbConsultationsSurname.Text != "")
+                cMethods.filterDGV(dgv, "Clients", " WHERE  Surname = '" + cmbConsultationsSurname.Text + "' AND First_Name = '" + cmbConsultationsName.Text + "'");
             else
-                cMethods.fillDGV(dgvConsultations, "Clients");
-            txtConsultationsMember_Number.Text = dgvConsultations.Rows[0].Cells[2].Value.ToString();
-            cmbConsultationsDate_Of_Birth.Text = dgvConsultations.Rows[0].Cells[5].Value.ToString();
-            for(int i = 0; i < dgvConsultations.RowCount-1;i++)
+                cMethods.fillDGV(dgv, "Clients");
+            txtConsultationsMember_Number.Text = dgv.Rows[0].Cells[2].Value.ToString();
+            cmbConsultationsDate_Of_Birth.Text = dgv.Rows[0].Cells[5].Value.ToString();
+            for(int i = 0; i < dgv.RowCount-1;i++)
             {
-                cmbConsultationsDependant_Name.Items.Add(dgvConsultations.Rows[i].Cells["Dependant_Full_Name"].Value.ToString());
-                depCode[i] = dgvConsultations.Rows[i].Cells["Dependant_Code"].Value.ToString();
+                cmbConsultationsDependant_Name.Items.Add(dgv.Rows[i].Cells["Dependant_Full_Name"].Value.ToString());
+                depCode[i] = dgv.Rows[i].Cells["Dependant_Code"].Value.ToString();
             }
         }
 

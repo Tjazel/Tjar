@@ -58,7 +58,7 @@ namespace PschyHealth
             for (int i = 0; i < dgvAccount.RowCount - 1; i++)
             {
                 dt = dgvAccount.Rows[i].Cells["Date"].Value.ToString();
-                dt = dt.Substring(0, dt.IndexOf(@"-"));
+                dt = dt.Substring(0, dt.IndexOf(@"/"));
                 diff = Convert.ToInt16(DateTime.Now.Month.ToString()) - Convert.ToInt16(dt);
                 if (diff > 0)
                     cMethods.Archive(dgvAccount, "Accounting", "Transaction_Number", dgvAccount.Rows[i].Cells["Transaction_Number"].Value.ToString());
@@ -223,6 +223,8 @@ namespace PschyHealth
             btnDeleteAccount.Enabled = false;
             btnUpdatAccount.Enabled = false;
             btnAddAcount.Enabled = false;
+            btnArchive.Enabled = false;
+            dgvAccount.Enabled = false;
             button = "add";
         }
 
@@ -233,6 +235,8 @@ namespace PschyHealth
             btnDeleteAccount.Enabled = false;
             btnUpdatAccount.Enabled = false;
             btnAddAcount.Enabled = false;
+            btnArchive.Enabled = false;
+            dgvAccount.Enabled = false;
             button = "edit";
         }
 
@@ -243,6 +247,8 @@ namespace PschyHealth
             btnDeleteAccount.Enabled = false;
             btnUpdatAccount.Enabled = false;
             btnAddAcount.Enabled = false;
+            btnArchive.Enabled = false;
+            dgvAccount.Enabled = false;
             button = "delete";
         }
 
@@ -253,6 +259,8 @@ namespace PschyHealth
             btnDeleteAccount.Enabled = false;
             btnUpdatAccount.Enabled = false;
             btnAddAcount.Enabled = false;
+            btnArchive.Enabled = false;
+            dgvAccount.Enabled = false;
             button = "archive";
         }
 
@@ -269,6 +277,14 @@ namespace PschyHealth
             //}
             if (validFields)
             {
+                pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
+                uc.Hide();
+                uc.Parent = frmMainPage.ActiveForm;
+                uc.Left = 500;
+                uc.Top = 300;
+                uc.Show();
+                uc.BringToFront();
+                Application.DoEvents();
                 String field;
                 String value;
                 if (dgvAccount.SelectedRows.Count > 0)
@@ -287,8 +303,11 @@ namespace PschyHealth
                         cMethods.Archive(dgvAccount, "Accounting", "Transaction_Number", dgvAccount.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString());
 
                 }
+                uc.Hide();
                 btnDeleteAccount.Enabled = true;
                 btnUpdatAccount.Enabled = true;
+                btnAddAcount.Enabled = true;
+                btnArchive.Enabled = true;
                 btnAddAcount.Enabled = true;
                 btnConfirm.Hide();
                 btnCancel.Hide();
@@ -307,6 +326,10 @@ namespace PschyHealth
             btnDeleteAccount.Enabled = true;
             btnUpdatAccount.Enabled = true;
             btnAddAcount.Enabled = true;
+            btnArchive.Enabled = true;
+            btnAddAcount.Enabled = true;
+
+            filter();
         }
 
         private void txtAccTransaction_Number_Leave(object sender, EventArgs e)
@@ -316,7 +339,7 @@ namespace PschyHealth
                 txtAccTransaction_Number.Text = "";
                 txtAccTransaction_Number.WaterMarkColor = Color.Red;
                 txtAccTransaction_Number.WaterMark = "Incorrect Number";
-                validFields = cMethods.isNumber(txtAccTransaction_Number.Text);
+                validFields = false;
             }
         }
 
@@ -327,18 +350,18 @@ namespace PschyHealth
                 txtAccDescription.Text = "";
                 txtAccDescription.WaterMarkColor = Color.Red;
                 txtAccDescription.WaterMark = "No unusual characters";
-                validFields = cMethods.isNumber(txtAccDescription.Text);
+                validFields = false;
             }
         }
 
         private void txtAccType_Leave(object sender, EventArgs e)
         {
-            if (!cMethods.isText(txtAccType.Text))
+            if (!cMethods.isText(cmbAccType.Text))
             {
-                txtAccType.Text = "";
-                txtAccType.WaterMarkColor = Color.Red;
-                txtAccType.WaterMark = "Single phrase";
-                validFields = cMethods.isNumber(txtAccType.Text);
+                cmbAccType.Text = "";
+                //cmbAccType.WaterMarkColor = Color.Red;
+                //cmbAccType.WaterMark = "Single phrase";
+                validFields = false;
             }
         }
 
@@ -349,8 +372,13 @@ namespace PschyHealth
                 txtAccAmount.Text = "";
                 txtAccAmount.WaterMarkColor = Color.Red;
                 txtAccAmount.WaterMark = "Incorrect Format";
-                validFields = cMethods.isMoney(txtAccAmount.Text);
+                validFields = false;
             }
+        }
+
+        private void cmbAccDate_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

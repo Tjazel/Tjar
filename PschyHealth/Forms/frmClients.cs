@@ -49,8 +49,13 @@ namespace PschyHealth
             this.WindowState = FormWindowState.Maximized;
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
-
-
+            MetroGrid dgv = new MetroGrid();
+            dgv.Parent = this;
+            dgv.Hide();
+            cMethods.fillDGV(dgv, "MedicalAid");
+            for (int i = 0; i < dgv.RowCount - 1; i++)
+                cmbClientMedical_Aid.Items.Add(dgv.Rows[i].Cells[0].Value.ToString());
+            dgv = null;
             cMethods.fillDGV(dgvClients, "Clients", cmbClientCriteria);
         }
         public frmClients()
@@ -84,6 +89,7 @@ namespace PschyHealth
         private void dgvClients_SelectionChanged_1(object sender, EventArgs e)
         {
             cMethods.fillTextbox(groupBox1, dgvClients, "Client", false);
+            cMethods.fillTextbox(gbDependants, dgvClients, "Client", false);
         }
 
         private void txtClientsSearch_TextChanged(object sender, EventArgs e)
@@ -195,6 +201,8 @@ namespace PschyHealth
             btnaddNewclient.Enabled = true;
             btnUpdate.Enabled = true;
             btnDelete.Enabled = true;
+            btnArchiv.Enabled = true;
+            dgvClients.Enabled = true;
             btnConnfirm.Hide();
             btnCanccel.Hide();
             filter();
@@ -219,6 +227,9 @@ namespace PschyHealth
             btnaddNewclient.Enabled = false;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
+            btnArchiv.Enabled = false;
+            dgvClients.Enabled = false;
+
             button = "archive";
         }
 
@@ -230,6 +241,8 @@ namespace PschyHealth
             btnaddNewclient.Enabled = true;
             btnUpdate.Enabled = true;
             btnDelete.Enabled = true;
+            btnArchiv.Enabled = true;
+            dgvClients.Enabled = true;
         }
 
         private void btnAddExClient_Click(object sender, EventArgs e)
@@ -241,6 +254,8 @@ namespace PschyHealth
             btnaddNewclient.Enabled = false;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
+            btnArchiv.Enabled = false;
+            dgvClients.Enabled = false;
             button = "add";
         }
 
@@ -253,6 +268,8 @@ namespace PschyHealth
             btnaddNewclient.Enabled = false;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
+            btnArchiv.Enabled = false;
+            dgvClients.Enabled = false;
             button = "add";
         }
 
@@ -265,6 +282,8 @@ namespace PschyHealth
             btnaddNewclient.Enabled = false;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
+            btnArchiv.Enabled = false;
+            dgvClients.Enabled = false;
             button = "edit";
         }
 
@@ -277,6 +296,8 @@ namespace PschyHealth
             btnaddNewclient.Enabled = false;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
+            btnArchiv.Enabled = false;
+            dgvClients.Enabled = false;
             button = "delete";
         }
 
@@ -288,6 +309,8 @@ namespace PschyHealth
             btnaddNewclient.Enabled = false;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
+            btnArchiv.Enabled = false;
+            dgvClients.Enabled = false;
             button = "archive";
         }
 
@@ -319,6 +342,8 @@ namespace PschyHealth
             btnaddNewclient.Enabled = true;
             btnUpdate.Enabled = true;
             btnDelete.Enabled = true;
+            btnArchiv.Enabled = true;
+            dgvClients.Enabled = true;
             btnConnfirm.Hide();
             btnCanccel.Hide();
             filter();
@@ -332,6 +357,8 @@ namespace PschyHealth
             btnaddNewclient.Enabled = true;
             btnUpdate.Enabled = true;
             btnDelete.Enabled = true;
+            btnArchiv.Enabled = true;
+            dgvClients.Enabled = true;
         }
 
         private void btnAddNewClient_Click(object sender, EventArgs e)
@@ -345,6 +372,11 @@ namespace PschyHealth
         }
 
         private void txtClientDateFinished_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbClientLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
