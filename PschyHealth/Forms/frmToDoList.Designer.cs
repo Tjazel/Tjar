@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmToDoList));
             this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -81,10 +81,10 @@
             // 
             // 
             this.metroTextBox5.CustomButton.Image = null;
-            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(301, 1);
-            this.metroTextBox5.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(401, 1);
+            this.metroTextBox5.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTextBox5.CustomButton.Name = "";
-            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(147, 147);
+            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(196, 181);
             this.metroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox5.CustomButton.TabIndex = 1;
             this.metroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -92,7 +92,7 @@
             this.metroTextBox5.CustomButton.Visible = false;
             this.metroTextBox5.Lines = new string[0];
             this.metroTextBox5.Location = new System.Drawing.Point(136, 454);
-            this.metroTextBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTextBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTextBox5.MaxLength = 32767;
             this.metroTextBox5.Multiline = true;
             this.metroTextBox5.Name = "metroTextBox5";
@@ -124,10 +124,10 @@
             // 
             // 
             this.metroTextBox4.CustomButton.Image = null;
-            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(230, 2);
-            this.metroTextBox4.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(307, 2);
+            this.metroTextBox4.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTextBox4.CustomButton.Name = "";
-            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox4.CustomButton.TabIndex = 1;
             this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -135,7 +135,7 @@
             this.metroTextBox4.CustomButton.Visible = false;
             this.metroTextBox4.Lines = new string[0];
             this.metroTextBox4.Location = new System.Drawing.Point(136, 411);
-            this.metroTextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTextBox4.MaxLength = 32767;
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.PasswordChar = '\0';
@@ -154,7 +154,7 @@
             // 
             this.metroCheckBox2.AutoSize = true;
             this.metroCheckBox2.Location = new System.Drawing.Point(197, 385);
-            this.metroCheckBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.metroCheckBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroCheckBox2.Name = "metroCheckBox2";
             this.metroCheckBox2.Size = new System.Drawing.Size(42, 17);
             this.metroCheckBox2.TabIndex = 84;
@@ -165,7 +165,7 @@
             // 
             this.metroCheckBox1.AutoSize = true;
             this.metroCheckBox1.Location = new System.Drawing.Point(136, 384);
-            this.metroCheckBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroCheckBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroCheckBox1.Name = "metroCheckBox1";
             this.metroCheckBox1.Size = new System.Drawing.Size(43, 17);
             this.metroCheckBox1.TabIndex = 83;
@@ -183,7 +183,7 @@
             "General",
             "Family"});
             this.metroComboBox2.Location = new System.Drawing.Point(136, 340);
-            this.metroComboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.metroComboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroComboBox2.Name = "metroComboBox2";
             this.metroComboBox2.Size = new System.Drawing.Size(160, 30);
             this.metroComboBox2.TabIndex = 82;
@@ -200,7 +200,7 @@
             "Waiting for someone else",
             "Deferred"});
             this.metroComboBox1.Location = new System.Drawing.Point(136, 293);
-            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.Size = new System.Drawing.Size(160, 30);
             this.metroComboBox1.TabIndex = 81;
@@ -209,7 +209,7 @@
             // metroDateTime2
             // 
             this.metroDateTime2.Location = new System.Drawing.Point(136, 250);
-            this.metroDateTime2.Margin = new System.Windows.Forms.Padding(4);
+            this.metroDateTime2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 30);
             this.metroDateTime2.Name = "metroDateTime2";
             this.metroDateTime2.Size = new System.Drawing.Size(256, 30);
@@ -218,7 +218,7 @@
             // metroDateTime1
             // 
             this.metroDateTime1.Location = new System.Drawing.Point(136, 206);
-            this.metroDateTime1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroDateTime1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 30);
             this.metroDateTime1.Name = "metroDateTime1";
             this.metroDateTime1.Size = new System.Drawing.Size(255, 30);
@@ -230,10 +230,10 @@
             // 
             // 
             this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(230, 2);
-            this.metroTextBox3.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(307, 2);
+            this.metroTextBox3.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox3.CustomButton.TabIndex = 1;
             this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -241,7 +241,7 @@
             this.metroTextBox3.CustomButton.Visible = false;
             this.metroTextBox3.Lines = new string[0];
             this.metroTextBox3.Location = new System.Drawing.Point(136, 170);
-            this.metroTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTextBox3.MaxLength = 32767;
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.PasswordChar = '\0';
@@ -262,10 +262,10 @@
             // 
             // 
             this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(230, 2);
-            this.metroTextBox2.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(307, 2);
+            this.metroTextBox2.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox2.CustomButton.TabIndex = 1;
             this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -273,7 +273,7 @@
             this.metroTextBox2.CustomButton.Visible = false;
             this.metroTextBox2.Lines = new string[0];
             this.metroTextBox2.Location = new System.Drawing.Point(136, 130);
-            this.metroTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.PasswordChar = '\0';
@@ -294,18 +294,19 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(135, 2);
-            this.metroTextBox1.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(180, 2);
+            this.metroTextBox1.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(31, 28);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox1.CustomButton.TabIndex = 1;
             this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
+            this.metroTextBox1.Lines = new string[] {
+        "ffffff"};
             this.metroTextBox1.Location = new System.Drawing.Point(136, 94);
-            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -315,6 +316,7 @@
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.Size = new System.Drawing.Size(161, 28);
             this.metroTextBox1.TabIndex = 76;
+            this.metroTextBox1.Text = "ffffff";
             this.metroTextBox1.UseSelectable = true;
             this.metroTextBox1.WaterMark = "Number";
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -418,38 +420,38 @@
             this.dgvAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAccount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvAccount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAccount.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAccount.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAccount.EnableHeadersVisualStyles = false;
             this.dgvAccount.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvAccount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dgvAccount.Location = new System.Drawing.Point(723, 174);
-            this.dgvAccount.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvAccount.Name = "dgvAccount";
             this.dgvAccount.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAccount.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAccount.Size = new System.Drawing.Size(943, 496);
@@ -465,7 +467,7 @@
             this.btnRefresh.ForeColor = System.Drawing.Color.Transparent;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.Location = new System.Drawing.Point(1489, 110);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(45, 36);
             this.btnRefresh.TabIndex = 92;
@@ -480,9 +482,9 @@
             this.groupBox3.Controls.Add(this.txtAccSearch);
             this.groupBox3.Controls.Add(this.metroLabel17);
             this.groupBox3.Location = new System.Drawing.Point(841, 59);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Size = new System.Drawing.Size(640, 87);
             this.groupBox3.TabIndex = 91;
             this.groupBox3.TabStop = false;
@@ -496,7 +498,7 @@
             this.btnSearch.ForeColor = System.Drawing.Color.Transparent;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.Location = new System.Drawing.Point(569, 23);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(45, 36);
             this.btnSearch.TabIndex = 47;
@@ -516,7 +518,7 @@
             "Status",
             "Res Person"});
             this.cmbAccCriteria.Location = new System.Drawing.Point(104, 28);
-            this.cmbAccCriteria.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbAccCriteria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbAccCriteria.Name = "cmbAccCriteria";
             this.cmbAccCriteria.Size = new System.Drawing.Size(187, 30);
             this.cmbAccCriteria.Style = MetroFramework.MetroColorStyle.Blue;
@@ -529,10 +531,10 @@
             // 
             // 
             this.txtAccSearch.CustomButton.Image = null;
-            this.txtAccSearch.CustomButton.Location = new System.Drawing.Point(154, 2);
-            this.txtAccSearch.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAccSearch.CustomButton.Location = new System.Drawing.Point(205, 2);
+            this.txtAccSearch.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccSearch.CustomButton.Name = "";
-            this.txtAccSearch.CustomButton.Size = new System.Drawing.Size(31, 31);
+            this.txtAccSearch.CustomButton.Size = new System.Drawing.Size(41, 38);
             this.txtAccSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAccSearch.CustomButton.TabIndex = 1;
             this.txtAccSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -540,7 +542,7 @@
             this.txtAccSearch.CustomButton.Visible = false;
             this.txtAccSearch.Lines = new string[0];
             this.txtAccSearch.Location = new System.Drawing.Point(383, 23);
-            this.txtAccSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAccSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAccSearch.MaxLength = 32767;
             this.txtAccSearch.Name = "txtAccSearch";
             this.txtAccSearch.PasswordChar = '\0';
@@ -584,6 +586,7 @@
             // btnStaffArchive
             // 
             this.btnStaffArchive.Location = new System.Drawing.Point(1123, 711);
+            this.btnStaffArchive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStaffArchive.Name = "btnStaffArchive";
             this.btnStaffArchive.Size = new System.Drawing.Size(121, 52);
             this.btnStaffArchive.TabIndex = 119;
@@ -594,6 +597,7 @@
             // btnStaffDelete
             // 
             this.btnStaffDelete.Location = new System.Drawing.Point(996, 711);
+            this.btnStaffDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStaffDelete.Name = "btnStaffDelete";
             this.btnStaffDelete.Size = new System.Drawing.Size(121, 52);
             this.btnStaffDelete.TabIndex = 118;
@@ -604,6 +608,7 @@
             // btnStaffUpdate
             // 
             this.btnStaffUpdate.Location = new System.Drawing.Point(864, 711);
+            this.btnStaffUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStaffUpdate.Name = "btnStaffUpdate";
             this.btnStaffUpdate.Size = new System.Drawing.Size(121, 52);
             this.btnStaffUpdate.TabIndex = 117;
@@ -614,6 +619,7 @@
             // btnStaffAdd
             // 
             this.btnStaffAdd.Location = new System.Drawing.Point(737, 711);
+            this.btnStaffAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStaffAdd.Name = "btnStaffAdd";
             this.btnStaffAdd.Size = new System.Drawing.Size(121, 52);
             this.btnStaffAdd.TabIndex = 116;
@@ -623,7 +629,8 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(318, 618);
+            this.btnCancel.Location = new System.Drawing.Point(317, 618);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(121, 52);
             this.btnCancel.TabIndex = 121;
@@ -634,6 +641,7 @@
             // btnConfirm
             // 
             this.btnConfirm.Location = new System.Drawing.Point(136, 618);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(121, 52);
             this.btnConfirm.TabIndex = 120;
@@ -645,7 +653,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2777, 970);
+            this.ClientSize = new System.Drawing.Size(1284, 804);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnStaffArchive);
@@ -677,9 +685,11 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmToDoList";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "To Do List";
             this.Load += new System.EventHandler(this.frmToDoList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();

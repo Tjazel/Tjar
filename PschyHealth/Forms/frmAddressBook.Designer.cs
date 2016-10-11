@@ -29,28 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cmbAccCriteria = new MetroFramework.Controls.MetroComboBox();
-            this.txtAccSearch = new MetroFramework.Controls.MetroTextBox();
+            this.cmbAddressBookCriteria = new MetroFramework.Controls.MetroComboBox();
+            this.txtAddressBookSearch = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.mtxb_Remarks = new MetroFramework.Controls.MetroTextBox();
-            this.mtxb_Zip = new MetroFramework.Controls.MetroTextBox();
-            this.mtxb_Address3 = new MetroFramework.Controls.MetroTextBox();
-            this.mtxb_Address2 = new MetroFramework.Controls.MetroTextBox();
-            this.mtxb_Address1 = new MetroFramework.Controls.MetroTextBox();
-            this.mtxb_Internet = new MetroFramework.Controls.MetroTextBox();
-            this.mtxb_Email = new MetroFramework.Controls.MetroTextBox();
-            this.mtxb_Cell = new MetroFramework.Controls.MetroTextBox();
-            this.mtxb_Fax = new MetroFramework.Controls.MetroTextBox();
-            this.mtxb_Tel = new MetroFramework.Controls.MetroTextBox();
-            this.mtxb_Contact = new MetroFramework.Controls.MetroTextBox();
-            this.mtxb_Name = new MetroFramework.Controls.MetroTextBox();
-            this.mtxb_Number = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.dgvAddressBook = new MetroFramework.Controls.MetroGrid();
+            this.txtAddressBookZip_Code = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddressBookAddress3 = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddressBookAddress2 = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddressBookAddress1 = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddressBookWebsite = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddressBookEmail_Address = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddressBookCellphone_Number = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddressBookFax_Number = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddressBookTelephone_Number = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddressBookSurname = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddressBookName = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddressBookNumber = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -73,577 +71,517 @@
             this.btnAdd = new MetroFramework.Controls.MetroButton();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnConfirm = new MetroFramework.Controls.MetroButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddressBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msmAdBook)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cmbAccCriteria);
-            this.groupBox3.Controls.Add(this.txtAccSearch);
+            this.groupBox3.Controls.Add(this.cmbAddressBookCriteria);
+            this.groupBox3.Controls.Add(this.txtAddressBookSearch);
             this.groupBox3.Controls.Add(this.metroLabel17);
-            this.groupBox3.Location = new System.Drawing.Point(655, 106);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(491, 86);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(640, 87);
+            this.groupBox3.Size = new System.Drawing.Size(480, 71);
             this.groupBox3.TabIndex = 95;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search Address Book";
             // 
-            // cmbAccCriteria
+            // cmbAddressBookCriteria
             // 
-            this.cmbAccCriteria.FormattingEnabled = true;
-            this.cmbAccCriteria.ItemHeight = 24;
-            this.cmbAccCriteria.Items.AddRange(new object[] {
+            this.cmbAddressBookCriteria.FormattingEnabled = true;
+            this.cmbAddressBookCriteria.ItemHeight = 23;
+            this.cmbAddressBookCriteria.Items.AddRange(new object[] {
             "Name",
             "Email",
             "Tel"});
-            this.cmbAccCriteria.Location = new System.Drawing.Point(104, 28);
-            this.cmbAccCriteria.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbAccCriteria.Name = "cmbAccCriteria";
-            this.cmbAccCriteria.Size = new System.Drawing.Size(187, 30);
-            this.cmbAccCriteria.TabIndex = 3;
-            this.cmbAccCriteria.UseSelectable = true;
-            this.cmbAccCriteria.UseStyleColors = true;
+            this.cmbAddressBookCriteria.Location = new System.Drawing.Point(78, 23);
+            this.cmbAddressBookCriteria.Name = "cmbAddressBookCriteria";
+            this.cmbAddressBookCriteria.Size = new System.Drawing.Size(141, 29);
+            this.cmbAddressBookCriteria.TabIndex = 3;
+            this.cmbAddressBookCriteria.UseSelectable = true;
+            this.cmbAddressBookCriteria.UseStyleColors = true;
+            this.cmbAddressBookCriteria.TextChanged += new System.EventHandler(this.cmbAddressBookCriteria_TextChanged);
             // 
-            // txtAccSearch
-            // 
-            // 
+            // txtAddressBookSearch
             // 
             // 
-            this.txtAccSearch.CustomButton.Image = null;
-            this.txtAccSearch.CustomButton.Location = new System.Drawing.Point(154, 2);
-            this.txtAccSearch.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAccSearch.CustomButton.Name = "";
-            this.txtAccSearch.CustomButton.Size = new System.Drawing.Size(31, 31);
-            this.txtAccSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtAccSearch.CustomButton.TabIndex = 1;
-            this.txtAccSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtAccSearch.CustomButton.UseSelectable = true;
-            this.txtAccSearch.CustomButton.Visible = false;
-            this.txtAccSearch.Lines = new string[0];
-            this.txtAccSearch.Location = new System.Drawing.Point(338, 28);
-            this.txtAccSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAccSearch.MaxLength = 32767;
-            this.txtAccSearch.Name = "txtAccSearch";
-            this.txtAccSearch.PasswordChar = '\0';
-            this.txtAccSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtAccSearch.SelectedText = "";
-            this.txtAccSearch.SelectionLength = 0;
-            this.txtAccSearch.SelectionStart = 0;
-            this.txtAccSearch.Size = new System.Drawing.Size(188, 36);
-            this.txtAccSearch.TabIndex = 2;
-            this.txtAccSearch.UseSelectable = true;
-            this.txtAccSearch.UseStyleColors = true;
-            this.txtAccSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtAccSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // 
+            this.txtAddressBookSearch.CustomButton.Image = null;
+            this.txtAddressBookSearch.CustomButton.Location = new System.Drawing.Point(113, 1);
+            this.txtAddressBookSearch.CustomButton.Name = "";
+            this.txtAddressBookSearch.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtAddressBookSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookSearch.CustomButton.TabIndex = 1;
+            this.txtAddressBookSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookSearch.CustomButton.UseSelectable = true;
+            this.txtAddressBookSearch.CustomButton.Visible = false;
+            this.txtAddressBookSearch.Lines = new string[0];
+            this.txtAddressBookSearch.Location = new System.Drawing.Point(254, 23);
+            this.txtAddressBookSearch.MaxLength = 32767;
+            this.txtAddressBookSearch.Name = "txtAddressBookSearch";
+            this.txtAddressBookSearch.PasswordChar = '\0';
+            this.txtAddressBookSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookSearch.SelectedText = "";
+            this.txtAddressBookSearch.SelectionLength = 0;
+            this.txtAddressBookSearch.SelectionStart = 0;
+            this.txtAddressBookSearch.Size = new System.Drawing.Size(141, 29);
+            this.txtAddressBookSearch.TabIndex = 2;
+            this.txtAddressBookSearch.UseSelectable = true;
+            this.txtAddressBookSearch.UseStyleColors = true;
+            this.txtAddressBookSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookSearch.TextChanged += new System.EventHandler(this.txtAddressBookSearch_TextChanged);
             // 
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(23, 33);
-            this.metroLabel17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel17.Location = new System.Drawing.Point(17, 27);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(56, 20);
+            this.metroLabel17.Size = new System.Drawing.Size(55, 19);
             this.metroLabel17.TabIndex = 0;
             this.metroLabel17.Text = "Criteria:";
             // 
-            // metroGrid1
-            // 
-            this.metroGrid1.AllowUserToResizeRows = false;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.metroGrid1.EnableHeadersVisualStyles = false;
-            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.metroGrid1.Location = new System.Drawing.Point(655, 222);
-            this.metroGrid1.Margin = new System.Windows.Forms.Padding(4);
-            this.metroGrid1.Name = "metroGrid1";
-            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(640, 489);
-            this.metroGrid1.TabIndex = 94;
-            this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // mtxb_Remarks
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Remarks.CustomButton.Image = null;
-            this.mtxb_Remarks.CustomButton.Location = new System.Drawing.Point(304, 1);
-            this.mtxb_Remarks.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Remarks.CustomButton.Name = "";
-            this.mtxb_Remarks.CustomButton.Size = new System.Drawing.Size(143, 143);
-            this.mtxb_Remarks.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Remarks.CustomButton.TabIndex = 1;
-            this.mtxb_Remarks.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Remarks.CustomButton.UseSelectable = true;
-            this.mtxb_Remarks.CustomButton.Visible = false;
-            this.mtxb_Remarks.Lines = new string[0];
-            this.mtxb_Remarks.Location = new System.Drawing.Point(124, 565);
-            this.mtxb_Remarks.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Remarks.MaxLength = 32767;
-            this.mtxb_Remarks.Multiline = true;
-            this.mtxb_Remarks.Name = "mtxb_Remarks";
-            this.mtxb_Remarks.PasswordChar = '\0';
-            this.mtxb_Remarks.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Remarks.SelectedText = "";
-            this.mtxb_Remarks.SelectionLength = 0;
-            this.mtxb_Remarks.SelectionStart = 0;
-            this.mtxb_Remarks.Size = new System.Drawing.Size(448, 145);
-            this.mtxb_Remarks.TabIndex = 90;
-            this.mtxb_Remarks.UseSelectable = true;
-            this.mtxb_Remarks.UseStyleColors = true;
-            this.mtxb_Remarks.WaterMark = "Enter Additional Remarks";
-            this.mtxb_Remarks.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Remarks.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxb_Zip
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Zip.CustomButton.Image = null;
-            this.mtxb_Zip.CustomButton.Location = new System.Drawing.Point(422, 2);
-            this.mtxb_Zip.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Zip.CustomButton.Name = "";
-            this.mtxb_Zip.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.mtxb_Zip.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Zip.CustomButton.TabIndex = 1;
-            this.mtxb_Zip.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Zip.CustomButton.UseSelectable = true;
-            this.mtxb_Zip.CustomButton.Visible = false;
-            this.mtxb_Zip.Lines = new string[0];
-            this.mtxb_Zip.Location = new System.Drawing.Point(124, 527);
-            this.mtxb_Zip.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Zip.MaxLength = 32767;
-            this.mtxb_Zip.Name = "mtxb_Zip";
-            this.mtxb_Zip.PasswordChar = '\0';
-            this.mtxb_Zip.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Zip.SelectedText = "";
-            this.mtxb_Zip.SelectionLength = 0;
-            this.mtxb_Zip.SelectionStart = 0;
-            this.mtxb_Zip.Size = new System.Drawing.Size(448, 28);
-            this.mtxb_Zip.TabIndex = 89;
-            this.mtxb_Zip.UseSelectable = true;
-            this.mtxb_Zip.UseStyleColors = true;
-            this.mtxb_Zip.WaterMark = "Enter Zip Code";
-            this.mtxb_Zip.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Zip.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxb_Address3
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Address3.CustomButton.Image = null;
-            this.mtxb_Address3.CustomButton.Location = new System.Drawing.Point(422, 2);
-            this.mtxb_Address3.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Address3.CustomButton.Name = "";
-            this.mtxb_Address3.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.mtxb_Address3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Address3.CustomButton.TabIndex = 1;
-            this.mtxb_Address3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Address3.CustomButton.UseSelectable = true;
-            this.mtxb_Address3.CustomButton.Visible = false;
-            this.mtxb_Address3.Lines = new string[0];
-            this.mtxb_Address3.Location = new System.Drawing.Point(124, 489);
-            this.mtxb_Address3.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Address3.MaxLength = 32767;
-            this.mtxb_Address3.Name = "mtxb_Address3";
-            this.mtxb_Address3.PasswordChar = '\0';
-            this.mtxb_Address3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Address3.SelectedText = "";
-            this.mtxb_Address3.SelectionLength = 0;
-            this.mtxb_Address3.SelectionStart = 0;
-            this.mtxb_Address3.Size = new System.Drawing.Size(448, 28);
-            this.mtxb_Address3.TabIndex = 88;
-            this.mtxb_Address3.UseSelectable = true;
-            this.mtxb_Address3.UseStyleColors = true;
-            this.mtxb_Address3.WaterMark = "Enter Address 3";
-            this.mtxb_Address3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Address3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxb_Address2
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Address2.CustomButton.Image = null;
-            this.mtxb_Address2.CustomButton.Location = new System.Drawing.Point(422, 2);
-            this.mtxb_Address2.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Address2.CustomButton.Name = "";
-            this.mtxb_Address2.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.mtxb_Address2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Address2.CustomButton.TabIndex = 1;
-            this.mtxb_Address2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Address2.CustomButton.UseSelectable = true;
-            this.mtxb_Address2.CustomButton.Visible = false;
-            this.mtxb_Address2.Lines = new string[0];
-            this.mtxb_Address2.Location = new System.Drawing.Point(124, 450);
-            this.mtxb_Address2.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Address2.MaxLength = 32767;
-            this.mtxb_Address2.Name = "mtxb_Address2";
-            this.mtxb_Address2.PasswordChar = '\0';
-            this.mtxb_Address2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Address2.SelectedText = "";
-            this.mtxb_Address2.SelectionLength = 0;
-            this.mtxb_Address2.SelectionStart = 0;
-            this.mtxb_Address2.Size = new System.Drawing.Size(448, 28);
-            this.mtxb_Address2.TabIndex = 87;
-            this.mtxb_Address2.UseSelectable = true;
-            this.mtxb_Address2.UseStyleColors = true;
-            this.mtxb_Address2.WaterMark = "Enter Address 2";
-            this.mtxb_Address2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Address2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxb_Address1
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Address1.CustomButton.Image = null;
-            this.mtxb_Address1.CustomButton.Location = new System.Drawing.Point(422, 2);
-            this.mtxb_Address1.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Address1.CustomButton.Name = "";
-            this.mtxb_Address1.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.mtxb_Address1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Address1.CustomButton.TabIndex = 1;
-            this.mtxb_Address1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Address1.CustomButton.UseSelectable = true;
-            this.mtxb_Address1.CustomButton.Visible = false;
-            this.mtxb_Address1.Lines = new string[0];
-            this.mtxb_Address1.Location = new System.Drawing.Point(124, 412);
-            this.mtxb_Address1.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Address1.MaxLength = 32767;
-            this.mtxb_Address1.Name = "mtxb_Address1";
-            this.mtxb_Address1.PasswordChar = '\0';
-            this.mtxb_Address1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Address1.SelectedText = "";
-            this.mtxb_Address1.SelectionLength = 0;
-            this.mtxb_Address1.SelectionStart = 0;
-            this.mtxb_Address1.Size = new System.Drawing.Size(448, 28);
-            this.mtxb_Address1.TabIndex = 86;
-            this.mtxb_Address1.UseSelectable = true;
-            this.mtxb_Address1.UseStyleColors = true;
-            this.mtxb_Address1.WaterMark = "Enter Address 1";
-            this.mtxb_Address1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Address1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxb_Internet
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Internet.CustomButton.Image = null;
-            this.mtxb_Internet.CustomButton.Location = new System.Drawing.Point(422, 2);
-            this.mtxb_Internet.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Internet.CustomButton.Name = "";
-            this.mtxb_Internet.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.mtxb_Internet.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Internet.CustomButton.TabIndex = 1;
-            this.mtxb_Internet.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Internet.CustomButton.UseSelectable = true;
-            this.mtxb_Internet.CustomButton.Visible = false;
-            this.mtxb_Internet.Lines = new string[0];
-            this.mtxb_Internet.Location = new System.Drawing.Point(124, 374);
-            this.mtxb_Internet.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Internet.MaxLength = 32767;
-            this.mtxb_Internet.Name = "mtxb_Internet";
-            this.mtxb_Internet.PasswordChar = '\0';
-            this.mtxb_Internet.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Internet.SelectedText = "";
-            this.mtxb_Internet.SelectionLength = 0;
-            this.mtxb_Internet.SelectionStart = 0;
-            this.mtxb_Internet.Size = new System.Drawing.Size(448, 28);
-            this.mtxb_Internet.TabIndex = 85;
-            this.mtxb_Internet.UseSelectable = true;
-            this.mtxb_Internet.UseStyleColors = true;
-            this.mtxb_Internet.WaterMark = "Enter Website URL";
-            this.mtxb_Internet.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Internet.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxb_Email
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Email.CustomButton.Image = null;
-            this.mtxb_Email.CustomButton.Location = new System.Drawing.Point(422, 2);
-            this.mtxb_Email.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Email.CustomButton.Name = "";
-            this.mtxb_Email.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.mtxb_Email.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Email.CustomButton.TabIndex = 1;
-            this.mtxb_Email.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Email.CustomButton.UseSelectable = true;
-            this.mtxb_Email.CustomButton.Visible = false;
-            this.mtxb_Email.Lines = new string[0];
-            this.mtxb_Email.Location = new System.Drawing.Point(124, 336);
-            this.mtxb_Email.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Email.MaxLength = 32767;
-            this.mtxb_Email.Name = "mtxb_Email";
-            this.mtxb_Email.PasswordChar = '\0';
-            this.mtxb_Email.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Email.SelectedText = "";
-            this.mtxb_Email.SelectionLength = 0;
-            this.mtxb_Email.SelectionStart = 0;
-            this.mtxb_Email.Size = new System.Drawing.Size(448, 28);
-            this.mtxb_Email.TabIndex = 84;
-            this.mtxb_Email.UseSelectable = true;
-            this.mtxb_Email.UseStyleColors = true;
-            this.mtxb_Email.WaterMark = "Enter Email Address";
-            this.mtxb_Email.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Email.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxb_Cell
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Cell.CustomButton.Image = null;
-            this.mtxb_Cell.CustomButton.Location = new System.Drawing.Point(422, 2);
-            this.mtxb_Cell.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Cell.CustomButton.Name = "";
-            this.mtxb_Cell.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.mtxb_Cell.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Cell.CustomButton.TabIndex = 1;
-            this.mtxb_Cell.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Cell.CustomButton.UseSelectable = true;
-            this.mtxb_Cell.CustomButton.Visible = false;
-            this.mtxb_Cell.Lines = new string[0];
-            this.mtxb_Cell.Location = new System.Drawing.Point(124, 298);
-            this.mtxb_Cell.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Cell.MaxLength = 32767;
-            this.mtxb_Cell.Name = "mtxb_Cell";
-            this.mtxb_Cell.PasswordChar = '\0';
-            this.mtxb_Cell.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Cell.SelectedText = "";
-            this.mtxb_Cell.SelectionLength = 0;
-            this.mtxb_Cell.SelectionStart = 0;
-            this.mtxb_Cell.Size = new System.Drawing.Size(448, 28);
-            this.mtxb_Cell.TabIndex = 83;
-            this.mtxb_Cell.UseSelectable = true;
-            this.mtxb_Cell.UseStyleColors = true;
-            this.mtxb_Cell.WaterMark = "Enter Cell Number";
-            this.mtxb_Cell.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Cell.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxb_Fax
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Fax.CustomButton.Image = null;
-            this.mtxb_Fax.CustomButton.Location = new System.Drawing.Point(422, 2);
-            this.mtxb_Fax.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Fax.CustomButton.Name = "";
-            this.mtxb_Fax.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.mtxb_Fax.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Fax.CustomButton.TabIndex = 1;
-            this.mtxb_Fax.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Fax.CustomButton.UseSelectable = true;
-            this.mtxb_Fax.CustomButton.Visible = false;
-            this.mtxb_Fax.Lines = new string[0];
-            this.mtxb_Fax.Location = new System.Drawing.Point(124, 260);
-            this.mtxb_Fax.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Fax.MaxLength = 32767;
-            this.mtxb_Fax.Name = "mtxb_Fax";
-            this.mtxb_Fax.PasswordChar = '\0';
-            this.mtxb_Fax.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Fax.SelectedText = "";
-            this.mtxb_Fax.SelectionLength = 0;
-            this.mtxb_Fax.SelectionStart = 0;
-            this.mtxb_Fax.Size = new System.Drawing.Size(448, 28);
-            this.mtxb_Fax.TabIndex = 82;
-            this.mtxb_Fax.UseSelectable = true;
-            this.mtxb_Fax.UseStyleColors = true;
-            this.mtxb_Fax.WaterMark = "Enter Fax Number";
-            this.mtxb_Fax.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Fax.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxb_Tel
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Tel.CustomButton.Image = null;
-            this.mtxb_Tel.CustomButton.Location = new System.Drawing.Point(422, 2);
-            this.mtxb_Tel.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Tel.CustomButton.Name = "";
-            this.mtxb_Tel.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.mtxb_Tel.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Tel.CustomButton.TabIndex = 1;
-            this.mtxb_Tel.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Tel.CustomButton.UseSelectable = true;
-            this.mtxb_Tel.CustomButton.Visible = false;
-            this.mtxb_Tel.Lines = new string[0];
-            this.mtxb_Tel.Location = new System.Drawing.Point(124, 222);
-            this.mtxb_Tel.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Tel.MaxLength = 32767;
-            this.mtxb_Tel.Name = "mtxb_Tel";
-            this.mtxb_Tel.PasswordChar = '\0';
-            this.mtxb_Tel.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Tel.SelectedText = "";
-            this.mtxb_Tel.SelectionLength = 0;
-            this.mtxb_Tel.SelectionStart = 0;
-            this.mtxb_Tel.Size = new System.Drawing.Size(448, 28);
-            this.mtxb_Tel.TabIndex = 81;
-            this.mtxb_Tel.UseSelectable = true;
-            this.mtxb_Tel.UseStyleColors = true;
-            this.mtxb_Tel.WaterMark = "Enter Tel Number";
-            this.mtxb_Tel.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Tel.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxb_Contact
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Contact.CustomButton.Image = null;
-            this.mtxb_Contact.CustomButton.Location = new System.Drawing.Point(422, 2);
-            this.mtxb_Contact.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Contact.CustomButton.Name = "";
-            this.mtxb_Contact.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.mtxb_Contact.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Contact.CustomButton.TabIndex = 1;
-            this.mtxb_Contact.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Contact.CustomButton.UseSelectable = true;
-            this.mtxb_Contact.CustomButton.Visible = false;
-            this.mtxb_Contact.Lines = new string[0];
-            this.mtxb_Contact.Location = new System.Drawing.Point(124, 183);
-            this.mtxb_Contact.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Contact.MaxLength = 32767;
-            this.mtxb_Contact.Name = "mtxb_Contact";
-            this.mtxb_Contact.PasswordChar = '\0';
-            this.mtxb_Contact.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Contact.SelectedText = "";
-            this.mtxb_Contact.SelectionLength = 0;
-            this.mtxb_Contact.SelectionStart = 0;
-            this.mtxb_Contact.Size = new System.Drawing.Size(448, 28);
-            this.mtxb_Contact.TabIndex = 80;
-            this.mtxb_Contact.UseSelectable = true;
-            this.mtxb_Contact.UseStyleColors = true;
-            this.mtxb_Contact.WaterMark = "Enter Contact";
-            this.mtxb_Contact.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Contact.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxb_Name
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Name.CustomButton.Image = null;
-            this.mtxb_Name.CustomButton.Location = new System.Drawing.Point(422, 2);
-            this.mtxb_Name.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Name.CustomButton.Name = "";
-            this.mtxb_Name.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.mtxb_Name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Name.CustomButton.TabIndex = 1;
-            this.mtxb_Name.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Name.CustomButton.UseSelectable = true;
-            this.mtxb_Name.CustomButton.Visible = false;
-            this.mtxb_Name.Lines = new string[0];
-            this.mtxb_Name.Location = new System.Drawing.Point(124, 145);
-            this.mtxb_Name.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Name.MaxLength = 32767;
-            this.mtxb_Name.Name = "mtxb_Name";
-            this.mtxb_Name.PasswordChar = '\0';
-            this.mtxb_Name.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Name.SelectedText = "";
-            this.mtxb_Name.SelectionLength = 0;
-            this.mtxb_Name.SelectionStart = 0;
-            this.mtxb_Name.Size = new System.Drawing.Size(448, 28);
-            this.mtxb_Name.TabIndex = 79;
-            this.mtxb_Name.UseSelectable = true;
-            this.mtxb_Name.UseStyleColors = true;
-            this.mtxb_Name.WaterMark = "Enter Name";
-            this.mtxb_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // mtxb_Number
-            // 
-            // 
-            // 
-            // 
-            this.mtxb_Number.CustomButton.Image = null;
-            this.mtxb_Number.CustomButton.Location = new System.Drawing.Point(134, 2);
-            this.mtxb_Number.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Number.CustomButton.Name = "";
-            this.mtxb_Number.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.mtxb_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.mtxb_Number.CustomButton.TabIndex = 1;
-            this.mtxb_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.mtxb_Number.CustomButton.UseSelectable = true;
-            this.mtxb_Number.CustomButton.Visible = false;
-            this.mtxb_Number.Lines = new string[0];
-            this.mtxb_Number.Location = new System.Drawing.Point(124, 106);
-            this.mtxb_Number.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxb_Number.MaxLength = 32767;
-            this.mtxb_Number.Name = "mtxb_Number";
-            this.mtxb_Number.PasswordChar = '\0';
-            this.mtxb_Number.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.mtxb_Number.SelectedText = "";
-            this.mtxb_Number.SelectionLength = 0;
-            this.mtxb_Number.SelectionStart = 0;
-            this.mtxb_Number.Size = new System.Drawing.Size(160, 28);
-            this.mtxb_Number.TabIndex = 78;
-            this.mtxb_Number.UseSelectable = true;
-            this.mtxb_Number.UseStyleColors = true;
-            this.mtxb_Number.WaterMark = "Number";
-            this.mtxb_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.mtxb_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Location = new System.Drawing.Point(33, 570);
-            this.metroLabel13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(65, 20);
-            this.metroLabel13.TabIndex = 77;
-            this.metroLabel13.Text = "Remarks:";
-            this.metroLabel13.UseStyleColors = true;
+            // dgvAddressBook
+            // 
+            this.dgvAddressBook.AllowUserToResizeRows = false;
+            this.dgvAddressBook.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dgvAddressBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAddressBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvAddressBook.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAddressBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvAddressBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAddressBook.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvAddressBook.EnableHeadersVisualStyles = false;
+            this.dgvAddressBook.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgvAddressBook.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dgvAddressBook.Location = new System.Drawing.Point(491, 180);
+            this.dgvAddressBook.Name = "dgvAddressBook";
+            this.dgvAddressBook.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAddressBook.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvAddressBook.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvAddressBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAddressBook.Size = new System.Drawing.Size(480, 397);
+            this.dgvAddressBook.TabIndex = 94;
+            this.dgvAddressBook.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dgvAddressBook.SelectionChanged += new System.EventHandler(this.dgvAddressBook_SelectionChanged);
+            // 
+            // txtAddressBookZip_Code
+            // 
+            // 
+            // 
+            // 
+            this.txtAddressBookZip_Code.CustomButton.Image = null;
+            this.txtAddressBookZip_Code.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtAddressBookZip_Code.CustomButton.Name = "";
+            this.txtAddressBookZip_Code.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookZip_Code.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookZip_Code.CustomButton.TabIndex = 1;
+            this.txtAddressBookZip_Code.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookZip_Code.CustomButton.UseSelectable = true;
+            this.txtAddressBookZip_Code.CustomButton.Visible = false;
+            this.txtAddressBookZip_Code.Lines = new string[0];
+            this.txtAddressBookZip_Code.Location = new System.Drawing.Point(74, 372);
+            this.txtAddressBookZip_Code.MaxLength = 32767;
+            this.txtAddressBookZip_Code.Name = "txtAddressBookZip_Code";
+            this.txtAddressBookZip_Code.PasswordChar = '\0';
+            this.txtAddressBookZip_Code.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookZip_Code.SelectedText = "";
+            this.txtAddressBookZip_Code.SelectionLength = 0;
+            this.txtAddressBookZip_Code.SelectionStart = 0;
+            this.txtAddressBookZip_Code.Size = new System.Drawing.Size(336, 23);
+            this.txtAddressBookZip_Code.TabIndex = 89;
+            this.txtAddressBookZip_Code.UseSelectable = true;
+            this.txtAddressBookZip_Code.UseStyleColors = true;
+            this.txtAddressBookZip_Code.WaterMark = "Enter Zip Code";
+            this.txtAddressBookZip_Code.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookZip_Code.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookZip_Code.Leave += new System.EventHandler(this.txtAddressBookZip_Code_Leave);
+            // 
+            // txtAddressBookAddress3
+            // 
+            // 
+            // 
+            // 
+            this.txtAddressBookAddress3.CustomButton.Image = null;
+            this.txtAddressBookAddress3.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtAddressBookAddress3.CustomButton.Name = "";
+            this.txtAddressBookAddress3.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookAddress3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookAddress3.CustomButton.TabIndex = 1;
+            this.txtAddressBookAddress3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookAddress3.CustomButton.UseSelectable = true;
+            this.txtAddressBookAddress3.CustomButton.Visible = false;
+            this.txtAddressBookAddress3.Lines = new string[0];
+            this.txtAddressBookAddress3.Location = new System.Drawing.Point(74, 341);
+            this.txtAddressBookAddress3.MaxLength = 32767;
+            this.txtAddressBookAddress3.Name = "txtAddressBookAddress3";
+            this.txtAddressBookAddress3.PasswordChar = '\0';
+            this.txtAddressBookAddress3.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookAddress3.SelectedText = "";
+            this.txtAddressBookAddress3.SelectionLength = 0;
+            this.txtAddressBookAddress3.SelectionStart = 0;
+            this.txtAddressBookAddress3.Size = new System.Drawing.Size(336, 23);
+            this.txtAddressBookAddress3.TabIndex = 88;
+            this.txtAddressBookAddress3.UseSelectable = true;
+            this.txtAddressBookAddress3.UseStyleColors = true;
+            this.txtAddressBookAddress3.WaterMark = "Enter Address 3";
+            this.txtAddressBookAddress3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookAddress3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookAddress3.Leave += new System.EventHandler(this.txtAddressBookAddress3_Leave);
+            // 
+            // txtAddressBookAddress2
+            // 
+            // 
+            // 
+            // 
+            this.txtAddressBookAddress2.CustomButton.Image = null;
+            this.txtAddressBookAddress2.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtAddressBookAddress2.CustomButton.Name = "";
+            this.txtAddressBookAddress2.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookAddress2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookAddress2.CustomButton.TabIndex = 1;
+            this.txtAddressBookAddress2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookAddress2.CustomButton.UseSelectable = true;
+            this.txtAddressBookAddress2.CustomButton.Visible = false;
+            this.txtAddressBookAddress2.Lines = new string[0];
+            this.txtAddressBookAddress2.Location = new System.Drawing.Point(74, 310);
+            this.txtAddressBookAddress2.MaxLength = 32767;
+            this.txtAddressBookAddress2.Name = "txtAddressBookAddress2";
+            this.txtAddressBookAddress2.PasswordChar = '\0';
+            this.txtAddressBookAddress2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookAddress2.SelectedText = "";
+            this.txtAddressBookAddress2.SelectionLength = 0;
+            this.txtAddressBookAddress2.SelectionStart = 0;
+            this.txtAddressBookAddress2.Size = new System.Drawing.Size(336, 23);
+            this.txtAddressBookAddress2.TabIndex = 87;
+            this.txtAddressBookAddress2.UseSelectable = true;
+            this.txtAddressBookAddress2.UseStyleColors = true;
+            this.txtAddressBookAddress2.WaterMark = "Enter Address 2";
+            this.txtAddressBookAddress2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookAddress2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookAddress2.Leave += new System.EventHandler(this.txtAddressBookAddress2_Leave);
+            // 
+            // txtAddressBookAddress1
+            // 
+            // 
+            // 
+            // 
+            this.txtAddressBookAddress1.CustomButton.Image = null;
+            this.txtAddressBookAddress1.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtAddressBookAddress1.CustomButton.Name = "";
+            this.txtAddressBookAddress1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookAddress1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookAddress1.CustomButton.TabIndex = 1;
+            this.txtAddressBookAddress1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookAddress1.CustomButton.UseSelectable = true;
+            this.txtAddressBookAddress1.CustomButton.Visible = false;
+            this.txtAddressBookAddress1.Lines = new string[0];
+            this.txtAddressBookAddress1.Location = new System.Drawing.Point(74, 279);
+            this.txtAddressBookAddress1.MaxLength = 32767;
+            this.txtAddressBookAddress1.Name = "txtAddressBookAddress1";
+            this.txtAddressBookAddress1.PasswordChar = '\0';
+            this.txtAddressBookAddress1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookAddress1.SelectedText = "";
+            this.txtAddressBookAddress1.SelectionLength = 0;
+            this.txtAddressBookAddress1.SelectionStart = 0;
+            this.txtAddressBookAddress1.Size = new System.Drawing.Size(336, 23);
+            this.txtAddressBookAddress1.TabIndex = 86;
+            this.txtAddressBookAddress1.UseSelectable = true;
+            this.txtAddressBookAddress1.UseStyleColors = true;
+            this.txtAddressBookAddress1.WaterMark = "Enter Address 1";
+            this.txtAddressBookAddress1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookAddress1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookAddress1.Leave += new System.EventHandler(this.txtAddressBookAddress1_Leave);
+            // 
+            // txtAddressBookWebsite
+            // 
+            // 
+            // 
+            // 
+            this.txtAddressBookWebsite.CustomButton.Image = null;
+            this.txtAddressBookWebsite.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtAddressBookWebsite.CustomButton.Name = "";
+            this.txtAddressBookWebsite.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookWebsite.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookWebsite.CustomButton.TabIndex = 1;
+            this.txtAddressBookWebsite.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookWebsite.CustomButton.UseSelectable = true;
+            this.txtAddressBookWebsite.CustomButton.Visible = false;
+            this.txtAddressBookWebsite.Lines = new string[0];
+            this.txtAddressBookWebsite.Location = new System.Drawing.Point(74, 248);
+            this.txtAddressBookWebsite.MaxLength = 32767;
+            this.txtAddressBookWebsite.Name = "txtAddressBookWebsite";
+            this.txtAddressBookWebsite.PasswordChar = '\0';
+            this.txtAddressBookWebsite.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookWebsite.SelectedText = "";
+            this.txtAddressBookWebsite.SelectionLength = 0;
+            this.txtAddressBookWebsite.SelectionStart = 0;
+            this.txtAddressBookWebsite.Size = new System.Drawing.Size(336, 23);
+            this.txtAddressBookWebsite.TabIndex = 85;
+            this.txtAddressBookWebsite.UseSelectable = true;
+            this.txtAddressBookWebsite.UseStyleColors = true;
+            this.txtAddressBookWebsite.WaterMark = "Enter Website URL";
+            this.txtAddressBookWebsite.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookWebsite.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookWebsite.Leave += new System.EventHandler(this.txtAddressBookWebsite_Leave);
+            // 
+            // txtAddressBookEmail_Address
+            // 
+            // 
+            // 
+            // 
+            this.txtAddressBookEmail_Address.CustomButton.Image = null;
+            this.txtAddressBookEmail_Address.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtAddressBookEmail_Address.CustomButton.Name = "";
+            this.txtAddressBookEmail_Address.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookEmail_Address.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookEmail_Address.CustomButton.TabIndex = 1;
+            this.txtAddressBookEmail_Address.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookEmail_Address.CustomButton.UseSelectable = true;
+            this.txtAddressBookEmail_Address.CustomButton.Visible = false;
+            this.txtAddressBookEmail_Address.Lines = new string[0];
+            this.txtAddressBookEmail_Address.Location = new System.Drawing.Point(74, 217);
+            this.txtAddressBookEmail_Address.MaxLength = 32767;
+            this.txtAddressBookEmail_Address.Name = "txtAddressBookEmail_Address";
+            this.txtAddressBookEmail_Address.PasswordChar = '\0';
+            this.txtAddressBookEmail_Address.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookEmail_Address.SelectedText = "";
+            this.txtAddressBookEmail_Address.SelectionLength = 0;
+            this.txtAddressBookEmail_Address.SelectionStart = 0;
+            this.txtAddressBookEmail_Address.Size = new System.Drawing.Size(336, 23);
+            this.txtAddressBookEmail_Address.TabIndex = 84;
+            this.txtAddressBookEmail_Address.UseSelectable = true;
+            this.txtAddressBookEmail_Address.UseStyleColors = true;
+            this.txtAddressBookEmail_Address.WaterMark = "Enter Email Address";
+            this.txtAddressBookEmail_Address.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookEmail_Address.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookEmail_Address.Leave += new System.EventHandler(this.txtAddressBookEmail_Number_Leave);
+            // 
+            // txtAddressBookCellphone_Number
+            // 
+            // 
+            // 
+            // 
+            this.txtAddressBookCellphone_Number.CustomButton.Image = null;
+            this.txtAddressBookCellphone_Number.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtAddressBookCellphone_Number.CustomButton.Name = "";
+            this.txtAddressBookCellphone_Number.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookCellphone_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookCellphone_Number.CustomButton.TabIndex = 1;
+            this.txtAddressBookCellphone_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookCellphone_Number.CustomButton.UseSelectable = true;
+            this.txtAddressBookCellphone_Number.CustomButton.Visible = false;
+            this.txtAddressBookCellphone_Number.Lines = new string[0];
+            this.txtAddressBookCellphone_Number.Location = new System.Drawing.Point(74, 186);
+            this.txtAddressBookCellphone_Number.MaxLength = 32767;
+            this.txtAddressBookCellphone_Number.Name = "txtAddressBookCellphone_Number";
+            this.txtAddressBookCellphone_Number.PasswordChar = '\0';
+            this.txtAddressBookCellphone_Number.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookCellphone_Number.SelectedText = "";
+            this.txtAddressBookCellphone_Number.SelectionLength = 0;
+            this.txtAddressBookCellphone_Number.SelectionStart = 0;
+            this.txtAddressBookCellphone_Number.Size = new System.Drawing.Size(336, 23);
+            this.txtAddressBookCellphone_Number.TabIndex = 83;
+            this.txtAddressBookCellphone_Number.UseSelectable = true;
+            this.txtAddressBookCellphone_Number.UseStyleColors = true;
+            this.txtAddressBookCellphone_Number.WaterMark = "Enter Cell Number";
+            this.txtAddressBookCellphone_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookCellphone_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookCellphone_Number.Leave += new System.EventHandler(this.txtAddressBookCellphone_Number_Leave);
+            // 
+            // txtAddressBookFax_Number
+            // 
+            // 
+            // 
+            // 
+            this.txtAddressBookFax_Number.CustomButton.Image = null;
+            this.txtAddressBookFax_Number.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtAddressBookFax_Number.CustomButton.Name = "";
+            this.txtAddressBookFax_Number.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookFax_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookFax_Number.CustomButton.TabIndex = 1;
+            this.txtAddressBookFax_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookFax_Number.CustomButton.UseSelectable = true;
+            this.txtAddressBookFax_Number.CustomButton.Visible = false;
+            this.txtAddressBookFax_Number.Lines = new string[0];
+            this.txtAddressBookFax_Number.Location = new System.Drawing.Point(74, 155);
+            this.txtAddressBookFax_Number.MaxLength = 32767;
+            this.txtAddressBookFax_Number.Name = "txtAddressBookFax_Number";
+            this.txtAddressBookFax_Number.PasswordChar = '\0';
+            this.txtAddressBookFax_Number.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookFax_Number.SelectedText = "";
+            this.txtAddressBookFax_Number.SelectionLength = 0;
+            this.txtAddressBookFax_Number.SelectionStart = 0;
+            this.txtAddressBookFax_Number.Size = new System.Drawing.Size(336, 23);
+            this.txtAddressBookFax_Number.TabIndex = 82;
+            this.txtAddressBookFax_Number.UseSelectable = true;
+            this.txtAddressBookFax_Number.UseStyleColors = true;
+            this.txtAddressBookFax_Number.WaterMark = "Enter Fax Number";
+            this.txtAddressBookFax_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookFax_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookFax_Number.Leave += new System.EventHandler(this.txtAddressBookFax_Number_Leave);
+            // 
+            // txtAddressBookTelephone_Number
+            // 
+            // 
+            // 
+            // 
+            this.txtAddressBookTelephone_Number.CustomButton.Image = null;
+            this.txtAddressBookTelephone_Number.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtAddressBookTelephone_Number.CustomButton.Name = "";
+            this.txtAddressBookTelephone_Number.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookTelephone_Number.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookTelephone_Number.CustomButton.TabIndex = 1;
+            this.txtAddressBookTelephone_Number.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookTelephone_Number.CustomButton.UseSelectable = true;
+            this.txtAddressBookTelephone_Number.CustomButton.Visible = false;
+            this.txtAddressBookTelephone_Number.Lines = new string[0];
+            this.txtAddressBookTelephone_Number.Location = new System.Drawing.Point(74, 124);
+            this.txtAddressBookTelephone_Number.MaxLength = 32767;
+            this.txtAddressBookTelephone_Number.Name = "txtAddressBookTelephone_Number";
+            this.txtAddressBookTelephone_Number.PasswordChar = '\0';
+            this.txtAddressBookTelephone_Number.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookTelephone_Number.SelectedText = "";
+            this.txtAddressBookTelephone_Number.SelectionLength = 0;
+            this.txtAddressBookTelephone_Number.SelectionStart = 0;
+            this.txtAddressBookTelephone_Number.Size = new System.Drawing.Size(336, 23);
+            this.txtAddressBookTelephone_Number.TabIndex = 81;
+            this.txtAddressBookTelephone_Number.UseSelectable = true;
+            this.txtAddressBookTelephone_Number.UseStyleColors = true;
+            this.txtAddressBookTelephone_Number.WaterMark = "Enter Tel Number";
+            this.txtAddressBookTelephone_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookTelephone_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookTelephone_Number.Leave += new System.EventHandler(this.txtAddressBookTelephone_Number_Leave);
+            // 
+            // txtAddressBookSurname
+            // 
+            // 
+            // 
+            // 
+            this.txtAddressBookSurname.CustomButton.Image = null;
+            this.txtAddressBookSurname.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtAddressBookSurname.CustomButton.Name = "";
+            this.txtAddressBookSurname.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookSurname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookSurname.CustomButton.TabIndex = 1;
+            this.txtAddressBookSurname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookSurname.CustomButton.UseSelectable = true;
+            this.txtAddressBookSurname.CustomButton.Visible = false;
+            this.txtAddressBookSurname.Lines = new string[0];
+            this.txtAddressBookSurname.Location = new System.Drawing.Point(74, 93);
+            this.txtAddressBookSurname.MaxLength = 32767;
+            this.txtAddressBookSurname.Name = "txtAddressBookSurname";
+            this.txtAddressBookSurname.PasswordChar = '\0';
+            this.txtAddressBookSurname.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookSurname.SelectedText = "";
+            this.txtAddressBookSurname.SelectionLength = 0;
+            this.txtAddressBookSurname.SelectionStart = 0;
+            this.txtAddressBookSurname.Size = new System.Drawing.Size(336, 23);
+            this.txtAddressBookSurname.TabIndex = 80;
+            this.txtAddressBookSurname.UseSelectable = true;
+            this.txtAddressBookSurname.UseStyleColors = true;
+            this.txtAddressBookSurname.WaterMark = "Enter Contact";
+            this.txtAddressBookSurname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookSurname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookSurname.Leave += new System.EventHandler(this.txtAddressBookSurname_Leave);
+            // 
+            // txtAddressBookName
+            // 
+            // 
+            // 
+            // 
+            this.txtAddressBookName.CustomButton.Image = null;
+            this.txtAddressBookName.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtAddressBookName.CustomButton.Name = "";
+            this.txtAddressBookName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookName.CustomButton.TabIndex = 1;
+            this.txtAddressBookName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookName.CustomButton.UseSelectable = true;
+            this.txtAddressBookName.CustomButton.Visible = false;
+            this.txtAddressBookName.Lines = new string[0];
+            this.txtAddressBookName.Location = new System.Drawing.Point(74, 62);
+            this.txtAddressBookName.MaxLength = 32767;
+            this.txtAddressBookName.Name = "txtAddressBookName";
+            this.txtAddressBookName.PasswordChar = '\0';
+            this.txtAddressBookName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookName.SelectedText = "";
+            this.txtAddressBookName.SelectionLength = 0;
+            this.txtAddressBookName.SelectionStart = 0;
+            this.txtAddressBookName.Size = new System.Drawing.Size(336, 23);
+            this.txtAddressBookName.TabIndex = 79;
+            this.txtAddressBookName.UseSelectable = true;
+            this.txtAddressBookName.UseStyleColors = true;
+            this.txtAddressBookName.WaterMark = "Enter Name";
+            this.txtAddressBookName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookName.Leave += new System.EventHandler(this.txtAddressBookName_Leave);
+            // 
+            // txtAddressBookNumber
+            // 
+            // 
+            // 
+            // 
+            this.txtAddressBookNumber.CustomButton.Image = null;
+            this.txtAddressBookNumber.CustomButton.Location = new System.Drawing.Point(98, 1);
+            this.txtAddressBookNumber.CustomButton.Name = "";
+            this.txtAddressBookNumber.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtAddressBookNumber.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddressBookNumber.CustomButton.TabIndex = 1;
+            this.txtAddressBookNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddressBookNumber.CustomButton.UseSelectable = true;
+            this.txtAddressBookNumber.CustomButton.Visible = false;
+            this.txtAddressBookNumber.Lines = new string[0];
+            this.txtAddressBookNumber.Location = new System.Drawing.Point(74, 30);
+            this.txtAddressBookNumber.MaxLength = 32767;
+            this.txtAddressBookNumber.Name = "txtAddressBookNumber";
+            this.txtAddressBookNumber.PasswordChar = '\0';
+            this.txtAddressBookNumber.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddressBookNumber.SelectedText = "";
+            this.txtAddressBookNumber.SelectionLength = 0;
+            this.txtAddressBookNumber.SelectionStart = 0;
+            this.txtAddressBookNumber.Size = new System.Drawing.Size(120, 23);
+            this.txtAddressBookNumber.TabIndex = 78;
+            this.txtAddressBookNumber.UseSelectable = true;
+            this.txtAddressBookNumber.UseStyleColors = true;
+            this.txtAddressBookNumber.WaterMark = "Number";
+            this.txtAddressBookNumber.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddressBookNumber.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAddressBookNumber.Leave += new System.EventHandler(this.txtAddressBookNumber_Leave);
             // 
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(75, 532);
-            this.metroLabel12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel12.Location = new System.Drawing.Point(37, 376);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(32, 20);
+            this.metroLabel12.Size = new System.Drawing.Size(31, 19);
             this.metroLabel12.TabIndex = 76;
             this.metroLabel12.Text = "Zip:";
             this.metroLabel12.UseStyleColors = true;
@@ -651,10 +589,9 @@
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(23, 494);
-            this.metroLabel11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel11.Location = new System.Drawing.Point(17, 401);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(74, 20);
+            this.metroLabel11.Size = new System.Drawing.Size(70, 19);
             this.metroLabel11.TabIndex = 75;
             this.metroLabel11.Text = "Address 3:";
             this.metroLabel11.UseStyleColors = true;
@@ -662,10 +599,9 @@
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(23, 455);
-            this.metroLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel10.Location = new System.Drawing.Point(17, 370);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(74, 20);
+            this.metroLabel10.Size = new System.Drawing.Size(70, 19);
             this.metroLabel10.TabIndex = 74;
             this.metroLabel10.Text = "Address 2:";
             this.metroLabel10.UseStyleColors = true;
@@ -673,10 +609,9 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(25, 417);
-            this.metroLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel9.Location = new System.Drawing.Point(0, 283);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(71, 20);
+            this.metroLabel9.Size = new System.Drawing.Size(68, 19);
             this.metroLabel9.TabIndex = 73;
             this.metroLabel9.Text = "Address 1:";
             this.metroLabel9.UseStyleColors = true;
@@ -684,21 +619,19 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(41, 379);
-            this.metroLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel8.Location = new System.Drawing.Point(12, 252);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(60, 20);
+            this.metroLabel8.Size = new System.Drawing.Size(62, 19);
             this.metroLabel8.TabIndex = 72;
-            this.metroLabel8.Text = "Internet:";
+            this.metroLabel8.Text = "Website :";
             this.metroLabel8.UseStyleColors = true;
             // 
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(57, 341);
-            this.metroLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel7.Location = new System.Drawing.Point(24, 221);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(45, 20);
+            this.metroLabel7.Size = new System.Drawing.Size(44, 19);
             this.metroLabel7.TabIndex = 71;
             this.metroLabel7.Text = "Email:";
             this.metroLabel7.UseStyleColors = true;
@@ -706,10 +639,9 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(71, 303);
-            this.metroLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel6.Location = new System.Drawing.Point(34, 190);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(35, 20);
+            this.metroLabel6.Size = new System.Drawing.Size(34, 19);
             this.metroLabel6.TabIndex = 70;
             this.metroLabel6.Text = "Cell:";
             this.metroLabel6.UseStyleColors = true;
@@ -717,10 +649,9 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(75, 265);
-            this.metroLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel5.Location = new System.Drawing.Point(37, 159);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(31, 20);
+            this.metroLabel5.Size = new System.Drawing.Size(31, 19);
             this.metroLabel5.TabIndex = 69;
             this.metroLabel5.Text = "Fax:";
             this.metroLabel5.UseStyleColors = true;
@@ -728,10 +659,9 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(80, 226);
-            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel4.Location = new System.Drawing.Point(39, 124);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(29, 20);
+            this.metroLabel4.Size = new System.Drawing.Size(27, 19);
             this.metroLabel4.TabIndex = 68;
             this.metroLabel4.Text = "Tel:";
             this.metroLabel4.UseStyleColors = true;
@@ -739,21 +669,19 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(40, 188);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel3.Location = new System.Drawing.Point(11, 97);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(59, 20);
+            this.metroLabel3.Size = new System.Drawing.Size(68, 19);
             this.metroLabel3.TabIndex = 67;
-            this.metroLabel3.Text = "Contact:";
+            this.metroLabel3.Text = "Surname :";
             this.metroLabel3.UseStyleColors = true;
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(52, 150);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel2.Location = new System.Drawing.Point(20, 66);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(50, 20);
+            this.metroLabel2.Size = new System.Drawing.Size(48, 19);
             this.metroLabel2.TabIndex = 66;
             this.metroLabel2.Text = "Name:";
             this.metroLabel2.UseStyleColors = true;
@@ -761,10 +689,9 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(33, 112);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel1.Location = new System.Drawing.Point(6, 35);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(65, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(62, 19);
             this.metroLabel1.TabIndex = 65;
             this.metroLabel1.Text = "Number:";
             this.metroLabel1.UseStyleColors = true;
@@ -775,9 +702,10 @@
             this.lblBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBack.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblBack.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lblBack.Location = new System.Drawing.Point(76, 61);
+            this.lblBack.Location = new System.Drawing.Point(57, 50);
+            this.lblBack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBack.Name = "lblBack";
-            this.lblBack.Size = new System.Drawing.Size(51, 25);
+            this.lblBack.Size = new System.Drawing.Size(48, 25);
             this.lblBack.TabIndex = 98;
             this.lblBack.Text = "Back";
             this.lblBack.Click += new System.EventHandler(this.lblBack_Click);
@@ -786,10 +714,10 @@
             // 
             this.pbBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbBack.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
-            this.pbBack.Location = new System.Drawing.Point(33, 59);
-            this.pbBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbBack.Location = new System.Drawing.Point(25, 48);
+            this.pbBack.Margin = new System.Windows.Forms.Padding(2);
             this.pbBack.Name = "pbBack";
-            this.pbBack.Size = new System.Drawing.Size(37, 27);
+            this.pbBack.Size = new System.Drawing.Size(28, 22);
             this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBack.TabIndex = 97;
             this.pbBack.TabStop = false;
@@ -800,11 +728,12 @@
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel14.Location = new System.Drawing.Point(638, 59);
+            this.metroLabel14.Location = new System.Drawing.Point(478, 48);
+            this.metroLabel14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(121, 25);
+            this.metroLabel14.Size = new System.Drawing.Size(123, 25);
             this.metroLabel14.TabIndex = 99;
-            this.metroLabel14.Text = "Addressbook";
+            this.metroLabel14.Text = "Address Book";
             // 
             // msmAdBook
             // 
@@ -812,19 +741,22 @@
             // 
             // btnArchive
             // 
-            this.btnArchive.Location = new System.Drawing.Point(1041, 730);
+            this.btnArchive.Location = new System.Drawing.Point(781, 593);
+            this.btnArchive.Margin = new System.Windows.Forms.Padding(2);
             this.btnArchive.Name = "btnArchive";
-            this.btnArchive.Size = new System.Drawing.Size(121, 52);
+            this.btnArchive.Size = new System.Drawing.Size(91, 42);
             this.btnArchive.TabIndex = 119;
             this.btnArchive.Text = "Archive";
             this.btnArchive.UseSelectable = true;
             this.btnArchive.UseStyleColors = true;
+            this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(914, 730);
+            this.btnDelete.Location = new System.Drawing.Point(686, 593);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(121, 52);
+            this.btnDelete.Size = new System.Drawing.Size(91, 42);
             this.btnDelete.TabIndex = 118;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseSelectable = true;
@@ -833,49 +765,89 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(787, 730);
+            this.btnUpdate.Location = new System.Drawing.Point(590, 593);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(121, 52);
+            this.btnUpdate.Size = new System.Drawing.Size(91, 42);
             this.btnUpdate.TabIndex = 117;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseSelectable = true;
             this.btnUpdate.UseStyleColors = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(655, 730);
+            this.btnAdd.Location = new System.Drawing.Point(491, 593);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(121, 52);
+            this.btnAdd.Size = new System.Drawing.Size(91, 42);
             this.btnAdd.TabIndex = 116;
             this.btnAdd.Text = "Add ";
             this.btnAdd.UseSelectable = true;
             this.btnAdd.UseStyleColors = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(258, 730);
+            this.btnCancel.Location = new System.Drawing.Point(194, 593);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(121, 52);
+            this.btnCancel.Size = new System.Drawing.Size(91, 42);
             this.btnCancel.TabIndex = 121;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseSelectable = true;
             this.btnCancel.UseStyleColors = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(124, 730);
+            this.btnConfirm.Location = new System.Drawing.Point(93, 593);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(121, 52);
+            this.btnConfirm.Size = new System.Drawing.Size(91, 42);
             this.btnConfirm.TabIndex = 120;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseSelectable = true;
             this.btnConfirm.UseStyleColors = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtAddressBookZip_Code);
+            this.groupBox1.Controls.Add(this.txtAddressBookAddress3);
+            this.groupBox1.Controls.Add(this.txtAddressBookAddress2);
+            this.groupBox1.Controls.Add(this.txtAddressBookAddress1);
+            this.groupBox1.Controls.Add(this.txtAddressBookWebsite);
+            this.groupBox1.Controls.Add(this.txtAddressBookEmail_Address);
+            this.groupBox1.Controls.Add(this.txtAddressBookCellphone_Number);
+            this.groupBox1.Controls.Add(this.txtAddressBookFax_Number);
+            this.groupBox1.Controls.Add(this.txtAddressBookTelephone_Number);
+            this.groupBox1.Controls.Add(this.txtAddressBookSurname);
+            this.groupBox1.Controls.Add(this.txtAddressBookName);
+            this.groupBox1.Controls.Add(this.txtAddressBookNumber);
+            this.groupBox1.Controls.Add(this.metroLabel12);
+            this.groupBox1.Controls.Add(this.metroLabel9);
+            this.groupBox1.Controls.Add(this.metroLabel8);
+            this.groupBox1.Controls.Add(this.metroLabel7);
+            this.groupBox1.Controls.Add(this.metroLabel6);
+            this.groupBox1.Controls.Add(this.metroLabel5);
+            this.groupBox1.Controls.Add(this.metroLabel4);
+            this.groupBox1.Controls.Add(this.metroLabel3);
+            this.groupBox1.Controls.Add(this.metroLabel2);
+            this.groupBox1.Controls.Add(this.metroLabel1);
+            this.groupBox1.Location = new System.Drawing.Point(19, 79);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(435, 421);
+            this.groupBox1.TabIndex = 122;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Address Book Information";
             // 
             // frmAddressBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2304, 1092);
+            this.ClientSize = new System.Drawing.Size(1280, 800);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnArchive);
@@ -886,43 +858,21 @@
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.pbBack);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.metroGrid1);
-            this.Controls.Add(this.mtxb_Remarks);
-            this.Controls.Add(this.mtxb_Zip);
-            this.Controls.Add(this.mtxb_Address3);
-            this.Controls.Add(this.mtxb_Address2);
-            this.Controls.Add(this.mtxb_Address1);
-            this.Controls.Add(this.mtxb_Internet);
-            this.Controls.Add(this.mtxb_Email);
-            this.Controls.Add(this.mtxb_Cell);
-            this.Controls.Add(this.mtxb_Fax);
-            this.Controls.Add(this.mtxb_Tel);
-            this.Controls.Add(this.mtxb_Contact);
-            this.Controls.Add(this.mtxb_Name);
-            this.Controls.Add(this.mtxb_Number);
-            this.Controls.Add(this.metroLabel13);
-            this.Controls.Add(this.metroLabel12);
+            this.Controls.Add(this.dgvAddressBook);
             this.Controls.Add(this.metroLabel11);
             this.Controls.Add(this.metroLabel10);
-            this.Controls.Add(this.metroLabel9);
-            this.Controls.Add(this.metroLabel8);
-            this.Controls.Add(this.metroLabel7);
-            this.Controls.Add(this.metroLabel6);
-            this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroLabel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAddressBook";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Load += new System.EventHandler(this.frmAddressBook_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddressBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.msmAdBook)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -930,24 +880,22 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox3;
-        private MetroFramework.Controls.MetroComboBox cmbAccCriteria;
-        private MetroFramework.Controls.MetroTextBox txtAccSearch;
+        private MetroFramework.Controls.MetroComboBox cmbAddressBookCriteria;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookSearch;
         private MetroFramework.Controls.MetroLabel metroLabel17;
-        private MetroFramework.Controls.MetroGrid metroGrid1;
-        private MetroFramework.Controls.MetroTextBox mtxb_Remarks;
-        private MetroFramework.Controls.MetroTextBox mtxb_Zip;
-        private MetroFramework.Controls.MetroTextBox mtxb_Address3;
-        private MetroFramework.Controls.MetroTextBox mtxb_Address2;
-        private MetroFramework.Controls.MetroTextBox mtxb_Address1;
-        private MetroFramework.Controls.MetroTextBox mtxb_Internet;
-        private MetroFramework.Controls.MetroTextBox mtxb_Email;
-        private MetroFramework.Controls.MetroTextBox mtxb_Cell;
-        private MetroFramework.Controls.MetroTextBox mtxb_Fax;
-        private MetroFramework.Controls.MetroTextBox mtxb_Tel;
-        private MetroFramework.Controls.MetroTextBox mtxb_Contact;
-        private MetroFramework.Controls.MetroTextBox mtxb_Name;
-        private MetroFramework.Controls.MetroTextBox mtxb_Number;
-        private MetroFramework.Controls.MetroLabel metroLabel13;
+        private MetroFramework.Controls.MetroGrid dgvAddressBook;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookZip_Code;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookAddress3;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookAddress2;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookAddress1;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookWebsite;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookEmail_Address;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookCellphone_Number;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookFax_Number;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookTelephone_Number;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookSurname;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookName;
+        private MetroFramework.Controls.MetroTextBox txtAddressBookNumber;
         private MetroFramework.Controls.MetroLabel metroLabel12;
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroLabel metroLabel10;
@@ -970,5 +918,6 @@
         private MetroFramework.Controls.MetroButton btnAdd;
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroButton btnConfirm;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
