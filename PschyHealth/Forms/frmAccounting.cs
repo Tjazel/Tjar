@@ -318,6 +318,11 @@ namespace PschyHealth
                 txtAccTransaction_Number.WaterMark = "Incorrect Number";
                 validFields = cMethods.isNumber(txtAccTransaction_Number.Text);
             }
+            else if (txtAccTransaction_Number.Text == "")
+            {
+                txtAccTransaction_Number.WaterMark = "Please Enter a Transaction Number";
+                validFields = false;
+            }
         }
 
         private void txtAccDescription_Leave(object sender, EventArgs e)
