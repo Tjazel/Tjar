@@ -256,7 +256,7 @@ namespace PschyHealth
             validFields = true;
             foreach (Control obj in groupBox1.Controls)
             {
-                if (obj is MetroDateTime)
+                if (obj is MetroComboBox)
                 {
                     if (obj.Text == "")
                     {
@@ -275,7 +275,7 @@ namespace PschyHealth
             }
             foreach (Control obj in gbDependants.Controls)
             {
-                if (obj is MetroDateTime)
+                if (obj is MetroComboBox)
                 {
 
                     if (obj.Text == "")
@@ -288,6 +288,13 @@ namespace PschyHealth
                     MetroTextBox txt = new MetroTextBox();
                     txt = obj as MetroTextBox;
                     if ((txt.WaterMarkColor == Color.Red) && (txt.Text == ""))
+                    {
+                        validFields = false;
+                    }
+                }
+                if (obj is MetroDateTime)
+                {
+                    if (obj.Text == "")
                     {
                         validFields = false;
                     }
@@ -370,12 +377,12 @@ namespace PschyHealth
 
         private void txtClientFirst_Name_Leave(object sender, EventArgs e)
         {
-            if (!cMethods.isNumber(txtClientFirst_Name.Text))
+            if (!cMethods.isTextWithSpace(txtClientFirst_Name.Text))
             {
                 txtClientFirst_Name.Text = "";
                 txtClientFirst_Name.WaterMarkColor = Color.Red;
                 txtClientFirst_Name.WaterMark = "Incorrect Name";
-                validFields = cMethods.isNumber(txtClientFirst_Name.Text);
+                validFields = cMethods.isTextWithSpace(txtClientFirst_Name.Text);
             }
             else if (txtClientFirst_Name.Text == "")
             {
@@ -386,12 +393,12 @@ namespace PschyHealth
 
         private void txtClientSurname_Leave(object sender, EventArgs e)
         {
-            if (!cMethods.isNumber(txtClientSurname.Text))
+            if (!cMethods.isTextWithSpace(txtClientSurname.Text))
             {
                 txtClientSurname.Text = "";
                 txtClientSurname.WaterMarkColor = Color.Red;
                 txtClientSurname.WaterMark = "Incorrect Surname";
-                validFields = cMethods.isNumber(txtClientSurname.Text);
+                validFields = cMethods.isTextWithSpace(txtClientSurname.Text);
             }
             else if (txtClientSurname.Text == "")
             {
@@ -402,72 +409,175 @@ namespace PschyHealth
 
         private void txtClientCity_Code_Leave(object sender, EventArgs e)
         {
-
+            if (!cMethods.isNumber(txtClientCity_Code.Text))
+            {
+                txtClientCity_Code.Text = "";
+                txtClientCity_Code.WaterMarkColor = Color.Red;
+                txtClientCity_Code.WaterMark = "Incorrect Zip";
+                validFields = cMethods.isNumber(txtClientCity_Code.Text);
+            }
         }
 
         private void txtClientHome_Telephone_Number_Leave(object sender, EventArgs e)
         {
-
+            if (!cMethods.isTelephone(txtClientHome_Telephone_Number.Text))
+            {
+                txtClientHome_Telephone_Number.Text = "";
+                txtClientHome_Telephone_Number.WaterMarkColor = Color.Red;
+                txtClientHome_Telephone_Number.WaterMark = "Incorrect Telephone";
+                validFields = cMethods.isTelephone(txtClientHome_Telephone_Number.Text);
+            }
         }
 
         private void txtClientMobile_Cellphone_Number_Leave(object sender, EventArgs e)
         {
-
+            if (!cMethods.isTelephone(txtClientMobile_Cellphone_Number.Text))
+            {
+                txtClientMobile_Cellphone_Number.Text = "";
+                txtClientMobile_Cellphone_Number.WaterMarkColor = Color.Red;
+                txtClientMobile_Cellphone_Number.WaterMark = "Incorrect Cellphone";
+                validFields = cMethods.isTelephone(txtClientMobile_Cellphone_Number.Text);
+            }
         }
 
         private void txtClientOccupation_Leave(object sender, EventArgs e)
         {
-
+            if (!cMethods.isTextWithSpace(txtClientOccupation.Text))
+            {
+                txtClientOccupation.Text = "";
+                txtClientOccupation.WaterMarkColor = Color.Red;
+                txtClientOccupation.WaterMark = "Incorrect Format";
+                validFields = cMethods.isTextWithSpace(txtClientOccupation.Text);
+            }
+            else if (txtClientOccupation.Text == "")
+            {
+                txtClientOccupation.WaterMarkColor = Color.Red;
+                txtClientOccupation.WaterMark = "Please Enter an Occupation";
+            }
         }
 
         private void txtClientWork_Address_Leave(object sender, EventArgs e)
         {
-
+            if (!cMethods.isTextWithNumbersAndSpaces(txtClientWork_Address.Text))
+            {
+                txtClientWork_Address.Text = "";
+                txtClientWork_Address.WaterMarkColor = Color.Red;
+                txtClientWork_Address.WaterMark = "Unknown Characters";
+                validFields = cMethods.isTextWithNumbersAndSpaces(txtClientWork_Address.Text);
+            }
         }
 
         private void txtClientMaritial_Status_Leave(object sender, EventArgs e)
         {
-
+            if (!cMethods.isText(txtClientMaritial_Status.Text))
+            {
+                txtClientMaritial_Status.Text = "";
+                txtClientMaritial_Status.WaterMarkColor = Color.Red;
+                txtClientMaritial_Status.WaterMark = "Single Word";
+                validFields = cMethods.isText(txtClientMaritial_Status.Text);
+            }
+            else if (txtClientMaritial_Status.Text == "")
+            {
+                txtClientMaritial_Status.WaterMarkColor = Color.Red;
+                txtClientMaritial_Status.WaterMark = "Please Enter a Maritial Status";
+            }
         }
 
         private void txtClientEmail_Leave(object sender, EventArgs e)
         {
-
-        }
-
-        private void Completed_payment_Leave(object sender, EventArgs e)
-        {
-
+            if (!cMethods.isText(txtClientMaritial_Status.Text))
+            {
+                txtClientMaritial_Status.Text = "";
+                txtClientMaritial_Status.WaterMarkColor = Color.Red;
+                txtClientMaritial_Status.WaterMark = "Single Word";
+                validFields = cMethods.isText(txtClientMaritial_Status.Text);
+            }
+            else if (txtClientMaritial_Status.Text == "")
+            {
+                txtClientMaritial_Status.WaterMarkColor = Color.Red;
+                txtClientMaritial_Status.WaterMark = "Please Enter a Maritial Status";
+            }
         }
 
         private void txtClientAddress_Leave(object sender, EventArgs e)
         {
-
+            if (!cMethods.isTextWithNumbersAndSpaces(txtClientAddress.Text))
+            {
+                txtClientAddress.Text = "";
+                txtClientAddress.WaterMarkColor = Color.Red;
+                txtClientAddress.WaterMark = "Unusual Characters";
+                validFields = cMethods.isTextWithNumbersAndSpaces(txtClientAddress.Text);
+            }
         }
 
         private void txtClientCity_Leave(object sender, EventArgs e)
         {
-
+            if (!cMethods.isText(txtClientCity.Text))
+            {
+                txtClientCity.Text = "";
+                txtClientCity.WaterMarkColor = Color.Red;
+                txtClientCity.WaterMark = "Single Word";
+                validFields = cMethods.isText(txtClientCity.Text);
+            }
         }
 
         private void txtClientDependant_Full_Name_Leave(object sender, EventArgs e)
         {
-
+            if (!cMethods.isTextWithSpace(txtClientDependant_Full_Name.Text))
+            {
+                txtClientDependant_Full_Name.Text = "";
+                txtClientDependant_Full_Name.WaterMarkColor = Color.Red;
+                txtClientDependant_Full_Name.WaterMark = "Incorrect Name Format";
+                validFields = cMethods.isTextWithSpace(txtClientDependant_Full_Name.Text);
+            }
+            else if (txtClientDependant_Full_Name.Text == "")
+            {
+                txtClientDependant_Full_Name.WaterMarkColor = Color.Red;
+                txtClientDependant_Full_Name.WaterMark = "Please Enter a Name";
+            }
         }
 
         private void txtClientDependantSurname_Leave(object sender, EventArgs e)
         {
-
+            if (!cMethods.isTextWithSpace(txtClientDependantSurname.Text))
+            {
+                txtClientDependantSurname.Text = "";
+                txtClientDependantSurname.WaterMarkColor = Color.Red;
+                txtClientDependantSurname.WaterMark = "Incorrect Surname Format";
+                validFields = cMethods.isTextWithSpace(txtClientDependantSurname.Text);
+            }
+            else if (txtClientDependantSurname.Text == "")
+            {
+                txtClientDependantSurname.WaterMarkColor = Color.Red;
+                txtClientDependantSurname.WaterMark = "Please Enter a Surname";
+            }
         }
 
         private void txtClientDependant_Code_Leave(object sender, EventArgs e)
         {
-
+            if (!cMethods.isNumber(txtClientDependant_Code.Text))
+            {
+                txtClientDependant_Code.Text = "";
+                txtClientDependant_Code.WaterMarkColor = Color.Red;
+                txtClientDependant_Code.WaterMark = "Incorrect Code";
+                validFields = cMethods.isNumber(txtClientDependant_Code.Text);
+            }
+            else if (txtClientDependant_Code.Text == "")
+            {
+                txtClientDependant_Code.WaterMarkColor = Color.Red;
+                txtClientDependant_Code.WaterMark = "Please Enter a Code";
+            }
         }
 
         private void txtClientReferal_Practice_Leave(object sender, EventArgs e)
         {
-
+            if (!cMethods.isTextWithSpace(txtClientReferal_Practice.Text))
+            {
+                txtClientReferal_Practice.Text = "";
+                txtClientReferal_Practice.WaterMarkColor = Color.Red;
+                txtClientReferal_Practice.WaterMark = "Incorrect Referral";
+                validFields = cMethods.isTextWithSpace(txtClientReferal_Practice.Text);
+            }
         }
     }
 }

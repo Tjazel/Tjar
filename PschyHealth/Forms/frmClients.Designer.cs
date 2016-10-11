@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.cmbClientEthnic_Group = new MetroFramework.Controls.MetroComboBox();
             this.cmbClientGender = new MetroFramework.Controls.MetroComboBox();
@@ -67,11 +67,10 @@
             this.lblEmail = new MetroFramework.Controls.MetroLabel();
             this.txtClientEmail = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
-            this.Completed_payment = new MetroFramework.Controls.MetroTextBox();
             this.txtClientWork_Address = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.txtDate_Of_Birth = new MetroFramework.Controls.MetroDateTime();
+            this.txtClientDate_Of_Birth = new MetroFramework.Controls.MetroDateTime();
             this.txtClientAccount_Number = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.dgvClients = new MetroFramework.Controls.MetroGrid();
@@ -99,6 +98,7 @@
             this.btnArchiv = new MetroFramework.Controls.MetroButton();
             this.btnConnfirm = new MetroFramework.Controls.MetroButton();
             this.btnCanccel = new MetroFramework.Controls.MetroButton();
+            this.txtClientDate_Finished = new MetroFramework.Controls.MetroDateTime();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
@@ -652,6 +652,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtClientDate_Finished);
             this.groupBox1.Controls.Add(this.cmbClientLanguage);
             this.groupBox1.Controls.Add(this.txtClientCity_Code);
             this.groupBox1.Controls.Add(this.txtClientCity);
@@ -660,11 +661,10 @@
             this.groupBox1.Controls.Add(this.lblEmail);
             this.groupBox1.Controls.Add(this.txtClientEmail);
             this.groupBox1.Controls.Add(this.metroLabel21);
-            this.groupBox1.Controls.Add(this.Completed_payment);
             this.groupBox1.Controls.Add(this.txtClientWork_Address);
             this.groupBox1.Controls.Add(this.metroLabel14);
             this.groupBox1.Controls.Add(this.metroLabel13);
-            this.groupBox1.Controls.Add(this.txtDate_Of_Birth);
+            this.groupBox1.Controls.Add(this.txtClientDate_Of_Birth);
             this.groupBox1.Controls.Add(this.txtClientAccount_Number);
             this.groupBox1.Controls.Add(this.metroLabel10);
             this.groupBox1.Controls.Add(this.cmbClientEthnic_Group);
@@ -865,40 +865,6 @@
             this.metroLabel21.UseStyleColors = true;
             this.metroLabel21.WrapToLine = true;
             // 
-            // Completed_payment
-            // 
-            // 
-            // 
-            // 
-            this.Completed_payment.CustomButton.Image = null;
-            this.Completed_payment.CustomButton.Location = new System.Drawing.Point(130, 2);
-            this.Completed_payment.CustomButton.Name = "";
-            this.Completed_payment.CustomButton.Size = new System.Drawing.Size(17, 17);
-            this.Completed_payment.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Completed_payment.CustomButton.TabIndex = 1;
-            this.Completed_payment.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Completed_payment.CustomButton.UseSelectable = true;
-            this.Completed_payment.CustomButton.Visible = false;
-            this.Completed_payment.Enabled = false;
-            this.Completed_payment.Lines = new string[0];
-            this.Completed_payment.Location = new System.Drawing.Point(481, 53);
-            this.Completed_payment.MaxLength = 32767;
-            this.Completed_payment.Name = "Completed_payment";
-            this.Completed_payment.PasswordChar = '\0';
-            this.Completed_payment.ReadOnly = true;
-            this.Completed_payment.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Completed_payment.SelectedText = "";
-            this.Completed_payment.SelectionLength = 0;
-            this.Completed_payment.SelectionStart = 0;
-            this.Completed_payment.Size = new System.Drawing.Size(150, 22);
-            this.Completed_payment.TabIndex = 53;
-            this.Completed_payment.UseSelectable = true;
-            this.Completed_payment.UseStyleColors = true;
-            this.Completed_payment.WaterMark = "Enter Date";
-            this.Completed_payment.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Completed_payment.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.Completed_payment.Leave += new System.EventHandler(this.Completed_payment_Leave);
-            // 
             // txtClientWork_Address
             // 
             // 
@@ -958,16 +924,16 @@
             this.metroLabel13.Text = "Language:";
             this.metroLabel13.UseStyleColors = true;
             // 
-            // txtDate_Of_Birth
+            // txtClientDate_Of_Birth
             // 
-            this.txtDate_Of_Birth.Enabled = false;
-            this.txtDate_Of_Birth.Location = new System.Drawing.Point(157, 133);
-            this.txtDate_Of_Birth.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDate_Of_Birth.MinimumSize = new System.Drawing.Size(0, 29);
-            this.txtDate_Of_Birth.Name = "txtDate_Of_Birth";
-            this.txtDate_Of_Birth.Size = new System.Drawing.Size(151, 29);
-            this.txtDate_Of_Birth.TabIndex = 48;
-            this.txtDate_Of_Birth.UseStyleColors = true;
+            this.txtClientDate_Of_Birth.Enabled = false;
+            this.txtClientDate_Of_Birth.Location = new System.Drawing.Point(157, 133);
+            this.txtClientDate_Of_Birth.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClientDate_Of_Birth.MinimumSize = new System.Drawing.Size(0, 29);
+            this.txtClientDate_Of_Birth.Name = "txtClientDate_Of_Birth";
+            this.txtClientDate_Of_Birth.Size = new System.Drawing.Size(151, 29);
+            this.txtClientDate_Of_Birth.TabIndex = 48;
+            this.txtClientDate_Of_Birth.UseStyleColors = true;
             // 
             // txtClientAccount_Number
             // 
@@ -1025,23 +991,23 @@
             this.dgvClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle58.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle58;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle59.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle59;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClients.EnableHeadersVisualStyles = false;
             this.dgvClients.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvClients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -1049,14 +1015,14 @@
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.ReadOnly = true;
             this.dgvClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle60.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle60.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle60.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle60;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClients.Size = new System.Drawing.Size(546, 470);
@@ -1119,10 +1085,10 @@
             // 
             // 
             this.txtClientReferal_Practice.CustomButton.Image = null;
-            this.txtClientReferal_Practice.CustomButton.Location = new System.Drawing.Point(135, 2);
+            this.txtClientReferal_Practice.CustomButton.Location = new System.Drawing.Point(133, 2);
             this.txtClientReferal_Practice.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtClientReferal_Practice.CustomButton.Name = "";
-            this.txtClientReferal_Practice.CustomButton.Size = new System.Drawing.Size(13, 13);
+            this.txtClientReferal_Practice.CustomButton.Size = new System.Drawing.Size(15, 15);
             this.txtClientReferal_Practice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientReferal_Practice.CustomButton.TabIndex = 1;
             this.txtClientReferal_Practice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1455,6 +1421,17 @@
             this.btnCanccel.UseStyleColors = true;
             this.btnCanccel.Click += new System.EventHandler(this.btnCanccel_Click);
             // 
+            // txtClientDate_Finished
+            // 
+            this.txtClientDate_Finished.Enabled = false;
+            this.txtClientDate_Finished.Location = new System.Drawing.Point(481, 49);
+            this.txtClientDate_Finished.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClientDate_Finished.MinimumSize = new System.Drawing.Size(0, 29);
+            this.txtClientDate_Finished.Name = "txtClientDate_Finished";
+            this.txtClientDate_Finished.Size = new System.Drawing.Size(151, 29);
+            this.txtClientDate_Finished.TabIndex = 64;
+            this.txtClientDate_Finished.UseStyleColors = true;
+            // 
             // frmClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1531,7 +1508,7 @@
         private MetroFramework.Controls.MetroTextBox txtClientWork_Address;
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroLabel metroLabel13;
-        private MetroFramework.Controls.MetroDateTime txtDate_Of_Birth;
+        private MetroFramework.Controls.MetroDateTime txtClientDate_Of_Birth;
         private MetroFramework.Controls.MetroTextBox txtClientAccount_Number;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel20;
@@ -1544,7 +1521,6 @@
         private MetroFramework.Controls.MetroTextBox txtClientDependant_Full_Name;
         private MetroFramework.Controls.MetroLabel metroLabel15;
         private MetroFramework.Controls.MetroLabel metroLabel21;
-        private MetroFramework.Controls.MetroTextBox Completed_payment;
         private MetroFramework.Controls.MetroLabel lblBack;
         private MetroFramework.Controls.MetroLabel metroLabel22;
         public MetroFramework.Controls.MetroComboBox cmbClientSymbol;
@@ -1566,5 +1542,6 @@
         private MetroFramework.Controls.MetroButton btnArchiv;
         private MetroFramework.Controls.MetroButton btnCanccel;
         private MetroFramework.Controls.MetroButton btnConnfirm;
+        private MetroFramework.Controls.MetroDateTime txtClientDate_Finished;
     }
 }
