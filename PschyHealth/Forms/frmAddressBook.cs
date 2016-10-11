@@ -174,6 +174,7 @@ namespace PschyHealth
                         cMethods.delete("MedicalAid", "Medical_Aid = '" + rowID + "'");
 
                 }
+                btnArchive.Enabled = true;
                 btnAdd.Enabled = true;
                 btnDelete.Enabled = true;
                 btnUpdate.Enabled = true;
@@ -201,6 +202,7 @@ namespace PschyHealth
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
+            btnArchive.Enabled = false;
             button = "add";
         }
 
@@ -212,6 +214,7 @@ namespace PschyHealth
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
+            btnArchive.Enabled = false;
             button = "edit";
         }
 
@@ -223,6 +226,7 @@ namespace PschyHealth
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
+            btnArchive.Enabled = false;
             button = "archive";
         }
 
@@ -234,6 +238,11 @@ namespace PschyHealth
                 txtAddressBookNumber.WaterMarkColor = Color.Red;
                 txtAddressBookNumber.WaterMark = "Invalid number";
                 validFields = cMethods.isNumber(txtAddressBookNumber.Text);
+            }
+            else if (txtAddressBookNumber.Text == "")
+            {
+                txtAddressBookNumber.WaterMarkColor = Color.Red;
+                txtAddressBookNumber.WaterMark = "Please Input a Number";
             }
         }
 

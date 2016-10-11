@@ -17,6 +17,7 @@ namespace PschyHealth
     public partial class frmClients : MetroForm
 
     {
+        bool validFields = true;
         String correctSearch = "";
         String button = "";
         //Constants
@@ -159,47 +160,6 @@ namespace PschyHealth
                 txtClientsSearch.Enabled = false;
         }
 
-       
-
-       
-
-       
-
-       
-
-        private void btnConfirm_Click_1(object sender, EventArgs e)
-        {
-            String field, field2;
-            String value, value2;
-            if (dgvClients.SelectedRows.Count > 0)
-            {
-                int selectedIndex = dgvClients.SelectedRows[0].Index;
-
-                String rowID = dgvClients[0, selectedIndex].Value.ToString();
-                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Client");
-                cMethods.getFieldsAndValues(out field2, out value2, gbDependants, "Client");
-                if (button == "add")
-                    cMethods.add("Clients", field + "," + field2, value + "," + value2);
-                else if (button == "edit")
-                    cMethods.edit("Clients", field, value, " ID = '" + dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString() + "'");
-                else if (button == "delete")
-                    cMethods.delete("Clients", "ID = '" + rowID + "'");
-                else if (button == "archive")
-                {
-                    
-                    cMethods.Archive(dgvClients, "Clients", "ID", dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString());
-                }
-
-            }
-            btnAddExClient.Enabled = true;
-            btnaddNewclient.Enabled = true;
-            btnUpdate.Enabled = true;
-            btnDelete.Enabled = true;
-            btnConnfirm.Hide();
-            btnCanccel.Hide();
-            filter();
-        }
-
         private void lblBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -293,7 +253,49 @@ namespace PschyHealth
 
         private void btnConnfirm_Click(object sender, EventArgs e)
         {
-            String field, field2;
+            validFields = true;
+            foreach (Control obj in groupBox1.Controls)
+            {
+                if (obj is MetroDateTime)
+                {
+                    if (obj.Text == "")
+                    {
+                        validFields = false;
+                    }
+                }
+                if (obj is MetroTextBox)
+                {
+                    MetroTextBox txt = new MetroTextBox();
+                    txt = obj as MetroTextBox;
+                    if ((txt.WaterMarkColor == Color.Red) && (txt.Text == ""))
+                    {
+                        validFields = false;
+                    }
+                }
+            }
+            foreach (Control obj in gbDependants.Controls)
+            {
+                if (obj is MetroDateTime)
+                {
+
+                    if (obj.Text == "")
+                    {
+                        validFields = false;
+                    }
+                }
+                if (obj is MetroTextBox)
+                {
+                    MetroTextBox txt = new MetroTextBox();
+                    txt = obj as MetroTextBox;
+                    if ((txt.WaterMarkColor == Color.Red) && (txt.Text == ""))
+                    {
+                        validFields = false;
+                    }
+                }
+            }
+            if (validFields)
+            {
+                String field, field2;
             String value, value2;
             if (dgvClients.SelectedRows.Count > 0)
             {
@@ -322,6 +324,11 @@ namespace PschyHealth
             btnConnfirm.Hide();
             btnCanccel.Hide();
             filter();
+            }
+            else
+            {
+                MessageBox.Show("Invalid field data, please go through your inputs.");
+            }
         }
 
         private void btnCanccel_Click(object sender, EventArgs e)
@@ -334,17 +341,131 @@ namespace PschyHealth
             btnDelete.Enabled = true;
         }
 
-        private void btnAddNewClient_Click(object sender, EventArgs e)
+        private void txtClientID_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isNumber(txtClientID.Text))
+            {
+                txtClientID.Text = "";
+                txtClientID.WaterMarkColor = Color.Red;
+                txtClientID.WaterMark = "Incorrect Number";
+                validFields = cMethods.isNumber(txtClientID.Text);
+            }
+            else if (txtClientID.Text == "")
+            {
+                txtClientID.WaterMarkColor = Color.Red;
+                txtClientID.WaterMark = "Please Enter an ID Number";
+            }
+        }
+
+        private void txtClientAccount_Number_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isNumber(txtClientAccount_Number.Text))
+            {
+                txtClientAccount_Number.Text = "";
+                txtClientAccount_Number.WaterMarkColor = Color.Red;
+                txtClientAccount_Number.WaterMark = "Incorrect Number";
+                validFields = cMethods.isNumber(txtClientAccount_Number.Text);
+            }
+        }
+
+        private void txtClientFirst_Name_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isNumber(txtClientFirst_Name.Text))
+            {
+                txtClientFirst_Name.Text = "";
+                txtClientFirst_Name.WaterMarkColor = Color.Red;
+                txtClientFirst_Name.WaterMark = "Incorrect Name";
+                validFields = cMethods.isNumber(txtClientFirst_Name.Text);
+            }
+            else if (txtClientFirst_Name.Text == "")
+            {
+                txtClientFirst_Name.WaterMarkColor = Color.Red;
+                txtClientFirst_Name.WaterMark = "Please Enter a Name";
+            }
+        }
+
+        private void txtClientSurname_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isNumber(txtClientSurname.Text))
+            {
+                txtClientSurname.Text = "";
+                txtClientSurname.WaterMarkColor = Color.Red;
+                txtClientSurname.WaterMark = "Incorrect Surname";
+                validFields = cMethods.isNumber(txtClientSurname.Text);
+            }
+            else if (txtClientSurname.Text == "")
+            {
+                txtClientSurname.WaterMarkColor = Color.Red;
+                txtClientSurname.WaterMark = "Please Enter a Surname";
+            }
+        }
+
+        private void txtClientCity_Code_Leave(object sender, EventArgs e)
         {
 
         }
 
-        private void btnDeleteClient_Click(object sender, EventArgs e)
+        private void txtClientHome_Telephone_Number_Leave(object sender, EventArgs e)
         {
 
         }
 
-        private void txtClientDateFinished_Click(object sender, EventArgs e)
+        private void txtClientMobile_Cellphone_Number_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClientOccupation_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClientWork_Address_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClientMaritial_Status_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClientEmail_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Completed_payment_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClientAddress_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClientCity_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClientDependant_Full_Name_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClientDependantSurname_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClientDependant_Code_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClientReferal_Practice_Leave(object sender, EventArgs e)
         {
 
         }

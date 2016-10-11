@@ -338,7 +338,7 @@ namespace PschyHealth
             {
                 txtAccDescription.Text = "";
                 txtAccDescription.WaterMarkColor = Color.Red;
-                txtAccDescription.WaterMark = "No unusual characters";
+                txtAccDescription.WaterMark = "Only letters and spaces";
             }
         }
 
@@ -348,7 +348,7 @@ namespace PschyHealth
             {
                 txtAccType.Text = "";
                 txtAccType.WaterMarkColor = Color.Red;
-                txtAccType.WaterMark = "Single phrase";
+                txtAccType.WaterMark = "Single word";
             }
         }
 

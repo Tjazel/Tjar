@@ -1317,7 +1317,18 @@ namespace PschyHealth
 
         public bool isText(String text)
         {
-            if (Regex.IsMatch(text, @"^[a-zA-Z0-9]*$"))
+            if (Regex.IsMatch(text, @"^[a-zA-Z]*$"))
+                return true;
+            else
+            {
+                //MessageBox.Show("Please make sure that you correctly typed in the textbox");
+                return false;
+            }
+        }
+
+        public bool isTextWithNumbersAndSpaces(String text)
+        {
+            if (Regex.IsMatch(text, @"^[a-zA-Z0-9 ]*$"))
                 return true;
             else
             {
@@ -1328,7 +1339,7 @@ namespace PschyHealth
 
         public bool isTextWithSpace(String text)
         {
-            if (Regex.IsMatch(text, @"^[a-zA-Z0-9 ]*$"))
+            if (Regex.IsMatch(text, @"^[a-zA-Z ]*$"))
                 return true;
             else
             {
