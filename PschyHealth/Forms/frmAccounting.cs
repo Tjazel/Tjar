@@ -228,6 +228,7 @@ namespace PschyHealth
 
         private void btnUpdatAccount_Click(object sender, EventArgs e)
         {
+            btnCancel.Show();
             btnConfirm.Show();
             cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", true);
             btnDeleteAccount.Enabled = false;
@@ -238,6 +239,7 @@ namespace PschyHealth
 
         private void btnDeleteAccount_Click_1(object sender, EventArgs e)
         {
+            btnCancel.Show();
             btnConfirm.Show();
             cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
             btnDeleteAccount.Enabled = false;
@@ -248,6 +250,7 @@ namespace PschyHealth
 
         private void btnArchive_Click_1(object sender, EventArgs e)
         {
+            btnCancel.Show();
             btnConfirm.Show();
             cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
             btnDeleteAccount.Enabled = false;
@@ -258,15 +261,19 @@ namespace PschyHealth
 
         private void btnConnfirm_Click(object sender, EventArgs e)
         {
-            //bool accept = true;
-            //foreach(Control obj in groupBox1.Controls)
-            //{
-            //    string name = "";
-            //    if(obj is MetroTextBox)
-            //    {
-            //        name = obj.Name;
-            //    }
-            //}
+            validFields = true;
+            foreach (Control obj in groupBox1.Controls)
+            {
+                if (obj is MetroTextBox)
+                {
+                    MetroTextBox txt = new MetroTextBox();
+                    txt = obj as MetroTextBox;
+                    if ((txt.WaterMarkColor == Color.Red)&&(txt.Text == ""))
+                    {
+                        validFields = false;
+                    }
+                }
+            }
             if (validFields)
             {
                 String field;
@@ -320,8 +327,8 @@ namespace PschyHealth
             }
             else if (txtAccTransaction_Number.Text == "")
             {
+                txtAccTransaction_Number.WaterMarkColor = Color.Red;
                 txtAccTransaction_Number.WaterMark = "Please Enter a Transaction Number";
-                validFields = false;
             }
         }
 
@@ -332,18 +339,16 @@ namespace PschyHealth
                 txtAccDescription.Text = "";
                 txtAccDescription.WaterMarkColor = Color.Red;
                 txtAccDescription.WaterMark = "No unusual characters";
-                validFields = cMethods.isNumber(txtAccDescription.Text);
             }
         }
 
         private void txtAccType_Leave(object sender, EventArgs e)
-        {
+        {;
             if (!cMethods.isText(txtAccType.Text))
             {
                 txtAccType.Text = "";
                 txtAccType.WaterMarkColor = Color.Red;
                 txtAccType.WaterMark = "Single phrase";
-                validFields = cMethods.isNumber(txtAccType.Text);
             }
         }
 
@@ -354,7 +359,6 @@ namespace PschyHealth
                 txtAccAmount.Text = "";
                 txtAccAmount.WaterMarkColor = Color.Red;
                 txtAccAmount.WaterMark = "Incorrect Format";
-                validFields = cMethods.isMoney(txtAccAmount.Text);
             }
         }
     }

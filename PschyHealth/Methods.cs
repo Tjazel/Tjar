@@ -150,59 +150,59 @@ namespace PschyHealth
             }
         }
 
-        public string fillText(string buttonText)
-        {
-            if (buttonText == "Maandeliks")
-            {
-                string good = "";
-                for (int i = 0; i <= 12; i++)
-                {
-                    good += "Total income for the ";
-                    double goodSum = 0, badSum = 0;
-                    SqlCommand cmd = new SqlCommand();
-                    SqlDataReader reader;
-                    cmd.CommandText = "SELECT * FROM Accounting WHERE Date LIKE @P1 AND Type = Income";
-                    cmd.Parameters.AddWithValue("@P1", "*-*" + Convert.ToString(i) + "*");
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Connection = conn;
-                    conn.Open();
-                    reader = cmd.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        goodSum += Convert.ToDouble(reader["Amount"].ToString());
-                    }
-                    reader.Close();
-                    good += Convert.ToString(i) + "th month :R" + Convert.ToString(goodSum) + "/r/n";
-                }
-                string bad = "";
-                for (int i = 0; i <= 12; i++)
-                {
-                    bad += "Total expense for the ";
-                    double badSum = 0;
-                    SqlCommand cmd = new SqlCommand();
-                    SqlDataReader reader;
-                    cmd.CommandText = "SELECT * FROM Accounting WHERE Date LIKE @P1 AND Type <> Income";
-                    cmd.Parameters.AddWithValue("@P1", "*-*" + Convert.ToString(i) + "*");
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Connection = conn;
-                    conn.Open();
-                    reader = cmd.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        badSum += Convert.ToDouble(reader["Amount"].ToString());
-                    }
-                    reader.Close();
-                    bad += Convert.ToString(i) + "th month :R" + Convert.ToString(badSum) + "/r/n";
-                }
-                buttonText = good + bad;
-            }
-            if (buttonText == "Geldvloei")
-            {
+        //public string fillText(string buttonText)
+        //{
+        //    if (buttonText == "Maandeliks")
+        //    {
+        //        string good = "";
+        //        for (int i = 0; i <= 12; i++)
+        //        {
+        //            good += "Total income for the ";
+        //            double goodSum = 0, badSum = 0;
+        //            SqlCommand cmd = new SqlCommand();
+        //            SqlDataReader reader;
+        //            cmd.CommandText = "SELECT * FROM Accounting WHERE Date LIKE @P1 AND Type = Income";
+        //            cmd.Parameters.AddWithValue("@P1", "*-*" + Convert.ToString(i) + "*");
+        //            cmd.CommandType = CommandType.Text;
+        //            cmd.Connection = conn;
+        //            conn.Open();
+        //            reader = cmd.ExecuteReader();
+        //            while (reader.Read())
+        //            {
+        //                goodSum += Convert.ToDouble(reader["Amount"].ToString());
+        //            }
+        //            reader.Close();
+        //            good += Convert.ToString(i) + "th month :R" + Convert.ToString(goodSum) + "/r/n";
+        //        }
+        //        string bad = "";
+        //        for (int i = 0; i <= 12; i++)
+        //        {
+        //            bad += "Total expense for the ";
+        //            double badSum = 0;
+        //            SqlCommand cmd = new SqlCommand();
+        //            SqlDataReader reader;
+        //            cmd.CommandText = "SELECT * FROM Accounting WHERE Date LIKE @P1 AND Type <> Income";
+        //            cmd.Parameters.AddWithValue("@P1", "*-*" + Convert.ToString(i) + "*");
+        //            cmd.CommandType = CommandType.Text;
+        //            cmd.Connection = conn;
+        //            conn.Open();
+        //            reader = cmd.ExecuteReader();
+        //            while (reader.Read())
+        //            {
+        //                badSum += Convert.ToDouble(reader["Amount"].ToString());
+        //            }
+        //            reader.Close();
+        //            bad += Convert.ToString(i) + "th month :R" + Convert.ToString(badSum) + "/r/n";
+        //        }
+        //        buttonText = good + bad;
+        //    }
+        //    if (buttonText == "Geldvloei")
+        //    {
 
-            }
-            conn.Close();
-            return buttonText;
-        }
+        //    }
+        //    conn.Close();
+        //    return buttonText;
+        //}
 
         private string Encrypt(string clearText)
         {
