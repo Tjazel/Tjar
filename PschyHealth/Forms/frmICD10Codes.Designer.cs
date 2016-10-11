@@ -78,8 +78,7 @@
             this.dgvEDICodes.EnableHeadersVisualStyles = false;
             this.dgvEDICodes.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvEDICodes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvEDICodes.Location = new System.Drawing.Point(493, 215);
-            this.dgvEDICodes.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEDICodes.Location = new System.Drawing.Point(370, 175);
             this.dgvEDICodes.Name = "dgvEDICodes";
             this.dgvEDICodes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -92,7 +91,7 @@
             this.dgvEDICodes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEDICodes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvEDICodes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEDICodes.Size = new System.Drawing.Size(860, 496);
+            this.dgvEDICodes.Size = new System.Drawing.Size(645, 403);
             this.dgvEDICodes.TabIndex = 37;
             this.dgvEDICodes.UseStyleColors = true;
             this.dgvEDICodes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
@@ -105,10 +104,10 @@
             // pbMic
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
-            this.pbMic.Location = new System.Drawing.Point(31, 45);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbMic.Location = new System.Drawing.Point(23, 37);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbMic.Name = "pbMic";
-            this.pbMic.Size = new System.Drawing.Size(37, 27);
+            this.pbMic.Size = new System.Drawing.Size(28, 22);
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMic.TabIndex = 43;
             this.pbMic.TabStop = false;
@@ -117,10 +116,11 @@
             // cmbICD10CodesCode
             // 
             this.cmbICD10CodesCode.FormattingEnabled = true;
-            this.cmbICD10CodesCode.ItemHeight = 24;
-            this.cmbICD10CodesCode.Location = new System.Drawing.Point(480, 102);
+            this.cmbICD10CodesCode.ItemHeight = 23;
+            this.cmbICD10CodesCode.Location = new System.Drawing.Point(360, 83);
+            this.cmbICD10CodesCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbICD10CodesCode.Name = "cmbICD10CodesCode";
-            this.cmbICD10CodesCode.Size = new System.Drawing.Size(162, 30);
+            this.cmbICD10CodesCode.Size = new System.Drawing.Size(122, 29);
             this.cmbICD10CodesCode.TabIndex = 44;
             this.cmbICD10CodesCode.UseSelectable = true;
             this.cmbICD10CodesCode.UseStyleColors = true;
@@ -128,9 +128,10 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(480, 74);
+            this.metroLabel1.Location = new System.Drawing.Point(360, 60);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(49, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(48, 19);
             this.metroLabel1.TabIndex = 45;
             this.metroLabel1.Text = "Code :";
             this.metroLabel1.UseStyleColors = true;
@@ -141,16 +142,18 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(231, 1);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(172, 2);
+            this.metroTextBox1.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(15, 15);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox1.CustomButton.TabIndex = 1;
             this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(728, 102);
+            this.metroTextBox1.Location = new System.Drawing.Point(546, 83);
+            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -158,7 +161,7 @@
             this.metroTextBox1.SelectedText = "";
             this.metroTextBox1.SelectionLength = 0;
             this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.Size = new System.Drawing.Size(253, 23);
+            this.metroTextBox1.Size = new System.Drawing.Size(190, 20);
             this.metroTextBox1.TabIndex = 46;
             this.metroTextBox1.UseSelectable = true;
             this.metroTextBox1.UseStyleColors = true;
@@ -168,19 +171,20 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(728, 74);
+            this.metroLabel2.Location = new System.Drawing.Point(546, 60);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(86, 20);
+            this.metroLabel2.Size = new System.Drawing.Size(81, 19);
             this.metroLabel2.TabIndex = 47;
             this.metroLabel2.Text = "Description :";
             this.metroLabel2.UseStyleColors = true;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(610, 170);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(458, 138);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(104, 39);
+            this.btnCancel.Size = new System.Drawing.Size(78, 32);
             this.btnCancel.TabIndex = 117;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseSelectable = true;
@@ -188,10 +192,10 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(493, 170);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConfirm.Location = new System.Drawing.Point(370, 138);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(104, 39);
+            this.btnConfirm.Size = new System.Drawing.Size(78, 32);
             this.btnConfirm.TabIndex = 116;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseSelectable = true;
@@ -199,10 +203,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(1127, 729);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(845, 592);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(104, 39);
+            this.btnDelete.Size = new System.Drawing.Size(78, 32);
             this.btnDelete.TabIndex = 115;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseSelectable = true;
@@ -210,10 +214,10 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(1017, 729);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Location = new System.Drawing.Point(763, 592);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(104, 39);
+            this.btnEdit.Size = new System.Drawing.Size(78, 32);
             this.btnEdit.TabIndex = 114;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseSelectable = true;
@@ -221,10 +225,10 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(907, 729);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Location = new System.Drawing.Point(680, 592);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(104, 39);
+            this.btnAdd.Size = new System.Drawing.Size(78, 32);
             this.btnAdd.TabIndex = 113;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseSelectable = true;
@@ -232,9 +236,9 @@
             // 
             // frmICD10Codes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2334, 825);
+            this.ClientSize = new System.Drawing.Size(1750, 670);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnDelete);
@@ -246,10 +250,8 @@
             this.Controls.Add(this.cmbICD10CodesCode);
             this.Controls.Add(this.pbMic);
             this.Controls.Add(this.dgvEDICodes);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Movable = false;
             this.Name = "frmICD10Codes";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
