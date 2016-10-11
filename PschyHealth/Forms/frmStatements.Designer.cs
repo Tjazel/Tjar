@@ -62,11 +62,9 @@
             this.groupBox3.Controls.Add(this.metroTextBox17);
             this.groupBox3.Controls.Add(this.metroLabel18);
             this.groupBox3.Controls.Add(this.metroLabel17);
-            this.groupBox3.Location = new System.Drawing.Point(465, 78);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Location = new System.Drawing.Point(349, 63);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(687, 87);
+            this.groupBox3.Size = new System.Drawing.Size(515, 71);
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search Statements";
@@ -74,16 +72,16 @@
             // metroComboBox1
             // 
             this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 24;
+            this.metroComboBox1.ItemHeight = 23;
             this.metroComboBox1.Items.AddRange(new object[] {
             "=",
             ">",
             "<",
             "null"});
-            this.metroComboBox1.Location = new System.Drawing.Point(308, 34);
-            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroComboBox1.Location = new System.Drawing.Point(231, 28);
+            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(71, 30);
+            this.metroComboBox1.Size = new System.Drawing.Size(54, 29);
             this.metroComboBox1.TabIndex = 62;
             this.metroComboBox1.UseSelectable = true;
             this.metroComboBox1.UseStyleColors = true;
@@ -92,7 +90,7 @@
             // cmbStatCrit
             // 
             this.cmbStatCrit.FormattingEnabled = true;
-            this.cmbStatCrit.ItemHeight = 24;
+            this.cmbStatCrit.ItemHeight = 23;
             this.cmbStatCrit.Items.AddRange(new object[] {
             "Number",
             "Date",
@@ -100,10 +98,9 @@
             "Patient Name",
             "Patient Surname",
             "Consultant ID"});
-            this.cmbStatCrit.Location = new System.Drawing.Point(81, 33);
-            this.cmbStatCrit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbStatCrit.Location = new System.Drawing.Point(61, 27);
             this.cmbStatCrit.Name = "cmbStatCrit";
-            this.cmbStatCrit.Size = new System.Drawing.Size(187, 30);
+            this.cmbStatCrit.Size = new System.Drawing.Size(141, 29);
             this.cmbStatCrit.TabIndex = 3;
             this.cmbStatCrit.UseSelectable = true;
             this.cmbStatCrit.UseStyleColors = true;
@@ -115,18 +112,16 @@
             // 
             // 
             this.metroTextBox17.CustomButton.Image = null;
-            this.metroTextBox17.CustomButton.Location = new System.Drawing.Point(205, 2);
-            this.metroTextBox17.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox17.CustomButton.Location = new System.Drawing.Point(85, 1);
             this.metroTextBox17.CustomButton.Name = "";
-            this.metroTextBox17.CustomButton.Size = new System.Drawing.Size(41, 38);
+            this.metroTextBox17.CustomButton.Size = new System.Drawing.Size(20, 22);
             this.metroTextBox17.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox17.CustomButton.TabIndex = 1;
             this.metroTextBox17.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTextBox17.CustomButton.UseSelectable = true;
             this.metroTextBox17.CustomButton.Visible = false;
             this.metroTextBox17.Lines = new string[0];
-            this.metroTextBox17.Location = new System.Drawing.Point(491, 28);
-            this.metroTextBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextBox17.Location = new System.Drawing.Point(368, 23);
             this.metroTextBox17.MaxLength = 32767;
             this.metroTextBox17.Name = "metroTextBox17";
             this.metroTextBox17.PasswordChar = '\0';
@@ -134,7 +129,7 @@
             this.metroTextBox17.SelectedText = "";
             this.metroTextBox17.SelectionLength = 0;
             this.metroTextBox17.SelectionStart = 0;
-            this.metroTextBox17.Size = new System.Drawing.Size(188, 36);
+            this.metroTextBox17.Size = new System.Drawing.Size(141, 29);
             this.metroTextBox17.TabIndex = 2;
             this.metroTextBox17.UseSelectable = true;
             this.metroTextBox17.UseStyleColors = true;
@@ -144,10 +139,9 @@
             // metroLabel18
             // 
             this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Location = new System.Drawing.Point(404, 43);
-            this.metroLabel18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel18.Location = new System.Drawing.Point(303, 35);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(79, 20);
+            this.metroLabel18.Size = new System.Drawing.Size(76, 19);
             this.metroLabel18.TabIndex = 1;
             this.metroLabel18.Text = "Search For:";
             this.metroLabel18.UseStyleColors = true;
@@ -155,10 +149,9 @@
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(8, 43);
-            this.metroLabel17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel17.Location = new System.Drawing.Point(6, 35);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(56, 20);
+            this.metroLabel17.Size = new System.Drawing.Size(55, 19);
             this.metroLabel17.TabIndex = 0;
             this.metroLabel17.Text = "Criteria:";
             this.metroLabel17.UseStyleColors = true;
@@ -166,10 +159,9 @@
             // metroTextButton5
             // 
             this.metroTextButton5.Image = null;
-            this.metroTextButton5.Location = new System.Drawing.Point(999, 807);
-            this.metroTextButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextButton5.Location = new System.Drawing.Point(749, 656);
             this.metroTextButton5.Name = "metroTextButton5";
-            this.metroTextButton5.Size = new System.Drawing.Size(195, 28);
+            this.metroTextButton5.Size = new System.Drawing.Size(146, 23);
             this.metroTextButton5.Style = MetroFramework.MetroColorStyle.Red;
             this.metroTextButton5.TabIndex = 41;
             this.metroTextButton5.Text = "View Statement";
@@ -179,10 +171,9 @@
             // metroTextButton4
             // 
             this.metroTextButton4.Image = null;
-            this.metroTextButton4.Location = new System.Drawing.Point(773, 807);
-            this.metroTextButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTextButton4.Location = new System.Drawing.Point(580, 656);
             this.metroTextButton4.Name = "metroTextButton4";
-            this.metroTextButton4.Size = new System.Drawing.Size(195, 28);
+            this.metroTextButton4.Size = new System.Drawing.Size(146, 23);
             this.metroTextButton4.Style = MetroFramework.MetroColorStyle.Red;
             this.metroTextButton4.TabIndex = 40;
             this.metroTextButton4.Text = "E-mail";
@@ -192,10 +183,9 @@
             // BtnPrintStatement
             // 
             this.BtnPrintStatement.Image = null;
-            this.BtnPrintStatement.Location = new System.Drawing.Point(547, 807);
-            this.BtnPrintStatement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnPrintStatement.Location = new System.Drawing.Point(410, 656);
             this.BtnPrintStatement.Name = "BtnPrintStatement";
-            this.BtnPrintStatement.Size = new System.Drawing.Size(195, 28);
+            this.BtnPrintStatement.Size = new System.Drawing.Size(146, 23);
             this.BtnPrintStatement.Style = MetroFramework.MetroColorStyle.Red;
             this.BtnPrintStatement.TabIndex = 39;
             this.BtnPrintStatement.Text = "Print";
@@ -231,8 +221,7 @@
             this.dgvStatements.EnableHeadersVisualStyles = false;
             this.dgvStatements.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvStatements.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvStatements.Location = new System.Drawing.Point(29, 302);
-            this.dgvStatements.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvStatements.Location = new System.Drawing.Point(22, 245);
             this.dgvStatements.Name = "dgvStatements";
             this.dgvStatements.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -245,19 +234,20 @@
             this.dgvStatements.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvStatements.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvStatements.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStatements.Size = new System.Drawing.Size(395, 449);
+            this.dgvStatements.Size = new System.Drawing.Size(296, 365);
             this.dgvStatements.TabIndex = 37;
             this.dgvStatements.UseStyleColors = true;
             this.dgvStatements.Visible = false;
             this.dgvStatements.SelectionChanged += new System.EventHandler(this.dgvStatements_SelectionChanged_1);
+            this.dgvStatements.VisibleChanged += new System.EventHandler(this.dgvStatements_VisibleChanged);
             // 
             // pbBack
             // 
             this.pbBack.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
-            this.pbBack.Location = new System.Drawing.Point(29, 46);
-            this.pbBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbBack.Location = new System.Drawing.Point(22, 37);
+            this.pbBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbBack.Name = "pbBack";
-            this.pbBack.Size = new System.Drawing.Size(37, 27);
+            this.pbBack.Size = new System.Drawing.Size(28, 22);
             this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBack.TabIndex = 44;
             this.pbBack.TabStop = false;
@@ -266,11 +256,10 @@
             // cmbClient
             // 
             this.cmbClient.FormattingEnabled = true;
-            this.cmbClient.ItemHeight = 24;
-            this.cmbClient.Location = new System.Drawing.Point(53, 181);
-            this.cmbClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbClient.ItemHeight = 23;
+            this.cmbClient.Location = new System.Drawing.Point(40, 147);
             this.cmbClient.Name = "cmbClient";
-            this.cmbClient.Size = new System.Drawing.Size(160, 30);
+            this.cmbClient.Size = new System.Drawing.Size(121, 29);
             this.cmbClient.TabIndex = 45;
             this.cmbClient.UseSelectable = true;
             this.cmbClient.UseStyleColors = true;
@@ -280,19 +269,16 @@
             // lbStatements
             // 
             this.lbStatements.FormattingEnabled = true;
-            this.lbStatements.ItemHeight = 16;
-            this.lbStatements.Location = new System.Drawing.Point(444, 215);
-            this.lbStatements.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbStatements.Location = new System.Drawing.Point(333, 175);
             this.lbStatements.Name = "lbStatements";
-            this.lbStatements.Size = new System.Drawing.Size(823, 436);
+            this.lbStatements.Size = new System.Drawing.Size(618, 355);
             this.lbStatements.TabIndex = 46;
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(213, 266);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreate.Location = new System.Drawing.Point(160, 216);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(100, 28);
+            this.btnCreate.Size = new System.Drawing.Size(75, 23);
             this.btnCreate.TabIndex = 47;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseSelectable = true;
@@ -302,11 +288,10 @@
             // cmbFormat
             // 
             this.cmbFormat.FormattingEnabled = true;
-            this.cmbFormat.ItemHeight = 24;
-            this.cmbFormat.Location = new System.Drawing.Point(53, 129);
-            this.cmbFormat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbFormat.ItemHeight = 23;
+            this.cmbFormat.Location = new System.Drawing.Point(40, 105);
             this.cmbFormat.Name = "cmbFormat";
-            this.cmbFormat.Size = new System.Drawing.Size(380, 30);
+            this.cmbFormat.Size = new System.Drawing.Size(286, 29);
             this.cmbFormat.TabIndex = 48;
             this.cmbFormat.UseSelectable = true;
             this.cmbFormat.UseStyleColors = true;
@@ -318,10 +303,9 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(53, 266);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrint.Location = new System.Drawing.Point(40, 216);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(100, 28);
+            this.btnPrint.Size = new System.Drawing.Size(75, 23);
             this.btnPrint.TabIndex = 49;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseSelectable = true;
@@ -330,9 +314,9 @@
             // 
             // frmStatements
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1379, 780);
+            this.ClientSize = new System.Drawing.Size(1034, 634);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.cmbFormat);
             this.Controls.Add(this.btnCreate);
@@ -344,10 +328,8 @@
             this.Controls.Add(this.metroTextButton4);
             this.Controls.Add(this.BtnPrintStatement);
             this.Controls.Add(this.dgvStatements);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Movable = false;
             this.Name = "frmStatements";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

@@ -16,6 +16,10 @@ namespace PschyHealth
     public partial class frmConsultations : MetroForm
 
     {
+        String[] descrip = new String[50];
+        MetroGrid dgv = new MetroGrid();
+        String[] depCode = new String[10];
+        Boolean addClick = false;
         String correctSearch = "";
         String button = "";
         Methods cMethods = new Methods();
@@ -51,10 +55,21 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 
+            cMethods.fillDGV(dgvConsultations, "DiagnosticCodes");
+            for(int i = 0; i<dgvConsultations.RowCount-1;i++)
+            {
+                cmbConsultationsDiagnostic_code.Items.Add(dgvConsultations.Rows[i].Cells[2].Value.ToString());
+                descrip[i] = dgvConsultations.Rows[i].Cells[4].Value.ToString();
+            }
+            cMethods.fillDGV(dgvConsultations, "ICD10Codes");
+            for (int i = 0; i < dgvConsultations.RowCount - 1; i++)
+            {
+                cmbConsultationsICD10.Items.Add(dgvConsultations.Rows[i].Cells[0].Value.ToString());
+            }
             cMethods.fillDGV(dgvConsultations, "Clients");
             cMethods.fillCMBrow(cmbConsultationsName, cmbConsultationsSurname, dgvConsultations);
 
-            cMethods.fillDGV(dgvConsultations, "Consultations");
+            //cMethods.fillDGV(dgvConsultations, "Consultations");
 
 
         }
@@ -91,7 +106,7 @@ namespace PschyHealth
 
         private void dgvConsultations_SelectionChanged_1(object sender, EventArgs e)
         {
-            cMethods.fillTextbox(groupBox1, dgvConsultations, "Con", false);
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Consultations", false);
         }
 
         private void txtConsultationsSearch_TextChanged(object sender, EventArgs e)
@@ -198,6 +213,7 @@ namespace PschyHealth
             btnEdit.Enabled = false;
             btnAdd.Enabled = false;
             button = "add";
+            addClick = true;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -268,7 +284,7 @@ namespace PschyHealth
                 int selectedIndex = dgvConsultations.SelectedRows[0].Index;
 
                 String rowID = dgvConsultations[0, selectedIndex].Value.ToString();
-                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Cons");
+                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Consultations");
                 if (button == "add")
                 {
                     String name = cmbConsultationsName.Text;
@@ -297,6 +313,7 @@ namespace PschyHealth
             btnConfirm.Hide();
             btnCancel.Hide();
             filter();
+            addClick = false;
         }
 
         private void btnCancel_Click_1(object sender, EventArgs e)
@@ -306,6 +323,78 @@ namespace PschyHealth
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
+            addClick = false;
+        }
+
+        private void cmbConsultationsName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbConsultationsSurname.SelectedIndex = cmbConsultationsName.SelectedIndex;
+        }
+
+        private void cmbConsultationsSurname_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbConsultationsDependant_Name.Items.Clear();
+            cmbConsultationsName.SelectedIndex = cmbConsultationsSurname.SelectedIndex;
+            dgv.Parent = this;
+            dgv.Hide();
+            if (cmbConsultationsDependant_Name.Text != "")
+                cMethods.filterDGV(dgvConsultations, "Clients", " WHERE  Surname = '" + cmbConsultationsSurname.Text + "' AND First_Name = '" + cmbConsultationsName.Text + "'");
+            else
+                cMethods.fillDGV(dgvConsultations, "Clients");
+            txtConsultationsMember_Number.Text = dgvConsultations.Rows[0].Cells[2].Value.ToString();
+            cmbConsultationsDate_Of_Birth.Text = dgvConsultations.Rows[0].Cells[5].Value.ToString();
+            for(int i = 0; i < dgvConsultations.RowCount-1;i++)
+            {
+                cmbConsultationsDependant_Name.Items.Add(dgvConsultations.Rows[i].Cells["Dependant_Full_Name"].Value.ToString());
+                depCode[i] = dgvConsultations.Rows[i].Cells["Dependant_Code"].Value.ToString();
+            }
+        }
+
+        private void cmbConsultationsDependant_Name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(addClick)
+            {
+                txtConsultationsDependancy_Code.Text = depCode[cmbConsultationsDependant_Name.SelectedIndex];
+            }
+            if (cmbConsultationsDependant_Name.Text == "")
+                txtConsultationsDependancy_Code.Text = "";
+            else
+            {
+                if(cmbConsultationsDependant_Name.Text != "")
+                cMethods.filterDGV(dgvConsultations, "Clients", " WHERE  Surname = '" + cmbConsultationsSurname.Text + "' AND First_Name = '" + cmbConsultationsName.Text + "' AND Dependant_Full_Name = '" + cmbConsultationsDependant_Name.Text + "'");
+                txtConsultationsMember_Number.Text = dgvConsultations.Rows[0].Cells[2].Value.ToString();
+                cmbConsultationsDate_Of_Birth.Text = dgvConsultations.Rows[0].Cells[5].Value.ToString();
+            }
+        }
+
+        private void txtConsultationsDependancy_Code_VisibleChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtConsultationsDependancy_Code_EnabledChanged(object sender, EventArgs e)
+        {
+            txtConsultationsDependancy_Code.Enabled = false;
+        }
+
+        private void txtConsultationsDescription_EnabledChanged(object sender, EventArgs e)
+        {
+            txtConsultationsDescription.Enabled = false;
+        }
+
+        private void cmbConsultationsDiagnostic_code_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtConsultationsDescription.Text = descrip[cmbConsultationsDiagnostic_code.SelectedIndex];
+        }
+
+        private void txtConsultationsMember_Number_EnabledChanged(object sender, EventArgs e)
+        {
+            txtConsultationsMember_Number.Enabled = false;
+        }
+
+        private void cmbConsultationsDate_Of_Birth_EnabledChanged(object sender, EventArgs e)
+        {
+            cmbConsultationsDate_Of_Birth.Enabled = false;
         }
     }
 }
