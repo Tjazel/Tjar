@@ -58,8 +58,7 @@ namespace PschyHealth
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            frmCrashReport cras = new frmCrashReport();
-            cras.Show();
+            Help.ShowHelp(this, "file://C:\\Users\\Tjaart Prinsloo\\Desktop\\PschyHealth Manuals\\PschyHealth Help.chm");
         }
 
         private void pbSettings_Click(object sender, EventArgs e)

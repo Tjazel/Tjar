@@ -1256,3 +1256,12 @@ C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\obj\Debug\PschyHealth.p
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\obj\Debug\PschyHealth.Properties.Resources.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\obj\Debug\PschyHealth.ucToolbar.resources
 C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\obj\Debug\PschyHealth.csproj.GenerateResource.Cache
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\bin\Debug\PschyHealth.exe
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\bin\Debug\PschyHealth.pdb
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\bin\Debug\DevComponents.DotNetBar.Layout.dll
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Tjaart Prinsloo\Source\Repos\Tjar13\PschyHealth\bin\Debug\DevComponents.DotNetBar2.xml
