@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.cmbConsultCrit = new MetroFramework.Controls.MetroComboBox();
@@ -47,13 +47,13 @@
             this.txtConsultationsAmount = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.cmbConsultationsSurname = new MetroFramework.Controls.MetroComboBox();
-            this.cmbConsultationsDiagnostic_code = new MetroFramework.Controls.MetroComboBox();
+            this.cmbConsultationsDiagnostic_Code = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.cmbConsultationsName = new MetroFramework.Controls.MetroComboBox();
             this.cmbConsultationsICD10 = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.txtConsultationsDate = new MetroFramework.Controls.MetroDateTime();
+            this.cmbConsultationsDate = new MetroFramework.Controls.MetroDateTime();
             this.txtConsultationsDependancy_Code = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -186,37 +186,37 @@
             this.dgvConsultations.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConsultations.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvConsultations.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConsultations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConsultations.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConsultations.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvConsultations.EnableHeadersVisualStyles = false;
             this.dgvConsultations.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvConsultations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvConsultations.Location = new System.Drawing.Point(604, 146);
             this.dgvConsultations.Name = "dgvConsultations";
             this.dgvConsultations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultations.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultations.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvConsultations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvConsultations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsultations.Size = new System.Drawing.Size(716, 470);
@@ -234,13 +234,13 @@
             this.groupBox1.Controls.Add(this.txtConsultationsAmount);
             this.groupBox1.Controls.Add(this.metroLabel15);
             this.groupBox1.Controls.Add(this.cmbConsultationsSurname);
-            this.groupBox1.Controls.Add(this.cmbConsultationsDiagnostic_code);
+            this.groupBox1.Controls.Add(this.cmbConsultationsDiagnostic_Code);
             this.groupBox1.Controls.Add(this.metroLabel9);
             this.groupBox1.Controls.Add(this.cmbConsultationsName);
             this.groupBox1.Controls.Add(this.cmbConsultationsICD10);
             this.groupBox1.Controls.Add(this.metroLabel19);
             this.groupBox1.Controls.Add(this.metroLabel4);
-            this.groupBox1.Controls.Add(this.txtConsultationsDate);
+            this.groupBox1.Controls.Add(this.cmbConsultationsDate);
             this.groupBox1.Controls.Add(this.txtConsultationsDependancy_Code);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.metroLabel10);
@@ -388,19 +388,19 @@
             this.cmbConsultationsSurname.UseStyleColors = true;
             this.cmbConsultationsSurname.SelectedIndexChanged += new System.EventHandler(this.cmbConsultationsSurname_SelectedIndexChanged);
             // 
-            // cmbConsultationsDiagnostic_code
+            // cmbConsultationsDiagnostic_Code
             // 
-            this.cmbConsultationsDiagnostic_code.Enabled = false;
-            this.cmbConsultationsDiagnostic_code.FormattingEnabled = true;
-            this.cmbConsultationsDiagnostic_code.ItemHeight = 23;
-            this.cmbConsultationsDiagnostic_code.Location = new System.Drawing.Point(141, 294);
-            this.cmbConsultationsDiagnostic_code.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbConsultationsDiagnostic_code.Name = "cmbConsultationsDiagnostic_code";
-            this.cmbConsultationsDiagnostic_code.Size = new System.Drawing.Size(116, 29);
-            this.cmbConsultationsDiagnostic_code.TabIndex = 35;
-            this.cmbConsultationsDiagnostic_code.UseSelectable = true;
-            this.cmbConsultationsDiagnostic_code.UseStyleColors = true;
-            this.cmbConsultationsDiagnostic_code.SelectedIndexChanged += new System.EventHandler(this.cmbConsultationsDiagnostic_code_SelectedIndexChanged);
+            this.cmbConsultationsDiagnostic_Code.Enabled = false;
+            this.cmbConsultationsDiagnostic_Code.FormattingEnabled = true;
+            this.cmbConsultationsDiagnostic_Code.ItemHeight = 23;
+            this.cmbConsultationsDiagnostic_Code.Location = new System.Drawing.Point(141, 294);
+            this.cmbConsultationsDiagnostic_Code.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbConsultationsDiagnostic_Code.Name = "cmbConsultationsDiagnostic_Code";
+            this.cmbConsultationsDiagnostic_Code.Size = new System.Drawing.Size(116, 29);
+            this.cmbConsultationsDiagnostic_Code.TabIndex = 35;
+            this.cmbConsultationsDiagnostic_Code.UseSelectable = true;
+            this.cmbConsultationsDiagnostic_Code.UseStyleColors = true;
+            this.cmbConsultationsDiagnostic_Code.SelectedIndexChanged += new System.EventHandler(this.cmbConsultationsDiagnostic_code_SelectedIndexChanged);
             // 
             // metroLabel9
             // 
@@ -465,17 +465,17 @@
             this.metroLabel4.Text = "ICD 10 Codes:";
             this.metroLabel4.UseStyleColors = true;
             // 
-            // txtConsultationsDate
+            // cmbConsultationsDate
             // 
-            this.txtConsultationsDate.Enabled = false;
-            this.txtConsultationsDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtConsultationsDate.Location = new System.Drawing.Point(136, 221);
-            this.txtConsultationsDate.MinimumSize = new System.Drawing.Size(0, 29);
-            this.txtConsultationsDate.Name = "txtConsultationsDate";
-            this.txtConsultationsDate.Size = new System.Drawing.Size(118, 29);
-            this.txtConsultationsDate.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtConsultationsDate.TabIndex = 31;
-            this.txtConsultationsDate.UseStyleColors = true;
+            this.cmbConsultationsDate.Enabled = false;
+            this.cmbConsultationsDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cmbConsultationsDate.Location = new System.Drawing.Point(136, 221);
+            this.cmbConsultationsDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.cmbConsultationsDate.Name = "cmbConsultationsDate";
+            this.cmbConsultationsDate.Size = new System.Drawing.Size(118, 29);
+            this.cmbConsultationsDate.Style = MetroFramework.MetroColorStyle.Blue;
+            this.cmbConsultationsDate.TabIndex = 31;
+            this.cmbConsultationsDate.UseStyleColors = true;
             // 
             // txtConsultationsDependancy_Code
             // 
@@ -767,7 +767,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private System.Windows.Forms.PictureBox pbMic;
-        private MetroFramework.Controls.MetroComboBox cmbConsultationsDiagnostic_code;
+        private MetroFramework.Controls.MetroComboBox cmbConsultationsDiagnostic_Code;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroComboBox cmbConsultationsICD10;
         private MetroFramework.Controls.MetroLabel metroLabel4;
@@ -779,7 +779,7 @@
         private MetroFramework.Controls.MetroTextBox txtConsultationsDependancy_Code;
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroDateTime txtConsultationsDate;
+        private MetroFramework.Controls.MetroDateTime cmbConsultationsDate;
         private MetroFramework.Controls.MetroTextBox txtConsultationsMember_Number;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;

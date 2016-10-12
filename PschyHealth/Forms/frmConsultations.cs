@@ -17,6 +17,7 @@ namespace PschyHealth
 
     {
         String[] descrip = new String[50];
+        String[] amount = new String[50];
         MetroGrid dgv = new MetroGrid();
         String[] depCode = new String[10];
         Boolean addClick = false;
@@ -54,12 +55,13 @@ namespace PschyHealth
             this.WindowState = FormWindowState.Maximized;
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
-
+            dgvConsultations.Hide();
             cMethods.fillDGV(dgvConsultations, "DiagnosticCodes");
             for(int i = 0; i<dgvConsultations.RowCount-1;i++)
             {
-                cmbConsultationsDiagnostic_code.Items.Add(dgvConsultations.Rows[i].Cells[2].Value.ToString());
+                cmbConsultationsDiagnostic_Code.Items.Add(dgvConsultations.Rows[i].Cells[2].Value.ToString());
                 descrip[i] = dgvConsultations.Rows[i].Cells[4].Value.ToString();
+                amount[i] = dgvConsultations.Rows[i].Cells[3].Value.ToString();
             }
             cMethods.fillDGV(dgvConsultations, "ICD10Codes");
             for (int i = 0; i < dgvConsultations.RowCount - 1; i++)
@@ -69,8 +71,8 @@ namespace PschyHealth
             cMethods.fillDGV(dgvConsultations, "Clients");
             cMethods.fillCMBrow(cmbConsultationsName, cmbConsultationsSurname, dgvConsultations);
 
-            cMethods.fillDGV(dgvConsultations, "Consultations");
-
+            cMethods.fillDGV(dgvConsultations, "Consultations",cmbConsultCrit);
+            dgvConsultations.Show();
 
         }
         public frmConsultations()
@@ -154,7 +156,22 @@ namespace PschyHealth
 
         private void cmbConsultCrit_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            txtConsultationsSearch.Clear();
+            metroComboBox1.SelectedIndex = -1;
+            if (cmbConsultCrit.Text != "")
+            {
+                txtConsultationsSearch.Enabled = true;
+                if (cmbConsultCrit.Text == "Amount")
+                    metroComboBox1.Show();
+                else
+                    metroComboBox1.Hide();
+            }
+            else
+            {
+                txtConsultationsSearch.Enabled = false;
+                txtConsultationsSearch.Text = "";
+            }
+            cMethods.fillDGV(dgvConsultations, "Consultations");
         }
 
         private void txtConsultationsSearch_Click(object sender, EventArgs e)
@@ -172,6 +189,10 @@ namespace PschyHealth
                 {
                     cMethods.filterDGV(dgvConsultations, "Consultations", " WHERE " + cmbConsultCrit.Text + " " + metroComboBox1.Text + " " + txtConsultationsSearch.Text);
                 }
+            else
+            {
+                cMethods.fillDGV(dgvConsultations, "Consultations");
+            }
         }
 
         private void metroComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -183,18 +204,6 @@ namespace PschyHealth
 
         private void cmbConsultCrit_TextChanged_1(object sender, EventArgs e)
         {
-            txtConsultationsSearch.Clear();
-            metroComboBox1.SelectedIndex = -1;
-            if (cmbConsultCrit.Text != "")
-            {
-                txtConsultationsSearch.Enabled = true;
-            }
-            else
-            {
-                txtConsultationsSearch.Enabled = false;
-                txtConsultationsSearch.Text = "";
-            }
-            cMethods.fillDGV(dgvConsultations, "Accounting");
         }
 
         private void metroComboBox1_VisibleChanged(object sender, EventArgs e)
@@ -206,36 +215,60 @@ namespace PschyHealth
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            dgvConsultations.Enabled = false;
+            filter();
             btnConfirm.Show();
             btnCancel.Show();
-            cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", true, true);
+            
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
             btnAdd.Enabled = false;
+            btnArchive.Enabled = false;
+            cmbConsultationsName.SelectedIndex = -1;
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Consultations", true, true);
             button = "add";
             addClick = true;
+            
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            cmbConsultationsDependant_Name.Items.Clear();
+            //filter();
+            //if (cmbConsultationsSurname.Text != "" && cmbConsultationsSurname.Enabled == true)
+                cMethods.filterDGV(dgv, "Clients", " WHERE  Surname = '" + cmbConsultationsSurname.Text + "' AND First_Name = '" + cmbConsultationsName.Text + "'");
+            for (int i = 0; i < dgv.RowCount - 1; i++)
+            {
+                cmbConsultationsDependant_Name.Items.Add(dgv.Rows[i].Cells["Dependant_Full_Name"].Value.ToString());
+                depCode[i] = dgv.Rows[i].Cells["Dependant_Code"].Value.ToString();
+            }
+
+            cmbConsultationsDependant_Name.SelectedItem = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells[10].Value.ToString();
+            txtConsultationsDependancy_Code.Text = depCode[dgvConsultations.SelectedRows[0].Index];
             btnConfirm.Show();
             btnCancel.Show();
-            cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", true);
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Consultations", true);
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
             btnAdd.Enabled = false;
+            btnArchive.Enabled = false;
+            dgvConsultations.Enabled = false;
             button = "edit";
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             btnConfirm.Show();
             btnCancel.Show();
-            cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", false);
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Consultations", false);
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
             btnAdd.Enabled = false;
+            btnArchive.Enabled = false;
+            dgvConsultations.Enabled = false;
             button = "delete";
+            //filter();
         }
 
         private void lblBack_Click(object sender, EventArgs e)
@@ -267,11 +300,14 @@ namespace PschyHealth
         {
             btnConfirm.Show();
             btnCancel.Show();
-            cMethods.fillTextbox(groupBox1, dgvConsultations, "Cons", false);
+            cMethods.fillTextbox(groupBox1, dgvConsultations, "Consultations", false);
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
+            btnArchive.Enabled = false;
+            dgvConsultations.Enabled = false;
             button = "archive";
+            //filter();
         }
 
         private void btnConfirm_Click_1(object sender, EventArgs e)
@@ -305,11 +341,14 @@ namespace PschyHealth
                     cMethods.edit("Consultations", field, value, " Consultation = '" + dgvConsultations.Rows[selectedIndex].Cells["Consultation"].Value.ToString() + "'");
                 else if (button == "delete")
                     cMethods.delete("Consultations", "Consultation = '" + rowID + "'");
-
+                else if (button == "archive")
+                    cMethods.Archive(dgvConsultations, "Consultations", "Consultation", dgvConsultations.Rows[selectedIndex].Cells["Consultation"].Value.ToString());
             }
             btnDelete.Enabled = true;
             btnEdit.Enabled = true;
             btnAdd.Enabled = true;
+            btnArchive.Enabled = true;
+            dgvConsultations.Enabled = true;
             btnConfirm.Hide();
             btnCancel.Hide();
             filter();
@@ -320,10 +359,14 @@ namespace PschyHealth
         {
             btnCancel.Hide();
             btnConfirm.Hide();
-            btnAdd.Enabled = false;
-            btnDelete.Enabled = false;
-            btnEdit.Enabled = false;
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = true;
+            btnEdit.Enabled = true;
+            btnArchive.Enabled = true;
+            dgvConsultations.Enabled = true;
             addClick = false;
+            btnConfirm.Hide();
+            btnCancel.Hide();
         }
 
         private void cmbConsultationsName_SelectedIndexChanged(object sender, EventArgs e)
@@ -337,7 +380,7 @@ namespace PschyHealth
             cmbConsultationsName.SelectedIndex = cmbConsultationsSurname.SelectedIndex;
             dgv.Parent = this;
             dgv.Hide();
-            if (cmbConsultationsSurname.Text != "")
+            if (cmbConsultationsSurname.Text != "" && cmbConsultationsSurname.Enabled == true)
                 cMethods.filterDGV(dgv, "Clients", " WHERE  Surname = '" + cmbConsultationsSurname.Text + "' AND First_Name = '" + cmbConsultationsName.Text + "'");
             else
                 cMethods.fillDGV(dgv, "Clients");
@@ -348,6 +391,8 @@ namespace PschyHealth
                 cmbConsultationsDependant_Name.Items.Add(dgv.Rows[i].Cells["Dependant_Full_Name"].Value.ToString());
                 depCode[i] = dgv.Rows[i].Cells["Dependant_Code"].Value.ToString();
             }
+            cmbConsultationsDependant_Name.SelectedItem = dgvConsultations.Rows[dgvConsultations.SelectedRows[0].Index].Cells[10].Value.ToString();
+            txtConsultationsDependancy_Code.Text = depCode[dgvConsultations.SelectedRows[0].Index];
         }
 
         private void cmbConsultationsDependant_Name_SelectedIndexChanged(object sender, EventArgs e)
@@ -360,10 +405,13 @@ namespace PschyHealth
                 txtConsultationsDependancy_Code.Text = "";
             else
             {
-                if(cmbConsultationsDependant_Name.Text != "")
-                cMethods.filterDGV(dgvConsultations, "Clients", " WHERE  Surname = '" + cmbConsultationsSurname.Text + "' AND First_Name = '" + cmbConsultationsName.Text + "' AND Dependant_Full_Name = '" + cmbConsultationsDependant_Name.Text + "'");
-                txtConsultationsMember_Number.Text = dgvConsultations.Rows[0].Cells[2].Value.ToString();
-                cmbConsultationsDate_Of_Birth.Text = dgvConsultations.Rows[0].Cells[5].Value.ToString();
+                //if (cmbConsultationsDependant_Name.Text != "" && cmbConsultationsDependant_Name.Enabled == true)
+                 //   cMethods.filterDGV(dgvConsultations, "Clients", " WHERE  Surname = '" + cmbConsultationsSurname.Text + "' AND First_Name = '" + cmbConsultationsName.Text + "' AND Dependant_Full_Name = '" + cmbConsultationsDependant_Name.Text + "'");
+
+                    
+
+               txtConsultationsMember_Number.Text = dgvConsultations.Rows[dgv.SelectedRows[0].Index].Cells[5].Value.ToString();
+               cmbConsultationsDate_Of_Birth.Text = dgvConsultations.Rows[dgv.SelectedRows[0].Index].Cells[6].Value.ToString();
             }
         }
 
@@ -384,7 +432,11 @@ namespace PschyHealth
 
         private void cmbConsultationsDiagnostic_code_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtConsultationsDescription.Text = descrip[cmbConsultationsDiagnostic_code.SelectedIndex];
+            if (cmbConsultationsDiagnostic_Code.Enabled == true)
+            {
+                txtConsultationsDescription.Text = descrip[cmbConsultationsDiagnostic_Code.SelectedIndex];
+                txtConsultationsAmount.Text = amount[cmbConsultationsDiagnostic_Code.SelectedIndex];
+            }
         }
 
         private void txtConsultationsMember_Number_EnabledChanged(object sender, EventArgs e)

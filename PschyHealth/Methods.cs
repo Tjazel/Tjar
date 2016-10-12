@@ -66,7 +66,6 @@ namespace PschyHealth
             //The silent fill is used when the program is endeing and the system musn't show error messages when timed out
             if (!silent)
             {
-               
                 uc.Hide();
                 uc.Parent = frmMainPage.ActiveForm;
                 uc.Left = 500;
@@ -1185,27 +1184,47 @@ namespace PschyHealth
             string saveStaff = "INSERT into " + table + " (" + field + ") " + " VALUES ('" + values + "');";
             cmd = new SqlCommand(saveStaff, conn);
             cmd.ExecuteNonQuery();*/
-
+            pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
             try
             {
 
-
+                
+                uc.Hide();
+                uc.Parent = frmMainPage.ActiveForm;
+                uc.Left = 500;
+                uc.Top = 300;
+                uc.Show();
+                uc.BringToFront();
                 conn.Open();
                 using (SqlCommand command = new SqlCommand("INSERT into " + table + " (" + field + ") " + " VALUES (" + values + ")", conn))
                 {
                     command.ExecuteNonQuery();
                 }
                 conn.Close();
-
+                uc.Hide();
             }
             catch (SystemException ex)
             {
-                DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                conn.Close();
+                uc.Hide();
+                String msg = ex.Message.Substring(0, 6);
+                if (msg == "Cannot")
                 {
-                    Thread.Sleep(5000);
+                    field = field.Substring(field.IndexOf(",") + 1);
+                    values = values.Substring(values.IndexOf(",") + 1);
+
                     recallAdd(table, field, values);
                 }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        Thread.Sleep(5000);
+                        recallAdd(table, field, values);
+                    }
+                }
+               
             }
             
 
@@ -1247,10 +1266,16 @@ namespace PschyHealth
             SqlDataAdapter dataAdapter = new SqlDataAdapter();
             dataAdapter.Fill(ds,table);*/
 
-
+            pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
             try
             {
-
+          
+                uc.Hide();
+                uc.Parent = frmMainPage.ActiveForm;
+                uc.Left = 500;
+                uc.Top = 300;
+                uc.Show();
+                uc.BringToFront();
                 conn.Open();
                 using (SqlCommand command = new SqlCommand("DELETE FROM " + table + " WHERE " + crit, conn))
                 {
@@ -1258,9 +1283,12 @@ namespace PschyHealth
                 }
                 conn.Close();
 
+                uc.Hide();
             }
             catch (SystemException ex)
             {
+                conn.Close();
+                uc.Hide();
                 DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
@@ -1304,9 +1332,16 @@ namespace PschyHealth
             dt.Load(reader);
 
             conn.Close();*/
-
+            pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
             try
             {
+               
+                uc.Hide();
+                uc.Parent = frmMainPage.ActiveForm;
+                uc.Left = 500;
+                uc.Top = 300;
+                uc.Show();
+                uc.BringToFront();
                 field += ",";
                 values += ",";
                 string fld;
@@ -1330,9 +1365,13 @@ namespace PschyHealth
                 }
                 conn.Close();
 
+                uc.Hide();
             }
             catch (SystemException ex)
             {
+                conn.Close();
+                uc.Hide();
+                MessageBox.Show(ex.Message);
                 DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {

@@ -646,6 +646,7 @@
             // 
             this.cmbMain.DisplayMember = "Text";
             this.cmbMain.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMain.FormattingEnabled = true;
             this.cmbMain.ItemHeight = 16;
             this.cmbMain.Items.AddRange(new object[] {
@@ -985,7 +986,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1243, 730);
+            this.ClientSize = new System.Drawing.Size(1202, 627);
             this.Controls.Add(this.pnlColorChange);
             this.Controls.Add(this.pbPersonalize);
             this.Controls.Add(this.metroTilePanel1);

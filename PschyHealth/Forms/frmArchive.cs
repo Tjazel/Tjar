@@ -178,5 +178,13 @@ namespace PschyHealth
         {
             this.Close();
         }
+
+        private void lbArcList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbArcList.SelectedIndex != -1)
+                metroButton1.Enabled = true;
+            else
+                metroButton1.Enabled = false;
+        }
     }
 }

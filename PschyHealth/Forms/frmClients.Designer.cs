@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.cmbClientEthnic_Group = new MetroFramework.Controls.MetroComboBox();
             this.cmbClientGender = new MetroFramework.Controls.MetroComboBox();
@@ -59,6 +59,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbClientMedical_Aid = new MetroFramework.Controls.MetroComboBox();
             this.cmbClientLanguage = new MetroFramework.Controls.MetroComboBox();
             this.txtClientCity_Code = new MetroFramework.Controls.MetroTextBox();
             this.txtClientCity = new MetroFramework.Controls.MetroTextBox();
@@ -76,7 +77,7 @@
             this.pbMic = new System.Windows.Forms.PictureBox();
             this.gbDependants = new System.Windows.Forms.GroupBox();
             this.txtClientReferral = new MetroFramework.Controls.MetroTextBox();
-            this.txtClientReferal_Practice = new MetroFramework.Controls.MetroTextBox();
+            this.txtClientReferral_Practice = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.txtClientDependant_Code = new MetroFramework.Controls.MetroTextBox();
@@ -97,7 +98,6 @@
             this.btnArchiv = new MetroFramework.Controls.MetroButton();
             this.btnConnfirm = new MetroFramework.Controls.MetroButton();
             this.btnCanccel = new MetroFramework.Controls.MetroButton();
-            this.cmbClientMedical_Aid = new MetroFramework.Controls.MetroComboBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
@@ -686,6 +686,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Details";
             // 
+            // cmbClientMedical_Aid
+            // 
+            this.cmbClientMedical_Aid.Enabled = false;
+            this.cmbClientMedical_Aid.FormattingEnabled = true;
+            this.cmbClientMedical_Aid.ItemHeight = 23;
+            this.cmbClientMedical_Aid.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbClientMedical_Aid.Location = new System.Drawing.Point(481, 53);
+            this.cmbClientMedical_Aid.Name = "cmbClientMedical_Aid";
+            this.cmbClientMedical_Aid.Size = new System.Drawing.Size(150, 29);
+            this.cmbClientMedical_Aid.TabIndex = 64;
+            this.cmbClientMedical_Aid.UseSelectable = true;
+            this.cmbClientMedical_Aid.UseStyleColors = true;
+            // 
             // cmbClientLanguage
             // 
             this.cmbClientLanguage.Enabled = false;
@@ -966,23 +981,23 @@
             this.dgvClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClients.EnableHeadersVisualStyles = false;
             this.dgvClients.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvClients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -990,14 +1005,14 @@
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.ReadOnly = true;
             this.dgvClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClients.Size = new System.Drawing.Size(546, 470);
@@ -1021,7 +1036,7 @@
             // gbDependants
             // 
             this.gbDependants.Controls.Add(this.txtClientReferral);
-            this.gbDependants.Controls.Add(this.txtClientReferal_Practice);
+            this.gbDependants.Controls.Add(this.txtClientReferral_Practice);
             this.gbDependants.Controls.Add(this.metroLabel23);
             this.gbDependants.Controls.Add(this.metroLabel20);
             this.gbDependants.Controls.Add(this.txtClientDependant_Code);
@@ -1073,38 +1088,38 @@
             this.txtClientReferral.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientReferral.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txtClientReferal_Practice
+            // txtClientReferral_Practice
             // 
             // 
             // 
             // 
-            this.txtClientReferal_Practice.CustomButton.Image = null;
-            this.txtClientReferal_Practice.CustomButton.Location = new System.Drawing.Point(135, 2);
-            this.txtClientReferal_Practice.CustomButton.Margin = new System.Windows.Forms.Padding(2);
-            this.txtClientReferal_Practice.CustomButton.Name = "";
-            this.txtClientReferal_Practice.CustomButton.Size = new System.Drawing.Size(13, 13);
-            this.txtClientReferal_Practice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtClientReferal_Practice.CustomButton.TabIndex = 1;
-            this.txtClientReferal_Practice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtClientReferal_Practice.CustomButton.UseSelectable = true;
-            this.txtClientReferal_Practice.CustomButton.Visible = false;
-            this.txtClientReferal_Practice.Enabled = false;
-            this.txtClientReferal_Practice.Lines = new string[0];
-            this.txtClientReferal_Practice.Location = new System.Drawing.Point(112, 190);
-            this.txtClientReferal_Practice.Margin = new System.Windows.Forms.Padding(2);
-            this.txtClientReferal_Practice.MaxLength = 32767;
-            this.txtClientReferal_Practice.Name = "txtClientReferal_Practice";
-            this.txtClientReferal_Practice.PasswordChar = '\0';
-            this.txtClientReferal_Practice.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtClientReferal_Practice.SelectedText = "";
-            this.txtClientReferal_Practice.SelectionLength = 0;
-            this.txtClientReferal_Practice.SelectionStart = 0;
-            this.txtClientReferal_Practice.Size = new System.Drawing.Size(151, 18);
-            this.txtClientReferal_Practice.TabIndex = 55;
-            this.txtClientReferal_Practice.UseSelectable = true;
-            this.txtClientReferal_Practice.UseStyleColors = true;
-            this.txtClientReferal_Practice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtClientReferal_Practice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientReferral_Practice.CustomButton.Image = null;
+            this.txtClientReferral_Practice.CustomButton.Location = new System.Drawing.Point(135, 2);
+            this.txtClientReferral_Practice.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClientReferral_Practice.CustomButton.Name = "";
+            this.txtClientReferral_Practice.CustomButton.Size = new System.Drawing.Size(13, 13);
+            this.txtClientReferral_Practice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtClientReferral_Practice.CustomButton.TabIndex = 1;
+            this.txtClientReferral_Practice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtClientReferral_Practice.CustomButton.UseSelectable = true;
+            this.txtClientReferral_Practice.CustomButton.Visible = false;
+            this.txtClientReferral_Practice.Enabled = false;
+            this.txtClientReferral_Practice.Lines = new string[0];
+            this.txtClientReferral_Practice.Location = new System.Drawing.Point(112, 190);
+            this.txtClientReferral_Practice.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClientReferral_Practice.MaxLength = 32767;
+            this.txtClientReferral_Practice.Name = "txtClientReferral_Practice";
+            this.txtClientReferral_Practice.PasswordChar = '\0';
+            this.txtClientReferral_Practice.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtClientReferral_Practice.SelectedText = "";
+            this.txtClientReferral_Practice.SelectionLength = 0;
+            this.txtClientReferral_Practice.SelectionStart = 0;
+            this.txtClientReferral_Practice.Size = new System.Drawing.Size(151, 18);
+            this.txtClientReferral_Practice.TabIndex = 55;
+            this.txtClientReferral_Practice.UseSelectable = true;
+            this.txtClientReferral_Practice.UseStyleColors = true;
+            this.txtClientReferral_Practice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtClientReferral_Practice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel23
             // 
@@ -1412,21 +1427,6 @@
             this.btnCanccel.UseStyleColors = true;
             this.btnCanccel.Click += new System.EventHandler(this.btnCanccel_Click);
             // 
-            // cmbClientMedical_Aid
-            // 
-            this.cmbClientMedical_Aid.Enabled = false;
-            this.cmbClientMedical_Aid.FormattingEnabled = true;
-            this.cmbClientMedical_Aid.ItemHeight = 23;
-            this.cmbClientMedical_Aid.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cmbClientMedical_Aid.Location = new System.Drawing.Point(481, 53);
-            this.cmbClientMedical_Aid.Name = "cmbClientMedical_Aid";
-            this.cmbClientMedical_Aid.Size = new System.Drawing.Size(150, 29);
-            this.cmbClientMedical_Aid.TabIndex = 64;
-            this.cmbClientMedical_Aid.UseSelectable = true;
-            this.cmbClientMedical_Aid.UseStyleColors = true;
-            // 
             // frmClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1525,7 +1525,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel24;
         private MetroFramework.Controls.MetroLabel lblEmail;
         private MetroFramework.Controls.MetroTextBox txtClientEmail;
-        private MetroFramework.Controls.MetroTextBox txtClientReferal_Practice;
+        private MetroFramework.Controls.MetroTextBox txtClientReferral_Practice;
         private MetroFramework.Controls.MetroLabel metroLabel23;
         private MetroFramework.Controls.MetroComboBox cmbClientLanguage;
         private MetroFramework.Controls.MetroButton btnAddExClient;

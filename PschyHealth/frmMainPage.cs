@@ -176,7 +176,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmStaff frmStaff = new frmStaff();
-                frmStaff.ShowDialog();
+                frmStaff.Show();
             }
 
         }
@@ -198,7 +198,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmAccounting frmAccounting = new frmAccounting();
-                frmAccounting.ShowDialog();
+                frmAccounting.Show();
             }
 
 
@@ -221,7 +221,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmStatements frmStatements = new frmStatements();
-                frmStatements.ShowDialog();
+                frmStatements.Show();
             }
         }
 
@@ -242,7 +242,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmMedicalAids frmMedicalAids = new frmMedicalAids();
-                frmMedicalAids.ShowDialog();
+                frmMedicalAids.Show();
             }
         }
 
@@ -252,7 +252,7 @@ namespace PschyHealth
             FormCollection fc = Application.OpenForms;
             foreach (Form f in fc)
             {
-                if (f.Name == "frmEDICodes")
+                if (f.Name == "frmICD10Codes")
                 {
                     IsOpen = true;
                     f.Focus();
@@ -262,8 +262,8 @@ namespace PschyHealth
 
             if (IsOpen == false)
             {
-                frmICD10Codes frmEDICodes = new frmICD10Codes();
-                frmEDICodes.ShowDialog();
+                frmICD10Codes frmICD10Codes = new frmICD10Codes();
+                frmICD10Codes.Show();
             }
         }
 
@@ -284,7 +284,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmConsultations frmConsultations = new frmConsultations();
-                frmConsultations.ShowDialog();
+                frmConsultations.Show();
             }
         }
 
@@ -455,7 +455,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmStaff frmStaff = new frmStaff();
-                frmStaff.ShowDialog();
+                frmStaff.Show();
             }
         }
 
@@ -479,7 +479,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmStaff frmStaff = new frmStaff();
-                frmStaff.ShowDialog();
+                frmStaff.Show();
             }
         }
 
@@ -500,7 +500,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmAccounting frmAccounting = new frmAccounting();
-                frmAccounting.ShowDialog();
+                frmAccounting.Show();
             }
 
         }
@@ -527,7 +527,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmArchive frmArchive = new frmArchive();
-                frmArchive.ShowDialog();
+                frmArchive.Show();
             }
         }
 
@@ -553,7 +553,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmAddressBook frmAddressBook = new frmAddressBook();
-                frmAddressBook.ShowDialog();
+                frmAddressBook.Show();
             }
         }
 
@@ -580,7 +580,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmNotepad frmNotepad = new frmNotepad();
-                frmNotepad.ShowDialog();
+                frmNotepad.Show();
             }
         }
 
@@ -601,7 +601,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmStatements frmStatements = new frmStatements();
-                frmStatements.ShowDialog();
+                frmStatements.Show();
             }
         }
 
@@ -622,7 +622,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmRecord frmRecord = new frmRecord();
-                frmRecord.ShowDialog();
+                frmRecord.Show();
             }
         }
 
@@ -643,7 +643,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmPayments frmPayments = new frmPayments();
-                frmPayments.ShowDialog();
+                frmPayments.Show();
             }
         }
 
@@ -988,7 +988,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmClients frmClients = new frmClients();
-                frmClients.ShowDialog();
+                frmClients.Show();
             }
         }
 

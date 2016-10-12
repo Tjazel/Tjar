@@ -99,6 +99,7 @@
             this.lbArcList.Name = "lbArcList";
             this.lbArcList.Size = new System.Drawing.Size(591, 264);
             this.lbArcList.TabIndex = 64;
+            this.lbArcList.SelectedIndexChanged += new System.EventHandler(this.lbArcList_SelectedIndexChanged);
             // 
             // metroButton1
             // 
