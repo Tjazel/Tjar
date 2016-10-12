@@ -16,5 +16,33 @@ namespace PschyHealth
         {
             InitializeComponent();
         }
+
+        private void pnlDBLoadingMessege_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+            int count = 0;
+            while (this.Visible = true)
+               
+            {
+                count++;
+                circularProgress1.Value = count; ;
+            }
+            
+        }
+
+        private void circularProgress1_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int count = 0;
+           
+
+              count++;
+              circularProgress1.Value = count; ;
+            
+        }
     }
 }

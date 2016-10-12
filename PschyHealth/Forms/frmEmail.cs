@@ -14,8 +14,9 @@ using System.Net.Mime;
 using Microsoft.SqlServer.Server;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
-
-
+using System.Threading;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace PschyHealth
 {
@@ -213,7 +214,13 @@ namespace PschyHealth
 
         private void btnReadMail_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://accounts.google.com/ServiceLogin?continue=http%3A%2F%2Fmail.google.com%2Fmail%2F%3Fpc%3Den-ha-ssa-ssa-bk-xplatform1&service=mail&dsh=-5045828807217068288#identifier");
+            // System.Diagnostics.Process.Start("https://accounts.google.com/ServiceLogin?continue=http%3A%2F%2Fmail.google.com%2Fmail%2F%3Fpc%3Den-ha-ssa-ssa-bk-xplatform1&service=mail&dsh=-5045828807217068288#identifier");
+            string[] temp = Convert.ToString(System.Security.Principal.WindowsIdentity.GetCurrent().Name).Split('\\');
+            string userName = temp[1];
+
+
+            Process p = Process.Start(@"C:\\Users\\" + userName + "\\Desktop\\Mail - Shortcut.lnk");
+            Thread.Sleep(500);
         }
     }
 }
