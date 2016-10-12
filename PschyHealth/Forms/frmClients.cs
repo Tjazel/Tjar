@@ -149,6 +149,8 @@ namespace PschyHealth
                 {
                     cMethods.filterDGV(dgvClients, "Clients", " WHERE " + cmbClientCriteria.Text + " " + cmbClientSymbol.Text + " " + txtClientsSearch.Text);
                 }
+            else
+                cMethods.fillDGV(dgvClients, "Clients");
         }
 
         private void cmbClientSymbol_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -250,6 +252,7 @@ namespace PschyHealth
             btnConnfirm.Show();
             btnCanccel.Show();
             cMethods.fillTextbox(groupBox1, dgvClients, "Client", false, false);
+            cMethods.fillTextbox(gbDependants, dgvClients, "Client", true, true);
             btnAddExClient.Enabled = false;
             btnaddNewclient.Enabled = false;
             btnUpdate.Enabled = false;
@@ -264,6 +267,7 @@ namespace PschyHealth
             btnConnfirm.Show();
             btnCanccel.Show();
             cMethods.fillTextbox(groupBox1, dgvClients, "Client", true, true);
+            cMethods.fillTextbox(gbDependants, dgvClients, "Client", true, true);
             btnAddExClient.Enabled = false;
             btnaddNewclient.Enabled = false;
             btnUpdate.Enabled = false;
@@ -359,6 +363,7 @@ namespace PschyHealth
             btnDelete.Enabled = true;
             btnArchiv.Enabled = true;
             dgvClients.Enabled = true;
+            filter();
         }
 
         private void btnAddNewClient_Click(object sender, EventArgs e)

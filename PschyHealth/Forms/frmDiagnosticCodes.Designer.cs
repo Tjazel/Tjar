@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDiagnosticCodes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtConsultationRatesRate = new MetroFramework.Controls.MetroTextBox();
@@ -43,7 +42,6 @@
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.btnArchive = new MetroFramework.Controls.MetroTextBox.MetroTextButton();
             this.pbBack = new System.Windows.Forms.PictureBox();
             this.msmDiagnostic = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
@@ -82,9 +80,9 @@
             this.groupBox2.Controls.Add(this.metroLabel13);
             this.groupBox2.Controls.Add(this.metroLabel12);
             this.groupBox2.Location = new System.Drawing.Point(80, 80);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(266, 283);
             this.groupBox2.TabIndex = 103;
             this.groupBox2.TabStop = false;
@@ -96,10 +94,10 @@
             // 
             // 
             this.txtConsultationRatesRate.CustomButton.Image = null;
-            this.txtConsultationRatesRate.CustomButton.Location = new System.Drawing.Point(72, 2);
-            this.txtConsultationRatesRate.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConsultationRatesRate.CustomButton.Location = new System.Drawing.Point(96, 2);
+            this.txtConsultationRatesRate.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtConsultationRatesRate.CustomButton.Name = "";
-            this.txtConsultationRatesRate.CustomButton.Size = new System.Drawing.Size(11, 12);
+            this.txtConsultationRatesRate.CustomButton.Size = new System.Drawing.Size(15, 15);
             this.txtConsultationRatesRate.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultationRatesRate.CustomButton.TabIndex = 1;
             this.txtConsultationRatesRate.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -107,7 +105,7 @@
             this.txtConsultationRatesRate.CustomButton.Visible = false;
             this.txtConsultationRatesRate.Lines = new string[0];
             this.txtConsultationRatesRate.Location = new System.Drawing.Point(130, 141);
-            this.txtConsultationRatesRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConsultationRatesRate.Margin = new System.Windows.Forms.Padding(2);
             this.txtConsultationRatesRate.MaxLength = 32767;
             this.txtConsultationRatesRate.Name = "txtConsultationRatesRate";
             this.txtConsultationRatesRate.PasswordChar = '\0';
@@ -128,10 +126,10 @@
             // 
             // 
             this.txtConsultationRatesCode.CustomButton.Image = null;
-            this.txtConsultationRatesCode.CustomButton.Location = new System.Drawing.Point(72, 2);
-            this.txtConsultationRatesCode.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConsultationRatesCode.CustomButton.Location = new System.Drawing.Point(96, 2);
+            this.txtConsultationRatesCode.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtConsultationRatesCode.CustomButton.Name = "";
-            this.txtConsultationRatesCode.CustomButton.Size = new System.Drawing.Size(11, 12);
+            this.txtConsultationRatesCode.CustomButton.Size = new System.Drawing.Size(15, 15);
             this.txtConsultationRatesCode.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultationRatesCode.CustomButton.TabIndex = 1;
             this.txtConsultationRatesCode.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -139,7 +137,7 @@
             this.txtConsultationRatesCode.CustomButton.Visible = false;
             this.txtConsultationRatesCode.Lines = new string[0];
             this.txtConsultationRatesCode.Location = new System.Drawing.Point(130, 103);
-            this.txtConsultationRatesCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConsultationRatesCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtConsultationRatesCode.MaxLength = 32767;
             this.txtConsultationRatesCode.Name = "txtConsultationRatesCode";
             this.txtConsultationRatesCode.PasswordChar = '\0';
@@ -160,10 +158,10 @@
             // 
             // 
             this.txtConsultationRatesMinutes.CustomButton.Image = null;
-            this.txtConsultationRatesMinutes.CustomButton.Location = new System.Drawing.Point(72, 2);
-            this.txtConsultationRatesMinutes.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConsultationRatesMinutes.CustomButton.Location = new System.Drawing.Point(96, 2);
+            this.txtConsultationRatesMinutes.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtConsultationRatesMinutes.CustomButton.Name = "";
-            this.txtConsultationRatesMinutes.CustomButton.Size = new System.Drawing.Size(11, 12);
+            this.txtConsultationRatesMinutes.CustomButton.Size = new System.Drawing.Size(15, 15);
             this.txtConsultationRatesMinutes.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultationRatesMinutes.CustomButton.TabIndex = 1;
             this.txtConsultationRatesMinutes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -171,7 +169,7 @@
             this.txtConsultationRatesMinutes.CustomButton.Visible = false;
             this.txtConsultationRatesMinutes.Lines = new string[0];
             this.txtConsultationRatesMinutes.Location = new System.Drawing.Point(130, 65);
-            this.txtConsultationRatesMinutes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConsultationRatesMinutes.Margin = new System.Windows.Forms.Padding(2);
             this.txtConsultationRatesMinutes.MaxLength = 32767;
             this.txtConsultationRatesMinutes.Name = "txtConsultationRatesMinutes";
             this.txtConsultationRatesMinutes.PasswordChar = '\0';
@@ -192,10 +190,10 @@
             // 
             // 
             this.txtConsultationRatesAssesment_type.CustomButton.Image = null;
-            this.txtConsultationRatesAssesment_type.CustomButton.Location = new System.Drawing.Point(72, 2);
-            this.txtConsultationRatesAssesment_type.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConsultationRatesAssesment_type.CustomButton.Location = new System.Drawing.Point(96, 2);
+            this.txtConsultationRatesAssesment_type.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtConsultationRatesAssesment_type.CustomButton.Name = "";
-            this.txtConsultationRatesAssesment_type.CustomButton.Size = new System.Drawing.Size(11, 12);
+            this.txtConsultationRatesAssesment_type.CustomButton.Size = new System.Drawing.Size(15, 15);
             this.txtConsultationRatesAssesment_type.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtConsultationRatesAssesment_type.CustomButton.TabIndex = 1;
             this.txtConsultationRatesAssesment_type.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -203,7 +201,7 @@
             this.txtConsultationRatesAssesment_type.CustomButton.Visible = false;
             this.txtConsultationRatesAssesment_type.Lines = new string[0];
             this.txtConsultationRatesAssesment_type.Location = new System.Drawing.Point(130, 32);
-            this.txtConsultationRatesAssesment_type.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConsultationRatesAssesment_type.Margin = new System.Windows.Forms.Padding(2);
             this.txtConsultationRatesAssesment_type.MaxLength = 32767;
             this.txtConsultationRatesAssesment_type.Name = "txtConsultationRatesAssesment_type";
             this.txtConsultationRatesAssesment_type.PasswordChar = '\0';
@@ -262,23 +260,11 @@
             this.metroLabel12.Text = "Assesment type:";
             this.metroLabel12.UseStyleColors = true;
             // 
-            // btnArchive
-            // 
-            this.btnArchive.Image = ((System.Drawing.Image)(resources.GetObject("btnArchive.Image")));
-            this.btnArchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArchive.Location = new System.Drawing.Point(169, 432);
-            this.btnArchive.Name = "btnArchive";
-            this.btnArchive.Size = new System.Drawing.Size(104, 23);
-            this.btnArchive.TabIndex = 105;
-            this.btnArchive.Text = "Archive";
-            this.btnArchive.UseSelectable = true;
-            this.btnArchive.UseVisualStyleBackColor = true;
-            // 
             // pbBack
             // 
             this.pbBack.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
             this.pbBack.Location = new System.Drawing.Point(7, 50);
-            this.pbBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbBack.Margin = new System.Windows.Forms.Padding(2);
             this.pbBack.Name = "pbBack";
             this.pbBack.Size = new System.Drawing.Size(28, 22);
             this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -297,38 +283,38 @@
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle5;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metroGrid1.Location = new System.Drawing.Point(383, 88);
-            this.metroGrid1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroGrid1.Margin = new System.Windows.Forms.Padding(2);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.RowTemplate.Height = 24;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -336,67 +322,75 @@
             this.metroGrid1.TabIndex = 107;
             this.metroGrid1.UseStyleColors = true;
             this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
+            this.metroGrid1.SelectionChanged += new System.EventHandler(this.metroGrid1_SelectionChanged);
             // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(548, 376);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(78, 32);
             this.btnDelete.TabIndex = 110;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseSelectable = true;
             this.btnDelete.UseStyleColors = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Location = new System.Drawing.Point(462, 376);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(78, 32);
             this.btnEdit.TabIndex = 109;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseSelectable = true;
             this.btnEdit.UseStyleColors = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(380, 376);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(78, 32);
             this.btnAdd.TabIndex = 108;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseSelectable = true;
             this.btnAdd.UseStyleColors = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(163, 376);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(78, 32);
             this.btnCancel.TabIndex = 112;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseSelectable = true;
             this.btnCancel.UseStyleColors = true;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnConfirm
             // 
             this.btnConfirm.Location = new System.Drawing.Point(80, 376);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(78, 32);
             this.btnConfirm.TabIndex = 111;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseSelectable = true;
             this.btnConfirm.UseStyleColors = true;
+            this.btnConfirm.Visible = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // frmDiagnosticCodes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 578);
+            this.ClientSize = new System.Drawing.Size(1001, 578);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnDelete);
@@ -404,12 +398,11 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.pbBack);
-            this.Controls.Add(this.btnArchive);
             this.Controls.Add(this.metroLabel20);
             this.Controls.Add(this.groupBox2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDiagnosticCodes";
-            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.frmDiagnosticCodes_Load);
@@ -424,8 +417,6 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroTextBox.MetroTextButton btnArchive;
         private MetroFramework.Controls.MetroLabel metroLabel20;
         private System.Windows.Forms.GroupBox groupBox2;
         private MetroFramework.Controls.MetroTextBox txtConsultationRatesRate;

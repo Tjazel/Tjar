@@ -308,7 +308,7 @@ namespace PschyHealth
                 btnUpdatAccount.Enabled = true;
                 btnAddAcount.Enabled = true;
                 btnArchive.Enabled = true;
-                btnAddAcount.Enabled = true;
+                dgvAccount.Enabled = true;
                 btnConfirm.Hide();
                 btnCancel.Hide();
                 filter();
@@ -328,7 +328,7 @@ namespace PschyHealth
             btnAddAcount.Enabled = true;
             btnArchive.Enabled = true;
             btnAddAcount.Enabled = true;
-
+            dgvAccount.Enabled = true;
             filter();
         }
 
@@ -377,6 +377,11 @@ namespace PschyHealth
         }
 
         private void cmbAccDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbAccCriteria_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -252,7 +252,7 @@ namespace PschyHealth
             FormCollection fc = Application.OpenForms;
             foreach (Form f in fc)
             {
-                if (f.Name == "frmEDICodes")
+                if (f.Name == "frmICD10Codes")
                 {
                     IsOpen = true;
                     f.Focus();
@@ -262,8 +262,8 @@ namespace PschyHealth
 
             if (IsOpen == false)
             {
-                frmICD10Codes frmEDICodes = new frmICD10Codes();
-                frmEDICodes.Show();
+                frmICD10Codes frmICD10Codes = new frmICD10Codes();
+                frmICD10Codes.Show();
             }
         }
 

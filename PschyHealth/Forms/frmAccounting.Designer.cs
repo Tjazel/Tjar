@@ -35,6 +35,7 @@
             this.dgvAccount = new MetroFramework.Controls.MetroGrid();
             this.txtAccAmount = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbAccType = new MetroFramework.Controls.MetroComboBox();
             this.cmbAccDate = new MetroFramework.Controls.MetroDateTime();
             this.txtAccDescription = new MetroFramework.Controls.MetroTextBox();
             this.txtAccTransaction_Number = new MetroFramework.Controls.MetroTextBox();
@@ -56,7 +57,6 @@
             this.btnAddAcount = new MetroFramework.Controls.MetroButton();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnConfirm = new MetroFramework.Controls.MetroButton();
-            this.cmbAccType = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -163,6 +163,21 @@
             this.groupBox1.Size = new System.Drawing.Size(353, 194);
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
+            // 
+            // cmbAccType
+            // 
+            this.cmbAccType.FormattingEnabled = true;
+            this.cmbAccType.ItemHeight = 23;
+            this.cmbAccType.Items.AddRange(new object[] {
+            "Income",
+            "Expence"});
+            this.cmbAccType.Location = new System.Drawing.Point(185, 121);
+            this.cmbAccType.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbAccType.Name = "cmbAccType";
+            this.cmbAccType.Size = new System.Drawing.Size(126, 29);
+            this.cmbAccType.TabIndex = 62;
+            this.cmbAccType.UseSelectable = true;
+            this.cmbAccType.UseStyleColors = true;
             // 
             // cmbAccDate
             // 
@@ -351,6 +366,7 @@
             this.cmbAccCriteria.TabIndex = 3;
             this.cmbAccCriteria.UseSelectable = true;
             this.cmbAccCriteria.UseStyleColors = true;
+            this.cmbAccCriteria.SelectedIndexChanged += new System.EventHandler(this.cmbAccCriteria_SelectedIndexChanged);
             this.cmbAccCriteria.TextChanged += new System.EventHandler(this.cmbAccCriteria_TextChanged_1);
             // 
             // txtAccSearch
@@ -471,21 +487,6 @@
             this.btnConfirm.UseSelectable = true;
             this.btnConfirm.UseStyleColors = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConnfirm_Click);
-            // 
-            // cmbAccType
-            // 
-            this.cmbAccType.FormattingEnabled = true;
-            this.cmbAccType.ItemHeight = 23;
-            this.cmbAccType.Items.AddRange(new object[] {
-            "Income",
-            "Expence"});
-            this.cmbAccType.Location = new System.Drawing.Point(185, 121);
-            this.cmbAccType.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbAccType.Name = "cmbAccType";
-            this.cmbAccType.Size = new System.Drawing.Size(126, 29);
-            this.cmbAccType.TabIndex = 62;
-            this.cmbAccType.UseSelectable = true;
-            this.cmbAccType.UseStyleColors = true;
             // 
             // frmAccounting
             // 
