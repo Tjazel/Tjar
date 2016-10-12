@@ -176,7 +176,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmStaff frmStaff = new frmStaff();
-                frmStaff.Show();
+                frmStaff.ShowDialog();
             }
 
         }
@@ -198,7 +198,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmAccounting frmAccounting = new frmAccounting();
-                frmAccounting.Show();
+                frmAccounting.ShowDialog();
             }
 
 
@@ -221,7 +221,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmStatements frmStatements = new frmStatements();
-                frmStatements.Show();
+                frmStatements.ShowDialog();
             }
         }
 
@@ -242,7 +242,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmMedicalAids frmMedicalAids = new frmMedicalAids();
-                frmMedicalAids.Show();
+                frmMedicalAids.ShowDialog();
             }
         }
 
@@ -263,7 +263,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmICD10Codes frmEDICodes = new frmICD10Codes();
-                frmEDICodes.Show();
+                frmEDICodes.ShowDialog();
             }
         }
 
@@ -284,7 +284,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmConsultations frmConsultations = new frmConsultations();
-                frmConsultations.Show();
+                frmConsultations.ShowDialog();
             }
         }
 
@@ -455,7 +455,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmStaff frmStaff = new frmStaff();
-                frmStaff.Show();
+                frmStaff.ShowDialog();
             }
         }
 
@@ -479,7 +479,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmStaff frmStaff = new frmStaff();
-                frmStaff.Show();
+                frmStaff.ShowDialog();
             }
         }
 
@@ -500,7 +500,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmAccounting frmAccounting = new frmAccounting();
-                frmAccounting.Show();
+                frmAccounting.ShowDialog();
             }
 
         }
@@ -527,7 +527,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmArchive frmArchive = new frmArchive();
-                frmArchive.Show();
+                frmArchive.ShowDialog();
             }
         }
 
@@ -553,7 +553,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmAddressBook frmAddressBook = new frmAddressBook();
-                frmAddressBook.Show();
+                frmAddressBook.ShowDialog();
             }
         }
 
@@ -580,7 +580,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmNotepad frmNotepad = new frmNotepad();
-                frmNotepad.Show();
+                frmNotepad.ShowDialog();
             }
         }
 
@@ -601,7 +601,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmStatements frmStatements = new frmStatements();
-                frmStatements.Show();
+                frmStatements.ShowDialog();
             }
         }
 
@@ -622,7 +622,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmRecord frmRecord = new frmRecord();
-                frmRecord.Show();
+                frmRecord.ShowDialog();
             }
         }
 
@@ -643,7 +643,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmPayments frmPayments = new frmPayments();
-                frmPayments.Show();
+                frmPayments.ShowDialog();
             }
         }
 
@@ -988,7 +988,7 @@ namespace PschyHealth
             if (IsOpen == false)
             {
                 frmClients frmClients = new frmClients();
-                frmClients.Show();
+                frmClients.ShowDialog();
             }
         }
 

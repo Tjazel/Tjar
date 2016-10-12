@@ -48,7 +48,7 @@ namespace PschyHealth
 
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
-           // this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized;
             ucToolbar uc = new ucToolbar();
             this.Controls.Add(uc);
 
@@ -242,7 +242,7 @@ namespace PschyHealth
             else if (txtAddressBookNumber.Text == "")
             {
                 txtAddressBookNumber.WaterMarkColor = Color.Red;
-                txtAddressBookNumber.WaterMark = "Please Input a Number";
+                txtAddressBookNumber.WaterMark = "Please Input a numeric Number";
             }
         }
 
@@ -252,13 +252,13 @@ namespace PschyHealth
             {
                 txtAddressBookName.Text = "";
                 txtAddressBookName.WaterMarkColor = Color.Red;
-                txtAddressBookName.WaterMark = "Invalid Name";
+                txtAddressBookName.WaterMark = "Please input a NON-numeric value";
                 validFields = cMethods.isTextWithSpace(txtAddressBookName.Text);
             }
             else if(txtAddressBookName.Text == "")
             {
                 txtAddressBookName.WaterMarkColor = Color.Red;
-                txtAddressBookName.WaterMark = "Please Input a Name";
+                txtAddressBookName.WaterMark = "Please input a NON - numeric value";
             }
 
         }
@@ -269,13 +269,13 @@ namespace PschyHealth
             {
                 txtAddressBookSurname.Text = "";
                 txtAddressBookSurname.WaterMarkColor = Color.Red;
-                txtAddressBookSurname.WaterMark = "Invalid Surname";
+                txtAddressBookSurname.WaterMark = "Please input a NON -numeric value";
                 validFields = cMethods.isTextWithSpace(txtAddressBookSurname.Text);
             }
             else if (txtAddressBookSurname.Text == "")
             {
                 txtAddressBookName.WaterMarkColor = Color.Red;
-                txtAddressBookName.WaterMark = "Please Input a Surname";
+                txtAddressBookName.WaterMark = "Please input a NON - numeric value";
             }
         }
 
@@ -285,7 +285,7 @@ namespace PschyHealth
             {
                 txtAddressBookTelephone_Number.Text = "";
                 txtAddressBookTelephone_Number.WaterMarkColor = Color.Red;
-                txtAddressBookTelephone_Number.WaterMark = "Invalid Telephone";
+                txtAddressBookTelephone_Number.WaterMark = "Invalid Telephone number";
                 validFields = cMethods.isTelephone(txtAddressBookTelephone_Number.Text);
             }
         }
@@ -296,7 +296,7 @@ namespace PschyHealth
             {
                 txtAddressBookFax_Number.Text = "";
                 txtAddressBookFax_Number.WaterMarkColor = Color.Red;
-                txtAddressBookFax_Number.WaterMark = "Invalid Fax";
+                txtAddressBookFax_Number.WaterMark = "Invalid Fax number";
                 validFields = cMethods.isTelephone(txtAddressBookFax_Number.Text);
             }
         }
@@ -307,7 +307,7 @@ namespace PschyHealth
             {
                 txtAddressBookCellphone_Number.Text = "";
                 txtAddressBookCellphone_Number.WaterMarkColor = Color.Red;
-                txtAddressBookCellphone_Number.WaterMark = "Invalid Cellphone";
+                txtAddressBookCellphone_Number.WaterMark = "Invalid Cellphone number";
                 validFields = cMethods.isTelephone(txtAddressBookCellphone_Number.Text);
             }
         }
@@ -318,7 +318,7 @@ namespace PschyHealth
             {
                 txtAddressBookEmail_Address.Text = "";
                 txtAddressBookEmail_Address.WaterMarkColor = Color.Red;
-                txtAddressBookEmail_Address.WaterMark = "Invalid Email";
+                txtAddressBookEmail_Address.WaterMark = "Email address is NOT in correct format";
                 validFields = cMethods.isEmail(txtAddressBookEmail_Address.Text);
             }
         }
@@ -329,7 +329,7 @@ namespace PschyHealth
             {
                 txtAddressBookWebsite.Text = "";
                 txtAddressBookWebsite.WaterMarkColor = Color.Red;
-                txtAddressBookWebsite.WaterMark = "Invalid Website";
+                txtAddressBookWebsite.WaterMark = "Invalid Website address";
                 validFields = cMethods.isURL(txtAddressBookWebsite.Text);
             }
         }
@@ -340,7 +340,7 @@ namespace PschyHealth
             {
                 txtAddressBookAddress1.Text = "";
                 txtAddressBookAddress1.WaterMarkColor = Color.Red;
-                txtAddressBookAddress1.WaterMark = "Invalid Address";
+                txtAddressBookAddress1.WaterMark = "Please use numeric and non-numeric values";
                 validFields = cMethods.isTextWithSpace(txtAddressBookAddress1.Text);
             }
         }
@@ -351,7 +351,7 @@ namespace PschyHealth
             {
                 txtAddressBookAddress2.Text = "";
                 txtAddressBookAddress2.WaterMarkColor = Color.Red;
-                txtAddressBookAddress2.WaterMark = "Invalid Address";
+                txtAddressBookAddress2.WaterMark = "Please use numeric and non-numeric values";
                 validFields = cMethods.isTextWithSpace(txtAddressBookAddress2.Text);
             }
         }
@@ -373,7 +373,7 @@ namespace PschyHealth
             {
                 txtAddressBookZip_Code.Text = "";
                 txtAddressBookZip_Code.WaterMarkColor = Color.Red;
-                txtAddressBookZip_Code.WaterMark = "Invalid Zip";
+                txtAddressBookZip_Code.WaterMark = "Invalid Zip code";
                 validFields = cMethods.isNumber(txtAddressBookZip_Code.Text);
             }
         }
