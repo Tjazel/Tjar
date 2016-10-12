@@ -120,10 +120,10 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACQSURBVGhD7ZQ7CsMwEAV1LX8uZnAR58jJAeInHDVBpbPaBzMw4GqZV1gFAADgjxzycX368ZSf
-        r3YjdtniLUdM8iUZMRpGZIERWWBEFhiRhZARv8ejvG1E73iUt4zoHY7SeoDFzzxL25fIOn6RxI/APv4t
-        iY/GOn6VxI/AOr6ySdv4Rg22jW/UcNt4AADITiknbwgJ+bpyigQAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAJBJREFUaEPt
+        lDsKwzAQBXUtfy5mcBHnyMkB4iccNUGls9oHMzDgaplXWAUAAOCPHPJxffrxlJ+vdiN22eItR0zyJRkx
+        GkZkgRFZYEQWGJGFkBG/x6O8bUTveJS3jOgdjtJ6gMXPPEvbl8g6fpHEj8A+/i2Jj8Y6fpXEj8A6vrJJ
+        2/hGDbaNb9Rw23gAAMhOKSdvCAn5unKKBAAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="ctxLock.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
