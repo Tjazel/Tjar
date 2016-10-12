@@ -106,7 +106,7 @@ namespace PschyHealth
 
         private void dgvStatements_SelectionChanged_1(object sender, EventArgs e)
         {
-            cMethods.fillTextbox(groupBox3, dgvStatements, "Stat", false);
+            
         }
 
         private void pbBack_Click_1(object sender, EventArgs e)
@@ -123,79 +123,30 @@ namespace PschyHealth
 
         private void cmbStatCrit_SelectedIndexChanged(object sender, EventArgs e)
         {
-            metroTextBox17.Clear();
-            metroComboBox1.Text = "";
-            if (cmbStatCrit.Text != "")
-            {
-                metroTextBox17.Enabled = true;
-            }
-            else
-            {
-                metroTextBox17.Enabled = false;
-                metroTextBox17.Text = "";
-            }
+            
         }
 
         private void metroTextBox17_TextChanged(object sender, EventArgs e)
         {
-            if (metroTextBox17.Text == "")
-                cMethods.fillDGV(dgvStatements, "Clients");
-            else if (metroTextBox17.Text == String.Concat(metroTextBox17.Text.Where(Char.IsLetterOrDigit)))
-            {
-                filter();
-                correctSearch = metroTextBox17.Text;
-            }
-            else
-            {
-                MessageBox.Show("Only numeric and alphabetic caracters are allowed");
-                metroTextBox17.Text = correctSearch;
-                metroTextBox17.Focus();
-                metroTextBox17.SelectionStart = metroTextBox17.Text.Length;
-            }
         }
 
         private void cmbStatCrit_TextChanged(object sender, EventArgs e)
         {
-            metroTextBox17.Clear();
-            metroComboBox1.SelectedIndex = -1;
-            if (cmbStatCrit.Text != "")
-            {
-                metroTextBox17.Enabled = true;
-
-            }
-            else
-            {
-                metroTextBox17.Enabled = false;
-                metroTextBox17.Text = "";
-            }
-            cMethods.fillDGV(dgvStatements, "Clients");
+           
         }
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (metroComboBox1.SelectedIndex != -1)
-                metroTextBox17.Enabled = true;
-            metroTextBox17.Clear();
         }
 
         private void filter()
         {
-            if (metroTextBox17.Text != "")
-                if (!metroComboBox1.Visible)
-                {
-                    cMethods.filterDGV(dgvStatements, "Clients", " WHERE " + cmbStatCrit.Text + " LIKE '%" + metroTextBox17.Text + "%'");
-                }
-                else
-                {
-                    cMethods.filterDGV(dgvStatements, "Clients", " WHERE " + cmbStatCrit.Text + " " + metroComboBox1.Text + " " + metroTextBox17.Text);
-                }
+            
         }
 
         private void metroComboBox1_VisibleChanged(object sender, EventArgs e)
         {
-            metroComboBox1.SelectedIndex = -1;
-            if (metroComboBox1.Visible == true)
-                metroTextBox17.Enabled = false;
+            
         }
 
         private void cmbClient_SelectedIndexChanged(object sender, EventArgs e)
@@ -261,8 +212,15 @@ namespace PschyHealth
             cMethods.filterDGV(dgvStatements, "Clients", " WHERE First_Name = '" + clientName.Substring(clientName.IndexOf(",")+1) + "' AND Surname = '" + clientName.Substring(0,clientName.IndexOf(",")) + "'");
 
             String title;
-            File.Move(Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + cmbFormat.Text, Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + name);
-            object fileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + name;
+            try
+            {
+                File.Move(Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + cmbFormat.Text, Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + name);
+            }
+            catch (IOException)
+            {
+                File.Move(Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + cmbFormat.Text, Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + name.Substring(0,name.Length-4) + DateTime.Now.ToShortTimeString() + ".docx");
+            }
+                object fileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + name;
 
             Document doc = wordApp.Documents.Open(ref fileName, ref confirmConversions, ref readOnly, ref addToRecentFiles,
             ref passwordDoc, ref passwordTemplate, ref revert, ref writepwdoc, ref writepwTemplate, ref format, ref encoding, ref visible, ref openRepair,
@@ -297,7 +255,7 @@ namespace PschyHealth
             cMethods.ReplaceBookmarkText(doc, "D3", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 60, 90)));
             cMethods.ReplaceBookmarkText(doc, "D4", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 30, 60)));
             cMethods.ReplaceBookmarkText(doc, "D5", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 0, 30)));
-            cMethods.ReplaceBookmarkText(doc, "AmmountDue", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 0, 99999)));
+            cMethods.ReplaceBookmarkText(doc, "AmountDue", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 0, 99999)));
 
 
             doc.Close();

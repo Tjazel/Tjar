@@ -61,19 +61,25 @@ namespace PschyHealth
 
         public void silentFillDGV(MetroGrid dgv, String sTable, String filter, Boolean silent)
         {
-
-
             pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
-            uc.Hide();
-            uc.Parent = frmMainPage.ActiveForm;
-            uc.Left = 500;
-            uc.Top = 300;
-            uc.Show();
-            uc.BringToFront();
+            //This panel is created and made visable so that the user can see that the database is busy connecting
+            //The silent fill is used when the program is endeing and the system musn't show error messages when timed out
+            if (!silent)
+            {
+                uc.Hide();
+                uc.Parent = frmMainPage.ActiveForm;
+                uc.Left = 500;
+                uc.Top = 300;
+                uc.Show();
+                uc.BringToFront();
+
+                
+            }
+            //This code allows the programs GUI to load completely without a delay
             Application.DoEvents();
             //await Task.Delay(50);
             Thread.Sleep(1000);
-            try
+            try//Try to catch all exeptions and retry
             {
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter();
@@ -98,41 +104,48 @@ namespace PschyHealth
                 dgv.BringToFront();
                 //dgv.AutoResizeColumns(
                 //DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
-                uc.Hide();
+                if (!silent)
+                {
+                    uc.Hide();
 
-                uc.SendToBack();
-                uc.Visible = false;
-                uc = null;
-
+                    uc.SendToBack();
+                    uc.Visible = false;
+                    uc = null;
+                }
             }
             catch (SqlException e)
             {
-
+                
                 String mes = e.Message.Substring(0, 17);
-                MessageBox.Show(e.Message);
+                //MessageBox.Show(e.Message);
                 if (!silent)
                 {
-                    if (mes == "A network-related")
+                    if (mes == "A network-related")//This error means that the connection is delayed and will have to reconnect
                     {
                         DialogResult result = MessageBox.Show("Connection timed out. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
                         if (result == DialogResult.Yes)
                         {
+                            //Reconnectiong immediately creates an error, and therefore the program must be paused for 5 seconds before reconnecting
                             Thread.Sleep(5000);
+                            uc.Visible = false;
                             recallFilter(dgv, sTable, filter);
                         }
                     }
                     else
                     {
-                        DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
+                        DialogResult result = MessageBox.Show("Connection error. Reconnect? If this error persists, contact us.", "Reconnect", MessageBoxButtons.YesNo);
                         if (result == DialogResult.Yes)
                         {
+                            uc.Visible = false;
                             recallFilter(dgv, sTable, filter);
                         }
                     }
+
                 }
                 else
                 {
                     Thread.Sleep(5000);
+                    uc.Visible = false;
                     recallFilter(dgv, sTable, filter);
                 }
 
@@ -140,70 +153,71 @@ namespace PschyHealth
             }
             catch (Exception e)
             {
-
-                MessageBox.Show(e.Message);
-                DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
+                uc.Visible = false;
+                //MessageBox.Show(e.Message);
+                DialogResult result = MessageBox.Show("Connection error. Reconnect? If this error persists, contact us.", "Reconnect", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
+                    uc.Visible = false;
                     recallFilter(dgv, sTable, filter);
                 }
             }
         }
 
-        //public string fillText(string buttonText)
-        //{
-        //    if (buttonText == "Maandeliks")
-        //    {
-        //        string good = "";
-        //        for (int i = 0; i <= 12; i++)
-        //        {
-        //            good += "Total income for the ";
-        //            double goodSum = 0, badSum = 0;
-        //            SqlCommand cmd = new SqlCommand();
-        //            SqlDataReader reader;
-        //            cmd.CommandText = "SELECT * FROM Accounting WHERE Date LIKE @P1 AND Type = Income";
-        //            cmd.Parameters.AddWithValue("@P1", "*-*" + Convert.ToString(i) + "*");
-        //            cmd.CommandType = CommandType.Text;
-        //            cmd.Connection = conn;
-        //            conn.Open();
-        //            reader = cmd.ExecuteReader();
-        //            while (reader.Read())
-        //            {
-        //                goodSum += Convert.ToDouble(reader["Amount"].ToString());
-        //            }
-        //            reader.Close();
-        //            good += Convert.ToString(i) + "th month :R" + Convert.ToString(goodSum) + "/r/n";
-        //        }
-        //        string bad = "";
-        //        for (int i = 0; i <= 12; i++)
-        //        {
-        //            bad += "Total expense for the ";
-        //            double badSum = 0;
-        //            SqlCommand cmd = new SqlCommand();
-        //            SqlDataReader reader;
-        //            cmd.CommandText = "SELECT * FROM Accounting WHERE Date LIKE @P1 AND Type <> Income";
-        //            cmd.Parameters.AddWithValue("@P1", "*-*" + Convert.ToString(i) + "*");
-        //            cmd.CommandType = CommandType.Text;
-        //            cmd.Connection = conn;
-        //            conn.Open();
-        //            reader = cmd.ExecuteReader();
-        //            while (reader.Read())
-        //            {
-        //                badSum += Convert.ToDouble(reader["Amount"].ToString());
-        //            }
-        //            reader.Close();
-        //            bad += Convert.ToString(i) + "th month :R" + Convert.ToString(badSum) + "/r/n";
-        //        }
-        //        buttonText = good + bad;
-        //    }
-        //    if (buttonText == "Geldvloei")
-        //    {
+        /*public string fillText(string buttonText)
+        {
+            if (buttonText == "Maandeliks")
+            {
+                string good = "";
+                for (int i = 0; i <= 12; i++)
+                {
+                    good += "Total income for the ";
+                    double goodSum = 0, badSum = 0;
+                    SqlCommand cmd = new SqlCommand();
+                    SqlDataReader reader;
+                    cmd.CommandText = "SELECT * FROM Accounting WHERE Date LIKE @P1 AND Type = Income";
+                    cmd.Parameters.AddWithValue("@P1", "*-*" + Convert.ToString(i) + "*");
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = conn;
+                    conn.Open();
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        goodSum += Convert.ToDouble(reader["Amount"].ToString());
+                    }
+                    reader.Close();
+                    good += Convert.ToString(i) + "th month :R" + Convert.ToString(goodSum) + "/r/n";
+                }
+                string bad = "";
+                for (int i = 0; i <= 12; i++)
+                {
+                    bad += "Total expense for the ";
+                    double badSum = 0;
+                    SqlCommand cmd = new SqlCommand();
+                    SqlDataReader reader;
+                    cmd.CommandText = "SELECT * FROM Accounting WHERE Date LIKE @P1 AND Type <> Income";
+                    cmd.Parameters.AddWithValue("@P1", "*-*" + Convert.ToString(i) + "*");
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = conn;
+                    conn.Open();
+                    reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        badSum += Convert.ToDouble(reader["Amount"].ToString());
+                    }
+                    reader.Close();
+                    bad += Convert.ToString(i) + "th month :R" + Convert.ToString(badSum) + "/r/n";
+                }
+                buttonText = good + bad;
+            }
+            if (buttonText == "Geldvloei")
+            {
 
-        //    }
-        //    conn.Close();
-        //    return buttonText;
-        //}
-
+            }
+            conn.Close();
+            return buttonText;
+        }*/
+        //Method used to encrypt the passwords when sent to the database
         private string Encrypt(string clearText)
         {
             string EncryptionKey = "MAKV2SPBNI99212";
@@ -225,7 +239,7 @@ namespace PschyHealth
             }
             return clearText;
         }
-
+        //Method used to decrypt encrypted passwords
         private string Decrypt(string cipherText)
         {
             string EncryptionKey = "MAKV2SPBNI99212";
@@ -302,26 +316,30 @@ namespace PschyHealth
             }
         }
 
-
+        //This method is used to filter a metrogrid
+        //This code reuses the silent fill, to reduce the size of the program
         public void filterDGV(MetroGrid dgv, String sTable, String filter)
         {
             silentFillDGV(dgv, sTable, filter, false);
         }
-
+        //This method is an alternative to recursive calling.
+        //Because a method has to be static to be called recursively, it cannot connect to the database
+        //This method recalls the method so that it can be reused when an error occur.
         private void recallFilter(MetroGrid dgv, String sTable, String filter)
         {
             filterDGV(dgv, sTable, filter);
         }
 
 
-
+        //This method fills the search combobox when the metrogrid is filled, so that a field can be chosen without errors when filtering
         public void fillCMB(MetroComboBox cmb, MetroGrid dgv)
         {
             cmb.Items.Clear();
             for (int i = 0; i < dgv.ColumnCount; i++)
                 cmb.Items.Add(dgv.Columns[i].Name);
         }
-
+        //This method fills 2 comboboxes by using a metrogrids rows
+        //This is also used to reduce incorrect inputs
         public void fillCMBrow(MetroComboBox cmb1, MetroComboBox cmb2, MetroGrid dgv,String s1, String s2)
         {
             if (cmb1 != null)
@@ -336,11 +354,12 @@ namespace PschyHealth
                     cmb2.Items.Add(dgv.Rows[i].Cells[s2].Value.ToString());
             }
         }
-
+        //This method calls the method above and does the same thing but for the set columns First_Name and Surname
         public void fillCMBrow(MetroComboBox cmb1, MetroComboBox cmb2, MetroGrid dgv)
         {
             fillCMBrow(cmb1, cmb2, dgv, "First_Name", "Surname");
         }
+        //This method combines the clients name and surname divided by a "," to easily pick the user in a combobx
         public void fillCMBrow(MetroComboBox cmb, MetroGrid dgv)
         {
             cmb.Items.Clear();
@@ -352,16 +371,17 @@ namespace PschyHealth
                     cmb.Items.Add(entry);
             }
         }
-
+        //This method is used to input all the data of the chosen row of a certain metrogrid into textboxes an comboboxes, or to empty an enable it
+        //The method recieves a groupbox and compares its controls names and tipes with the database table to fill the controls
         public void fillTextbox(GroupBox gb, MetroGrid dgv, String extra, Boolean enabled, Boolean empty)
         {
             try
             {
                 foreach (Control obj in gb.Controls)
                 {
-                    if ((obj is MetroTextBox) || (obj is MetroDateTime))
+                    if (obj is MetroTextBox) 
                         extra = "txt" + extra;
-                    else if (obj is MetroComboBox)
+                    else if ((obj is MetroComboBox)|| (obj is MetroDateTime))
                         extra = "cmb" + extra;
                     else
                         goto out1;
@@ -394,24 +414,24 @@ namespace PschyHealth
 
 
         }
-
+        //This method calls the method above with a fixed empty setting to false(default)
         public void fillTextbox(GroupBox gb, MetroGrid dgv, String extra, Boolean enabled)
         {
             fillTextbox(gb, dgv, extra, enabled, false);
         }
-
+        //This method checks for a path and if it does not exist, this method creates it
         public void CheckFolder(String path)
         {
             if (!File.Exists(path))
                 Directory.CreateDirectory(path);
         }
-
+        //This method appends string to a textfile after checking if it exists
         public void WriteFile(String path, String txt)
         {
             CheckFile(path);
             File.AppendAllText(path + ".txt", txt);
         }
-
+        //Tests if a file exists and if not, it is created
         public void CheckFile(String path)
         {
             if (!File.Exists(path + ".txt"))
@@ -422,12 +442,12 @@ namespace PschyHealth
                 outStream.Close();
             }
         }
-
+        //Manually archives certain rows in a table
         public void Archive(MetroGrid dgv, String table, String field, String crit)
         {
             Archive(dgv, table, field, crit, 0);
         }
-
+        //Manually archives certain rows in certain tables, determined by the date that it was last used
         public void Archive(MetroGrid dgv, String table, String field, String crit, int month)
         {
             String arch = "";
@@ -448,6 +468,7 @@ namespace PschyHealth
             }
 
         }
+        //Automatically archives data based on when it was used last
         public void Archive(MetroGrid dgv, String table, double months)
         {
             String arch = "";
@@ -467,12 +488,13 @@ namespace PschyHealth
                         arch += dgv.Rows[i].Cells[j].Value.ToString() + ";";
                     }
                     arch += "\r\n";
+                    delete(table, dgv.Columns[0].ToString() + "='" + dgv.Rows[i].Cells[0].Value.ToString() + "'");
                 }
             }
             WriteFile(Environment.GetFolderPath(
                     Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Archive\" + table + @"Archive\" + DateTime.Now.Year.ToString() + @"-" + DateTime.Now.Month.ToString(), arch);
         }
-
+        //Testing the validity of a number and sending back a boolean
         public Boolean validNumber(String txt)
         {
             string[] valids = { "." };
@@ -497,7 +519,7 @@ namespace PschyHealth
                 return true;
             }
         }
-
+        //Testing the validity of a String and sending back a boolean
         public Boolean validString(String txt)
         {
             char[] valids = { ' ', '.', '-' };
@@ -519,7 +541,7 @@ namespace PschyHealth
             }
 
         }
-
+        //Testing the validity of a date and sending back a boolean
         public Boolean validDate(String txt)
         {
             int k = 0;
@@ -1082,7 +1104,7 @@ namespace PschyHealth
 
 
 
-
+        //The following method copies a template to a new name
         public void copyTemplate(String name, String newName)
         {
             string fileName = name;
@@ -1124,7 +1146,7 @@ namespace PschyHealth
                 }
             }
         }
-
+        //This method replaces a bookmark in a template whith text
         public void ReplaceBookmarkText(Microsoft.Office.Interop.Word.Document doc, string bookmarkName, string text)
         {
             if (doc.Bookmarks.Exists(bookmarkName))
@@ -1138,7 +1160,7 @@ namespace PschyHealth
             }
 
         }
-
+        //A method that adds data using sql into the database
         public void add(String table, String field, String values)
         {
             /*SqlDataReader reader;
@@ -1162,27 +1184,58 @@ namespace PschyHealth
             string saveStaff = "INSERT into " + table + " (" + field + ") " + " VALUES ('" + values + "');";
             cmd = new SqlCommand(saveStaff, conn);
             cmd.ExecuteNonQuery();*/
-
+            pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
             try
             {
 
-
+                
+                uc.Hide();
+                uc.Parent = frmMainPage.ActiveForm;
+                uc.Left = 500;
+                uc.Top = 300;
+                uc.Show();
+                uc.BringToFront();
                 conn.Open();
                 using (SqlCommand command = new SqlCommand("INSERT into " + table + " (" + field + ") " + " VALUES (" + values + ")", conn))
                 {
                     command.ExecuteNonQuery();
                 }
                 conn.Close();
-
+                uc.Hide();
             }
             catch (SystemException ex)
             {
-                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+                conn.Close();
+                uc.Hide();
+                String msg = ex.Message.Substring(0, 6);
+                if (msg == "Cannot")
+                {
+                    field = field.Substring(field.IndexOf(",") + 1);
+                    values = values.Substring(values.IndexOf(",") + 1);
+
+                    recallAdd(table, field, values);
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        Thread.Sleep(5000);
+                        recallAdd(table, field, values);
+                    }
+                }
+               
             }
+            
 
 
         }
-
+        //Recalls the add if the method fails
+        public void recallAdd(String table, String field, String values)
+        {
+            add(table, field, values);
+        }
+        //A method that deletes data using sql out of the database
         public void delete(String table, String crit)
         {
 
@@ -1213,10 +1266,16 @@ namespace PschyHealth
             SqlDataAdapter dataAdapter = new SqlDataAdapter();
             dataAdapter.Fill(ds,table);*/
 
-
+            pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
             try
             {
-
+          
+                uc.Hide();
+                uc.Parent = frmMainPage.ActiveForm;
+                uc.Left = 500;
+                uc.Top = 300;
+                uc.Show();
+                uc.BringToFront();
                 conn.Open();
                 using (SqlCommand command = new SqlCommand("DELETE FROM " + table + " WHERE " + crit, conn))
                 {
@@ -1224,15 +1283,28 @@ namespace PschyHealth
                 }
                 conn.Close();
 
+                uc.Hide();
             }
             catch (SystemException ex)
             {
-                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+                conn.Close();
+                uc.Hide();
+                DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    Thread.Sleep(5000);
+                    recallDelete(table, crit);
+                }
+
             }
         }
+        //Recalls in case of failure
+        private void recallDelete(String table, String crit)
+        {
+            delete(table,crit);
+        }
 
-
-
+        //A method that edits data using sql in the database
         public void edit(String table, String field, String values, String crit)
         {
             /*SqlDataReader reader;
@@ -1260,9 +1332,16 @@ namespace PschyHealth
             dt.Load(reader);
 
             conn.Close();*/
-
+            pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
             try
             {
+               
+                uc.Hide();
+                uc.Parent = frmMainPage.ActiveForm;
+                uc.Left = 500;
+                uc.Top = 300;
+                uc.Show();
+                uc.BringToFront();
                 field += ",";
                 values += ",";
                 string fld;
@@ -1286,13 +1365,28 @@ namespace PschyHealth
                 }
                 conn.Close();
 
+                uc.Hide();
             }
             catch (SystemException ex)
             {
-                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+                conn.Close();
+                uc.Hide();
+                MessageBox.Show(ex.Message);
+                DialogResult result = MessageBox.Show("Connection error. Reconnect?", "Reconnect", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    Thread.Sleep(5000);
+                    recallEdit(table, field, values, crit);
+                }
             }
         }
-
+        //recall in case of failure
+        private void recallEdit(String table, String field, String values, String crit)
+        {
+            edit(table, field, values, crit);
+        }
+        
+        //Regex method tot test the validity of a email
         public bool isEmail(String text)
         {
             if (Regex.IsMatch(text, @"^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"))
@@ -1303,7 +1397,7 @@ namespace PschyHealth
                 return false;
             }
         }
-
+        //Regex method tot test the validity of a number
         public bool isTelephone(String text)
         {
             if (Regex.IsMatch(text, @"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}"))
@@ -1314,10 +1408,10 @@ namespace PschyHealth
                 return false;
             }
         }
-
+        //Regex method tot test the validity of a string
         public bool isText(String text)
         {
-            if (Regex.IsMatch(text, @"^[a-zA-Z]*$"))
+            if (Regex.IsMatch(text, @"^[a-zA-Z0-9]*$"))
                 return true;
             else
             {
@@ -1325,8 +1419,8 @@ namespace PschyHealth
                 return false;
             }
         }
-
-        public bool isTextWithNumbersAndSpaces(String text)
+        //Regex method tot test the validity of a string with spaces
+        public bool isTextWithSpace(String text)
         {
             if (Regex.IsMatch(text, @"^[a-zA-Z0-9 ]*$"))
                 return true;
@@ -1336,18 +1430,7 @@ namespace PschyHealth
                 return false;
             }
         }
-
-        public bool isTextWithSpace(String text)
-        {
-            if (Regex.IsMatch(text, @"^[a-zA-Z ]*$"))
-                return true;
-            else
-            {
-                //MessageBox.Show("Please make sure that you correctly typed in the textbox");
-                return false;
-            }
-        }
-
+        //Regex method tot test the validity of a url
         public bool isURL(String text)
         {
             if (Regex.IsMatch(text, @"(http(s)?://)?([\w-]+\.)+[\w-]+[.com]+(/[/?%&=]*)?"))
@@ -1358,7 +1441,7 @@ namespace PschyHealth
                 return false;
             }
         }
-
+        //Regex method tot test the validity of a number
         public bool isNumber(String text)
         {
             if (Regex.IsMatch(text, @"^[0-9]*$"))
@@ -1369,7 +1452,7 @@ namespace PschyHealth
                 return false;
             }
         }
-
+        //Regex method tot test the validity of currency
         public bool isMoney(String text)
         {
             if (Regex.IsMatch(text, @"^[+-]?((\d+(\.\d*)?)|(\.\d+))$"))
@@ -1380,7 +1463,7 @@ namespace PschyHealth
                 return false;
             }
         }
-
+        //A method that uses the names and values of the controls in a groupbox to send back all the column names and values to add edit and delete data in the database
         public void getFieldsAndValues(out String fields, out String values, GroupBox gb, String extra)
         {
             fields = "";
@@ -1415,7 +1498,7 @@ namespace PschyHealth
                 return;
             }
         }
-
+        //This method is used to calculte the amount a client owes on a certain consultation
         public double calculateAmount(String consultation, MetroGrid dgv)
         {
             double worked = 0;
@@ -1440,6 +1523,8 @@ namespace PschyHealth
 
             return worked - payed;
         }
+
+        //This method is used to calculte the amount a client owes on a certain consultation during a certain time period
         public double calculateAmount(String name, String surname, MetroGrid dgv, double diff1, double diff2)
         {
             double worked = 0;
@@ -1475,9 +1560,13 @@ namespace PschyHealth
 
             return worked - payed;
         }
-
+        //This method fills the analisis textbox to show the years financial standing
         public String Analysis(String folder1, String folder2, String type, MetroComboBox cmb)
         {
+            MetroGrid dgv = new MetroGrid();
+            dgv.Parent = frmStatistics.ActiveForm;
+            dgv.Hide();
+
             String month;
             String amount;
             Double total = 0;
@@ -1524,6 +1613,11 @@ namespace PschyHealth
                                 amount = line.Substring(0, line.IndexOf(";"));
                                 total += Convert.ToDouble(amount);
                             }
+                            filterDGV(dgv, folder1, " WHERE Date BETWEEN '" + cmb.Text + "0101' AND '" + cmb.Text + "1231'");
+                            for(int i = 0; i < dgv.RowCount-1;i++)
+                            {
+                                total += Convert.ToDouble(dgv.Rows[i].Cells["Amount"].Value.ToString());
+                            }
                             subA = total + "";
                             total = 0;
                             String income = "";
@@ -1541,6 +1635,11 @@ namespace PschyHealth
                                 else
                                     total += Convert.ToDouble(amount);
                             }
+                            filterDGV(dgv, folder2, " WHERE Date BETWEEN '" + cmb.Text + "0101' AND '" + cmb.Text + "1231'");
+                            for (int i = 0; i < dgv.RowCount - 1; i++)
+                            {
+                                total += Convert.ToDouble(dgv.Rows[i].Cells["Amount"].Value.ToString());
+                            }
                             subB = total + "";
                             total = 0;
                             if (subA == "")
@@ -1549,14 +1648,16 @@ namespace PschyHealth
                                 subB = "0";
 
                             text += month + "\t" + subA + "\t\t" + subB + "\r\n";
-
+                            
                         }
                     }
                     
                     
                 }
             }
+            dgv = null;
             return text;
+
         }
             
             

@@ -34,8 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAccount = new MetroFramework.Controls.MetroGrid();
             this.txtAccAmount = new MetroFramework.Controls.MetroTextBox();
-            this.txtAccType = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbAccType = new MetroFramework.Controls.MetroComboBox();
             this.cmbAccDate = new MetroFramework.Controls.MetroDateTime();
             this.txtAccDescription = new MetroFramework.Controls.MetroTextBox();
             this.txtAccTransaction_Number = new MetroFramework.Controls.MetroTextBox();
@@ -66,6 +66,8 @@
             // 
             // dgvAccount
             // 
+            this.dgvAccount.AllowUserToAddRows = false;
+            this.dgvAccount.AllowUserToDeleteRows = false;
             this.dgvAccount.AllowUserToOrderColumns = true;
             this.dgvAccount.AllowUserToResizeRows = false;
             this.dgvAccount.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -94,6 +96,7 @@
             this.dgvAccount.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvAccount.Location = new System.Drawing.Point(381, 141);
             this.dgvAccount.Name = "dgvAccount";
+            this.dgvAccount.ReadOnly = true;
             this.dgvAccount.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -143,44 +146,11 @@
             this.txtAccAmount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtAccAmount.Leave += new System.EventHandler(this.txtAccAmount_Leave);
             // 
-            // txtAccType
-            // 
-            // 
-            // 
-            // 
-            this.txtAccType.CustomButton.Image = null;
-            this.txtAccType.CustomButton.Location = new System.Drawing.Point(103, 1);
-            this.txtAccType.CustomButton.Name = "";
-            this.txtAccType.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtAccType.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtAccType.CustomButton.TabIndex = 1;
-            this.txtAccType.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtAccType.CustomButton.UseSelectable = true;
-            this.txtAccType.CustomButton.Visible = false;
-            this.txtAccType.Enabled = false;
-            this.txtAccType.Lines = new string[0];
-            this.txtAccType.Location = new System.Drawing.Point(185, 122);
-            this.txtAccType.MaxLength = 32767;
-            this.txtAccType.Name = "txtAccType";
-            this.txtAccType.PasswordChar = '\0';
-            this.txtAccType.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtAccType.SelectedText = "";
-            this.txtAccType.SelectionLength = 0;
-            this.txtAccType.SelectionStart = 0;
-            this.txtAccType.Size = new System.Drawing.Size(125, 23);
-            this.txtAccType.TabIndex = 11;
-            this.txtAccType.UseSelectable = true;
-            this.txtAccType.UseStyleColors = true;
-            this.txtAccType.WaterMark = "Enter Type";
-            this.txtAccType.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtAccType.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtAccType.Leave += new System.EventHandler(this.txtAccType_Leave);
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbAccType);
             this.groupBox1.Controls.Add(this.cmbAccDate);
             this.groupBox1.Controls.Add(this.txtAccAmount);
-            this.groupBox1.Controls.Add(this.txtAccType);
             this.groupBox1.Controls.Add(this.txtAccDescription);
             this.groupBox1.Controls.Add(this.txtAccTransaction_Number);
             this.groupBox1.Controls.Add(this.metroLabel7);
@@ -194,6 +164,21 @@
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
             // 
+            // cmbAccType
+            // 
+            this.cmbAccType.FormattingEnabled = true;
+            this.cmbAccType.ItemHeight = 23;
+            this.cmbAccType.Items.AddRange(new object[] {
+            "Income",
+            "Expence"});
+            this.cmbAccType.Location = new System.Drawing.Point(185, 121);
+            this.cmbAccType.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbAccType.Name = "cmbAccType";
+            this.cmbAccType.Size = new System.Drawing.Size(126, 29);
+            this.cmbAccType.TabIndex = 62;
+            this.cmbAccType.UseSelectable = true;
+            this.cmbAccType.UseStyleColors = true;
+            // 
             // cmbAccDate
             // 
             this.cmbAccDate.Enabled = false;
@@ -204,7 +189,8 @@
             this.cmbAccDate.Name = "cmbAccDate";
             this.cmbAccDate.Size = new System.Drawing.Size(126, 29);
             this.cmbAccDate.TabIndex = 65;
-            this.cmbAccDate.UseStyleColors = true;
+            this.cmbAccDate.Value = new System.DateTime(2016, 10, 11, 0, 0, 0, 0);
+            this.cmbAccDate.ValueChanged += new System.EventHandler(this.cmbAccDate_ValueChanged);
             // 
             // txtAccDescription
             // 
@@ -380,6 +366,7 @@
             this.cmbAccCriteria.TabIndex = 3;
             this.cmbAccCriteria.UseSelectable = true;
             this.cmbAccCriteria.UseStyleColors = true;
+            this.cmbAccCriteria.SelectedIndexChanged += new System.EventHandler(this.cmbAccCriteria_SelectedIndexChanged);
             this.cmbAccCriteria.TextChanged += new System.EventHandler(this.cmbAccCriteria_TextChanged_1);
             // 
             // txtAccSearch
@@ -487,7 +474,6 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseSelectable = true;
             this.btnCancel.UseStyleColors = true;
-            this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCanccel_Click);
             // 
             // btnConfirm
@@ -500,14 +486,13 @@
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseSelectable = true;
             this.btnConfirm.UseStyleColors = true;
-            this.btnConfirm.Visible = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConnfirm_Click);
             // 
             // frmAccounting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1728, 887);
+            this.ClientSize = new System.Drawing.Size(1370, 772);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnArchive);
@@ -540,7 +525,6 @@
 
         private MetroFramework.Controls.MetroGrid dgvAccount;
         private MetroFramework.Controls.MetroTextBox txtAccAmount;
-        private MetroFramework.Controls.MetroTextBox txtAccType;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroTextBox txtAccDescription;
         private MetroFramework.Controls.MetroLabel metroLabel7;
@@ -563,5 +547,6 @@
         private MetroFramework.Controls.MetroButton btnAddAcount;
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroButton btnConfirm;
+        private MetroFramework.Controls.MetroComboBox cmbAccType;
     }
 }

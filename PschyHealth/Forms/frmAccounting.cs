@@ -58,7 +58,7 @@ namespace PschyHealth
             for (int i = 0; i < dgvAccount.RowCount - 1; i++)
             {
                 dt = dgvAccount.Rows[i].Cells["Date"].Value.ToString();
-                dt = dt.Substring(0, dt.IndexOf(@"-"));
+                dt = dt.Substring(0, dt.IndexOf(@"/"));
                 diff = Convert.ToInt16(DateTime.Now.Month.ToString()) - Convert.ToInt16(dt);
                 if (diff > 0)
                     cMethods.Archive(dgvAccount, "Accounting", "Transaction_Number", dgvAccount.Rows[i].Cells["Transaction_Number"].Value.ToString());
@@ -223,59 +223,68 @@ namespace PschyHealth
             btnDeleteAccount.Enabled = false;
             btnUpdatAccount.Enabled = false;
             btnAddAcount.Enabled = false;
+            btnArchive.Enabled = false;
+            dgvAccount.Enabled = false;
             button = "add";
         }
 
         private void btnUpdatAccount_Click(object sender, EventArgs e)
         {
-            btnCancel.Show();
             btnConfirm.Show();
             cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", true);
             btnDeleteAccount.Enabled = false;
             btnUpdatAccount.Enabled = false;
             btnAddAcount.Enabled = false;
+            btnArchive.Enabled = false;
+            dgvAccount.Enabled = false;
             button = "edit";
         }
 
         private void btnDeleteAccount_Click_1(object sender, EventArgs e)
         {
-            btnCancel.Show();
             btnConfirm.Show();
             cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
             btnDeleteAccount.Enabled = false;
             btnUpdatAccount.Enabled = false;
             btnAddAcount.Enabled = false;
+            btnArchive.Enabled = false;
+            dgvAccount.Enabled = false;
             button = "delete";
         }
 
         private void btnArchive_Click_1(object sender, EventArgs e)
         {
-            btnCancel.Show();
             btnConfirm.Show();
             cMethods.fillTextbox(groupBox1, dgvAccount, "Acc", false);
             btnDeleteAccount.Enabled = false;
             btnUpdatAccount.Enabled = false;
             btnAddAcount.Enabled = false;
+            btnArchive.Enabled = false;
+            dgvAccount.Enabled = false;
             button = "archive";
         }
 
         private void btnConnfirm_Click(object sender, EventArgs e)
         {
-            validFields = true;
-            foreach (Control obj in groupBox1.Controls)
-            {
-                if (obj is MetroTextBox)
-                {
-                    MetroTextBox txt = new MetroTextBox();
-                    txt = obj as MetroTextBox;
-                    if ((txt.WaterMarkColor == Color.Red)&&(txt.Text == "")||(txt.Text == ""))
-                    {
-                        validFields = false;
-                    }
-                }
-            }
+            //bool accept = true;
+            //foreach(Control obj in groupBox1.Controls)
+            //{
+            //    string name = "";
+            //    if(obj is MetroTextBox)
+            //    {
+            //        name = obj.Name;
+            //    }
+            //}
             if (validFields)
             {
+                pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
+                uc.Hide();
+                uc.Parent = frmMainPage.ActiveForm;
+                uc.Left = 500;
+                uc.Top = 300;
+                uc.Show();
+                uc.BringToFront();
+                Application.DoEvents();
                 String field;
                 String value;
                 if (dgvAccount.SelectedRows.Count > 0)
@@ -294,9 +303,12 @@ namespace PschyHealth
                         cMethods.Archive(dgvAccount, "Accounting", "Transaction_Number", dgvAccount.Rows[selectedIndex].Cells["Transaction_Number"].Value.ToString());
 
                 }
+                uc.Hide();
                 btnDeleteAccount.Enabled = true;
                 btnUpdatAccount.Enabled = true;
                 btnAddAcount.Enabled = true;
+                btnArchive.Enabled = true;
+                dgvAccount.Enabled = true;
                 btnConfirm.Hide();
                 btnCancel.Hide();
                 filter();
@@ -314,6 +326,10 @@ namespace PschyHealth
             btnDeleteAccount.Enabled = true;
             btnUpdatAccount.Enabled = true;
             btnAddAcount.Enabled = true;
+            btnArchive.Enabled = true;
+            btnAddAcount.Enabled = true;
+            dgvAccount.Enabled = true;
+            filter();
         }
 
         private void txtAccTransaction_Number_Leave(object sender, EventArgs e)
@@ -323,12 +339,7 @@ namespace PschyHealth
                 txtAccTransaction_Number.Text = "";
                 txtAccTransaction_Number.WaterMarkColor = Color.Red;
                 txtAccTransaction_Number.WaterMark = "Incorrect Number";
-                validFields = cMethods.isNumber(txtAccTransaction_Number.Text);
-            }
-            else if (txtAccTransaction_Number.Text == "")
-            {
-                txtAccTransaction_Number.WaterMarkColor = Color.Red;
-                txtAccTransaction_Number.WaterMark = "Please Enter a Transaction Number";
+                validFields = false;
             }
         }
 
@@ -338,17 +349,19 @@ namespace PschyHealth
             {
                 txtAccDescription.Text = "";
                 txtAccDescription.WaterMarkColor = Color.Red;
-                txtAccDescription.WaterMark = "Only letters and spaces";
+                txtAccDescription.WaterMark = "No unusual characters";
+                validFields = false;
             }
         }
 
         private void txtAccType_Leave(object sender, EventArgs e)
-        {;
-            if (!cMethods.isText(txtAccType.Text))
+        {
+            if (!cMethods.isText(cmbAccType.Text))
             {
-                txtAccType.Text = "";
-                txtAccType.WaterMarkColor = Color.Red;
-                txtAccType.WaterMark = "Single word";
+                cmbAccType.Text = "";
+                //cmbAccType.WaterMarkColor = Color.Red;
+                //cmbAccType.WaterMark = "Single phrase";
+                validFields = false;
             }
         }
 
@@ -359,7 +372,18 @@ namespace PschyHealth
                 txtAccAmount.Text = "";
                 txtAccAmount.WaterMarkColor = Color.Red;
                 txtAccAmount.WaterMark = "Incorrect Format";
+                validFields = false;
             }
+        }
+
+        private void cmbAccDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbAccCriteria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

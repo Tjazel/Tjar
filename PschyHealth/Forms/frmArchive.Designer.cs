@@ -47,7 +47,7 @@
             // 
             this.pbMic.Image = global::PschyHealth.Properties.Resources.Circled_Chevron_Right_48px_111;
             this.pbMic.Location = new System.Drawing.Point(17, 50);
-            this.pbMic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbMic.Margin = new System.Windows.Forms.Padding(2);
             this.pbMic.Name = "pbMic";
             this.pbMic.Size = new System.Drawing.Size(28, 22);
             this.pbMic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -65,7 +65,7 @@
             "<",
             "null"});
             this.cmbFolder.Location = new System.Drawing.Point(233, 150);
-            this.cmbFolder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbFolder.Margin = new System.Windows.Forms.Padding(2);
             this.cmbFolder.Name = "cmbFolder";
             this.cmbFolder.Size = new System.Drawing.Size(135, 29);
             this.cmbFolder.TabIndex = 62;
@@ -75,6 +75,7 @@
             // 
             // cmbFile
             // 
+            this.cmbFile.Enabled = false;
             this.cmbFile.FormattingEnabled = true;
             this.cmbFile.ItemHeight = 23;
             this.cmbFile.Items.AddRange(new object[] {
@@ -83,7 +84,7 @@
             "<",
             "null"});
             this.cmbFile.Location = new System.Drawing.Point(372, 150);
-            this.cmbFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbFile.Margin = new System.Windows.Forms.Padding(2);
             this.cmbFile.Name = "cmbFile";
             this.cmbFile.Size = new System.Drawing.Size(151, 29);
             this.cmbFile.TabIndex = 63;
@@ -98,9 +99,11 @@
             this.lbArcList.Name = "lbArcList";
             this.lbArcList.Size = new System.Drawing.Size(591, 264);
             this.lbArcList.TabIndex = 64;
+            this.lbArcList.SelectedIndexChanged += new System.EventHandler(this.lbArcList_SelectedIndexChanged);
             // 
             // metroButton1
             // 
+            this.metroButton1.Enabled = false;
             this.metroButton1.Location = new System.Drawing.Point(542, 150);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 24);
@@ -178,7 +181,7 @@
             this.Controls.Add(this.cmbFile);
             this.Controls.Add(this.cmbFolder);
             this.Controls.Add(this.pbMic);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmArchive";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.ShowIcon = false;

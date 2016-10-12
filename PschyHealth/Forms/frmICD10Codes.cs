@@ -14,6 +14,7 @@ namespace PschyHealth
 {
     public partial class frmICD10Codes : MetroForm
     {
+        String button;
         Methods cMethods = new Methods();
         //Constants
         const int AW_SLIDE = 0X40000;
@@ -46,7 +47,7 @@ namespace PschyHealth
             //Animate form
             AnimateWindow(this.Handle, 800, AW_SLIDE | AW_HOR_POSITIVE);
 
-           // cMethods.fillDGV(dgvEDICodes, "EDIcodes", cmbEDICrit);
+            cMethods.fillDGV(dgvEDICodes, "ICD10");
         }
         public frmICD10Codes()
         {
@@ -71,7 +72,7 @@ namespace PschyHealth
 
         private void dgvEDICodes_SelectionChanged_1(object sender, EventArgs e)
         {
-         //   cMethods.fillTextbox(groupBox1, dgvEDICodes, "EDI", false);
+            cMethods.fillTextbox(groupBox1, dgvEDICodes, "ICD10Codes", false);
         }
 
         private void pbMic_Click(object sender, EventArgs e)
@@ -84,6 +85,99 @@ namespace PschyHealth
             ucToolbar uc = new ucToolbar();
             uc.Dock = DockStyle.Fill;
             this.Controls.Add(uc);
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            btnCancel.Show();
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvEDICodes, "ICD10Codes", true, true);
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            btnAdd.Enabled = false;
+            // btnArchive.Enabled = false;
+            dgvEDICodes.Enabled = false;
+            button = "add";
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            btnCancel.Show();
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvEDICodes, "ICD10Codes", true, false);
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            btnAdd.Enabled = false;
+            // btnArchive.Enabled = false;
+            dgvEDICodes.Enabled = false;
+            button = "add";
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            btnCancel.Show();
+            btnConfirm.Show();
+            cMethods.fillTextbox(groupBox1, dgvEDICodes, "ICD10Codes", false, false);
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            btnAdd.Enabled = false;
+            // btnArchive.Enabled = false;
+            dgvEDICodes.Enabled = false;
+            button = "add";
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            pnlDBLoadingMessege uc = new pnlDBLoadingMessege();
+            uc.Hide();
+            uc.Parent = frmMainPage.ActiveForm;
+            uc.Left = 500;
+            uc.Top = 300;
+            uc.Show();
+            uc.BringToFront();
+            Application.DoEvents();
+            String field;
+            String value;
+            if (dgvEDICodes.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dgvEDICodes.SelectedRows[0].Index;
+
+                String rowID = dgvEDICodes[0, selectedIndex].Value.ToString();
+                cMethods.getFieldsAndValues(out field, out value, groupBox1, "ICD10Codes");
+                if (button == "add")
+                    cMethods.add("ICD10Codes", field, value);
+                else if (button == "edit")
+                    cMethods.edit("ICD10Codes", field, value, " Code = '" + dgvEDICodes.Rows[selectedIndex].Cells["Code"].Value.ToString() + "'");
+                else if (button == "delete")
+                    cMethods.delete("ICD10Codes", "Code = '" + rowID + "'");
+                
+
+            }
+            uc.Hide();
+            btnDelete.Enabled = true;
+            btnEdit.Enabled = true;
+            btnAdd.Enabled = true;
+            //btnArchive.Enabled = true;
+            dgvEDICodes.Enabled = true;
+            btnConfirm.Hide();
+            btnCancel.Hide();
+            filter();
+        }
+        private void filter()
+        {
+            cMethods.fillDGV(dgvEDICodes, "DiagnosticCodes");
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            btnConfirm.Hide();
+            btnCancel.Hide();
+            btnDelete.Enabled = true;
+            btnEdit.Enabled = true;
+            btnAdd.Enabled = true;
+            dgvEDICodes.Enabled = true;
+
+            filter();
         }
     }
 }

@@ -59,6 +59,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbClientMedical_Aid = new MetroFramework.Controls.MetroComboBox();
             this.cmbClientLanguage = new MetroFramework.Controls.MetroComboBox();
             this.txtClientCity_Code = new MetroFramework.Controls.MetroTextBox();
             this.txtClientCity = new MetroFramework.Controls.MetroTextBox();
@@ -66,25 +67,24 @@
             this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             this.lblEmail = new MetroFramework.Controls.MetroLabel();
             this.txtClientEmail = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
             this.txtClientWork_Address = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.txtClientDate_Of_Birth = new MetroFramework.Controls.MetroDateTime();
+            this.cmbClientDate_Of_Birth = new MetroFramework.Controls.MetroDateTime();
             this.txtClientAccount_Number = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.dgvClients = new MetroFramework.Controls.MetroGrid();
             this.pbMic = new System.Windows.Forms.PictureBox();
             this.gbDependants = new System.Windows.Forms.GroupBox();
-            this.cmbClientReferal = new MetroFramework.Controls.MetroComboBox();
-            this.txtClientReferal_Practice = new MetroFramework.Controls.MetroTextBox();
+            this.txtClientReferral = new MetroFramework.Controls.MetroTextBox();
+            this.txtClientReferral_Practice = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.txtClientDependant_Code = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
-            this.txtclientDependant_Birthday = new MetroFramework.Controls.MetroDateTime();
+            this.cmbClientDependant_Birthday = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
-            this.txtClientDependantSurname = new MetroFramework.Controls.MetroTextBox();
+            this.txtClientDependant_Surname = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
             this.txtClientDependant_Full_Name = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
@@ -98,7 +98,6 @@
             this.btnArchiv = new MetroFramework.Controls.MetroButton();
             this.btnConnfirm = new MetroFramework.Controls.MetroButton();
             this.btnCanccel = new MetroFramework.Controls.MetroButton();
-            this.txtClientDate_Finished = new MetroFramework.Controls.MetroDateTime();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
@@ -183,7 +182,6 @@
             this.txtClientMaritial_Status.WaterMark = "Enter Maritial Status";
             this.txtClientMaritial_Status.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientMaritial_Status.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientMaritial_Status.Leave += new System.EventHandler(this.txtClientMaritial_Status_Leave);
             // 
             // txtClientOccupation
             // 
@@ -216,7 +214,6 @@
             this.txtClientOccupation.WaterMark = "Enter Occupation";
             this.txtClientOccupation.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientOccupation.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientOccupation.Leave += new System.EventHandler(this.txtClientOccupation_Leave);
             // 
             // txtClientMobile_Cellphone_Number
             // 
@@ -249,7 +246,6 @@
             this.txtClientMobile_Cellphone_Number.WaterMark = "(___) ___-____";
             this.txtClientMobile_Cellphone_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientMobile_Cellphone_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientMobile_Cellphone_Number.Leave += new System.EventHandler(this.txtClientMobile_Cellphone_Number_Leave);
             // 
             // txtClientHome_Telephone_Number
             // 
@@ -282,7 +278,6 @@
             this.txtClientHome_Telephone_Number.WaterMark = "(___) ___-____";
             this.txtClientHome_Telephone_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientHome_Telephone_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientHome_Telephone_Number.Leave += new System.EventHandler(this.txtClientHome_Telephone_Number_Leave);
             // 
             // txtClientAddress
             // 
@@ -316,7 +311,6 @@
             this.txtClientAddress.WaterMark = "Enter Address";
             this.txtClientAddress.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientAddress.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientAddress.Leave += new System.EventHandler(this.txtClientAddress_Leave);
             // 
             // cmbClientCriteria
             // 
@@ -426,7 +420,6 @@
             this.txtClientSurname.WaterMark = "Enter Surname";
             this.txtClientSurname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientSurname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientSurname.Leave += new System.EventHandler(this.txtClientSurname_Leave);
             // 
             // txtClientFirst_Name
             // 
@@ -459,7 +452,6 @@
             this.txtClientFirst_Name.WaterMark = "Enter First Name";
             this.txtClientFirst_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientFirst_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientFirst_Name.Leave += new System.EventHandler(this.txtClientFirst_Name_Leave);
             // 
             // txtClientID
             // 
@@ -493,7 +485,6 @@
             this.txtClientID.WaterMark = "Enter ID Number";
             this.txtClientID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientID.Leave += new System.EventHandler(this.txtClientID_Leave);
             // 
             // metroLabel9
             // 
@@ -652,7 +643,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtClientDate_Finished);
+            this.groupBox1.Controls.Add(this.cmbClientMedical_Aid);
             this.groupBox1.Controls.Add(this.cmbClientLanguage);
             this.groupBox1.Controls.Add(this.txtClientCity_Code);
             this.groupBox1.Controls.Add(this.txtClientCity);
@@ -660,11 +651,10 @@
             this.groupBox1.Controls.Add(this.metroLabel24);
             this.groupBox1.Controls.Add(this.lblEmail);
             this.groupBox1.Controls.Add(this.txtClientEmail);
-            this.groupBox1.Controls.Add(this.metroLabel21);
             this.groupBox1.Controls.Add(this.txtClientWork_Address);
             this.groupBox1.Controls.Add(this.metroLabel14);
             this.groupBox1.Controls.Add(this.metroLabel13);
-            this.groupBox1.Controls.Add(this.txtClientDate_Of_Birth);
+            this.groupBox1.Controls.Add(this.cmbClientDate_Of_Birth);
             this.groupBox1.Controls.Add(this.txtClientAccount_Number);
             this.groupBox1.Controls.Add(this.metroLabel10);
             this.groupBox1.Controls.Add(this.cmbClientEthnic_Group);
@@ -689,18 +679,36 @@
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Location = new System.Drawing.Point(5, 62);
+            this.groupBox1.Location = new System.Drawing.Point(5, 67);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(713, 478);
+            this.groupBox1.Size = new System.Drawing.Size(713, 473);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Details";
+            // 
+            // cmbClientMedical_Aid
+            // 
+            this.cmbClientMedical_Aid.Enabled = false;
+            this.cmbClientMedical_Aid.FormattingEnabled = true;
+            this.cmbClientMedical_Aid.ItemHeight = 23;
+            this.cmbClientMedical_Aid.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbClientMedical_Aid.Location = new System.Drawing.Point(481, 53);
+            this.cmbClientMedical_Aid.Name = "cmbClientMedical_Aid";
+            this.cmbClientMedical_Aid.Size = new System.Drawing.Size(150, 29);
+            this.cmbClientMedical_Aid.TabIndex = 64;
+            this.cmbClientMedical_Aid.UseSelectable = true;
+            this.cmbClientMedical_Aid.UseStyleColors = true;
             // 
             // cmbClientLanguage
             // 
             this.cmbClientLanguage.Enabled = false;
             this.cmbClientLanguage.FormattingEnabled = true;
             this.cmbClientLanguage.ItemHeight = 23;
+            this.cmbClientLanguage.Items.AddRange(new object[] {
+            "English",
+            "Afrikaans"});
             this.cmbClientLanguage.Location = new System.Drawing.Point(481, 82);
             this.cmbClientLanguage.Margin = new System.Windows.Forms.Padding(2);
             this.cmbClientLanguage.Name = "cmbClientLanguage";
@@ -708,6 +716,7 @@
             this.cmbClientLanguage.TabIndex = 63;
             this.cmbClientLanguage.UseSelectable = true;
             this.cmbClientLanguage.UseStyleColors = true;
+            this.cmbClientLanguage.SelectedIndexChanged += new System.EventHandler(this.cmbClientLanguage_SelectedIndexChanged);
             // 
             // txtClientCity_Code
             // 
@@ -715,10 +724,10 @@
             // 
             // 
             this.txtClientCity_Code.CustomButton.Image = null;
-            this.txtClientCity_Code.CustomButton.Location = new System.Drawing.Point(131, 2);
+            this.txtClientCity_Code.CustomButton.Location = new System.Drawing.Point(133, 2);
             this.txtClientCity_Code.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtClientCity_Code.CustomButton.Name = "";
-            this.txtClientCity_Code.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.txtClientCity_Code.CustomButton.Size = new System.Drawing.Size(13, 13);
             this.txtClientCity_Code.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientCity_Code.CustomButton.TabIndex = 1;
             this.txtClientCity_Code.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -735,14 +744,13 @@
             this.txtClientCity_Code.SelectedText = "";
             this.txtClientCity_Code.SelectionLength = 0;
             this.txtClientCity_Code.SelectionStart = 0;
-            this.txtClientCity_Code.Size = new System.Drawing.Size(149, 20);
+            this.txtClientCity_Code.Size = new System.Drawing.Size(149, 18);
             this.txtClientCity_Code.TabIndex = 62;
             this.txtClientCity_Code.UseSelectable = true;
             this.txtClientCity_Code.UseStyleColors = true;
             this.txtClientCity_Code.WaterMark = "Enter client city code";
             this.txtClientCity_Code.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientCity_Code.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientCity_Code.Leave += new System.EventHandler(this.txtClientCity_Code_Leave);
             // 
             // txtClientCity
             // 
@@ -750,10 +758,10 @@
             // 
             // 
             this.txtClientCity.CustomButton.Image = null;
-            this.txtClientCity.CustomButton.Location = new System.Drawing.Point(132, 2);
+            this.txtClientCity.CustomButton.Location = new System.Drawing.Point(134, 2);
             this.txtClientCity.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtClientCity.CustomButton.Name = "";
-            this.txtClientCity.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.txtClientCity.CustomButton.Size = new System.Drawing.Size(13, 13);
             this.txtClientCity.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientCity.CustomButton.TabIndex = 1;
             this.txtClientCity.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -770,14 +778,13 @@
             this.txtClientCity.SelectedText = "";
             this.txtClientCity.SelectionLength = 0;
             this.txtClientCity.SelectionStart = 0;
-            this.txtClientCity.Size = new System.Drawing.Size(150, 20);
+            this.txtClientCity.Size = new System.Drawing.Size(150, 18);
             this.txtClientCity.TabIndex = 61;
             this.txtClientCity.UseSelectable = true;
             this.txtClientCity.UseStyleColors = true;
             this.txtClientCity.WaterMark = "Enter the clients current city";
             this.txtClientCity.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientCity.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientCity.Leave += new System.EventHandler(this.txtClientCity_Leave);
             // 
             // metroLabel26
             // 
@@ -821,10 +828,10 @@
             // 
             // 
             this.txtClientEmail.CustomButton.Image = null;
-            this.txtClientEmail.CustomButton.Location = new System.Drawing.Point(132, 2);
+            this.txtClientEmail.CustomButton.Location = new System.Drawing.Point(134, 2);
             this.txtClientEmail.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtClientEmail.CustomButton.Name = "";
-            this.txtClientEmail.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.txtClientEmail.CustomButton.Size = new System.Drawing.Size(13, 13);
             this.txtClientEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientEmail.CustomButton.TabIndex = 1;
             this.txtClientEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -841,29 +848,13 @@
             this.txtClientEmail.SelectedText = "";
             this.txtClientEmail.SelectionLength = 0;
             this.txtClientEmail.SelectionStart = 0;
-            this.txtClientEmail.Size = new System.Drawing.Size(150, 20);
+            this.txtClientEmail.Size = new System.Drawing.Size(150, 18);
             this.txtClientEmail.TabIndex = 55;
             this.txtClientEmail.UseSelectable = true;
             this.txtClientEmail.UseStyleColors = true;
             this.txtClientEmail.WaterMark = "Enter client e-mail address";
             this.txtClientEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientEmail.Leave += new System.EventHandler(this.txtClientEmail_Leave);
-            // 
-            // metroLabel21
-            // 
-            this.metroLabel21.AutoSize = true;
-            this.metroLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel21.Enabled = false;
-            this.metroLabel21.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel21.ForeColor = System.Drawing.Color.White;
-            this.metroLabel21.Location = new System.Drawing.Point(332, 53);
-            this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(137, 19);
-            this.metroLabel21.TabIndex = 54;
-            this.metroLabel21.Text = "Completed payment:";
-            this.metroLabel21.UseStyleColors = true;
-            this.metroLabel21.WrapToLine = true;
             // 
             // txtClientWork_Address
             // 
@@ -896,7 +887,6 @@
             this.txtClientWork_Address.WaterMark = "Enter work address";
             this.txtClientWork_Address.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientWork_Address.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientWork_Address.Leave += new System.EventHandler(this.txtClientWork_Address_Leave);
             // 
             // metroLabel14
             // 
@@ -924,16 +914,17 @@
             this.metroLabel13.Text = "Language:";
             this.metroLabel13.UseStyleColors = true;
             // 
-            // txtClientDate_Of_Birth
+            // cmbClientDate_Of_Birth
             // 
-            this.txtClientDate_Of_Birth.Enabled = false;
-            this.txtClientDate_Of_Birth.Location = new System.Drawing.Point(157, 133);
-            this.txtClientDate_Of_Birth.Margin = new System.Windows.Forms.Padding(2);
-            this.txtClientDate_Of_Birth.MinimumSize = new System.Drawing.Size(0, 29);
-            this.txtClientDate_Of_Birth.Name = "txtClientDate_Of_Birth";
-            this.txtClientDate_Of_Birth.Size = new System.Drawing.Size(151, 29);
-            this.txtClientDate_Of_Birth.TabIndex = 48;
-            this.txtClientDate_Of_Birth.UseStyleColors = true;
+            this.cmbClientDate_Of_Birth.Enabled = false;
+            this.cmbClientDate_Of_Birth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cmbClientDate_Of_Birth.Location = new System.Drawing.Point(157, 133);
+            this.cmbClientDate_Of_Birth.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbClientDate_Of_Birth.MinimumSize = new System.Drawing.Size(0, 29);
+            this.cmbClientDate_Of_Birth.Name = "cmbClientDate_Of_Birth";
+            this.cmbClientDate_Of_Birth.Size = new System.Drawing.Size(151, 29);
+            this.cmbClientDate_Of_Birth.TabIndex = 48;
+            this.cmbClientDate_Of_Birth.UseStyleColors = true;
             // 
             // txtClientAccount_Number
             // 
@@ -967,7 +958,6 @@
             this.txtClientAccount_Number.UseStyleColors = true;
             this.txtClientAccount_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientAccount_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientAccount_Number.Leave += new System.EventHandler(this.txtClientAccount_Number_Leave);
             // 
             // metroLabel10
             // 
@@ -1045,15 +1035,15 @@
             // 
             // gbDependants
             // 
-            this.gbDependants.Controls.Add(this.cmbClientReferal);
-            this.gbDependants.Controls.Add(this.txtClientReferal_Practice);
+            this.gbDependants.Controls.Add(this.txtClientReferral);
+            this.gbDependants.Controls.Add(this.txtClientReferral_Practice);
             this.gbDependants.Controls.Add(this.metroLabel23);
             this.gbDependants.Controls.Add(this.metroLabel20);
             this.gbDependants.Controls.Add(this.txtClientDependant_Code);
             this.gbDependants.Controls.Add(this.metroLabel19);
-            this.gbDependants.Controls.Add(this.txtclientDependant_Birthday);
+            this.gbDependants.Controls.Add(this.cmbClientDependant_Birthday);
             this.gbDependants.Controls.Add(this.metroLabel18);
-            this.gbDependants.Controls.Add(this.txtClientDependantSurname);
+            this.gbDependants.Controls.Add(this.txtClientDependant_Surname);
             this.gbDependants.Controls.Add(this.metroLabel16);
             this.gbDependants.Controls.Add(this.txtClientDependant_Full_Name);
             this.gbDependants.Controls.Add(this.metroLabel15);
@@ -1066,52 +1056,70 @@
             this.gbDependants.TabStop = false;
             this.gbDependants.Text = "Dependants";
             // 
-            // cmbClientReferal
-            // 
-            this.cmbClientReferal.Enabled = false;
-            this.cmbClientReferal.FormattingEnabled = true;
-            this.cmbClientReferal.ItemHeight = 23;
-            this.cmbClientReferal.Location = new System.Drawing.Point(112, 156);
-            this.cmbClientReferal.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbClientReferal.Name = "cmbClientReferal";
-            this.cmbClientReferal.Size = new System.Drawing.Size(151, 29);
-            this.cmbClientReferal.TabIndex = 103;
-            this.cmbClientReferal.UseSelectable = true;
-            this.cmbClientReferal.UseStyleColors = true;
-            // 
-            // txtClientReferal_Practice
+            // txtClientReferral
             // 
             // 
             // 
             // 
-            this.txtClientReferal_Practice.CustomButton.Image = null;
-            this.txtClientReferal_Practice.CustomButton.Location = new System.Drawing.Point(133, 2);
-            this.txtClientReferal_Practice.CustomButton.Margin = new System.Windows.Forms.Padding(2);
-            this.txtClientReferal_Practice.CustomButton.Name = "";
-            this.txtClientReferal_Practice.CustomButton.Size = new System.Drawing.Size(15, 15);
-            this.txtClientReferal_Practice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtClientReferal_Practice.CustomButton.TabIndex = 1;
-            this.txtClientReferal_Practice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtClientReferal_Practice.CustomButton.UseSelectable = true;
-            this.txtClientReferal_Practice.CustomButton.Visible = false;
-            this.txtClientReferal_Practice.Enabled = false;
-            this.txtClientReferal_Practice.Lines = new string[0];
-            this.txtClientReferal_Practice.Location = new System.Drawing.Point(112, 190);
-            this.txtClientReferal_Practice.Margin = new System.Windows.Forms.Padding(2);
-            this.txtClientReferal_Practice.MaxLength = 32767;
-            this.txtClientReferal_Practice.Name = "txtClientReferal_Practice";
-            this.txtClientReferal_Practice.PasswordChar = '\0';
-            this.txtClientReferal_Practice.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtClientReferal_Practice.SelectedText = "";
-            this.txtClientReferal_Practice.SelectionLength = 0;
-            this.txtClientReferal_Practice.SelectionStart = 0;
-            this.txtClientReferal_Practice.Size = new System.Drawing.Size(151, 20);
-            this.txtClientReferal_Practice.TabIndex = 55;
-            this.txtClientReferal_Practice.UseSelectable = true;
-            this.txtClientReferal_Practice.UseStyleColors = true;
-            this.txtClientReferal_Practice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtClientReferal_Practice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientReferal_Practice.Leave += new System.EventHandler(this.txtClientReferal_Practice_Leave);
+            this.txtClientReferral.CustomButton.Image = null;
+            this.txtClientReferral.CustomButton.Location = new System.Drawing.Point(130, 2);
+            this.txtClientReferral.CustomButton.Name = "";
+            this.txtClientReferral.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.txtClientReferral.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtClientReferral.CustomButton.TabIndex = 1;
+            this.txtClientReferral.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtClientReferral.CustomButton.UseSelectable = true;
+            this.txtClientReferral.CustomButton.Visible = false;
+            this.txtClientReferral.Enabled = false;
+            this.txtClientReferral.Lines = new string[0];
+            this.txtClientReferral.Location = new System.Drawing.Point(111, 158);
+            this.txtClientReferral.MaxLength = 32767;
+            this.txtClientReferral.Name = "txtClientReferral";
+            this.txtClientReferral.PasswordChar = '\0';
+            this.txtClientReferral.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtClientReferral.SelectedText = "";
+            this.txtClientReferral.SelectionLength = 0;
+            this.txtClientReferral.SelectionStart = 0;
+            this.txtClientReferral.Size = new System.Drawing.Size(150, 22);
+            this.txtClientReferral.TabIndex = 56;
+            this.txtClientReferral.UseSelectable = true;
+            this.txtClientReferral.UseStyleColors = true;
+            this.txtClientReferral.WaterMark = "Enter refferal";
+            this.txtClientReferral.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtClientReferral.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtClientReferral_Practice
+            // 
+            // 
+            // 
+            // 
+            this.txtClientReferral_Practice.CustomButton.Image = null;
+            this.txtClientReferral_Practice.CustomButton.Location = new System.Drawing.Point(135, 2);
+            this.txtClientReferral_Practice.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClientReferral_Practice.CustomButton.Name = "";
+            this.txtClientReferral_Practice.CustomButton.Size = new System.Drawing.Size(13, 13);
+            this.txtClientReferral_Practice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtClientReferral_Practice.CustomButton.TabIndex = 1;
+            this.txtClientReferral_Practice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtClientReferral_Practice.CustomButton.UseSelectable = true;
+            this.txtClientReferral_Practice.CustomButton.Visible = false;
+            this.txtClientReferral_Practice.Enabled = false;
+            this.txtClientReferral_Practice.Lines = new string[0];
+            this.txtClientReferral_Practice.Location = new System.Drawing.Point(112, 190);
+            this.txtClientReferral_Practice.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClientReferral_Practice.MaxLength = 32767;
+            this.txtClientReferral_Practice.Name = "txtClientReferral_Practice";
+            this.txtClientReferral_Practice.PasswordChar = '\0';
+            this.txtClientReferral_Practice.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtClientReferral_Practice.SelectedText = "";
+            this.txtClientReferral_Practice.SelectionLength = 0;
+            this.txtClientReferral_Practice.SelectionStart = 0;
+            this.txtClientReferral_Practice.Size = new System.Drawing.Size(151, 18);
+            this.txtClientReferral_Practice.TabIndex = 55;
+            this.txtClientReferral_Practice.UseSelectable = true;
+            this.txtClientReferral_Practice.UseStyleColors = true;
+            this.txtClientReferral_Practice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtClientReferral_Practice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel23
             // 
@@ -1170,7 +1178,6 @@
             this.txtClientDependant_Code.WaterMark = "Enter dependant code";
             this.txtClientDependant_Code.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientDependant_Code.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientDependant_Code.Leave += new System.EventHandler(this.txtClientDependant_Code_Leave);
             // 
             // metroLabel19
             // 
@@ -1186,16 +1193,17 @@
             this.metroLabel19.Text = "Code:";
             this.metroLabel19.UseStyleColors = true;
             // 
-            // txtclientDependant_Birthday
+            // cmbClientDependant_Birthday
             // 
-            this.txtclientDependant_Birthday.Enabled = false;
-            this.txtclientDependant_Birthday.Location = new System.Drawing.Point(111, 90);
-            this.txtclientDependant_Birthday.Margin = new System.Windows.Forms.Padding(2);
-            this.txtclientDependant_Birthday.MinimumSize = new System.Drawing.Size(0, 29);
-            this.txtclientDependant_Birthday.Name = "txtclientDependant_Birthday";
-            this.txtclientDependant_Birthday.Size = new System.Drawing.Size(153, 29);
-            this.txtclientDependant_Birthday.TabIndex = 49;
-            this.txtclientDependant_Birthday.UseStyleColors = true;
+            this.cmbClientDependant_Birthday.Enabled = false;
+            this.cmbClientDependant_Birthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cmbClientDependant_Birthday.Location = new System.Drawing.Point(111, 90);
+            this.cmbClientDependant_Birthday.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbClientDependant_Birthday.MinimumSize = new System.Drawing.Size(0, 29);
+            this.cmbClientDependant_Birthday.Name = "cmbClientDependant_Birthday";
+            this.cmbClientDependant_Birthday.Size = new System.Drawing.Size(153, 29);
+            this.cmbClientDependant_Birthday.TabIndex = 49;
+            this.cmbClientDependant_Birthday.UseStyleColors = true;
             // 
             // metroLabel18
             // 
@@ -1210,38 +1218,37 @@
             this.metroLabel18.Text = "Birthday:";
             this.metroLabel18.UseStyleColors = true;
             // 
-            // txtClientDependantSurname
+            // txtClientDependant_Surname
             // 
             // 
             // 
             // 
-            this.txtClientDependantSurname.CustomButton.Image = null;
-            this.txtClientDependantSurname.CustomButton.Location = new System.Drawing.Point(130, 2);
-            this.txtClientDependantSurname.CustomButton.Name = "";
-            this.txtClientDependantSurname.CustomButton.Size = new System.Drawing.Size(17, 17);
-            this.txtClientDependantSurname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtClientDependantSurname.CustomButton.TabIndex = 1;
-            this.txtClientDependantSurname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtClientDependantSurname.CustomButton.UseSelectable = true;
-            this.txtClientDependantSurname.CustomButton.Visible = false;
-            this.txtClientDependantSurname.Enabled = false;
-            this.txtClientDependantSurname.Lines = new string[0];
-            this.txtClientDependantSurname.Location = new System.Drawing.Point(113, 63);
-            this.txtClientDependantSurname.MaxLength = 32767;
-            this.txtClientDependantSurname.Name = "txtClientDependantSurname";
-            this.txtClientDependantSurname.PasswordChar = '\0';
-            this.txtClientDependantSurname.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtClientDependantSurname.SelectedText = "";
-            this.txtClientDependantSurname.SelectionLength = 0;
-            this.txtClientDependantSurname.SelectionStart = 0;
-            this.txtClientDependantSurname.Size = new System.Drawing.Size(150, 22);
-            this.txtClientDependantSurname.TabIndex = 47;
-            this.txtClientDependantSurname.UseSelectable = true;
-            this.txtClientDependantSurname.UseStyleColors = true;
-            this.txtClientDependantSurname.WaterMark = "Enter surname";
-            this.txtClientDependantSurname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtClientDependantSurname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientDependantSurname.Leave += new System.EventHandler(this.txtClientDependantSurname_Leave);
+            this.txtClientDependant_Surname.CustomButton.Image = null;
+            this.txtClientDependant_Surname.CustomButton.Location = new System.Drawing.Point(130, 2);
+            this.txtClientDependant_Surname.CustomButton.Name = "";
+            this.txtClientDependant_Surname.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.txtClientDependant_Surname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtClientDependant_Surname.CustomButton.TabIndex = 1;
+            this.txtClientDependant_Surname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtClientDependant_Surname.CustomButton.UseSelectable = true;
+            this.txtClientDependant_Surname.CustomButton.Visible = false;
+            this.txtClientDependant_Surname.Enabled = false;
+            this.txtClientDependant_Surname.Lines = new string[0];
+            this.txtClientDependant_Surname.Location = new System.Drawing.Point(113, 63);
+            this.txtClientDependant_Surname.MaxLength = 32767;
+            this.txtClientDependant_Surname.Name = "txtClientDependant_Surname";
+            this.txtClientDependant_Surname.PasswordChar = '\0';
+            this.txtClientDependant_Surname.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtClientDependant_Surname.SelectedText = "";
+            this.txtClientDependant_Surname.SelectionLength = 0;
+            this.txtClientDependant_Surname.SelectionStart = 0;
+            this.txtClientDependant_Surname.Size = new System.Drawing.Size(150, 22);
+            this.txtClientDependant_Surname.TabIndex = 47;
+            this.txtClientDependant_Surname.UseSelectable = true;
+            this.txtClientDependant_Surname.UseStyleColors = true;
+            this.txtClientDependant_Surname.WaterMark = "Enter surname";
+            this.txtClientDependant_Surname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtClientDependant_Surname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel16
             // 
@@ -1287,7 +1294,6 @@
             this.txtClientDependant_Full_Name.WaterMark = "Enter full name";
             this.txtClientDependant_Full_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientDependant_Full_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtClientDependant_Full_Name.Leave += new System.EventHandler(this.txtClientDependant_Full_Name_Leave);
             // 
             // metroLabel15
             // 
@@ -1421,22 +1427,11 @@
             this.btnCanccel.UseStyleColors = true;
             this.btnCanccel.Click += new System.EventHandler(this.btnCanccel_Click);
             // 
-            // txtClientDate_Finished
-            // 
-            this.txtClientDate_Finished.Enabled = false;
-            this.txtClientDate_Finished.Location = new System.Drawing.Point(481, 49);
-            this.txtClientDate_Finished.Margin = new System.Windows.Forms.Padding(2);
-            this.txtClientDate_Finished.MinimumSize = new System.Drawing.Size(0, 29);
-            this.txtClientDate_Finished.Name = "txtClientDate_Finished";
-            this.txtClientDate_Finished.Size = new System.Drawing.Size(151, 29);
-            this.txtClientDate_Finished.TabIndex = 64;
-            this.txtClientDate_Finished.UseStyleColors = true;
-            // 
             // frmClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1102, 747);
+            this.ClientSize = new System.Drawing.Size(1102, 772);
             this.Controls.Add(this.btnCanccel);
             this.Controls.Add(this.btnConnfirm);
             this.Controls.Add(this.btnArchiv);
@@ -1508,19 +1503,18 @@
         private MetroFramework.Controls.MetroTextBox txtClientWork_Address;
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroLabel metroLabel13;
-        private MetroFramework.Controls.MetroDateTime txtClientDate_Of_Birth;
+        private MetroFramework.Controls.MetroDateTime cmbClientDate_Of_Birth;
         private MetroFramework.Controls.MetroTextBox txtClientAccount_Number;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel20;
         private MetroFramework.Controls.MetroTextBox txtClientDependant_Code;
         private MetroFramework.Controls.MetroLabel metroLabel19;
-        private MetroFramework.Controls.MetroDateTime txtclientDependant_Birthday;
+        private MetroFramework.Controls.MetroDateTime cmbClientDependant_Birthday;
         private MetroFramework.Controls.MetroLabel metroLabel18;
-        private MetroFramework.Controls.MetroTextBox txtClientDependantSurname;
+        private MetroFramework.Controls.MetroTextBox txtClientDependant_Surname;
         private MetroFramework.Controls.MetroLabel metroLabel16;
         private MetroFramework.Controls.MetroTextBox txtClientDependant_Full_Name;
         private MetroFramework.Controls.MetroLabel metroLabel15;
-        private MetroFramework.Controls.MetroLabel metroLabel21;
         private MetroFramework.Controls.MetroLabel lblBack;
         private MetroFramework.Controls.MetroLabel metroLabel22;
         public MetroFramework.Controls.MetroComboBox cmbClientSymbol;
@@ -1531,9 +1525,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel24;
         private MetroFramework.Controls.MetroLabel lblEmail;
         private MetroFramework.Controls.MetroTextBox txtClientEmail;
-        private MetroFramework.Controls.MetroTextBox txtClientReferal_Practice;
+        private MetroFramework.Controls.MetroTextBox txtClientReferral_Practice;
         private MetroFramework.Controls.MetroLabel metroLabel23;
-        private MetroFramework.Controls.MetroComboBox cmbClientReferal;
         private MetroFramework.Controls.MetroComboBox cmbClientLanguage;
         private MetroFramework.Controls.MetroButton btnAddExClient;
         private MetroFramework.Controls.MetroButton btnUpdate;
@@ -1542,6 +1535,7 @@
         private MetroFramework.Controls.MetroButton btnArchiv;
         private MetroFramework.Controls.MetroButton btnCanccel;
         private MetroFramework.Controls.MetroButton btnConnfirm;
-        private MetroFramework.Controls.MetroDateTime txtClientDate_Finished;
+        private MetroFramework.Controls.MetroTextBox txtClientReferral;
+        private MetroFramework.Controls.MetroComboBox cmbClientMedical_Aid;
     }
 }
