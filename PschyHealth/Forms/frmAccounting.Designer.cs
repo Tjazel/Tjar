@@ -418,7 +418,7 @@
             // 
             // btnArchive
             // 
-            this.btnArchive.Location = new System.Drawing.Point(625, 622);
+            this.btnArchive.Location = new System.Drawing.Point(307, 608);
             this.btnArchive.Margin = new System.Windows.Forms.Padding(2);
             this.btnArchive.Name = "btnArchive";
             this.btnArchive.Size = new System.Drawing.Size(91, 42);
@@ -430,7 +430,7 @@
             // 
             // btnDeleteAccount
             // 
-            this.btnDeleteAccount.Location = new System.Drawing.Point(530, 622);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(212, 608);
             this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(91, 42);
@@ -442,7 +442,7 @@
             // 
             // btnUpdatAccount
             // 
-            this.btnUpdatAccount.Location = new System.Drawing.Point(434, 622);
+            this.btnUpdatAccount.Location = new System.Drawing.Point(117, 608);
             this.btnUpdatAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdatAccount.Name = "btnUpdatAccount";
             this.btnUpdatAccount.Size = new System.Drawing.Size(91, 42);
@@ -454,7 +454,7 @@
             // 
             // btnAddAcount
             // 
-            this.btnAddAcount.Location = new System.Drawing.Point(335, 622);
+            this.btnAddAcount.Location = new System.Drawing.Point(22, 608);
             this.btnAddAcount.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddAcount.Name = "btnAddAcount";
             this.btnAddAcount.Size = new System.Drawing.Size(91, 42);

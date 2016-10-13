@@ -70,7 +70,6 @@
             this.msmConsult = new MetroFramework.Components.MetroStyleManager(this.components);
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnConfirm = new MetroFramework.Controls.MetroButton();
-            this.btnArchive = new MetroFramework.Controls.MetroButton();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultations)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -708,18 +707,6 @@
             this.btnConfirm.UseStyleColors = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click_1);
             // 
-            // btnArchive
-            // 
-            this.btnArchive.Location = new System.Drawing.Point(852, 639);
-            this.btnArchive.Margin = new System.Windows.Forms.Padding(2);
-            this.btnArchive.Name = "btnArchive";
-            this.btnArchive.Size = new System.Drawing.Size(91, 42);
-            this.btnArchive.TabIndex = 122;
-            this.btnArchive.Text = "Archive";
-            this.btnArchive.UseSelectable = true;
-            this.btnArchive.UseStyleColors = true;
-            this.btnArchive.Click += new System.EventHandler(this.btnArchive_Click_1);
-            // 
             // frmConsultations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -727,7 +714,6 @@
             this.ClientSize = new System.Drawing.Size(1034, 721);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.btnArchive);
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -795,7 +781,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel12;
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroButton btnConfirm;
-        private MetroFramework.Controls.MetroButton btnArchive;
         private MetroFramework.Controls.MetroComboBox cmbConsultationsDependant_Name;
     }
 }
