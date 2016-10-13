@@ -17,6 +17,7 @@ namespace PschyHealth
     public partial class frmClients : MetroForm
 
     {
+        Boolean validFields = true;
         String correctSearch = "";
         String button = "";
         //Constants
@@ -175,50 +176,50 @@ namespace PschyHealth
 
        
 
-        private void btnConfirm_Click_1(object sender, EventArgs e)
-        {
-            String field, field2;
-            String value, value2;
-            if (dgvClients.SelectedRows.Count > 0)
-            {
-                int selectedIndex = dgvClients.SelectedRows[0].Index;
+        //private void btnConfirm_Click_1(object sender, EventArgs e)
+        //{
+        //    String field, field2;
+        //    String value, value2;
+        //    if (dgvClients.SelectedRows.Count > 0)
+        //    {
+        //        int selectedIndex = dgvClients.SelectedRows[0].Index;
 
-                String rowID = dgvClients[0, selectedIndex].Value.ToString();
-                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Client");
-                cMethods.getFieldsAndValues(out field2, out value2, gbDependants, "Client");
-                if (button == "add")
-                    cMethods.add("Clients", field + "," + field2, value + "," + value2);
-                else if (button == "edit")
-                    cMethods.edit("Clients", field, value, " ID = '" + dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString() + "'");
-                else if (button == "delete")
-                    cMethods.delete("Clients", "ID = '" + rowID + "'");
-                else if (button == "archive")
-                {
+        //        String rowID = dgvClients[0, selectedIndex].Value.ToString();
+        //        cMethods.getFieldsAndValues(out field, out value, groupBox1, "Client");
+        //        cMethods.getFieldsAndValues(out field2, out value2, gbDependants, "Client");
+        //        if (button == "add")
+        //            cMethods.add("Clients", field + "," + field2, value + "," + value2);
+        //        else if (button == "edit")
+        //            cMethods.edit("Clients", field, value, " ID = '" + dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString() + "'");
+        //        else if (button == "delete")
+        //            cMethods.delete("Clients", "ID = '" + rowID + "'");
+        //        else if (button == "archive")
+        //        {
                     
-                    cMethods.Archive(dgvClients, "Clients", "ID", dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString());
-                }
+        //            cMethods.Archive(dgvClients, "Clients", "ID", dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString());
+        //        }
 
-            }
-            btnAddExClient.Enabled = true;
-            btnaddNewclient.Enabled = true;
-            btnUpdate.Enabled = true;
-            btnDelete.Enabled = true;
-            btnArchiv.Enabled = true;
-            dgvClients.Enabled = true;
-            btnConnfirm.Hide();
-            btnCanccel.Hide();
-            filter();
-        }
+        //    }
+        //    btnAddExClient.Enabled = true;
+        //    btnaddNewclient.Enabled = true;
+        //    btnUpdate.Enabled = true;
+        //    btnDelete.Enabled = true;
+        //    btnArchiv.Enabled = true;
+        //    dgvClients.Enabled = true;
+        //    btnConnfirm.Hide();
+        //    btnCanccel.Hide();
+        //    filter();
+        //}
 
         private void lblBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnArchive_Click(object sender, EventArgs e)
-        {
+        //private void btnArchive_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void btnArchive_Click_1(object sender, EventArgs e)
         {
@@ -235,17 +236,17 @@ namespace PschyHealth
             button = "archive";
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            btnCanccel.Hide();
-            btnConnfirm.Hide();
-            btnAddExClient.Enabled = true; 
-            btnaddNewclient.Enabled = true;
-            btnUpdate.Enabled = true;
-            btnDelete.Enabled = true;
-            btnArchiv.Enabled = true;
-            dgvClients.Enabled = true;
-        }
+        //private void btnCancel_Click(object sender, EventArgs e)
+        //{
+        //    btnCanccel.Hide();
+        //    btnConnfirm.Hide();
+        //    btnAddExClient.Enabled = true; 
+        //    btnaddNewclient.Enabled = true;
+        //    btnUpdate.Enabled = true;
+        //    btnDelete.Enabled = true;
+        //    btnArchiv.Enabled = true;
+        //    dgvClients.Enabled = true;
+        //}
 
         private void btnAddExClient_Click(object sender, EventArgs e)
         {
@@ -320,37 +321,60 @@ namespace PschyHealth
 
         private void btnConnfirm_Click(object sender, EventArgs e)
         {
-            String field, field2;
-            String value, value2;
-            if (dgvClients.SelectedRows.Count > 0)
+            validFields = true;
+            MetroTextBox text = new MetroTextBox();
+            foreach (Control obj in groupBox1.Controls)
             {
-                int selectedIndex = dgvClients.SelectedRows[0].Index;
-
-                String rowID = dgvClients[0, selectedIndex].Value.ToString();
-                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Client");
-                cMethods.getFieldsAndValues(out field2, out value2, gbDependants, "Client");
-                if (button == "add")
-                    cMethods.add("Clients", field + "," + field2, value + "," + value2);
-                else if (button == "edit")
-                    cMethods.edit("Clients", field, value, " ID = '" + dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString() + "'");
-                else if (button == "delete")
-                    cMethods.delete("Clients", "ID = '" + rowID + "'");
-                else if (button == "archive")
+                if(obj is MetroTextBox)
                 {
-
-                    cMethods.Archive(dgvClients, "Clients", "ID", dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString());
+                    text.Name = obj.Name;
+                    if (text.WaterMarkColor == Color.Red)
+                    {
+                        validFields = false;
+                    }
                 }
-
+                else if ((obj is MetroDateTime)||(obj is MetroComboBox))
+                {
+                    if (obj.Text == "")
+                    {
+                        validFields = false;
+                    }
+                }
             }
-            btnAddExClient.Enabled = true;
-            btnaddNewclient.Enabled = true;
-            btnUpdate.Enabled = true;
-            btnDelete.Enabled = true;
-            btnArchiv.Enabled = true;
-            dgvClients.Enabled = true;
-            btnConnfirm.Hide();
-            btnCanccel.Hide();
-            filter();
+            if (validFields)
+            {
+                String field, field2;
+                String value, value2;
+                if (dgvClients.SelectedRows.Count > 0)
+                {
+                    int selectedIndex = dgvClients.SelectedRows[0].Index;
+
+                    String rowID = dgvClients[0, selectedIndex].Value.ToString();
+                    cMethods.getFieldsAndValues(out field, out value, groupBox1, "Client");
+                    cMethods.getFieldsAndValues(out field2, out value2, gbDependants, "Client");
+                    if (button == "add")
+                        cMethods.add("Clients", field + "," + field2, value + "," + value2);
+                    else if (button == "edit")
+                        cMethods.edit("Clients", field, value, " ID = '" + dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString() + "'");
+                    else if (button == "delete")
+                        cMethods.delete("Clients", "ID = '" + rowID + "'");
+                    else if (button == "archive")
+                    {
+
+                        cMethods.Archive(dgvClients, "Clients", "ID", dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString());
+                    }
+
+                }
+                btnAddExClient.Enabled = true;
+                btnaddNewclient.Enabled = true;
+                btnUpdate.Enabled = true;
+                btnDelete.Enabled = true;
+                btnArchiv.Enabled = true;
+                dgvClients.Enabled = true;
+                btnConnfirm.Hide();
+                btnCanccel.Hide();
+                filter();
+            }
         }
 
         private void btnCanccel_Click(object sender, EventArgs e)
@@ -366,24 +390,225 @@ namespace PschyHealth
             filter();
         }
 
-        private void btnAddNewClient_Click(object sender, EventArgs e)
-        {
+        //private void btnAddNewClient_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void btnDeleteClient_Click(object sender, EventArgs e)
-        {
+        //private void btnDeleteClient_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void txtClientDateFinished_Click(object sender, EventArgs e)
-        {
+        //private void txtClientDateFinished_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void cmbClientLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+
+
+        private void txtClientID_DragLeave(object sender, EventArgs e)
+        {
+            if ((!cMethods.isText(txtClientID.Text)) || (txtClientID.Text == ""))
+            {
+                txtClientID.Text = "";
+                txtClientID.WaterMarkColor = Color.Red;
+                txtClientID.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientAccount_Number_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isNumber(txtClientAccount_Number.Text))
+            {
+                txtClientAccount_Number.Text = "";
+                txtClientAccount_Number.WaterMarkColor = Color.Red;
+                txtClientAccount_Number.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientFirst_Name_Leave(object sender, EventArgs e)
+        {
+            if ((!cMethods.isTextWithSpace(txtClientFirst_Name.Text)) || (txtClientFirst_Name.Text == ""))
+            {
+                txtClientFirst_Name.Text = "";
+                txtClientFirst_Name.WaterMarkColor = Color.Red;
+                txtClientFirst_Name.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientSurname_Leave(object sender, EventArgs e)
+        {
+            if ((!cMethods.isTextWithSpace(txtClientSurname.Text)) || (txtClientSurname.Text == ""))
+            {
+                txtClientSurname.Text = "";
+                txtClientSurname.WaterMarkColor = Color.Red;
+                txtClientSurname.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientCity_Code_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isNumber(txtClientCity_Code.Text))
+            {
+                txtClientCity_Code.Text = "";
+                txtClientCity_Code.WaterMarkColor = Color.Red;
+                txtClientCity_Code.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientHome_Telephone_Number_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isTelephone(txtClientHome_Telephone_Number.Text))
+            {
+                txtClientHome_Telephone_Number.Text = "";
+                txtClientHome_Telephone_Number.WaterMarkColor = Color.Red;
+                txtClientHome_Telephone_Number.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientMobile_Cellphone_Number_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isTelephone(txtClientMobile_Cellphone_Number.Text))
+            {
+                txtClientMobile_Cellphone_Number.Text = "";
+                txtClientMobile_Cellphone_Number.WaterMarkColor = Color.Red;
+                txtClientMobile_Cellphone_Number.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientOccupation_Leave(object sender, EventArgs e)
+        {
+            if ((!cMethods.isText(txtClientOccupation.Text)) || (txtClientOccupation.Text == ""))
+            {
+                txtClientOccupation.Text = "";
+                txtClientOccupation.WaterMarkColor = Color.Red;
+                txtClientOccupation.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientWork_Address_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isText(txtClientWork_Address.Text))
+            {
+                txtClientWork_Address.Text = "";
+                txtClientWork_Address.WaterMarkColor = Color.Red;
+                txtClientWork_Address.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientMaritial_Status_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isText(txtClientMaritial_Status.Text))
+            {
+                txtClientMaritial_Status.Text = "";
+                txtClientMaritial_Status.WaterMarkColor = Color.Red;
+                txtClientMaritial_Status.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientEmail_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isEmail(txtClientEmail.Text))
+            {
+                txtClientEmail.Text = "";
+                txtClientEmail.WaterMarkColor = Color.Red;
+                txtClientEmail.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientAddress_Leave(object sender, EventArgs e)
+        {
+            if (!cMethods.isTextWithSpace(txtClientAddress.Text))
+            {
+                txtClientAddress.Text = "";
+                txtClientAddress.WaterMarkColor = Color.Red;
+                txtClientAddress.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientCity_Leave(object sender, EventArgs e)
+        {
+            if ((!cMethods.isText(txtClientCity.Text)) || (txtClientCity.Text == ""))
+            {
+                txtClientCity.Text = "";
+                txtClientCity.WaterMarkColor = Color.Red;
+                txtClientCity.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientDependant_Full_Name_Leave(object sender, EventArgs e)
+        {
+            if ((!cMethods.isTextWithSpace(txtClientDependant_Full_Name.Text)) || (txtClientDependant_Full_Name.Text == ""))
+            {
+                txtClientDependant_Full_Name.Text = "";
+                txtClientDependant_Full_Name.WaterMarkColor = Color.Red;
+                txtClientDependant_Full_Name.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientDependant_Surname_Leave(object sender, EventArgs e)
+        {
+            if ((!cMethods.isTextWithSpace(txtClientDependant_Surname.Text)) || (txtClientDependant_Surname.Text == ""))
+            {
+                txtClientDependant_Surname.Text = "";
+                txtClientDependant_Surname.WaterMarkColor = Color.Red;
+                txtClientDependant_Surname.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientDependant_Code_Leave(object sender, EventArgs e)
+        {
+            if ((!cMethods.isNumber(txtClientDependant_Code.Text)) || (txtClientDependant_Code.Text == ""))
+            {
+                txtClientDependant_Code.Text = "";
+                txtClientDependant_Code.WaterMarkColor = Color.Red;
+                txtClientDependant_Code.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientReferral_Leave(object sender, EventArgs e)
+        {
+            if ((!cMethods.isText(txtClientReferral.Text)) || (txtClientReferral.Text == ""))
+            {
+                txtClientReferral.Text = "";
+                txtClientReferral.WaterMarkColor = Color.Red;
+                txtClientReferral.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
+        }
+
+        private void txtClientReferral_Practice_Leave(object sender, EventArgs e)
+        {
+            if ((!cMethods.isTextWithSpace(txtClientReferral_Practice.Text)) || (txtClientReferral_Practice.Text == ""))
+            {
+                txtClientReferral_Practice.Text = "";
+                txtClientReferral_Practice.WaterMarkColor = Color.Red;
+                txtClientReferral_Practice.WaterMark = "Incorrect Format";
+                validFields = false;
+            }
         }
     }
 }

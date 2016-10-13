@@ -334,7 +334,7 @@ namespace PschyHealth
 
         private void txtAccTransaction_Number_Leave(object sender, EventArgs e)
         {
-            if (!cMethods.isNumber(txtAccTransaction_Number.Text))
+            if ((!cMethods.isNumber(txtAccTransaction_Number.Text)) || (txtAccTransaction_Number.Text == ""))
             {
                 txtAccTransaction_Number.Text = "";
                 txtAccTransaction_Number.WaterMarkColor = Color.Red;
@@ -345,29 +345,26 @@ namespace PschyHealth
 
         private void txtAccDescription_Leave(object sender, EventArgs e)
         {
-            if (!cMethods.isTextWithSpace(txtAccDescription.Text))
+            if ((!cMethods.isTextWithSpace(txtAccDescription.Text)) || (txtAccDescription.Text == ""))
             {
                 txtAccDescription.Text = "";
                 txtAccDescription.WaterMarkColor = Color.Red;
-                txtAccDescription.WaterMark = "No unusual characters";
+                txtAccDescription.WaterMark = "Incorrect Data";
                 validFields = false;
             }
         }
 
         private void txtAccType_Leave(object sender, EventArgs e)
         {
-            if (!cMethods.isText(cmbAccType.Text))
+            if (cmbAccType.Text == "")
             {
-                cmbAccType.Text = "";
-                //cmbAccType.WaterMarkColor = Color.Red;
-                //cmbAccType.WaterMark = "Single phrase";
                 validFields = false;
             }
         }
 
         private void txtAccAmount_Leave(object sender, EventArgs e)
         {
-            if (!cMethods.isMoney(txtAccAmount.Text))
+            if ((!cMethods.isMoney(txtAccAmount.Text)) || (txtAccAmount.Text == ""))
             {
                 txtAccAmount.Text = "";
                 txtAccAmount.WaterMarkColor = Color.Red;

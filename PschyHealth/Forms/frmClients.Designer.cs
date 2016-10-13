@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.cmbClientEthnic_Group = new MetroFramework.Controls.MetroComboBox();
             this.cmbClientGender = new MetroFramework.Controls.MetroComboBox();
@@ -182,6 +182,7 @@
             this.txtClientMaritial_Status.WaterMark = "Enter Maritial Status";
             this.txtClientMaritial_Status.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientMaritial_Status.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientMaritial_Status.Leave += new System.EventHandler(this.txtClientMaritial_Status_Leave);
             // 
             // txtClientOccupation
             // 
@@ -214,6 +215,7 @@
             this.txtClientOccupation.WaterMark = "Enter Occupation";
             this.txtClientOccupation.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientOccupation.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientOccupation.Leave += new System.EventHandler(this.txtClientOccupation_Leave);
             // 
             // txtClientMobile_Cellphone_Number
             // 
@@ -246,6 +248,7 @@
             this.txtClientMobile_Cellphone_Number.WaterMark = "(___) ___-____";
             this.txtClientMobile_Cellphone_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientMobile_Cellphone_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientMobile_Cellphone_Number.Leave += new System.EventHandler(this.txtClientMobile_Cellphone_Number_Leave);
             // 
             // txtClientHome_Telephone_Number
             // 
@@ -278,6 +281,7 @@
             this.txtClientHome_Telephone_Number.WaterMark = "(___) ___-____";
             this.txtClientHome_Telephone_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientHome_Telephone_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientHome_Telephone_Number.Leave += new System.EventHandler(this.txtClientHome_Telephone_Number_Leave);
             // 
             // txtClientAddress
             // 
@@ -311,6 +315,7 @@
             this.txtClientAddress.WaterMark = "Enter Address";
             this.txtClientAddress.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientAddress.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientAddress.Leave += new System.EventHandler(this.txtClientAddress_Leave);
             // 
             // cmbClientCriteria
             // 
@@ -420,6 +425,7 @@
             this.txtClientSurname.WaterMark = "Enter Surname";
             this.txtClientSurname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientSurname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientSurname.Leave += new System.EventHandler(this.txtClientSurname_Leave);
             // 
             // txtClientFirst_Name
             // 
@@ -452,6 +458,7 @@
             this.txtClientFirst_Name.WaterMark = "Enter First Name";
             this.txtClientFirst_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientFirst_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientFirst_Name.Leave += new System.EventHandler(this.txtClientFirst_Name_Leave);
             // 
             // txtClientID
             // 
@@ -485,6 +492,7 @@
             this.txtClientID.WaterMark = "Enter ID Number";
             this.txtClientID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientID.DragLeave += new System.EventHandler(this.txtClientID_DragLeave);
             // 
             // metroLabel9
             // 
@@ -724,10 +732,10 @@
             // 
             // 
             this.txtClientCity_Code.CustomButton.Image = null;
-            this.txtClientCity_Code.CustomButton.Location = new System.Drawing.Point(133, 2);
+            this.txtClientCity_Code.CustomButton.Location = new System.Drawing.Point(131, 2);
             this.txtClientCity_Code.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtClientCity_Code.CustomButton.Name = "";
-            this.txtClientCity_Code.CustomButton.Size = new System.Drawing.Size(13, 13);
+            this.txtClientCity_Code.CustomButton.Size = new System.Drawing.Size(15, 15);
             this.txtClientCity_Code.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientCity_Code.CustomButton.TabIndex = 1;
             this.txtClientCity_Code.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -744,13 +752,14 @@
             this.txtClientCity_Code.SelectedText = "";
             this.txtClientCity_Code.SelectionLength = 0;
             this.txtClientCity_Code.SelectionStart = 0;
-            this.txtClientCity_Code.Size = new System.Drawing.Size(149, 18);
+            this.txtClientCity_Code.Size = new System.Drawing.Size(149, 20);
             this.txtClientCity_Code.TabIndex = 62;
             this.txtClientCity_Code.UseSelectable = true;
             this.txtClientCity_Code.UseStyleColors = true;
             this.txtClientCity_Code.WaterMark = "Enter client city code";
             this.txtClientCity_Code.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientCity_Code.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientCity_Code.Leave += new System.EventHandler(this.txtClientCity_Code_Leave);
             // 
             // txtClientCity
             // 
@@ -758,10 +767,10 @@
             // 
             // 
             this.txtClientCity.CustomButton.Image = null;
-            this.txtClientCity.CustomButton.Location = new System.Drawing.Point(134, 2);
+            this.txtClientCity.CustomButton.Location = new System.Drawing.Point(132, 2);
             this.txtClientCity.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtClientCity.CustomButton.Name = "";
-            this.txtClientCity.CustomButton.Size = new System.Drawing.Size(13, 13);
+            this.txtClientCity.CustomButton.Size = new System.Drawing.Size(15, 15);
             this.txtClientCity.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientCity.CustomButton.TabIndex = 1;
             this.txtClientCity.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -778,13 +787,14 @@
             this.txtClientCity.SelectedText = "";
             this.txtClientCity.SelectionLength = 0;
             this.txtClientCity.SelectionStart = 0;
-            this.txtClientCity.Size = new System.Drawing.Size(150, 18);
+            this.txtClientCity.Size = new System.Drawing.Size(150, 20);
             this.txtClientCity.TabIndex = 61;
             this.txtClientCity.UseSelectable = true;
             this.txtClientCity.UseStyleColors = true;
             this.txtClientCity.WaterMark = "Enter the clients current city";
             this.txtClientCity.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientCity.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientCity.Leave += new System.EventHandler(this.txtClientCity_Leave);
             // 
             // metroLabel26
             // 
@@ -828,10 +838,10 @@
             // 
             // 
             this.txtClientEmail.CustomButton.Image = null;
-            this.txtClientEmail.CustomButton.Location = new System.Drawing.Point(134, 2);
+            this.txtClientEmail.CustomButton.Location = new System.Drawing.Point(132, 2);
             this.txtClientEmail.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtClientEmail.CustomButton.Name = "";
-            this.txtClientEmail.CustomButton.Size = new System.Drawing.Size(13, 13);
+            this.txtClientEmail.CustomButton.Size = new System.Drawing.Size(15, 15);
             this.txtClientEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientEmail.CustomButton.TabIndex = 1;
             this.txtClientEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -848,13 +858,14 @@
             this.txtClientEmail.SelectedText = "";
             this.txtClientEmail.SelectionLength = 0;
             this.txtClientEmail.SelectionStart = 0;
-            this.txtClientEmail.Size = new System.Drawing.Size(150, 18);
+            this.txtClientEmail.Size = new System.Drawing.Size(150, 20);
             this.txtClientEmail.TabIndex = 55;
             this.txtClientEmail.UseSelectable = true;
             this.txtClientEmail.UseStyleColors = true;
             this.txtClientEmail.WaterMark = "Enter client e-mail address";
             this.txtClientEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientEmail.Leave += new System.EventHandler(this.txtClientEmail_Leave);
             // 
             // txtClientWork_Address
             // 
@@ -887,6 +898,7 @@
             this.txtClientWork_Address.WaterMark = "Enter work address";
             this.txtClientWork_Address.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientWork_Address.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientWork_Address.Leave += new System.EventHandler(this.txtClientWork_Address_Leave);
             // 
             // metroLabel14
             // 
@@ -958,6 +970,7 @@
             this.txtClientAccount_Number.UseStyleColors = true;
             this.txtClientAccount_Number.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientAccount_Number.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientAccount_Number.Leave += new System.EventHandler(this.txtClientAccount_Number_Leave);
             // 
             // metroLabel10
             // 
@@ -981,23 +994,23 @@
             this.dgvClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle61.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle61.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle61.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle61.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle61;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle62.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle62;
             this.dgvClients.EnableHeadersVisualStyles = false;
             this.dgvClients.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvClients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -1005,14 +1018,14 @@
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.ReadOnly = true;
             this.dgvClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle63.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle63;
             this.dgvClients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClients.Size = new System.Drawing.Size(546, 470);
@@ -1087,6 +1100,7 @@
             this.txtClientReferral.WaterMark = "Enter refferal";
             this.txtClientReferral.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientReferral.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientReferral.Leave += new System.EventHandler(this.txtClientReferral_Leave);
             // 
             // txtClientReferral_Practice
             // 
@@ -1094,10 +1108,10 @@
             // 
             // 
             this.txtClientReferral_Practice.CustomButton.Image = null;
-            this.txtClientReferral_Practice.CustomButton.Location = new System.Drawing.Point(135, 2);
+            this.txtClientReferral_Practice.CustomButton.Location = new System.Drawing.Point(133, 2);
             this.txtClientReferral_Practice.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txtClientReferral_Practice.CustomButton.Name = "";
-            this.txtClientReferral_Practice.CustomButton.Size = new System.Drawing.Size(13, 13);
+            this.txtClientReferral_Practice.CustomButton.Size = new System.Drawing.Size(15, 15);
             this.txtClientReferral_Practice.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtClientReferral_Practice.CustomButton.TabIndex = 1;
             this.txtClientReferral_Practice.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -1114,12 +1128,13 @@
             this.txtClientReferral_Practice.SelectedText = "";
             this.txtClientReferral_Practice.SelectionLength = 0;
             this.txtClientReferral_Practice.SelectionStart = 0;
-            this.txtClientReferral_Practice.Size = new System.Drawing.Size(151, 18);
+            this.txtClientReferral_Practice.Size = new System.Drawing.Size(151, 20);
             this.txtClientReferral_Practice.TabIndex = 55;
             this.txtClientReferral_Practice.UseSelectable = true;
             this.txtClientReferral_Practice.UseStyleColors = true;
             this.txtClientReferral_Practice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientReferral_Practice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientReferral_Practice.Leave += new System.EventHandler(this.txtClientReferral_Practice_Leave);
             // 
             // metroLabel23
             // 
@@ -1178,6 +1193,7 @@
             this.txtClientDependant_Code.WaterMark = "Enter dependant code";
             this.txtClientDependant_Code.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientDependant_Code.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientDependant_Code.Leave += new System.EventHandler(this.txtClientDependant_Code_Leave);
             // 
             // metroLabel19
             // 
@@ -1249,6 +1265,7 @@
             this.txtClientDependant_Surname.WaterMark = "Enter surname";
             this.txtClientDependant_Surname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientDependant_Surname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientDependant_Surname.Leave += new System.EventHandler(this.txtClientDependant_Surname_Leave);
             // 
             // metroLabel16
             // 
@@ -1294,6 +1311,7 @@
             this.txtClientDependant_Full_Name.WaterMark = "Enter full name";
             this.txtClientDependant_Full_Name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtClientDependant_Full_Name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtClientDependant_Full_Name.Leave += new System.EventHandler(this.txtClientDependant_Full_Name_Leave);
             // 
             // metroLabel15
             // 

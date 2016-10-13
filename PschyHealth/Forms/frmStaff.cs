@@ -257,6 +257,7 @@ namespace PschyHealth
 
         private void btnConfirm_Click_1(object sender, EventArgs e)
         {
+            txtStaffPassword.Text = cMethods.Encrypt(txtStaffPassword.Text);
             String field;
             String value;
             if (dgvStaff.SelectedRows.Count > 0)

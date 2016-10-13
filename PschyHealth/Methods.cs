@@ -218,7 +218,7 @@ namespace PschyHealth
             return buttonText;
         }*/
         //Method used to encrypt the passwords when sent to the database
-        private string Encrypt(string clearText)
+        public string Encrypt(string clearText)
         {
             string EncryptionKey = "MAKV2SPBNI99212";
             byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);
@@ -240,7 +240,7 @@ namespace PschyHealth
             return clearText;
         }
         //Method used to decrypt encrypted passwords
-        private string Decrypt(string cipherText)
+        public string Decrypt(string cipherText)
         {
             string EncryptionKey = "MAKV2SPBNI99212";
             byte[] cipherBytes = Convert.FromBase64String(cipherText);
@@ -263,12 +263,12 @@ namespace PschyHealth
         }
 
         //Hierdie is die kode vir die Login
-        public bool checkLogin(String username, String password)
+        public bool checkLogin(String username, String password, out bool admin)
         {
 
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader, searcher;
-            string values = "";
+            bool values = true;
             cmd.CommandText = "SELECT * FROM Staff WHERE Username = @P1 AND Password = @P2";
             cmd.Parameters.AddWithValue("@P1", username);
             cmd.Parameters.AddWithValue("@P2", Encrypt(password));
@@ -276,12 +276,12 @@ namespace PschyHealth
             cmd.Connection = conn;
             conn.Open();
 
-
             searcher = cmd.ExecuteReader();
             while (searcher.Read())
             {
-                values = searcher["Admin"].ToString();
+                values = Convert.ToBoolean(searcher["Admin"].ToString());
             }
+            admin = values;
             searcher.Close();
             reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
@@ -289,7 +289,6 @@ namespace PschyHealth
             // Data is accessible through the DataReader object here.
             if (dt.Rows.Count == 1)
             {
-                checkLogin(username, password, true, values);
                 conn.Close();
                 return true;
             }

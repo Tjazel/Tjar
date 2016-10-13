@@ -44,18 +44,18 @@ namespace PschyHealth
         {
             //Uncomment om die kode te gebruik ir login..... Ctrl + K, Ctrl + U
 
-            Boolean loginCorrect = false;
-            loginCorrect = cMethods.checkLogin(mtxb_Username.Text, mtxb_Password.Text);
-            if (loginCorrect)
-            {
-            frmMainPage f1 = new frmMainPage();
-            f1.Show();
-            this.Hide();
-            }
-            else
-            {
-               MessageBox.Show("Input data incorrect, please try again.");
-            }
+            //Boolean loginCorrect = false;
+            //loginCorrect = cMethods.checkLogin(mtxb_Username.Text, mtxb_Password.Text);
+            //if (loginCorrect)
+            //{
+            //frmMainPage f1 = new frmMainPage();
+            //f1.Show();
+            //this.Hide();
+            //}
+            //else
+            //{
+            //   MessageBox.Show("Input data incorrect, please try again.");
+            //}
         }
     }
 }
