@@ -12,6 +12,7 @@ namespace PschyHealth
 {
     public partial class frmLockScreen : Form
     {
+        Methods cMethods = new Methods();
         public frmLockScreen()
         {
             InitializeComponent();
@@ -37,6 +38,24 @@ namespace PschyHealth
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            //Uncomment om die kode te gebruik ir login..... Ctrl + K, Ctrl + U
+
+            Boolean loginCorrect = false;
+            loginCorrect = cMethods.checkLogin(mtxb_Username.Text, mtxb_Password.Text);
+            if (loginCorrect)
+            {
+            frmMainPage f1 = new frmMainPage();
+            f1.Show();
+            this.Hide();
+            }
+            else
+            {
+               MessageBox.Show("Input data incorrect, please try again.");
+            }
         }
     }
 }
