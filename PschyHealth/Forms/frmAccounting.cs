@@ -385,6 +385,11 @@ namespace PschyHealth
         {
 
         }
+
+        private void btnEnable_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

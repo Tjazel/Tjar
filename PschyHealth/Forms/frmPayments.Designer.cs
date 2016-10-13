@@ -57,10 +57,11 @@
             this.cmbPaymentsDescription = new MetroFramework.Controls.MetroComboBox();
             this.cmbPaymentsClient_Surname = new MetroFramework.Controls.MetroComboBox();
             this.btnClear = new MetroFramework.Controls.MetroButton();
-            this.btnArchiv = new MetroFramework.Controls.MetroButton();
             this.btnPaymentsAdd = new MetroFramework.Controls.MetroButton();
-            this.btnPaymentsUpdate = new MetroFramework.Controls.MetroButton();
             this.btnPaymentsDelete = new MetroFramework.Controls.MetroButton();
+            this.btnPaymentsUpdate = new MetroFramework.Controls.MetroButton();
+            this.btnDisable = new MetroFramework.Controls.MetroButton();
+            this.btnEnable = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultations)).BeginInit();
@@ -107,9 +108,10 @@
             this.dgvPayments.EnableHeadersVisualStyles = false;
             this.dgvPayments.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvPayments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvPayments.Location = new System.Drawing.Point(692, 80);
+            this.dgvPayments.Location = new System.Drawing.Point(315, 275);
             this.dgvPayments.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPayments.Name = "dgvPayments";
+            this.dgvPayments.ReadOnly = true;
             this.dgvPayments.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -122,12 +124,13 @@
             this.dgvPayments.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPayments.RowTemplate.Height = 24;
             this.dgvPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPayments.Size = new System.Drawing.Size(335, 377);
+            this.dgvPayments.Size = new System.Drawing.Size(873, 191);
             this.dgvPayments.TabIndex = 46;
             this.dgvPayments.UseStyleColors = true;
             // 
             // cmbPaymentsMethod
             // 
+            this.cmbPaymentsMethod.Enabled = false;
             this.cmbPaymentsMethod.FormattingEnabled = true;
             this.cmbPaymentsMethod.ItemHeight = 23;
             this.cmbPaymentsMethod.Items.AddRange(new object[] {
@@ -157,6 +160,7 @@
             this.txtPaymentsAmount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtPaymentsAmount.CustomButton.UseSelectable = true;
             this.txtPaymentsAmount.CustomButton.Visible = false;
+            this.txtPaymentsAmount.Enabled = false;
             this.txtPaymentsAmount.ForeColor = System.Drawing.Color.Snow;
             this.txtPaymentsAmount.Lines = new string[0];
             this.txtPaymentsAmount.Location = new System.Drawing.Point(129, 202);
@@ -178,7 +182,8 @@
             // 
             // btnAfbetaal
             // 
-            this.btnAfbetaal.Location = new System.Drawing.Point(334, 487);
+            this.btnAfbetaal.Enabled = false;
+            this.btnAfbetaal.Location = new System.Drawing.Point(34, 325);
             this.btnAfbetaal.Margin = new System.Windows.Forms.Padding(2);
             this.btnAfbetaal.Name = "btnAfbetaal";
             this.btnAfbetaal.Size = new System.Drawing.Size(73, 42);
@@ -190,6 +195,7 @@
             // 
             // cmbPaymentsClient_Name
             // 
+            this.cmbPaymentsClient_Name.Enabled = false;
             this.cmbPaymentsClient_Name.FormattingEnabled = true;
             this.cmbPaymentsClient_Name.ItemHeight = 23;
             this.cmbPaymentsClient_Name.Location = new System.Drawing.Point(133, 35);
@@ -230,6 +236,7 @@
             this.dgvConsultations.Location = new System.Drawing.Point(315, 80);
             this.dgvConsultations.Margin = new System.Windows.Forms.Padding(2);
             this.dgvConsultations.Name = "dgvConsultations";
+            this.dgvConsultations.ReadOnly = true;
             this.dgvConsultations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -242,7 +249,7 @@
             this.dgvConsultations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvConsultations.RowTemplate.Height = 24;
             this.dgvConsultations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsultations.Size = new System.Drawing.Size(354, 377);
+            this.dgvConsultations.Size = new System.Drawing.Size(873, 191);
             this.dgvConsultations.TabIndex = 58;
             this.dgvConsultations.UseStyleColors = true;
             this.dgvConsultations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultations_CellContentClick);
@@ -257,6 +264,7 @@
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseSelectable = true;
             this.btnConfirm.UseStyleColors = true;
+            this.btnConfirm.Visible = false;
             this.btnConfirm.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // msmPayments
@@ -301,6 +309,7 @@
             // 
             // txtPaymentsDate
             // 
+            this.txtPaymentsDate.Enabled = false;
             this.txtPaymentsDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtPaymentsDate.Location = new System.Drawing.Point(129, 239);
             this.txtPaymentsDate.Margin = new System.Windows.Forms.Padding(2);
@@ -322,6 +331,7 @@
             this.groupBox1.Controls.Add(this.cmbPaymentsDescription);
             this.groupBox1.Controls.Add(this.cmbPaymentsClient_Name);
             this.groupBox1.Controls.Add(this.cmbPaymentsMethod);
+            this.groupBox1.Controls.Add(this.btnAfbetaal);
             this.groupBox1.Controls.Add(this.txtPaymentsAmount);
             this.groupBox1.Controls.Add(this.cmbPaymentsClient_Surname);
             this.groupBox1.Controls.Add(this.txtPaymentsDate);
@@ -412,6 +422,7 @@
             // 
             // cmbPaymentsDescription
             // 
+            this.cmbPaymentsDescription.Enabled = false;
             this.cmbPaymentsDescription.FormattingEnabled = true;
             this.cmbPaymentsDescription.ItemHeight = 23;
             this.cmbPaymentsDescription.Items.AddRange(new object[] {
@@ -427,6 +438,7 @@
             // 
             // cmbPaymentsClient_Surname
             // 
+            this.cmbPaymentsClient_Surname.Enabled = false;
             this.cmbPaymentsClient_Surname.FormattingEnabled = true;
             this.cmbPaymentsClient_Surname.ItemHeight = 23;
             this.cmbPaymentsClient_Surname.Location = new System.Drawing.Point(133, 66);
@@ -443,22 +455,11 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(91, 42);
             this.btnClear.TabIndex = 74;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "Cancel";
             this.btnClear.UseSelectable = true;
             this.btnClear.UseStyleColors = true;
+            this.btnClear.Visible = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnArchiv
-            // 
-            this.btnArchiv.Location = new System.Drawing.Point(411, 487);
-            this.btnArchiv.Margin = new System.Windows.Forms.Padding(2);
-            this.btnArchiv.Name = "btnArchiv";
-            this.btnArchiv.Size = new System.Drawing.Size(91, 42);
-            this.btnArchiv.TabIndex = 111;
-            this.btnArchiv.Text = "Archive";
-            this.btnArchiv.UseSelectable = true;
-            this.btnArchiv.UseStyleColors = true;
-            this.btnArchiv.Click += new System.EventHandler(this.btnArchiv_Click);
             // 
             // btnPaymentsAdd
             // 
@@ -471,17 +472,6 @@
             this.btnPaymentsAdd.UseStyleColors = true;
             this.btnPaymentsAdd.Click += new System.EventHandler(this.btnPaymentsAdd_Click);
             // 
-            // btnPaymentsUpdate
-            // 
-            this.btnPaymentsUpdate.Location = new System.Drawing.Point(120, 555);
-            this.btnPaymentsUpdate.Name = "btnPaymentsUpdate";
-            this.btnPaymentsUpdate.Size = new System.Drawing.Size(91, 42);
-            this.btnPaymentsUpdate.TabIndex = 113;
-            this.btnPaymentsUpdate.Text = "Update";
-            this.btnPaymentsUpdate.UseSelectable = true;
-            this.btnPaymentsUpdate.UseStyleColors = true;
-            this.btnPaymentsUpdate.Click += new System.EventHandler(this.btnPaymentsUpdate_Click);
-            // 
             // btnPaymentsDelete
             // 
             this.btnPaymentsDelete.Location = new System.Drawing.Point(217, 555);
@@ -493,22 +483,56 @@
             this.btnPaymentsDelete.UseStyleColors = true;
             this.btnPaymentsDelete.Click += new System.EventHandler(this.btnPaymentsDelete_Click);
             // 
+            // btnPaymentsUpdate
+            // 
+            this.btnPaymentsUpdate.Location = new System.Drawing.Point(120, 555);
+            this.btnPaymentsUpdate.Name = "btnPaymentsUpdate";
+            this.btnPaymentsUpdate.Size = new System.Drawing.Size(91, 42);
+            this.btnPaymentsUpdate.TabIndex = 113;
+            this.btnPaymentsUpdate.Text = "Update";
+            this.btnPaymentsUpdate.UseSelectable = true;
+            this.btnPaymentsUpdate.UseStyleColors = true;
+            this.btnPaymentsUpdate.Click += new System.EventHandler(this.btnPaymentsUpdate_Click);
+            // 
+            // btnDisable
+            // 
+            this.btnDisable.Location = new System.Drawing.Point(120, 603);
+            this.btnDisable.Name = "btnDisable";
+            this.btnDisable.Size = new System.Drawing.Size(188, 42);
+            this.btnDisable.TabIndex = 115;
+            this.btnDisable.Text = "Disable Payment Editing";
+            this.btnDisable.UseSelectable = true;
+            this.btnDisable.UseStyleColors = true;
+            this.btnDisable.Visible = false;
+            this.btnDisable.Click += new System.EventHandler(this.btnDisable_Click);
+            // 
+            // btnEnable
+            // 
+            this.btnEnable.Location = new System.Drawing.Point(120, 555);
+            this.btnEnable.Name = "btnEnable";
+            this.btnEnable.Size = new System.Drawing.Size(188, 42);
+            this.btnEnable.TabIndex = 116;
+            this.btnEnable.Text = "Enable Payment Editing";
+            this.btnEnable.UseSelectable = true;
+            this.btnEnable.UseStyleColors = true;
+            this.btnEnable.Click += new System.EventHandler(this.btnEnable_Click);
+            // 
             // frmPayments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 634);
+            this.Controls.Add(this.btnEnable);
+            this.Controls.Add(this.btnDisable);
             this.Controls.Add(this.btnPaymentsDelete);
             this.Controls.Add(this.btnPaymentsUpdate);
             this.Controls.Add(this.btnPaymentsAdd);
-            this.Controls.Add(this.btnArchiv);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.dgvConsultations);
             this.Controls.Add(this.dgvPayments);
             this.Controls.Add(this.pbBack);
-            this.Controls.Add(this.btnAfbetaal);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPayments";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
@@ -549,9 +573,10 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroButton btnArchiv;
         private MetroFramework.Controls.MetroButton btnPaymentsDelete;
-        private MetroFramework.Controls.MetroButton btnPaymentsUpdate;
         private MetroFramework.Controls.MetroButton btnPaymentsAdd;
+        private MetroFramework.Controls.MetroButton btnPaymentsUpdate;
+        private MetroFramework.Controls.MetroButton btnEnable;
+        private MetroFramework.Controls.MetroButton btnDisable;
     }
 }

@@ -14,6 +14,7 @@ using System.Globalization;
 using Microsoft.Office.Interop.Word;
 using System.Threading;
 using System.Diagnostics;
+using MetroFramework.Controls;
 
 namespace PschyHealth
 {
@@ -151,10 +152,17 @@ namespace PschyHealth
 
         private void cmbClient_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int[] con = {1,-1,8,7,2,10,6,11,-2,9};//Verander 2 10
+            double balance = 0;
+            int j = 0;
+            String[] listA = new String[15];
+            for (int i = 0; i < listA.Length; i++)
+                listA[i] = "";
+            int[] listNumA = new int[15];
+
+            int[] con = {1,-1,8,-3,2,10,6,11,9,-2};//Verander 2 10
             string line;
             lbStatements.Items.Clear();
-            lbStatements.Items.Add("Date	Method	Code	Description	ICD 10 code	Patient	Birthday	Dependency code	Debit	Credit	Balance");
+            lbStatements.Items.Add("Date	\tMethod	Code	Description	ICD 10 code	Patient	Birthday	Dependency code	Debit	Credit	Balance");
             cMethods.fillDGV(dgvStatements, "Consultations");
             for (int i = 0; i < dgvStatements.RowCount-1; i++)
             {
@@ -164,15 +172,39 @@ namespace PschyHealth
                     for (int k = 0; k < con.Length; k++)
                         if (con[k] == -1)
                         {
-                            line += ";\t";
+                            line += "\t";
                         }
                         else if (con[k] == -2)
                         {
-                            line += "00.00\t";
+                            line += "0.00\t";
+                        }
+                        else if(con[k] == -3)
+                        {
+                            MetroGrid dgv = new MetroGrid();
+                            dgv.Parent = this;
+                            dgv.Hide();
+                            cMethods.filterDGV(dgv,"DiagnosticCodes", " WHERE Code = '" + dgvStatements.Rows[i].Cells["Diagnostic_Code"].Value.ToString() + "'");
+                            string t;
+                            if (dgv.Rows[0].Cells["Assesment_type"].Value.ToString() == "Individual")
+                                t = "Psych.ind";
+                            else
+                                t = "Psych.group";
+                            line += t + "(" + dgv.Rows[0].Cells["Minutes"].Value.ToString() + "min)" + "\t";
                         }
                         else
-                            line += dgvStatements.Rows[i].Cells[con[k]].Value.ToString() + ";\t";
-                    lbStatements.Items.Add(line);
+                        {
+                            if (k == 0 || k == 6)
+                            {
+                                string kort = dgvStatements.Rows[i].Cells[con[k]].Value.ToString();
+                                line += kort.Substring(0, kort.IndexOf(" ")) + "\t";
+                            }
+                            else
+                                line += dgvStatements.Rows[i].Cells[con[k]].Value.ToString() + "\t";
+                        }
+                    listA[j] = line;
+                    listNumA[j] = Convert.ToInt16(dgvStatements.Rows[i].Cells["Consultation"].Value.ToString());
+                    j++;
+                    //lbStatements.Items.Add(line);
                 }
                 
             }
@@ -186,19 +218,64 @@ namespace PschyHealth
                     for (int k = 0; k < stat.Length; k++)
                         if (stat[k] == -1)
                         {
-                            line += ";\t";
+                            line += "\t";
                         }
                         else if (stat[k] == -2)
                         {
-                            line += "00.00\t";
+                            line += "0.00\t";
                         }
                         else
-                            line += dgvStatements.Rows[i].Cells[stat[k]].Value.ToString()+";\t";
-                    lbStatements.Items.Add(line);
+                        {
+                            if(k==0 || k ==6)
+                            {
+                                string kort = dgvStatements.Rows[i].Cells[stat[k]].Value.ToString();
+                                line += kort.Substring(0,kort.IndexOf(" ")) + "\t";
+                            }    
+                            else
+                            line += dgvStatements.Rows[i].Cells[stat[k]].Value.ToString() + "\t";
+                        }
+                    listA[j] = line;
+                    listNumA[j] = Convert.ToInt16(dgvStatements.Rows[i].Cells["Consultation"].Value.ToString());
+                    j++;
+                    //lbStatements.Items.Add(line);
                 }
 
             }
-            
+            String tempS;
+            int tempI;
+            int length = listNumA.Length;
+            for (int i = 0; i > length; i++)
+            {
+                for (int k = i + 1; k < length; k++)
+                {
+                    if (listNumA[i] > listNumA[k])
+                    {
+                        tempI = listNumA[i];
+                        listNumA[i] = listNumA[k];
+                        listNumA[k] = tempI;
+
+                        tempS = listA[i];
+                        listA[i] = listA[k];
+                        listA[k] = tempS;
+                    }
+                }
+            }
+            double val=0;
+            string temp;
+            for(int i = 0; i < listA.Length;i++)
+            {
+                temp = listA[i];
+                if (listA[i] != "")
+                {
+                    for(int k=0;k<8;k++)
+                        temp = temp.Remove(0, temp.IndexOf("\t")+1);
+                    val = Convert.ToDouble(temp.Substring(0, temp.IndexOf("\t")));
+                    temp = temp.Remove(0, temp.IndexOf("\t") + 1);
+                    val -= Convert.ToDouble(temp.Substring(0, temp.IndexOf("\t")))+balance;
+                    lbStatements.Items.Add(listA[i] + val);
+                }
+                balance += val;
+            }
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -208,8 +285,9 @@ namespace PschyHealth
             String name = clientName + "(" + DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Year.ToString() + ")" + ".docx";
             cMethods.CheckFolder(Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName);
             cMethods.copyTemplate(cmbFormat.Text, clientName);
-
-            cMethods.filterDGV(dgvStatements, "Clients", " WHERE First_Name = '" + clientName.Substring(clientName.IndexOf(",")+1) + "' AND Surname = '" + clientName.Substring(0,clientName.IndexOf(",")) + "'");
+            String n = cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2);
+            String s = cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(","));
+            cMethods.filterDGV(dgvStatements, "Clients", " WHERE First_Name = '" + n + "' AND Surname = '" + s + "'");
 
             String title;
             try
@@ -218,7 +296,8 @@ namespace PschyHealth
             }
             catch (IOException)
             {
-                File.Move(Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + cmbFormat.Text, Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + name.Substring(0,name.Length-4) + DateTime.Now.ToShortTimeString() + ".docx");
+                name = name.Substring(0, name.Length - 5) + DateTime.Now.Hour.ToString() + "-" + DateTime.Now.Minute.ToString() + ".docx";
+                File.Move(Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + cmbFormat.Text, Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + name);
             }
                 object fileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDoc‌​uments) + @"\JarvisDevelopment\Statements\" + clientName + @"\" + name;
 
@@ -230,7 +309,7 @@ namespace PschyHealth
             else
                 title = "MS";
             for (int i = 1; i < lbStatements.Items.Count; i++)
-                txt += lbStatements.Items[i].ToString();
+                txt += lbStatements.Items[i].ToString() + "\r\n";
             String name1 = dgvStatements.Rows[0].Cells["First_Name"].Value.ToString();
             String surname = dgvStatements.Rows[0].Cells["Surname"].Value.ToString();
             cMethods.ReplaceBookmarkText(doc, "Title", title);
@@ -245,20 +324,21 @@ namespace PschyHealth
             cMethods.ReplaceBookmarkText(doc, "Refferal", dgvStatements.Rows[0].Cells["Referral"].Value.ToString());
             cMethods.ReplaceBookmarkText(doc, "RefPrak", dgvStatements.Rows[0].Cells["Referral_Practice"].Value.ToString());
 
-            cMethods.filterDGV(dgvStatements, "Consultations", " WHERE Name = '" + clientName.Substring(clientName.IndexOf(",") + 1) + "' AND Surname = '" + clientName.Substring(0, clientName.IndexOf(",")) + "'");
+            cMethods.filterDGV(dgvStatements, "Consultations", " WHERE Name = '" + cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2) + "' AND Surname = '" + cmbClient.Text.Substring(0, cmbClient.Text.IndexOf(",")) + "'");
 
             cMethods.ReplaceBookmarkText(doc, "ICD10", dgvStatements.Rows[0].Cells["ICD10"].Value.ToString());
             cMethods.ReplaceBookmarkText(doc, "Info", txt);
-            
-            cMethods.ReplaceBookmarkText(doc, "D1", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 120, 99999)));
-            cMethods.ReplaceBookmarkText(doc, "D2", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 90, 120)));
-            cMethods.ReplaceBookmarkText(doc, "D3", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 60, 90)));
-            cMethods.ReplaceBookmarkText(doc, "D4", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 30, 60)));
-            cMethods.ReplaceBookmarkText(doc, "D5", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 0, 30)));
-            cMethods.ReplaceBookmarkText(doc, "AmountDue", Convert.ToString(cMethods.calculateAmount(name, surname, dgvStatements, 0, 99999)));
+            //String n = cmbClient.Text.Substring(cmbClient.Text.IndexOf(",") + 2);
+            cMethods.ReplaceBookmarkText(doc, "D1", Convert.ToString(cMethods.calculateAmount(n, surname, dgvStatements, 120, 99999)));
+            cMethods.ReplaceBookmarkText(doc, "D2", Convert.ToString(cMethods.calculateAmount(n, surname, dgvStatements, 90, 120)));
+            cMethods.ReplaceBookmarkText(doc, "D3", Convert.ToString(cMethods.calculateAmount(n, surname, dgvStatements, 60, 90)));
+            cMethods.ReplaceBookmarkText(doc, "D4", Convert.ToString(cMethods.calculateAmount(n, surname, dgvStatements, 30, 60)));
+            cMethods.ReplaceBookmarkText(doc, "D5", Convert.ToString(cMethods.calculateAmount(n, surname, dgvStatements, 0, 30)));
+            cMethods.ReplaceBookmarkText(doc, "AmountDue", Convert.ToString(cMethods.calculateAmount(n, surname, dgvStatements, 0, 99999)));
 
 
             doc.Close();
+            MessageBox.Show("Statement created");
         }
 
         private void cmbFormat_SelectedIndexChanged(object sender, EventArgs e)

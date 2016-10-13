@@ -325,7 +325,8 @@ namespace PschyHealth
             if (dgvClients.SelectedRows.Count > 0)
             {
                 int selectedIndex = dgvClients.SelectedRows[0].Index;
-
+                String name = txtClientFirst_Name.Text;
+                String surname = txtClientSurname.Text;
                 String rowID = dgvClients[0, selectedIndex].Value.ToString();
                 cMethods.getFieldsAndValues(out field, out value, groupBox1, "Client");
                 cMethods.getFieldsAndValues(out field2, out value2, gbDependants, "Client");
@@ -334,11 +335,32 @@ namespace PschyHealth
                 else if (button == "edit")
                     cMethods.edit("Clients", field, value, " ID = '" + dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString() + "'");
                 else if (button == "delete")
+                {
                     cMethods.delete("Clients", "ID = '" + rowID + "'");
+                    cMethods.delete("Consultations", " Surname = '" + surname + "' AND Name = '" + name + "'AND Dependant_Full_Name = '" + txtClientDependant_Full_Name.Text + "'");
+                    cMethods.delete("Payments", " Client_Surname = '" + surname + "' AND Client_Name = '" + name + "'AND Dependant_Full_Name = '" + txtClientDependant_Full_Name.Text + "'");
+
+                }
                 else if (button == "archive")
                 {
-
+                    String id = dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString();
+                    MetroGrid dgv = new MetroGrid();
+                    dgv.Parent = this;
+                    dgv.Hide();
                     cMethods.Archive(dgvClients, "Clients", "ID", dgvClients.Rows[selectedIndex].Cells["ID"].Value.ToString());
+
+                    cMethods.filterDGV(dgv, "Consultations", " WHERE Client_ID = '" + id + "'");
+                    string[] id2 = new String[dgv.RowCount - 1];
+                    for (int i = 0; i < dgv.RowCount - 1; i++)
+                        id2[i] = dgv.Rows[i].Cells["Consultation"].Value.ToString();
+                    cMethods.fillDGV(dgv,"Consultations");
+                    cMethods.Archive(dgv, "Consultations", "Client_ID", id);
+
+                    cMethods.fillDGV(dgv, "Payments");
+                    for (int i = 0; i < id2.Length; i++)
+                        cMethods.Archive(dgv, "Payments", "Consultation", dgvClients.Rows[i].Cells["Consultation"].Value.ToString());
+
+                    dgv = null;
                 }
 
             }

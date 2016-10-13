@@ -223,7 +223,7 @@ namespace PschyHealth
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
             btnAdd.Enabled = false;
-            btnArchive.Enabled = false;
+         //   btnArchive.Enabled = false;
             cmbConsultationsName.SelectedIndex = -1;
             cMethods.fillTextbox(groupBox1, dgvConsultations, "Consultations", true, true);
             button = "add";
@@ -251,7 +251,7 @@ namespace PschyHealth
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
             btnAdd.Enabled = false;
-            btnArchive.Enabled = false;
+         //   btnArchive.Enabled = false;
             dgvConsultations.Enabled = false;
             button = "edit";
             
@@ -265,7 +265,7 @@ namespace PschyHealth
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
             btnAdd.Enabled = false;
-            btnArchive.Enabled = false;
+          //  btnArchive.Enabled = false;
             dgvConsultations.Enabled = false;
             button = "delete";
             //filter();
@@ -304,7 +304,7 @@ namespace PschyHealth
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
-            btnArchive.Enabled = false;
+          //  btnArchive.Enabled = false;
             dgvConsultations.Enabled = false;
             button = "archive";
             //filter();
@@ -340,14 +340,17 @@ namespace PschyHealth
                 else if (button == "edit")
                     cMethods.edit("Consultations", field, value, " Consultation = '" + dgvConsultations.Rows[selectedIndex].Cells["Consultation"].Value.ToString() + "'");
                 else if (button == "delete")
+                {
                     cMethods.delete("Consultations", "Consultation = '" + rowID + "'");
-                else if (button == "archive")
-                    cMethods.Archive(dgvConsultations, "Consultations", "Consultation", dgvConsultations.Rows[selectedIndex].Cells["Consultation"].Value.ToString());
+                    cMethods.delete("Payments", "Consultation = '" + rowID + "'");
+                }
+               // else if (button == "archive")
+               //     cMethods.Archive(dgvConsultations, "Consultations", "Consultation", dgvConsultations.Rows[selectedIndex].Cells["Consultation"].Value.ToString());
             }
             btnDelete.Enabled = true;
             btnEdit.Enabled = true;
             btnAdd.Enabled = true;
-            btnArchive.Enabled = true;
+           // btnArchive.Enabled = true;
             dgvConsultations.Enabled = true;
             btnConfirm.Hide();
             btnCancel.Hide();
@@ -362,7 +365,7 @@ namespace PschyHealth
             btnAdd.Enabled = true;
             btnDelete.Enabled = true;
             btnEdit.Enabled = true;
-            btnArchive.Enabled = true;
+           // btnArchive.Enabled = true;
             dgvConsultations.Enabled = true;
             addClick = false;
             btnConfirm.Hide();

@@ -78,7 +78,7 @@ namespace PschyHealth
             //This code allows the programs GUI to load completely without a delay
             Application.DoEvents();
             //await Task.Delay(50);
-            Thread.Sleep(1000);
+           // Thread.Sleep(1000);
             try//Try to catch all exeptions and retry
             {
 
@@ -97,7 +97,7 @@ namespace PschyHealth
 
                 // Populate a new data table and bind it to the BindingSource.
                 DataTable table = new DataTable();
-                table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                table.Locale = CultureInfo.InvariantCulture;
                 dataAdapter.Fill(table);
                 bindingSource1.DataSource = table;
                 dgv.DataSource = table;
@@ -428,6 +428,7 @@ namespace PschyHealth
         //This method appends string to a textfile after checking if it exists
         public void WriteFile(String path, String txt)
         {
+            //CheckFolder(path);
             CheckFile(path);
             File.AppendAllText(path + ".txt", txt);
         }
@@ -451,7 +452,7 @@ namespace PschyHealth
         public void Archive(MetroGrid dgv, String table, String field, String crit, int month)
         {
             String arch = "";
-            for (int i = 0; i < dgv.RowCount - 1; i++)
+            for (int i = 0; i < dgv.RowCount-1; i++)
             {
                 if (dgv.Rows[i].Cells[field].Value.ToString() == crit)
                 {

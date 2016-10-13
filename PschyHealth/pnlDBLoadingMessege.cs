@@ -12,6 +12,7 @@ namespace PschyHealth
 {
     public partial class pnlDBLoadingMessege : UserControl
     {
+        
         public pnlDBLoadingMessege()
         {
             InitializeComponent();
@@ -21,12 +22,12 @@ namespace PschyHealth
         {
             timer1.Start();
             int count = 0;
-            while (this.Visible = true)
+            //while (this.Visible = true)
                
-            {
+            //{
                 count++;
-                circularProgress1.Value = count; ;
-            }
+                //circularProgress1.Value = count; ;
+            //}
             
         }
 
@@ -35,14 +36,8 @@ namespace PschyHealth
             
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            int count = 0;
-           
 
-              count++;
-              circularProgress1.Value = count; ;
-            
-        }
+
+
     }
 }

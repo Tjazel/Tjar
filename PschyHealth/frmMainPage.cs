@@ -79,7 +79,7 @@ namespace PschyHealth
             cMethods.CheckFolder(path + @"\Statements");
             cMethods.CheckFolder(path + @"\Archive\LogArchive");
             cMethods.CheckFolder(path + @"\Archive\StatementsArchive");
-            cMethods.CheckFolder(path + @"\Archive\ClientArchive");
+            cMethods.CheckFolder(path + @"\Archive\ClientsArchive");
             cMethods.CheckFolder(path + @"\Archive\StaffArchive");
             cMethods.CheckFolder(path + @"\Archive\PaymentsArchive");
             cMethods.CheckFolder(path + @"\Archive\AccountingArchive");
@@ -150,7 +150,7 @@ namespace PschyHealth
             cMethods.CheckFolder(path + @"\Statements");
             cMethods.CheckFolder(path + @"\Archive\LogArchive");
             cMethods.CheckFolder(path + @"\Archive\StatementsArchive");
-            cMethods.CheckFolder(path + @"\Archive\ClientArchive");
+            cMethods.CheckFolder(path + @"\Archive\ClientsArchive");
             cMethods.CheckFolder(path + @"\Archive\StaffArchive");
             cMethods.CheckFolder(path + @"\Archive\AccountingArchive");
             cMethods.CheckFolder(path + @"\Archive\ConsultationsArchive");

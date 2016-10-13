@@ -82,7 +82,7 @@ namespace PschyHealth
 
         private void dgvMedicalAid_SelectionChanged_1(object sender, EventArgs e)
         {
-            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
+            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "MedicalAids", false);
         }
 
         private void pbMic_Click(object sender, EventArgs e)
@@ -126,19 +126,6 @@ namespace PschyHealth
         private void metroTextBox17_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void filter()
-        {
-            if (metroTextBox17.Text != "")
-                if (!metroComboBox1.Visible)
-                {
-                    cMethods.filterDGV(dgvMedicalAid, "MedicalAid", " WHERE " + cmbMedCrit.Text + " LIKE '%" + metroTextBox17.Text + "%'");
-                }
-                else
-                {
-                    cMethods.filterDGV(dgvMedicalAid, "MedicalAid", " WHERE " + cmbMedCrit.Text + " " + metroComboBox1.Text + " " + metroTextBox17.Text);
-                }
         }
 
         private void cmbMedCrit_TextChanged_1(object sender, EventArgs e)
@@ -203,7 +190,7 @@ namespace PschyHealth
                 int selectedIndex = dgvMedicalAid.SelectedRows[0].Index;
 
                 String rowID = dgvMedicalAid[0, selectedIndex].Value.ToString();
-                cMethods.getFieldsAndValues(out field, out value, groupBox1, "Med");
+                cMethods.getFieldsAndValues(out field, out value, groupBox1, "MedicalAids");
                 if (button == "add")
                     cMethods.add("MedicalAid", field, value);
                 else if (button == "edit")
@@ -217,6 +204,7 @@ namespace PschyHealth
             btnMedUpdate.Enabled = true;
             btnConfirm.Hide();
             btnCancel.Hide();
+            dgvMedicalAid.Enabled = true;
             filter();
         }
 
@@ -230,10 +218,11 @@ namespace PschyHealth
         {
             btnConfirm.Show();
             btnCancel.Show();
-            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", true, true);
+            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "MedicalAids", true, true);
             btnMedAdd.Enabled = false;
             btnMedDelete.Enabled = false;
             btnMedUpdate.Enabled = false;
+            dgvMedicalAid.Enabled = false;
             button = "add";
         }
 
@@ -241,10 +230,11 @@ namespace PschyHealth
         {
             btnCancel.Show();
             btnConfirm.Show();
-            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", true);
+            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "MedicalAids", true);
             btnMedAdd.Enabled = false;
             btnMedDelete.Enabled = false;
             btnMedUpdate.Enabled = false;
+            dgvMedicalAid.Enabled = false;
             button = "edit";
         }
 
@@ -252,22 +242,46 @@ namespace PschyHealth
         {
             btnConfirm.Show();
             btnCancel.Show();
-            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
+            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "MedicalAids", false);
             btnMedAdd.Enabled = false;
             btnMedDelete.Enabled = false;
             btnMedUpdate.Enabled = false;
+            dgvMedicalAid.Enabled = false;
             button = "delete";
         }
 
-        private void btnMedArchive_Click(object sender, EventArgs e)
+        private void metroTextBox17_TextChanged_2(object sender, EventArgs e)
         {
-            btnConfirm.Show();
-            btnCancel.Show();
-            cMethods.fillTextbox(groupBox1, dgvMedicalAid, "Med", false);
-            btnMedAdd.Enabled = false;
-            btnMedDelete.Enabled = false;
-            btnMedUpdate.Enabled = false;
-            button = "archive";
+            if (metroTextBox17.Text == "")
+                cMethods.fillDGV(dgvMedicalAid, "MedicalAid");
+            else if (cMethods.validString(metroTextBox17.Text))
+            {
+                filter();
+                correctSearch = metroTextBox17.Text;
+            }
+            else
+            {
+                MessageBox.Show("Only numeric and alphabetic caracters are allowed");
+                metroTextBox17.Text = correctSearch;
+                metroTextBox17.Focus();
+                metroTextBox17.SelectionStart = metroTextBox17.Text.Length;
+            }
+        }
+
+        private void filter()
+        {
+            if (metroTextBox17.Text != "")
+                if (!metroComboBox1.Visible)
+                {
+                    cMethods.filterDGV(dgvMedicalAid, "MedicalAid", " WHERE " + cmbMedCrit.Text + " LIKE '%" + metroTextBox17.Text + "%'");
+                }
+                else
+                {
+                    cMethods.filterDGV(dgvMedicalAid, "MedicalAid", " WHERE " + cmbMedCrit.Text + " " + metroComboBox1.Text + " " +metroTextBox17.Text);
+                }
+            else
+                cMethods.fillDGV(dgvMedicalAid, "MedicalAid");
+
         }
     }
 }
